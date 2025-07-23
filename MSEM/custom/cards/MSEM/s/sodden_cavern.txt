@@ -1,0 +1,6 @@
+Name:Sodden Cavern
+ManaCost:no cost
+Types:Land Island Swamp 
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+Oracle:({T}: Add {U} or {B}.)\nSodden Cavern enters tapped.

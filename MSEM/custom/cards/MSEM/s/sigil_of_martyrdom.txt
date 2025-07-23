@@ -1,0 +1,6 @@
+Name:Sigil of Martyrdom
+ManaCost:3
+Types:Artifact
+A:AB$ Mana | Cost$ T | Produced$ Combo W B | SpellDescription$ Add {W} or {B}.
+A:AB$ Mana | Cost$ T Sac<1/CARDNAME> | Produced$ W B | SpellDescription$ Add {W}{B}.
+Oracle:{T}: Add {W} or {B}\n{T}, Sacrifice Sigil of Martyrdom: Add {W}{B}.
