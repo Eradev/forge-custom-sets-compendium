@@ -1,0 +1,7 @@
+Name:Knowledge Extractor
+ManaCost:5
+Types:Artifact Creature Construct
+PT:3/3
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigDraw | TriggerDescription$ Whenever CARDNAME deals combat damage to a player, draw a card.
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+Oracle:Whenever Knowledge Extractor deals combat damage to a player, draw a card.
