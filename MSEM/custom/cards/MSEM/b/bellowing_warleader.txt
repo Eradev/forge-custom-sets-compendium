@@ -1,0 +1,5 @@
+Name:Bellowing Warleader
+ManaCost:4 R
+Types:Creature Orc Warrior
+PT:5/3
+Oracle:
