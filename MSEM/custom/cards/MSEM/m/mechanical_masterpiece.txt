@@ -1,0 +1,6 @@
+Name:Mechanical Masterpiece
+ManaCost:6
+Types:Artifact Creature Golem
+PT:4/4
+K:Indestructible
+Oracle:Indestructible (Damage and effects that say "destroy" don't destroy this creature.)
