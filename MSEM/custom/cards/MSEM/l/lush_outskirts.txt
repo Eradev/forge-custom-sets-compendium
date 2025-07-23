@@ -1,0 +1,16 @@
+Name:Lush Outskirts
+ManaCost:no cost
+Types:Land
+A:AB$ Animate | Cost$ 3 G U | Defined$ Self | Power$ 5 | Toughness$ 7 | Types$ Creature,Plant | Colors$ Green,Blue | OverwriteColors$ True | Keywords$ Ward:3 | Triggers$ TrigAttack,TrigBlock | SpellDescription$ Until end of turn, CARDNAME becomes a 5/7 green and blue Plant creature with ward {3} and "Whenever this creature attacks or blocks, torment yourself." It's still a land.
+SVar:TrigAttack:Mode$ Attacks | ValidCard$ Card.Self | Execute$ DBTorment | TriggerDescription$ Whenever CARDNAME attacks or blocks, torment yourself.
+SVar:TrigBlock:Mode$ Blocks | ValidCard$ Card.Self | Execute$ DBTorment | Secondary$ True | TriggerDescription$ Whenever CARDNAME attacks or blocks, torment yourself.
+SVar:DBTorment:DB$ GenericChoice | Defined$ You | AILogic$ PayUnlessCost | Choices$ DBPaySac,DBPayDiscard | FallbackAbility$ DBLoseLifeFallback | SpellDescription$ Lose 3 life unless you discard a card or sacrifice a nonland permanent.
+SVar:DBPaySac:DB$ LoseLife | LifeAmount$ 3 | Defined$ You | UnlessCost$ Sac<1/Permanent.nonland/nonland permanent> | UnlessPayer$ You | SpellDescription$ Lose 3 life unless you sacrifice a nonland permanent.
+SVar:DBPayDiscard:DB$ LoseLife | LifeAmount$ 3 | Defined$ You | UnlessCost$ Discard<1/Card.Other/card> | UnlessPayer$ You | SpellDescription$ Lose 3 life unless you discard a card.
+SVar:DBLoseLifeFallback:DB$ LoseLife | Defined$ You | LifeAmount$ 3
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+A:AB$ Mana | Cost$ T | Produced$ Combo G U | SpellDescription$ Add {G} or {U}.
+SVar:HasAttackEffect:TRUE
+SVar:HasBlockEffect:TRUE
+Oracle:Lush Outskirts enters tapped.\n{T}: Add {G} or {U}.\n{3}{G}{U}: Until end of turn, Lush Outskirts becomes a 5/7 green and blue Plant creature with ward {3} and "Whenever this creature attacks or blocks, torment yourself." It's still a land. (To torment yourself, lose 3 life unless you discard a card or sacrifice a nonland permanent.)

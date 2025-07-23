@@ -1,0 +1,6 @@
+Name:Unlit Alley
+ManaCost:no cost
+Types:Land
+A:AB$ Mana | Cost$ T PayLife<1> | Produced$ Combo U B | SpellDescription$ Add {U} or {B}.
+A:AB$ Investigate | Cost$ 1 T Sac<1/CARDNAME> | SpellDescription$ Investigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")
+Oracle:{T}, Pay 1 life: Add {U} or {B}.\n{1}, {T}, Sacrifice Unlit Alley: Investigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")

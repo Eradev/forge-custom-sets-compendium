@@ -1,0 +1,18 @@
+Name:Weathered Fortress
+ManaCost:no cost
+Types:Land
+A:AB$ Animate | Cost$ U R | Defined$ Self | Power$ 1 | Toughness$ 4 | Types$ Creature,Golem | Colors$ Blue,Red | OverwriteColors$ True | Triggers$ TrigPump,TrigAttack,TrigBlock | SpellDescription$ Until end of turn, CARDNAME becomes a 1/4 blue and red Golem creature with "Whenever this creature attacks, switch its power and toughness until end of turn" and "Whenever this creature attacks or blocks, torment yourself." It's still a land.
+SVar:TrigPump:Mode$ Attacks | ValidCard$ Card.Self | Execute$ DBPump | TriggerDescription$ TriggerDescription$ Whenever this creature attacks, switch its power and toughness until end of turn.
+SVar:TrigAttack:Mode$ Attacks | ValidCard$ Card.Self | Execute$ DBTorment | TriggerDescription$ Whenever CARDNAME attacks or blocks, torment yourself.
+SVar:TrigBlock:Mode$ Blocks | ValidCard$ Card.Self | Execute$ DBTorment | Secondary$ True | TriggerDescription$ Whenever CARDNAME attacks or blocks, torment yourself.
+SVar:DBPump:DB$ Pump | Defined$ Self | KW$ HIDDEN CARDNAME's power and toughness are switched
+SVar:DBTorment:DB$ GenericChoice | Defined$ You | AILogic$ PayUnlessCost | Choices$ DBPaySac,DBPayDiscard | FallbackAbility$ DBLoseLifeFallback | SpellDescription$ Lose 3 life unless you discard a card or sacrifice a nonland permanent.
+SVar:DBPaySac:DB$ LoseLife | LifeAmount$ 3 | Defined$ You | UnlessCost$ Sac<1/Permanent.nonland/nonland permanent> | UnlessPayer$ You | SpellDescription$ Lose 3 life unless you sacrifice a nonland permanent.
+SVar:DBPayDiscard:DB$ LoseLife | LifeAmount$ 3 | Defined$ You | UnlessCost$ Discard<1/Card.Other/card> | UnlessPayer$ You | SpellDescription$ Lose 3 life unless you discard a card.
+SVar:DBLoseLifeFallback:DB$ LoseLife | Defined$ You | LifeAmount$ 3
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+A:AB$ Mana | Cost$ T | Produced$ Combo U R | SpellDescription$ Add {U} or {R}.
+SVar:HasAttackEffect:TRUE
+SVar:HasBlockEffect:TRUE
+Oracle:Weathered Fortress enters tapped.\n{T}: Add {U} or {R}.\n{U}{R}: Until end of turn, Weathered Fortress becomes a 1/4 blue and red Golem creature with "Whenever this creature attacks, switch its power and toughness until end of turn" and "Whenever this creature attacks or blocks, torment yourself." It's still a land. (To torment yourself, lose 3 life unless you discard a card or sacrifice a nonland permanent.)
