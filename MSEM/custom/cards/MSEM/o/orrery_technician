@@ -1,0 +1,6 @@
+Name:Orrery Technician
+ManaCost:4
+Types:Artifact Creature Human
+PT:2/2
+S:Mode$ CastWithFlash | ValidCard$ Card | ValidSA$ Spell | Caster$ You | Description$ You may cast spells as though they had flash.
+Oracle:You may cast spells as though they had flash.
