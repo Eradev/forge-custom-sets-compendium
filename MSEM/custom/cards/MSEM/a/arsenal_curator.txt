@@ -1,0 +1,8 @@
+Name:Arsenal Curator
+ManaCost:5 R
+Types:Creature Human Warrior
+PT:3/5
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Plains.YouCtrl | Description$ CARDNAME gets +1/+1 as long as you control a Plains.
+A:AB$ Untap | Cost$ 2 W | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | SubAbility$ TrigPump | SpellDescription$ Untap target creature you control. It gets +0/+1 until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Targeted | NumDef$ +1
+Oracle:Arsenal Curator gets +1/+1 as long as you control a Plains.\n{2}{W}: Untap target creature you control. It gets +0/+1 until end of turn.
