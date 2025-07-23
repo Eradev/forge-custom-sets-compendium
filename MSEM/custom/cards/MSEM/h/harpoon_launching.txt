@@ -1,0 +1,6 @@
+Name:Harpoon Launching
+ManaCost:4 R
+Types:Instant
+A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ 3 | SubAbility$ DBToken | SpellDescription$ CARDNAME deals 3 damage to any target. Create a 1/1 red Goblin creature token.
+SVar:DBToken:DB$ Token | TokenScript$ r_1_1_goblin
+Oracle:Harpoon Launching deals 3 damage to any target. Create a 1/1 red Goblin creature token.

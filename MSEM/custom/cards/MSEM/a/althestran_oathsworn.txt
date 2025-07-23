@@ -1,0 +1,10 @@
+Name:Althestran Oathsworn
+ManaCost:4 W
+Types:Creature Human Knight
+PT:3/2
+K:Motivate:2
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPutCounter | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may motivate target creature with less power than this by putting two +1/+1 counters on it.
+SVar:X:Count$CardPower
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 2 | ValidTgts$ Creature.powerLTX | TgtPrompt$ Select target creature
+A:AB$ Pump | Cost$ 1 W | ValidTgts$ Creature.counters_GE1_P1P1 | TgtPrompt$ Select target creature with a +1/+1 counter | KW$ Lifelink | SpellDescription$ Target creature with a +1/+1 counter on it gains lifelink until end of turn.
+Oracle:Motivate 2 (When this creature enters, you may motivate target creature with less power than this by putting two +1/+1 counters on it.)\n{1}{W}: Target creature with a +1/+1 counter on it gains lifelink until end of turn.

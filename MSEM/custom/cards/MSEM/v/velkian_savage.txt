@@ -1,0 +1,5 @@
+Name:Velkian Savage
+ManaCost:4 G
+Types:Creature Giant
+PT:5/5
+Oracle:

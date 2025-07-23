@@ -1,0 +1,5 @@
+Name:Rebel Instigator
+ManaCost:3 W
+Types:Creature Human Rebel Soldier
+PT:2/4
+Oracle:

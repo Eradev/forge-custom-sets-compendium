@@ -1,0 +1,10 @@
+Name:Commander of the War Song
+ManaCost:4 R
+Types:Creature Human Rebel Warrior
+PT:3/4
+A:AB$ ChangeZone | Cost$ R | Origin$ Hand | Destination$ Battlefield | ChangeType$ Creature.Rebel+YouCtrl | SubAbility$ DBPump | RememberChanged$ True | ForgetOtherRemembered$ True | AILogic$ BeforeCombat | SpellDescription$ You may put a Rebel creature card from your hand onto the battlefield. That creature gains haste. Sacrifice the creature at the beginning of the next end step.
+SVar:DBPump:DB$ Animate | Keywords$ Haste | Defined$ Remembered | Duration$ Permanent | AtEOT$ Sacrifice | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:NonStackingEffect:True
+SVar:PlayMain1:ALWAYS
+Oracle:{R}: You may put a Rebel creature card from your hand onto the battlefield. That creature gains haste. Sacrifice the creature at the beginning of the next end step.
