@@ -6,7 +6,7 @@ Type=Custom
 
 [cards]
 1 R Aspiring Hero
-2 R Exorcise
+2 R Exorcise (MSEM)
 3 R Friends from the Beyond
 4 R Grasping Souls
 5 R Librarian of Whispers

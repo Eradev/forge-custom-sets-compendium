@@ -1,0 +1,10 @@
+Name:Exorcise (MSEM)
+ManaCost:2 W W
+Types:Instant
+A:SP$ ChangeZone | ValidTgts$ Creature | TgtPrompt$ Select target creature | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ ExileYard | SpellDescription$ Exile target creature. Search its controller's graveyard and library for any number of cards with the same name as that creature and exile them. Then that player shuffles.
+SVar:ExileYard:DB$ ChangeZone | ChangeType$ Remembered.sameName | Origin$ Graveyard | DefinedPlayer$ TargetedController | Chooser$ You | Destination$ Exile | ChangeNum$ NumInYard | Hidden$ True | SubAbility$ ExileLib | StackDescription$ None
+SVar:ExileLib:DB$ ChangeZone | Origin$ Library | Destination$ Exile | DefinedPlayer$ TargetedController | ChangeType$ Remembered.sameName | ChangeNum$ NumInLib | Chooser$ You | Shuffle$ True | StackDescription$ None | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:NumInYard:TargetedController$CardsInGraveyard
+SVar:NumInLib:TargetedController$CardsInLibrary
+Oracle:Exile target creature. Search its controller's graveyard and library for any number of cards with the same name as that creature and exile them. Then that player shuffles.
