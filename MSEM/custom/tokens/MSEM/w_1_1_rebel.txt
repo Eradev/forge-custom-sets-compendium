@@ -1,0 +1,6 @@
+Name:Rebel Token
+ManaCost:no cost
+Colors:white
+Types:Creature Rebel
+PT:1/1
+Oracle:
