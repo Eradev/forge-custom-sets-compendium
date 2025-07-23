@@ -1,0 +1,9 @@
+Name:Aven Ranger
+ManaCost:2 U
+Types:Creature Bird Scout Ranger
+PT:2/2
+K:Flying
+K:Kicker:U
+K:etbCounter:P1P1:1:CheckSVar$ WasKicked:If CARDNAME was kicked, it enters with a +1/+1 counter on it.
+SVar:WasKicked:Count$Kicked.1.0
+Oracle:Kicker {U} (You may pay an additional {U} as you cast this spell.)\nFlying\nIf Aven Ranger was kicked, it enters with a +1/+1 counter on it.
