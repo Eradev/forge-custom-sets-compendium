@@ -1,0 +1,93 @@
+[metadata]
+Code=MSEM_VHS
+Name=Video Horror System
+Date=2023-02-01
+Type=Custom
+
+[cards]
+1 R Aspiring Hero
+2 R Exorcise
+3 R Friends from the Beyond
+4 R Grasping Souls
+5 R Librarian of Whispers
+6 R Lisa, the Daughter
+7 R Lost in the Light
+8 R Maddened Preacher
+9 R Otherworldly Passage
+10 R Planchette Poltergeist
+11 R Remain Unawares
+12 R Swarm of the Damned
+13 R Veil of Innocence
+14 R Apocalypse Awakens
+15 R Botched Experiment
+16 R Dead End
+17 R Demented Brainiac
+18 R Final Findings
+19 R Frozen Over
+20 R Ominous Discovery
+21 R Sheltered Snowman
+22 R Snowfield Doppelganger
+23 R Something in the Shadows
+24 R Unseen Maniac
+25 R Whispering Paranoia
+26 R Wiretapper
+27 R Abhorrent Confidant
+28 R Bedfellow
+29 R Brutalize
+30 R Derange
+31 R Jumpscare
+32 R Lepidopteradator
+33 R Living Broadcast
+34 R Mr. Jackston, the Proprietor
+35 R Night of the Unliving
+36 R Spiraling Madness
+37 R Vicious Effigy
+38 R Violent Feeding
+39 R Waking Watcher
+40 R Beat & Batter
+41 R Bloody Valentine
+42 R Catastrophic Crash
+43 R Communion
+44 R End of the Rainbow
+45 R Foreboding Presence
+46 R From Within the Dark
+47 R He of All Hallow's Eve
+48 R Malformed Mongrel
+49 R Misshapen Monstrosity
+50 R Roadside Reaper
+51 R Shady Souvenirs
+52 R Unstoppable Slaughter
+53 R Avenger of Nature
+54 R Corpsebark
+55 R Cutthroat Carnie
+56 R Demented Host
+57 R Forlorn Toymaker
+58 R Frenzied Florist
+59 R The Hewitt Brothers
+60 R Horrific Invocation
+61 R Plagas Infestation
+62 R Rite of the Unnatural
+62 R Speak No Evil
+63 R Subway Shambler
+64 R Zealous Rabble
+65 R Damned Detective
+66 R John Furo, the Unfortunate
+67 R Keeper of the Collection
+68 R Morbid Mimic
+69 R Mr. Higgins
+70 R Raging Reflection
+71 R Ravenous Attraction
+72 R Sea of Corpses
+73 R The Shepherd of Nowhere
+74 R Starving Stalker
+75 R The Collection
+76 R Enshrouded Village
+77 R Hellfire Caverns
+78 R Lost Station
+79 R Misty Churchyard
+80 R Sunken Homestead
+81 S Forest
+82 S Island
+83 S Mountain
+84 S Plains
+85 S Swamp
