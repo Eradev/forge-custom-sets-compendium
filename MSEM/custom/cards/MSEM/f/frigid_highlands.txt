@@ -1,7 +1,10 @@
 Name:Frigid Highlands
 ManaCost:no cost
 Types:Land
+
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ CARDNAME enters tapped unless you control an Island.
 SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Island.YouCtrl | ConditionCompare$ EQ0
+
 A:AB$ Mana | Cost$ T | Produced$ Combo R G | SpellDescription$ Add {R} or {G}.
+
 Oracle:Frigid Highlands enters tapped unless you control an Island.\n{T}: Add {R} or {G}.

@@ -1,5 +1,7 @@
 Name:Blow to Pieces
 ManaCost:2 R R
 Types:Instant
+
 A:SP$ Destroy | ValidTgts$ Artifact,Land | TgtPrompt$ Select target artifact or land | SpellDescription$ Destroy target artifact or land.
+
 Oracle:Destroy target artifact or land.

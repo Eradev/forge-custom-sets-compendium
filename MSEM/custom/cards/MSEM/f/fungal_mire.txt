@@ -1,6 +1,8 @@
 Name:Fungal Mire
 ManaCost:no cost
 Types:Land Swamp Forest
+
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ CARDNAME enters tapped unless you control a basic Swamp or a basic Forest.
 SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Land.Swamp+Basic+YouCtrl,Land.Forest+Basic+YouCtrl | ConditionCompare$ LT1
+
 Oracle:({T}: Add {B} or {G}.)\nFungal Mire enters tapped unless you control a basic Swamp or a basic Forest.

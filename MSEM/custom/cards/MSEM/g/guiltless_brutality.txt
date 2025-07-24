@@ -1,7 +1,11 @@
 Name:Guiltless Brutality
 ManaCost:1 R
 Types:Enchantment Aura
+
 K:Enchant:Creature
-SVar:AttachAILogic:Pump
+
 S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 2 | AddToughness$ 1 | AddKeyword$ Trample | Description$ Enchanted creature gets +2/+1 and has trample.
+
 Oracle:Enchant creature (Target a creature as you cast this. This card enters attached to that creature.)\nEnchanted creature gets +2/+1 and has trample.
+
+SVar:AttachAILogic:Pump

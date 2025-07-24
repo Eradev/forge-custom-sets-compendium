@@ -1,7 +1,10 @@
 Name:Calmed Battleground
 ManaCost:no cost
 Types:Land
+
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ CARDNAME enters tapped unless you control a Plains.
 SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Plains.YouCtrl | ConditionCompare$ EQ0
+
 A:AB$ Mana | Cost$ T | Produced$ Combo B R | SpellDescription$ Add {B} or {R}.
+
 Oracle:Calmed Battleground enters tapped unless you control a Forest.\n{T}: Add {B} or {R}.

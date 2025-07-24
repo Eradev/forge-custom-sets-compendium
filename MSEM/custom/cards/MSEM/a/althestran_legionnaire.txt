@@ -2,8 +2,11 @@ Name:Althestran Legionnaire
 ManaCost:W W
 Types:Creature Human Knight
 PT:2/2
+
 S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ CARDNAME gets +1/+1 for each Aura attached to it.
 SVar:X:Count$Valid Aura.Attached
+
+Oracle:Althestran Legionnaire gets +1/+1 for each Aura attached to it.
+
 SVar:EnchantMe:Multiple
 DeckHints:Type$Aura
-Oracle:Althestran Legionnaire gets +1/+1 for each Aura attached to it.

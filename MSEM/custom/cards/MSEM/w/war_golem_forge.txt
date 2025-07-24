@@ -1,6 +1,9 @@
 Name:War Golem Forge
 ManaCost:no cost
 Types:Land
+
 A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
 A:AB$ Token | Cost$ 5 T Sac<1/CARDNAME> | TokenAmount$ 1 | TokenScript$ c_3_3_a_golem | TokenOwner$ You | SpellDescription$ Create a 3/3 colorless Golem artifact creature token.
+
 Oracle:{T}: Add {C}.\n{5}, {T}, Sacrifice War Golem Forge: Create a 3/3 colorless Golem artifact creature token.

@@ -1,7 +1,10 @@
 Name:Wingcrafter's Legacy
 ManaCost:4
 Types:Artifact Equipment
+
 K:Equip:2
+
 T:Mode$ DamageDone | ValidSource$ Creature.EquippedBy | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigToken | TriggerZones$ Battlefield | TriggerDescription$ Whenever equipped creature deals combat damage to a player, create a 1/1 colorless Thopter artifact creature token with flying.
 SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ c_1_1_a_thopter_flying | TokenOwner$ You
+
 Oracle:Whenever equipped creature deals combat damage to a player, create a 1/1 colorless Thopter artifact creature token with flying.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)
