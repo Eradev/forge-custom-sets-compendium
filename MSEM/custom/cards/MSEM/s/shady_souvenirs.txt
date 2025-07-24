@@ -1,0 +1,9 @@
+Name:Shady Souvenirs
+ManaCost:2 R
+Types:Instant
+
+A:SP$ Discard | Mode$ Hand | SubAbility$ DBDraw | SpellDescription$ Discard your hand. Draw cards equal to the number of creatures that died this turn.
+SVar:DBDraw:DB$ Draw | NumCards$ X
+SVar:X:Count$ThisTurnEntered_Graveyard_from_Battlefield_Creature
+
+Oracle:Discard your hand. Draw cards equal to the number of creatures that died this turn.
