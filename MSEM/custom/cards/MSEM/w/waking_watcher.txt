@@ -1,0 +1,13 @@
+Name:Waking Watcher
+ManaCost:2 B
+Types:Creature Horror
+PT:2/1
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDiscard | TriggerDescription$ At the beginning of your upkeep, each player discards a card.
+SVar:TrigDiscard:DB$ Discard | Defined$ Player | NumCards$ 1 | Mode$ TgtChoose
+
+T:Mode$ Attacks | ValidCard$ Card.Self | CheckSVar$ X | ConditionSVarCompare$ EQ0 | Execute$ TrigPump | TriggerDescription$ Whenever CARDNAME attacks, if defending player has no cards in hand, it gets +3/+3 and gains menace until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +3 | NumDef$ +3 | KW$ Menace
+SVar:X:TargetedPlayer$CardsInHand
+
+Oracle:At the beginning of your upkeep, each player discards a card.\nWhenever Waking Watcher attacks, if defending player has no cards in hand, it gets +3/+3 and gains menace until end of turn.
