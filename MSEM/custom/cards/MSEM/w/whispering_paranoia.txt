@@ -1,0 +1,9 @@
+Name:Whispering Paranoia
+ManaCost:2 U U
+Types:Enchantment
+
+T:Mode$ SpellCast | ValidActivatingPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ TrigMill | TriggerDescription$ Whenever an opponent casts a spell, that player mills X cards, where X is that spell's mana value.
+SVar:TrigMill:DB$ Mill | Defined$ TriggeredActivator | NumCards$ X
+SVar:X:TriggeredSpellAbility$CardManaCostLKI
+
+Oracle:Whenever an opponent casts a spell, that player mills X cards, where X is that spell's mana value.
