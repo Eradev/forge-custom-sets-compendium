@@ -13,8 +13,23 @@ Set information can be found on [msem-instigator](https://msem-instigator.heroku
 
 Examples on how to implement custom keywords
 
+* [Horrific](#horrific)
 * [Motivate](#motivate)
 * [Torment](#torment)
+
+### Horrific
+
+Horrific is defined as:
+
+```text
+You're horrific as long as you've sacrificed a permanent or discarded a card this turn.
+```
+
+To check if you're horrific:
+
+```text
+SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
+```
 
 ### Motivate
 
