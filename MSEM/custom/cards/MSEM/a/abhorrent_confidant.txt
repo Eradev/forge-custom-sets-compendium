@@ -4,7 +4,7 @@ Types:Creature Human Horror
 PT:2/1
 
 T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ Horrific | SVarCompare$ GE1 | Execute$ TrigDraw | TriggerDescription$ At the beginning of your end step, if you're horrific, you draw a card and you lose life equal to the number of cards in your hand.
-SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.CardsDiscardedThisTurn
+SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
 SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1 | SubAbility$ DBLoseLife
 SVar:DBLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ X
 SVar:X:Count$CardsInYourHand
