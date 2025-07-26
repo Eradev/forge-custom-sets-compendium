@@ -1,7 +1,10 @@
 Name:Gleaming Hot Springs
 ManaCost:no cost
 Types:Land
+
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ CARDNAME enters tapped unless you control a Mountain.
 SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Mountain.YouCtrl | ConditionCompare$ EQ0
+
 A:AB$ Mana | Cost$ T | Produced$ Combo W U | SpellDescription$ Add {W} or {U}.
+
 Oracle:Gleaming Hot Springs enters tapped unless you control a Mountain.\n{T}: Add {W} or {U}.

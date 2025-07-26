@@ -2,7 +2,10 @@ Name:Metalwork Machinist
 ManaCost:4
 Types:Artifact Creature Human Artificer
 PT:2/2
+
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Artifact.YouCtrl+Other | TriggerZones$ Battlefield | Execute$ TrigCounters | TriggerDescription$ Whenever another artifact you control enters, put a +1/+1 counter on CARDNAME.
 SVar:TrigCounters:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
-DeckHints:Type$Artifact
+
 Oracle:Whenever another artifact you control enters, put a +1/+1 counter on Metalwork Machinist.
+
+DeckHints:Type$Artifact

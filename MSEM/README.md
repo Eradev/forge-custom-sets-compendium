@@ -9,12 +9,35 @@ Set information can be found on [msem-instigator](https://msem-instigator.heroku
 * Drop the `custom` folder in `%appdata%\Forge`
 * Drop the `pics` folder in `%appdata%\..\Local\Forge\cache`
 
+## Set implementation progress
+
+```text
+Video Horror System (VHS) -  26% (23/86)
+The Land Bundle (L)       - 100% (80/80)
+Tides of War (TOW)        -  27% (75/271)
+```
+
 ## Keywords implementation
 
 Examples on how to implement custom keywords
 
+* [Horrific](#horrific)
 * [Motivate](#motivate)
 * [Torment](#torment)
+
+### Horrific
+
+Horrific is defined as:
+
+```text
+You're horrific as long as you've sacrificed a permanent or discarded a card this turn.
+```
+
+To check if you're horrific:
+
+```text
+SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
+```
 
 ### Motivate
 

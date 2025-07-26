@@ -2,6 +2,9 @@ Name:Watchful Skyguardian
 ManaCost:1 W W
 Types:Creature Bird
 PT:2/2
+
 K:Flying
+
 K:Vigilance
+
 Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nVigilance (Attacking doesn't cause this creature to tap.)

@@ -1,8 +1,11 @@
 Name:Toxic Jungle
 ManaCost:no cost
 Types:Land
+
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ CARDNAME enters tapped unless you have 15 or less life.
 SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionCheckSVar$ X | ConditionSVarCompare$ GT15
 SVar:X:Count$YourLifeTotal
+
 A:AB$ Mana | Cost$ T | Produced$ Combo B G | SpellDescription$ Add {B} or {G}.
+
 Oracle:Toxic Jungle enters tapped unless you have 15 or less life.\n{T}: Add {B} or {G}.

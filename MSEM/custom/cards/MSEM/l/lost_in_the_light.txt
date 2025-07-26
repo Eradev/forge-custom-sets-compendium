@@ -1,0 +1,7 @@
+Name:Lost in the Light
+ManaCost:3 W
+Types:Enchantment
+
+S:Mode$ CantAttackUnless | ValidCard$ Creature | Target$ You,Planeswalker.YouCtrl | Cost$ PayLife<2> | Description$ Creatures can't attack you or planeswalkers you control unless their controller pays 2 life for each of those creatures.
+
+Oracle:Creatures can't attack you or planeswalkers you control unless their controller pays 2 life for each of those creatures.

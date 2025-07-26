@@ -1,7 +1,10 @@
 Name:Shrine of the Six Pillars
 ManaCost:no cost
 Types:Land
+
 A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
 A:AB$ Mana | Cost$ T | Produced$ Any | CheckSVar$ CastTest | SVarCompare$ GE1 | SpellDescription$ Add one mana of any color. Activate only if you've cast a noncreature spell this turn.
 SVar:CastTest:Count$ThisTurnCast_Card.YouCtrl+nonCreature
+
 Oracle:{T}: Add {C}.\n{T}: Add one mana of any color. Activate only if you've cast a noncreature spell this turn.

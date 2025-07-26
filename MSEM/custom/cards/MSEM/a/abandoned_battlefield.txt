@@ -1,7 +1,10 @@
 Name:Abandoned Battlefield
 ManaCost:no cost
 Types:Land
+
 K:ETBReplacement:Other:LandTapped
 SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Land.nonBasic+YouCtrl | ConditionCompare$ GE1 | SpellDescription$ CARDNAME enters tapped if you control another nonbasic land.
+
 A:AB$ Mana | Cost$ T | Produced$ Combo U B | SpellDescription$ Add {U} or {B}.
+
 Oracle:Abandoned Battlefield enters tapped if you control another nonbasic land.\n{T}: Add {U} or {B}.
