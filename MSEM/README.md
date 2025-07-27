@@ -22,6 +22,7 @@ Tides of War (TOW)        -  27% (75/271)
 Examples on how to implement custom keywords
 
 * [Horrific](#horrific)
+* [Kindle](#kindle)
 * [Motivate](#motivate)
 * [Torment](#torment)
 
@@ -37,6 +38,20 @@ To check if you're horrific:
 
 ```text
 SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
+```
+
+### Kindle
+
+Kindle is defined as:
+
+```text
+Kindle 1—{1} ({1}, Exile this card from your graveyard: Create a 1/1 colorless Elemental creature token. Kindle only as a sorcery.)
+```
+
+Implementation:
+
+```text
+A:AB$ Token | TokenScript$ c_1_1_elemental | PrecostDesc$ Kindle 1 — | Cost$ 1 ExileFromGrave<1/CARDNAME> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create a 1/1 colorless Elemental creature token. Kindle only as a sorcery.
 ```
 
 ### Motivate
