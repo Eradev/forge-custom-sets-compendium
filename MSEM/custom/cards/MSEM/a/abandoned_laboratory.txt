@@ -1,0 +1,10 @@
+Name:Abandoned Laboratory
+ManaCost:no cost
+Types:Land
+
+K:ETBReplacement:Other:LandTapped
+SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Land.nonBasic+YouCtrl | ConditionCompare$ GE1 | SpellDescription$ CARDNAME enters tapped if you control another nonbasic land.
+
+A:AB$ Mana | Cost$ T | Produced$ Combo W B | SpellDescription$ Add {W} or {B}.
+
+Oracle:Abandoned Laboratory enters tapped if you control another nonbasic land.\n{T}: Add {W} or {B}.
