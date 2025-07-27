@@ -105,3 +105,11 @@ Type=Custom
 98 R Abandoned Laboratory @Ihor Vitkovskyi
 99 R Abandoned Preserve @Oxeren
 100 R Abandoned Shores @Aomori
+
+[tokens]
+1 c_1_1_elemental @RiseUndead
+2 b_1_2_mutant @Fetsch
+3 c_a_clue_draw @Carts
+
+[other]
+4 emblem_rheila @Mad1984
