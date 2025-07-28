@@ -1,0 +1,8 @@
+Name:Grete-District Strider
+ManaCost:4 G
+Types:Creature Elk
+PT:5/4
+
+K:Trample
+
+Oracle:
