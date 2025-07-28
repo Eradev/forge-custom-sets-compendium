@@ -1,0 +1,8 @@
+Name:Confident Cavalier
+ManaCost:2 W
+Types:Creature Human Knight
+PT:3/2
+
+S:Mode$ Continuous | Affected$ Knight.YouCtrl+Other | AddPower$ 1 | AddToughness$ 1 | Description$ Other Knight creatures you control get +1/+1.
+
+Oracle:Other Knight creatures you control get +1/+1.
