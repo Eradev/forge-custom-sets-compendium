@@ -1,0 +1,10 @@
+Name:Landplate Elemental
+ManaCost:3 G G G
+Types:Creature Elemental
+PT:5/5
+
+K:Trample
+
+S:Mode$ Continuous | Affected$ Creature.Other+YouCtrl | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Trample | Description$ Other creatures you control get +1/+1 and have trample.
+
+Oracle:Trample\nOther creatures you control get +1/+1 and have trample.
