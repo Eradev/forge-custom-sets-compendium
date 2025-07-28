@@ -1,0 +1,6 @@
+Name:Elk Token
+ManaCost:no cost
+Colors:red,green
+Types:Creature Elk
+PT:2/2
+Oracle:
