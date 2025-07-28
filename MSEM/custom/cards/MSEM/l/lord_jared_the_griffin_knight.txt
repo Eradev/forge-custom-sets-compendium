@@ -1,0 +1,13 @@
+Name:Lord Jared, the Griffin Knight
+ManaCost:1 W W
+Types:Legendary Creature Human Noble Knight
+PT:2/1
+
+K:Flying
+
+T:Mode$ Attacks | ValidCard$ Creature.Self | Execute$ TrigCounters | TriggerDescription$ Whenever CARDNAME attacks, put a +1/+1 counter on each other attacking creature you control.
+SVar:TrigCounters:DB$ PutCounter | CounterType$ P1P1 | ValidCards$ Creature.attacking+YouCtrl+Other | CounterNum$ 1
+
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever Lord Jared, the Griffin Knight attacks, put a +1/+1 counter on each other attacking creature you control.
+
+SVar:HasAttackEffect:TRUE
