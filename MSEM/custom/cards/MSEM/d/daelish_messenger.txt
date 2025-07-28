@@ -1,0 +1,8 @@
+Name:Daelish Messenger
+ManaCost:U
+Types:Creature Human Bird Scout
+PT:1/1
+
+K:Flying
+
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)
