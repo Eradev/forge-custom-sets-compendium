@@ -1,0 +1,263 @@
+[metadata]
+Code=MSEM_TWR
+Name=A Tourney at Whiterun
+Date=2017-06-08
+Type=Custom
+
+[cards]
+1 C Arcor Windfall @Julie Dillon
+2a C Arrogant Training @Lius Lasahido
+3 C Attended Knight @Darek Zabrocki
+4 C Captain of the Militia @sswanderer
+5 C Cauldish Banneret @Miguel Coimbra
+6 C Confident Cavalier @Ilker Serdar
+7 C Daelish Archer @Lius Lasahido
+8a C Dance of Grace @Peter Mohrbacher
+9 R Deflecting Strike @Jamie Romoser
+10 C Gilded Champion @Zhang Qipeng
+11 C Grizzled Captain @Rob Joseph
+12 C Grouchy Warden @Ilker Serdar
+13a R Hasty Intervention @Darren Tan
+14 C Ill-Advised Tactics @Lord-of-the-slugs
+15 C Knight of the Stag @Chase Stone
+16 R Lord Jared, the Griffin Knight @Bramasta Aji
+17 C Lord's Griffin @Sandara Tang
+18 C Mercenary Lancer @Lord-of-the-slugs
+19 C Morning Mists @Wojtek Fus
+20 C Pacifism @Sebastian Rodriguez
+21 M Portent of the Long Winter @Even Amundsen
+22 C Price of Power @Kyoung Hwan Kim
+23 R Proposer of Peace @Aaron Miller
+24a R Publicly Disgraced @Wang Ling
+24b R Kept Under Watch @Wang Ling
+25a C Sage's Foresight @sswanderer
+25b C Sage's Tales @sswanderer
+26a C Seek Glory @Tatiana Kirgetova
+27 C Steward's Tithe @Joel Hustak
+28 M Tearful Reunion @Even Amundsen
+29 C Thailen's Guard @Rob Joseph
+30 C Tightrope Acrobat @Julie Dillon
+31 R Trapped in the Tower @Aaron Miller
+32 C Venerated Knight @Kyoung Hwan Kim
+33 C Visserine's Royal Guard @Rob Joseph
+34 C Waifish Squire @Maciej Kuciara
+35 C Weary Steward @Sebastian Rodriguez
+36 C Whiterun Ordainer @Lius Lasahido
+37 C Across the Bay @Stephen Stark
+38 C Ambitious Dreams @Julie Dillon
+39 C Arrive Unseen @Wojtek Fus
+40 C Captain of the Exiled @Daniel Kamarudin
+41 C Cauldish Informant @Cynthia Sheppard
+42 C Civilized Debate @Sebastian Rodriguez
+43 C Curiosity @Grzegorz Rutkowski
+44 C Daelish Messenger @Lord-of-the-slugs
+45 C Deft Goldsnatch @Aleksey Bayura
+46 C Dissolve @Cynthia Sheppard
+47 C Distracting Handmaiden @Carmen Sinek
+48 C Drake Youngling @Sandra Duchiewicz
+49a C Drunken Night @Andrew Ryan
+50 C Exile's Vanguard @Daniel Kamarudin
+51 C Fall of Whiterun Harbor @Lius Lasahido
+52 M Flash of Inspiration @Keyi Li
+53 R Helene, Steel of the Exiled @Elena Bespalova
+54 C Hoff's Scout @Maciej Kuciara
+55 C Hypersomnia @Charlie Bowater
+56 C Knight of the Staff @Even Amundsen
+57 C Measured Contemplation @Jamie Romoser
+58 C Merchant's Bane @Ben Wootten
+59 C Messenger's Haste @Jamie Romoser
+60 R Misleading Doubts @Maximilian Degen
+61 R Moment of Tranquility @Apple Xiebin
+62 R Perish in Harmony @Yohann Schepacz
+63 M Pilgrim's Muse @Guodong Zhao
+64 C Rafter Stalker @Daniel Kamarudin
+65 C Rapscallion Duo @Djamila Knopf
+66 C Sails of Commerce @Don Malo
+67 C Social Graces @Charlie Bowater
+68 C Sunken Ambitions @Myron C. P.
+69 R Take For Ransom @Kerimov Roman
+70 C Talks in Hidden Hollows @sswanderer
+71 R Territorial Drake @Yohann Schepacz
+72 C Voyage's End @Daniel Kamarudin
+73 C Battlement Prowler @Saeed Ramez
+74 R Batwing Initiate @Even Amundsen
+75 C Bearer of Fables @Ilker Serdar
+76 C Cauldish Cavalier @Maciej Kuciara
+77 C Cauldish Hookblade @Rob Joseph
+78 R Cauldish Schemes @Ilker Serdar
+79 C Change of Fortunes @Maciej Kuciara
+80 C Commoners' Justice @Darek Zabrocki
+81 C Coven Adherent @Ilker Serdar
+82a M Death's Door @Even Amundsen
+83 C Decorated Duelist @Daniel Kamarudin
+84 C Duress @Sandara Tang
+85 C Ferris's Crewmate @Deiv Calviz
+86 C Forbidden Knowledge @Clint Cearley
+87 C Forgo the Past @Charlie Bowater
+88 C Hand of the Exiled @Hilma Fauza Khuriroy
+89 C Harrowing Knight @Darek Zabrocki
+90 C Inexperienced Martyr @Ramon Nuñez
+91 C Knight of the Raven @Eugene Lizin
+92 C Mercenary Coercer @Maciej Kuciara
+93 R Mismatched Bandit @Artem Demura
+94 M Mutual Destruction @Cynthia Sheppard
+95 C Old Grudges @Michal Ivan
+96 C Punish the Bold @Matthias Utomo
+97 C Reverence Seeker @Wojtek Fus
+98 R Seal the Tomb @Tatiana Kirgetova
+99 C Secluded Wildborn @Eran Fowler
+100 R Ser Joffrey, Plague of Nines @Even Amundsen
+101 C Shrouded Cackler @Armiche Lora Sánchez
+102 C Three Blade Boon @Daniel Kamarudin
+103 C Trystasp Coating @Yngvar Asplund
+104a C Twilight Raid @Saeed Ramez
+105 C Under Cover of Dark @Don Malo
+106 C Weaken Defenses @Miguel Coimbra
+107 C Weaver of Tales @Ramon Nuñez
+108 R Wildborn Lancer @Tianhua Xu
+109 C Amongst the Flames @Dmitry Desyatov
+110 C Ardent Charge @Diego Cunha
+111 R Arrogant Fencer @Yohann Schepacz
+112 C Bloodied Twinblade @Maciej Kuciara
+113 C Caravan Merchant @Veli Nyström
+114 R Cauldish Arrogant @Even Amundsen
+115 C Coward's Compulsion @Yngvar Asplund
+116 C Daelish Hopeful @Lane Brown
+117 C Desperate Reconnoiterer @Simon Gocal
+118 C Earnest Labourer @Deiv Calviz
+119 C Empty the Barracks @Bramasta Aji
+120 C Fall of the Axe @Wojtek Fus
+121 C Feathered Dancer @Wojtek Fus
+122 C Hound of Glory @Grzegorz Rutkowski
+123 M Inspirational Copse @G Liulian
+124 C Knight of the Hawk @Yuriy Chemezov
+125 C Maddened Elk @Cristian Chihaia
+126 C Melting Point @Ben Wootten
+127 R Noble's Hedonism @Charlie Bowater
+128 C Painful Reminiscence @Wojtek Fus
+129 C Pursued Paranoia @Charlie Bowater
+130 C Rally the Volunteers @Darek Zabrocki
+131 M Red Pelt Hart @Keyi Li
+132 R Restless Hedonist @Robert Kim
+133 C Shatter @Ben Wootten
+134 C Spur to Action @Cynthia Sheppard
+135 C Steel-Art Exemplar @Diego Cunha
+136a C Surge of Duty @Lius Lasahido
+137 C Tactical Deployment @Deiv Calviz
+138 C Tectonic Wound @Grzegorz Rutkowski
+139 R Thailen, Heir to Daeland @Charlie Bowater
+140 R Thailen's Reprisal @Damian Audino
+141 C Trusted Comrade @yagaminoue
+142 C Untested Commander @Deiv Calviz
+143 C Visiting Dignitary @Lane Brown
+144 C Wandering Goliath @Tuomas Korpi
+145 R Batterbrow Brigand @Even Amundsen
+146 C Beneath the Lilies @Julie Dillon
+147 C Catch Unawares @Don Malo
+148 C Commoners' Favored @Maciej Kuciara
+149 C Conniving Brigand @Sebastian Rodriguez
+150 M Crossroad Bard @Jeremy Paillotin
+151 C Crossways Inn @Dmitry Burmak
+152 C Daelish Arbalest @Marie Magny
+153 C Daelish Horticulturist @Charlie Bowater
+154 R Declan, Wayward Squire @Charlie Bowater
+155 C Escort Recruiter @Yin Yuming
+156 C Fen Guide @Ben Wootten
+157 R Grand Tourney @Simon Gocal
+158 M Green Pelt Hart @Susanna Wesslund
+159 C Hedge Knight @Sprias
+160a R Hermit's Travels @Even Amundsen
+161 C Horizon Militant @Grzegorz Rutkowski
+162 C Host of Nature @Alexandra Semushina
+163 C Inner Dogmatism @Michael Gauss
+164 C Knight of the Verdigris @Edward Delandre
+165a C Lone Heroics @Zhengyi Wang
+166 C Minor Melee @Marta Dettlaff
+167 C Peace of the Glade @sswanderer
+168 C Ranger's Guile @Carmen Sinek
+169 C Roads Twice Traveled @Sandra Duchiewicz
+170 C Satisfied Gleaner @Julie Dillon
+171 C Scarred Brawler @Greg Opalinski
+172 C Silverwork Champion @Grosnez
+173 C Splitshaft Deadeye @Efflam Mercier
+174 C Stoneskin Brawler @Veli Nyström
+175 C Sturdy Belligerent @Robert Mangano
+176a C Till the Fields @Veli Nyström
+177 C Tranquil Endeavors @Darren Tan
+178 R Unburied Relics @Even Amundsen
+179 C Voyaging Devout @Matthias Utomo
+180 R Weald Sentry @Simon Gocal
+181 R Declare, the Mother Bear @Daniel Kamarudin
+182 R Duke Gerard Hoff @littleulvar
+183 R Ellis, Caravan Captain @Vyacheslav Safronov
+184 M Femourri Archer @Bayard Wu
+185 R Ferris, the Sapphire Storm @yagaminoue
+186 M Frayed Nerves @Maximilian Degen
+187 M Harmonized Intellect @Keyi Li
+188 M Insurgent Ballads @Keyi Li
+189 R King Visserine of Daeland @Lie Setiawan
+190 R Lady Genvieve of Caulder @Lizzy John
+191 R Lord Dalehorn the Iron-Handed @Bagus Hutomo
+192 M Ready the Jousts @Jose Daniel Cabrera Peña
+193 R Ser Malcomn @Simon Gocal
+194 R Sera of Coppercove @Even Amundsen
+195 M Slayer of the Famed @Diego Gisbert Llorens
+196 M Wildborn Swindler @Even Amundsen
+197 R Yvette, the Golden Gull @yagaminoue
+198 R Absence of the Unmaker @Halil Ural
+199 R Bend the Knee @Chase Stone
+200 C Cauldish Warmonger @Bagus Hutomo
+201 C Exiled Warband @Renju MV
+202 C Fables of the Bold @Ilker Serdar
+203 C Farmer's Repose @Renju MV
+204 R Generous Offer @Even Amundsen
+205 C Gild-Cloak Strider @Armiche Lora Sánchez
+206 C Highborn Meditant @Jarreau Wimberly
+207 C Hooded Inquirers @Dmitry Burmak
+208 C Imperious Falconer @Manuel Castañón
+209 C Left for Carrion @Zagornov Rostislav
+210 R Merciless Exiled @Armiche Lora Sánchez
+211a C Moment of Glory @Lius Lasahido
+212 R Opportunistic Raiders @Even Amundsen
+213 C Plated Valiant @Manuel Castañón
+214 C Plunge Through the Heart @Bagus Hutomo
+215 C Reckless Cultivator @Charlie Bowater
+216 C Reflect Upon the Past @Renju MV
+217 R Requiem of the Fallen @Efflam Mercier
+218 C Royal Summons @Pavel Romanov
+219 C Scraps of Memory @Even Amundsen
+220 C Sway the Naive @Aaron Miller
+221 R Swift Deployment @Grafit Studio
+222 R Tenacious Guide @Mike Azevedo
+223 C Travel Companions @Miguel Coimbra
+224 R Wayfaring Ordealist @Simon Gocal
+225 C Withering Agony @Daniel Kamarudin
+226a C Youthful Dreams @Manuel Castañón
+227 R Youthful Savior @Even Amundsen
+228 R Ambition's Crown @Bayard Wu
+229 C Ancestral Zweihander @Even Mehl Amundsen
+230 R Cloak of the Exiled @Grzegorz Rutkowski
+231 C Dead Man's Armor @Jose Daniel Cabrera Peña
+232 C Iron Signet @Dan Kuzmenka
+233 C Jailer's Manacles @Esteban Campos
+234 C A Lady's Favor @Marie Magny
+235 R Sunpiercing Bow @Bramasta Aji
+236 C Thief's Harness @Clint Cearley
+237 C Vial of Arcor @Kristopher P. Love
+238 C Bustling Docks @Darek Zabrocki
+239 R Choked Estuary @Renaud Perochon
+240 C Derelict Amphitheatre @Darek Zabrocki
+241 R Foreboding Ruins @Renaud Perochon
+242 R Fortified Village @Renaud Perochon
+243 R Game Trail @Renaud Perochon
+244 C Interlocked Waterways @Darek Zabrocki
+245 C Isolated Cloister @Clint Cearley
+246 R Port Town @Renaud Perochon
+247 C Shadowed Slums @Darek Zabrocki
+248 M Whiterun Gates @Jeremy Paillotin
+249 R Whiterun Harbor @Miguel Coimbra
+250 C Plains @Darek Zabrocki
+251 C Island @Lord-of-the-slugs
+252 C Swamp @Darek Zabrocki
+253 C Mountain @Dmitry Desyatov
+254 C Forest @Darek Zabrocki
