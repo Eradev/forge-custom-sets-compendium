@@ -1,0 +1,5 @@
+Name:Punan Mammoth
+ManaCost:4 G G
+Types:Creature Elephant
+PT:7/6
+Oracle:
