@@ -261,3 +261,9 @@ Type=Custom
 252 C Swamp @Darek Zabrocki
 253 C Mountain @Dmitry Desyatov
 254 C Forest @Darek Zabrocki
+
+[tokens]
+1 w_2_2_knight @Simon Gocal
+2 w_1_1_soldier @Rob Joseph
+3 r_1_1_soldier_haste @Rafael Gorniak
+4 rg_2_2_elk @Jason Wilkins
