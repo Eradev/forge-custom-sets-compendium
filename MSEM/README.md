@@ -12,9 +12,11 @@ Set information can be found on [msem-instigator](https://msem-instigator.heroku
 ## Set implementation progress
 
 ```text
-Video Horror System (VHS) -  26% (23/86)
-The Land Bundle (L)       - 100% (80/80)
-Tides of War (TOW)        -  27% (75/271)
+Video Horror System (VHS)   -  26% (23/86)
+Kaleidoscope (KLC)          -  23% (25/108)
+A Tourney at Whiterun (TWR) -  11% (30/269)
+The Land Bundle (L)         - 100% (80/80)
+Tides of War (TOW)          -  27% (75/271)
 ```
 
 ## Keywords implementation
