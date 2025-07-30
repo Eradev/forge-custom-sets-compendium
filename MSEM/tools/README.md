@@ -17,3 +17,16 @@ Use:
 ```text
 python forge-gen.py SET
 ```
+
+## install\.ps1
+
+Used to copy MSEM folders into Forge folders, overwriting old files.
+
+> * By default, it will not copy the images files. Use args `-images $true` to also copy them.
+> * Be sure to run the script inside the `tools` folder.
+
+Use:
+
+```text
+.\install.ps1
+```
