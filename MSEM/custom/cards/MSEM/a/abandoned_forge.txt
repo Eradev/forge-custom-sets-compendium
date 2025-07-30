@@ -1,4 +1,4 @@
-HideoutName:Abandoned Forge
+Name:Abandoned Forge
 ManaCost:no cost
 Types:Land
 
