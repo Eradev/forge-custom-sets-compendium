@@ -1,0 +1,8 @@
+Name:Sanctuary for the Forsaken
+ManaCost:2 G W
+Types:Enchantment
+
+R:Event$ DamageDone | CombatDamage$ True | ActiveZones$ Battlefield | ValidTarget$ You,Creature.YouCtrl | ReplaceWith$ DBReplace | PreventionEffect$ True | Description$ If a source would deal combat damage to you or a creature you control, prevent 1 of that damage.
+SVar:DBReplace:DB$ ReplaceDamage | Amount$ 1
+
+Oracle:If a source would deal combat damage to you or a creature you control, prevent 1 of that damage.
