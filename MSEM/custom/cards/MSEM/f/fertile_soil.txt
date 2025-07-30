@@ -1,0 +1,9 @@
+Name:Fertile Soil
+ManaCost:2 G
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Battlefield | Tapped$ True | ChangeType$ Land.Basic | ChangeNum$ 1 | SpellDescription$ Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.
+
+A:AB$ Token | TokenAmount$ 2 | TokenScript$ c_1_1_elemental | PrecostDesc$ Kindle 2 — | Cost$ 2 G ExileFromGrave<1/CARDNAME> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create two 1/1 colorless Elemental creature tokens. Kindle only as a sorcery.
+
+Oracle:Search your library for a basic land card, put it onto the battlefield tapped, then shuffle./nKindle 2—{2}{G} ({2}{G}, Exile this card from your graveyard: Create two 1/1 colorless Elemental creature tokens. Kindle only as a sorcery.)

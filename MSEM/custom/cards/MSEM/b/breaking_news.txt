@@ -1,0 +1,10 @@
+Name:Breaking News
+ManaCost:1 G
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ 2 | NumDef$ 2 | KW$ Trample | SubAbility$ DBAnimate | SpellDescription$ Until end of turn, target creature gets +2/+2 and gains trample and "Whenever this creature deals combat damage to a player, investigate." (Create a colorless Clue artifact token with “{2}, Sacrifice this artifact: Draw a card.”)
+SVar:DBAnimate:DB$ Animate | Defined$ Targeted | Triggers$ TrigInvestigate | StackDescription$ None
+SVar:TrigInvestigate:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ DBInvestigate
+SVar:DBInvestigate:DB$ Investigate
+
+Oracle:Until end of turn, target creature gets +2/+2 and gains trample and "Whenever this creature deals combat damage to a player, investigate." (Create a colorless Clue artifact token with “{2}, Sacrifice this artifact: Draw a card.”)

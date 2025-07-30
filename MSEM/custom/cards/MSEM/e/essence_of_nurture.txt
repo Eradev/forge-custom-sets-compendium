@@ -1,0 +1,13 @@
+Name:Essence of Nurture
+ManaCost:3 G
+Types:Creature Elemental
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounter | TriggerDescription$ When CARDNAME enters, put a +1/+1 counter on another target creature, then you gain life equal to that creature's toughness.
+SVar:TrigCounter:DB$ PutCounter | ValidTgts$ Creature.Other | TgtPrompt$ Select another target creature | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ TrigGainLife
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ X
+SVar:X:Targeted$CardToughness
+
+Oracle:When Essence of Nurture enters, put a +1/+1 counter on another target creature, then you gain life equal to that creature's toughness.
+
+SVar:NeedsToPlay:Creature.YouCtrl+Other

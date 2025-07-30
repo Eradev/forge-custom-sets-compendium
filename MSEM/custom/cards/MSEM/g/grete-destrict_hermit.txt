@@ -1,0 +1,11 @@
+Name:Grete-District Hermit
+ManaCost:2 G
+Types:Creature Elf Druid
+PT:1/2
+
+A:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+T:Mode$ ChangesZone | TriggerZones$ Hand | ValidCard$ Permanent.YouCtrl | Origin$ Battlefield | Destination$ Any | Execute$ PayParanoia | TriggerDescription$ Paranoia {G} (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)
+SVar:PayParanoia:DB$ Play | PlayCost$ G | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
+
+Oracle:{T}: Add one mana of any color.\nParanoia {G} (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)

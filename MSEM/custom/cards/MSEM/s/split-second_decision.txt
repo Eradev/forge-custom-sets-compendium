@@ -1,0 +1,8 @@
+Name:Split-Second Decision
+ManaCost:1 R
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ +1 | KW$ First Strike | SubAbility$ DrawCard | SpellDescription$ Target creature gets +1/+0 and gains first strike until end of turn. Draw a card.
+SVar:DrawCard:DB$ Draw
+
+Oracle:Target creature gets +1/+0 and gains first strike until end of turn. Draw a card.

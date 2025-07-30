@@ -1,0 +1,16 @@
+Name:Helix Entity
+ManaCost:R W
+Types:Creature — Elemental
+PT:3/1
+
+K:Flying
+K:Lifelink
+K:Haste
+
+T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | Execute$ TrigSacrifice | TriggerDescription$ At the beginning of the end step, sacrifice CARDNAME.
+SVar:TrigSacrifice:DB$ Sacrifice
+
+Oracle:Flying, lifelink, haste\nAt the beginning of the end step, sacrifice Helix Entity.
+
+SVar:EndOfTurnLeavePlay:True
+SVar:PlayMain1:TRUE
