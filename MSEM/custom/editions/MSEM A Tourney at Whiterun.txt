@@ -37,7 +37,7 @@ Type=Custom
 28 M Tearful Reunion @Even Amundsen
 29 C Thailen's Guard @Rob Joseph
 30 C Tightrope Acrobat @Julie Dillon
-31 R Trapped in the Tower @Aaron Miller
+31 R Trapped in the Tower (MSEM) @Aaron Miller
 32 C Venerated Knight @Kyoung Hwan Kim
 33 C Visserine's Royal Guard @Rob Joseph
 34 C Waifish Squire @Maciej Kuciara
@@ -100,7 +100,7 @@ Type=Custom
 91 C Knight of the Raven @Eugene Lizin
 92 C Mercenary Coercer @Maciej Kuciara
 93 R Mismatched Bandit @Artem Demura
-94 M Mutual Destruction @Cynthia Sheppard
+94 M Mutual Destruction (MSEM) @Cynthia Sheppard
 95 C Old Grudges @Michal Ivan
 96 C Punish the Bold @Matthias Utomo
 97 C Reverence Seeker @Wojtek Fus
