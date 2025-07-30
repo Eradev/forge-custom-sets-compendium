@@ -15,4 +15,4 @@ SVar:TrigDebt:DB$ PutCounter | CounterType$ DEBT | CounterNum$ 1
 
 A:AB$ RemoveCounter | Cost$ 2 | CounterType$ DEBT | CounterNum$ 1 | SpellDescription$ Remove a debt counter from CARDNAME.
 
-Oracle:Flying, vigilance\nCARDNAME can't attack or block unless you pay {1} for each debt counter on it.\nAt the beginning of your upkeep, put a debt counter on CARDNAME.\n{2}: Remove a debt counter from CARDNAME.
+Oracle:Flying, vigilance\nOrzhov Benefactor can't attack or block unless you pay {1} for each debt counter on it.\nAt the beginning of your upkeep, put a debt counter on Orzhov Benefactor.\n{2}: Remove a debt counter from Orzhov Benefactor.
