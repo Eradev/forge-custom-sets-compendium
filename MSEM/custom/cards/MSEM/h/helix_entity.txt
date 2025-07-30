@@ -7,7 +7,7 @@ K:Flying
 K:Lifelink
 K:Haste
 
-T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | Execute$ TrigSac | TriggerDescription$ At the beginning of the end step, sacrifice CARDNAME.
+T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | Execute$ TrigSacrifice | TriggerDescription$ At the beginning of the end step, sacrifice CARDNAME.
 SVar:TrigSacrifice:DB$ Sacrifice
 
 Oracle:Flying, lifelink, haste\nAt the beginning of the end step, sacrifice Helix Entity.
