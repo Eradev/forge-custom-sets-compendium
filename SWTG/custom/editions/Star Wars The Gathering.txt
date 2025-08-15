@@ -1,7 +1,7 @@
 [metadata]
 Code=SWTG
 Date=2019-05-01
-Name=Star Wars The Gathering
+Name=Star Wars: The Gathering
 Type=Custom
 BoosterCovers=1
 Booster=11 Common, 3 Uncommon, 1 RareMythic
