@@ -1,0 +1,16 @@
+Name:Zam Wesell
+ManaCost:2 U U
+Types:Legendary Creature Shapeshifter Hunter
+PT:2/2
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | TriggerZones$ Stack | Execute$ TrigReveal | TriggerDescription$ When you cast Zam Wesell, target opponent reveals their hand. You may choose a creature card from it and have Zam Wesell enter the battlefield as a copy of that creature card.
+
+SVar:TrigReveal:DB$ RevealHand | ValidTgts$ Opponent | TgtPrompt$ Select an opponent | RememberRevealed$ True | SubAbility$ ChooseCopy
+
+SVar:ChooseCopy:DB$ ChooseCard | ChoiceZone$ Hand | Choices$ Card.Creature+IsRemembered | Optional$ True | RememberObjects$ ChosenCard | SubAbility$ CopySelf
+
+SVar:CopySelf:DB$ Clone | Defined$ ChosenCard | SubAbility$ DBCleanup | Optional$ True
+
+SVar:CleanupCopy:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When you cast Zam Wesell, target opponent reveals their hand. You may choose a creature card from it and have Zam Wesell enter the battlefield as a copy of that creature card.

@@ -1,0 +1,9 @@
+Name:No Contest
+ManaCost:G
+Types:Instant
+
+A:SP$ Pump | AILogic$ Fight | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Choose target creature | SubAbility$ DBConditionalFight | StackDescription$ None | SpellDescription$ Target creature you control fights target creature with power less than its power.
+SVar:DBConditionalFight:DB$ Fight | Defined$ ParentTarget | ValidTgts$ Creature.powerLTX | TgtPrompt$ Choose target creature with power less than the first target
+SVar:X:ParentTargeted$CardPower
+
+Oracle:Target creature you control fights target creature with power less than its power. (Each deals damage equal to its power to the other.)

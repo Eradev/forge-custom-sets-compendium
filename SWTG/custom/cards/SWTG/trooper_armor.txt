@@ -1,0 +1,8 @@
+Name:Trooper Armor
+ManaCost:2
+Types:Artifact Equipment
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 1 | AddToughness$ 1 | AddType$ Trooper | Description$ Equipped creature gets +1/+1 and is a Trooper in addition to its other types.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.Trooper+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigAttach | OptionalDecider$ You | TriggerDescription$ Whenever a Trooper enters the battlefield under your control, you may attach CARDNAME to it.
+SVar:TrigAttach:DB$ Attach | Defined$ TriggeredCardLKICopy
+K:Equip:2
+Oracle:Equipped creature gets +1/+1 and is a Trooper in addition to its other types.\nWhenever a Trooper enters the battlefield under your control, you may attach CARDNAME to it.\nEquip {2}

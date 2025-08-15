@@ -1,0 +1,9 @@
+Name:Interrogation
+ManaCost:1 B
+Types:Sorcery
+
+A:SP$ Discard | ValidTgts$ Player | NumCards$ 1 | TgtPrompt$ Select a player | Mode$ TgtChoose | SubAbility$ DBChoice | SpellDescription$ Target player discards a card. Then that player discards another card unless they pay 3 life.
+
+SVar:DBChoice:DB$ Discard | Defined$ Targeted | NumCards$ 1 | Mode$ TgtChoose | UnlessCost$ PayLife<3> | UnlessPayer$ Targeted
+
+Oracle:Target player discards a card. Then that player discards another card unless he or she pays 3 life.

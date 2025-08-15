@@ -1,0 +1,10 @@
+Name:Echo Base Commando
+ManaCost:1 G W
+Types:Creature Human Rebel
+PT:3/3
+
+K:Protection:Beast
+
+S:Mode$ RaiseCost | ValidCard$ Creature.OppCtrl | Type$ Ability | Amount$ 2 | AffectedZone$ Battlefield | Description$ Activated abilities of creatures your opponents control cost {2} more to activate.
+
+Oracle:Protection from Beasts\nActivated abilities of creatures your opponents control cost {2} more to activate.

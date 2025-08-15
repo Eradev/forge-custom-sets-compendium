@@ -1,0 +1,11 @@
+Name:Nute Gunray
+ManaCost:W U B
+Types:Legendary Creature Neimoidian Advisor
+PT:2/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Artifact.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever an artifact enters the battlefield under your control, you may pay {1}. If you do, draw a card.
+SVar:TrigDraw:DB$ Draw | UnlessCost$ 1 | UnlessPayer$ You | UnlessSwitched$ True | Defined$ You | SubAbility$ DBPay
+
+A:AB$ Token | Cost$ 1 T Sac<1/Artifact.!token/a nontoken artifact> | TokenAmount$ 1 | TokenScript$ c_1_1_a_droid | TokenOwner$ You | SubAbility$ - | SpellDescription$ {1}, {T}, Sacrifice a nontoken artifact: Create a 1/1 colorless Droid artifact creature token.
+
+Oracle:Whenever an artifact enters the battlefield under your control, you may pay {1}. If you do, draw a card.\n{1}, {T}, Sacrifice a nontoken artifact: Create a 1/1 colorless Droid artifact creature token.

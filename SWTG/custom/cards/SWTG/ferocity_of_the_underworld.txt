@@ -1,0 +1,13 @@
+Name:Ferocity of the Underworld
+ManaCost:B R G
+Types:Instant
+
+A:SP$ Charm | Choices$ DBDestroy,DBCopy,DBReturn
+
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Permanent.nonLand+cmcLE3 | TgtPrompt$ Select target nonland permanent with mana value 3 or less | SpellDescription$ Destroy target nonland permanent with mana value 3 or less.
+
+SVar:DBCopy:DB$ CopySpellAbility | ValidTgts$ Instant,Sorcery | TargetType$ Spell | MayChooseTarget$ True | SpellDescription$ Copy target instant or sorcery spell. You may choose new targets for the copy.
+
+SVar:DBReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Card | TgtPrompt$ Select a card in your graveyard | SpellDescription$ Return target card from your graveyard to your hand.
+
+Oracle:Choose one —\n• Destroy target nonland permanent with converted mana cost 3 or less.\n• Copy target instant or sorcery spell. You may choose new targets for the copy.\n• Return target card from your graveyard to your hand.

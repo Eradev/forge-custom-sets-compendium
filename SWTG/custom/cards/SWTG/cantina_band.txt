@@ -1,0 +1,8 @@
+Name:Cantina Band
+ManaCost:W
+Types:Creature Bith
+PT:0/1
+
+A:AB$ Tap | Cost$ 1 T | ValidTgts$ Creature.nonArtifact | TgtPrompt$ Select target nonartifact creature | SpellDescription$ Tap target nonartifact creature.
+
+Oracle:{1}, {T}: Tap target nonartifact creature.

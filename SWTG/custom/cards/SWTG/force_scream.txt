@@ -1,0 +1,8 @@
+Name:Force Scream
+ManaCost:2 R
+Types:Sorcery
+
+A:SP$ DamageAll | ValidCards$ Creature.withoutSpaceflight | ValidPlayers$ Player | NumDmg$ 2 | SubAbility$ DBScry | SpellDescription$ Force Scream deals 2 damage to each creature without spaceflight and each player. Scry 1.
+SVar:DBScry:DB$ Scry | ScryNum$ 1
+
+Oracle:Force Scream deals 2 damage to each creature without spaceflight and each player. Scry 1.

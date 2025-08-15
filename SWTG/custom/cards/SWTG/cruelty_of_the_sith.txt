@@ -1,0 +1,15 @@
+Name:Cruelty of the Sith
+ManaCost:U B R
+Types:Instant
+
+A:SP$ Charm | Choices$ DBCounter,DBSacrifice,DBDamage
+
+SVar:DBCounter:DB$ Counter | TargetType$ Spell | TgtPrompt$ Select target noncreature spell | ValidTgts$ Card.nonCreature | SpellDescription$ Counter target noncreature spell.
+
+SVar:DBSacrifice:DB$ Sacrifice | ValidTgts$ Player | SacValid$ Creature | SacAmount$ 1 | TgtPrompt$ Select a player | SpellDescription$ Target player sacrifices a creature.
+
+SVar:DBDamage:DB$ DealDamage | NumDmg$ 3 | ValidTgts$ Player,Planeswalker | TgtPrompt$ Choose target player or planeswalker | SubAbility$ DBDiscard | SpellDescription$ Cruelty of the Sith deals 3 damage to target player or planeswalker. That player or that planeswalker's controller discards a card.
+
+SVar:DBDiscard:DB$ Discard | Defined$ TriggeredTargetController | Mode$ TgtChoose | NumCards$ 1
+
+Oracle:Choose one —\n• Counter target noncreature spell.\n• Target player sacrifices a creature.\n• Cruelty of the Sith deals 3 damage to target player or planeswalker. That player or that planeswalker's controller discards a card.

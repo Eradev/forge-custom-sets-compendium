@@ -1,0 +1,11 @@
+Name:Force Reflex
+ManaCost:1 W
+Types:Instant
+
+A:SP$ Untap | ValidTgts$ Creature | TgtPrompt$ Select target creature | SubAbility$ DBBuff | SpellDescription$ Untap target creature. It gets +1/+0 and gains first strike until end of turn. Scry 1.
+
+SVar:DBBuff:DB$ Pump | Defined$ Targeted | NumAtt$ 1 | KW$ First Strike | SubAbility$ DBScry
+
+SVar:DBScry:DB$ Scry | ScryNum$ 1 | Defined$ You
+
+Oracle:Untap target creature. It gets +1/+0 and gains first strike until end of turn. Scry 1. (To scry 1, look at the top card of your library. You may put that card on the bottom of your library.)

@@ -1,0 +1,9 @@
+Name:Order 66
+ManaCost:7 B B
+Types:Sorcery
+
+A:SP$ PutCounterAll | ValidCards$ Creature.!YouCtrl | CounterType$ BOUNTY | CounterNum$ 1 | SubAbility$ DBDestroy | SpellDescription$ Put a bounty counter on each creature you don’t control, then destroy all creatures you don’t control.
+
+SVar:DBDestroy:DB$ DestroyAll | ValidCards$ Creature.!YouCtrl
+
+Oracle:Put a bounty counter on each creature you don’t control, then destroy all creatures you don’t control.

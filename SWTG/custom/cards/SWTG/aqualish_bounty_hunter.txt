@@ -1,0 +1,10 @@
+Name:Aqualish Bounty Hunter
+ManaCost:4 B
+Types:Creature Aqualish Hunter
+PT:4/3
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.OppCtrl+counters_GE1_BOUNTY | TriggerZones$ Battlefield | Execute$ TrigDiscard | TriggerDescription$ Bounty — Whenever a creature an opponent controls with a bounty counter on it dies, target player discards a card.
+
+SVar:TrigDiscard:DB$ Discard | ValidTgts$ Player | NumCards$ 1 | Mode$ TgtChoose | TgtPrompt$ Select target player to discard a card
+
+Oracle:Bounty — Whenever a creature an opponent controls with a bounty counter on it dies, target player discards a card.

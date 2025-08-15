@@ -1,0 +1,11 @@
+Name:Greedo
+ManaCost:B R G
+Types:Legendary Creature Rodian Hunter
+PT:4/4
+
+S:Mode$ Continuous | Affected$ Creature.blockedBySource,Creature.blockingSource | AddKeyword$ First Strike | Description$ Creatures blocking or blocked by CARDNAME have first strike.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigSearch | Optional$ True | TriggerDescription$ When CARDNAME dies, you may search your library for a Hunter or Rogue card, reveal it, and put it into your hand.
+SVar:TrigSearch:DB$ ChangeZone | ChangeType$ Creature.Hunter,Creature.Rogue | Origin$ Library | Destination$ Hand | ChangeNum$ 1 | Reveal$ True | Shuffle$ True
+
+Oracle:Creatures blocking or blocked by Greedo have first strike.\nWhen Greedo dies, you may search your library for a Hunter or Rogue card, reveal it, and put it into your hand.

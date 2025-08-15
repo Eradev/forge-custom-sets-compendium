@@ -1,0 +1,7 @@
+Name:Battle Tactics
+ManaCost:2 W W
+Types:Sorcery
+
+A:SP$ PumpAll | Cost$ 2 W W | ValidCards$ Creature.YouCtrl | NumAtt$ +2 | NumDef$ +1 | KW$ Lifelink | SpellDescription$ Creatures you control get +2/+1 and gain lifelink until end of turn.
+
+Oracle:Creatures you control get +2/+1 and gain lifelink until end of turn.

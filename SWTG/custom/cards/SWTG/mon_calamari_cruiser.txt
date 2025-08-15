@@ -1,0 +1,18 @@
+Name:Mon Calamari Cruiser
+ManaCost:3 U U
+Types:Artifact Creature Starship
+PT:4/4
+
+K:Spaceflight
+
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockBySpaceflight
+
+SVar:BlockSpaceflight:Mode$ CantBlockBy | ValidAttacker$ Creature.withoutSpaceflight | ValidBlocker$ Creature.Self | Description$ CARDNAME can block only creatures with spaceflight.
+SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpaceflight+withoutSpacereach | ValidAttacker$ Creature.Self | Description$ CARDNAME can be blocked only by creatures with spaceflight.
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | OptionalDecider$ You | Execute$ TrigDraw | TriggerDescription$ Whenever CARDNAME deals combat damage to a player, you may draw a card.
+
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+Oracle:Spaceflight (This creature can only block or be blocked by creatures with spaceflight.)\nWhenever Mon Calamari Cruiser deals combat damage to a player, you may draw a card.

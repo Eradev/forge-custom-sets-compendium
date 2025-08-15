@@ -1,0 +1,16 @@
+Name:Jango Fett
+ManaCost:1 R R
+Types:Legendary Creature Human Hunter
+PT:2/2
+
+K:Menace
+K:Haste
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigBounty | TriggerDescription$ Whenever CARDNAME attacks, put a bounty counter on target creature an opponent controls.
+SVar:TrigBounty:DB$ PutCounter | CounterType$ BOUNTY | CounterNum$ 1 | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever CARDNAME attacks, it gets +X/+0 until end of turn, where X is the number of creatures defending player controls with a bounty counter on them.
+SVar:TrigPump:DB$ Pump | NumAtt$ +X
+SVar:X:Count$Valid Creature.counters_GE1_BOUNTY+ControlledBy DefendingPlayer
+
+Oracle:Menace, haste\nWhenever Jango Fett attacks, put a bounty counter on target creature an opponent controls.\nWhenever Jango Fett attacks, it gets +X/+0 until end of turn, where X is the number of creatures defending player controls with a bounty counter on them.

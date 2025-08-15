@@ -1,0 +1,12 @@
+Name:The Battle of Geonosis
+ManaCost:X X R R
+Types:Sorcery
+
+A:SP$ DamageAll | NumDmg$ Y | ValidPlayers$ Player.Opponent | ValidCards$ Creature.OppCtrl | SpellDescription$ The Battle of Geonosis deals X plus 1 damage to each opponent and each creature your opponents control. Creatures you control get +X/+0 until end of turn. | SubAbility$ DBPump
+
+SVar:DBPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +X | Duration$ EndOfTurn | Description$ Creatures you control get +X/+0 until end of turn.
+
+SVar:X:Count$xPaid
+SVar:Y:SVar$X/Plus.1
+
+Oracle:The Battle of Geonosis deals X plus 1 damage to each opponent and each creature your opponents control.\nCreatures you control get +X/+0 until end of turn.

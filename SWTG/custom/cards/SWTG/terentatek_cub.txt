@@ -1,0 +1,10 @@
+Name:Terentatek Cub
+ManaCost:1 R
+Types:Creature Beast
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Creature.OppCtrl+Jedi,Creature.OppCtrl+Sith | Description$ As long as an opponent controls a Jedi or Sith, CARDNAME gets +1/+1 and attacks each turn if able.
+
+S:Mode$ Continuous | Affected$ Card.Self | AddStaticAbility$ SMAttack | IsPresent$ Creature.OppCtrl+Jedi,Creature.OppCtrl+Sith
+SVar:SMAttack:Mode$ MustAttack | ValidCreature$ Card.Self
+Oracle:As long as an opponent controls a Jedi or Sith, Terentatek Cub gets +1/+1 and attacks each turn if able.

@@ -1,0 +1,12 @@
+Name:Syndicate Enforcer (SWTG)
+ManaCost:3 R
+Types:Creature Gand Hunter
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigBounty | TriggerDescription$ When CARDNAME enters the battlefield, put a bounty counter on target creature an opponent controls.
+SVar:TrigBounty:DB$ PutCounter | CounterType$ BOUNTY | CounterNum$ 1 | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls
+
+T:Mode$ CounterAddedOnce | ValidCard$ Creature.OppCtrl+inZoneBattlefield | TriggerZones$ Battlefield | CounterType$ BOUNTY | Execute$ DBPump | TriggerDescription$ Whenever a bounty counter is placed on a creature an opponent controls, that creature can’t block this turn.
+SVar:DBPump:DB$ Pump | Defined$ TriggeredCard | IsCurse$ True | KW$ HIDDEN CARDNAME can't block.
+
+Oracle:When Syndicate Enforcer enters the battlefield, put a bounty counter on target creature an opponent controls.\nWhenever a bounty counter is placed on a creature an opponent controls, that creature can’t block this turn.

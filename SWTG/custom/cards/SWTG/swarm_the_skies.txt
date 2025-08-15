@@ -1,0 +1,7 @@
+Name:Swarm the Skies
+ManaCost:3 B
+Types:Sorcery
+
+A:SP$ Token | TokenAmount$ 3 | TokenScript$ b_1_1_tie_fighter | TokenOwner$ You | SpellDescription$ Create three 1/1 black Starship artifact creature tokens with spaceflight named TIE Fighter.
+
+Oracle:Create three 1/1 black Starship artifact creature tokens with spaceflight named TIE Fighter. (Creatures with spaceflight can only block or be blocked by creatures with spaceflight.)

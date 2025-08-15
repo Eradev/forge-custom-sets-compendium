@@ -1,0 +1,11 @@
+Name:Bounty Collector
+ManaCost:1 G
+Types:Creature Quarren Hunter
+PT:2/1
+
+A:AB$ Untap | Cost$ T | ValidTgts$ Land | TgtPrompt$ Select target land | AILogic$ PoolExtraMana | SpellDescription$ Untap target land.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.OppCtrl+counters_GE1_BOUNTY | TriggerZones$ Battlefield | Execute$ TrigUntap | TriggerDescription$ Bounty — Whenever a creature an opponent controls with a bounty counter on it dies, untap CARDNAME.
+SVar:TrigUntap:DB$ Untap | Defined$ Self
+
+Oracle:{T}:Untap target land.\nBounty — Whenever a creature an opponent controls with a bounty counter on it dies, untap Bounty Collector.

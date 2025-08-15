@@ -1,0 +1,13 @@
+Name:Hunt to Extinction
+ManaCost:X B R G
+Types:Sorcery
+
+A:SP$ PutCounter | CounterType$ BOUNTY | CounterNum$ 1 | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select up to two target creatures an opponent controls | TargetMin$ 0 | TargetMax$ 2 | SubAbility$ DBDealAll | SpellDescription$ Put a bounty counter on up to two target creatures an opponent controls. Hunt to Extinction deals X damage to each creature. Hunt to Extinction deals an additional X damage to each creature with a bounty counter on it.
+
+SVar:DBDealAll:DB$ DamageAll | ValidCards$ Creature | NumDmg$ X | SubAbility$ DBExtraDamage
+
+SVar:DBExtraDamage:DB$ DamageAll | ValidCards$ Creature.counters_GE1_BOUNTY | NumDmg$ X
+
+SVar:X:Count$xPaid
+
+Oracle:Put a bounty counter on up to two target creatures an opponent controls. Hunt to Extinction deals X damage to each creature. Hunt to Extinction deals an additional X damage to each creature with a bounty counter on it.

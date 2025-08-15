@@ -1,0 +1,11 @@
+Name:Sith Marauder
+ManaCost:3 R R
+Types:Creature Human Sith
+PT:5/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ HateFlag | SVarCompare$ GE1 | Execute$ TrigDamage | TriggerDescription$ Hate — When CARDNAME enters the battlefield, if an opponent lost life from a source other than combat damage this turn, CARDNAME deals 3 damage to any target.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 3 | TgtPrompt$ Select any target
+
+SVar:HateFlag:PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+
+Oracle:Hate — When Sith Marauder enters the battlefield, if an opponent lost life from a source other than combat damage this turn, Sith Marauder deals 3 damage to any target.

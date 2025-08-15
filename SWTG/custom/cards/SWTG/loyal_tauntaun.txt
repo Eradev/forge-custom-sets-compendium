@@ -1,0 +1,8 @@
+Name:Loyal Tauntaun
+ManaCost:2 W
+Types:Creature Beast
+PT:2/3
+
+A:AB$ Regenerate | Cost$ 1 G, Sac<1/CARDNAME> | ValidTgts$ Creature | TgtPrompt$ Select target creature to regenerate | SpellDescription$ Regenerate target creature.
+
+Oracle:{1}{G}, Sacrifice Loyal Tauntaun: Regenerate target creature.

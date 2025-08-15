@@ -1,0 +1,10 @@
+Name:Dark Decision
+ManaCost:B R
+Types:Sorcery
+
+A:SP$ Dig | Cost$ B R PayLife<1> | DigNum$ 10 | ChangeNum$ 1 | ChangeValid$ Card.nonLand | NoReveal$ True | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBAllowCast | SpellDescription$ Search the top ten cards of your library for a nonland card, exile it, then shuffle your library. Until end of turn, you may cast that card.
+
+SVar:DBAllowCast:DB$ Effect | StaticAbilities$ STPlay | RememberObjects$ Remembered | Duration$ EndOfTurn | ExileOnMoved$ Exile
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ Until end of turn, you may cast the exiled card.
+
+Oracle:As an additional cost to cast Dark Decision, pay 1 life.\nSearch the top ten cards of your library for a nonland card, exile it, then shuffle your library. Until end of turn, you may cast that card.

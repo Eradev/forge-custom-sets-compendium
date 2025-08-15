@@ -1,0 +1,8 @@
+Name:Outer Rim Slaver
+ManaCost:B R G
+Types:Creature Trandoshan Rogue
+PT:3/3
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigFight | TriggerDescription$ When CARDNAME enters the battlefield, you may put a bounty counter on target creature. If you do, another target creature you control fights that creature.
+SVar:TrigFight:DB$ PutCounter | ValidTgts$ Creature | TgtPrompt$ Select target creature | CounterType$ BOUNTY | CounterNum$ 1 | SubAbility$ DBFight
+SVar:DBFight:DB$ Fight | Defined$ ParentTarget | ValidTgts$ Creature.YouCtrl | TargetUnique$ True | TgtPrompt$ Select another target creature you control
+Oracle:When Outer Rim Slaver enters the battlefield, you may put a bounty counter on target creature. If you do, another target creature you control fights that creature.

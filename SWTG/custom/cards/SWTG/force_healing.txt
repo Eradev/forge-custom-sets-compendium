@@ -1,0 +1,9 @@
+Name:Force Healing
+ManaCost:W
+Types:Instant
+
+A:SP$ PreventDamage | Amount$ 4 | ValidTgts$ Creature,Player | TgtPrompt$ Select target creature or player | SubAbility$ DBScry | SpellDescription$ Prevent the next 4 damage that would be dealt to target creature or player this turn. Scry 1.
+
+SVar:DBScry:DB$ Scry | ScryNum$ 1 | Defined$ You
+
+Oracle:Prevent the next 4 damage that would be dealt to target creature or player this turn. Scry 1.

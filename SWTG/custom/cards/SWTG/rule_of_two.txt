@@ -1,0 +1,6 @@
+Name:Rule of Two
+ManaCost:3 B B
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl | AddPower$ 2 | AddKeyword$ Deathtouch & Lifelink | Description$ As long as you control exactly two creatures, those creatures get +2/+0 and have deathtouch and lifelink. | IsPresent$ Creature.YouCtrl | PresentCompare$ EQ2
+Oracle:As long as you control exactly two creatures, those creatures get +2/+0 and have deathtouch and lifelink.

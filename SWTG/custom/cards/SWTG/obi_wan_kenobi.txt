@@ -1,0 +1,10 @@
+Name:Obi-Wan Kenobi
+ManaCost:3 W U
+Types:Legendary Planeswalker Obi-Wan
+Loyalty:4
+A:AB$ Protection | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Duration$ UntilYourNextTurn | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select up to one target creature you control | Gains$ Choice | Choices$ AnyColor | SubAbility$ DBPump | SpellDescription$ Until your next turn, up to one target creature you control gains vigilance and protection from the color of your choice.
+SVar:DBPump:DB$ Pump | Defined$ Targeted | KW$ Vigilance | Duration$ UntilYourNextTurn
+A:AB$ Tap | Cost$ SubCounter<1/LOYALTY> | Planeswalker$ True | TargetMin$ 0 | TargetMax$ 3 | ValidTgts$ Creature | TgtPrompt$ Select up to three target creatures | SpellDescription$ Tap up to three target creatures.
+A:AB$ Effect | Cost$ SubCounter<7/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Obi-Wan Kenobi | Duration$ Permanent | StaticAbilities$ STObi | AILogic$ Always | SpellDescription$ You get an emblem with "Creatures you control get +1/+1 and have vigilance, first strike, and lifelink."
+SVar:STObi:Mode$ Continuous | Affected$ Creature.YouCtrl | AffectedZone$ Battlefield | AddPower$ +1 | AddToughness$ +1 | AddKeyword$ Vigilance & First Strike & Lifelink
+Oracle:[+1]: Until your next turn, up to one target creature you control gains vigilance and protection from the color of your choice.\n[-1]: Tap up to three target creatures.\n[-7]: You get an emblem with "Creatures you control get +1/+1 and have vigilance, first strike, and lifelink."

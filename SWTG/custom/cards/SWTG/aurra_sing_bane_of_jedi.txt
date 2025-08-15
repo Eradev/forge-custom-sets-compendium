@@ -1,0 +1,21 @@
+Name:Aurra Sing, Bane of Jedi
+ManaCost:2 B R
+Types:Planeswalker Aurra
+Loyalty:3
+
+A:AB$ Pump | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | TgtPrompt$ Select target creature | SubAbility$ GenChoice | SpellDescription$ You may have Aurra Sing deal 2 damage to target creature. If you don’t, Aurra Sing deals 1 damage to you.
+SVar:GenChoice:DB$ GenericChoice | Choices$ DBDeal,DBDealSelf | Defined$ You | SpellDescription$ You may have Aurra Sing deal 2 damage to target creature. If you don’t, Aurra Sing deals 1 damage to you.
+# A:AB$ GenericChoice | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Choices$ DBDeal,DBDealSelf | Defined$ You | SpellDescription$ You may have Aurra Sing deal 2 damage to target creature. If you don’t, Aurra Sing deals 1 damage to you.
+SVar:DBDeal:DB$ DealDamage | NumDmg$ 2 | Defined$ Targeted | SpellDescription$ Deal 2 Damage to target creature.
+SVar:DBDealSelf:DB$ DealDamage | NumDmg$ 1 | Defined$ You | SpellDescription$ Deal 1 damage to you.
+
+A:AB$ Effect | Cost$ SubCounter<4/LOYALTY> | Planeswalker$ True | ValidTgts$ Player | EffectOwner$ Targeted | Name$ Emblem — Aurra Sing | Image$ emblem_aurra_sing | Triggers$ EffLeave | Duration$ Permanent | SpellDescription$ Target player gets an emblem with "Whenever a nontoken creature you control leaves the battlefield, discard a card." | TgtPrompt$ Select target player
+SVar:EffLeave:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Creature.nonToken+YouCtrl | Execute$ EmblemDiscard | TriggerDescription$ Whenever a nontoken creature you control leaves the battlefield, discard a card.
+SVar:EmblemDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 1
+
+A:AB$ Effect | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | SpellDescription$ Each player discards his or her hand and exiles all creatures he or she controls. Each player's life total becomes 1. | SubAbility$ DBExileAll
+SVar:DBExileAll:DB$ ChangeZoneAll | ChangeType$ Creature | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBDiscardAll
+SVar:DBDiscardAll:DB$ Discard | Mode$ Hand | Defined$ Player | SubAbility$ DBSetLife
+SVar:DBSetLife:DB$ SetLife | Defined$ Player | LifeAmount$ 1
+
+Oracle:[+1]: You may have Aurra Sing deal 2 damage to target creature. If you don’t, Aurra Sing deals 1 damage to you.\n[-4]: Target player gets an emblem with "Whenever a nontoken creature you control leaves the battlefield, discard a card."\n[-6]: Each player discards his or her hand and exiles all creatures he or she controls. Each player's life total becomes 1.

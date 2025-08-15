@@ -1,0 +1,13 @@
+Name:Chief Chirpa
+ManaCost:R G W
+Types:Legendary Creature Ewok Warrior
+PT:2/2
+K:Monstrosity:2:2 R G W
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.Green+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigCounter | OptionalDecider$ You | TriggerDescription$ Whenever a green creature you control dies, you may put a +1/+1 counter on another target Ewok creature you control.
+SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 1 | ValidTgts$ Creature.YouCtrl+Ewok+Other | TgtPrompt$ Select another target Ewok you control
+
+T:Mode$ BecomeMonstrous | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigTokens | TriggerDescription$ When CARDNAME becomes monstrous, create three 1/1 green Ewok creature tokens.
+SVar:TrigTokens:DB$ Token | TokenAmount$ 3 | TokenScript$ g_1_1_ewok | TokenOwner$ You
+
+Oracle:{2}{R}{G}{W}: Monstrosity 2. (If this creature isn’t monstrous, put two +1/+1 counters on it and it becomes monstrous.)\nWhenever a green creature you control dies, you may put a +1/+1 counter on another target Ewok creature you control.\nWhen Chief Chirpa becomes monstrous, create three 1/1 green Ewok creature tokens.

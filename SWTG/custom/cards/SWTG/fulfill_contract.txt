@@ -1,0 +1,8 @@
+Name:Fulfill Contract
+ManaCost:BR BR
+Types:Instant
+A:SP$ Destroy | ValidTgts$ Creature.counters_GE1_BOUNTY | TgtPrompt$ Select target creature with a bounty counter on it | RememberDestroyed$ True | SubAbility$ DBP1P1 | SpellDescription$ Destroy target creature with a bounty counter on it. If that creature is destroyed this way, you may put a +1/+1 counter on target Rogue or Hunter you control.
+SVar:DBP1P1:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 1 | ValidTgts$ Creature.Rogue+YouCtrl,Creature.Hunter+YouCtrl | TgtPrompt$ Select target Rogue or Hunter you control | ConditionCheckSVar$ X | ConditionSVarCompare$ GE1 | Optional$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$Amount
+Oracle:Destroy target creature with a bounty counter on it. If that creature is destroyed this way, you may put a +1/+1 counter on target Rogue or Hunter you control.

@@ -1,0 +1,7 @@
+Name:Senator Padme Amidala
+ManaCost:W U
+Types:Legendary Creature Human Advisor
+PT:2/2
+T:Mode$ Drawn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigLife | TriggerDescription$ Whenever you draw a card, you gain 1 life.
+SVar:TrigLife:DB$ GainLife | Defined$ You | LifeAmount$ 1
+Oracle:Whenever you draw a card, you gain 1 life.

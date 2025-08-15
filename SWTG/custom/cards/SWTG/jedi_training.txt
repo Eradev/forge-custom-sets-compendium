@@ -1,0 +1,7 @@
+Name:Jedi Training
+ManaCost:U
+Types:Enchantment
+
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Creature.YouCtrl+withMeditate | AddKeyword$ Discountmeditate | Description$ Meditate abilities you activate cost {1} less to activate.
+
+Oracle:Meditate abilities you activate cost {1} less to activate.\nWhenever a Jedi creature you control meditates, scry 1.

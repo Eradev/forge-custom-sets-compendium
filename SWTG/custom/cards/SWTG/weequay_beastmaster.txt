@@ -1,0 +1,11 @@
+Name:Weequay Beastmaster
+ManaCost:1 R
+Types:Creature Weequay Shaman
+PT:2/1
+
+S:Mode$ ReduceCost | ValidCard$ Card.withMonstrosity | ValidSpell$ Activated | Activator$ You | Amount$ 1 | Condition$ PlayerTurn | Description$ Monstrosity abilities you activate cost {1} less to activate.
+
+T:Mode$ BecomeMonstrous | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigExtraCounter | TriggerDescription$ Whenever a creature you control becomes monstrous, put an additional +1/+1 counter on that creature.
+SVar:TrigExtraCounter:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 1 | Defined$ TriggeredCard
+
+Oracle:Monstrosity abilities you activate cost {1} less to activate.\nWhenever a creature you control becomes monstrous, put an additional +1/+1 counter on that creature.

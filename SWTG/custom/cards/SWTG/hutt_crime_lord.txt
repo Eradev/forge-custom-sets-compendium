@@ -1,0 +1,10 @@
+Name:Hutt Crime Lord
+ManaCost:2 G G
+Types:Creature Hutt Rogue
+PT:5/5
+K:etbCounter:BOUNTY:1
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ StayTapped | TriggerDescription$ Whenever CARDNAME attacks, it doesn't untap during its controller's next untap step.
+SVar:StayTapped:DB$ Pump | KW$ HIDDEN This card doesn't untap during your next untap step. | Defined$ Self | Duration$ Permanent
+
+Oracle:Hutt Crime Lord enters the battlefield with a bounty counter on it.\nWhenever Hutt Crime Lord attacks, it doesn't untap during its controller's next untap step.

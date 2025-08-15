@@ -1,0 +1,9 @@
+Name:Unity of the Droids
+ManaCost:W U B
+Types:Instant
+A:SP$ Charm | Choices$ DBPrevent,DBDig,DBDestroy
+SVar:DBPrevent:DB$ Effect | ReplacementEffects$ RPrevent | RememberObjects$ Targeted | ExileOnMoved$ Battlefield | ValidTgts$ Artifact.Creature | TgtPrompt$ Select target artifact creature | SpellDescription$ Prevent all damage that would be dealt to target artifact creature this turn.
+SVar:RPrevent:Event$ DamageDone | Prevent$ True | ValidTarget$ Card.IsRemembered | Description$ Prevent all damage that would be dealt to that creature this turn.
+SVar:DBDig:DB$ Dig | DigNum$ 4 | ChangeNum$ 1 | DestinationZone2$ Graveyard | NoReveal$ True | SpellDescription$ Look at the top four cards of your library. Put one of them into your hand and the rest into your graveyard.
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Creature.nonArtifact | TgtPrompt$ Select target nonartifact creature | SpellDescription$ Destroy target nonartifact creature.
+Oracle:Choose one —\n• Prevent all damage that would be dealt to target artifact creature this turn.\n• Look at the top four cards of your library. Put one of them into your hand and the rest into your graveyard.\n• Destroy target nonartifact creature.

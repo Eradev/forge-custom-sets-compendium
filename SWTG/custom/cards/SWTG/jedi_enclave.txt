@@ -1,0 +1,6 @@
+Name:Jedi Enclave
+ManaCost:no cost
+Types:Land
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+A:AB$ ChangeZone | Cost$ T Sac<1/CARDNAME> | Origin$ Library | Destination$ Battlefield | Tapped$ True | ChangeType$ Land.Forest+Basic,Land.Plains+Basic,Land.Island+Basic | ChangeNum$ 1 | SpellDescription$ Search your library for a basic Forest, Plains, or Island card and put it onto the battlefield tapped, then shuffle.
+Oracle:{T}: Add {C}.\n{T}, Sacrifice Jedi Enclave: Search your library for a basic Forest, Plains, or Island card, put it onto the battlefield tapped, then shuffle.

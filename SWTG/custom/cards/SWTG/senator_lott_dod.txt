@@ -1,0 +1,7 @@
+Name:Senator Lott Dod
+ManaCost:U B
+Types:Legendary Creature Neimoidian Advisor
+PT:2/2
+S:Mode$ RaiseCost | ValidTarget$ Player.You | Activator$ Opponent | Type$ Spell | Amount$ 2 | Description$ Spells your opponents cast that target you cost {2} more to cast.
+S:Mode$ RaiseCost | ValidTarget$ Creature.YouCtrl | Activator$ Opponent | Type$ Spell | Amount$ 1 | Description$ Spells your opponents cast that target a creature you control cost {1} more to cast.
+Oracle:Spells your opponents cast that target you cost {2} more to cast.\nSpells your opponents cast that target a creature you control cost {1} more to cast.

@@ -1,0 +1,6 @@
+Name:Senator Bail Organa
+ManaCost:G W
+Types:Legendary Creature Human Advisor
+PT:2/2
+S:Mode$ Continuous | Affected$ Creature.YouCtrl | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Creature.YouCtrl | PresentCompare$ GE4 | Description$ As long as you control four or more creatures, creatures you control get +1/+1.
+Oracle:As long as you control four or more creatures, creatures you control get +1/+1.

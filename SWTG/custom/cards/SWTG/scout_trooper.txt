@@ -1,0 +1,8 @@
+Name:Scout Trooper
+ManaCost:1 G
+Types:Creature Human Trooper Scout
+PT:1/1
+
+S:Mode$ Continuous | Affected$ Creature.Trooper+YouCtrl | AddPower$ 1 | AddToughness$ 1 | Description$ Trooper creatures you control get +1/+1.
+
+Oracle:Trooper creatures you control get +1/+1.

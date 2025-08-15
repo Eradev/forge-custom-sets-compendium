@@ -1,0 +1,19 @@
+Name:LAAT Gunship
+ManaCost:3 W
+Types:Artifact Creature Starship
+PT:3/2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ Whenever CARDNAME attacks, create a 1/1 white Trooper creature token that is tapped and attacking.
+
+SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ w_1_1_trooper | TokenTapped$ True | TokenAttacking$ True | TokenOwner$ You
+
+A:AB$ Pump | Cost$ W | SorcerySpeed$ True | KW$ Spaceflight | SpellDescription$ CARDNAME gains spaceflight until end of turn. Activate only as a sorcery.
+SVar:NonStackingEffect:True
+
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockBySpaceflight
+
+SVar:BlockSpaceflight:Mode$ CantBlockBy | ValidAttacker$ Creature.withoutSpaceflight | ValidBlocker$ Creature.Self | Description$ CARDNAME can block only creatures with spaceflight.
+SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpaceflight+withoutSpacereach | ValidAttacker$ Creature.Self | Description$ CARDNAME can be blocked only by creatures with spaceflight.
+
+Oracle:Whenever LAAT Gunship attacks, create a 1/1 white Trooper creature token that is tapped and attacking.\n{W}: LAAT Gunship gains spaceflight until end of turn. Activate only as a sorcery. (Creatures with spaceflight can only block or be blocked by creatures with spaceflight.)

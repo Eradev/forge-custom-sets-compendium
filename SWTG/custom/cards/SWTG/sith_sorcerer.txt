@@ -1,0 +1,14 @@
+Name:Sith Sorcerer
+ManaCost:2 U
+Types:Creature Human Sith
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigScry | TriggerDescription$ When CARDNAME enters the battlefield, scry 2.
+SVar:TrigScry:DB$ Scry | ScryNum$ 2
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | CheckSVar$ HateFlag | SVarCompare$ GE1 | Execute$ TrigDraw | TriggerDescription$ Hate — When CARDNAME dies, if an opponent lost life from a source other than combat damage this turn, draw a card.
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+SVar:HateFlag:PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+
+Oracle:When Sith Sorcerer enters the battlefield, scry 2.\nHate — When Sith Sorcerer dies, if an opponent lost life from a source other than combat damage this turn, draw a card.

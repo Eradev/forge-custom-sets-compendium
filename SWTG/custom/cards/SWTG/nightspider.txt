@@ -1,0 +1,8 @@
+Name:Nightspider
+ManaCost:G
+Types:Creature Insect
+PT:1/1
+
+K:Deathtouch
+
+Oracle:Deathtouch

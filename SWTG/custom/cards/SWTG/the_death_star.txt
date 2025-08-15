@@ -1,0 +1,8 @@
+Name:The Death Star
+ManaCost:no cost
+Types:Legendary Land
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {1}.
+A:AB$ PutCounter | Cost$ 2 T | CounterType$ CHARGE | CounterNum$ 1 | SpellDescription$ Put a charge counter on The Death Star.
+A:AB$ Destroy | Cost$ T SubCounter<3/CHARGE> | ValidTgts$ Permanent | TgtPrompt$ Select target permanent to destroy | SpellDescription$ Destroy target permanent.
+A:AB$ LosesGame | Cost$ T SubCounter<10/CHARGE> | ValidTgts$ Player | TgtPrompt$ Select target player to destroy | SpellDescription$ Destroy target player.
+Oracle:{T}: Add {1}.\n{2}, {T}: Put a charge counter on The Death Star.\n{T}, Remove three charge counters from The Death Star: Destroy target permanent.\n{T}, Remove ten charge counters from The Death Star: Destroy target player.

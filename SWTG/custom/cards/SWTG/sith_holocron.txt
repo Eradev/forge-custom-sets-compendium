@@ -1,0 +1,9 @@
+Name:Sith Holocron
+ManaCost:2
+Types:Artifact
+A:AB$ PutCounter | Cost$ T | CounterType$ CHARGE | CounterNum$ 1 | SpellDescription$ Put a charge counter on CARDNAME.
+A:AB$ Mana | Cost$ T SubCounter<1/CHARGE> | Produced$ Combo U B R | Amount$ 1 | SpellDescription$ Add {U}, {B}, or {R}.
+A:AB$ Charm | Cost$ T SubCounter<2/CHARGE> | Choices$ ManaUB,ManaBR | CharmNum$ 1 | SpellDescription$ Add {U}{B} or {B}{R}.
+SVar:ManaUB:DB$ Mana | Produced$ U B | SpellDescription$ Add {U}{B}
+SVar:ManaBR:DB$ Mana | Produced$ B R | SpellDescription$ Add {B}{R}
+Oracle:{T}: Put a charge counter on CARDNAME.\n{T}, Remove a charge counter from CARDNAME: Add {U}, {B}, or {R}.\n{T}, Remove two charge counters from CARDNAME: Add {U}{B} or {B}{R}.

@@ -1,0 +1,10 @@
+Name:Force Drain
+ManaCost:2 B
+Types:Instant
+
+A:SP$ DealDamage | NumDmg$ 2 | ValidTgts$ Any | TgtPrompt$ Select any target | SubAbility$ CheckGainLife | SpellDescription$ Force Drain deals 2 damage to any target. If a player or planeswalker was dealt damage this way, you gain 2 life. Scry 1.
+
+SVar:CheckGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 2 | ConditionDefined$ Targeted | ConditionPresent$ Player,Planeswalker | SubAbility$ DBScry
+SVar:DBScry:DB$ Scry | ScryNum$ 1
+
+Oracle:Force Drain deals 2 damage to any target. If a player or planeswalker was dealt damage this way, you gain 2 life.\nScry 1.

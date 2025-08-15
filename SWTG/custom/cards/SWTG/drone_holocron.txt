@@ -1,0 +1,9 @@
+Name:Drone Holocron
+ManaCost:2
+Types:Artifact
+A:AB$ PutCounter | Cost$ T | CounterType$ CHARGE | CounterNum$ 1 | SpellDescription$ Put a charge counter on CARDNAME.
+A:AB$ Mana | Cost$ T SubCounter<1/CHARGE> | Produced$ Combo W U B | Amount$ 1 | SpellDescription$ Add {W}, {U}, or {B}.
+A:AB$ Charm | Cost$ T SubCounter<2/CHARGE> | Choices$ ManaWU,ManaUB | CharmNum$ 1 | SpellDescription$ Add {WU} or {UB}.
+SVar:ManaWU:DB$ Mana | Produced$ W U | SpellDescription$ Add {W}{U}
+SVar:ManaUB:DB$ Mana | Produced$ U B | SpellDescription$ Add {U}{B}
+Oracle:{T}: Put a charge counter on Drone Holocron.\n{T}, Remove a charge counter from Drone Holocron: Add {W}, {U}, or {B}.\n{T}, Remove two charge counters from Drone Holocron: Add {WU} or {UB}.

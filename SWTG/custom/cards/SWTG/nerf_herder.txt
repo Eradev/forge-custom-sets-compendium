@@ -1,0 +1,10 @@
+Name:Nerf Herder
+ManaCost:2 G
+Types:Creature Human
+PT:2/3
+
+S:Mode$ ReduceCost | ValidCard$ Card.withMonstrosity | ValidSpell$ Activated | Activator$ You | Amount$ 1 | Condition$ PlayerTurn | Description$ Monstrosity abilities you activate cost {1} less to activate.
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+counters_GE1_P1P1 | AddKeyword$ Trample | Description$ Each creature you control with a +1/+1 counter on it has trample.
+
+Oracle:Monstrosity abilities you activate cost {1} less to activate.\nEach creature you control with a +1/+1 counter on it has trample.

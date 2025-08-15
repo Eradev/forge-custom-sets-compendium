@@ -1,0 +1,9 @@
+Name:Droid Foundry
+ManaCost:no cost
+Types:Land
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters the battlefield tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMana | TriggerDescription$ When CARDNAME enters the battlefield, add {U}.
+SVar:TrigMana:DB$ Mana | Produced$ U | Amount$ 1
+A:AB$ Mana | Cost$ T | Produced$ Combo W B | SpellDescription$ Add {W} or {B}.
+Oracle:Droid Foundry enters the battlefield tapped.\nWhen Droid Foundry enters the battlefield, add {U}.\n{T}: Add {W} or {B}.

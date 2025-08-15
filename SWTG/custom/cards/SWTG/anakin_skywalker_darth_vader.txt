@@ -1,0 +1,29 @@
+Name:Anakin Skywalker
+ManaCost:3 U B R
+Types:Legendary Creature Human Sith
+PT:4/4
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.Other | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ Whenever another creature dies, put a +1/+1 counter on Anakin Skywalker.
+SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 1 | Defined$ Self
+
+A:AB$ Pump | Cost$ Sac<1/Creature.Other> | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ -1 | NumDef$ -1 | SpellDescription$ Target creature gets -1/-1 until end of turn. | SorcerySpeed$ True
+
+R:Event$ Destroy | ActiveZones$ Battlefield | ValidCard$ Card.Self | Regeneration$ True | ReplaceWith$ DBRegeneration | Description$ If CARDNAME would be destroyed, regenerate it.
+SVar:DBRegeneration:DB$ Regeneration | Defined$ ReplacedCard | SubAbility$ DBTransform
+SVar:DBTransform:DB$ SetState | Defined$ Self | Mode$ Transform
+AlternateMode:DoubleFaced
+Oracle:Whenever another creature dies, put a +1/+1 counter on Anakin Skywalker.\nSacrifice another creature: Target creature gets -1/-1 until end of turn. Activate only as a sorcery.\nIf Anakin Skywalker would be destroyed, regenerate him, then transform him.
+
+ALTERNATE
+
+Name:Darth Vader
+Types:Legendary Creature Human Sith
+PT:4/4
+K:Menace
+K:Lifelink
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDebuff | TriggerDescription$ Whenever Darth Vader attacks, creatures defending player controls get -1/-1 until end of turn for each +1/+1 counter on Darth Vader.
+SVar:TrigDebuff:DB$ PumpAll | ValidCards$ Creature.DefenderCtrl | NumAtt$ -X | NumDef$ -X
+SVar:X:Count$CardCounters.P1P1
+
+Oracle:Menace, lifelink\nWhenever Darth Vader attacks, creatures defending player controls get -1/-1 until end of turn for each +1/+1 counter on Darth Vader.

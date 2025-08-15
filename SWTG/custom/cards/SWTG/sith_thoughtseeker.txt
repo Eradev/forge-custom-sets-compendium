@@ -1,0 +1,10 @@
+Name:Sith Thoughtseeker
+ManaCost:1 B
+Types:Creature Human Sith
+PT:2/1
+
+A:AB$ Draw | Cost$ 2 U | CheckSVar$ HateFlag | SVarCompare$ GE1 | SpellDescription$ Hate — Draw a card. Activate this ability only if an opponent lost life from a source other than combat damage this turn.
+
+SVar:HateFlag:PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+
+Oracle:Hate — {2}{U}: Draw a card. Activate this ability only if an opponent lost life from a source other than combat damage this turn.

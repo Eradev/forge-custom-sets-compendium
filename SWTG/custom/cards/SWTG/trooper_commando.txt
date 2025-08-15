@@ -1,0 +1,8 @@
+Name:Trooper Commando
+ManaCost:3 G
+Types:Creature Human Trooper
+PT:3/3
+
+S:Mode$ Continuous | Affected$ Creature.Trooper+YouCtrl | AddKeyword$ Trample | Description$ Trooper creatures you control have trample.
+
+Oracle:Trooper creatures you control have trample.

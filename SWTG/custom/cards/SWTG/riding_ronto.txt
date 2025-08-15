@@ -1,0 +1,10 @@
+Name:Riding Ronto
+ManaCost:2 W
+Types:Creature Beast
+PT:2/4
+
+K:Monstrosity:2:3 W W
+
+S:Mode$ Continuous | Affected$ Card.Self+IsMonstrous | AddKeyword$ Vigilance | Description$ As long as CARDNAME is monstrous, it has vigilance.
+
+Oracle:{3}{W}{W}: Monstrosity 2. (If this creature isn’t monstrous, put two +1/+1 counters on it and it becomes monstrous.)\nAs long as Riding Ronto is monstrous, it has vigilance.

@@ -1,0 +1,11 @@
+Name:Exogorth
+ManaCost:5 G G
+Types:Creature Slug
+PT:8/7
+K:Flash
+K:Trample
+K:Spacereach
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.withoutSpaceflight | ValidBlocker$ Creature.Self | Description$ CARDNAME can only block creatures with spaceflight.
+
+Oracle:Flash, trample\nExogorth can block creatures with spaceflight.\nExogorth can only block creatures with spaceflight.

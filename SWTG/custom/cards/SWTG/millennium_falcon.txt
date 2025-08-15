@@ -1,0 +1,17 @@
+Name:Millennium Falcon
+ManaCost:3 G G
+Types:Legendary Artifact Creature Starship
+PT:5/4
+K:Flash
+K:Spaceflight
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigHexproof | TriggerDescription$ When CARDNAME enters the battlefield, creatures you control gain hexproof until end of turn.
+SVar:TrigHexproof:DB$ PumpAll | KW$ Hexproof | ValidCards$ Creature.YouCtrl
+
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockBySpaceflight
+
+SVar:BlockSpaceflight:Mode$ CantBlockBy | ValidAttacker$ Creature.withoutSpaceflight | ValidBlocker$ Creature.Self | Description$ CARDNAME can block only creatures with spaceflight.
+SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpaceflight+withoutSpacereach | ValidAttacker$ Creature.Self | Description$ CARDNAME can be blocked only by creatures with spaceflight.
+
+Oracle:Flash, spaceflight\nWhen Millennium Falcon enters the battlefield, creatures you control gain hexproof until end of turn.

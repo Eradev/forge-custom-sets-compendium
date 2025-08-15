@@ -1,0 +1,8 @@
+Name:Ravenous Wampa
+ManaCost:2 RW RW
+Types:Creature Beast
+PT:4/4
+A:AB$ PutCounter | Cost$ 2 G Sac<1/Creature.Other> | ConditionPresent$ Card.Self+!IsMonstrous | Monstrosity$ True | CounterNum$ 2 | CounterType$ P1P1 | RememberSacrificed$ True | SubAbility$ DBGainLife | SpellDescription$ {2}{G}, Sacrifice another creature: Monstrosity 2. (If this creature isn’t monstrous, put two +1/+1 counters on it and it becomes monstrous.)
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ SacToughness
+SVar:SacToughness:Sacrificed$CardToughness
+Oracle:{2}{G}, Sacrifice another creature: Monstrosity 2. (If this creature isn’t monstrous, put two +1/+1 counters on it and it becomes monstrous.)\nWhen CARDNAME becomes monstrous, you gain life equal to the sacrificed creature’s toughness.

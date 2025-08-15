@@ -1,0 +1,13 @@
+Name:Bib Fortuna
+ManaCost:1 B
+Types:Legendary Creature Twi'lek Advisor
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigTutor | TriggerDescription$ When CARDNAME enters the battlefield, search your library for a card, then shuffle and put that card on top. You lose 1 life.
+SVar:TrigTutor:DB$ ChangeZone | Origin$ Library | Destination$ Library | LibraryPosition$ 0 | ChangeType$ Card | SubAbility$ LoseLife | SpellDescription$
+SVar:LoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigShuffle | TriggerDescription$ When CARDNAME dies, shuffle your library.
+SVar:TrigShuffle:DB$ Shuffle | Defined$ You
+
+Oracle:When Bib Fortuna enters the battlefield, search your library for a card, then shuffle your library and put that card on top of it. You lose 1 life.\nWhen Bib Fortuna dies, shuffle your library.
