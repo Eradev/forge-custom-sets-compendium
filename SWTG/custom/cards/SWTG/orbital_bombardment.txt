@@ -1,0 +1,7 @@
+Name:Orbital Bombardment
+ManaCost:3 W W
+Types:Sorcery
+
+A:SP$ DestroyAll | ValidCards$ Creature.nonStarship | SpellDescription$ Destroy all non-Starship creatures.
+
+Oracle:Destroy all non-Starship creatures.

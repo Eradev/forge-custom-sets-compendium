@@ -1,0 +1,8 @@
+Name:Sand Trooper
+ManaCost:1 W
+Types:Creature Human Trooper
+PT:2/2
+
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Creature.Trooper+YouCtrl | AddKeyword$ Vigilance | Description$ Trooper creatures you control have vigilance.
+
+Oracle:Trooper creatures you control have vigilance.

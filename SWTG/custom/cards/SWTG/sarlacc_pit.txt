@@ -1,0 +1,9 @@
+Name:Sarlacc Pit
+ManaCost:R G
+Types:Creature Beast
+PT:0/4
+K:Defender
+K:Hexproof
+K:Monstrosity:1:R G Sac<1/Land>
+S:Mode$ Continuous | Affected$ Card.Self+IsMonstrous | AddKeyword$ First Strike & Deathtouch | RemoveKeyword$ Hexproof | Description$ As long as CARDNAME is monstrous, it has first strike and deathtouch and loses hexproof.
+Oracle:Defender, hexproof\n{R}{G}, Sacrifice a land: Monstrosity 1. (If this creature isn’t monstrous, put a +1/+1 counter on it and it becomes monstrous.)\nWhen Sarlacc Pit becomes monstrous, it loses hexproof and gains first strike and deathtouch.

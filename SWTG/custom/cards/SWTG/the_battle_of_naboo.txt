@@ -1,0 +1,11 @@
+Name:The Battle of Naboo
+ManaCost:X X U U
+Types:Sorcery
+
+A:SP$ ChangeZone | TargetMin$ 0 | TargetMax$ X | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Hand | SubAbility$ DBDraw | SpellDescription$ Return X target creatures to their owners’ hands. Draw twice that many cards.
+
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ Y
+SVar:X:Count$xPaid
+SVar:Y:SVar$X/Times.2
+
+Oracle:Return X target creatures to their owners’ hands. Draw twice that many cards.

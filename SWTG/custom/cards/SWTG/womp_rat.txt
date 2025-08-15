@@ -1,0 +1,12 @@
+Name:Womp Rat
+ManaCost:2 W
+Types:Creature Rat Beast
+PT:3/2
+
+K:Monstrosity:1:4 W
+
+T:Mode$ BecomeMonstrous | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigExile | OptionalDecider$ You | TriggerDescription$ When CARDNAME becomes monstrous, you may exile target card from a graveyard.
+
+SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Card | TgtPrompt$ Select target card in a graveyard to exile
+
+Oracle:{4}{W}: Monstrosity 1. (If this creature isn’t monstrous, put a +1/+1 counter on it and it becomes monstrous.)\nWhen Womp Rat becomes monstrous, you may exile target card from a graveyard.

@@ -1,0 +1,13 @@
+Name:Darth Maul
+ManaCost:1 B R
+Types:Legendary Creature Zabrak Sith
+PT:2/2
+K:Double Strike
+K:Haste
+
+T:Mode$ Attacks | ValidCard$ Card.Self | CheckSVar$ HateFlag | SVarCompare$ GE1 | Execute$ TrigCantBlock | TriggerDescription$ Hate — Whenever Darth Maul attacks, if an opponent lost life from a source other than combat damage this turn, target creature can’t block Darth Maul this turn.
+SVar:TrigCantBlock:DB$ Effect | ValidTgts$ Creature | TgtPrompt$ Choose target creature that can't block this creature this turn | RememberObjects$ ThisTargetedCard | ForgetOnMoved$ Battlefield | StaticAbilities$ STCantBlock | Duration$ UntilHostLeavesPlayOrEOT
+SVar:STCantBlock:Mode$ CantBlockBy | ValidAttacker$ Creature.EffectSource | ValidBlocker$ Creature.IsRemembered | Description$ {c:Remembered} can't block EFFECTSOURCE this turn.
+SVar:HateFlag:PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+
+Oracle:Double strike, haste\nHate — Whenever Darth Maul attacks, if an opponent lost life from a source other than combat damage this turn, target creature can’t block Darth Maul this turn.

@@ -1,0 +1,8 @@
+Name:Legacy of the Beloved
+ManaCost:3 G G
+Types:Sorcery
+
+A:SP$ ChangeZone | Cost$ 3 G G Sac<1/Creature> | Origin$ Library | Destination$ Battlefield | ChangeType$ Creature.cmcLTZ | ChangeNum$ 2 | ChangeTypeDesc$ creature cards with lesser mana value | SpellDescription$ Search your library for up to two creature cards that each have a lower converted mana cost than the sacrificed creature’s converted mana cost and put them onto the battlefield, then shuffle.
+SVar:Z:Sacrificed$CardManaCost
+
+Oracle:As an additional cost to cast this spell, sacrifice a creature.\nSearch your library for up to two creature cards that each have a lower converted mana cost than the sacrificed creature’s converted mana cost and put them onto the battlefield, then shuffle your library.

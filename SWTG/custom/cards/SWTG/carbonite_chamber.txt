@@ -1,0 +1,13 @@
+Name:Carbonite Chamber
+ManaCost:1 W U
+Types:Enchantment Aura
+K:Enchant:Creature
+SVar:AttachAILogic:GainControl
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigRemoveBounty | OptionalDecider$ You | TriggerDescription$ When CARDNAME enters the battlefield, you may remove a bounty counter from target creature.
+SVar:TrigRemoveBounty:DB$ RemoveCounter | CounterType$ BOUNTY | CounterNum$ 1 | ValidTgts$ Creature | TgtPrompt$ Select target creature to remove a bounty counter from
+
+S:Mode$ Continuous | Affected$ Card.EnchantedBy | GainControl$ You | Description$ You control enchanted creature.
+S:Mode$ CantAttack,CantBlock,CantBeActivated | ValidCard$ Creature.EnchantedBy | Description$ Enchanted creature can't attack or block, and its activated abilities can't be activated.
+
+Oracle:Enchant creature\nWhen Carbonite Chamber enters the battlefield, you may remove a bounty counter from target creature.\nYou control enchanted creature. It can't attack or block, and its activated abilities can't be activated.

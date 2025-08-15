@@ -1,0 +1,11 @@
+Name:Commander Cody
+ManaCost:W U B R G
+Types:Legendary Creature Human Trooper
+PT:7/7
+
+S:Mode$ Continuous | Affected$ Creature.Trooper+!token+YouCtrl | AddTrigger$ TrigToken | Description$ Nontoken Trooper creatures you control have "At the beginning of your endstep, create a 1/1 white Trooper creature token."
+
+SVar:TrigToken:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | Execute$ DBToken | TriggerDescription$ At the beginning of your endstep, create a 1/1 white Trooper creature token.
+SVar:DBToken:DB$ Token | TokenAmount$ 1 | TokenScript$ w_1_1_trooper | TokenOwner$ You
+
+Oracle:Nontoken Trooper creatures you control have "At the beginning of your end step, create a 1/1 white Trooper creature token."

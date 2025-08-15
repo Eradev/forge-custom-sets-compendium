@@ -1,0 +1,7 @@
+Name:Jedi Mind Trick
+ManaCost:6 U
+Types:Sorcery
+
+A:SP$ ControlPlayer | ValidTgts$ Player | TgtPrompt$ Select target player | SpellDescription$ You control target player during that player's next turn.
+
+Oracle:You control target player during that player’s next turn.

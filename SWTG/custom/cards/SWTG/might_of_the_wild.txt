@@ -1,0 +1,15 @@
+Name:Might of the Wild
+ManaCost:R G W
+Types:Instant
+
+A:SP$ Charm | Choices$ DBNoBlock,DBDestroy,DBIndestruct
+
+SVar:DBNoBlock:DB$ Effect | StaticAbilities$ KWPump | AILogic$ Evasion | SpellDescription$ Creatures with power 3 or less can't block this turn.
+SVar:KWPump:Mode$ Continuous | AffectedZone$ Battlefield | Affected$ Creature.powerLE3 | AddHiddenKeyword$ CARDNAME can't block. | Description$ Creatures with power 3 or less can't block this turn.
+SVar:PlayMain1:TRUE
+
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment | SpellDescription$ Destroy target artifact or enchantment.
+
+SVar:DBIndestruct:DB$ PumpAll | ValidCards$ Creature.YouCtrl | KW$ Indestructible | SpellDescription$ Creatures you control gain indestructible until end of turn.
+
+Oracle:Choose one —\n• Creatures with power 3 or less can’t block this turn.\n• Destroy target artifact or enchantment.\n• Creatures you control gain indestructible until end of turn.

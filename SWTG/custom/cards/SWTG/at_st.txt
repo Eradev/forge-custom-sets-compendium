@@ -1,0 +1,8 @@
+Name:AT-ST
+ManaCost:5 G
+Types:Artifact Creature Trooper Construct
+PT:3/3
+
+S:Mode$ Continuous | Affected$ Creature.Trooper+YouCtrl | AddPower$ 3 | AddToughness$ 3 | Description$ Trooper creatures you control get +3/+3.
+
+Oracle:Trooper creatures you control get +3/+3.

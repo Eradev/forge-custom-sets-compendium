@@ -1,0 +1,13 @@
+Name:Jabba the Hutt
+ManaCost:3 B R G
+Types:Legendary Creature Hutt Rogue
+PT:6/6
+K:Defender
+
+A:AB$ PutCounter | Cost$ T | ValidTgts$ Creature | CounterType$ BOUNTY | CounterNum$ 1 | TgtPrompt$ Select target creature | SpellDescription$ Put a bounty counter on target creature.
+
+A:AB$ Token | Cost$ R T | SorcerySpeed$ True | RememberTokens$ True | TokenAmount$ 1 | TokenScript$ r_4_4_hunter | TokenOwner$ You | TokenTapped$ True | SubAbility$ DBFight | SpellDescription$ Create a tapped 4/4 red Hunter creature token. It fights target creature an opponent controls with a bounty counter on it.
+SVar:DBFight:DB$ Fight | Defined$ Remembered | ValidTgts$ Creature.OppCtrl+counters_GE1_BOUNTY | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Defender\n{T}: Put a bounty counter on target creature.\n{R}, {T}: Create a tapped 4/4 red Hunter creature token. It fights target creature an opponent controls with a bounty counter on it. Activate only as a sorcery.

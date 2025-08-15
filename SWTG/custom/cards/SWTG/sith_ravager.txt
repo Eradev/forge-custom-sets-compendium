@@ -1,0 +1,9 @@
+Name:Sith Ravager
+ManaCost:3 R
+Types:Creature Human Sith
+PT:3/1
+
+T:Mode$ DamageDone | ValidSource$ Card,Emblem | ValidTarget$ Opponent | CombatDamage$ False | TriggerZones$ Battlefield | Execute$ TrigBuff | TriggerDescription$ Whenever an opponent loses life from a source other than combat damage, CARDNAME gets +1/+0 and gains haste and trample until end of turn.
+SVar:TrigBuff:DB$ Pump | Defined$ Self | NumAtt$ 1 | NumDef$ 0 | KW$ Haste & Trample | Duration$ EndOfTurn
+
+Oracle:Whenever an opponent loses life from a source other than combat damage, Sith Ravager gets +1/+0 and gains haste and trample until end of turn.

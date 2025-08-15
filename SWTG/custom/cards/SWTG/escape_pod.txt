@@ -1,0 +1,11 @@
+Name:Escape Pod
+ManaCost:W
+Types:Instant
+
+A:SP$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select creature you control to exile | RememberChanged$ True | SubAbility$ DBDelayedReturn | SpellDescription$ Exile target creature you control. Return that card to the battlefield under your control at the beginning of the next end step.
+
+SVar:DBDelayedReturn:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | Execute$ DBReturn | TriggerDescription$ Return the exiled card to the battlefield under your control.
+
+SVar:DBReturn:DB$ ChangeZone | Origin$ Exile | Destination$ Battlefield | Defined$ Remembered | Controller$ You
+
+Oracle:Exile target creature you control. Return that card to the battlefield under your control at the beginning of the next end step.

@@ -1,0 +1,26 @@
+Name:Jedi Battle Mage
+ManaCost:3 U
+Types:Creature Human Jedi
+PT:2/4
+
+K:Meditate
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigTap | TriggerDescription$ When CARDNAME enters the battlefield, tap target creature an opponent controls. That creature doesn’t untap during its controller’s next untap step.
+
+SVar:TrigTap:DB$ Tap | ValidTgts$ Creature.OppCtrl | RememberTargets$ True | TgtPrompt$ Select target creature an opponent controls | SubAbility$ DBLock
+SVar:DBLock:DB$ Pump | Defined$ Remembered | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent | IsCurse$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+# Meditate Handling
+S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withoutDiscountmeditate | AddAbility$ Meditate
+S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withDiscountmeditate | AddAbility$ DiscountMeditate
+S:Mode$ Continuous | Affected$ Card.Self+withFastmeditate+withoutDiscountmeditate | AddAbility$ FastMeditate
+S:Mode$ Continuous | Affected$ Card.Self+withFastmeditate+withDiscountmeditate | AddAbility$ DiscountFastMeditate
+
+SVar:Meditate:AB$ ChangeZone | Cost$ 1 U | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner’s hand. Meditate only as a sorcery.)
+SVar:DiscountMeditate:AB$ ChangeZone | Cost$ U | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SubAbility$ JediScry | SpellDescription$ Meditate (Return this creature to its owner’s hand. Meditate only as a sorcery.)
+SVar:FastMeditate:AB$ ChangeZone | Cost$ 1 U | ActivationZone$ Battlefield | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner’s hand.)
+SVar:DiscountFastMeditate:AB$ ChangeZone | Cost$ U | ActivationZone$ Battlefield | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SubAbility$ JediScry | SpellDescription$ Meditate (Return this creature to its owner’s hand.)
+SVar:JediScry:DB$ Scry | ScryNum$ 1 | ConditionDefined$ Self | ConditionPresent$ Card.Jedi
+
+Oracle:When Jedi Battle Mage enters the battlefield, tap target creature an opponent controls. That creature doesn’t untap during its controller’s next untap step.\nMeditate {1}{U} (Return this creature to its owner’s hand. Meditate only as a sorcery.)

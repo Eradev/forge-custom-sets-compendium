@@ -1,0 +1,13 @@
+Name:Black Market Dealer
+ManaCost:2 B
+Types:Creature Human Rogue
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl+Rogue,Creature.YouCtrl+Hunter | TriggerZones$ Battlefield | Execute$ TrigBounty1 | TriggerDescription$ Whenever a Rogue or Hunter creature you control dies, put a bounty counter on target creature an opponent controls.
+SVar:TrigBounty1:DB$ PutCounter | CounterType$ BOUNTY | CounterNum$ 1 | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.OppCtrl+counters_GE1_BOUNTY | TriggerZones$ Battlefield | Execute$ TrigBounty2 | TriggerDescription$ Bounty — Whenever a creature an opponent controls with a bounty counter on it dies, target player loses 1 life and draws a card.
+SVar:TrigBounty2:DB$ LoseLife | ValidTgts$ Player | TgtPrompt$ Select a player | LifeAmount$ 1 | SubAbility$ DBDraw | Description$ Target player loses 1 life.
+SVar:DBDraw:DB$ Draw | Defined$ TargetedPlayer | NumCards$ 1
+
+Oracle:Whenever a Rogue or Hunter creature you control dies, put a bounty counter on target creature an opponent controls.\nBounty — Whenever a creature an opponent controls with a bounty counter on it dies, target player loses 1 life and draws a card.

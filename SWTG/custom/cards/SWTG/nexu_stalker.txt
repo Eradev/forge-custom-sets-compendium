@@ -1,0 +1,12 @@
+Name:Nexu Stalker
+ManaCost:2 G
+Types:Creature Beast
+PT:1/2
+K:Hexproof
+K:Deathtouch
+K:Monstrosity:1:2 G
+
+T:Mode$ BecomeMonstrous | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigMustBlock | TriggerDescription$ When CARDNAME becomes monstrous, target creature blocks it this turn if able.
+SVar:TrigMustBlock:DB$ MustBlock | ValidTgts$ Creature | TgtPrompt$ Select target creature to block this card
+
+Oracle:Hexproof, deathtouch\n{2}{G}: Monstrosity 1. (If this creature isn’t monstrous, put a +1/+1 counter on it and it becomes monstrous.)\nWhen Nexu Stalker becomes monstrous, target creature blocks it this turn if able.

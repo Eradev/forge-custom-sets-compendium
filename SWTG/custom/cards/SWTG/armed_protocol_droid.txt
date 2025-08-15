@@ -1,0 +1,26 @@
+Name:Armed Protocol Droid
+ManaCost:1 U
+Types:Artifact Creature Droid Rogue
+PT:1/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDebuff | TriggerDescription$ When CARDNAME enters the battlefield, target nonartifact creature gets -2/-0 until end of turn.
+
+SVar:TrigDebuff:DB$ Pump | ValidTgts$ Creature.nonArtifact | TgtPrompt$ Select target nonartifact creature | NumAtt$ -2 | NumDef$ 0 | IsCurse$ True
+
+# Repair 3
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigRepair | TriggerDescription$ When CARDNAME dies, put three repair counters on it.
+
+SVar:TrigRepair:DB$ PutCounter | CounterType$ REPAIR | CounterNum$ 3 | Defined$ TriggeredCard
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | ValidCard$ Card.Self+inGraveyard | CheckSVar$ RepairCount | SVarCompare$ GE1 | Execute$ TrigRemoveRepair | TriggerDescription$ At the beginning of your upkeep, if CARDNAME is in your graveyard with repair counters, remove a repair counter.
+
+SVar:RepairCount:Count$CardCounters.REPAIR
+SVar:TrigRemoveRepair:DB$ RemoveCounter | CounterType$ REPAIR | CounterNum$ 1 | Defined$ Self
+
+T:Mode$ CounterRemoved | TriggerZones$ Graveyard | ValidCard$ Card.Self | CounterType$ REPAIR | NewCounterAmount$ 0 | Execute$ DBCast | TriggerDescription$ When the last repair counter is removed from this card, you may cast it until end of turn.
+
+SVar:DBCast:DB$ Effect | StaticAbilities$ STPlay | ForgetOnMoved$ Graveyard | RememberObjects$ Self | Duration$ EndOfTurn
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Graveyard | Description$ Until the end of turn, you may play EFFECTSOURCE.
+
+Oracle:When Armed Protocol Droid enters the battlefield, target nonartifact creature gets -2/-0 until end of turn.\nRepair 3 (When this creature dies, put three repair counters on it. At the beginning of your upkeep, remove a repair counter. Whenever the last is removed, you may cast it from your graveyard until end of turn.)

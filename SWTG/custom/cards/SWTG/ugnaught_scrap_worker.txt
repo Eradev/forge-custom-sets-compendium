@@ -1,0 +1,8 @@
+Name:Ugnaught Scrap Worker
+ManaCost:1 U
+Types:Creature Ugnaught Artificer
+PT:1/2
+
+S:Mode$ ReduceCost | Amount$ 1 | ValidCard$ Droid | Type$ Spell | Activator$ You | Description$ Droid spells you cast cost {1} less to cast.
+
+Oracle:Droid spells you cast cost {1} less to cast.

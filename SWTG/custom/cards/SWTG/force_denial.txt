@@ -1,0 +1,13 @@
+Name:Force Denial
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Branch | BranchConditionSVar$ HateFlag | TargetType$ Spell | TgtZone$ Stack | ValidTgts$ Card | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ Counter | FalseSubAbility$ CounterUnless
+SVar:CounterUnless:DB$ Counter | Defined$ Targeted | UnlessCost$ 1 | SubAbility$ DBScry | SpellDescription$ Counter target spell unless its controller pays {1}.
+SVar:Counter:DB$ Counter | Defined$ Targeted | SubAbility$ DBScry | SpellDescription$ Hate — If an opponent lost life from a source other than combat damage this turn, counter that spell instead.
+
+SVar:DBScry:DB$ Scry | ScryNum$ 1
+
+SVar:HateFlag:PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+
+Oracle:Counter target spell unless its controller pays {1}.\nHate — If an opponent lost life from a source other than combat damage this turn, counter that spell instead.\nScry 1.

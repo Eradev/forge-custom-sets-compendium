@@ -1,0 +1,296 @@
+[metadata]
+Code=SWTG
+Date=2019-05-01
+Name=Star Wars: The Gathering
+Type=Custom
+BoosterCovers=1
+Booster=11 Common, 3 Uncommon, 1 RareMythic
+Foil=NotSupported
+
+[cards]
+1 M The Death Star
+2 C Arrest
+3 R Bantha Herd
+4 M The Battle of Hoth
+5 U Battle Tactics
+6 C Cantina Band
+7 U Condemn
+8 U Deploy The Troops
+9 U Droideka
+10 U EMP Blast
+11 C Escape Pod
+12 C Force Healing
+13 C Force Reflex
+14 C Gifted Initiate
+15 C Ion Cannon
+16 U Jedi Battle Healer
+17 C Jedi Inquirer
+18 C Jedi Instructor
+19 U Jedi Starfighter
+20 U LAAT Gunship
+21 R Lando Calrissian
+22 C Loyal Tauntaun
+23 R Maintenance Hangar
+24 U Miraculous Recovery
+25 C Nebulon-B Frigate
+26 R Orbital Bombardment
+27 R Plo Koon
+28 U Riding Ronto
+29 C Sand Trooper
+30 C Security Droid
+31 U Snow Trooper
+32 C Womp Rat
+33 C X-Wing
+35 R Admiral Ackbar
+36 U Armed Protocol Droid
+37 M The Battle of Naboo
+38 C Cloaking Device
+39 C Force Denial
+40 U Force Push
+41 C Gungan Captain
+42 R Jar Jar Binks
+43 U Jedi Battle Mage
+44 R Jedi Mind Trick
+45 U Jedi Training
+46 U Jump Trooper
+47 R Mace Windu
+48 U Mon Calamari Cruiser
+49 C Mon Calamari Initiate
+50 C Ortolan Keyboardist
+51 C Personal Energy Shield
+34 U Preordain
+52 C Probe Droid
+53 C Republic Frigate
+54 C Rumination
+55 U Sabacc Game
+56 C Shadow Trooper
+57 U Sith Manipulator
+58 C Sith Sorcerer
+59 C Super Battle Droid
+60 C Surprise Maneuver
+61 C Ugnaught Scrap Worker
+62 C Vapor Snag
+63 U Y-Wing
+64 R Zam Wesell
+65 C Acquire Target
+66 C Aqualish Bounty Hunter
+67 M The Battle of Yavin
+68 R Bib Fortuna
+69 U Black Market Dealer
+70 U Bounty Spotter
+71 U Death Trooper
+72 U Doom Blade
+73 C Droid Commando
+74 C Force Drain
+75 R Grand Moff Tarkin
+76 U Hazard Trooper
+77 C Head Hunting
+78 C Heavy Trooper
+79 R IG-88B
+80 C Insatiable Rakghoul
+81 C Interrogation
+82 C Neophyte Hateflayer
+83 U Open Season
+84 R Order 66
+85 C Repurpose
+86 U Rule of Two
+87 U Sith Assassin
+88 C Sith Evoker
+89 C Sith Inquisitor
+90 R Sith Lord
+91 C Sith Thoughtseeker
+92 C Swarm the Skies
+93 U TIE Bomber
+94 C TIE Interceptor
+95 U Unruly Sureshot
+96 U A-Wing
+97 M The Battle of Geonosis
+98 U Bounty Sniper
+99 C Capture
+100 C Crossfire
+101 U Dark Apprenticeship
+102 R Flames of Remembrance
+103 R Force Lightning
+104 U Force Scream
+105 C Force Spark
+106 U Gamorrean Prison Guard
+107 U Gundark
+108 R Han Solo
+109 C Imperial Gunner
+110 C Impulsive Wager
+111 R Jango Fett
+112 C Jar'Kai Battle Stance
+113 U Lightning Bolt
+114 C Novice Bounty Hunter
+115 C Raging Reek
+116 C Rallying Fire
+117 C Revenge
+118 R Rocket Trooper
+119 U Shock Trooper
+120 U Sith Marauder
+121 C Sith Ravager
+122 U Smash to Smithereens
+123 C Speeder Trooper
+124 C Syndicate Enforcer (SWTG)
+125 C Terentatek Cub
+126 C V-Wing
+127 U Weequay Beastmaster
+128 R AT-ST
+129 C Bathe in Bacta
+130 M The Battle of Endor
+131 R Bossk
+132 U Bounty Collector
+133 U Corellian Corvette
+134 C Ewok Ambush
+135 C Ewok Firedancers
+136 R Exogorth
+137 C Force Pull
+138 C Hungry Dragonsnake
+139 U Hutt Crime Lord
+140 C Ithorian Initiate
+141 U Jedi Battle Sage
+142 R Ki-Adi-Mundi
+143 R Legacy of the Beloved
+144 U Mantellian Savrip
+145 C Massiff Swarm
+146 R Millennium Falcon
+147 U Nerf Herder
+148 U Nexu Stalker
+149 C Nightspider
+150 C No Contest
+151 C Predator's Strike
+152 U Regression
+153 C Scout the Perimeter
+154 C Scout Trooper
+155 C Shaak Herd
+156 U Show of Dominance
+157 U Trooper Commando
+158 C Twi'lek Seductress
+159 C Wookiee Bounty Hunter
+160 U AAT-1
+161 R Acklay of the Arena
+162 C Adroit Hateflayer
+163 M Anakin Skywalker
+164 R Asajj Ventress
+165 M Aurra Sing, Bane of Jedi
+166 R Blind Worship
+167 M Boba Fett
+168 R Bull Rancor
+169 R C-3PO and R2D2
+170 U Carbonite Chamber
+171 R Chewbacca
+172 R Chief Chirpa
+173 R Commander Cody
+174 U Cruelty of the Sith
+175 R Cunning Abduction
+176 C Dagobah Maw Slug
+177 C Dark Decision
+178 R Darth Maul
+179 M Darth Sidious, Sith Lord
+180 M Darth Tyranus, Count Dooku
+181 R Echo Base Commando
+182 U Ferocity of the Underworld
+183 C Force Choke
+184 R Force Mastery
+185 M General Grievous
+186 M Greater Krayt Dragon
+187 R Greedo
+188 R Hot Pursuit (SWTG)
+189 R Hunt to Extinction
+190 C Images of the Past
+191 R Iron Fist of the Empire
+192 R Jabba the Hutt
+193 U Jedi Knight
+194 C Jedi Sentinel
+195 M Luke Skywalker
+196 C Maintenance Droid
+197 R March of the Droids
+198 U Might of the Wild
+199 R Nute Gunray
+200 M Obi-Wan Kenobi
+201 C Outer Rim Slaver
+202 R Precipice of Mortis
+203 C Primal Instinct
+204 R Princess Leia
+205 R Qui-Gon Jinn
+206 U Rumor Monger
+207 C Salvage Squad
+208 R Sarlacc Pit
+209 U Senator Bail Organa
+210 U Senator Lott Dod
+211 U Senator Onaconda Farr
+212 U Senator Padme Amidala
+213 U Senator Passel Argente
+214 R Sith Magic
+215 U Sith Mindseer
+216 R Slave I
+217 R Star Destroyer
+218 R Tank Droid
+219 R Trade Federation Battleship
+220 U Unity of the Droids
+221 U Wisdom of the Jedi
+222 U Wookiee Mystic
+223 M Yoda, Jedi Master
+224 C Fulfill Contract
+225 C N-1 Starfighter
+226 U Ravenous Wampa
+227 C Strike Team Commando
+228 C Tri-Fighter
+229 C Wookiee Raidleader
+230 U Ancient Holocron
+231 U Dark Trooper
+232 C Drone Holocron
+233 C Jedi Holocron
+234 C Lightsaber
+235 C Outlaw Holocron
+236 C Sith Holocron
+237 U Trooper Armor
+238 C Wild Holocron
+239 C Droid Factory
+240 U Droid Foundry
+241 U Ewok Village
+242 U Hutt Palace
+243 C Jedi Enclave
+244 U Jedi Temple
+245 C Jungle Village
+246 R Kamino Cloning Facility
+247 U Moisture Farm
+248 U Rogue's Passage
+249 U Sith Citadel
+250 C Sith Ruins
+251 C Underworld Slums
+252 L Plains
+253 L Plains
+254 L Plains
+255 L Plains
+256 L Island
+257 L Island
+258 L Island
+259 L Island
+261 L Swamp
+262 L Swamp
+263 L Swamp
+264 L Mountain
+264 L Swamp
+265 L Mountain
+266 L Mountain
+267 L Mountain
+268 L Forest
+269 L Forest
+270 L Forest
+271 L Forest
+
+[tokens]
+1 w_5_5_at_at
+2 w_1_1_rebel
+3 w_1_1_trooper
+4 w_1_1_tusken_raider
+5 u_2_3_bwing
+6 b_1_1_tie_fighter
+7 r_4_4_hunter
+8 r_2_2_soldier_fs_royal_guard
+9 g_1_1_ewok
+10 c_1_1_a_droid
+
+[other]
+11 emblem_yoda_jedi_master

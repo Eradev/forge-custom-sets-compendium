@@ -1,0 +1,15 @@
+Name:Sith Manipulator
+ManaCost:3 U
+Types:Creature Human Sith
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigBranch | TriggerDescription$ When CARDNAME enters the battlefield, return target creature to its owner’s hand. Hate — If an opponent lost life from a source other than combat damage this turn, put that card on top of its owner’s library instead.
+
+SVar:TrigBranch:DB$ Branch | BranchConditionSVar$ HateFlag | BranchConditionSVarCompare$ GE1 | ValidTgts$ Creature | TgtPrompt$ Select target creature | TrueSubAbility$ ToLibrary | FalseSubAbility$ ToHand
+
+SVar:ToHand:DB$ ChangeZone | Origin$ Battlefield | Destination$ Hand | Defined$ Targeted
+SVar:ToLibrary:DB$ ChangeZone | Origin$ Battlefield | Destination$ Library | Defined$ Targeted | LibraryPosition$ 0
+
+SVar:HateFlag:PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+
+Oracle:When Sith Manipulator enters the battlefield, return target creature to its owner’s hand.\nHate — If an opponent lost life from a source other than combat damage this turn, put that card on top of its owner’s library instead.

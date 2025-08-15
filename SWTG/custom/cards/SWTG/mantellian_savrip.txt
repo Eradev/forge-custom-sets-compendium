@@ -1,0 +1,10 @@
+Name:Mantellian Savrip
+ManaCost:4 G
+Types:Creature Mantellian Berserker
+PT:4/4
+K:Monstrosity:2:5 G G
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | ValidBlocker$ Creature.powerLTX | Description$ Creatures with power less than CARDNAME's power can't block it.
+SVar:X:Count$CardPower
+
+Oracle:{5}{G}{G}: Monstrosity 2. (If this creature isn’t monstrous, put two +1/+1 counters on it and it becomes monstrous.)\nCreatures with power less than Mantellian Savrip’s power can’t block it.

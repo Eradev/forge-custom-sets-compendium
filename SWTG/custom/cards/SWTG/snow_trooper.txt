@@ -1,0 +1,8 @@
+Name:Snow Trooper
+ManaCost:2 W
+Types:Creature Human Trooper
+PT:2/2
+
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Creature.Trooper+YouCtrl | AddKeyword$ First Strike | Description$ Trooper creatures you control have first strike.
+
+Oracle:Trooper creatures you control have first strike.

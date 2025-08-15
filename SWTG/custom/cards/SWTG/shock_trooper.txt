@@ -1,0 +1,8 @@
+Name:Shock Trooper
+ManaCost:3 R
+Types:Creature Human Trooper
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Creature.Trooper+YouCtrl | AddPower$ 2 | Description$ Trooper creatures you control get +2/+0.
+
+Oracle:Trooper creatures you control get +2/+0.

@@ -1,0 +1,11 @@
+Name:Acquire Target
+ManaCost:2 B
+Types:Sorcery
+
+A:SP$ Draw | Defined$ Targeted | NumCards$ 2 | SubAbility$ DBLoseLife | ValidTgts$ Player | TgtPrompt$ Select a player to draw two cards and lose 2 life | SpellDescription$ Target player draws two cards and loses 2 life. Put a bounty counter on up to one target creature an opponent controls.
+
+SVar:DBLoseLife:DB$ LoseLife | Defined$ Targeted | LifeAmount$ 2 | SubAbility$ DBBounty
+
+SVar:DBBounty:DB$ PutCounter | CounterType$ BOUNTY | CounterNum$ 1 | ValidTgts$ Creature.OppCtrl | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature an opponent controls to put a bounty counter on
+
+Oracle:Target player draws two cards and loses 2 life.\nPut a bounty counter on up to one target creature an opponent controls.

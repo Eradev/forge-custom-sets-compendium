@@ -1,0 +1,7 @@
+Name:Kamino Cloning Facility
+ManaCost:no cost
+Types:Land
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+A:AB$ Mana | Cost$ T | Produced$ Any | Amount$ 1 | RestrictValid$ Spell.Trooper | SpellDescription$ Add one mana of any color. Spend this mana only to cast a Trooper spell.
+A:AB$ Token | Cost$ 5 T | TokenAmount$ 1 | TokenScript$ w_1_1_trooper | TokenOwner$ You | SpellDescription$ Create a 1/1 white Trooper creature token.
+Oracle:{T}: Add {C}.\n{T}: Add one mana of any color. Spend this mana only to cast a Trooper spell.\n{5}, {T}: Create a 1/1 white Trooper creature token.

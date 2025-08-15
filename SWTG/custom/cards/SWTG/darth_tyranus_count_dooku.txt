@@ -1,0 +1,13 @@
+Name:Darth Tyranus, Count Dooku
+ManaCost:1 W U B
+Types:Planeswalker Dooku
+Loyalty:3
+
+A:AB$ Pump | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | TgtPrompt$ Select up to one target creature | NumAtt$ -6 | NumDef$ 0 | Duration$ UntilYourNextTurn | SpellDescription$ Up to one target creature gets -6/-0 until your next turn. | TargetMin$ 0 | TargetMax$ 1
+
+A:AB$ ChangeZone | Cost$ SubCounter<3/LOYALTY> Sac<1/Artifact> | Planeswalker$ True | Origin$ Library | Destination$ Battlefield | ChangeType$ Artifact | ChangeNum$ 1 | SpellDescription$ Sacrifice an artifact. If you do, you may search your library for an artifact card and put that card onto the battlefield. Shuffle your library.
+
+A:AB$ SetLife | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | ValidTgts$ Player | RememberTargets$ True | TgtPrompt$ Choose target player whose life total becomes 5 | LifeAmount$ 5 | SubAbility$ DBSetLifeOther | SpellDescription$ Target player’s life total becomes 5. Another target player’s life total becomes 30.
+SVar:DBSetLifeOther:DB$ SetLife | ValidTgts$ Player.IsNotRemembered | TgtPrompt$ Choose another player whose life total becomes 30 | LifeAmount$ 30
+
+Oracle:[+1]: Up to one target creature gets -6/-0 until your next turn.\n[-3]: Sacrifice an artifact. If you do, you may search your library for an artifact card and put that card onto the battlefield. Shuffle your library.\n[-6]: Target player’s life total becomes 5. Another target player’s life total becomes 30.

@@ -1,0 +1,15 @@
+Name:Boba Fett
+ManaCost:2 B R G
+Types:Legendary Creature Human Hunter
+PT:4/4
+K:Menace
+K:Deathtouch
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMark | TriggerDescription$ When Boba Fett enters the battlefield, put a bounty counter on target creature an opponent controls.
+SVar:TrigMark:DB$ PutCounter | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | CounterType$ BOUNTY | CounterNum$ 1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.OppCtrl+counters_GE1_BOUNTY | TriggerZones$ Battlefield | Execute$ TrigLoot | OptionalDecider$ You | TriggerDescription$ Bounty — Whenever a creature an opponent controls with a bounty counter on it dies, you may draw two cards. If you do, discard two cards.
+SVar:TrigLoot:AB$ Discard | Defined$ You | NumCards$ 2 | Mode$ TgtChoose | Cost$ Draw<2/You>
+
+Oracle:Menace, deathtouch, haste\nWhen Boba Fett enters the battlefield, put a bounty counter on target creature an opponent controls.\nBounty — Whenever a creature an opponent controls with a bounty counter on it dies, you may draw two cards. If you do, discard two cards.

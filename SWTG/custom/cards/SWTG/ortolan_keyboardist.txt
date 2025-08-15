@@ -1,0 +1,11 @@
+Name:Ortolan Keyboardist
+ManaCost:1 U
+Types:Creature Ortolan
+PT:1/1
+
+A:AB$ Draw | Cost$ T | SubAbility$ DBDiscard | SpellDescription$ Draw a card, then discard a card.
+SVar:DBDiscard:DB$ Discard | Mode$ TgtChoose
+
+DeckHas:Ability$Discard
+
+Oracle:{T}: Draw a card, then discard a card.

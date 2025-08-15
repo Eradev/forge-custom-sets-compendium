@@ -1,0 +1,9 @@
+Name:Salvage Squad
+ManaCost:W U B
+Types:Creature Jawa Artificer
+PT:2/2
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSac | OptionalDecider$ You | TriggerDescription$ When CARDNAME enters the battlefield, you may sacrifice an artifact. If you do, you gain 2 life and draw two cards.
+SVar:TrigSac:AB$ ImmediateTrigger | Cost$ Sac<1/Artifact> | Execute$ DBGains | TriggerDescription$ When you do, you gain 2 life and draw two cards.
+SVar:DBGains:DB$ GainLife | Defined$ You | LifeAmount$ 2 | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 2
+Oracle:When CARDNAME enters the battlefield, you may sacrifice an artifact. If you do, you gain 2 life and draw two cards.

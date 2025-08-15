@@ -1,0 +1,7 @@
+Name:Moisture Farm
+ManaCost:no cost
+Types:Land
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+A:AB$ PutCounter | Cost$ T | CounterType$ CHARGE | CounterNum$ 1 | SpellDescription$ Put a charge counter on CARDNAME.
+A:AB$ Mana | Cost$ T SubCounter<1/CHARGE> | Produced$ Any | SpellDescription$ Add one mana of any color.
+Oracle:{T}: Add {C}.\n{T}: Put a charge counter on CARDNAME.\n{T}, Remove a charge counter from CARDNAME: Add one mana of any color.

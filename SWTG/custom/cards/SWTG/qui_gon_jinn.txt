@@ -1,0 +1,23 @@
+Name:Qui-Gon Jinn
+ManaCost:2 G W U
+Types:Legendary Creature Human Jedi
+PT:4/4
+K:Vigilance
+K:Meditate
+T:Mode$ Attacks | ValidCard$ Card.Self | Alone$ True | Execute$ TrigPump | TriggerZones$ Battlefield | TriggerDescription$ Whenever CARDNAME attacks alone, it gets +2/+2 and gains lifelink until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredAttackerLKICopy | NumAtt$ +2 | NumDef$ +2 | KW$ Lifelink
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigExile | TriggerZones$ Battlefield | TriggerDescription$ When CARDNAME leaves the battlefield, you may exile target card from a graveyard.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Card | TgtPrompt$ Select target card from a graveyard
+
+# Meditate
+
+S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withoutDiscountmeditate | AddAbility$ Meditate
+S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withDiscountmeditate | AddAbility$ DiscountMeditate
+S:Mode$ Continuous | Affected$ Card.Self+withFastmeditate+withoutDiscountmeditate | AddAbility$ FastMeditate
+S:Mode$ Continuous | Affected$ Card.Self+withFastmeditate+withDiscountmeditate | AddAbility$ DiscountFastMeditate
+SVar:Meditate:AB$ ChangeZone | PrecostDesc$ Meditate — | Cost$ 1 W | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Return CARDNAME to its owner's hand.
+SVar:DiscountMeditate:AB$ ChangeZone | PrecostDesc$ Meditate — | Cost$ W | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SubAbility$ JediScry | SpellDescription$ Return CARDNAME to its owner's hand.
+SVar:FastMeditate:AB$ ChangeZone | PrecostDesc$ Meditate — | Cost$ 1 W | ActivationZone$ Battlefield | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Return CARDNAME to its owner's hand.
+SVar:DiscountFastMeditate:AB$ ChangeZone | PrecostDesc$ Meditate — | Cost$ W | ActivationZone$ Battlefield | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SubAbility$ JediScry | SpellDescription$ Return CARDNAME to its owner's hand.
+SVar:JediScry:DB$ Scry | ScryNum$ 1 | ConditionDefined$ Self | ConditionPresent$ Card.Jedi
+Oracle:Vigilance\nWhenever Qui-Gon Jinn attacks alone, it gets +2/+2 and gains lifelink until end of turn.\nWhen Qui-Gon Jinn leaves the battlefield, you may exile target card from a graveyard.\nMeditate {1}{W} (Return this creature to its owner's hand. Meditate only as a sorcery.)

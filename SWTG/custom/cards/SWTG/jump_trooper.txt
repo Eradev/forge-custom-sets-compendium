@@ -1,0 +1,10 @@
+Name:Jump Trooper
+ManaCost:1 U
+Types:Creature Human Trooper
+PT:1/1
+
+T:Mode$ BecomesTarget | ValidSource$ SpellAbility.OppCtrl | ValidTarget$ Creature.Trooper+YouCtrl+inZoneBattlefield | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ Whenever a Trooper creature you control becomes the target of a spell or ability an opponent controls, counter that spell or ability unless its controller pays {2}.
+
+SVar:TrigCounter:DB$ Counter | Defined$ TriggeredSourceSA | UnlessCost$ 2 | UnlessPayer$ TriggeredSourceSAController
+
+Oracle:Whenever a Trooper creature you control becomes the target of a spell or ability an opponent controls, counter that spell or ability unless its controller pays {2}.

@@ -1,0 +1,12 @@
+Name:Sith Inquisitor
+ManaCost:3 B
+Types:Creature Human Sith
+PT:5/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ HateFlag | SVarCompare$ GE1 | Execute$ TrigDiscard | TriggerDescription$ Hate — When CARDNAME enters the battlefield, if an opponent lost life from a source other than combat damage this turn, target player discards a card at random.
+
+SVar:TrigDiscard:DB$ Discard | ValidTgts$ Player | NumCards$ 1 | Mode$ Random | TgtPrompt$ Select target player
+
+SVar:HateFlag:PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+
+Oracle:Hate — When Sith Inquisitor enters the battlefield, if an opponent lost life from a source other than combat damage this turn, target player discards a card at random.

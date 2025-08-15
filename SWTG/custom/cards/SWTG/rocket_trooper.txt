@@ -1,0 +1,11 @@
+Name:Rocket Trooper
+ManaCost:1 R
+Types:Creature Human Trooper
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Creature.Trooper+YouCtrl | AddTrigger$ TrigRocket | Description$ Trooper creatures you control have "Whenever this creature enters the battlefield, it deals 1 damage to target creature an opponent controls."
+
+SVar:TrigRocket:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ DBPing | TriggerDescription$ Whenever this creature enters the battlefield, it deals 1 damage to target creature an opponent controls.
+SVar:DBPing:DB$ DealDamage | NumDmg$ 1 | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls
+
+Oracle:Trooper creatures you control have "Whenever this creature enters the battlefield, it deals 1 damage to target creature an opponent controls."

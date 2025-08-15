@@ -1,0 +1,10 @@
+Name:Rumor Monger
+ManaCost:1 B R G
+Types:Creature Arcona Hunter
+PT:3/3
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigBounty | TriggerDescription$ When CARDNAME enters the battlefield, put a bounty counter on up to two target creatures your opponents control.
+SVar:TrigBounty:DB$ PutCounter | CounterType$ BOUNTY | CounterNum$ 1 | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select up to two target creatures your opponents control | TargetMin$ 0 | TargetMax$ 2
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.OppCtrl+counters_GE1_BOUNTY | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigMove | TriggerDescription$ Bounty — Whenever a creature an opponent controls with a bounty counter on it dies, you may move a bounty counter from one target creature to another target creature.
+SVar:TrigMove:DB$ RemoveCounter | CounterType$ BOUNTY | CounterNum$ 1 | ValidTgts$ Creature.counters_GE1_BOUNTY | TgtPrompt$ Select a creature to remove a bounty counter from | SubAbility$ DBPut
+SVar:DBPut:DB$ PutCounter | CounterType$ BOUNTY | CounterNum$ 1 | ValidTgts$ Creature | TgtPrompt$ Select another target creature to put a bounty counter on
+Oracle:When CARDNAME enters the battlefield, put a bounty counter on up to two target creatures your opponents control.\nBounty — Whenever a creature an opponent controls with a bounty counter on it dies, you may move a bounty counter from one target creature to another target creature.

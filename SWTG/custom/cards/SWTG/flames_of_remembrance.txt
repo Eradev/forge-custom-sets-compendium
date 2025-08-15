@@ -1,0 +1,17 @@
+Name:Flames of Remembrance
+ManaCost:R
+Types:Enchantment
+
+# Upkeep Exile and Lore Counter
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigExile | IsPresent$ Card.YouOwn | PresentZone$ Graveyard | PresentCompare$ GE1 | TriggerDescription$ At the beginning of your upkeep, you may exile a card from your graveyard. If you do, put a lore counter on Flames of Remembrance.
+SVar:TrigExile:DB$ ChangeZone | Mandatory$ True | Hidden$ True | ChangeType$ Card | ChangeNum$ 1 | DefinedPlayer$ You | Origin$ Graveyard | Destination$ Exile | SubAbility$ TrigCounter
+SVar:TrigCounter:DB$ PutCounter | CounterType$ LORE | CounterNum$ 1 | Defined$ Self
+
+# Sacrifice and Exile X Top Cards => Play Them
+A:AB$ Dig | Cost$ Sac<1/CARDNAME> | Defined$ You | DigNum$ X | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBMayPlay | SpellDescription$ Exile the top X cards of your library. You may play them until the end of your next turn.
+SVar:DBMayPlay:DB$ Effect | StaticAbilities$ STCommuned | Duration$ EndOfTurn | RememberObjects$ Remembered | ForgetOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:STCommuned:Mode$ Continuous | Affected$ Card.IsRemembered | AffectedZone$ Exile | MayPlay$ True | Description$ Until the end of your next turn, you may play those cards.
+SVar:X:Count$CardCounters.LORE
+
+Oracle:At the beginning of your upkeep, you may exile a card from your graveyard. If you do, put a lore counter on Flames of Remembrance.\nSacrifice Flames of Remembrance: Exile the top X cards of your library, where X is the number of lore counters on Flames of Remembrance. Until end of turn, you may play cards exiled this way.

@@ -1,0 +1,12 @@
+Name:Twi'lek Seductress
+ManaCost:1 G
+Types:Creature Twi'lek Rogue
+PT:2/1
+K:CARDNAME must be blocked if able.
+
+T:Mode$ AttackerBlocked | ValidCard$ Card.Self | Execute$ TrigBounty | TriggerDescription$ Whenever CARDNAME becomes blocked by a creature, put a bounty counter on that creature.
+SVar:TrigBounty:DB$ PutCounterAll | ValidCards$ Creature.blockingSource | CounterType$ BOUNTY | CounterNum$ 1
+
+SVar:HasAttackEffect:Blocked
+
+Oracle:Twi'lek Seductress must be blocked if able.\nWhenever Twi'lek Seductress becomes blocked by a creature, put a bounty counter on that creature.

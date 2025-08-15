@@ -1,0 +1,11 @@
+Name:Chewbacca
+ManaCost:2 R G W
+Types:Legendary Creature Wookiee Warrior
+PT:4/5
+K:Vigilance
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ Whenever CARDNAME attacks or blocks, another target creature you control gets +3/+3 until end of turn.
+T:Mode$ Blocks | ValidCard$ Card.Self | Execute$ TrigPump | Secondary$ True | TriggerDescription$ Whenever CARDNAME attacks or blocks, another target creature you control gets +3/+3 until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.YouCtrl+Other | TgtPrompt$ Select another creature you control | NumAtt$ +3 | NumDef$ +3 | SpellDescription$ Another target creature you control gets +3/+3 until end of turn.
+
+Oracle:Vigilance\nWhenever Chewbacca attacks or blocks, another target creature you control gets +3/+3 until end of turn.

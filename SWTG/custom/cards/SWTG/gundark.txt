@@ -1,0 +1,12 @@
+Name:Gundark
+ManaCost:R
+Types:Creature Beast
+PT:1/1
+
+K:Haste
+K:Monstrosity:3:3 R R
+
+T:Mode$ BecomeMonstrous | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When CARDNAME becomes monstrous, it gets +2/+2 until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ 2 | NumDef$ 2
+
+Oracle:Haste\n{3}{R}{R}: Monstrosity 3. (If this creature isn’t monstrous, put three +1/+1 counters on it and it becomes monstrous.)\nWhen Gundark becomes monstrous, it gets +2/+2 until end of turn.

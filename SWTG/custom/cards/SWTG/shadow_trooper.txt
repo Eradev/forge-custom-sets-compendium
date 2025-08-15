@@ -1,0 +1,10 @@
+Name:Shadow Trooper
+ManaCost:2 U
+Types:Creature Human Trooper
+PT:2/2
+
+K:Flash
+
+S:Mode$ CastWithFlash | ValidCard$ Creature.Trooper | ValidSA$ Spell | EffectZone$ Battlefield | Caster$ You | Description$ You may cast Trooper spells as though they had flash.
+
+Oracle:Flash\nYou may cast Trooper creature cards as though they had flash.

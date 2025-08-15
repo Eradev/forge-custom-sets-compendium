@@ -1,0 +1,10 @@
+Name:March of the Droids
+ManaCost:2 W U B
+Types:Sorcery
+
+A:SP$ ChangeZoneAll | ChangeType$ Card.YouCtrl+counters_GE1_REPAIR | Origin$ Graveyard | Destination$ Battlefield | SubAbility$ DBToken
+
+SVar:DBToken:DB$ Token | TokenAmount$ X | TokenScript$ c_1_1_a_droid | TokenOwner$ You
+SVar:X:Count$Valid Creature.Droid+YouCtrl
+
+Oracle:Remove all repair counters from all cards in your graveyard. Return each card with a repair counter removed this way from your graveyard to the battlefield. Create a 1/1 colorless Droid artifact creature token for each Droid you control.

@@ -1,0 +1,25 @@
+Name:Mon Calamari Initiate
+ManaCost:2 U U
+Types:Creature Calamari Jedi
+PT:3/2
+
+K:Meditate
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When CARDNAME enters the battlefield, draw a card.
+
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+# Meditate Integration
+S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withoutDiscountmeditate | AddAbility$ Meditate
+S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withDiscountmeditate | AddAbility$ DiscountMeditate
+S:Mode$ Continuous | Affected$ Card.Self+withFastmeditate+withoutDiscountmeditate | AddAbility$ FastMeditate
+S:Mode$ Continuous | Affected$ Card.Self+withFastmeditate+withDiscountmeditate | AddAbility$ DiscountFastMeditate
+
+SVar:Meditate:AB$ ChangeZone | Cost$ 1 U | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner’s hand. Meditate only as a sorcery.)
+SVar:DiscountMeditate:AB$ ChangeZone | Cost$ U | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SubAbility$ JediScry | SpellDescription$ Meditate (Return this creature to its owner’s hand. Meditate only as a sorcery.)
+SVar:FastMeditate:AB$ ChangeZone | Cost$ 1 U | ActivationZone$ Battlefield | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner’s hand.)
+SVar:DiscountFastMeditate:AB$ ChangeZone | Cost$ U | ActivationZone$ Battlefield | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SubAbility$ JediScry | SpellDescription$ Meditate (Return this creature to its owner’s hand.)
+
+SVar:JediScry:DB$ Scry | ScryNum$ 1 | ConditionDefined$ Self | ConditionPresent$ Card.Jedi
+
+Oracle:When Mon Calamari Initiate enters the battlefield, draw a card.\nMeditate 1U (Return this creature to its owner’s hand. Meditate only as a sorcery.)

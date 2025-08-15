@@ -1,0 +1,10 @@
+Name:Insatiable Rakghoul
+ManaCost:5 B
+Types:Creature Zombie Mutant
+PT:4/6
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ DeadCreatures | SVarCompare$ GE1 | TriggerZones$ Battlefield | Execute$ TrigAddCounter | TriggerDescription$ If a nonartifact creature died this turn, CARDNAME enters the battlefield with a +1/+1 counter on it.
+SVar:DeadCreatures:Count$ThisTurnEntered_Graveyard_from_Battlefield_Creature.nonArtifact
+SVar:TrigAddCounter:DB$ PutCounter | Defined$ TriggeredCard | CounterType$ P1P1 | CounterNum$ 1
+
+Oracle:If a nonartifact creature died this turn, Insatiable Rakghoul enters the battlefield with a +1/+1 counter on it.

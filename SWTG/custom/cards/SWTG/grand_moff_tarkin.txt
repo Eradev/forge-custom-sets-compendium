@@ -1,0 +1,18 @@
+Name:Grand Moff Tarkin
+ManaCost:3 B
+Types:Legendary Creature Human Advisor
+PT:2/2
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ At the beginning of each opponent’s upkeep, destroy target creature that player controls unless that player pays 2 life. If a player pays life this way, draw a card.
+
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.ControlledBy TriggeredPlayer | SubAbility$ DBChoice
+
+SVar:DBChoice:DB$ GenericChoice | Defined$ TriggeredPlayer | Choices$ DBDestroy,DBPay | SpellDescription$ Destroy target creature that player controls unless that player pays 2 life. If a player pays life this way, draw a card.
+
+SVar:DBDestroy:DB$ Destroy | Defined$ Targeted | TgtPrompt$ Select a creature to destroy | SpellDescription$ Destroy target creature.
+
+SVar:DBPay:DB$ LoseLife | Defined$ TriggeredPlayer | LifeAmount$ 2 | SubAbility$ DBDraw | SpellDescription$ Pay 2 life.
+
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+Oracle:At the beginning of each opponent’s upkeep, destroy target creature that player controls unless that player pays 2 life. If a player pays life this way, draw a card.

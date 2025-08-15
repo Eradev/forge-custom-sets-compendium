@@ -1,0 +1,10 @@
+Name:Wisdom of the Jedi
+ManaCost:G W U
+Types:Instant
+A:SP$ Charm | Choices$ DBPrevent,DBPump,DBCounter
+SVar:DBPrevent:DB$ Effect | ReplacementEffects$ RPreventPlayers | SpellDescription$ Prevent all damage that would be dealt to players this turn.
+SVar:RPreventPlayers:Event$ DamageDone | Prevent$ True | ActiveZones$ Command | ValidTarget$ Player | Description$ Prevent all damage that would be dealt to players this turn.
+SVar:DBPump:DB$ Pump | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | NumAtt$ 1 | NumDef$ 1 | SubAbility$ DBProtect | SpellDescription$ Target creature you control gets +1/+1 and protection from the color of your choice until end of turn.
+SVar:DBProtect:DB$ Protection | Defined$ Targeted | Gains$ Choice | Choices$ AnyColor
+SVar:DBCounter:DB$ Counter | TargetType$ Spell | ValidTgts$ Card.cmcLE3 | TgtPrompt$ Select target spell with mana value 3 or less | SpellDescription$ Counter target spell with mana value 3 or less.
+Oracle:Choose one —\n• Prevent all damage that would be dealt to players this turn.\n• Target creature you control gets +1/+1 and protection from the color of your choice until end of turn.\n• Counter target spell with mana value 3 or less.

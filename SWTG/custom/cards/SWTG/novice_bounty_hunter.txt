@@ -1,0 +1,9 @@
+Name:Novice Bounty Hunter
+ManaCost:1 R
+Types:Creature Human Hunter
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.OppCtrl+counters_GE1_BOUNTY | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Bounty — Whenever a creature an opponent controls with a bounty counter on it dies, CARDNAME deals 2 damage to target player or planeswalker.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Player,Planeswalker | NumDmg$ 2 | TgtPrompt$ Select target player or planeswalker
+
+Oracle:Bounty — Whenever a creature an opponent controls with a bounty counter on it dies, Novice Bounty Hunter deals 2 damage to target player or planeswalker.

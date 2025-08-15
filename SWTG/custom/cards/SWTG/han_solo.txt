@@ -1,0 +1,12 @@
+Name:Han Solo
+ManaCost:3 R
+Types:Legendary Creature Human Rogue
+PT:4/3
+
+K:First Strike
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigBuff | TriggerDescription$ At the beginning of combat on your turn, target Starship creature you control gets +2/+2 and gains haste until end of turn.
+
+SVar:TrigBuff:DB$ Pump | ValidTgts$ Creature.Starship+YouCtrl | NumAtt$ 2 | NumDef$ 2 | KW$ Haste
+
+Oracle:First strike\nAt the beginning of combat on your turn, target Starship creature you control gets +2/+2 and gains haste until end of turn.

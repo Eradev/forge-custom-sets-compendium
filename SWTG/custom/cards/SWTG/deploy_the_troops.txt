@@ -1,0 +1,7 @@
+Name:Deploy the Troops
+ManaCost:4 W
+Types:Instant
+
+A:SP$ Token | Cost$ 4 W | TokenAmount$ 3 | TokenScript$ w_1_1_trooper | TokenOwner$ You | SpellDescription$ Create three 1/1 white Trooper creature tokens.
+
+Oracle:Create three 1/1 white Trooper creature tokens.

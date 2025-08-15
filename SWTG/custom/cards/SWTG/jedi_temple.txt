@@ -1,0 +1,9 @@
+Name:Jedi Temple
+ManaCost:no cost
+Types:Land
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters the battlefield tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMana | TriggerDescription$ When CARDNAME enters the battlefield, add {W}.
+SVar:TrigMana:DB$ Mana | Produced$ W | Amount$ 1
+A:AB$ Mana | Cost$ T | Produced$ Combo G U | SpellDescription$ Add {G} or {U}.
+Oracle:Jedi Temple enters the battlefield tapped.\nWhen Jedi Temple enters the battlefield, add {W}.\n{T}: Add {G} or {U}.

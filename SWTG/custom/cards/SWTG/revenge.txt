@@ -1,0 +1,11 @@
+Name:Revenge
+ManaCost:1 R
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select creature you control | SubAbility$ DBBuff | RememberTargets$ True | SpellDescription$ Target creature you control fights target creature an opponent controls. If you lost life this turn, it gets +4/+0 until end of turn before it fights.
+SVar:DBBuff:DB$ Pump | Defined$ Remembered | NumAtt$ +4 | ConditionCheckSVar$ X | ConditionSVarCompare$ GE1 | SubAbility$ DBFight
+SVar:DBFight:DB$ Fight | Defined$ Remembered | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select creature an opponent controls to fight
+
+SVar:X:PlayerCountPropertyYou$LifeLostThisTurn
+
+Oracle:Target creature you control fights target creature an opponent controls. The creature you control gets +4/+0 until end of turn before it fights if you lost life this turn.

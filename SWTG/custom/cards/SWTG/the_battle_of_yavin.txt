@@ -1,0 +1,13 @@
+Name:The Battle of Yavin
+ManaCost:X B B
+Types:Sorcery
+
+A:SP$ Pump | ImprintCards$ Valid Permanent.nonLand+OppCtrl | StackDescription$ None | SubAbility$ DBRepeatPlayer
+SVar:DBRepeatPlayer:DB$ RepeatEach | RepeatPlayers$ ImprintedController | RepeatSubAbility$ DBRepeatCard | SubAbility$ DBCleanup | SpellDescription$ For each nonland permanent target opponent controls, that player sacrifices it unless he or she pays X life.
+SVar:DBRepeatCard:DB$ RepeatEach | RepeatCards$ Card.IsImprinted | ChooseOrder$ RememberedPlayer | RepeatSubAbility$ DBChoose
+SVar:DBChoose:DB$ GenericChoice | Defined$ RememberedPlayer | ShowCurrentCard$ Remembered | Choices$ DBSac,DBPay
+SVar:DBSac:DB$ Sacrifice | Defined$ RememberedPlayer | SacValid$ Remembered | SpellDescription$ Sacrifice
+SVar:DBPay:DB$ LoseLife | Defined$ RememberedPlayer | LifeAmount$ X | SpellDescription$ Pay {X} Life
+SVar:X:Count$xPaid
+
+Oracle:For each nonland permanent target opponent controls, that player sacrifices it unless he or she pays X life.

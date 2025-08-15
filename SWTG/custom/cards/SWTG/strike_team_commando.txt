@@ -1,0 +1,7 @@
+Name:Strike Team Commando
+ManaCost:2 GW GW
+Types:Creature Human Rebel
+PT:3/3
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigDestroy | TriggerDescription$ When CARDNAME enters the battlefield, you may destroy target artifact without spaceflight.
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Artifact.withoutSpaceflight | TgtPrompt$ Select target artifact without spaceflight
+Oracle:When CARDNAME enters the battlefield, you may destroy target artifact without spaceflight.

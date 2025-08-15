@@ -1,0 +1,8 @@
+Name:Sith Mindseer
+ManaCost:U B R
+Types:Creature Human Sith
+PT:3/3
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ HateFlag | SVarCompare$ GE1 | Execute$ TrigGainControl | TriggerZones$ Battlefield | TriggerDescription$ Hate — When CARDNAME enters the battlefield, if an opponent lost life from a source other than combat damage this turn, gain control of target creature for as long as CARDNAME remains on the battlefield.
+SVar:TrigGainControl:DB$ GainControl | ValidTgts$ Creature | TgtPrompt$ Select target creature | LoseControl$ LeavesPlay | SpellDescription$ Gain control of target creature for as long as CARDNAME remains on the battlefield.
+SVar:HateFlag:PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+Oracle:Hate — When Sith Mindseer enters the battlefield, if an opponent lost life from a source other than combat damage this turn, gain control of target creature for as long as Sith Mindseer remains on the battlefield.

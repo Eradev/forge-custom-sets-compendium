@@ -1,0 +1,9 @@
+Name:Outlaw Holocron
+ManaCost:2
+Types:Artifact
+A:AB$ PutCounter | Cost$ T | CounterType$ CHARGE | CounterNum$ 1 | SpellDescription$ Put a charge counter on CARDNAME.
+A:AB$ Mana | Cost$ T SubCounter<1/CHARGE> | Produced$ Combo B R G | Amount$ 1 | SpellDescription$ Add {B}, {R}, or {G}.
+A:AB$ Charm | Cost$ T SubCounter<2/CHARGE> | Choices$ ManaBR,ManaRG | CharmNum$ 1 | SpellDescription$ Add {B}{R} or {R}{G}.
+SVar:ManaBR:DB$ Mana | Produced$ B R | SpellDescription$ Add {B}{R}
+SVar:ManaRG:DB$ Mana | Produced$ R G | SpellDescription$ Add {R}{G}
+Oracle:{T}: Put a charge counter on CARDNAME.\n{T}, Remove a charge counter from CARDNAME: Add {B}, {R}, or {G}.\n{T}, Remove two charge counters from CARDNAME: Add {B}{R} or Add {R}{G}.

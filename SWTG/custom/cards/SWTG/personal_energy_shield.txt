@@ -1,0 +1,7 @@
+Name:Personal Energy Shield
+ManaCost:U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | TargetValidTargeting$ Permanent.YouCtrl+inRealZoneBattlefield,You | SpellDescription$ Counter target spell that targets you or a permanent you control.
+
+Oracle:Counter target spell that targets you or a permanent you control.

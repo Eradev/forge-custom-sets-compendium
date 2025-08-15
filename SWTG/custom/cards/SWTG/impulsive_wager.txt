@@ -1,0 +1,10 @@
+Name:Impulsive Wager
+ManaCost:R
+Types:Sorcery
+
+A:SP$ Discard | Mode$ Random | RememberDiscarded$ True | SubAbility$ DrawTwo | SpellDescription$ As an additional cost to cast Impulsive Wager, discard a card at random. If the discarded card was a nonland card, draw two cards. Otherwise, put a bounty counter on target creature an opponent controls.
+
+SVar:DrawTwo:DB$ Draw | Defined$ You | NumCards$ 2 | ConditionDefined$ Remembered | ConditionNotPresent$ Land | SubAbility$ PutBounty
+SVar:PutBounty:DB$ PutCounter | ConditionDefined$ Remembered | ConditionPresent$ Land | CounterType$ BOUNTY | CounterNum$ 1 | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls
+
+Oracle:As an additional cost to cast Impulsive Wager, discard a card at random.\nIf the discarded card was a nonland card, draw two cards. Otherwise, put a bounty counter on target creature an opponent controls.

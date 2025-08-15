@@ -1,0 +1,9 @@
+Name:Force Pull
+ManaCost:2 G
+Types:Sorcery
+
+A:SP$ Destroy | ValidTgts$ Creature.withSpaceflight | TgtPrompt$ Select target creature with spaceflight | SubAbility$ DBScry | SpellDescription$ Destroy target creature with spaceflight. Scry 3.
+
+SVar:DBScry:DB$ Scry | ScryNum$ 3
+
+Oracle:Destroy target creature with spaceflight. Scry 3.

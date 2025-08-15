@@ -1,0 +1,15 @@
+Name:Sabacc Game
+ManaCost:1 U
+Types:Sorcery
+
+A:SP$ Pump | ValidTgts$ Permanent.OppCtrl | TgtPrompt$ Choose a permanent an opponent controls | RememberObjects$ Targeted | SubAbility$ ChooseOurs | SpellDescription$ Choose target permanent an opponent controls. That opponent chooses a permanent you control. Flip a coin. If you win the flip, gain control of the permanent you chose. If you lose the flip, your opponent gains control of the permanent they chose.
+
+SVar:ChooseOurs:DB$ ChooseCard | Defined$ RememberedController | Choices$ Permanent.YouCtrl | Mandatory$ True | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | Defined$ ChosenCard | ImprintCards$ ChosenCard | SubAbility$ DoFlip
+
+SVar:DoFlip:DB$ FlipACoin | WinSubAbility$ GainOppoPerm | LoseSubAbility$ GainYourPerm
+
+SVar:GainOppoPerm:DB$ GainControl | Defined$ Remembered
+SVar:GainYourPerm:DB$ GainControl | Defined$ ChosenCard | NewController$ RememberedController
+
+Oracle:Choose target permanent an opponent controls. That opponent chooses a permanent you control. Flip a coin. If you win the flip, gain control of the permanent you chose. If you lose the flip, your opponent gains control of the permanent they chose.

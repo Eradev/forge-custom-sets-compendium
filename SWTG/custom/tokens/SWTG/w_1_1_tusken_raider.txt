@@ -1,0 +1,6 @@
+Name:Tusken Raider
+ManaCost:no cost
+Types:Creature Tusken Raider
+Colors:white
+PT:1/1
+Oracle:

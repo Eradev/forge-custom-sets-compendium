@@ -1,0 +1,15 @@
+Name:Open Season
+ManaCost:1 B
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ DBPutCounter | TriggerDescription$ When CARDNAME enters the battlefield, for each opponent, put a bounty counter on target creature that player controls.
+SVar:DBPutCounter:DB$ PutCounter | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select one target creature each opponent controls | TargetMin$ 0 | TargetMax$ OneEach | TargetsForEachPlayer$ True | CounterType$ BOUNTY | CounterNum$ 1 | SpellDescription$ For each opponent, destroy one target creature that player controls.
+SVar:OneEach:PlayerCountOpponents$Amount
+
+S:Mode$ CantBeActivated | ValidCard$ Creature.OppCtrl+counters_GE1_BOUNTY | Description$ Creatures your opponents control with bounty counters on them can’t activate abilities.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.OppCtrl+counters_GE1_BOUNTY | TriggerZones$ Battlefield | Execute$ TrigBountyDeath | TriggerDescription$ Bounty — Whenever a creature an opponent controls with a bounty counter on it dies, that creature’s controller loses 2 life. Each other player gains 2 life.
+SVar:TrigBountyDeath:DB$ LoseLife | Defined$ TriggeredCardController | LifeAmount$ 2 | SubAbility$ GainLife
+SVar:GainLife:DB$ GainLife | Defined$ Player.!TriggeredCardController | LifeAmount$ 2
+
+Oracle:When Open Season enters the battlefield, for each opponent, put a bounty counter on target creature that player controls.\nCreatures your opponents control with bounty counters on them can’t activate abilities.\nBounty — Whenever a creature an opponent controls with a bounty counter on it dies, that creature’s controller loses 2 life. Each other player gains 2 life.

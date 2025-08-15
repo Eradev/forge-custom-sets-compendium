@@ -1,0 +1,14 @@
+Name:N-1 Starfighter
+ManaCost:1 WU WU
+Types:Artifact Creature Starship
+PT:2/2
+K:Spaceflight
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockBySpaceflight
+SVar:BlockSpaceflight:Mode$ CantBlockBy | ValidAttacker$ Creature.withoutSpaceflight | ValidBlocker$ Creature.Self | Description$ CARDNAME can block only creatures with spaceflight.
+SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpaceflight+withoutSpacereach | ValidAttacker$ Creature.Self | Description$ CARDNAME can be blocked only by creatures with spaceflight.
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigPayBlink | TriggerDescription$ Whenever CARDNAME deals combat damage to a player, you may pay {WU}. If you do, exile another target creature you control, then return that card to the battlefield under its owner’s control.
+SVar:TrigPayBlink:AB$ ChangeZone | Cost$ 1 WU | ValidTgts$ Creature.Other+YouCtrl | TgtPrompt$ Select another target creature you control | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBReturn | RememberTargets$ True | SpellDescription$ Exile another target creature you control, then return that card to the battlefield under your control.
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | GainControl$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+Oracle:Spaceflight (This creature can only block or be blocked by creatures with spaceflight.)\nWhenever N-1 Starfighter deals combat damage to a player, you may pay {WU}. If you do, exile another target creature you control, then return that card to the battlefield under its owner’s control.

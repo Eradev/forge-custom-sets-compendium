@@ -1,0 +1,6 @@
+Name:Ancient Holocron
+ManaCost:3
+Types:Artifact
+A:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
+A:AB$ Mana | Cost$ T | Produced$ Combo Any | Amount$ 2 | RestrictValid$ Spell.MultiColor | SpellDescription$ Add two mana in any combination of colors. Spend this mana only to cast multicolored spells.
+Oracle:{T}: Add one mana of any color.\n{T}: Add two mana in any combination of colors. Spend this mana only to cast multicolored spells.

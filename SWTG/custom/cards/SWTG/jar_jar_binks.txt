@@ -1,0 +1,16 @@
+Name:Jar Jar Binks
+ManaCost:2 U
+Types:Legendary Creature Gungan
+PT:0/1
+
+S:Mode$ CantBlock | ValidCard$ Card.Self | Description$ CARDNAME can't block.
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainControl | TriggerDescription$ When CARDNAME enters, target opponent gains control of it.
+SVar:TrigGainControl:DB$ GainControl | Defined$ Self | ValidTgts$ Opponent | TgtPrompt$ Select target opponent
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigChooseBiggest | TriggerDescription$ At the beginning of combat on your turn, tap the creature you control with the highest power.
+
+SVar:TrigChooseBiggest:DB$ ChooseCard | Choices$ Creature.greatestPowerControlledByYou | Mandatory$ True | ChoiceZone$ Battlefield | SubAbility$ TrigTapBiggest
+SVar:TrigTapBiggest:DB$ Tap | Defined$ ChosenCard
+
+Oracle:Jar Jar Binks can’t block.\nWhen Jar Jar Binks enters the battlefield, target opponent gains control of it.\nAt the beginning of combat on your turn, tap the creature you control with the highest power. If two or more creatures are tied, you choose one of them.

@@ -1,0 +1,9 @@
+Name:Gamorrean Prison Guard
+ManaCost:R
+Types:Creature Gamorrean Warrior
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.OppCtrl | TriggerZones$ Battlefield | PresentDefined$ Self | IsPresent$ Card.untapped | Execute$ TrigFight | TriggerDescription$ Whenever a creature enters the battlefield under an opponent’s control, if CARDNAME is untapped, it fights that creature.
+SVar:TrigFight:DB$ Fight | Defined$ TriggeredCardLKICopy | ValidTgts$ Card.Self
+
+Oracle:Whenever a creature enters the battlefield under an opponent’s control, if Gamorrean Prison Guard is untapped, it fights that creature.

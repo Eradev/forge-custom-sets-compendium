@@ -1,0 +1,10 @@
+Name:Gungan Captain
+ManaCost:2 U
+Types:Creature Gungan Warrior
+PT:1/4
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Creature | TriggerZones$ Battlefield | Execute$ TrigTap | TriggerDescription$ Whenever CARDNAME deals damage to a creature, tap that creature and it doesn't untap during its controller's next untap step.
+SVar:TrigTap:DB$ Tap | Defined$ TriggeredTargetLKICopy | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | Defined$ TriggeredTargetLKICopy | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent | IsCurse$ True
+
+Oracle:Whenever Gungan Captain deals damage to a creature, tap that creature. That creature doesn’t untap during its controller’s next untap step.

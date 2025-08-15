@@ -1,0 +1,12 @@
+Name:Lando Calrissian
+ManaCost:3 W
+Types:Legendary Creature Human Rogue
+PT:4/3
+
+K:First Strike
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigBuff | TriggerDescription$ At the beginning of combat on your turn, target Starship creature you control gets +2/+2 and gains vigilance until end of turn.
+
+SVar:TrigBuff:DB$ Pump | ValidTgts$ Creature.Starship+YouCtrl | TgtPrompt$ Select target Starship creature you control | NumAtt$ 2 | NumDef$ 2 | KW$ Vigilance
+
+Oracle:First strike\nAt the beginning of combat on your turn, target Starship creature you control gets +2/+2 and gains vigilance until end of turn.

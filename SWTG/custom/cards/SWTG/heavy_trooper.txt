@@ -1,0 +1,8 @@
+Name:Heavy Trooper
+ManaCost:2 B
+Types:Creature Human Trooper
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Creature.Trooper+YouCtrl | AddToughness$ 1 | Description$ Trooper creatures you control get +0/+1.
+
+Oracle:Trooper creatures you control get +0/+1.

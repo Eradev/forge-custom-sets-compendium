@@ -1,0 +1,25 @@
+Name:Jedi Battle Sage
+ManaCost:3 G
+Types:Creature Sullustan Jedi
+PT:3/3
+K:Flash
+K:Meditate
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ When CARDNAME enters the battlefield, target creature gets +2/+2 until end of turn.
+SVar:TrigPump:DB$ Pump | NumAtt$ +2 | NumDef$ +2 | Defined$ Target | ValidTgts$ Creature | TgtPrompt$ Select target creature
+
+# Meditate
+
+S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withoutDiscountmeditate | AddAbility$ Meditate
+S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withDiscountmeditate | AddAbility$ DiscountMeditate
+S:Mode$ Continuous | Affected$ Card.Self+withFastmeditate+withoutDiscountmeditate | AddAbility$ FastMeditate
+S:Mode$ Continuous | Affected$ Card.Self+withFastmeditate+withDiscountmeditate | AddAbility$ DiscountFastMeditate
+
+SVar:Meditate:AB$ ChangeZone | Cost$ 1 G | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner’s hand. Meditate only as a sorcery.)
+SVar:DiscountMeditate:AB$ ChangeZone | Cost$ G | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SubAbility$ JediScry | SpellDescription$ Meditate (Return this creature to its owner’s hand. Meditate only as a sorcery.)
+SVar:FastMeditate:AB$ ChangeZone | Cost$ 1 G | ActivationZone$ Battlefield | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner’s hand.)
+SVar:DiscountFastMeditate:AB$ ChangeZone | Cost$ G | ActivationZone$ Battlefield | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SubAbility$ JediScry | SpellDescription$ Meditate (Return this creature to its owner’s hand.)
+
+SVar:JediScry:DB$ Scry | ScryNum$ 1 | ConditionDefined$ Self | ConditionPresent$ Card.Jedi
+
+Oracle:Flash\nWhen Jedi Battle Sage enters the battlefield, target creature gets +2/+2 until end of turn.\nMeditate {1}{G} (Return this creature to its owner’s hand. Meditate only as a sorcery.)

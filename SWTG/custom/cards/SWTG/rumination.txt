@@ -1,0 +1,9 @@
+Name:Rumination
+ManaCost:2 U
+Types:Sorcery
+
+A:SP$ Draw | Defined$ You | NumCards$ 3 | SubAbility$ DBTopDeck | SpellDescription$ Draw three cards, then put a card from your hand on top of your library.
+
+SVar:DBTopDeck:DB$ ChangeZone | Origin$ Hand | Destination$ Library | ChangeType$ Card | ChangeNum$ 1 | Mandatory$ True
+
+Oracle:Draw three cards, then put a card from your hand on top of your library.

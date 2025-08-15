@@ -1,0 +1,8 @@
+Name:Neophyte Hateflayer
+ManaCost:B
+Types:Creature Human Sith
+PT:1/1
+
+A:AB$ LoseLife | Cost$ T PayLife<1> | Defined$ Opponent | LifeAmount$ 1 | SpellDescription$ Each opponent loses 1 life.
+
+Oracle:{T}, Pay 1 life: Each opponent loses 1 life.

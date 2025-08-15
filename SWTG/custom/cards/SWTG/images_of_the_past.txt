@@ -1,0 +1,9 @@
+Name:Images of the Past
+ManaCost:G W
+Types:Instant
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature.YouOwn | TgtPrompt$ Select up to two creature cards in your graveyard | ChangeNum$ 2 | TargetMin$ 0 | TargetMax$ 2 | RememberChanged$ True | SubAbility$ DBExile | SpellDescription$ Return up to two target creature cards from your graveyard to the battlefield, then exile those creatures.
+
+SVar:DBExile:DB$ ChangeZone | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile
+
+Oracle:Return up to two target creature cards from your graveyard to the battlefield, then exile those creatures.

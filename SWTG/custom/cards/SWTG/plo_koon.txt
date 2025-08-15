@@ -1,0 +1,21 @@
+Name:Plo Koon
+ManaCost:3 W W
+Types:Legendary Creature KelDor Jedi
+PT:4/4
+
+K:Meditate
+
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Creature.YouCtrl+withMeditate | AddKeyword$ Fastmeditate | Description$ You may activate meditate abilities any time you could cast an instant.
+
+# Meditate
+S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withoutDiscountmeditate | AddAbility$ Meditate
+S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withDiscountmeditate | AddAbility$ DiscountMeditate
+S:Mode$ Continuous | Affected$ Card.Self+withFastmeditate+withoutDiscountmeditate | AddAbility$ FastMeditate
+S:Mode$ Continuous | Affected$ Card.Self+withFastmeditate+withDiscountmeditate | AddAbility$ DiscountFastMeditate
+SVar:Meditate:AB$ ChangeZone | Cost$ 1 W | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner’s hand. Meditate only as a sorcery.)
+SVar:DiscountMeditate:AB$ ChangeZone | Cost$ W | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SubAbility$ JediScry | SpellDescription$ Meditate (Return this creature to its owner’s hand. Meditate only as a sorcery.)
+SVar:FastMeditate:AB$ ChangeZone | Cost$ 1 W | ActivationZone$ Battlefield | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner’s hand.)
+SVar:DiscountFastMeditate:AB$ ChangeZone | Cost$ W | ActivationZone$ Battlefield | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SubAbility$ JediScry | SpellDescription$ Meditate (Return this creature to its owner’s hand.)
+SVar:JediScry:DB$ Scry | ScryNum$ 1 | ConditionDefined$ Self | ConditionPresent$ Card.Jedi
+
+Oracle:You may activate meditate abilities any time you could cast an instant.\nMeditate 1W (Return this creature to its owner’s hand. Meditate only as a sorcery.)
