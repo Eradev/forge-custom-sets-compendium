@@ -10,4 +10,4 @@ More information can be found on its [official website](https://www.starwarstheg
 
 * Drop the `custom` folder in `%appdata%\Forge`
 * Drop the `pics` folder in `%appdata%\..\Local\Forge\cache`
-* Copy the custom types into `TypeLists.txt` in your Forge installation under `res\lists\`.
+* Copy the custom types inside `custom\typelists\SWTG.txt` into `res\lists\TypeLists.txt` located under your Forge installation.
