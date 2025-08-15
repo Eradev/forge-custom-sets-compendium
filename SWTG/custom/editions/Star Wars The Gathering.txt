@@ -291,3 +291,6 @@ Foil=NotSupported
 8 r_2_2_soldier_fs_royal_guard
 9 g_1_1_ewok
 10 c_1_1_a_droid
+
+[other]
+11 emblem_yoda_jedi_master
