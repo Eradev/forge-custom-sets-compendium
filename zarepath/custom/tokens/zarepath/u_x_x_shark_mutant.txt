@@ -1,0 +1,7 @@
+Name:Shark Mutant
+ManaCost:no cost
+Types:Creature Shark Mutant
+Colors:blue
+PT:*/*
+
+Oracle:
