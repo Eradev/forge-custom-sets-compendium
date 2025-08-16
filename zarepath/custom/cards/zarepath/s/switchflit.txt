@@ -1,0 +1,10 @@
+Name:Switchflit
+ManaCost:R G
+Types:Creature Insect Mutant
+PT:2/2
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigShuffle | TriggerDescription$ Whenever Switchflit deals combat damage to a player, shuffle it into its owner's library, then reveal cards from the top of your library until you reveal a creature card. Put that card onto the battlefield and the rest on the bottom of your library in a random order.
+SVar:TrigShuffle:DB$ ChangeZone | Defined$ Self | Origin$ Battlefield | Destination$ Library | Shuffle$ True | SubAbility$ DBDigUntil
+SVar:DBDigUntil:DB$ DigUntil | Valid$ Creature | ValidDescription$ Creature | FoundDestination$ Battlefield | RevealedDestination$ Library | RevealedLibraryPosition$ -1 | RevealRandomOrder$ True
+
+Oracle:Whenever Switchflit deals combat damage to a player, shuffle it into its owner's library, then reveal cards from the top of your library until you reveal a creature card. Put that card onto the battlefield and the rest on the bottom of your library in a random order.

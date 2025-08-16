@@ -1,0 +1,13 @@
+Name:Skyguard Sovereign
+ManaCost:2 W U
+Types:Artifact Creature Angel Construct
+PT:4/3
+
+K:Flying
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self,Artifact.YouCtrl | Origin$ Any | Destination$ Battlefield | Execute$ TrigPumpAll | TriggerDescription$ When CARDNAME or another artifact enters the battlefield under your control, creatures you control get +1/+1 until end of turn.
+SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ 1 | NumDef$ 1 | 
+
+Oracle:Flying\nWhen Skyguard Sovereign or another artifact enters the battlefield under your control, creatures you control get +1/+1 until end of turn.
+
+SVar:PlayMain1:TRUE

@@ -1,0 +1,12 @@
+Name:Scion Mimic
+ManaCost:1 U
+Types:Artifact Vehicle
+PT:0/0
+
+K:ETBReplacement:Copy:DBCopy:Optional
+SVar:DBCopy:DB$ Clone | Choices$ Creature,Vehicle.Other | AddKeywords$ Crew:1 | SubAbility$ DBAnimate | SpellDescription$ You may have CARDNAME enter the battlefield as a copy of any creature or Vehicle on the battlefield, except it's a Vehicle artifact and has crew 1.
+SVar:DBAnimate:DB$ Animate | Defined$ Self | Duration$ Permanent | Types$ Vehicle,Artifact | RemoveCardTypes$ True
+
+K:Crew:1
+
+Oracle:You may have Scion Mimic enter the battlefield as a copy of any creature or Vehicle on the battlefield, except it's a Vehicle artifact and has crew 1.\nCrew 1 (Tap any number of creatures you control with total power 1 or greater: This Vehicle becomes an artifact creature until end of turn.)

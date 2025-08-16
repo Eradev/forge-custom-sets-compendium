@@ -1,0 +1,7 @@
+Name:Sonic Scream
+ManaCost:W
+Types:Instant
+
+A:SP$ Destroy | Cost$ W | ValidTgts$ Artifact.cmcLE3,Enchantment.cmcLE3 | TgtPrompt$ Select target artifact or enchantment with converted mana cost 3 or less | SpellDescription$ Destroy target artifact or enchantment with mana value 3 or less.
+
+Oracle:Destroy target artifact or enchantment with mana value 3 or less.

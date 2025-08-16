@@ -1,0 +1,12 @@
+Name:Server Wipe
+ManaCost:1 B
+Types:Sorcery
+
+A:SP$ Discard | ValidTgts$ Player | TgtPrompt$ Select target player | NumCards$ 1 | Mode$ TgtChoose | SubAbility$ DBUpload | SpellDescription$ Target player discards a card, then uploads a card from their hand.(To upload a card, exile it face-up. It's owner may pay {2} to put it into their hand any time they could cast a sorcery.)
+SVar:DBUpload:DB$ ChangeZone | Cost$ 1 B | Origin$ Hand | Destination$ Exile | WithCountersType$ UPLOAD | DefinedPlayer$ Targeted | Chooser$ Targeted | ChangeType$ Card | ChangeNum$ 1 | IsCurse$ True | Mandatory$ True | RememberChanged$ True | SubAbility$ DBAnimate | StackDescription$ SpellDescription | SpellDescription$ then uploads a card from their hand. (To upload a card, exile it face-up. It's owner may pay {2} to put it into their hand any time they could cast a sorcery.)
+SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Abilities$ ABRemoveUpload | sVars$ DBDownload | Duration$ Permanent | SubAbility$ DBCleanup | StackDescription$ None
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True 
+SVar:ABRemoveUpload:AB$ RemoveCounter | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBDownload | PrecostDesc$ Download – | SpellDescription$ Return this card to your hand any time you could cast a sorcery.
+SVar:DBDownload:DB$ ChangeZone | Defined$ Self | Hidden$ True | Origin$ Exile | Destination$ Hand | StackDescription$ SpellDescription
+
+Oracle:Target player discards a card, then uploads a card from their hand. (To upload a card, exile it face-up. It's owner may pay {2} to put it into their hand any time they could cast a sorcery.)

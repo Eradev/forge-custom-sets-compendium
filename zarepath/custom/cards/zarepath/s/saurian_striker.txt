@@ -1,0 +1,8 @@
+Name:Saurian Striker
+ManaCost:1 R
+Types:Creature Lizard Mutant
+PT:2/1
+
+S:Mode$ Continuous | Affected$ Card.Self+attacking | AddKeyword$ First Strike | Description$ CARDNAME has first strike as long as it's attacking.
+
+Oracle:Saurian Striker has first strike as long as it's attacking.

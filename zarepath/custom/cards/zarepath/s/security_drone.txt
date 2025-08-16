@@ -1,0 +1,10 @@
+Name:Security Drone
+ManaCost:3
+Types:Artifact Creature Drone
+PT:1/1
+
+K:Flying
+
+K:Deathtouch
+
+Oracle:Flying \nDeathtouch
