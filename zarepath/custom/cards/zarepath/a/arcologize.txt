@@ -1,0 +1,13 @@
+Name:Arcologize
+ManaCost:1 G
+Types:Enchantment Aura
+
+K:Enchant Permanent.nonCreature
+
+A:SP$ Attach | Cost$ 1 G | ValidTgts$ Permanent.nonCreature | AILogic$ Curse | AITgts$ Card.cmcGE3
+
+S:Mode$ Continuous | Affected$ Card.EnchantedBy | SetColor$ Colorless | AddType$ Land & Forest | RemoveCardTypes$ True | RemoveLandTypes$ True | Description$ Enchanted permanent is a colorless Forest land.
+
+Oracle:Enchant noncreature permanent\nEnchanted permanent is a colorless Forest land.
+
+SVar:NonStackingAttachEffect:True

@@ -1,0 +1,10 @@
+Name:Accelerated Assembly
+ManaCost:5 U
+Types:Sorcery
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ X | EffectZone$ All | Description$ This spell costs {1} less to cast for each artifact you control.
+SVar:X:Count$Valid Artifact.YouCtrl
+
+A:SP$ Token | TokenAmount$ 2 | TokenScript$ c_2_2_a_construct | TokenOwner$ You | SpellDescription$ Create two 2/2 colorless Construct artifact creature tokens.
+
+Oracle:This spell costs {1} less to cast for each artifact you control.\nCreate two 2/2 colorless Construct artifact creature tokens.

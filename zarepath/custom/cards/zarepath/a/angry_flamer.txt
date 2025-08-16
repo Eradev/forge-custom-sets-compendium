@@ -1,0 +1,12 @@
+Name:Angry Flamer
+ManaCost:3 R
+Types:Creature Human Rebel
+PT:4/3
+
+A:AB$ Pump | Cost$ R | Defined$ Self | NumAtt$ 1 | SpellDescription$ CARDNAME gets +1/+0 until end of turn.
+
+S:Mode$ Continuous | Affected$ Card.Self+equipped | AddKeyword$ Trample | Description$ As long as CARDNAME is equipped, it has trample.
+
+Oracle:{R}:Angry Flamer gets +1/+0 until end of turn.\nAs long as Angry Flamer is equipped, it has trample.
+
+SVar:EquipMe:Once

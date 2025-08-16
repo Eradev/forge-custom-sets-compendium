@@ -1,0 +1,17 @@
+Name:Amphin Vigilante
+ManaCost:3 G G
+Types:Creature Salamander Mutant
+PT:4/4
+
+K:Flash
+
+K:Trample
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigUntap | TriggerDescription$ When CARDNAME enters the battlefield, untap another target Mutant you control. That Mutant gets +3/+3 until end of turn.
+SVar:TrigUntap:DB$ Untap | ValidTgts$ Mutant.Other+YouCtrl | TgtPrompt$ Choose target Mutant. | SubAbility$ DBPump |
+SVar:DBPump:DB$ Pump | Defined$ Targeted | NumAtt$ 3 | NumDef$ 3 |
+
+Oracle:Flash, Trample\nWhen Amphin Vigilante enters the battlefield, untap another target Mutant you control. That Mutant gets +3/+3 until end of turn.
+
+SVar:PlayMain1:TRUE
+DeckHints:Type$Mutant

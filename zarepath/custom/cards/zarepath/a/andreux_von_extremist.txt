@@ -1,0 +1,12 @@
+Name:Andreux Von, Extremist
+ManaCost:2 R R
+Types:Legendary Creature Mutant Rebel
+PT:4/3
+
+K:First Strike
+
+S:Mode$ PlayerMustAttack | ValidPlayer$ Player | Description$ Each player must attack with at least one creature each combat if able.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.attacking | Execute$ TrigDmg | TriggerZones$ Battlefield | TriggerDescription$ Whenever an attacking creature dies, CARDNAME deals 1 damage to target player.
+SVar:TrigDmg:DB$ DealDamage | ValidTgts$ Player | TgtPrompt$ Select target player | NumDmg$ 1
+
+Oracle:First Strike\nEach player must attack with at least one creature each combat if able.\nWhenever an attacking creature dies, Andreux Von, Extremist deals 1 damage to target player.
