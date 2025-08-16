@@ -1,0 +1,11 @@
+Name:Flickercloak
+ManaCost:1 W
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 2 | AddToughness$ 2 | Description$ Enchanted creature gets +2/+2.
+
+A:AB$ Token | TokenScript$ c_1_1_elemental | TokenAmount$ 2 | PrecostDesc$ Kindle 2 — | Cost$ 2 W ExileFromGrave<1/CARDNAME> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create two 1/1 colorless Elemental creature tokens.
+
+Oracle:Enchant creature\nEnchanted creature gets +2/+2.\nKindle 2—{2}{W} ({2}{W}, Exile this card from your graveyard: Create two 1/1 colorless Elemental creature tokens. Kindle only as a sorcery.)
