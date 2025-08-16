@@ -1,0 +1,11 @@
+Name:Stalked Healer
+ManaCost:W
+Types:Creature Human Cleric
+PT:1/1
+
+K:Lifelink
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigInvestigate | TriggerDescription$ When CARDNAME enters, investigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")
+SVar:TrigInvestigate:DB$ Investigate
+
+Oracle:Lifelink\nWhen Stalked Healer enters, investigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")
