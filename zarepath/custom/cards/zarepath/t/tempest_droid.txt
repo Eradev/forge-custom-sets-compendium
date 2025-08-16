@@ -1,0 +1,8 @@
+Name:Tempest Droid
+ManaCost:3 U U
+Types:Artifact Creature Construct
+PT:4/4
+
+K:Flying
+
+Oracle:Flying

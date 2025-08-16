@@ -1,0 +1,13 @@
+Name:TR-12 Deliverer
+ManaCost:3 W W
+Types:Artifact Vehicle
+PT:4/4
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainLife | TriggerDescription$ When CARDNAME enters the battlefield, gain 6 life.
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 6
+
+K:Crew:2
+
+Oracle:Flying\nWhen TR-12 Deliverer enters the battlefield, you gain 6 life.\nCrew 2 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)

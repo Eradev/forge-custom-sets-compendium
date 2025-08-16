@@ -1,0 +1,10 @@
+Name:TC-14 Behemoth
+ManaCost:4 G G
+Types:Artifact Vehicle
+PT:14/14
+
+K:Trample
+
+K:Crew:6
+
+Oracle:Trample\nCrew 6 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)
