@@ -1,0 +1,10 @@
+Name:Liberated Armory
+ManaCost:2 W
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.nonToken+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigArm | TriggerDescription$ Whenever a nontoken creature enters the battlefield under your control, put a +1/+1 counter on it and draw a card.
+SVar:TrigArm:DB$ Token | Defined$ TriggeredCardLKICopy | TokenAmount$ 1 | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | TrigAttach:DB$ Attach | AttachedTo$ TriggeredCard| ValidTgts$ Card.Self
+
+S:Mode$ ReduceCost | ValidCard$ Card | ValidSpell$ Activated.Equip | Activator$ You | Amount$ 1 | Description$ Equip costs you pay cost {1} less.
+
+Oracle:Whenever a nontoken creature enters the battlefield under your control, arm it. (Create a colorless Equipment artifact token with Equip: {2} "({2}: Attach to target creature you control. Equip only as a sorcery.))\nEquip costs of equipment you control cost {1} less.
