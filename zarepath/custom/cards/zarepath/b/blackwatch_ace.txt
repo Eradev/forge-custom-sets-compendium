@@ -1,0 +1,13 @@
+Name:Blackwatch Ace
+ManaCost:B
+Types:Creature Human Pilot
+PT:1/1
+
+S:Mode$ CantBlock | ValidCard$ Card.Self | Description$ CARDNAME can't block.
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 2 | AddToughness$ 1 | CheckSVar$ X | SVarCompare$ GE1 | Description$ As long as you control a Vehicle, CARDNAME gets +2/+1.
+SVar:X:Count$Valid Vehicle.Other+YouCtrl
+
+Oracle:Blackwatch Ace can't block.\nAs long as you control a Vehicle, Blackwatch Ace gets +2/+1.
+
+SVar:BuffedBy:Vehicle

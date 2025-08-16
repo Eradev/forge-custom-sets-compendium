@@ -1,0 +1,8 @@
+Name:Back in Action
+ManaCost:1 W
+Types:Instant
+
+A:SP$ ChangeZone | Cost$ 1 W | Origin$ Graveyard | Destination$ Battlefield | TgtPrompt$ Choose target creature card with mana value 2 or less in your graveyard | ValidTgts$ Creature.cmcLE2+YouCtrl | SubAbility$ DBToken | SpellDescription$ Return target creature card with mana value 2 or less from your graveyard to the battlefield. 
+SVar:DBToken:DB$ Token | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | TokenAmount$ 1 | AttachedTo$ Targeted
+
+Oracle:Return target creature card with mana value 2 or less from your graveyard to the battlefield. Arm it. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.)

@@ -1,0 +1,11 @@
+Name:Blackwatch Assassin
+ManaCost:1 B B
+Types:Creature Human Rogue
+PT:1/2
+
+K:Deathtouch
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters the battlefield, arm it. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to this creature.)
+SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | AttachedTo$ Self
+
+Oracle:Deathtouch\nWhen Blackwatch Assassin enters the battlefield, arm it. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to this creature.)
