@@ -1,0 +1,7 @@
+Name:Hold Fast
+ManaCost:1 W W
+Types:Instant
+
+A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +4 | SpellDescription$ Creatures you control get +1/+4 until end of turn.
+
+Oracle:Creatures you control get +1/+4 until end of turn.
