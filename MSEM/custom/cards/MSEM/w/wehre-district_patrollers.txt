@@ -1,0 +1,10 @@
+Name:Wehre-District Patrollers
+ManaCost:1 W
+Types:Creature Human Soldier
+PT:2/2
+
+T:Mode$ Attacks | ValidCard$ Creature.Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigBuff | TriggerDescription$ Whenever you attack or block with one or more other creatures, CARDNAME gets +1/+0 and gains first strike until end of turn.
+T:Mode$ Blocks | ValidCard$Creature.Other+YouCtrl | TriggerZones$ Battlefield | Secondary$ True | Execute$ TrigBuff | TriggerDescription$ Whenever you attack or block with one or more other creatures, CARDNAME gets +1/+0 and gains first strike until end of turn.
+SVar:TrigBuff:DB$ Pump | Defined$ Self | NumAtt$ +1 | KW$ First Strike
+
+Oracle:Whenever you attack or block with one or more other creatures, Wehre-District Patrollers gets +1/+0 and gains first strike until end of turn.

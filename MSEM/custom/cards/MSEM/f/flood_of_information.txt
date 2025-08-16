@@ -1,0 +1,8 @@
+Name:Flood of Information
+ManaCost:4 U
+Types:Sorcery
+
+A:SP$ ChangeZoneAll | ValidCards$ Creature.cmcLE3 | Origin$ Battlefield | Destination$ Hand | SpellDescription$ Return all creatures with toughness 3 or less to their owners' hands. Investigate three times. (To investigate, create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.") | SubAbility$ DBInvestigate
+SVar:DBInvestigate:DB$ Investigate | Num$ 3
+
+Oracle:Return all creatures with toughness 3 or less to their owners' hands.\nInvestigate three times. (To investigate, create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")

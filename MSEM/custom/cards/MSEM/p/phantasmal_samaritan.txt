@@ -1,0 +1,9 @@
+Name:Phantasmal Samaritan
+ManaCost:1 W
+Types:Creature Illusion
+PT:1/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainLife | TriggerDescription$ When CARDNAME enters, you gain 4 life.
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 4
+
+Oracle:When Phantasmal Samaritan enters, you gain 4 life.

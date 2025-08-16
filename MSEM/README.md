@@ -13,7 +13,7 @@ Set information can be found on [msem-instigator](https://msem-instigator.heroku
 
 ```text
 Video Horror System (VHS)   -  26% (23/86)
-Kaleidoscope (KLC)          -  23% (25/108)
+Kaleidoscope (KLC)          -  38% (41/108)
 A Tourney at Whiterun (TWR) -  11% (30/269)
 The Land Bundle (L)         - 100% (80/80)
 Tides of War (TOW)          -  27% (75/271)
@@ -25,6 +25,7 @@ Examples on how to implement custom keywords
 
 * [Horrific](#horrific)
 * [Kindle](#kindle)
+* [Mirage](#mirage)
 * [Motivate](#motivate)
 * [Paranoia](#paranoia)
 * [Torment](#torment)
@@ -54,8 +55,27 @@ Kindle 1—{1} ({1}, Exile this card from your graveyard: Create a 1/1 colorless
 Implementation:
 
 ```text
-A:AB$ Token | TokenScript$ c_1_1_elemental | PrecostDesc$ Kindle 1 — | Cost$ 1 ExileFromGrave<1/CARDNAME> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create a 1/1 colorless Elemental creature token. Kindle only as a sorcery.
+A:AB$ Token | TokenScript$ c_1_1_elemental | PrecostDesc$ Kindle 1 — | Cost$ 1 ExileFromGrave<1/CARDNAME> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create a 1/1 colorless Elemental creature token.
 ```
+
+### Mirage
+
+Mirage is defined as:
+
+```text
+Mirage {1}{W} (You may cast this spell as though it had flash for its mirage cost. If you do, sacrifice it at the beginning of the next cleanup step.)
+```
+
+Implementation:
+
+```text
+S:Mode$ Continuous | Affected$ Card.Self | MayPlay$ True | MayPlayAltManaCost$ 1 W | MayPlayWithFlash$ True | AffectedZone$ Hand | EffectZone$ Hand | Description$ Mirage {1}{W} (You may cast this spell as though it had flash for its mirage cost. If you do, sacrifice it at the beginning of the next cleanup step.)
+T:Mode$ SpellCast | ValidCard$ Card.Self | ValidSA$ Spell.MayPlaySource | Static$ True | Execute$ MirageCleanup
+SVar:MirageCleanup:DB$ DelayedTrigger | Mode$ Phase | Phase$ Cleanup | RememberObjects$ Self | TriggerDescription$ At the beginning of the next cleanup step, sacrifice CARDNAME. | Execute$ TrigSacrifice
+SVar:TrigSacrifice:DB$ SacrificeAll | Defined$ DelayTriggerRememberedLKI
+```
+
+[Jump to top](#keywords-implementation)
 
 ### Motivate
 

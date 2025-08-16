@@ -4,6 +4,6 @@ Types:Instant
 
 A:SP$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ +3 | NumDef$ -3 | IsCurse$ True | SpellDescription$ Target creature gets +3/-3 until end of turn.
 
-A:AB$ Token | TokenAmount$ 3 | TokenScript$ c_1_1_elemental | PrecostDesc$ Kindle 3 — | Cost$ B R PayLife<3> ExileFromGrave<1/CARDNAME> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create three 1/1 colorless Elemental creature tokens. Kindle only as a sorcery.
+A:AB$ Token | TokenAmount$ 3 | TokenScript$ c_1_1_elemental | PrecostDesc$ Kindle 3 — | Cost$ B R PayLife<3> ExileFromGrave<1/CARDNAME> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create three 1/1 colorless Elemental creature tokens.
 
 Oracle:Target creature gets +3/-3 until end of turn.\nKindle 3—{B}{R}, Pay 3 life. ({B}{R}, Pay 3 life, Exile this card from your graveyard: Create three 1/1 colorless Elemental creature tokens. Kindle only as a sorcery.)
