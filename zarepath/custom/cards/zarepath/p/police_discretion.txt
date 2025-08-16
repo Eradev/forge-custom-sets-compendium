@@ -1,0 +1,12 @@
+Name:Police Discretion
+ManaCost:1 W
+Types:Instant
+
+A:SP$ Charm | Cost$ 1 W | Choices$ DBPrevent,DBDestroy | CharmNum$ 1
+
+SVar:DBPrevent:DB$ Effect | ReplacementEffects$ RPrevent | SpellDescription$ Prevent all damage that would be dealt to you this turn.
+SVar:RPrevent:Event$ DamageDone | Prevent$ True | ActiveZones$ Command | ValidTarget$ You | Description$ Prevent all damage that would be dealt to you this turn.
+
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Creature.OppCtrl+dealtDamageThisTurn | TgtPrompt$ Select target creature that dealt damage this turn. | SpellDescription$ Destroy target creature that dealt damage this turn.
+
+Oracle:Choose one —\n• Prevent all damage that would be dealt to you this turn.\n• Destroy target creature that dealt damage to you or to a permanent you controlled this turn.
