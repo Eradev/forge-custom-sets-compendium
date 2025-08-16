@@ -1,0 +1,16 @@
+Name:Quickdraw Vigilante
+ManaCost:1 R W
+Types:Creature Human Warrior
+PT:3/3
+
+K:Vigilance
+
+T:Mode$ Attacks | ValidCard$ Card.Self | CheckSVar$ X | SVarCompare$ EQ1 | Execute$ TrigToken | TriggerDescription$ Whenever CARDNAME attacks or blocks, if it's unequipped, arm it. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.)
+T:Mode$ Blocks | ValidCard$ Card.Self | CheckSVar$ X | SVarCompare$ EQ1 | Execute$ TrigToken | TriggerZones$ Battlefield | Secondary$ True | TriggerDescription$ Whenever CARDNAME attacks or blocks,  if it's unequipped, arm it. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.)
+SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | AttachedTo$ Self
+SVar:X:Count$Valid Card.Self+unequipped
+
+Oracle:Vigilance\nWhenever Quickdraw Vigilante attacks or blocks, if it's unequipped, arm it. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.)
+
+AI:RemoveDeck:Random
+SVar:HasAttackEffect:TRUE
