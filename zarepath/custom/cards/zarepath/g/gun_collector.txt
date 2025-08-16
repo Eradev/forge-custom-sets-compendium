@@ -1,0 +1,9 @@
+Name:Gun Collector
+ManaCost:1 B R
+Types:Creature Human Rebel
+PT:2/2
+
+A:AB$ Pump | Cost$ 1 Sac<1/Creature.Other> | Defined$ Self | SubAbility$ DBToken | SpellDescription$ Arm CARDNAME.
+SVar:DBToken:DB$ Token | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | TokenAmount$ 1 | AttachedTo$ Self |
+
+Oracle:{1}, Sacrifice another creature: Arm Gun Collector.
