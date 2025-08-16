@@ -1,0 +1,9 @@
+Name:Freedom Fighters
+ManaCost:4 W
+Types:Creature Human Rebel
+PT:1/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters the battlefield, arm it twice. (Create a colorless Equipment artifact token named Weapon attached to it with "Equip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)")
+SVar:TrigToken:DB$Token | TokenAmount$ 2 | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | AttachedTo$ Self
+
+Oracle:When Freedom Fighters enters the battlefield, arm it twice. (Create a colorless Equipment artifact token with "Equip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)")
