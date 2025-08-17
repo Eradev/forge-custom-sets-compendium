@@ -1,0 +1,9 @@
+Name:Wheat from Chaff
+ManaCost:U
+Types:Sorcery
+
+A:SP$ Draw | NumCards$ 2 | SpellDescription$ Draw two cards, then discard two cards. | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ You | NumCards$ 2 | Mode$ TgtChoose | SubAbility$ DBInvestigate
+SVar:DBInvestigate:DB$ Investigate
+
+Oracle:Draw two cards, then discard two cards. Investigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")
