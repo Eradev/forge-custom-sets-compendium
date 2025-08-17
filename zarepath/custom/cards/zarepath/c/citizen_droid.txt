@@ -1,0 +1,5 @@
+Name:Citizen Droid
+ManaCost:2
+Types:Artifact Creature Construct Citizen
+PT:2/1
+Oracle:

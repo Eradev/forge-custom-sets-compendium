@@ -1,0 +1,9 @@
+Name:Combat Droid
+ManaCost:3
+Types:Artifact Creature Construct
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters the battlefield, create a colorless Equipment artifact token named Weapon attached to it with Equip: {2} "({2}: Attach to target creature you control. Equip only as a sorcery.)"
+SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | AttachedTo$ Self
+
+Oracle:When Combat Droid enters the battlefield, arm it. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to this creature.)
