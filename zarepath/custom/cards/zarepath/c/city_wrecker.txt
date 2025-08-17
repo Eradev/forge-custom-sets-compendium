@@ -1,0 +1,12 @@
+Name:City Wrecker
+ManaCost:4 G G G
+Types:Creature Lizard Mutant
+PT:7/7
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCharm | TriggerDescription$ Whenever CARDNAME enters the battlefield or attacks, ABILITY
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigCharm | TriggerDescription$ Whenever CARDNAME enters the battlefield or attacks, ABILITY
+SVar:TrigCharm:DB$ Charm | Choices$ DBFight,DBDestroy
+SVar:DBFight:DB$ Fight | Defined$ Self | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Choose target creature you don't control | SpellDescription$ City Wrecker fights target creature you don't control.
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Artifact.YouDontCtrl,Enchantment.YouDontCtrl | TgtPrompt$ Select target artifact or enchantment you don't control. | SpellDescription$ Destroy target artifact or enchantment you don't control.
+
+Oracle:Whenever City Wrecker enters the battlefield or attacks, choose one —\n• City Wrecker fights target creature you don't control.\n• Destroy target artifact or enchantment you don't control.

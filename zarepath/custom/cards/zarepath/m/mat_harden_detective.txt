@@ -1,0 +1,18 @@
+Name:Mat Harden, Detective
+ManaCost:1 U
+Types:Legendary Creature Human Scout
+PT:1/3
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | Defined$ Creature | Execute$ TrigPeek | TriggerDescription$ Whenever a creature dies, look at the top card of your library. You may put it into your graveyard.
+SVar:TrigPeek:DB$ PeekAndReveal | PeekAmount$ 1 | NoReveal$ True | RememberPeeked$ True | SubAbility$ DBChangeZone
+SVar:DBChangeZone:DB$ ChangeZone | Optional$ True | Origin$ Library | Destination$ Graveyard | Defined$ Remembered | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+A:AB$ Draw | Cost$ U T | ConditionCheckSVar$ Y | ConditionSVarCompare$ EQ3 | SpellDescription$ Draw a card. Activate this ability only if there is a creature card, an artifact card, and a land card in your graveyard.
+SVar:C:Count$ValidGraveyard Creature.YouOwn/LimitMax.1
+SVar:A:Count$ValidGraveyard Artifact.YouOwn/LimitMax.1
+SVar:L:Count$ValidGraveyard Land.YouOwn/LimitMax.1
+SVar:X:SVar$C/Plus.A
+SVar:Y:SVar$X/Plus.L
+
+Oracle:Whenever a creature dies, look at the top card of your library. You may put it into your graveyard.\n{U}, {T}: Draw a card. Activate this ability only if there is a creature card, an artifact card, and a land card in your graveyard.

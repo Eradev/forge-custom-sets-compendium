@@ -1,0 +1,9 @@
+Name:Thrill Seekers
+ManaCost:2 R
+Types:Creature Human Rogue
+PT:3/2
+K:Menace
+
+S:Mode$ MustAttack | ValidCreature$ Card.Self | Description$ CARDNAME attacks each combat if able.
+
+Oracle:Menace \nThrill Seekers attack each combat if able.

@@ -1,0 +1,276 @@
+[metadata]
+Code=NET
+Date=2021-03-20
+Name=Netropolis
+Type=Custom
+Booster=7 Common, 5 Uncommon, 2 RareMythic, 1 BasicLand
+
+[cards]
+1 U Arms Merchant
+2 R Atares Amplifier
+3 U Back in Action
+4 C Battle Ready
+5 C Battle Tested
+6 C Citizen Programming
+7 C Council Attendants
+8 R Cymurai Blademaster
+9 C District Raid
+10 M Dominator Droid
+11 C Force Deployment
+12 C Freedom Fighters
+13 M L3-T, Equalizer
+14 R Liberated Armory
+15 R Martial Dictate
+16 C Mecha Technician
+17 U N-FORCE Captain
+18 C N-FORCE Trooper
+19 M New World Order
+20 C Overwatch Droid
+21 U Parameter Halo
+22 C Peacekeeper Droid
+23 U Police Discretion
+24 U Precog Pilot
+25 U Psychic Obligator
+26 C Public Broadcast
+27 U Rebel Advance
+28 U Rebel Sniper
+29 C Rocketeer
+30 C Rooftop Rebel
+31 C Scion Mark IV
+32 C Skilled Protector
+33 C Sonic Scream
+34 U Sovereign Droid
+35 C Sting Droid
+36 R Taken for Questioning
+37 R Theos Artene, Demagogue
+38 U TR-12 Deliverer
+39 U Viral Fame
+40 R Wrath of Mod
+41 U Accelerated Assembly
+42 R Ancestral Research
+43 U Atares 14
+44 U Automated Archivist
+45 C Automatic Override
+46 R Back Door
+47 R Cloud Colossus
+48 C Colossal Construct
+49 R Corporate Ascension
+50 U Corporate Control
+51 C Cryo Cell
+52 C Cyber Savant
+53 C CyCorp Engineer
+54 C Data Dig
+55 C Digiblade Shinobi
+56 U Flutter Droid
+57 M Full Automation
+58 C Hacker Prodigy
+59 U Masq Agent
+60 R Masq Maven
+61 R Mat Harden, Detective
+62 C Minimize
+63 U Moderator's Discretion
+64 C Net Run
+65 C NuGolem
+66 C Private Eye (NET)
+67 U Quarantine
+68 C Reprogram
+69 R Scion Mimic
+70 U Shunt Access
+71 C Silicon Drake
+72 C Skyguard Droid
+73 C Skyguard Officer
+74 U Steel Sabotage
+75 M Talya, Cyber Wayfarer
+76 U Tempest Droid
+77 C Torrent Seed
+78 U Vat-Grown Infiltrator
+79 C Virtual Reality
+80 C Abuse of Power
+81 U Amalgamech
+82 U Blackwatch Ace
+83 C Blackwatch Assassin
+84 C Blackwatch Intimidator
+85 R Corporate Confidant
+86 U Corporate Infiltrator
+87 R Data Demon
+88 M Deep Net
+89 C Dreadmoth
+90 C Failed Creation
+91 R Ghost in the Machine
+92 U Heaps Baron
+93 U Hitman's Discretion
+94 C Info Dump
+95 C Malware
+96 C Masq Hacker
+97 R Misclick
+98 C MX Dreadnought
+99 U Online Tutor
+100 U Out of Date
+101 R Phantom Walker
+102 U Plugged In
+103 C Reassembler
+104 U Reboot Droid
+105 U Redeploy
+106 C Robo Boxer
+107 C Robo Rodent
+108 C Salvage Slasher
+109 U Scythe VII
+110 R Self-Destruct Sequence
+111 C Server Wipe
+112 U Shrieking Affliction
+113 M Sick Nic, Baron of Crime
+114 C Sky Prowler
+115 R Szaro, Bounty Hunter
+116 C Turf Killing
+117 C Vainglorious Pilot
+118 C Vape Fiend
+119 U Aggressive Demining
+120 R Andreux Von, Extremist
+121 U Angry Flamer
+122 U Assault Squad
+123 U Blitz Suit
+124 C Civil Unrest
+125 M Corporate Gamble
+126 C Cyber Courier
+127 U Deadeye Shinobi
+128 C Demolish
+129 U Doxxing
+130 U Extremist's Discretion
+131 C Gun Runner
+132 U Hard Crash
+133 C Hired Hit
+134 U Hunter-Seeker
+135 C Junkyard Boss
+136 U Lab Wrecker
+137 C Lizardman Outbreak
+138 R Lock and Load (NET)
+139 M Mecha Dragon
+140 R Motley Crew
+141 R MX Juggernaut
+142 C Out for Blood
+143 U Particular Skills
+144 C Quick Draw (NET)
+145 U Rabid Tri-Limb
+146 C Road Rebel
+147 C Robotic Revolutionary
+148 C Rogue Prototype
+149 R Saurian Mechanic
+150 C Saurian Striker
+151 C Smash Droid
+152 R Spice Den
+153 R Street Hacker
+154 C Street Thief
+155 C Thrill Seekers
+156 C Torrent Feed
+157 C Turn to Slag
+158 U Amphin Vigilante
+159 U Arachdroid
+160 U Arcologize
+161 C City Councilman
+162 R City Wrecker
+163 C Commune Colossus
+164 R Creeping Corrosion
+165 U Digital Witness
+166 C District Explorer
+167 U Garden Grafter
+168 R Gunmetal Hydra
+169 C Hulk Droid
+170 U Hunter's Discretion
+171 R Machine Oracle
+172 M Monstrous Apex
+173 U N-FORCE Ranger
+174 C Nano Field
+175 M Nanobirther
+176 C Natural End
+177 C Plummet
+178 U Redistricting
+179 C Refuge Warden
+180 C Resilient Recluse
+181 R Sapien Sergeant
+182 C Secret Keeper
+183 U Sewer Skinner
+184 U Shark Splice
+185 C Showmatch
+186 C Soylent Soaker
+187 C Splice Thug
+188 R State of Affairs
+189 C Streetwise Saurian
+190 C Substantial Upgrade
+191 U TC-7 Titan
+192 R TC-14 Behemoth
+193 C Toxic Leper
+194 U Unfettered Lusus
+195 C Urban Sprawl
+196 C Web Crawler
+197 U Aerial Gunner
+198 R Duplicate Results
+199 U Escaped Specimen
+200 U Expansion Plans
+201 U Gun Collector
+202 U Institutional Inertia
+203 R Masq Saboteur
+204 U Mecha Contract
+205 R Mercenary Autopilot
+206 R Mirsi, Mother of Mutants
+207 U Night Hacker
+208 R Quickdraw Vigilante
+209 R Re-spec
+210 U Short Circuit (NET)
+211 U Skyguard Ascendant
+212 R Skyguard Sovereign
+213 R Stirring Pride
+214 M Strings of the Masquerade
+215 M Switchflit
+216 R Toxic Scrap Heap
+217 R Turf Tender
+218 U Underworld Deeds
+219 U Awakened Droid
+220 U Butler Droid
+221 C Citizen Droid
+222 C Combat Droid
+223 C Cultivation Nanotech
+224 U Cybersmith
+225 U Data Petal
+226 M Dystopilith
+227 C Invasive Nanotech
+228 U JMD Dome
+229 C Malign Nanotech
+230 C Medicinal Nanotech
+231 M The Network
+232 C Neural Nanotech
+233 C Rebel Cocktail
+234 R Scrap Market
+235 C Security Drone
+236 C Server Farm
+237 R Soylent Station
+238 R Supercomputer
+239 R Ascending Spires
+240 U BiHelix Laboratory
+241 U Blackwatch Turf
+242 R Coruscating Cityscape
+243 U CyCorp Research Facility
+244 C Holo-Den
+245 U MekLab Factory
+246 U N-FORCE Station
+247 R Shadowed Pillar
+248 R Sprawling Coils
+249 R Umbrous Depths
+250 R Vibrant Locale
+251 L Plains
+252 L Island
+253 L Swamp
+254 L Mountain
+255 L Forest
+
+[tokens]
+1 w_1_1_soldier
+2 u_x_x_shark_mutant
+3 r_1_1_lizard_mutant
+# Duplicated as there is no r_1_1_lizard_mutant_haste
+3 r_1_1_lizard_mutant_haste
+5 c_2_2_a_construct
+6 c_3_3_a_equalizer
+7 c_a_weapon_equipment
+8 c_a_weapon_equipment
+9 c_a_weapon_equipment
+10 c_a_weapon_equipment

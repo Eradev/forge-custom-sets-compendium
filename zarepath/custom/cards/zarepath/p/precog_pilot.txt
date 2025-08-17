@@ -1,0 +1,11 @@
+Name:Precog Pilot
+ManaCost:1 W
+Types:Creature Human Pilot
+PT:1/1
+
+K:Double Strike
+
+T:Mode$ Taps | ValidCard$ Card.Self | Execute$ TrigScry | TriggerDescription$ Whenever CARDNAME becomes tapped, scry 1.
+SVar:TrigScry:DB$ Scry | ScryNum$ 1 | StackDescription$ Scry 1.
+
+Oracle:Double Strike\nWhenever Precog Pilot becomes tapped, scry 1.

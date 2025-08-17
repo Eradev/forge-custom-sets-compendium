@@ -1,0 +1,10 @@
+Name:Substantial Upgrade
+ManaCost:G
+Types:Instant
+
+A:SP$ Pump | Cost$ G | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ 4 | NumDef$ 4 | Defined$ You | ConditionCheckSVar$ X | ConditionSVarCompare$ GTY | SubAbility$ DBPump | SpellDescription$ Target creature gets +2/+2 until end of turn. Superiority - If you have more life than an opponent it gets +4/+4 instead.
+SVar:DBPump:DB$ Pump | NumAtt$ 2 | NumDef$ 2 | Defined$ Targeted | ConditionCheckSVar$ Y | ConditionSVarCompare$ GEX
+SVar:X:Count$YourLifeTotal
+SVar:Y:PlayerCountOpponents$LowestLifeTotal
+
+Oracle:Target creature gets +2/+2 until end of turn.\nSuperiority - If you have more life than an opponent it gets +4/+4 instead.

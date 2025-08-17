@@ -1,0 +1,18 @@
+Name:Talya, Cyber Wayfarer
+ManaCost:2 U U
+Types:Legendary Planeswalker Talya
+Loyalty:3
+
+A:AB$ ChangeZone | Cost$ AddCounter<1/LOYALTY> | ValidTgts$ Permanent.Other+YouCtrl | Planeswalker$ True | TgtPrompt$ Select another target permanent you control | Origin$ Battlefield | Destination$ Exile | RememberTargets$ True | ForgetOtherTargets$ True | AILogic$ BounceOnce | SubAbility$ RestorationReturn | SpellDescription$ Exile another target permanent you control, then return it to the battlefield under its owner's control.
+SVar:RestorationReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+A:AB$ ChangeZone | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | Origin$ Battlefield | Destination$ Hand | ValidTgts$ Permanent.Other+YouCtrl | TgtPrompt$ Select another target permanent you control | SubAbility$ DBDraw | SpellDescription$ Return target permanent you control to its owner's hand and draw two cards.
+SVar:DBDraw:DB$Draw | NumCards$ 2
+
+A:AB$ GainControl | Cost$ SubCounter<7/LOYALTY> | AllValid$ Permanent | Untap$ True | LoseControl$ EOT | Planeswalker$ True | Ultimate$ True | SubAbility$ DBPumpAll | SpellDescription$ Untap all permanents and gain control of them until end of turn. Permanents you don't own don't untap during their controllers' next untap steps.
+SVar:DBPumpAll:DB$ PumpAll | ValidCards$ Permanent.YouDontOwn | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent
+
+Oracle:[+1]: Exile another target permanent you control, then return it to the battlefield under its owner's control.\n[-2]: Return target permanent you control to its owner's hand and draw two cards.\n[-7]: Untap all permanents and gain control of them until end of turn. Permanents you don't own don't untap during their controllers' next untap steps.
+
+AI:RemoveDeck:Random

@@ -1,0 +1,9 @@
+Name:Rocketeer
+ManaCost:1 W
+Types:Creature Human Pilot
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Artifact.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever an artifact enters the battlefield under your control, CARDNAME gains flying until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | KW$ Flying
+
+Oracle:Whenever an artifact enters the battlefield under your control, Rocketeer gains flying until end of turn.

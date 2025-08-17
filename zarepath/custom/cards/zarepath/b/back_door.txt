@@ -1,0 +1,8 @@
+Name:Back Door
+ManaCost:X U
+Types:Sorcery
+
+A:SP$ Play | TgtZone$ Graveyard | ValidTgts$ Instant.YouCtrl+cmcLEX,Sorcery.YouCtrl+cmcLEX | TgtPrompt$ Choose target instant or sorcery card with mana value X or less from your graveyard | ValidSA$ Spell | WithoutManaCost$ True | Optional$ True | ReplaceGraveyard$ Exile | AILogic$ ReplaySpell
+SVar:X:Count$xPaid
+
+Oracle:Choose target instant or sorcery card in a graveyard with mana value X or less. You may cast that card without paying its mana cost. If that card would be put into a graveyard this turn, exile it instead.

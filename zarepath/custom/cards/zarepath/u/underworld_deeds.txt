@@ -1,0 +1,14 @@
+Name:Underworld Deeds
+ManaCost:1 B G
+Types:Sorcery
+
+A:SP$ ImmediateTrigger | Execute$ CharmBoth | CheckSVar$ X | SVarCompare$ GTY | SpellDescription$ Superiority — If you have more life than an opponent, you may choose both. Otherwise, choose one —
+A:SP$ ImmediateTrigger | Execute$ CharmOne | CheckSVar$ X | SVarCompare$ EQY | SpellDescription$ • Destroy target artifact or creature.\n• Return target artifact or creature card from your graveyard to your hand.
+SVar:CharmBoth:DB$ Charm | MinCharmNum$ 1 | CharmNum$ 2 | Choices$ DBDestroy,DBReturn | SpellDescription$ Destroy target artifact or creature.
+SVar:CharmOne:DB$ Charm | Choices$ DBDestroy,DBReturn
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Artifact,Creature | SpellDescription$ Destroy target artifact or creature.
+SVar:DBReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | TgtPrompt$ Choose target artifact or creature card in your graveyard | ValidTgts$ Artifact.YouCtrl,Creature.YouCtrl | SpellDescription$ Return target artifact or creature card from your graveyard to your hand.
+SVar:X:Count$YourLifeTotal
+SVar:Y:PlayerCountOpponents$LowestLifeTotal
+
+Oracle:Superiority — If you have more life than an opponent, you may choose both. Otherwise, choose one —\n• Destroy target artifact or creature.\n• Return target artifact or creature card from your graveyard to your hand.

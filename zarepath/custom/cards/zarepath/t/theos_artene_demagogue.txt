@@ -1,0 +1,19 @@
+Name:Theos Artene, Demagogue
+ManaCost:1 W
+Types:Legendary Creature Human Advisor
+PT:1/1
+
+K:Lifelink
+
+R:Event$ GainLife | ActiveZones$ Battlefield | ValidPlayer$ You | ReplaceWith$ GainDouble | AILogic$ DoubleLife | Description$ If you would gain life, you gain twice that much life instead.
+SVar:GainDouble:DB$ ReplaceEffect | VarName$ LifeGained | VarValue$ X
+SVar:X:ReplaceCount$LifeGained/Twice
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 4 | AddToughness$ 4| CheckSVar$ Y | SVarCompare$ GEZ | Description$ As long as your life total is at least twice the life total of an opponent, CARDNAME gets +4/+4.
+SVar:Y:Count$YourLifeTotal
+SVar:Z:PlayerCountOpponents$LowestLifeTotal/Twice
+
+Oracle:Lifelink\nIf you would gain life, you gain twice that much life instead.\nAs long as your life total is at least twice the life total of an opponent, Theos Artene, Demagogue gets +4/+4.
+
+SVar:PlayMain1:True
+DeckHints:Ability$LifeGain

@@ -1,0 +1,18 @@
+Name:Sick Nic, Baron of Crime
+ManaCost:B B
+Types:Legendary Planeswalker Nic
+Loyalty:2
+
+A:AB$ RepeatEach | Cost$ AddCounter<1/LOYALTY> | RepeatPlayers$ Player | RepeatSubAbility$ EachDig | Planeswalker$ True | SpellDescription$ Each player reveals the top card of their library, loses life equal to its mana value, then puts it into their hand.
+SVar:EachDig:DB$ Dig | Defined$ Remembered | DigNum$ 1 | Reveal$ True | ChangeNum$ All | ChangeValid$ Card | DestinationZone$ Hand | Imprint$ True | SubAbility$ EachLose
+SVar:EachLose:DB$ LoseLife | Defined$ Remembered | LifeAmount$ D | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$Cleanup | ClearImprinted$ True | ClearRemembered$ True |
+SVar:D:Imprinted$CardManaCost
+
+A:AB$ Discard | Cost$ SubCounter<2/LOYALTY> | ValidTgts$ Opponent | Mode$ RevealYouChoose | DiscardValid$ Card.nonLand | NumCards$ 1 | Planeswalker$ True | SpellDescription$ Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.
+
+A:AB$ LoseLife | Cost$ SubCounter<7/LOYALTY> | ValidTgts$ Opponent | LifeAmount$ Difference | TgtPrompt$ Select target opponent | Planeswalker$ True | Ultimate$ True | SpellDescription$ Target opponent loses life equal to the difference between their life total and their starting life total.
+SVar:X:TargetedPlayer$LifeTotal
+SVar:Difference:TargetedPlayer$StartingLife/Minus.X
+
+Oracle:[+1]: Each player reveals the top card of their library, loses life equal to its mana value, then puts it into their hand.\n[−2]: Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.\n[−7]: Target opponent loses life equal to the difference between their life total and their starting life total.

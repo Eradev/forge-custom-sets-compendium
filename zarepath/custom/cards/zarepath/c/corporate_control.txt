@@ -1,0 +1,11 @@
+Name:Corporate Control
+ManaCost:4 U U
+Types:Enchantment Aura
+
+K:Enchant:Creature,Artifact:artifact or creature
+
+S:Mode$ Continuous | Affected$ Permanent.EnchantedBy | GainControl$ You | Description$ You control enchanted permanent.
+
+Oracle:Enchant artifact or creature\nYou control enchanted permanent.
+
+SVar:AttachAILogic:GainControl

@@ -1,0 +1,9 @@
+Name:Heaps Baron
+ManaCost:2 B B
+Types:Artifact Creature Construct Advisor
+PT:2/4
+
+A:AB$ LoseLife | Cost$ B Sac<1/Artifact.Other/another artifact> | Defined$ Player.Opponent | LifeAmount$ 1 | SubAbility$ DBGainLife | SpellDescription$ Each opponent loses 1 life and you gain 1 life.
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 1
+
+Oracle:{B}, Sacrifice another artifact: Each opponent loses 1 life and you gain 1 life.

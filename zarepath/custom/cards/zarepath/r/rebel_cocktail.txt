@@ -1,0 +1,11 @@
+Name:Rebel Cocktail
+ManaCost:1
+Types:Artifact Equipment
+K:Equip:1
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddAbility$ ThrowCocktail | Description$ Equipped creature has "{T}, Sacrifice Rebel Cocktail: It deals 2 damage to any target."
+SVar:ThrowCocktail:AB$ DealDamage | Cost$ T Sac<1/OriginalHost/Rebel Cocktail> | ValidTgts$ Any | TgtPrompt$ Select any target | NumDmg$ 2 | DamageSource$ OriginalHost | SpellDescription$ ORIGINALHOST deals 2 damage to any target.
+
+Oracle:Equipped creature has "{T}, Sacrifice Rebel Cocktail: Rebel Cocktail deals 2 damage to any target."\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)
+
+SVar:NonStackingAttachEffect:True

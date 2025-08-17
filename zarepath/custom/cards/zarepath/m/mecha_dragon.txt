@@ -1,0 +1,14 @@
+Name:Mecha Dragon
+ManaCost:3 R R
+Types:Artifact Creature Dragon Construct
+PT:5/4
+
+K:Flying
+
+A:AB$ Pump | Cost$ R | Defined$ Self | KW$ Haste | SpellDescription$ CARDNAME gains haste until end of turn.
+
+A:AB$ Pump | Cost$ R | Defined$ Self | NumAtt$ 1 | SpellDescription$ CARDNAME gets +1/+0 until end of turn.
+
+A:AB$ Mana | Cost$ Sac<1/Artifact> | Produced$ R | Amount$ 1 | SpellDescription$ Sacrifice an artifact: Add {R}.
+
+Oracle:Flying\n{R}: Mecha Dragon gains haste until end of turn.\n{R}: Mecha Dragon gets +1/+0 until end of turn.\nSacrifice an artifact: Add {R}.

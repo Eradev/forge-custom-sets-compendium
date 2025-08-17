@@ -1,0 +1,12 @@
+Name:Sapien Sergeant
+ManaCost:2 G G
+Types:Artifact Creature Mutant Soldier
+PT:4/4
+
+K:Vigilance
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 2 | AddToughness$ 2 | AddKeyword$ Trample | CheckSVar$ X | SVarCompare$ GTY | Description$ Superiority - As long as you have more life than an opponent, CARDNAME gets +2/+2 and has trample.
+SVar:X:Count$YourLifeTotal
+SVar:Y:PlayerCountOpponents$LowestLifeTotal 
+
+Oracle:Vigilance\nSuperiority - As long as you have more life than an opponent, Sapien Sergeant gets +2/+2 and has trample.

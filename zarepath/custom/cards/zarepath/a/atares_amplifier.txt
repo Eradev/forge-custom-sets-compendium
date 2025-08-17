@@ -1,0 +1,13 @@
+Name:Atares Amplifier
+ManaCost:2 W
+Types:Artifact Vehicle
+PT:5/5
+
+T:Mode$ BecomesCrewed | ValidVehicle$ Card.Self | Execute$ RememberCrew | Static$ True | TriggerDescription$ Whenever CARDNAME is crewed by a creature with flying, it gains flying until the end of turn. The same is true for first strike, double strike, deathtouch, haste, hexproof, indestructible, lifelink, menace, prowess, trample, and vigilance.
+SVar:RememberCrew:DB$ PumpAll | ValidCards$ Creature.TriggeredCrew | RememberPumped$ True | SubAbility$ TrigPump
+SVar:TrigPump:DB$ Pump | Defined$ Self | KW$ Flying & First Strike & Double Strike & Deathtouch & Haste & Hexproof & Indestructible & Lifelink & Menace & Prowess & Trample & Vigilance | SharedKeywordsZone$ Battlefield | SharedRestrictions$ Creature.IsRemembered | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+K:Crew:2
+
+Oracle:Whenever Atares Amplifier is crewed by a creature with flying, it gains flying until the end of turn. The same is true for first strike, double strike, deathtouch, haste, hexproof, indestructible, lifelink, menace, prowess, trample, and vigilance.\nCrew 2 (Tap any number of creatures you control with total power 2 or more: This Vehicle becomes an artifact creature until end of turn.)

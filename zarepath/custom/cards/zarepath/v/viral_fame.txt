@@ -1,0 +1,13 @@
+Name:Viral Fame
+ManaCost:W
+Types:Instant
+
+A:SP$ ChangeZone | Cost$ W | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Exile | WithCountersType$ UPLOAD | TgtPrompt$ Select target creature | RememberChanged$ True | RememberLKI$ True | SubAbility$ DBAnimate | SpellDescription$ Upload target creature. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
+SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Abilities$ ABRemoveUpload | sVars$ DBDownload | Duration$ Permanent | SubAbility$ DBGainLife | StackDescription$ None
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:ABRemoveUpload:AB$ RemoveCounter | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBDownload | PrecostDesc$ Download – | SpellDescription$ Return this card to your hand any time you could cast a sorcery.
+SVar:DBDownload:DB$ ChangeZone | Defined$ Self | Hidden$ True | Origin$ Exile | Destination$ Hand | StackDescription$ SpellDescription
+SVar:DBGainLife:DB$ GainLife | Defined$ RememberedController | LifeAmount$ X | SubAbility$ DBCleanup
+SVar:X:RememberedLKI$CardToughness
+
+Oracle:Upload target creature. Its controller gains life equal to its toughness. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)

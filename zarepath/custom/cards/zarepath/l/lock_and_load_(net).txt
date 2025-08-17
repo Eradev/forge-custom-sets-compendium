@@ -1,0 +1,10 @@
+Name:Lock and Load (NET)
+ManaCost:2 R R
+Types:Sorcery
+
+A:SP$ Pump | Cost$ 2 R R | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature | SubAbility$ DBToken | SpellDescription$ Arm target creature twice. It deals damage equal to its power to target creature or planeswalker. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.) 
+SVar:DBToken:DB$ Token | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | TokenAmount$ 2 | AttachedTo$ Targeted | SubAbility$ DBDamage
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Creature,Planeswalker | TgtPrompt$ Select target creature or planeswalker | NumDmg$ X | DamageSource$ ParentTarget | 
+SVar:X:ParentTargeted$CardPower
+
+Oracle:Arm target creature your control twice. It deals damage equal to its power to target creature or planeswalker. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.) 

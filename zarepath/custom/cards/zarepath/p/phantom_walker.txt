@@ -1,0 +1,13 @@
+Name:Phantom Walker
+ManaCost:1 B
+Types:Artifact Vehicle
+PT:5/4
+
+K:Menace
+
+K:Crew:3
+
+S:Mode$ Continuous | Affected$ Card.Self | AddAbility$ KiranAnimate | Description$ You may exile two creature cards from your graveyard rather than pay CARDNAME's crew cost.
+SVar:KiranAnimate:AB$ Animate | Cost$ ExileFromGrave<2/Creature> | Crew$ True | Secondary$ True | CostDesc$ | Defined$ Self | Types$ Creature,Artifact | RemoveCardTypes$ True | SpellDescription$ You may exile two creature cards from your graveyard rather than pay CARDNAME's crew cost.
+
+Oracle:Menace\nCrew 3 (Tap any number of creatures you control with total power 3 or more: This Vehicle becomes an artifact creature until end of turn.)\nYou may exile two creature cards from your graveyard rather than pay Phantom Walker's crew cost.

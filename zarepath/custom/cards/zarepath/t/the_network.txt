@@ -1,0 +1,9 @@
+Name:The Network
+ManaCost:7
+Types:Legendary Artifact Creature Avatar
+PT:7/7
+
+S:Mode$ Continuous | Affected$ Card.Self | EffectZone$ Battlefield | GainsAbilitiesOf$ Artifact.YouCtrl+Other | GainsAbilitiesOfZones$ Graveyard,Battlefield | Description$ Artifacts you control have all activated abilities of each other artifact you control and of each artifact card in your graveyard.
+S:Mode$ Continuous | Affected$ Artifact.YouCtrl+Other | EffectZone$ Battlefield | GainsAbilitiesOf$ Artifact.Self | Description$ Artifacts you control have all activated abilities of each other artifact you control and of each artifact card in your graveyard.
+
+Oracle:Artifacts you control have all activated abilities of each other artifact you control and of each artifact card in your graveyard.

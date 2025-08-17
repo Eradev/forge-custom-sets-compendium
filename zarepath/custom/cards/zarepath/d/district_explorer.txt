@@ -1,0 +1,14 @@
+Name:District Explorer
+ManaCost:G
+Types:Creature Human Scout
+PT:1/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChange | TriggerDescription$ When CARDNAME enters the battlefield, you may search your library for a basic land card, upload it, then shuffle. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
+SVar:TrigChange:DB$ ChangeZone | Origin$ Library | Destination$ Exile | ChangeType$ Land.Basic | ChangeNum$ 1 | RememberChanged$ True | SubAbility$ DBAnimate
+SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Abilities$ ABRemoveUpload | sVars$ DBDownload | Duration$ Permanent | SubAbility$ MarkUpload | StackDescription$ None
+SVar:MarkUpload:DB$ PutCounter | Defined$ Remembered | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:ABRemoveUpload:AB$ RemoveCounter | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBDownload | PrecostDesc$ Download – | SpellDescription$ Return this card to your hand any time you could cast a sorcery.
+SVar:DBDownload:DB$ ChangeZone | Defined$ Self | Hidden$ True | Origin$ Exile | Destination$ Hand | StackDescription$ SpellDescription
+
+Oracle:When District Explorer enters the battlefield, search your library for a basic land card and upload it, then shuffle. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)

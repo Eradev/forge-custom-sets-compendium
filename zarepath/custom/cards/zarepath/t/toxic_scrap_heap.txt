@@ -1,0 +1,14 @@
+Name:Toxic Scrap Heap
+ManaCost:B R
+Types:Artifact
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDamage | TriggerDescription$ When CARDNAME enters the battlefield, it deals 2 damage to any target.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Any | TgtPrompt$ Select any target | NumDmg$ 2
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigDiscard | TriggerController$ TriggeredCardController | Secondary$ True | TriggerDescription$ When CARDNAME is put into a graveyard from the battlefield, target opponent discards a card.
+SVar:TrigDiscard:DB$ Discard | ValidTgts$ Opponent | TgtPrompt$ Select an opponent | NumCards$ 1 | Mode$ TgtChoose
+
+Oracle:When Toxic Scrap Heap enters the battlefield, it deals 2 damage to any target. When Toxic Scrap Heap is put into your graveyard from the battlefield, target opponent discards a card.
+
+AI:RemoveDeck:Random
+SVar:SacMe:5

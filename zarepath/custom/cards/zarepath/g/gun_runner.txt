@@ -1,0 +1,9 @@
+Name:Gun Runner
+ManaCost:2 R
+Types:Creature Lizard Mutant
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters the battlefield, create a colorless Equipment artifact token named Weapon attached to target creature you control with Equip: {2} and "Equipped creature gets +1/+1" attached to that creature.
+SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | AttachedTo$ Targeted | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control
+
+Oracle:When Gun Runner enters the battlefield, arm target creature you control. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.)

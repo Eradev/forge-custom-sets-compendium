@@ -1,0 +1,8 @@
+Name:Battle Tested
+ManaCost:1 W
+Types:Instant
+
+A:SP$ Pump | Cost 1 W | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ +2 | NumDef$ +2 | SubAbility$ DBDraw | SpellDescription$ Target creature gets +2/+2 until end of turn. If it's equipped, draw a card.
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 1 | ConditionDefined$ Targeted | ConditionPresent$ Card.equipped | StackDescription$ If it's equipped, draw a card.
+
+Oracle:Target creature gets +2/+2 until end of turn. If it's equipped, draw a card.

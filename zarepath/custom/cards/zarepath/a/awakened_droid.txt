@@ -1,0 +1,11 @@
+Name:Awakened Droid
+ManaCost:6
+Types:Artifact Creature Construct
+PT:4/4
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigScry | TriggerDescription$ When CARDNAME enters the battlefield, scry 2. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)
+SVar:TrigScry:DB$ Scry | ScryNum$ 2
+
+Oracle:Flying\nWhen Awakened Droid enters the battlefield, scry 2.

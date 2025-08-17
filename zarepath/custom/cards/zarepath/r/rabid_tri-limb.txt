@@ -1,0 +1,13 @@
+Name:Rabid Tri-Limb
+ManaCost:2 R
+Types:Creature Lizard Mutant
+PT:3/2
+
+K:Menace
+
+S:Mode$ Continuous | Affected$ Creature.Mutant+Other+YouCtrl | AddKeyword$ Menace | Description$ Other Mutant creatures you control have menace.
+
+Oracle:Menace (This creature can't be blocked except by two or more creatures.)\nOther Mutant creatures you control have menace.
+
+SVar:PlayMain1:TRUE
+DeckHints:Type$Mutant

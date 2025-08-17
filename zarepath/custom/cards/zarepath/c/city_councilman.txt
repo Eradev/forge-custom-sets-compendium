@@ -1,0 +1,11 @@
+Name:City Councilman
+ManaCost:2 G
+Types:Creature Human Advisor
+PT:2/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Defined$ You | CheckSVar$ X | SVarCompare$ GTY | Execute$ TrigToken | TriggerDescription$ Superiority - When CARDNAME enters the battlefield, if you have more life than an opponent, create a 1/1 white Soldier creature token.
+SVar:TrigToken:DB$Token | TokenAmount$ 1 | TokenScript$ w_1_1_soldier | TokenOwner$ You |
+SVar:X:Count$YourLifeTotal
+SVar:Y:PlayerCountOpponents$LowestLifeTotal 
+
+Oracle: Superiority - When City Councilman enters the battlefield, if you have more life than an opponent, create a 1/1 white Soldier creature token.

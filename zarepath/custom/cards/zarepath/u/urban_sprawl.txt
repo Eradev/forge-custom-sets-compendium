@@ -1,0 +1,8 @@
+Name:Urban Sprawl
+ManaCost:2 G
+Types:Sorcery
+
+A:SP$ ChangeZone | Cost$ 2 G | Origin$ Library | Destination$ Battlefield | ChangeType$ Land.Basic | ChangeNum$ 1 | Tapped$ True | SubAbility$ DBGainLife | SpellDescription$ Search your library for a basic land card and put that card onto the battlefield tapped. Then shuffle your library. | SpellDescription$ Search your library for a basic land card and put that card onto the battlefield tapped. Then shuffle your library. Gain 3 life.
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 3
+
+Oracle:Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.\nYou gain 3 life.

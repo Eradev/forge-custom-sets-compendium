@@ -1,0 +1,11 @@
+Name:Mecha Technician
+ManaCost: 1 W
+Types:Creature Human Artificer
+PT:2/2
+
+T:Mode$ Taps | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigGainLife | TriggerDescription$ Whenever CARDNAME becomes tapped, you gain 2 life.
+SVar:TrigGainLife:DB$GainLife | Defined$ You | LifeAmount$ 2
+
+Oracle:Whenever Mecha Technician becomes tapped, you gain 2 life. 
+
+DeckHas:Ability$LifeGain

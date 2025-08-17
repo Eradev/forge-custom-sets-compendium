@@ -1,0 +1,10 @@
+Name:Dominator Droid
+ManaCost:7 W W
+Types:Artifact Creature Giant Construct
+PT:7/7
+
+K:Affinity:Artifact
+
+K:Indestructible
+
+Oracle:This spell costs {1} less to cast for each artifact you control.\nIndestructible

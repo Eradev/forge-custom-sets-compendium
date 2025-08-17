@@ -1,0 +1,14 @@
+Name:Invasive Nanotech
+ManaCost:1
+Types:Artifact
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigScry | TriggerDescription$ When CARDNAME enters or leaves the battlefield, scry 1.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigScry | TriggerController$ TriggeredCardController | Secondary$ True | TriggerDescription$ When CARDNAME enters or leaves the battlefield, scry 1.
+SVar:TrigScry:DB$ Scry | ScryNum$ 1 | Defined$ TriggeredCardController
+
+A:AB$ Pump | Cost$ R Sac<1/CARDNAME> | ValidTgts$ Creature | TgtPrompt$ Select target creature | KW$ HIDDEN CARDNAME can't block. | IsCurse$ True | SpellDescription$ Target creature can't block this turn.
+
+Oracle:When Invasive Nanotech enters or leaves the battlefield, scry 1. \n{R},Sacrifice Invasive Nanotech: Target creature can't block this turn.
+
+AI:RemoveDeck:Random
+SVar:SacMe:5

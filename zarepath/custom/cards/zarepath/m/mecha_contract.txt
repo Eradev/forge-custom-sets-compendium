@@ -1,0 +1,9 @@
+Name:Mecha Contract
+ManaCost:W B
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Card.Pilot,Card.Vehicle | ChangeNum$ 1 | Mandatory$ True | SpellDescription$ Search your library for a Vehicle or Pilot card, reveal it, put it into your hand, then shuffle.
+
+Oracle:Search your library for a Vehicle or Pilot card, reveal it, put it into your hand, then shuffle.
+
+DeckHints:Type$Pilot|Vehicle

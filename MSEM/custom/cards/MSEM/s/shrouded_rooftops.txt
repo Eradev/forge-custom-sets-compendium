@@ -15,7 +15,7 @@ SVar:DBPaySac:DB$ LoseLife | LifeAmount$ 3 | Defined$ You | UnlessCost$ Sac<1/Pe
 SVar:DBPayDiscard:DB$ LoseLife | LifeAmount$ 3 | Defined$ You | UnlessCost$ Discard<1/Card.Other/card> | UnlessPayer$ You | SpellDescription$ Lose 3 life unless you discard a card.
 SVar:DBLoseLifeFallback:DB$ LoseLife | Defined$ You | LifeAmount$ 3
 
-Oracle:Shrouded Rooftops enters tapped.\n{T}: Add {W} or {B}.\n{1}{W}{B}: Until end of turn, Shrouded Rooftops becomes a 3/3 white and black Illusion creature with with lifelink and “Whenever this creature attacks or blocks, torment yourself.” It's still a land. (To torment yourself, lose 3 life unless you discard a card or sacrifice a nonland permanent.)
+Oracle:Shrouded Rooftops enters tapped.\n{T}: Add {W} or {B}.\n{1}{W}{B}: Until end of turn, Shrouded Rooftops becomes a 3/3 white and black Illusion creature with with lifelink and "Whenever this creature attacks or blocks, torment yourself." It's still a land. (To torment yourself, lose 3 life unless you discard a card or sacrifice a nonland permanent.)
 
 SVar:HasAttackEffect:TRUE
 SVar:HasBlockEffect:TRUE

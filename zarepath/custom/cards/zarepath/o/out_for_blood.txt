@@ -1,0 +1,8 @@
+Name:Out for Blood
+ManaCost:1 R R
+Types:Instant
+
+A:SP$ Pump | Cost$ 1 R R | ValidTgts$ Creature | TgtPrompt$ Select target creature | KW$ Double Strike | SubAbility$ DBToken | SpellDescription$ Arm target creature. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.) That creature gains double strike until end of turn. 
+SVar:DBToken:DB$ Token | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | TokenAmount$ 1 | TrigAttach:DB$ Attach | AttachedTo$ Targeted |
+
+Oracle:Arm target creature. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.) That creature gains double strike until end of turn. 

@@ -1,0 +1,9 @@
+Name:Quarantine
+ManaCost:2 U
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Permanent.nonLand | TgtPrompt$ Select target nonland permanent | Origin$ Battlefield | Destination$ Hand | SubAbility$ DBDraw | StackDescription$ Return {c:Targeted} to its owner's hand. If it was tapped, draw a card. | SpellDescription$ Return target nonland permanent to its owner's hand. If it was tapped, draw a card.
+SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ X | ConditionSVarCompare EQ1 | Defined$ You | NumCards$ 1 | StackDescription$ None
+SVar:X:TargetedLKI$Valid Card.tapped
+
+Oracle:Return target nonland permanent to its owner's hand. If it was tapped, draw a card.

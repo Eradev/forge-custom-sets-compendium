@@ -1,0 +1,12 @@
+Name:Flutter Droid
+ManaCost:U
+Types:Artifact Creature Construct
+PT:1/1
+
+K:Flying
+
+T:Mode$ Phase | Phase$ BeginCombat | TriggerZones$ Battlefield | CheckSVar$ X | SVarCompare$ GE1 | Execute$ TrigPump | TriggerDescription$ At the beginning of combat on your turn, if an artifact entered the battlefield under your control this turn, CARDNAME gets +1/+1 until end of turn.
+SVar:TrigPump:DB$ Pump | NumAtt$ 1 | NumDef$ 1 | Defined$ Self
+SVar:X:Count$ThisTurnEntered_Battlefield_Artifact.YouCtrl
+
+Oracle:Flying\nAt the beginning of combat on your turn, if an artifact entered the battlefield under your control this turn, Flutter Droid gets +1/+1 until end of turn.

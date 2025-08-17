@@ -1,0 +1,10 @@
+Name:Public Broadcast
+ManaCost:1 W
+Types:Instant
+
+A:SP$ GainLife | Cost$ 1 W | Defined$ You | LifeAmount$ 4 | SubAbility$ DoDraw | SpellDescription$ You gain 4 life. Then if you have more life than an opponent, draw a card.
+SVar:DoDraw:DB$ Draw | Defined$ You | ConditionCheckSVar$ X | ConditionSVarCompare$ GTY | NumCards$ 1
+SVar:X:Count$YourLifeTotal
+SVar:Y:PlayerCountOpponents$LowestLifeTotal
+
+Oracle:You gain 4 life.\nSuperiority — Then if you have more life than an opponent, draw a card.

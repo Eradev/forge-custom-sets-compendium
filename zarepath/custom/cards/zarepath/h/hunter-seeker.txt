@@ -1,0 +1,11 @@
+Name:Hunter-Seeker
+ManaCost:1 R
+Types:Artifact Creature Construct
+PT:2/1
+
+K:Menace
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigArm | TriggerDescription$ Whenever CARDNAME deals combat damage to a player, arm, it. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.)
+SVar:TrigArm:DB$Token | TokenAmount$ 1 | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | AttachedTo$ Self
+
+Oracle:Menace\nWhenever Hunter-Seeker deals combat damage to a player, arm it. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.)

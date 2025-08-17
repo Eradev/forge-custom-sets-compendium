@@ -1,0 +1,12 @@
+Name:MX Dreadnought
+ManaCost:2 B
+Types:Artifact Vehicle
+PT:3/2
+
+K:Flying
+
+K:Haste
+
+K:Crew:1
+
+Oracle:Flying, Haste\nCrew 1 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)
