@@ -1,0 +1,12 @@
+Name:Boneforged Arms
+ManaCost:2
+Types:Artifact Equipment
+
+T:Mode$ ChangesZone | TriggerZones$ Hand | ValidCard$ Permanent.YouCtrl | Origin$ Battlefield | Destination$ Any | Execute$ PayParanoia | TriggerDescription$ Paranoia — Exile a creature card from your graveyard. (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)
+SVar:PayParanoia:DB$ Play | PlayCost$ ExileFromGrave<1/Creature> | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | Description$ Equipped creature gets +2/+0.
+
+K:Equip:1
+
+Oracle:Paranoia—Exile a creature card from your graveyard. (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)\nEquipped creature gets +2/+0.\nEquip {1}
