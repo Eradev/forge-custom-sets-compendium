@@ -1,0 +1,15 @@
+Name:Living Antimagic
+ManaCost:4 U U
+Types:Creature Elemental
+PT:4/4
+
+K:Flash
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ When CARDNAME enters, counter target spell unless its controller pays {2}.
+SVar:TrigCounter:DB$ Counter | ValidTgts$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | UnlessCost$ 2
+
+S:Mode$ RaiseCost | ValidTarget$ Card.Self | Activator$ Player | Type$ Spell | Amount$ 2 | Description$ Spells that target CARDNAME cost {2} more to cast.
+
+Oracle:Flash\nFlying\nWhen Living Antimagic enters, counter target spell unless its controller pays {2}.\nSpells that target Living Antimagic cost {2} more to cast.
