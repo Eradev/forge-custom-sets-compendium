@@ -44,6 +44,8 @@ To check if you're horrific, you can check this var if it is greater than 0:
 SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
 ```
 
+[Jump to top](#keywords-implementation)
+
 ### Kindle
 
 Kindle is defined as:
@@ -57,6 +59,8 @@ Implementation:
 ```text
 A:AB$ Token | TokenScript$ c_1_1_elemental | PrecostDesc$ Kindle 1 — | Cost$ 1 ExileFromGrave<1/CARDNAME> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create a 1/1 colorless Elemental creature token.
 ```
+
+[Jump to top](#keywords-implementation)
 
 ### Mirage
 
