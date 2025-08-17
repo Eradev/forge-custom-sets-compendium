@@ -1,0 +1,10 @@
+Name:Redistricting
+ManaCost:G
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ TrigMill | TriggerZones$ Battlefield | TriggerDescription$ At the beginning of your upkeep, mill two cards.
+SVar:TrigMill:DB$ Mill | NumCards$ 2 | Defined$ You
+
+A:AB$ ChangeZone | Cost$ 3 G Sac<1/CARDNAME> | Origin$ Graveyard | Destination$ Battlefield | TgtPrompt$ Select target creature card in your graveyard | TargetMin$ 0 | TargetMax$ 2 | ValidTgts$ Land.YouOwn | Tapped$ True | SpellDescription$ Sacrifice CARDNAME: Return up to two target land cards from your graveyard to the battlefield tapped.
+
+Oracle:At the beginning of your upkeep, mill two cards.\n{3}{G}, Sacrifice Redistricting: Return up to two target land cards from your graveyard to the battlefield tapped.

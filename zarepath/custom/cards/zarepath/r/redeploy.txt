@@ -1,0 +1,10 @@
+Name:Redeploy
+ManaCost:2 B B
+Types:Sorcery
+
+A:SP$ ChangeZone | Cost$ 2 B B | Origin$ Graveyard | Destination$ Battlefield | TgtPrompt$ Choose target creature card in your graveyard | ValidTgts$ Creature.YouOwn | AnimateSubAbility$ Animate | SpellDescription$ Return target creature card from your graveyard onto the battlefield. That creature is an artifact in addition to its other types.
+SVar:Animate:DB$ Animate | Defined$ Remembered | Types$ Artifact | Permanent$ True | SpellDescription$ That creature is an artifact in addition to its other types.
+
+Oracle:Return target creature card from your graveyard to the battlefield. That creature is an artifact in addition to its other types.
+
+DeckHints:Ability$Graveyard & Ability$Discard & Type$Artifact

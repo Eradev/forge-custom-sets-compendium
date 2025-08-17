@@ -1,0 +1,12 @@
+Name:Re-Spec
+ManaCost:1 G U
+Types:Instant
+
+A:SP$ ChangeZone | Cost$ 1 G U | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Exile | TgtPrompt$ Select target creature | RememberChanged$ True | WithCountersType$ UPLOAD | SubAbility$ DBAnimate | SpellDescription$ Upload target creature. Its controller may put an uploaded creature card they own onto the battlefield tapped. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
+SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Abilities$ ABRemoveUpload | sVars$ DBDownload | Duration$ Permanent | SubAbility$ DBCleanup | StackDescription$ None
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | SubAbility$ DBChange |
+SVar:ABRemoveUpload:AB$ RemoveCounter | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBDownload | PrecostDesc$ Download – | SpellDescription$ Return this card to your hand any time you could cast a sorcery.
+SVar:DBDownload:DB$ ChangeZone | Defined$ Self | Hidden$ True | Origin$ Exile | Destination$ Hand | StackDescription$ SpellDescription
+SVar:DBChange:DB$ ChangeZone | Optional$ True | Origin$ Exile | Destination$ Battlefield | ValidTgts$ Creature.counters_GE1_UPLOAD | DefinedPlayer$ TargetedController | Tapped$ True |
+
+Oracle:Upload target creature. Its controller may put an uploaded creature card they own onto the battlefield tapped. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)

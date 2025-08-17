@@ -1,0 +1,9 @@
+Name:Refuge Warden
+ManaCost:1 G
+Types:Creature Mutant
+PT:1/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainLife | TriggerDescription$ When CARDNAME enters the battlefield, you gain 3 life.
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 3
+
+Oracle:When Refuge Warden enters the battlefield, you gain 3 life.
