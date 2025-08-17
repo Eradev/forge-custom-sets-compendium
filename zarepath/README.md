@@ -2,12 +2,12 @@
 
 Sets released by [zarepath](https://www.planesculptors.net/user/zarepath).
 
-> These sets contain custom creature and Planeswalker types. You need to manually add them every time you update.
+> These sets contain custom Planeswalker types. You need to manually add them every time you update.
 
 ## Set implementation progress
 
 ```text
-Netropolis (NET)   -  100% (255/255)
+Netropolis (NET) - 100% (255/255)
 ```
 
 ## How to install?

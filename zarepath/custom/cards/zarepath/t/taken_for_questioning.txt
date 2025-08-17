@@ -4,7 +4,7 @@ Types:Enchantment
 
 S:Mode$ CastWithFlash | ValidCard$ Card.Self | ValidSA$ Spell | EffectZone$ All | Caster$ You | CheckSVar$ X | SVarCompare$ GTY | Description$ Superiority— As long as you have more life than an opponent, you may cast CARDNAME as though it had flash.
 SVar:X:Count$YourLifeTotal
-SVar:Y:PlayerCountOpponents$LowestLifeTotal 
+SVar:Y:PlayerCountOpponents$LowestLifeTotal
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When CARDNAME enters the battlefield, exile target nonland permanent an opponent controls until CARDNAME leaves the battlefield.
 SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Permanent.nonLand+OppCtrl | TgtPrompt$ Select target nonland permanent an opponent controls | Duration$ UntilHostLeavesPlay

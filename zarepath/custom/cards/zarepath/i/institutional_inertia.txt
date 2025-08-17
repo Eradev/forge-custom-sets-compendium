@@ -5,6 +5,6 @@ Types:Sorcery
 A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +3 | NumDef$ +3 | SubAbility$ SuperiorityPump | SpellDescription$ Creatures you control get +3/+3 until end of turn.
 SVar:SuperiorityPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | KW$ Trample & Lifelink | ConditionCheckSVar$ X | ConditionSVarCompare$ GTY | SpellDescription$ Superiority — If you have more life than an opponent, those creatures gain trample and lifelink until end of turn.
 SVar:X:Count$YourLifeTotal
-SVar:Y:PlayerCountOpponents$LowestLifeTotal 
+SVar:Y:PlayerCountOpponents$LowestLifeTotal
 
 Oracle:Creatures you control get +3/+3 until end of turn.\nSuperiority — If you have more life than an opponent, those creatures also gain trample and lifelink until end of turn.

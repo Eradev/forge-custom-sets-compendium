@@ -1,4 +1,4 @@
-Name:Rebel Sniper 
+Name:Rebel Sniper
 ManaCost:W
 Types:Creature Human Rebel
 PT:2/1

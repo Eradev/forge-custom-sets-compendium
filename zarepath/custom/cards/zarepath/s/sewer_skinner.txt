@@ -5,6 +5,6 @@ PT:2/3
 
 S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Vigilance & Deathtouch | CheckSVar$ X | SVarCompare$ GTY | Description$ Superiority — CARDNAME has vigilance and deathtouch as long as you have more life than an opponent.
 SVar:X:Count$YourLifeTotal
-SVar:Y:PlayerCountOpponents$LowestLifeTotal 
+SVar:Y:PlayerCountOpponents$LowestLifeTotal
 
 Oracle:Superiority — Sewer Skinner has vigilance and deathtouch as long as you have more life than an opponent.

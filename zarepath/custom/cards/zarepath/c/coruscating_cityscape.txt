@@ -3,7 +3,7 @@ ManaCost:no cost
 Types:Land
 
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ ChangeZoneDB | ReplacementResult$ Updated
-SVar:ChangeZoneDB:DB$ ChangeZone | CheckSVar$ X | SVarCompare$ GE2 | Origin$ Hand | Destination$ Exile | ChangeNum$ 1 | Mandatory$ True | ChangeType$ Card.Other | WithCountersType$ UPLOAD | RememberChanged$ True | SubAbility$ DBAnimate |
+SVar:ChangeZoneDB:DB$ ChangeZone | CheckSVar$ X | SVarCompare$ GE2 | Origin$ Hand | Destination$ Exile | ChangeNum$ 1 | Mandatory$ True | ChangeType$ Card.Other | WithCountersType$ UPLOAD | RememberChanged$ True | SubAbility$ DBAnimate
 SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Abilities$ ABRemoveUpload | sVars$ DBDownload | Duration$ Permanent | SubAbility$ DBCleanup | StackDescription$ None
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:ABRemoveUpload:AB$ RemoveCounter | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBDownload | PrecostDesc$ Download – | SpellDescription$ Return this card to your hand any time you could cast a sorcery.

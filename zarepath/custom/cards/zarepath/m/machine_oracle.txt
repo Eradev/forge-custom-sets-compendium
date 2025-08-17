@@ -6,6 +6,6 @@ PT:2/1
 S:Mode$ Continuous | Affected$ Card.Self | AddAbility$ ManaTap | CheckSVar$ X | SVarCompare$ GTY | Description$ Superiority - {T}: Add one mana of any color. Activate this ability only if you have more life than an opponent.
 SVar:ManaTap:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
 SVar:X:Count$YourLifeTotal
-SVar:Y:PlayerCountOpponents$LowestLifeTotal 
+SVar:Y:PlayerCountOpponents$LowestLifeTotal
 
 Oracle:Superiority - {T}: Add one mana of any color. Activate this ability only if you have more life than an opponent.
