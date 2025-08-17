@@ -1,0 +1,8 @@
+Name:Hard Crash
+ManaCost:1 R
+Types:Instant
+
+A:SP$ AnimateAll | ValidCards$ Permanent | RemoveKeywords$ Indestructible | SubAbility$ DBDestroy | StackDescription$ SpellDescription | SpellDescription$ All creatures lose indestructible until end of turn.
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Artifact | TgtPrompt$ Select target artifact | SpellDescription$ Destroy target artifact.
+
+Oracle:All permanents lose indestructible until end of turn. Destroy target artifact.

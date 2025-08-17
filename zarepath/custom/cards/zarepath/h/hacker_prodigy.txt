@@ -1,0 +1,9 @@
+Name:Hacker Prodigy
+ManaCost:1 U
+Types:Creature Human Rogue
+PT:2/1
+
+S:Mode$ CantBlockBy | ValidAttacker$ Card.Self | CheckSVar$ X | SVarCompare$ LT1 | Description$ CARDNAME can't be blocked unless defending player controls an untapped land.
+SVar:X:Count$Valid Land.DefenderCtrl+untapped
+
+Oracle:Hacker Prodigy can't be blocked unless defending player controls an untapped land.

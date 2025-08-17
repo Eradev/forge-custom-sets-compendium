@@ -1,0 +1,5 @@
+Name:Hulk Droid
+ManaCost:2 G G
+Types:Artifact Creature Construct
+PT:4/4
+Oracle:
