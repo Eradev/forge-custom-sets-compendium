@@ -2,7 +2,7 @@
 
 Sets released by [MSEM](https://snapdragonfirework.wixsite.com/msem2).
 
-Set information can be found on [msem-instigator](https://msem-instigator.herokuapp.com).
+Set information can be found on [lackeybot](https://lackeybot.com/msem/search).
 
 ## How to install?
 

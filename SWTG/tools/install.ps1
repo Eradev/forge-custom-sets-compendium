@@ -2,7 +2,7 @@ param(
     [bool]$images = $false
 )
 
-$prefix = "MSEM"
+$prefix = "SWTG"
 $customSource = "..\custom"
 $forgeCustomDestination = "$($env:APPDATA)\Forge"
 
