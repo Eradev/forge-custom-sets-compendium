@@ -1,6 +1,6 @@
 Name:Somber Marsh
 ManaCost:no cost
-Types:Land Swamp Forest 
+Types:Land Swamp Forest
 
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
 SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True

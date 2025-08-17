@@ -8,6 +8,6 @@ K:Trample
 T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Defined$ You | CheckSVar$ X | SVarCompare$ GTY | Execute$ TrigPump | TriggerDescription$ Superiority - At the beginning of combat on your turn, Splice Thug gets +2/+2 until end of turn if you have more life than an opponent.
 SVar:TrigPump:DB$ Pump | NumAtt$ 2 | NumDef$ 2 | Defined$ Self
 SVar:X:Count$YourLifeTotal
-SVar:Y:PlayerCountOpponents$LowestLifeTotal 
+SVar:Y:PlayerCountOpponents$LowestLifeTotal
 
 Oracle:Trample\nSuperiority - At the beginning of combat on your turn, Splice Thug gets +2/+2 until end of turn if you have more life than an opponent.

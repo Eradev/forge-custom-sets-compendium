@@ -3,7 +3,7 @@ ManaCost:8 U B
 Types:Sorcery
 
 A:SP$ AddTurn | Cost$ 8 U B | ValidTgts$ Player | TgtPrompt$ Select target player. | RememberObjects$ Targeted | NumTurns$ 1 | SubAbility$ DBControl | SpellDescription$ Target player takes another turn after this one. You control that player during their next two turns. Exile Strings of the Masquerade.
-SVar:DBControl:DB$ ControlPlayer | Defined$ Player.Remembered | Controller$ You | SubAbility$ DBChange | 
+SVar:DBControl:DB$ ControlPlayer | Defined$ Player.Remembered | Controller$ You | SubAbility$ DBChange |
 SVar:DBChange:DB$ ChangeZone | Origin$ Stack | Destination$ Exile | SubAbility$ DBDelTrig
 SVar:DBDelTrig:DB$ DelayedTrigger | Mode$ Phase | DelayedTriggerDefinedPlayer$ Targeted | RememberObjects$ Targeted | Phase$ Cleanup | Execute$ DBAddTurn | Static$ True
 SVar:DBAddTurn:DB$ ControlPlayer | Defined$ Player.Remembered | Controller$ You

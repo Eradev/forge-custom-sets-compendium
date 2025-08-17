@@ -8,6 +8,6 @@ K:Double Strike
 T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ X | SVarCompare$ GTY | Execute$ TrigPump | TriggerDescription$ Superiority - At the beginning of combat on your turn, CARDNAME gains indestructible until end of turn if you have more life than an opponent.
 SVar:TrigPump:DB$ Pump | KW$ Indestructible | Defined$ Self
 SVar:X:Count$YourLifeTotal
-SVar:Y:PlayerCountOpponents$LowestLifeTotal 
+SVar:Y:PlayerCountOpponents$LowestLifeTotal
 
 Oracle:Double strike\nSuperiority — At the beginning of combat on your turn, Cymurai Blademaster gains indestructible until end of turn if you have more life than an opponent.
