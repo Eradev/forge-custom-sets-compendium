@@ -1,0 +1,12 @@
+Name:Monstrous Apex
+ManaCost:4 G G
+Types:Creature Ape Mutant
+PT:6/6
+
+K:Trample
+
+K:Hexproof
+
+A:AB$ ChangeZone | Cost$ ExileFromGrave<6/Creature.Other/another creature card> | Origin$ Graveyard | Destination$ Hand | ActivationZone$ Graveyard | SpellDescription$ Return CARDNAME from your graveyard to your hand.
+
+Oracle:Trample, hexproof\nExile six other creature cards from your graveyard: Return Monstrous Apex from your graveyard to your hand.
