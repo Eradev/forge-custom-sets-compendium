@@ -1,0 +1,10 @@
+Name:Dystopilith
+ManaCost:7
+Types:Artifact
+
+A:AB$ Token | Cost$ T | TokenAmount$ X | TokenScript$ c_2_2_a_construct | SpellDescription$ Create a 2/2 colorless Construct artifact creature token for each artifact you control. Activate this ability only during your turn.
+SVar:X:Count$Valid Artifact.YouCtrl
+
+Oracle:{T}:Create a 2/2 colorless Construct artifact creature token for each artifact you control. Activate this ability only during your turn.
+
+DeckHas:Ability$Token

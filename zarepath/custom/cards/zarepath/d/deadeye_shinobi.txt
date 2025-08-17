@@ -1,0 +1,13 @@
+Name:Deadeye Shinobi
+ManaCost:1 R R
+Types:Artifact Creature Construct Ninja
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigImmediateTrig | TriggerDescription$ When CARDNAME enters the battlefield, you may sacrifice an artifact. If you do, Deadeye Shinobi deals 3 damage to any target.
+SVar:TrigImmediateTrig:AB$ ImmediateTrigger | Cost$ Sac<1/Artifact> | Execute$ TrigDamage | SpellDescription$ When you do, CARDNAME deals 3 damage to any target.
+SVar:TrigDamage:DB$ DealDamage | NumDmg$ 3 | ValidTgts$ Any
+
+Oracle:When Deadeye Shinobi enters the battlefield, you may sacrifice an artifact. If you do, Deadeye Shinobi deals 3 damage to any target.
+
+SVar:AIPreference:SacCost$Artifact.token
+SVar:PlayMain1:TRUE
