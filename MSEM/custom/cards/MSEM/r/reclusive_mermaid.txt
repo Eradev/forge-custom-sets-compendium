@@ -1,0 +1,11 @@
+Name:Reclusive Mermaid
+ManaCost:2 U
+Types:Creature Merfolk
+PT:1/3
+
+K:Hexproof
+
+T:Mode$ ChangesZone | TriggerZones$ Hand | ValidCard$ Permanent.YouCtrl | Origin$ Battlefield | Destination$ Any | Execute$ PayParanoia | TriggerDescription$ Paranoia {1}{U} (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)
+SVar:PayParanoia:DB$ Play | PlayCost$ 1 U | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
+
+Oracle:Hexproof\nParanoia {1}{U} (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)
