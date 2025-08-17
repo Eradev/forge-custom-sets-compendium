@@ -1,0 +1,13 @@
+[BasicTypes]
+[LandTypes]
+[CreatureTypes]
+[SpellTypes]
+[EnchantmentTypes]
+[ArtifactTypes]
+[WalkerTypes]
+Nic
+L3-T
+Talya
+[DungeonTypes]
+[BattleTypes]
+[PlanarTypes]
