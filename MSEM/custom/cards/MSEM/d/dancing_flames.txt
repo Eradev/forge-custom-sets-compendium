@@ -1,0 +1,9 @@
+Name:Dancing Flames
+ManaCost:R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ 2 | SpellDescription$ CARDNAME deals 2 damage to target creature.
+
+A:AB$ Token | TokenScript$ c_1_1_elemental | TokenAmount$ 2 | PrecostDesc$ Kindle 2 — | Cost$ 3 R ExileFromGrave<1/CARDNAME> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create two 1/1 colorless Elemental creature tokens.
+
+Oracle:Dancing Flames deals 2 damage to target creature.\nKindle 2—{3}{R} ({3}{R}, Exile this card from your graveyard: Create two 1/1 colorless Elemental creature tokens. Kindle only as a sorcery.)
