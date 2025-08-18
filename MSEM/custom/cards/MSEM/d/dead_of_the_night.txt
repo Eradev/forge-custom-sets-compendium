@@ -1,0 +1,10 @@
+Name:Dead of Night
+ManaCost:3 B B B
+Types:Sorcery
+
+A:SP$ DestroyAll | ValidCards$ Creature | SpellDescription$ Destroy all creatures.
+
+A:AB$ Token | TokenScript$ c_1_1_elemental | TokenAmount$ X | PrecostDesc$ Kindle X — | Cost$ X ExileFromGrave<1/Card.Other+cmcEQX/card with mana value X> ExileFromGrave<1/CARDNAME> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create X 1/1 colorless Elemental creature tokens.
+SVar:X:Count$xPaid
+
+Oracle:Destroy all creatures.\nKindle X—{X}, Exile a card with mana value X from your graveyard. ({X}, Exile a card with mana value X and this card from your graveyard: Create X 1/1 colorless Elemental creature tokens. Kindle only as a sorcery.)
