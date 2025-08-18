@@ -294,3 +294,5 @@ Foil=NotSupported
 
 [other]
 11 emblem_yoda_jedi_master
+12 emblem_aurra_sing_bane_of_jedi
+13 emblem_obi-wan_kenobi
