@@ -11,4 +11,4 @@ SVar:GainToughness:DB$ GainLife | LifeAmount$ Y | SpellDescription$ Gain life eq
 SVar:X:Sacrificed$CardPower
 SVar:Y:Sacrificed$CardToughness
 
-Oracle:{B}, {T}, Sacrifice a creature: You gain life equal to the sacrificed creature’s power or toughness.
+Oracle:{B}, {T}, Sacrifice a creature: You gain life equal to the sacrificed creature's power or toughness.

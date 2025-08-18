@@ -3,7 +3,7 @@ ManaCost:3 B
 Types:Legendary Creature Human Advisor
 PT:2/2
 
-T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ At the beginning of each opponent’s upkeep, destroy target creature that player controls unless that player pays 2 life. If a player pays life this way, draw a card.
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ At the beginning of each opponent's upkeep, destroy target creature that player controls unless that player pays 2 life. If a player pays life this way, draw a card.
 
 SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.ControlledBy TriggeredPlayer | SubAbility$ DBChoice
 
@@ -15,4 +15,4 @@ SVar:DBPay:DB$ LoseLife | Defined$ TriggeredPlayer | LifeAmount$ 2 | SubAbility$
 
 SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 1
 
-Oracle:At the beginning of each opponent’s upkeep, destroy target creature that player controls unless that player pays 2 life. If a player pays life this way, draw a card.
+Oracle:At the beginning of each opponent's upkeep, destroy target creature that player controls unless that player pays 2 life. If a player pays life this way, draw a card.

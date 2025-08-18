@@ -12,4 +12,4 @@ SVar:DBDestroy:DB$ Destroy | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select
 
 SVar:DBIndestruct:DB$ PumpAll | ValidCards$ Creature.YouCtrl | KW$ Indestructible | SpellDescription$ Creatures you control gain indestructible until end of turn.
 
-Oracle:Choose one —\n• Creatures with power 3 or less can’t block this turn.\n• Destroy target artifact or enchantment.\n• Creatures you control gain indestructible until end of turn.
+Oracle:Choose one —\n• Creatures with power 3 or less can't block this turn.\n• Destroy target artifact or enchantment.\n• Creatures you control gain indestructible until end of turn.

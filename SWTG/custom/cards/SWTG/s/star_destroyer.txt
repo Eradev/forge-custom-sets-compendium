@@ -15,4 +15,4 @@ A:AB$ Token | Cost$ 2 B | TokenAmount$ 1 | TokenScript$ b_1_1_a_tie_fighter_spac
 
 A:AB$ DealDamage | Cost$ 2 R | NumDmg$ 2 | ValidTgts$ Creature.nonStarship,Player,Planeswalker | TgtPrompt$ Select target non-Starship creature, player, or planeswalker | SpellDescription$ CARDNAME deals 2 damage to target non-Starship creature, player, or planeswalker.
 
-Oracle:Spaceflight\n{2}{U}: Tap target artifact creature.\n{2}{B}: Create a 1/1 black Starship artifact creature token with spaceflight named TIE Fighter.\n{2}{R}: CARDNAME deals 2 damage to target non-Starship creature, player, or planeswalker.
+Oracle:Spaceflight\n{2}{U}: Tap target artifact creature.\n{2}{B}: Create a 1/1 black Starship artifact creature token with spaceflight named TIE Fighter.\n{2}{R}: Star Destroyer deals 2 damage to target non-Starship creature, player, or planeswalker.

@@ -2,7 +2,9 @@ Name:Luke Skywalker
 ManaCost:G W U
 Types:Legendary Creature Human Jedi
 PT:2/2
+
 K:Lifelink
+
 K:Vigilance
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ Whenever another creature enters under your control, put a +1/+1 counter on Luke Skywalker.

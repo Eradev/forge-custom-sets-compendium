@@ -2,10 +2,15 @@ Name:Princess Leia
 ManaCost:3 G W U
 Types:Legendary Creature Human Rebel
 PT:2/2
+
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters, create three 1/1 white Rebel creature tokens.
 SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_rebel | TokenAmount$ 3 | TokenOwner$ You
+
 S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ CARDNAME gets +1/+1 for each other Rebel creature you control.
-S:Mode$ Continuous | Affected$ Creature.Rebel+Other+YouCtrl | AddPower$ 1 | AddToughness$ 1 | Description$ Other Rebel creatures you control get +1/+1.
 SVar:X:Count$Valid Creature.Rebel+Other+YouCtrl
+
+S:Mode$ Continuous | Affected$ Creature.Rebel+Other+YouCtrl | AddPower$ 1 | AddToughness$ 1 | Description$ Other Rebel creatures you control get +1/+1.
+
+Oracle:When Princess Leia enters, create three 1/1 white Rebel creature tokens.\nPrincess Leia gets +1/+1 for each other Rebel creature you control.\nOther Rebel creatures you control get +1/+1.
+
 SVar:BuffedBy:Rebel
-Oracle:When Princess Leia enters, create three 1/1 white Rebel creature tokens.\nCARDNAME gets +1/+1 for each other Rebel creature you control.\nOther Rebel creatures you control get +1/+1.

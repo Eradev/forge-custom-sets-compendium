@@ -13,4 +13,4 @@ T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefiel
 SVar:TrigChooseBiggest:DB$ ChooseCard | Choices$ Creature.greatestPowerControlledByYou | Mandatory$ True | ChoiceZone$ Battlefield | SubAbility$ TrigTapBiggest
 SVar:TrigTapBiggest:DB$ Tap | Defined$ ChosenCard
 
-Oracle:Jar Jar Binks can’t block.\nWhen Jar Jar Binks enters, target opponent gains control of it.\nAt the beginning of combat on your turn, tap the creature you control with the highest power. If two or more creatures are tied, you choose one of them.
+Oracle:Jar Jar Binks can't block.\nWhen Jar Jar Binks enters, target opponent gains control of it.\nAt the beginning of combat on your turn, tap the creature you control with the highest power. If two or more creatures are tied, you choose one of them.
