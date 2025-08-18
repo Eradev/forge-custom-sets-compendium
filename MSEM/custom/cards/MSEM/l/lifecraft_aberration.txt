@@ -1,0 +1,10 @@
+Name:Lifecraft Aberration
+ManaCost:3 B
+Types:Creature Mutant
+PT:2/3
+
+A:AB$ Pump | Cost$ PayLife<2> | Defined$ Self | KW$ Indestructible | SpellDescription$ Pay 2 life: CARDNAME gains indestructible until end of turn.
+
+A:AB$ Pump | Cost$ PayLife<3> | Defined$ Self | NumAtt$ +1 | NumDef$ +1 | SpellDescription$ Pay 3 life: CARDNAME gets +1/+1 until end of turn.
+
+Oracle:Pay 2 life: Lifecraft Aberration gains indestructible until end of turn.\nPay 3 life: Lifecraft Aberration gets +1/+1 until end of turn.
