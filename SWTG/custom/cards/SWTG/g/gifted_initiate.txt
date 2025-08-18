@@ -5,7 +5,7 @@ PT:2/1
 
 K:Meditate
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigTap | OptionalDecider$ You | TriggerDescription$ When CARDNAME enters the battlefield, you may tap target creature and CARDNAME.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigTap | OptionalDecider$ You | TriggerDescription$ When CARDNAME enters, you may tap target creature and CARDNAME.
 
 SVar:TrigTap:DB$ Tap | ValidTgts$ Creature | TgtPrompt$ Select target creature to tap | SubAbility$ DBTapSelf
 
@@ -25,4 +25,4 @@ SVar:JediScry:DB$ Scry | ScryNum$ 1 | ConditionDefined$ Self | ConditionPresent$
 
 
 
-Oracle:When Gifted Initiate enters the battlefield, you may tap target creature and Gifted Initiate.\nMeditate {1}{W} (Return this creature to its owner’s hand. Meditate only as a sorcery.)
+Oracle:When Gifted Initiate enters, you may tap target creature and Gifted Initiate.\nMeditate {1}{W} (Return this creature to its owner’s hand. Meditate only as a sorcery.)

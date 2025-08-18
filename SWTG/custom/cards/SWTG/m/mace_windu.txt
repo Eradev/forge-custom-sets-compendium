@@ -6,7 +6,7 @@ PT:2/3
 K:Flash
 K:Meditate
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigBounce | TriggerDescription$ When CARDNAME enters the battlefield, return target spell or creature you don’t control to its owner's hand.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigBounce | TriggerDescription$ When CARDNAME enters, return target spell or creature you don’t control to its owner's hand.
 
 SVar:TrigBounce:DB$ ChangeZone | ValidTgts$ Creature.OppCtrl,Spell.OppCtrl | TgtPrompt$ Select target spell or creature you don't control | Origin$ Battlefield,Stack | Destination$ Hand
 
@@ -23,4 +23,4 @@ SVar:DiscountFastMeditate:AB$ ChangeZone | Cost$ U | ActivationZone$ Battlefield
 
 SVar:JediScry:DB$ Scry | ScryNum$ 1 | ConditionDefined$ Self | ConditionPresent$ Card.Jedi
 
-Oracle:Flash\nWhen Mace Windu enters the battlefield, return target spell or creature you don’t control to its owner’s hand.\nMeditate 1U (Return this creature to its owner’s hand. Meditate only as a sorcery.)
+Oracle:Flash\nWhen Mace Windu enters, return target spell or creature you don’t control to its owner’s hand.\nMeditate 1U (Return this creature to its owner’s hand. Meditate only as a sorcery.)

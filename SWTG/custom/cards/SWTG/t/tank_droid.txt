@@ -3,7 +3,7 @@ ManaCost:4 W U B
 Types:Artifact Creature Droid
 PT:5/5
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters the battlefield, create a 1/1 colorless Droid artifact creature token.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters, create a 1/1 colorless Droid artifact creature token.
 T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever CARDNAME attacks, create a 1/1 colorless Droid artifact creature token.
 T:Mode$ Blocks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever CARDNAME blocks, create a 1/1 colorless Droid artifact creature token.
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ When CARDNAME dies, create a 1/1 colorless Droid artifact creature token.
@@ -18,7 +18,7 @@ T:Mode$ CounterRemoved | TriggerZones$ Graveyard | ValidCard$ Card.Self | Counte
 SVar:DBCast:DB$ Effect | StaticAbilities$ STPlay | ForgetOnMoved$ Graveyard | RememberObjects$ Self | Duration$ EndOfTurn
 SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Graveyard | Description$ Until the end of turn, you may play EFFECTSOURCE.
 
-Oracle:Whenever CARDNAME enters the battlefield, attacks, blocks or dies, create a 1/1 colorless Droid artifact creature token.\nRepair 3 (When this creature dies, put three repair counters on it. At the beginning of your upkeep, remove a repair counter. Whenever the last is removed, you may cast it from your graveyard until end of turn.)
+Oracle:Whenever CARDNAME enters, attacks, blocks or dies, create a 1/1 colorless Droid artifact creature token.\nRepair 3 (When this creature dies, put three repair counters on it. At the beginning of your upkeep, remove a repair counter. Whenever the last is removed, you may cast it from your graveyard until end of turn.)
 
 SVar:HasAttackEffect:TRUE
 SVar:HasBlockEffect:TRUE

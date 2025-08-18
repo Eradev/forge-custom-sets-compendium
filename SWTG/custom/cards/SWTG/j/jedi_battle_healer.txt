@@ -6,7 +6,7 @@ PT:2/3
 K:Lifelink
 K:Meditate
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigLife | TriggerDescription$ When CARDNAME enters the battlefield, you gain 3 life.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigLife | TriggerDescription$ When CARDNAME enters, you gain 3 life.
 
 SVar:TrigLife:DB$ GainLife | Defined$ You | LifeAmount$ 3
 
@@ -21,4 +21,4 @@ SVar:FastMeditate:AB$ ChangeZone | Cost$ 1 W | ActivationZone$ Battlefield | Ori
 SVar:DiscountFastMeditate:AB$ ChangeZone | Cost$ W | ActivationZone$ Battlefield | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SubAbility$ JediScry | SpellDescription$ Meditate (Return this creature to its owner’s hand.)
 SVar:JediScry:DB$ Scry | ScryNum$ 1 | ConditionDefined$ Self | ConditionPresent$ Card.Jedi
 
-Oracle:Lifelink\nWhen Jedi Battle Healer enters the battlefield, you gain 3 life.\nMeditate 1W (Return this creature to its owner’s hand. Meditate only as a sorcery.)
+Oracle:Lifelink\nWhen Jedi Battle Healer enters, you gain 3 life.\nMeditate 1W (Return this creature to its owner’s hand. Meditate only as a sorcery.)

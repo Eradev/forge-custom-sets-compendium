@@ -3,7 +3,7 @@ ManaCost:1 U
 Types:Artifact Creature Droid Scout
 PT:1/1
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReveal | TriggerDescription$ When CARDNAME enters the battlefield, target player reveals their hand.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReveal | TriggerDescription$ When CARDNAME enters, target player reveals their hand.
 
 SVar:TrigReveal:DB$ RevealHand | ValidTgts$ Player | TgtPrompt$ Select a player | Defined$ Targeted
 
@@ -21,4 +21,4 @@ T:Mode$ CounterRemoved | TriggerZones$ Graveyard | ValidCard$ Card.Self | Counte
 SVar:DBCast:DB$ Effect | StaticAbilities$ STPlay | ForgetOnMoved$ Graveyard | RememberObjects$ Self | Duration$ EndOfTurn
 SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Graveyard | Description$ Until end of turn, you may play EFFECTSOURCE.
 
-Oracle:When Probe Droid enters the battlefield, target player reveals their hand.\nRepair 3 (When this creature dies, put three repair counters on it. At the beginning of your upkeep, remove a repair counter. Whenever the last is removed, you may cast it from your graveyard until end of turn.)
+Oracle:When Probe Droid enters, target player reveals their hand.\nRepair 3 (When this creature dies, put three repair counters on it. At the beginning of your upkeep, remove a repair counter. Whenever the last is removed, you may cast it from your graveyard until end of turn.)
