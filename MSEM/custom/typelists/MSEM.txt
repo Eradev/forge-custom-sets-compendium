@@ -1,0 +1,11 @@
+[BasicTypes]
+[LandTypes]
+[CreatureTypes]
+Hound:Hounds
+[SpellTypes]
+[EnchantmentTypes]
+[ArtifactTypes]
+[WalkerTypes]
+[DungeonTypes]
+[BattleTypes]
+[PlanarTypes]
