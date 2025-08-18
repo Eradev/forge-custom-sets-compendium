@@ -2,6 +2,7 @@ Name:Chief Chirpa
 ManaCost:R G W
 Types:Legendary Creature Ewok Warrior
 PT:2/2
+
 K:Monstrosity:2:2 R G W
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.Green+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigCounter | OptionalDecider$ You | TriggerDescription$ Whenever a green creature you control dies, you may put a +1/+1 counter on another target Ewok creature you control.
