@@ -2,6 +2,10 @@ Name:Wookiee Raidleader
 ManaCost:2 RG RG
 Types:Creature Wookiee Warrior
 PT:3/4
+
 T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever CARDNAME attacks, another target creature gains trample until end of turn.
 SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.Other | TgtPrompt$ Select another target creature | KW$ Trample
+
 Oracle:Whenever CARDNAME attacks, another target creature gains trample until end of turn.
+
+SVar:HasAttackEffect:TRUE

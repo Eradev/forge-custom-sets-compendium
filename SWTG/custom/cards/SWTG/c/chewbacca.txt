@@ -9,3 +9,6 @@ T:Mode$ Blocks | ValidCard$ Card.Self | Execute$ TrigPump | Secondary$ True | Tr
 SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.YouCtrl+Other | TgtPrompt$ Select another creature you control | NumAtt$ +3 | NumDef$ +3 | SpellDescription$ Another target creature you control gets +3/+3 until end of turn.
 
 Oracle:Vigilance\nWhenever Chewbacca attacks or blocks, another target creature you control gets +3/+3 until end of turn.
+
+SVar:HasAttackEffect:TRUE
+SVar:HasBlockEffect:TRUE
