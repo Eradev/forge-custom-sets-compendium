@@ -1,0 +1,8 @@
+Name:Kanlan Marauders
+ManaCost:4 B
+Types:Creature Human Warrior
+PT:4/4
+
+K:Menace
+
+Oracle:Menace
