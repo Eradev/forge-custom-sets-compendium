@@ -1,7 +1,6 @@
 [BasicTypes]
 [LandTypes]
 [CreatureTypes]
-Hound:Hounds
 [SpellTypes]
 [EnchantmentTypes]
 [ArtifactTypes]

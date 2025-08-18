@@ -1,6 +1,6 @@
 Name:Mongrel of Grenoui Hill
 ManaCost:1 B
-Types:Creature Illusion Hound
+Types:Creature Illusion Dog
 PT:2/1
 
 K:Deathtouch
