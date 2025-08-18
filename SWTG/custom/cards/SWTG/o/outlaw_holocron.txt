@@ -10,4 +10,4 @@ A:AB$ Charm | Cost$ T SubCounter<2/CHARGE> | Choices$ ManaBR,ManaRG | CharmNum$ 
 SVar:ManaBR:DB$ Mana | Produced$ B R | SpellDescription$ Add {B}{R}
 SVar:ManaRG:DB$ Mana | Produced$ R G | SpellDescription$ Add {R}{G}
 
-Oracle:{T}: Put a charge counter on CARDNAME.\n{T}, Remove a charge counter from CARDNAME: Add {B}, {R}, or {G}.\n{T}, Remove two charge counters from CARDNAME: Add {B}{R} or Add {R}{G}.
+Oracle:{T}: Put a charge counter on Outlaw Holocron.\n{T}, Remove a charge counter from Outlaw Holocron: Add {B}, {R}, or {G}.\n{T}, Remove two charge counters from Outlaw Holocron: Add {B}{R} or Add {R}{G}.
