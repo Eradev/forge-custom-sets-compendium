@@ -10,4 +10,4 @@ A:AB$ ChangeZone | Cost$ 1 B | Origin$ Graveyard | Destination$ Battlefield | Ac
 SVar:X:Count$YourLifeTotal
 SVar:Y:PlayerCountOpponents$LowestLifeTotal
 
-Oracle:Reboot Droid enters the battlefield tapped.\nSuperiority - {1}{B}: Return Reboot Droid from your graveyard to the battlefield. Activate this ability only if you have more life than an opponent.
+Oracle:Reboot Droid enters tapped.\nSuperiority - {1}{B}: Return Reboot Droid from your graveyard to the battlefield. Activate this ability only if you have more life than an opponent.

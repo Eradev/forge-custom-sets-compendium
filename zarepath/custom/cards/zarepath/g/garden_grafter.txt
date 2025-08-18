@@ -3,7 +3,7 @@ ManaCost:2 G
 Types:Creature Plant Mutant
 PT:1/4
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.Self | Execute$ DBDig | TriggerDescription$ When CARDNAME enters the battlefield, upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.Self | Execute$ DBDig | TriggerDescription$ When CARDNAME enters, upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
 SVar:DBDig:DB$ Dig | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBAnimate | StackDescription$ {p:You} uploads the top card of their library. | SpellDescription$ Upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
 SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Abilities$ ABRemoveUpload | sVars$ DBDownload | Duration$ Permanent | SubAbility$ MarkUpload | StackDescription$ None
 SVar:MarkUpload:DB$ PutCounter | Defined$ Remembered | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBCleanup
@@ -11,10 +11,10 @@ SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:ABRemoveUpload:AB$ RemoveCounter | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBDownload | PrecostDesc$ Download – | SpellDescription$ Return this card to your hand any time you could cast a sorcery.
 SVar:DBDownload:DB$ ChangeZone | Defined$ Self | Hidden$ True | Origin$ Exile | Destination$ Hand | StackDescription$ SpellDescription
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ RemoveUpload | TriggerDescription$ Whenever a land enters the battlefield under your control, you may put an uploaded card you own into your hand.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ RemoveUpload | TriggerDescription$ Whenever a land enters under your control, you may put an uploaded card you own into your hand.
 SVar:RemoveUpload:DB$ ChooseCard | Defined$ You | Choices$ Card.YouOwn+counters_GE1_UPLOAD | Amount$ 1 | ChoiceZone$ Exile | SubAbility$ RemCounter
 SVar:RemCounter:DB$ RemoveCounter | Defined$ ChosenCard | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ Download
 SVar:Download:DB$ ChangeZone | Defined$ ChosenCard | Origin$ Exile | Destination$ Hand | Hidden$ True | ForgetChanged$ True | SubAbility$ DBCleanupChosen
 SVar:DBCleanupChosen:DB$ Cleanup | ClearChosenCard$ True
 
-Oracle:When Garden Grafter enters the battlefield, upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)\nWhenever a land enters the battlefield under your control, you may put an uploaded card you own into your hand.
+Oracle:When Garden Grafter enters, upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)\nWhenever a land enters under your control, you may put an uploaded card you own into your hand.

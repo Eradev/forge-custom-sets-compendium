@@ -3,12 +3,12 @@ ManaCost:3
 Types:Artifact Creature Construct
 PT:2/2
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCharm | TriggerDescription$ When Butler Droid enters the battlefield or dies, choose one
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigCharm | TriggerController$ TriggeredCardController | Secondary$ True | TriggerDescription$ When Butler Droid enters the battlefield or dies, choose one
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCharm | TriggerDescription$ When Butler Droid enters or dies, choose one
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigCharm | TriggerController$ TriggeredCardController | Secondary$ True | TriggerDescription$ When Butler Droid enters or dies, choose one
 SVar:TrigCharm:DB$ Charm | Choices$ DBGain,DBUntap
 SVar:DBGain:DB$ GainLife | Defined$ You | LifeAmount$ 2 | SpellDescription$ You gain 2 life.
 SVar:DBUntap:DB$ Untap | TgtPrompt$ Choose target permanent | ValidTgts$ Permanent | SpellDescription$ Untap target permanent.
 
-Oracle:When Butler Droid enters the battlefield or dies, choose one —\n• You gain 2 life.\n• Untap target permanent.
+Oracle:When Butler Droid enters or dies, choose one —\n• You gain 2 life.\n• Untap target permanent.
 
 DeckHas:Ability$LifeGain

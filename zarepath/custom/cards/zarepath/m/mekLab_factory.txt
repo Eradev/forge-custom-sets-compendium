@@ -7,4 +7,4 @@ SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ Combo R W | SpellDescription$ Add {R} or {W}.
 
-Oracle:MekLab Factory enters the battlefield tapped.\n{T}: Add {R} or {W}.
+Oracle:MekLab Factory enters tapped.\n{T}: Add {R} or {W}.

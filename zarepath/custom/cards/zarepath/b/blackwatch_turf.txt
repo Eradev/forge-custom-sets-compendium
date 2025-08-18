@@ -7,4 +7,4 @@ SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ Combo B G | SpellDescription$ Add {B} or {G}.
 
-Oracle:Blackwatch Turf enters the battlefield tapped.\n{T}: Add {B} or {G}.
+Oracle:Blackwatch Turf enters tapped.\n{T}: Add {B} or {G}.

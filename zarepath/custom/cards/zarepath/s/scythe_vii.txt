@@ -3,11 +3,11 @@ ManaCost:4 B B
 Types:Artifact Vehicle
 PT:7/6
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | TriggerDescription$ When CARDNAME enters the battlefield, you may destroy target creature.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | TriggerDescription$ When CARDNAME enters, you may destroy target creature.
 SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Creature | TgtPrompt$ Select target creature.
 
 K:Crew:3
 
-Oracle:When Scythe VII enters the battlefield, you may destroy target creature.\nCrew 3 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)
+Oracle:When Scythe VII enters, you may destroy target creature.\nCrew 3 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)
 
 SVar:PlayMain1:TRUE

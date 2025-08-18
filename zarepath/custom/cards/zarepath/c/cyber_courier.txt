@@ -5,7 +5,7 @@ PT:0/0
 
 K:Haste
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | Static$ True | TriggerDescription$ Cyber Courier enters the battlefield armed. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to this creature.)
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | Static$ True | TriggerDescription$ Cyber Courier enters armed. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to this creature.)
 SVar:TrigToken:DB$ Token | TokenScript$ c_a_weapon_equipment | AttachedTo$ Self
 
-Oracle:Haste \nCyber Courier enters the battlefield armed. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to this creature.)
+Oracle:Haste \nCyber Courier enters armed. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to this creature.)

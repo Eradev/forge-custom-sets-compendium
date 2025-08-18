@@ -1,8 +1,16 @@
 # MSEM Sets
 
-Sets released by [MSEM](https://snapdragonfirework.wixsite.com/msem2).
+Sets part of [MSEM](https://snapdragonfirework.wixsite.com/msem2).
 
-Set information can be found on [lackeybot](https://lackeybot.com/msem/search).
+Sets information can be found on [lackeybot](https://lackeybot.com/msem/search).
+
+> These sets contains custom creature and Planeswalker types. You need to add them every time you update Forge.
+
+## Changes
+
+These changes might not be reflected in their official ruling.
+
+* All Hounds are now Dogs. This also apply to abilities that target and/or applies to Hounds.
 
 ## How to install?
 
@@ -27,9 +35,9 @@ The Land Bundle (L)         - 100% (80/80)
 Tides of War (TOW)          -  27% (75/271)
 ```
 
-## Keywords implementation
+## Keywords and mechanisms implementation
 
-Examples on how to implement custom keywords
+Examples on how to implement custom keywords and mechanisms.
 
 * [Horrific](#horrific)
 * [Kindle](#kindle)
@@ -52,7 +60,7 @@ To check if you're horrific, you can check this var if it is greater than 0:
 SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
 ```
 
-[Jump to top](#keywords-implementation)
+[Jump to top](#keywords-and-mechanisms-implementation)
 
 ### Kindle
 
@@ -68,7 +76,7 @@ Implementation:
 A:AB$ Token | TokenScript$ c_1_1_elemental | PrecostDesc$ Kindle 1 — | Cost$ 1 ExileFromGrave<1/CARDNAME> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create a 1/1 colorless Elemental creature token.
 ```
 
-[Jump to top](#keywords-implementation)
+[Jump to top](#keywords-and-mechanisms-implementation)
 
 ### Mirage
 
@@ -87,7 +95,7 @@ SVar:MirageCleanup:DB$ DelayedTrigger | Mode$ Phase | Phase$ Cleanup | RememberO
 SVar:TrigSacrifice:DB$ SacrificeAll | Defined$ DelayTriggerRememberedLKI
 ```
 
-[Jump to top](#keywords-implementation)
+[Jump to top](#keywords-and-mechanisms-implementation)
 
 ### Motivate
 
@@ -106,7 +114,7 @@ SVar:X:Count$CardPower
 SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 2 | ValidTgts$ Creature.powerLTX | TgtPrompt$ Select target creature
 ```
 
-[Jump to top](#keywords-implementation)
+[Jump to top](#keywords-and-mechanisms-implementation)
 
 ### Paranoia
 
@@ -123,7 +131,7 @@ T:Mode$ ChangesZone | TriggerZones$ Hand | ValidCard$ Permanent.YouCtrl | Origin
 SVar:PayParanoia:DB$ Play | PlayCost$ G | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
 ```
 
-[Jump to top](#keywords-implementation)
+[Jump to top](#keywords-and-mechanisms-implementation)
 
 ### Torment
 
@@ -142,4 +150,4 @@ SVar:DBPayDiscard:DB$ LoseLife | LifeAmount$ 3 | Defined$ You | UnlessCost$ Disc
 SVar:DBLoseLifeFallback:DB$ LoseLife | Defined$ You | LifeAmount$ 3
 ```
 
-[Jump to top](#keywords-implementation)
+[Jump to top](#keywords-and-mechanisms-implementation)

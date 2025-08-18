@@ -3,10 +3,10 @@ ManaCost:2 R R
 Types:Creature Mutant
 PT:3/3
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCharm | OptionalDecider$ You | TriggerDescription$ When CARDNAME enters the battlefield, ABILITY
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCharm | OptionalDecider$ You | TriggerDescription$ When CARDNAME enters, ABILITY
 SVar:TrigCharm:DB$ Charm | Choices$ DBDestroy,DBTap
 SVar:DBDestroy:DB$ Destroy | ValidTgts$ Artifact.YouDontCtrl | TgtPrompt$ Select target artifact you don't control | SpellDescription$ Destroy target artifact you don't control.
 SVar:DBTap:DB$ Tap | ValidTgts$ Land.nonBasic+OppCtrl | TgtPrompt$ Choose target land an opponent controls. | SubAbility$ DBPump | SpellDescription$ Tap target nonbasic land your opponent controls. It doesn't untap during its controller's next untap step.
 SVar:DBPump:DB$ Pump | Defined$ Targeted | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent
 
-Oracle:When Lab Wrecker enters the battlefield, choose up to one —\n• Destroy target artifact you don't control.\n• Tap target nonbasic land you don't control. It doesn't untap during its controller's next untap step.
+Oracle:When Lab Wrecker enters, choose up to one —\n• Destroy target artifact you don't control.\n• Tap target nonbasic land you don't control. It doesn't untap during its controller's next untap step.

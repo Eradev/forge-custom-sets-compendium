@@ -3,10 +3,10 @@ ManaCost:3 B B
 Types:Artifact Creature Construct
 PT:3/5
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigImmediateTrig | TriggerDescription$ When CARDNAME enters the battlefield, you may sacrifice an artifact. If you do, create two 2/2 colorless Construct artifact creature tokens.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigImmediateTrig | TriggerDescription$ When CARDNAME enters, you may sacrifice an artifact. If you do, create two 2/2 colorless Construct artifact creature tokens.
 SVar:TrigImmediateTrig:AB$ ImmediateTrigger | Cost$ Sac<1/Artifact> | Execute$ TrigToken | SpellDescription$ If you do, create two 2/2 colorless Construct artifact creature tokens.
 SVar:TrigToken:DB$ Token | Cost$ Sac<1/Artifact> | TokenAmount$ 2 | TokenScript$ c_2_2_a_construct | TokenOwner$ You
 
-Oracle:When Amalgamech enters the battlefield, you may sacrifice an artifact. If you do, create two 2/2 colorless Construct artifact creature tokens.
+Oracle:When Amalgamech enters, you may sacrifice an artifact. If you do, create two 2/2 colorless Construct artifact creature tokens.
 
 SVar:AIPreference:SacCost$Artifact.token

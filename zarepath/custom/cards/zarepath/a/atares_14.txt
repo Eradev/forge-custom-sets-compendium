@@ -5,9 +5,9 @@ PT:4/3
 
 K:Flying
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When CARDNAME enters the battlefield, draw two cards.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When CARDNAME enters, draw two cards.
 SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 2
 
 K:Crew:2
 
-Oracle:Flying\nWhen Atares 14 enters the battlefield, draw two cards.\nCrew 2 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)
+Oracle:Flying\nWhen Atares 14 enters, draw two cards.\nCrew 2 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)
