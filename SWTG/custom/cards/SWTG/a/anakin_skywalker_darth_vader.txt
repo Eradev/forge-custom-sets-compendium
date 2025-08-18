@@ -19,6 +19,8 @@ AlternateMode:DoubleFaced
 ALTERNATE
 
 Name:Darth Vader
+ManaCost:no cost
+Colors:Black
 Types:Legendary Creature Human Sith
 PT:4/4
 
