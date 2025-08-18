@@ -1,0 +1,9 @@
+Name:Emberling
+ManaCost:R
+Types:Creature Elemental
+PT:1/2
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigDealDamage | TriggerDescription$ When CARDNAME dies, it deals 1 damage to any target.
+SVar:TrigDealDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 1
+
+Oracle:When Emberling dies, it deals 1 damage to any target.
