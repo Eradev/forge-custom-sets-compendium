@@ -2,8 +2,11 @@ Name:Boba Fett
 ManaCost:2 B R G
 Types:Legendary Creature Human Hunter
 PT:4/4
+
 K:Menace
+
 K:Deathtouch
+
 K:Haste
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMark | TriggerDescription$ When Boba Fett enters, put a bounty counter on target creature an opponent controls.

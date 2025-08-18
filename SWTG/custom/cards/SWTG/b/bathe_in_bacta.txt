@@ -3,7 +3,6 @@ ManaCost:1 G
 Types:Instant
 
 A:SP$ GainLife | Defined$ You | LifeAmount$ L
-
 SVar:X:PlayerCountPropertyYou$wasDealtNonCombatDamageThisTurn
 SVar:L:Count$Compare X GE1.9.6
 

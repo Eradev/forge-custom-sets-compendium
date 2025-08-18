@@ -2,6 +2,7 @@ Name:Bossk
 ManaCost:1 G G
 Types:Legendary Creature Trandoshan Hunter
 PT:3/3
+
 K:Deathtouch
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | IsPresent$ Land.YouCtrl | PresentCompare$ GE5 | Execute$ TrigBountyMark | TriggerDescription$ Whenever a land enters under your control, if you control five or more lands, put a bounty counter on target creature an opponent controls.
