@@ -21,7 +21,7 @@ Set information can be found on [lackeybot](https://lackeybot.com/msem/search).
 
 ```text
 Video Horror System (VHS)   -  26% (23/86)
-Kaleidoscope (KLC)          -  59% (64/108)
+Kaleidoscope (KLC)          -  65% (71/108)
 A Tourney at Whiterun (TWR) -  11% (30/269)
 The Land Bundle (L)         - 100% (80/80)
 Tides of War (TOW)          -  27% (75/271)
