@@ -281,14 +281,14 @@ Foil=NotSupported
 271 L Forest
 
 [tokens]
-1 w_5_5_at_at
+1 w_5_5_a_at-at_hatches_trooper
 2 w_1_1_rebel
 3 w_1_1_trooper
 4 w_1_1_tusken_raider
-5 u_2_3_bwing
-6 b_1_1_tie_fighter
+5 u_2_3_a_b-wing_spaceflight
+6 b_1_1_a_tie_fighter_spaceflight
 7 r_4_4_hunter
-8 r_2_2_soldier_fs_royal_guard
+8 royal_guard
 9 g_1_1_ewok
 10 c_1_1_a_droid
 

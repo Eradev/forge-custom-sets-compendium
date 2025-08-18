@@ -1,8 +1,9 @@
 Name:TIE Fighter
 ManaCost:no cost
-Types:Artifact Creature Starship
 Colors:Black
+Types:Artifact Creature Starship
 PT:1/1
+
 K:Spaceflight
 S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight
 S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockBySpaceflight

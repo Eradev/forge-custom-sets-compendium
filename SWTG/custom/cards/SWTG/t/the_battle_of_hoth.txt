@@ -4,6 +4,6 @@ Types:Sorcery
 
 SVar:X:Count$xPaid
 
-A:SP$ Token | TokenAmount$ X | TokenScript$ w_5_5_at_at | TokenOwner$ You | SpellDescription$ Create X 5/5 white artifact AT-AT creature tokens with "When this creature dies, create two 1/1 white Trooper creature tokens."
+A:SP$ Token | TokenAmount$ X | TokenScript$ w_5_5_a_at-at_hatches_trooper | TokenOwner$ You | SpellDescription$ Create X 5/5 white artifact AT-AT creature tokens with "When this creature dies, create two 1/1 white Trooper creature tokens."
 
 Oracle:Create X 5/5 white artifact AT-AT creature tokens with "When this creature dies, create two 1/1 white Trooper creature tokens."

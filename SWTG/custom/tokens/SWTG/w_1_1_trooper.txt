@@ -1,7 +1,6 @@
 Name:Trooper
 ManaCost:no cost
+Colors:White
 Types:Creature Trooper
 PT:1/1
-Colors:White
-
 Oracle:
