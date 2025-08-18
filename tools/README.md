@@ -9,5 +9,5 @@ Copy custom types from `%APPDATA%\Forge\custom\typelists` into your Forge instal
 Use:
 
 ```text
-.\install-custom-types.ps1 -$ForgePath C:\ForgePath
+.\install-custom-types.ps1 -ForgePath C:\ForgePath
 ```

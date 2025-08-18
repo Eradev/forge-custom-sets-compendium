@@ -1,0 +1,10 @@
+Name:Stay Determined
+ManaCost:B
+Types:Instant
+
+A:SP$ Effect | ReplacementEffects$ ReplaceLoseLife | SpellDescription$ Until end of turn, if a source you don't control would deal damage to you or cause you to lose life, mill that many cards instead.
+SVar:ReplaceLoseLife:Event$ LifeReduced | ValidSource$ Card.OppCtrl | ValidPlayer$ You | ReplaceWith$ DBMillSelf
+SVar:DBMillSelf:DB$ Mill | Defined$ You | NumCards$ X
+SVar:X:ReplaceCount$Amount
+
+Oracle:Until end of turn, if a source you don't control would deal damage to you or cause you to lose life, mill that many cards instead.

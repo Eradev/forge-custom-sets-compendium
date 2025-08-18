@@ -1,0 +1,8 @@
+Name:Revenge of the Disfigured
+ManaCost:2 B B
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Creature | TgtPrompt$ Select target creature | SpellDescription$ Destroy target creature. Investigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.") | SubAbility$ DBInvestigate
+SVar:DBInvestigate:DB$ Investigate
+
+Oracle:Destroy target creature.\nInvestigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")

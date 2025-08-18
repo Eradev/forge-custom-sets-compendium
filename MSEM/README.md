@@ -6,14 +6,22 @@ Set information can be found on [lackeybot](https://lackeybot.com/msem/search).
 
 ## How to install?
 
-* Drop the `custom` folder in `%appdata%\Forge`
-* Drop the `pics` folder in `%appdata%\..\Local\Forge\cache`
+### Manually
+
+* Drop the `custom` folder in `%appdata%\Forge`;
+* Drop the `pics` folder in `%appdata%\..\Local\Forge\cache`;
+* Copy the custom types inside `custom\typelists\MSEM.txt` into `res\lists\TypeLists.txt` located under your Forge installation.
+
+### Scripts (Powershell)
+
+* Run the `install.ps1` script;
+* Run the `install-custom-types.ps1` script.
 
 ## Set implementation progress
 
 ```text
 Video Horror System (VHS)   -  26% (23/86)
-Kaleidoscope (KLC)          -  38% (41/108)
+Kaleidoscope (KLC)          -  65% (71/108)
 A Tourney at Whiterun (TWR) -  11% (30/269)
 The Land Bundle (L)         - 100% (80/80)
 Tides of War (TOW)          -  27% (75/271)
@@ -44,6 +52,8 @@ To check if you're horrific, you can check this var if it is greater than 0:
 SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
 ```
 
+[Jump to top](#keywords-implementation)
+
 ### Kindle
 
 Kindle is defined as:
@@ -57,6 +67,8 @@ Implementation:
 ```text
 A:AB$ Token | TokenScript$ c_1_1_elemental | PrecostDesc$ Kindle 1 — | Cost$ 1 ExileFromGrave<1/CARDNAME> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create a 1/1 colorless Elemental creature token.
 ```
+
+[Jump to top](#keywords-implementation)
 
 ### Mirage
 

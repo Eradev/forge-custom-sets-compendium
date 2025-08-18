@@ -1,0 +1,11 @@
+Name:Distant Thunder
+ManaCost:R
+Types:Instant
+
+K:AlternateAdditionalCost:Discard<1/Card>:2
+
+A:SP$ DealDamage | ValidTgts$ Any | TgtPrompt$ Select any target | NumDmg$ 3 | SpellDescription$ CARDNAME deals 3 damage to any target.
+
+Oracle:As an additional cost to cast this spell, discard a card or pay {2}.\nDistant Thunder deals 3 damage to any target.
+
+DeckHas:Ability$Discard

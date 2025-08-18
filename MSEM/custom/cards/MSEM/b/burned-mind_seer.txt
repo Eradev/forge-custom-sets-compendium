@@ -1,0 +1,14 @@
+Name:Burned-Mind Seer
+ManaCost:4 R
+Types:Creature Human Wizard
+PT:2/2
+
+K:Haste
+
+A:AB$ Discard | Cost$ T | Defined$ You | NumCards$ 1 | Mode$ TgtChoose | SubAbility$ DBDraw | SpellDescription$ Discard a card, then draw a card.
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+T:Mode$ ChangesZone | TriggerZones$ Hand | ValidCard$ Permanent.YouCtrl | Origin$ Battlefield | Destination$ Any | Execute$ PayParanoia | TriggerDescription$ Paranoia 2 R (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)
+SVar:PayParanoia:DB$ Play | PlayCost$ 2 R | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
+
+Oracle:Haste\n{T}: Discard a card, then draw a card.\nParanoia 2 R (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)

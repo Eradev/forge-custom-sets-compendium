@@ -1,0 +1,13 @@
+Name:Foul Drifter
+ManaCost:3 B
+Types:Creature Elemental
+PT:1/3
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When CARDNAME enters, target creature gets -1/-1 until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ -1 | NumDef$ -1 | IsCurse$ True
+
+Oracle:Flying\nWhen Foul Drifter enters, target creature gets -1/-1 until end of turn.
+
+SVar:PlayMain1:TRUE
