@@ -1,0 +1,15 @@
+Name:Saljan, Lord of the Disfigured
+ManaCost:4 B B
+Types:Legendary Creature Mutant
+PT:2/3
+
+S:Mode$ Continuous | Affected$ Creature.Mutant+YouCtrl | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Indestructible | Description$ CARDNAME and other Mutants you control get +1/+1 and have indestructible.
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ MakeToken | TriggerDescription$ Whenever NICKNAME attacks or blocks, create a 1/2 black Mutant creature token.
+T:Mode$ Blocks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ MakeToken | Secondary$ True | TriggerDescription$ Whenever NICKNAME attacks or blocks, create a 1/2 black Mutant creature token.
+SVar:MakeToken:DB$ Token | TokenAmount$ 1 | TokenOwner$ You | TokenScript$ b_1_2_mutant
+
+Oracle:Saljan, Lord of the Disfigured and other Mutants you control get +1/+1 and have indestructible.\nWhenever Saljan attacks or blocks, create a 1/2 black Mutant creature token.
+
+SVar:HasAttackEffect:TRUE
+SVar:HasBlockEffect:TRUE
