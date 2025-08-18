@@ -12,4 +12,4 @@ SVar:DBDownload:DB$ ChangeZone | Defined$ Self | Hidden$ True | Origin$ Exile | 
 A:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
 SVar:X:Count$InYourHand
 
-Oracle:As Coruscating Cityscape enters the battlefield, upload a card from your hand. (To upload a card, exile it. Its owner may pay {2}  to return it to their hand any time they could cast a sorcery.)\n{T}: Add one mana of any color.
+Oracle:As Coruscating Cityscape enters, upload a card from your hand. (To upload a card, exile it. Its owner may pay {2}  to return it to their hand any time they could cast a sorcery.)\n{T}: Add one mana of any color.

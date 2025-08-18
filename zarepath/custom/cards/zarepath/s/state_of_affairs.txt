@@ -2,7 +2,7 @@ Name:State of Affairs
 ManaCost:G
 Types:Enchantment
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigLife | TriggerDescription$ Whenever a land enters the battlefield under your control, you gain 1 life.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigLife | TriggerDescription$ Whenever a land enters under your control, you gain 1 life.
 SVar:TrigLife:DB$ GainLife | Defined$ You | LifeAmount$ 1 | SpellDescription$ You gain 1 life.
 
 S:Mode$ Continuous | Affected$ Card.Self | AddAbility$ SuperiorityDraw | CheckSVar$ X | SVarCompare$ GTY | Description$
@@ -10,4 +10,4 @@ SVar:SuperiorityDraw:AB$ Draw | Cost$ Sac<1/CARDNAME>
 SVar:X:Count$YourLifeTotal
 SVar:Y:PlayerCountOpponents$LowestLifeTotal
 
-Oracle:Whenever a land enters the battlefield under your control, you gain 1 life.\nSuperiority — Sacrifice State of Affairs: Draw a card. Activate this ability only if you have more life than an opponent.
+Oracle:Whenever a land enters under your control, you gain 1 life.\nSuperiority — Sacrifice State of Affairs: Draw a card. Activate this ability only if you have more life than an opponent.

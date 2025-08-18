@@ -3,8 +3,8 @@ ManaCost:X G G
 Types:Artifact Creature Hydra Construct
 PT:0/0
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | Static$ True | TriggerDescription$ Gunmetal Hydra enters the battlefield armed X times. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.)
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | Static$ True | TriggerDescription$ Gunmetal Hydra enters armed X times. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.)
 SVar:TrigToken:DB$ Token | TokenScript$ c_a_weapon_equipment | AttachedTo$ Self | TokenAmount$ X
 SVar:X:Count$xPaid
 
-Oracle:Gunmetal Hydra enters the battlefield armed X times. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.)
+Oracle:Gunmetal Hydra enters armed X times. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.)

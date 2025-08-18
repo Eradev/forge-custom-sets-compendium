@@ -4,8 +4,8 @@ Types:Enchantment Aura
 
 K:Enchant:Creature
 
-S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddHiddenKeyword$ CARDNAME can't attack. | AddType$ Artifact | Description$ Enchanted creature can’t attack and is an artifact in addition to its other types.
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddHiddenKeyword$ CARDNAME can't attack. | AddType$ Artifact | Description$ Enchanted creature can't attack and is an artifact in addition to its other types.
 
-Oracle:Enchant creature\nEnchanted creature can’t attack and is an artifact in addition to its other types.
+Oracle:Enchant creature\nEnchanted creature can't attack and is an artifact in addition to its other types.
 
 SVar:AttachAILogic:Curse

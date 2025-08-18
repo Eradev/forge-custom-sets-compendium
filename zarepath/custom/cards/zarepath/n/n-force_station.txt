@@ -7,4 +7,4 @@ SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ Combo W B | SpellDescription$ Add {W} or {B}.
 
-Oracle:N-FORCE Station enters the battlefield tapped.\n{T}: Add {W} or {B}.
+Oracle:N-FORCE Station enters tapped.\n{T}: Add {W} or {B}.

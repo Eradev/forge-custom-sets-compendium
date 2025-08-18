@@ -7,4 +7,4 @@ SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ Combo G U | SpellDescription$ Add {G} or {U}.
 
-Oracle:BiHelix Laboratory enters the battlefield tapped.\n{T}: Add {G} or {U}.
+Oracle:BiHelix Laboratory enters tapped.\n{T}: Add {G} or {U}.

@@ -8,6 +8,6 @@ S:Mode$ Continuous | Affected$ Card.EnchantedBy | AddHiddenKeyword$ CARDNAME can
 SVar:TriggerTheSleepless:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ PilloryLoseLife | TriggerZones$ Battlefield | TriggerDescription$ At the beginning of your upkeep, you lose 1 life.
 SVar:PilloryLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1
 
-Oracle:Enchant artifact or creature\nEnchanted permanent can’t block and has "At the beginning of your upkeep, you lose 1 life."
+Oracle:Enchant artifact or creature\nEnchanted permanent can't block and has "At the beginning of your upkeep, you lose 1 life."
 
 SVar:AttachAILogic:Curse
