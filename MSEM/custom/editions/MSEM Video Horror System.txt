@@ -5,92 +5,92 @@ Date=2023-02-01
 Type=Custom
 
 [cards]
-1 R Aspiring Hero
-2 R Exorcise (MSEM)
-3 R Friends from the Beyond
-4 R Grasping Souls
-5 R Librarian of Whispers
-6 R Lisa, the Daughter
-7 R Lost in the Light
-8 R Maddened Preacher
-9 R Otherworldly Passage
-10 R Planchette Poltergeist
-11 R Remain Unawares
-12 R Swarm of the Damned
-13 R Veil of Innocence
-14 R Apocalypse Awakens
-15 R Botched Experiment
-16 R Dead End
-17 R Demented Brainiac
-18 R Final Findings
-19 R Frozen Over
-20 R Ominous Discovery
-21 R Sheltered Snowman
-22 R Snowfield Doppelganger
-23 R Something in the Shadows
-24 R Unseen Maniac
-25 R Whispering Paranoia
-26 R Wiretapper
-27 R Abhorrent Confidant
-28 R Bedfellow
-29 R Brutalize
-30 R Derange
-31 R Jumpscare
-32 R Lepidopteradator
-33 R Living Broadcast
-34 R Mr. Jackston, the Proprietor
-35 R Night of the Unliving
-36 R Spiraling Madness
-37 R Vicious Effigy
-38 R Violent Feeding
-39 R Waking Watcher
-40 R Beat & Batter
-41 R Bloody Valentine
-42 R Catastrophic Crash
-43 R Communion
-44 R End of the Rainbow
-45 R Foreboding Presence
-46 R From Within the Dark
-47 R He of All Hallow's Eve
-48 R Malformed Mongrel
-49 R Misshapen Monstrosity
-50 R Roadside Reaper
-51 R Shady Souvenirs
-52 R Unstoppable Slaughter
-53 R Avenger of Nature
-54 R Corpsebark
-55 R Cutthroat Carnie
-56 R Demented Host
-57 R Forlorn Toymaker
-58 R Frenzied Florist
-59 R The Hewitt Brothers
-60 R Horrific Invocation
-61 R Plagas Infestation
-62 R Rite of the Unnatural
-62 R Speak No Evil
-63 R Subway Shambler
-64 R Zealous Rabble
-65 R Damned Detective
-66 R John Furo, the Unfortunate
-67 R Keeper of the Collection
-68 R Morbid Mimic
-69 R Mr. Higgins
-70 R Raging Reflection
-71 R Ravenous Attraction
-72 R Sea of Corpses
-73 R The Shepherd of Nowhere
-74 R Starving Stalker
-75 R The Collection
-76 R Enshrouded Village
-77 R Hellfire Caverns
-78 R Lost Station
-79 R Misty Churchyard
-80 R Sunken Homestead
-81 S Forest
-82 S Island
-83 S Mountain
-84 S Plains
-85 S Swamp
+1 R Aspiring Hero @Evgenij Kungur
+2 R Exorcise (MSEM) @Lucas Villalva
+3 R Friends from the Beyond @Rexton
+4 R Grasping Souls @Stefan Koidl
+5 R Librarian of Whispers @Sally Jackson
+6 R Lisa, the Daughter @revismissing
+7 R Lost in the Light @Jean Walter
+8 R Maddened Preacher @Stefan Koidl
+9 R Otherworldly Passage @nekomumeii
+10 R Planchette Poltergeist @Saphire - Océane Roh
+11 R Remain Unawares @Stefan Koidl
+12 R Swarm of the Damned @Danny Ingrassia
+13 R Veil of Innocence @Natalie Lesiv
+14 R Apocalypse Awakens @Thomas Elliott
+15 R Botched Experiment @Yashaswi Karthik
+16 R Dead End @Jean Walter
+17 R Demented Brainiac @Florian Escuer
+18 R Final Findings @Sally Jackson
+19 R Frozen Over @Ina Wong
+20 R Ominous Discovery @Jinha Kwon
+21 R Sheltered Snowman @TJ Foo
+22 R Snowfield Doppelganger @Ron Ashtiani
+23 R Something in the Shadows @Kode LGX
+24 R Unseen Maniac @Danielle Del Plato
+25 R Whispering Paranoia @Filipe Pagliuso
+26 R Wiretapper @Jeffrey Read
+27 R Abhorrent Confidant @Samuel Eriksson
+28 R Bedfellow @Daniel Jiménez Villalba
+29 R Brutalize @Taylor Smith
+30 R Derange @Aaron Lovett
+31 R Jumpscare @Ted Arfken
+32 R Lepidopteradator @Olha Pankiv
+33 R Living Broadcast @David Romero
+34 R Mr. Jackston, the Proprietor @Nikolai Lockertsen
+35 R Night of the Unliving @Lucas Riquenes
+36 R Spiraling Madness @Sylvain Sarrailh
+37 R Vicious Effigy @David Romero
+38 R Violent Feeding @Amy Wilkins
+39 R Waking Watcher @Stefan Koidl
+40 R Beat & Batter @Austen Mengler
+41 R Bloody Valentine @Jeff Kristian
+42 R Catastrophic Crash @Dominik Mayer
+43 R Communion @Ninerio
+44 R End of the Rainbow @Jan Drawc
+45 R Foreboding Presence @Calvin Williams
+46 R From Within the Dark @Duncan Kay
+47 R He of All Hallow's Eve @WakingOfSkyTree
+48 R Malformed Mongrel @Christian Bravery
+49 R Misshapen Monstrosity @Alex TUIS
+50 R Roadside Reaper @Stefan Koidl
+51 R Shady Souvenirs @Katarina Geffertova
+52 R Unstoppable Slaughter @Leonardo Stanzial
+53 R Avenger of Nature @Oleg Vdovenko
+54 R Corpsebark @Bill Nuwen
+55 R Cutthroat Carnie @Marco Bucci
+56 R Demented Host @Serj Papadin
+57 R Forlorn Toymaker @Natasha Rossouw
+58 R Frenzied Florist @Anderson De Brito
+59 R The Hewitt Brothers @Asher 阿舍阿舍
+60 R Horrific Invocation @Gabriel Tanko
+61 R Plagas Infestation @Sandara Tang
+62 R Rite of the Unnatural @Bogdan Rezunenko
+63 R Speak No Evil @Thomas Bourdon
+64 R Subway Shambler @Luis Roberto Cadena
+65 R Zealous Rabble @Stefan Koidl
+66 R Damned Detective @Eric Persson
+67 R John Furo, the Unfortunate @Tooth Wu
+68 R Keeper of the Collection @Trevor Henderson
+69 R Morbid Mimic @Maxim Verehin
+70 R Mr. Higgins @Thomas Elliott
+71 R Raging Reflection @David Romero
+72 R Ravenous Attraction @Corey McGill
+73 R Sea of Corpses @Guillem H. Pongiluppi
+74 R The Shepherd of Nowhere @Stefan Koidl
+75 R Starving Stalker @Vlad Ponomarev
+76 R The Collection @Matthew Carter
+77 R Enshrouded Village @Oguzhan Cetin
+78 R Hellfire Caverns @Alexander Gjerdevik
+79 R Lost Station @Step Agustin
+80 R Misty Churchyard @Federico Lucidi
+81 R Sunken Homestead @Joshua Morris
+82 S Forest @Julia Zhuravleva
+83 S Island @TJ Foo
+84 S Mountain @Glenn van Driel
+85 S Plains @Petra Ramesová
+86 S Swamp @Kami Spirit
 
 [tokens]
 1 w_1_1_spirit_flying
