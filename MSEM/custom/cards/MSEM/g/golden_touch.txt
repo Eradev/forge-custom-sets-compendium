@@ -1,0 +1,10 @@
+Name:Golden Touch
+ManaCost:1 W
+Types:Enchantment Aura
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ X | AddToughness$ X | AddKeyword$ Lifelink | Description$ Enchanted creature has lifelink and gets +1/+1 for each color among permanents you control and cards in your graveyard.
+SVar:X:Count$Valid Permanent.YouCtrl$Colors/Plus.Y
+SVar:Y:Count$ValidGraveyard Card.YouOwn
+
+Oracle:Enchanted creature has lifelink and gets +1/+1 for each color among permanents you control and cards in your graveyard.
