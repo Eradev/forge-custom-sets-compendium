@@ -4,13 +4,11 @@ Types:Creature Mirialan Jedi
 PT:2/3
 
 K:Lifelink
-K:Meditate
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigLife | TriggerDescription$ When CARDNAME enters, you gain 3 life.
-
 SVar:TrigLife:DB$ GainLife | Defined$ You | LifeAmount$ 3
 
-# Meditate
+K:Meditate
 S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withoutDiscountmeditate | AddAbility$ Meditate
 S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withDiscountmeditate | AddAbility$ DiscountMeditate
 S:Mode$ Continuous | Affected$ Card.Self+withFastmeditate+withoutDiscountmeditate | AddAbility$ FastMeditate

@@ -3,13 +3,10 @@ ManaCost:2 W
 Types:Creature Human Jedi
 PT:2/2
 
-K:Meditate
-
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigExile | OptionalDecider$ You | TriggerDescription$ When CARDNAME leaves the battlefield, you may exile target enchantment.
-
 SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Enchantment | TgtPrompt$ Select target enchantment to exile
 
-# Meditate
+K:Meditate
 S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withoutDiscountmeditate | AddAbility$ Meditate
 S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withDiscountmeditate | AddAbility$ DiscountMeditate
 S:Mode$ Continuous | Affected$ Card.Self+withFastmeditate+withoutDiscountmeditate | AddAbility$ FastMeditate

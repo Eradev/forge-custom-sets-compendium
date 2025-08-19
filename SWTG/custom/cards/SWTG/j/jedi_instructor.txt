@@ -3,13 +3,10 @@ ManaCost:4 W
 Types:Creature Twi'lek Jedi
 PT:4/4
 
-K:Meditate
-
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigBuff | OptionalDecider$ You | TriggerDescription$ When CARDNAME enters, you may put a +1/+1 counter on another target creature.
-
 SVar:TrigBuff:DB$ PutCounter | ValidTgts$ Creature.Other | TgtPrompt$ Select another target creature | CounterType$ P1P1 | CounterNum$ 1
 
-# Meditate
+K:Meditate
 S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withoutDiscountmeditate | AddAbility$ Meditate
 S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withDiscountmeditate | AddAbility$ DiscountMeditate
 S:Mode$ Continuous | Affected$ Card.Self+withFastmeditate+withoutDiscountmeditate | AddAbility$ FastMeditate

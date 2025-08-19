@@ -2,6 +2,7 @@ Name:Jedi Sentinel
 ManaCost:G W U
 Types:Creature Twi'lek Jedi
 PT:2/2
+
 K:Flash
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigBounce | TriggerDescription$ When Jedi Sentinel enters, return another target creature you control and target creature you don't control to their owners' hands.
