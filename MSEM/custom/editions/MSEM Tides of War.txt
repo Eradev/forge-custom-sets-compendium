@@ -279,7 +279,7 @@ Type=Custom
 272 L Forest
 
 [tokens]
-c_1_1_a_thopter_flying
-c_3_3_a_golem
-r_1_1_goblin
-w_1_1_rebel
+2 w_1_1_rebel
+7 r_1_1_goblin
+9 c_3_3_a_golem
+10 c_1_1_a_thopter_flying

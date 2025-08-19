@@ -91,3 +91,6 @@ Type=Custom
 83 S Mountain
 84 S Plains
 85 S Swamp
+
+[tokens]
+1 w_1_1_spirit_flying
