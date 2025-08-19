@@ -6,3 +6,5 @@ PT:2/2
 S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Creature.Trooper+YouCtrl | AddKeyword$ Vigilance | Description$ Trooper creatures you control have vigilance.
 
 Oracle:Trooper creatures you control have vigilance.
+
+SVar:PlayMain1:TRUE

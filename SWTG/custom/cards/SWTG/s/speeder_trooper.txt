@@ -6,3 +6,5 @@ PT:2/2
 S:Mode$ Continuous | Affected$ Creature.Trooper+YouCtrl | AddKeyword$ Haste | Description$ Trooper creatures you control have haste.
 
 Oracle:Trooper creatures you control have haste.
+
+SVar:PlayMain1:TRUE

@@ -4,10 +4,7 @@ Types:Artifact Creature Droid
 PT:1/1
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters, create a 1/1 colorless Droid artifact creature token.
-
 SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ c_1_1_a_droid | TokenOwner$ You
-
-# Repair 3
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigRepair | TriggerDescription$ When CARDNAME dies, put three repair counters on it.
 SVar:TrigRepair:DB$ PutCounter | CounterType$ REPAIR | CounterNum$ 3 | Defined$ TriggeredCard
