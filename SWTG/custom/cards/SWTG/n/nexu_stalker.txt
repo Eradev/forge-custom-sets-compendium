@@ -2,8 +2,11 @@ Name:Nexu Stalker
 ManaCost:2 G
 Types:Creature Beast
 PT:1/2
+
 K:Hexproof
+
 K:Deathtouch
+
 K:Monstrosity:1:2 G
 
 T:Mode$ BecomeMonstrous | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigMustBlock | TriggerDescription$ When CARDNAME becomes monstrous, target creature blocks it this turn if able.
