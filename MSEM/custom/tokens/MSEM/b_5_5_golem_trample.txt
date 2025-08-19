@@ -1,0 +1,9 @@
+Name:Golem Token
+ManaCost:no cost
+Colors:black
+Types:Creature Golem
+PT:5/5
+
+K:Trample
+
+Oracle:Trample
