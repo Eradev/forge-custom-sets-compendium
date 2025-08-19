@@ -151,3 +151,35 @@ Type=Custom
 148 M Clawing Shaman @Felipe Castro
 149 M Boundless Hopes @Bhaskar Rac
 150 M Reflected Moment @randiocalrissian
+
+[tokens]
+1 b_x_x_demon_flying
+2 g_0_1_plant
+3 b_5_5_demon_flying
+4 w_1_1_cat_warrior
+5 g_3_3_elemental
+6 w_1_1_citizen
+7 c_1_1_a_construct
+8 all_1_1_scout
+9 r_1_1_elemental
+10 u_1_1_a_thopter_flying
+11 b_1_1_imp
+12 b_x_x_horror
+13 u_1_1_elemental_flying
+14 gu_x_x_plant
+15 u_1_1_jellyfish_slipstream
+16 w_1_1_bird_flying
+17 hilas_favor
+18 g_1_1_antelope
+19 w_1_1_bird_flying
+20 w_0_2_ox
+21 b_1_1_bird_flying
+22 b_3_3_cat_deathtouch
+23 b_5_5_golem_trample
+24 r_2_2_elemental_shaman_haste_scry
+25 all_1_1_scout
+29 c_1_1_a_construct
+
+[other]
+26 emblem_simul
+27 plains

@@ -3,6 +3,7 @@ Code=MSEM_MPS_MSE
 Name=MSEM Champions: Masterpiece
 Date=2017-10-02
 Type=Custom
+TokenFallbackCode=MSEM_CHAMPIONS
 
 [cards]
 1 S Master of Tranquility @Jian Guo
