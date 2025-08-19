@@ -3,11 +3,9 @@ ManaCost:3 W W
 Types:Legendary Creature KelDor Jedi
 PT:4/4
 
-K:Meditate
-
 S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Creature.YouCtrl+withMeditate | AddKeyword$ Fastmeditate | Description$ You may activate meditate abilities any time you could cast an instant.
 
-# Meditate
+K:Meditate
 S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withoutDiscountmeditate | AddAbility$ Meditate
 S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withDiscountmeditate | AddAbility$ DiscountMeditate
 S:Mode$ Continuous | Affected$ Card.Self+withFastmeditate+withoutDiscountmeditate | AddAbility$ FastMeditate
