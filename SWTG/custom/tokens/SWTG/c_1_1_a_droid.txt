@@ -1,6 +1,6 @@
 Name:Droid
 ManaCost:no cost
+Colors:colorless
 Types:Artifact Creature Droid
 PT:1/1
-Colors:colorless
 Oracle:

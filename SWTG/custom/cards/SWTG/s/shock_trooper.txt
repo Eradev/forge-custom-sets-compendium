@@ -6,3 +6,5 @@ PT:2/2
 S:Mode$ Continuous | Affected$ Creature.Trooper+YouCtrl | AddPower$ 2 | Description$ Trooper creatures you control get +2/+0.
 
 Oracle:Trooper creatures you control get +2/+0.
+
+SVar:PlayMain1:TRUE

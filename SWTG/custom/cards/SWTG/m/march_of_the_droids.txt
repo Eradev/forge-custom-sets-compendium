@@ -3,7 +3,6 @@ ManaCost:2 W U B
 Types:Sorcery
 
 A:SP$ ChangeZoneAll | ChangeType$ Card.YouCtrl+counters_GE1_REPAIR | Origin$ Graveyard | Destination$ Battlefield | SubAbility$ DBToken
-
 SVar:DBToken:DB$ Token | TokenAmount$ X | TokenScript$ c_1_1_a_droid | TokenOwner$ You
 SVar:X:Count$Valid Creature.Droid+YouCtrl
 

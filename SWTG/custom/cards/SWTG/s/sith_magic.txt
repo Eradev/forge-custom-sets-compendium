@@ -1,9 +1,11 @@
 Name:Sith Magic
 ManaCost:U B R
 Types:Enchantment
+
 T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ Player | TriggerZones$ Battlefield | CheckSVar$ HateFlag | SVarCompare$ GE1 | OptionalDecider$ You | Execute$ TrigReanimate | TriggerDescription$ Hate — At the beginning of each combat, if an opponent lost life from a source other than combat damage this turn, you may return target creature card from a graveyard to the battlefield under your control. It gains lifelink and haste. Exile it at the beginning of the next end step or if it would leave the battlefield.
 SVar:TrigReanimate:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature | TgtPrompt$ Select target creature card in a graveyard | GainControl$ True | RememberChanged$ True | SubAbility$ DBPump
 SVar:DBPump:DB$ Pump | Defined$ Remembered | KW$ Lifelink & Haste | Duration$ Permanent | AtEOT$ Exile | ExileOnMoved$ Battlefield | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:HateFlag:PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+
 Oracle:Hate — At the beginning of each combat, if an opponent lost life from a source other than combat damage this turn, you may return target creature card from a graveyard to the battlefield under your control. It gains lifelink and haste. Exile it at the beginning of the next end step or if it would leave the battlefield.

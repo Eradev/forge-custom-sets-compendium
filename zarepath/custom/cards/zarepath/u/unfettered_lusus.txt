@@ -14,3 +14,5 @@ SVar:TrigDestroy:DB$ DestroyAll | ValidCards$ Remembered.Equipment+Attached | Sp
 SVar:Cleanup:DB$ Cleanup | ClearRemembered$ True
 
 Oracle:Reach \nWhenever Unfettered Lusus blocks or becomes blocked by an equipped creature, destroy all Equipment attached to that creature at end of combat.
+
+SVar:HasBlockEffect:TRUE

@@ -2,10 +2,14 @@ Name:Yoda, Jedi Master
 ManaCost:1 G U
 Types:Planeswalker Yoda
 Loyalty:3
+
 A:AB$ Dig | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | DigNum$ 2 | ChangeNum$ 1 | DestinationZone$ Library | LibraryPosition$ -1 | DestinationZone2$ Library | LibraryPosition2$ 0 | NoReveal$ True | SpellDescription$ Look at the top two cards of your library. Put one on the bottom of your library.
+
 A:AB$ ChangeZone | Cost$ SubCounter<0/LOYALTY> | Planeswalker$ True | ValidTgts$ Permanent.Other+YouOwn | Origin$ Battlefield | Destination$ Exile | TgtPrompt$ Select another target permanent you own | RememberChanged$ True | SubAbility$ DBDelayedReturn | SpellDescription$ Exile another target permanent you own. Return it to the battlefield under your control at the beginning of your next end step.
 SVar:DBDelayedReturn:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | Execute$ DBReturn | TriggerDescription$ Return the exiled card to the battlefield under your control.
 SVar:DBReturn:DB$ ChangeZone | Origin$ Exile | Destination$ Battlefield | Defined$ Remembered | Controller$ You
+
 A:AB$ Effect | Cost$ SubCounter<5/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Yoda, Jedi Master | Image$ emblem_yoda_jedi_master | Duration$ Permanent | StaticAbilities$ STHex | SpellDescription$ You get an emblem with "Hexproof, you and your creatures have."
 SVar:STHex:Mode$ Continuous | Affected$ You,Creature.YouCtrl | AddKeyword$ Hexproof | Description$ You and creatures you control have hexproof.
+
 Oracle:[+1]: Look at the top two cards of your library. Put one on the bottom of your library.\n[0]: Exile another target permanent you own. Return it to the battlefield under your control at the beginning of your next end step.\n[-5]: You get an emblem with "Hexproof, you and your creatures have."

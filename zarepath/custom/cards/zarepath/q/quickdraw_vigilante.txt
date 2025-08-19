@@ -14,3 +14,4 @@ Oracle:Vigilance\nWhenever Quickdraw Vigilante attacks or blocks, if it's unequi
 
 AI:RemoveDeck:Random
 SVar:HasAttackEffect:TRUE
+SVar:HasBlockEffect:TRUE

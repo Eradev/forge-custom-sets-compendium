@@ -9,4 +9,4 @@ T:Mode$ BecomeMonstrous | ValidCard$ Card.Self | TriggerZones$ Battlefield | Exe
 
 SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Card | TgtPrompt$ Select target card in a graveyard to exile
 
-Oracle:{4}{W}: Monstrosity 1. (If this creature isn’t monstrous, put a +1/+1 counter on it and it becomes monstrous.)\nWhen Womp Rat becomes monstrous, you may exile target card from a graveyard.
+Oracle:{4}{W}: Monstrosity 1. (If this creature isn't monstrous, put a +1/+1 counter on it and it becomes monstrous.)\nWhen Womp Rat becomes monstrous, you may exile target card from a graveyard.

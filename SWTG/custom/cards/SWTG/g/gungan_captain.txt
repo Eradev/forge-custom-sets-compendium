@@ -7,4 +7,4 @@ T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Creature | TriggerZon
 SVar:TrigTap:DB$ Tap | Defined$ TriggeredTargetLKICopy | SubAbility$ DBPump
 SVar:DBPump:DB$ Pump | Defined$ TriggeredTargetLKICopy | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent | IsCurse$ True
 
-Oracle:Whenever Gungan Captain deals damage to a creature, tap that creature. That creature doesn’t untap during its controller’s next untap step.
+Oracle:Whenever Gungan Captain deals damage to a creature, tap that creature. That creature doesn't untap during its controller's next untap step.

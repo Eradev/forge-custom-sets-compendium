@@ -7,7 +7,6 @@ K:Enchant:Creature
 S:Mode$ CantBlockBy | ValidAttacker$ Creature.EnchantedBy | Description$ Enchanted creature can't be blocked.
 
 T:Mode$ Attacks | ValidCard$ Card.AttachedBy | Execute$ TrigLoseLife | TriggerDescription$ Whenever enchanted creature attacks, defending player loses 1 life.
-
 SVar:TrigLoseLife:DB$ LoseLife | Defined$ DefendingPlayer | LifeAmount$ 1
 
-Oracle:Enchant creature\nEnchanted creature can’t be blocked.\nWhenever enchanted creature attacks, defending player loses 1 life.
+Oracle:Enchant creature\nEnchanted creature can't be blocked.\nWhenever enchanted creature attacks, defending player loses 1 life.

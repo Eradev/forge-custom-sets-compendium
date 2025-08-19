@@ -1,6 +1,6 @@
 Name:Ewok Token
 ManaCost:no cost
-PT:1/1
 Colors:green
 Types:Creature Ewok
+PT:1/1
 Oracle:

@@ -8,7 +8,6 @@ A:AB$ ChangeTargets | Cost$ 2 U | TargetType$ Spell,Activated,Triggered | ValidT
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigRepair | TriggerDescription$ When CARDNAME dies, put three repair counters on it.
 SVar:TrigRepair:DB$ PutCounter | CounterType$ REPAIR | CounterNum$ 3 | Defined$ TriggeredCard
 T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | ValidCard$ Card.Self+inGraveyard | CheckSVar$ RepairCount | SVarCompare$ GE1 | Execute$ TrigRemoveRepair | TriggerDescription$ At the beginning of your upkeep, if CARDNAME is in your graveyard with repair counters, remove a repair counter.
-
 SVar:RepairCount:Count$CardCounters.REPAIR
 SVar:TrigRemoveRepair:DB$ RemoveCounter | CounterType$ REPAIR | CounterNum$ 1 | Defined$ Self
 T:Mode$ CounterRemoved | TriggerZones$ Graveyard | ValidCard$ Card.Self | CounterType$ REPAIR | NewCounterAmount$ 0 | Execute$ DBCast | TriggerDescription$ When the last repair counter is removed, you may cast CARDNAME until end of turn.
