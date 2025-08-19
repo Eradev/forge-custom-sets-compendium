@@ -1,0 +1,5 @@
+Name:Fox of the Orange Orchard
+ManaCost:1 W
+Types:Creature Fox Spirit
+PT:3/1
+Oracle:
