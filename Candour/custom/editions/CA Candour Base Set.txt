@@ -97,7 +97,8 @@ Type=Custom
 90 U Contrasurveil @Diane Franco
 91 U Ethereal Companions @Bear Frymire
 92 R Memory Severance @Noah Thatcher
-# 93-100
+93 R Momentum Weaver @Nathan Mohamed
+# 94-100
 101 M Force of Anguish @Dominik Mayer
 102 U Guardian Thrull @PINDURSKI
 103 U Perilous Depths @PINDURSKI
