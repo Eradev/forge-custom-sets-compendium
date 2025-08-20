@@ -7,10 +7,10 @@ K:Flying
 
 K:Fabricate:2
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Artifact.YouCtrl | Execute$ TrigGainLife | TriggerDescription$ Whenever an artifact you control enters, you gain life equal to this creature's toughness.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Artifact.YouCtrl | Execute$ TrigGainLife | TriggerDescription$ Whenever an artifact you control enters, you gain life equal to CARDNAME's toughness.
 SVar:TrigGainLife:DB$ GainLife | Defined$ You | LifeAmount$ Life
 SVar:Life:Count$CardToughness
 
-Oracle:Flying\nFabricate 2 (When this creature enters, put two +1/+1 counters on it or create two 1/1 colorless Servo artifact creature tokens.)\nWhenever an artifact you control enters, you gain life equal to this creature's toughness.
+Oracle:Flying\nFabricate 2 (When this creature enters, put two +1/+1 counters on it or create two 1/1 colorless Servo artifact creature tokens.)\nWhenever an artifact you control enters, you gain life equal to Lifecraft Sprite's toughness.
 
 DeckHas:Ability$Counters|Token
