@@ -1,0 +1,11 @@
+Name:Crystalline Petroglyph
+ManaCost:G
+Types:Artifact
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDig | TriggerDescription$ When CARDNAME enters or leaves the battlefield, look at the top three cards of your library. You may reveal a colorless card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigDig | Secondary$ True | TriggerDescription$ When CARDNAME enters or leaves the battlefield, look at the top three cards of your library. You may reveal a colorless card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.
+SVar:TrigDig:DB$ Dig | DigNum$ 3 | ChangeNum$ 1 | Optional$ True | ChangeValid$ Card.colorless | ForceRevealToController$ True | DestinationZone$ Hand | RestRandomOrder$ True
+
+A:AB$ GainLife | Cost$ 1 G Sac<1/CARDNAME> | LifeAmount$ 4 | SpellDescription$ You gain 4 life.
+
+Oracle:When Crystalline Petroglyph enters or leaves the battlefield, look at the top three cards of your library. You may reveal a colorless card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.\n{1}{G}, Sacrifice Crystalline Petroglyph: You gain 4 life.
