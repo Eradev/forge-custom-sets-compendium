@@ -12,4 +12,4 @@ SVar:TrigDestroy:DB$ Destroy | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Artifact
 
 K:Evoke:ExileFromHand<1/Card.Green+Other/green card>
 
-Oracle:Flash\nDeathtouch\nWhen this creature enters, destroy up to one target artifact or enchantment.\nEvoke—Exile a green card from your hand.
+Oracle:Flash, deathtouch\nWhen this creature enters, destroy up to one target artifact or enchantment.\nEvoke—Exile a green card from your hand.
