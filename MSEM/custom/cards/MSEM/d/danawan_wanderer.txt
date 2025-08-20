@@ -1,0 +1,26 @@
+Name:Danawan Wanderer
+ManaCost:1 U
+Types:Creature Human
+PT:2/1
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigTapOrUntap | OptionalDecider$ You | TriggerDescription$ When CARDNAME enters, you may tap or untap target creature.
+SVar:TrigTapOrUntap:DB$ TapOrUntap | ValidTgts$ Creature | TgtPrompt$ Select target creature
+
+A:AB$ ChangeZone | Named$ Ascend | Cost$ 2 G | Origin$ Battlefield | Destination$ Exile | SorcerySpeed$ True | SubAbility$ AscendTransform | RememberChanged$ True | SpellDescription$ Ascend ({2}{G}: Exile this creature, then return it to the battlefield transformed. Ascend only as a sorcery.)
+SVar:AscendTransform:DB$ ChangeZone | Defined$ Remembered | Origin$ All | Destination$ Battlefield | Transformed$ True | GainControl$ True
+
+Oracle:When Danawan Wanderer enters, you may tap or untap target creature.\nAscend {2}{G} ({2}{G}: Exile this creature, then return it to the battlefield transformed. Ascend only as a sorcery.)
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Punan Trailblazer
+ManaCost:no cost
+Colors:Green
+Types:Creature Human Warrior
+PT:3/3
+
+K:Vigilance
+
+Oracle:Vigilance
