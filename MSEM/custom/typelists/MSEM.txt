@@ -1,6 +1,7 @@
 [BasicTypes]
 [LandTypes]
 [CreatureTypes]
+Artist:Artists
 [SpellTypes]
 [EnchantmentTypes]
 [ArtifactTypes]

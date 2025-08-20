@@ -1,0 +1,11 @@
+Name:Master Chef (MSEM)
+ManaCost:2 G
+Types:Creature Human Druid
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPlant | TriggerDescription$ When CARDNAME enters, create a 0/1 green Plant creature token.
+SVar:TrigPlant:DB$ Token | TokenScript$ g_0_1_plant | TokenAmount$ 1 | TokenOwner$ You
+
+A:AB$ GainLife | Cost$ Sac<1/Plant> | LifeAmount$ 3 | SpellDescription$ Sacrifice a Plant: You gain 3 life.
+
+Oracle:When Master Chef enters, create a 0/1 green Plant creature token.\nSacrifice a Plant: You gain 3 life.

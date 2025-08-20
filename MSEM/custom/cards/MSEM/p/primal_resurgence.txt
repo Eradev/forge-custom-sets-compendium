@@ -1,0 +1,10 @@
+Name:Primal Resurgence
+ManaCost:G
+Types:Enchantment Aura
+
+K:Enchant:Land
+
+S:Mode$ Continuous | Affected$ Land.EnchantedBy | AddAbilities$ ABMana | Description$ Enchanted land has "{T}: Add {G}{G}."
+SVar:ABMana:AB$ Mana | Cost$ T | Produced$ G | Amount$ 2 | SpellDescription$ Add {G}{G}.
+
+Oracle:Enchant land\nEnchanted land has "{T}: Add {G}{G}."

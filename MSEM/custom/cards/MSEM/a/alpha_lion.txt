@@ -1,0 +1,5 @@
+Name:Alpha Lion
+ManaCost:W W
+Types:Creature Cat
+PT:3/3
+Oracle:

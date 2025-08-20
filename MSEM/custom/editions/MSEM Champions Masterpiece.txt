@@ -1,0 +1,156 @@
+[metadata]
+Code=MSEM_MPS_MSE
+Name=MSEM Champions: Masterpiece
+Date=2017-10-02
+Type=Custom
+TokenFallbackCode=MSEM_CHAMPIONS
+
+[cards]
+1 S Master of Tranquility @Jian Guo
+2 S Scorch @ryky
+3 S Cranial Violation @Didier Nguyen
+# 4
+5 S Ryukami, the First Sovereign @Dongbiao Lu
+6 S Sunken Ambitions @RHADS
+7 S Master Chef (MSEM) @Ricky Ryan
+8 S Savage Congregation @sandara
+9 S Dark Rite Cultist @uildrim
+10 S Azun, Sheriff of Daisite @Artozi
+11 S Taiyohata Champion @Yuka Han Bimi
+12 S Rock // Roll @Chris Ostrowski & Christ
+# 13
+14 S Almgrove Champion @Aleksei Vinogradov
+15 S Pocket Aces @RUshN
+16 S Suisei the Southern Star @Kawiku
+17 S Serene Prayer @David Demaret
+# 18 - 20
+21 S Villainy @Sergey Kolesov
+22 S District of Artisans @Jimmy Ling
+23 S Lady Genvieve of Caulder @Gerald Parel
+24 S Flesh to Rot @Michal Ivan
+25 S Recall Forgotten Eons @DusanMarkovich
+26 S Monument to the Fallen Man @Ivan Sevic
+27 S Infuse the Apparatus @Chloe Forrest
+28 S Vidal, Rune Thief @pamansazz
+29 S Invalidate @Sanchez Hidalgo
+30 S Rakkiri Dissident @Miles H
+31 S Cane Dancer @Xib Vaine
+32 S Stormsurge @Thomas Bourdon
+33 S Golden Touch @Matteo Marjoram
+34 S Avatar of Basat @Rudy Siswanto
+35 S Exeunt @NewEon
+36 S Glimmer @Gael Giudicelli
+37 S Carnival Yatiri @Mauricio Cid
+38 S Performer of Ambition @katorius
+# 39
+40 S Latent Potential @jokubas-uogintas
+41 S Ardy's Study @Malacandrax
+42 S Merkurio's Familiar @Ramses Melendez
+43 S Autumnal Watch @JessiBeans
+44 S Nomadic Patriarch @Mazert Young
+45 S Egg of Avarice @Ben J
+46 S Leyline Alignment Field @JungHoon.L
+47 S Thriving Hydra @Teagan Kilpatrick
+48 S Union Rail Strikebreaker @Gintas Galvanauskas
+49 S Jara Champion @Erin Gray
+50 S Stolen Secrets @Julie Kabbache
+51 S Endless Discoveries @Anato Finnstark
+52 S Anuran Encounters @Arnold Lobel
+53 S Find Happiness in Misery @Kevron101
+54 S Glistening Chalice @SpaceMoule
+55 S Into the Unknown @Shin Jong Hun
+56 S Tinkerer's Tools @Joyce Maureira Z.
+57 S Unraveling @Natalya Saloshmat
+58 S What Lurks Beyond @Yuliya Zabelina
+59 S Roggar's Frenzy @Stephen Stark
+60 S Mastery of the Veil @Stephen Stark
+61 S Spirit Script @Stephen Stark
+62 S Unearth @Andrew Kuzinskiy
+63 S Angel of Succor @Liang Xing
+64 S Tyrant of Tributes @Danilo Saito
+65 S Pith Wilt @Lloyd Allen
+66a S Prodigious Panya @Mingxing Qin
+66b S Great Escapade @Mingxing Qin
+67 S Seedshrine @Julian Bauer
+68 S Oil Driller @Talo-art
+69 S Tidehollow Lich @Denis Quinn
+70 S Holcomb of the Peregrine @feriowind
+71 S Impden Mother @Arthur Gimaldinov
+72 S Vaultkeeper @Scribble Imp
+73 S Inishtu, Desert Healer @DSL Art & BorisDigitalArtist
+74 S Endless Helpless Souls @Pavel Kolomeyets
+75 S Nightmares Unseen @Alex Stone
+76 S Rot @Mariya S.
+77 S Embodied Soul @BlackSalander
+78 S Fox of the Orange Orchard @FleetingEmber
+79 S Buy Time @exellero
+80 S Cosmic Sinkhole @exellero
+81 S Out-of-Body Experience @exellero
+82 S Ophidian Oracle @Jarod Smith
+83 S Bounty of the Gardens @evizoa
+84 S Idyllic Odyssey @apri sun
+85 S Monkeyshines @Fatharani Yasmin
+86 S Children of the Clouds @Akinomiya Asuka
+87 S Caylin Whirlwind @Gunzfree
+88 M Fiery Burst @Tiago Alexandre
+89 S Logger Recluse @Luke Maddox
+90 S Confirm Hypothesis @Kme
+91 S Tyrant's Breath @Richard Lay
+92 S Summit Guardian @kalambu
+93 S Breach the Lilies @Eran Folwer
+94 S Coralight Champion @FrankGiaggiolo
+95 S Polyp Pools @slshimerdla
+96 S Dreamsight Well @Akinomiya Asuka
+97 S Ancestral Council @Akinomiya Asuka
+98 S Chart the Vast @sachisu
+99 S Thriving Budling @Vicki Pangestu
+100 S Ramzi, Traveling Merchant @drizzle_ashes
+101 S Seeker of Untouched Beauty @Akinomiya Asuka
+102 S Etherium Leviathan @Russel Marks
+103 S Eye of the Beholder @Lacey Leiann @ rudehousecat.art
+104 S Olson's Flockmaster @Elvy Fox
+105 S Slaffield Workgate @hmmuk
+106 S Culminating Chaos @technochroma
+107 S Inked Summoner @fisher903
+108 S Primal Resurgence @Akinomiya Asuka
+109 S Getaway Rider @Nepperoni
+110 S Crest @Tokity János
+111 S Solar Flare @tsuzuku
+112 S Unrivaled Fireweaver @Styxiann
+113 S Alratha, Pearl of the Sand Sea @Callum Clayton
+114 S Shan Jun's Command @雌虎 SpTASIL
+115 S Commanding Princess @Mario Pereira
+116 S Sphinx of Ill Omens @Brolken
+117 S Black Hole Musings @Alex Rommel
+118 S Exhilarating Prescience @Inkspirate
+119 S Lord of the Bubbledome @William Rothart
+120 S Seek Prophecy @ying yi
+121 S Paint with Starflame @Excellero
+122 S Portal Fracture @Alex Rommel
+123 S Mirrorgate @Pedro Sena
+124 M Cosmic Coalescing @Dominik Mayer
+125 M Vielle, Undercity Wayfarer @Meltyrice
+126 M Pay Up @无公害的史莱姆 / Night Knife
+127 S Slippery Assassin @N極 (Nkyoku)
+128 S Blood Jade Prophet @7nix
+129 S The Girl Who Wouldn't Die @7nix
+130 S Plains @Rachid Lotf
+131 S Island @Buffyville
+132 S Swamp @GUWEIZ
+133 S Mountain @GigiCave
+134 S Forest @Lionel Grant
+135 S Spiritual Guidance @ailionart
+136 S Hierarch Ranger @Mirlo
+137 S End of All Things @Terra Lim Thong Ern
+138 S Chronicles of the Kitsune @naufaldreamer
+139 S Simul, Sylvan Alchemist @AI-Blues
+140 S Biohazard @trisynine
+141 S Unceasing Flames @Hinata刺客先生
+142 S Dimensional Reshaper @cc2520, Nix, Styles_, _crystaleye, harlsquin
+143 S Unbound Expanse @桃路果子
+145 S Megalokraken @Andrej Z.T.
+146 S Soul Reader @Billy Christian
+147 S Android Bodega @Eddie Mendoza
+148 S Clawing Shaman @Felipe Castro
+149 S Boundless Hopes @Bhaskar Rac
+150 S Reflected Moment @randiocalrissian

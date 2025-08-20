@@ -5,84 +5,84 @@ Date=2017-06-08
 Type=Custom
 
 [cards]
-1 C Tranquil Stream
-2 C Sodden Cavern
-3 C Fiery Chasm
-4 C Highland Vale
-5 C Alpine Meadow
-6 C Desolate Barrens
-7 C Roaring Cascade
-8 C Somber Marsh
-9 C Jagged Crag
-10 C Rainforest Spring
-11 C Wastes
-12 C Command Tower
-13 C Sigil of Creation
-14 C Sigil of Martyrdom
-15 C Arcane Signet
-16 R Ocean Monastery
-17 R Shardstone Rift
-18 R Timber Range
-19 R Barren Desolation
-20 R Mysterious Cataract
-21 R Abandoned Skyroad
-22 R Abandoned Battlefield
-23 R Abandoned Cairn
-24 R Abandoned Meadow
-25 R Abandoned Wilderness
+1 C Tranquil Stream @Ferdinand Ladera
+2 C Sodden Cavern @Ferdinand Ladera
+3 C Fiery Chasm @Ferdinand Ladera
+4 C Highland Vale @Ferdinand Ladera
+5 C Alpine Meadow @Sebastian Wagner
+6 C Desolate Barrens @Sebastian Wagner
+7 C Roaring Cascade @UnidColor
+8 C Somber Marsh @Sebastian Wagner
+9 C Jagged Crag @Ferdinand Ladera
+10 C Rainforest Spring @Sebastian Wagner
+11 C Wastes @ehecod
+12 C Command Tower @Adam Paquette
+13 C Sigil of Creation @Yangtian Li
+14 C Sigil of Martyrdom @stonewurks
+15 C Arcane Signet @Dan Scott
+16 R Ocean Monastery @flaviobolla
+17 R Shardstone Rift @flaviobolla
+18 R Timber Range @flaviobolla
+19 R Barren Desolation @flaviobolla
+20 R Mysterious Cataract @flaviobolla
+21 R Abandoned Skyroad @wanbao
+22 R Abandoned Battlefield @Wildweasel339
+23 R Abandoned Cairn @inSOLence
+24 R Abandoned Meadow @vantasyartz
+25 R Abandoned Wilderness @mozyy-ryzel
 # 26 - 30 were removed
-31 R Legacy Foundations
-32 R Horizon of Origins
-33 R Deserted Trail
-34 R Imperial Barracks
-35 R Flourishing Waterways
-36 R Spires of Telenia
-37 R Academy Wastes
-38 R Grove of Reversal
-39 R Tirenan Market
-40 R Quintok Station
-41 R Cleared Vault
-42 R Unlit Alley
-43 R Grim Slums
-44 R Forgotten Shrine
-45 R Overgrown Refuge
-46 R Shrouded Rooftops
-47 R Weathered Fortress
-48 R Deadwood Grove
-49 R Dawnlit Battlefield
-50 R Lush Outskirts
-51 R Gleaming Hot Springs
-52 R Deeplife Cavern
-53 R Calmed Battleground
-54 R Frigid Highlands
-55 R Sunlit Ruins
-56 R Sky-High Spires
-57 R Forgotten Cryovault
-58 R Charbroiled Core
-59 R Wildrune Thicket
-60 R Ornamented Evergreen
-61 R Haughty Chateau
-62 R Stormcharged Pyre
-63 R Haunted Woodlock
-64 R Chiseled Cliffside
-65 R Exotic Xenoreef
-66 R Ominous Lair
-67 R Strange Harbor
-68 R Toxic Jungle
-69 R Cliffside Entrance
-70 R Frontier Base
-71 R Deserted Steppe
-72 R Torrid Geysers
-73 R Mossy Shrine
-74 R Gnarled Henge
-75 R Secluded Cascade
-76 U Descended Glacier
-77 U Descended Hollow
-78 U Descended Fissure
-79 U Descended Gorge
-80 U Descended Countryside
-81 R Boneyard Pass
-82 R Frostpoint Caldera
-83 R Basin Fortress
-84 R Spinerock Canyon
-85 R Thawing Valley
+31 R Legacy Foundations @C Cornet
+32 R Horizon of Origins @Andreas Rocha
+33 R Deserted Trail @Sickbrush
+34 R Imperial Barracks @Byzwa
+35 R Flourishing Waterways @Nurkulahur
+36 R Spires of Telenia @Chris Cold
+37 R Academy Wastes @tryingtofly
+38 R Grove of Reversal @PAvellKiD
+39 R Tirenan Market @jbrown67
+40 R Quintok Station @iancjw
+41 R Cleared Vault @Sofía Sanz
+42 R Unlit Alley @Kev Chu
+43 R Grim Slums @George Johnstone
+44 R Forgotten Shrine @Geoffrey Ernault
+45 R Overgrown Refuge @Grady Frederick
+46 R Shrouded Rooftops @Anato Finnstark
+47 R Weathered Fortress @Anato Finnstark
+48 R Deadwood Grove @Anato Finnstark
+49 R Dawnlit Battlefield @Anato Finnstark
+50 R Lush Outskirts @Anato Finnstark
+51 R Gleaming Hot Springs @Santella
+52 R Deeplife Cavern @Jorge Jacinto
+53 R Calmed Battleground @Olga Orlova
+54 R Frigid Highlands @Anato Finnstark
+55 R Sunlit Ruins @Cosmin Hrincu
+56 R Sky-High Spires @Feig Felipe Perez
+57 R Forgotten Cryovault @Ilya Nazarov
+58 R Charbroiled Core @Yangjun Tang
+59 R Wildrune Thicket @Alexandr Elichev
+60 R Ornamented Evergreen @Lei Xia
+61 R Haughty Chateau @Alexandre Coatou
+62 R Stormcharged Pyre @Ronald Steele
+63 R Haunted Woodlock @Fedor Barkhatov
+64 R Chiseled Cliffside @Quentin Mabille
+65 R Exotic Xenoreef @Nakarin Sukantocorn
+66 R Ominous Lair @Juliano Yi
+67 R Strange Harbor @Dasom Hyun
+68 R Toxic Jungle @Michel Donze
+69 R Cliffside Entrance @Tim Kaminski
+70 R Frontier Base @David Frasheski
+71 R Deserted Steppe @dodgeboxdigital
+72 R Torrid Geysers @Xiangyuan Jie
+73 R Mossy Shrine @Gaetano Caltabiano
+74 R Gnarled Henge @Anthony Avon
+75 R Secluded Cascade @gerezon
+76 C Descended Glacier @Wang Bo
+77 C Descended Hollow @Cze Peku
+78 C Descended Fissure @Xu Tianhua
+79 C Descended Gorge @Sylvain Sarrailh
+80 C Descended Countryside @Efflam Mercier
+81 R Boneyard Pass @Grady Frederick
+82 R Frostpoint Caldera @Florent Blanchard
+83 R Basin Fortress @Mathieu Lauffray
+84 R Spinerock Canyon @Kevin Hou
+85 R Thawing Valley @Tin Trung

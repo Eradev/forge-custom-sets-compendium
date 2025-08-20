@@ -1,0 +1,9 @@
+Name:Exeunt
+ManaCost:B
+Types:Instant
+
+A:SP$ Sacrifice | SacValid$ Creature | Defined$ Player | SpellDescription$ Each player sacrifices a creature.
+
+Oracle:Each player sacrifices a creature.
+
+AI:RemoveDeck:All
