@@ -6,7 +6,7 @@ PT:1/1
 T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ DBLand | OptionalDecider$ You | TriggerDescription$ When CARDNAME enters, you may put a land card from your hand onto the battlefield.
 SVar:DBLand:DB$ ChangeZone | Origin$ Hand | Destination$ Battlefield | ChangeType$ Land | Optional$ You
 
-A:AB$ ChangeZone | Named$ Ascend | Cost$ 1 R | Origin$ Battlefield | Destination$ Exile | SorcerySpeed$ True | SubAbility$ AscendTransform | RememberChanged$ True | SpellDescription$ Ascend ({1}{R}: Exile this creature, then return it to the battlefield transformed. Ascend only as a sorcery.)
+A:AB$ ChangeZone | Named$ Ascend | Cost$ 1 R | Origin$ Battlefield | Destination$ Exile | SorcerySpeed$ True | SubAbility$ AscendTransform | RememberChanged$ True | PrecostDesc Ascend— | SpellDescription$ ({1}{R}: Exile this creature, then return it to the battlefield transformed. Ascend only as a sorcery.)
 SVar:AscendTransform:DB$ ChangeZone | Defined$ Remembered | Origin$ All | Destination$ Battlefield | Transformed$ True | GainControl$ True
 
 Oracle:When Kin of the Rainforest enters, you may put a land card from your hand onto the battlefield.\nAscend {1}{R} ({1}{R}: Exile this creature, then return it to the battlefield transformed. Ascend only as a sorcery.)
