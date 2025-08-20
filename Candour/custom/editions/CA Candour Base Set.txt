@@ -15,7 +15,7 @@ Type=Custom
 8 R Bronzeforge Fanatic @Jason Nguyen
 9 R Emphatic Recruiter @Carl Van Laguun
 10 U Tinkerleaf Sprites @Asur Misoa
-11 U Journey to Oblivion @Dominik Mayer
+11 U Journey to Oblivion (CA) @Dominik Mayer
 12 R Sunrise Champion @Otto Metzger
 13 M Force of Justice @Dominik Mayer
 14 R Thought Partition @Dominik Mayer
@@ -66,7 +66,7 @@ Type=Custom
 59 M Mu Yangling, Seeing Wind @Romain Kurdi
 60 R Conduit Mage @Romain Kurdi
 61 R Unsettled Compass @Marcel Mercado
-62 R Tempest Angler @Grazia Ferlito
+62 R Tempest Angler (CA) @Grazia Ferlito
 # 63
 64 U Mismatch @Kritian Agerkvist
 65 R Phyrexian Scrap Searcher @Thomas Ricci
@@ -183,3 +183,4 @@ Type=Custom
 309 U Insidious Mask @Oleg Kapustin
 310 M Starlight Carin @Anthony Avon
 311 M Multiform Mauler @Timi Honkanen
+312 U Karn's Bauble @Luc Samori
