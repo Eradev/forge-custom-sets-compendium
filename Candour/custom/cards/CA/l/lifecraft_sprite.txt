@@ -7,7 +7,7 @@ K:Flying
 
 K:Fabricate:2
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Artifact.YouCtrl | Execute$ TrigGainLife | TriggerDescription$ Whenever an artifact you control enters, you gain life equal to CARDNAME's toughness.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | TriggerZones$ Command | ValidCard$ Artifact.YouCtrl | Execute$ TrigGainLife | TriggerDescription$ Whenever an artifact you control enters, you gain life equal to CARDNAME's toughness.
 SVar:TrigGainLife:DB$ GainLife | Defined$ You | LifeAmount$ Life
 SVar:Life:Count$CardToughness
 
