@@ -3,10 +3,10 @@ ManaCost:U U
 Types:Creature Human Wizard
 PT:1/1
 
-S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | Description$ CARDNAME can't be blocked.
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | Description$ This creature can't be blocked.
 
 K:Prowess
 
 A:AB$ Draw | Cost$ ExileFromStack<1/Card.YouCtrl/spell you control> | SpellDescription$ Draw a card.
 
-Oracle:Momentum Weaver can't be blocked.\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nExile a spell you control: Draw a card.
+Oracle:This creature can't be blocked.\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nExile a spell you control: Draw a card.

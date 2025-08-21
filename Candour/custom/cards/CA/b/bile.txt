@@ -7,9 +7,9 @@ K:Flash
 
 K:Deathtouch
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | TriggerDescription$ When CARDNAME enters, destroy up to one target artifact or enchantment.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | TriggerDescription$ When this creature enters, destroy up to one target artifact or enchantment.
 SVar:TrigDestroy:DB$ Destroy | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select up to one target artifact or enchantment
 
 K:Evoke:ExileFromHand<1/Card.Green+Other/green card>
 
-Oracle:Flash, deathtouch\nWhen Bile enters, destroy up to one target artifact or enchantment.\nEvoke—Exile a green card from your hand.
+Oracle:Flash, deathtouch\nWhen this creature enters, destroy up to one target artifact or enchantment.\nEvoke—Exile a green card from your hand.

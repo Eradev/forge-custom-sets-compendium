@@ -5,8 +5,8 @@ PT:3/1
 
 K:Haste
 
-T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ FlipCoin | TriggerDescription$ Whenever CARDNAME attacks, flip a coin. If you lose the flip, CARDNAME deals 4 damage to you.
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ FlipCoin | TriggerDescription$ Whenever this creature attacks, flip a coin. If you lose the flip, this creature deals 4 damage to you.
 SVar:FlipCoin:DB$ FlipACoin | LoseSubAbility$ DBDamage
 SVar:DBDamage:DB$ DealDamage | Defined$ You | NumDmg$ 4
 
-Oracle:Haste\nWhenever Guide of Questionable Authenticity attacks, flip a coin. If you lose the flip, Guide of Questionable Authenticity deals 4 damage to you.
+Oracle:Haste\nWhenever this creature attacks, flip a coin. If you lose the flip, this creature deals 4 damage to you.
