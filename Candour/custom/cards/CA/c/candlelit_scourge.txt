@@ -1,0 +1,15 @@
+Name:Candlelit Scourge
+ManaCost:B R
+Types:Creature Demon
+PT:3/2
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSac | TriggerDescription$ When CARDNAME enters, each player sacrifices a nontoken creature.
+SVar:TrigSac:DB$ Sacrifice | Defined$ Player | SacValid$ Creature.!token | SacMessage$ nontoken creature
+
+K:Blitz:1 B R
+
+Oracle:Flying\nWhen Candlelit Scourge enters, each player sacrifices a nontoken creature.\nBlitz {1}{B}{R} (If you cast this spell for its blitz cost, it gains haste and "When this creature dies, draw a card." Sacrifice it at the beginning of the next end step.)
+
+SVar:NeedsToPlay:Creature.!token+OppCtrl
