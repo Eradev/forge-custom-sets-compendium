@@ -1,0 +1,12 @@
+Name:Sunrise CHampion
+ManaCost:X W
+Types:Creature Elf Scout
+PT:1/1
+
+K:First Strike
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExplore | TriggerDescription$ When this creature enters, it explores a number of times equal to the number of colors of mana spent to cast this spell.
+SVar:TrigExplore:DB$ Explore | Num$ X
+SVar:X:Count$Converge
+
+Oracle:First strike\Converge — When this creature enters, it explores a number of times equal to the number of colors of mana spent to cast this spell.
