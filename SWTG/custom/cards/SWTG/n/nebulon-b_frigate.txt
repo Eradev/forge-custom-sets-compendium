@@ -4,8 +4,7 @@ Types:Artifact Creature Starship
 PT:4/2
 
 K:Spaceflight
-S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight
-S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockBySpaceflight
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight & BlockBySpaceflight
 SVar:BlockSpaceflight:Mode$ CantBlockBy | ValidAttacker$ Creature.withoutSpaceflight | ValidBlocker$ Creature.Self | Description$ CARDNAME can block only creatures with spaceflight.
 SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpaceflight+withoutSpacereach | ValidAttacker$ Creature.Self | Description$ CARDNAME can be blocked only by creatures with spaceflight.
 
