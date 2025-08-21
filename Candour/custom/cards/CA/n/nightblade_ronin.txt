@@ -1,0 +1,14 @@
+Name:Nightblade Ronin
+ManaCost:X U B
+Types:Creature Human Samurai
+PT:3/1
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigBounce | TriggerDescription$ When CARDNAME enters, return target nonland permanent with mana value X or less to its owner's hand, then that player discards a card, and loses 2 life.
+SVar:TrigBounce:DB$ ChangeZone | ValidTgts$ Permanent.nonLand+cmcLEX | Origin$ Battlefield | Destination$ Hand | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ TargetedOwner | NumCards$ 1 | Mode$ TgtChoose | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | Defined$ TargetedOwner | LifeAmount$ 2
+SVar:X:Count$xPaid
+
+Oracle:Flash\nWhen Nightblade Ronin enters, return target nonland permanent with mana value X or less to its owner's hand, then that player discards a card, and loses 2 life.
