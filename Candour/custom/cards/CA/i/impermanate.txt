@@ -1,0 +1,11 @@
+Name:Impermanate
+ManaCost:W
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Exile | TgtPrompt$ Select target creature | RememberTargets$ True | SubAbility$ DBReturn | StackDescription$ Exile {c:Targeted}, | SpellDescription$ Exile target creature, then return that card to the battlefield under its owner's control.
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+K:Escape:W ExileFromGrave<4/Card.Other/other>
+
+Oracle:Exile target creature, then return that card to the battlefield under its owner's control.\nEscape—{w}, Exile four other cards from your graveyard. (You may cast this card from your graveyard for its escape cost.)
