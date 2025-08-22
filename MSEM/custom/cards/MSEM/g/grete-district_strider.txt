@@ -5,4 +5,4 @@ PT:5/4
 
 K:Trample
 
-Oracle:
+Oracle:Trample
