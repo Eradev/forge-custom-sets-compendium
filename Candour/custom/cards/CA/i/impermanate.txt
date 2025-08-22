@@ -8,4 +8,4 @@ SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
 K:Escape:W ExileFromGrave<4/Card.Other/other>
 
-Oracle:Exile target creature, then return that card to the battlefield under its owner's control.\nEscape—{w}, Exile four other cards from your graveyard. (You may cast this card from your graveyard for its escape cost.)
+Oracle:Exile target creature, then return that card to the battlefield under its owner's control.\nEscape—{W}, Exile four other cards from your graveyard. (You may cast this card from your graveyard for its escape cost.)
