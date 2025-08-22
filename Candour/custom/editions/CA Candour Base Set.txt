@@ -98,7 +98,8 @@ Type=Custom
 91 U Ethereal Companions @Bear Frymire
 92 R Memory Severance @Noah Thatcher
 93 R Momentum Weaver @Nathan Mohamed
-# 94-100
+94 U Prismatic Fissure @Timi Honkanen
+# 95-100
 101 M Force of Anguish @Dominik Mayer
 102 U Guardian Thrull @PINDURSKI
 103 U Perilous Depths @PINDURSKI
@@ -137,7 +138,9 @@ Type=Custom
 136 U Blighted Stinger @Ryan Van Dongen
 137 M Fading Battlefield @Alex Petruk
 138 M Necropolis Seed Engine @Dominik Mayer
-# 139-150
+139 U Malevolent Tranquility @Dominik Mayer
+140 U Opalescent Effacement @Jeremy Carver
+# 141-150
 151 U Spellbomb Detonation @Romain Kurdi
 152 U Glitterfowl Curio @Valentin Gloaguen & Alessandro Poli
 153 U Divine Deflagration @Sandara Tang
@@ -154,7 +157,8 @@ Type=Custom
 164 M Parallax Blaze @Dominik Mayer
 165 M Chandra, Young Pyromancer @Fajareka Setiawan
 166 R Lunar Armageddon @Riccardo Rullo
-# 167-200
+167 U Kaleidoclasm @Timi Honkanen
+# 168-200
 201 M Nissa, Unbound Animist @Romain Kurdi
 202 U Nissa's Binding @Simon Marczyk
 203 U Crystalline Petroglyph @Anna Podedworna
@@ -167,7 +171,10 @@ Type=Custom
 210 M Oldgrowth Treant @Oleg Kapustin
 211 M Bile @Timi Honkanen
 212 R Wilderness Rendezvous @Sandara Tang
-# 213-250
+213 M Odyssey @Jeremy Carver
+214 R Bonded Hermit @Teemu Husso
+215 U Polychrome Metamorphosis @Dominik Mayer
+# 216-250
 251 R Waterlogged Archipelago @Anthony Avon
 252 R Contaminated Rivulet @Anthony Avon
 253 R Sanguinary Morass @Anthony Avon
