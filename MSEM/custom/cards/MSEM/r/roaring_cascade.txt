@@ -2,7 +2,7 @@ Name:Roaring Cascade
 ManaCost:no cost
 Types:Land Island Mountain
 
-R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
 SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
 
-Oracle:({T}: Add {U} or {R}.)\nRoaring Cascade enters tapped.
+Oracle:({T}: Add {U} or {R}.)\nThis land enters tapped.
