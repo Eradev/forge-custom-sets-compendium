@@ -1,0 +1,9 @@
+Name:Polychrome Metamorphosis
+ManaCost:X G
+Types:Sorcery
+
+A:SP$ Untap | UntapUpTo$ True | UntapType$ Land | Amount$ X | SubAbility$ DBDraw | SpellDescription$ Converge — Uptap up to one target land for each color of mana spent to cast this spell. Draw a card.
+SVar:DBDraw:DB$ Draw | NumCards$ 1 | Defined$ You
+SVar:X:Count$Converge
+
+Oracle:Converge — Uptap up to one target land for each color of mana spent to cast this spell.\nDraw a card.
