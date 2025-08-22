@@ -1,4 +1,4 @@
-Name:Sunrise CHampion
+Name:Sunrise Champion
 ManaCost:X W
 Types:Creature Elf Scout
 PT:1/1
