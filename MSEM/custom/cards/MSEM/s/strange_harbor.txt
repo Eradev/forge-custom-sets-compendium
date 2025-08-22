@@ -2,10 +2,10 @@ Name:Strange Harbor
 ManaCost:no cost
 Types:Land
 
-R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ CARDNAME enters tapped unless you have 15 or less life.
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you have 15 or less life.
 SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionCheckSVar$ X | ConditionSVarCompare$ GT15
 SVar:X:Count$YourLifeTotal
 
 A:AB$ Mana | Cost$ T | Produced$ Combo U R | SpellDescription$ Add {U} or {R}.
 
-Oracle:Strange Harbor enters tapped unless you have 15 or less life.\n{T}: Add {U} or {R}.
+Oracle:This land enters tapped unless you have 15 or less life.\n{T}: Add {U} or {R}.
