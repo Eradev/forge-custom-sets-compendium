@@ -9,4 +9,4 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.S
 SVar:TrigExplore:DB$ Explore | Num$ X
 SVar:X:Count$Converge
 
-Oracle:First strike\Converge — When this creature enters, it explores a number of times equal to the number of colors of mana spent to cast this spell.
+Oracle:First strike\nConverge — When this creature enters, it explores a number of times equal to the number of colors of mana spent to cast this spell.
