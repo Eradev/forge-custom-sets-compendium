@@ -11,6 +11,7 @@ Sets information can be found on [lackeybot](https://lackeybot.com/msem/search).
 These changes might not be reflected in their official ruling.
 
 * All Hounds are now Dogs. This also apply to abilities that target and/or applies to Hounds.
+* Some cards have their wording changed to better reflect real MTG cards.
 
 ## How to install?
 
@@ -31,7 +32,25 @@ These changes might not be reflected in their official ruling.
 Video Horror System (VHS)             -  26% (23/86)
 MSEM Champions (CHAMPIONS)            -  16% (24/146)
 MSEM Champions: Masterpiece (MPS_MSE)
-Kaleidoscope (KLC)                    -  65% (71/108)
+Kaleidoscope (KLC)                    -  84% (91/108)
+  Missing cards:
+    * Chronic Traitor: TODO Check for Paranoia
+    * Kofe-District Scholar: TODO Check for Paranoia
+    * Fractal Findings: TODO Check timing on Clue
+    * Reform Reality
+    * Miede-District Alchemist
+    * Miede-District Enforcer
+    * Rakdos Drakeswarm
+    * Remy, Last of Evanescier
+    * Rheila Rachy
+    * Savants of the Ley
+    * Skull of the World
+    * Strive for the Heavens
+    * Tears of Samang
+    * The Midwife
+    * Thomar's Sowing
+    * Thomar, Fearbringer
+    * Torches Raised
 A Tourney at Whiterun (TWR)           -  11% (31/269)
 The Land Bundle (L)                   - 100% (80/80)
 Tides of War (TOW)                    -  28% (77/271)
@@ -42,12 +61,50 @@ Pyramids of Atuum (POA)               -  15% (20/128)
 
 Examples on how to implement custom keywords and mechanisms.
 
+* [Ascend](#ascend)
+* [Fleeting](#fleeting)
 * [Horrific](#horrific)
 * [Kindle](#kindle)
 * [Mirage](#mirage)
 * [Motivate](#motivate)
 * [Paranoia](#paranoia)
 * [Torment](#torment)
+
+### Ascend
+
+Ascend is defined as:
+
+```text
+Ascend {2}{G} ({2}{G}: Exile this creature, then return it to the battlefield transformed. Ascend only as a sorcery.)
+```
+
+Implementation:
+
+```text
+A:AB$ ChangeZone | Named$ Ascend | Cost$ 2 G | Origin$ Battlefield | Destination$ Exile | SorcerySpeed$ True | SubAbility$ AscendTransform | RememberChanged$ True | PrecostDesc Ascend— | SpellDescription$ ({2}{G}: Exile this creature, then return it to the battlefield transformed. Ascend only as a sorcery.)
+SVar:AscendTransform:DB$ ChangeZone | Defined$ Remembered | Origin$ All | Destination$ Battlefield | Transformed$ True | GainControl$ True
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Fleeting
+
+Fleeting is defined as:
+
+```text
+Fleeting {U} (You may cast this spell for its fleeting cost. If you do, sacrifice it at the beginning of the next end step.)
+```
+
+Implementation:
+
+```text
+S:Mode$ Continuous | Affected$ Card.Self | MayPlay$ True | MayPlayAltManaCost$ U | AffectedZone$ Hand | EffectZone$ Hand | Description$ Fleeting {U} (You may cast this spell for its fleeting cost. If you do, sacrifice it at the beginning of the next end step.)
+T:Mode$ SpellCast | ValidCard$ Card.Self | ValidSA$ Spell.MayPlaySource | Static$ True | Execute$  FleetingEndStep
+SVar:FleetingEndStep:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | RememberObjects$ Self | TriggerDescription$ At the beginning of the next end step, sacrifice it. | Execute$ TrigSacrifice
+SVar:TrigSacrifice:DB$ SacrificeAll | Defined$ DelayTriggerRememberedLKI
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
 
 ### Horrific
 
@@ -76,7 +133,7 @@ Kindle 1—{1} ({1}, Exile this card from your graveyard: Create a 1/1 colorless
 Implementation:
 
 ```text
-A:AB$ Token | TokenScript$ c_1_1_elemental | PrecostDesc$ Kindle 1 — | Cost$ 1 ExileFromGrave<1/CARDNAME> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create a 1/1 colorless Elemental creature token.
+A:AB$ Token | TokenScript$ c_1_1_elemental | PrecostDesc$ Kindle 1 — | Cost$ 1 ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create a 1/1 colorless Elemental creature token.
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)

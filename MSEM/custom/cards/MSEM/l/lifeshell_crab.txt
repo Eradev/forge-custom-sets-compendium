@@ -3,6 +3,6 @@ ManaCost:3 U
 Types:Creature Crab
 PT:2/4
 
-A:AB$ Token | TokenScript$ c_1_1_elemental | TokenAmount$ 4 | PrecostDesc$ Kindle 4 — | Cost$ 4 U U ExileFromGrave<1/CARDNAME> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create four 1/1 colorless Elemental creature tokens.
+A:AB$ Token | TokenScript$ c_1_1_elemental | TokenAmount$ 4 | PrecostDesc$ Kindle 4 — | Cost$ 4 U U ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create four 1/1 colorless Elemental creature tokens.
 
 Oracle:Kindle 4—{4}{U}{U} ({4}{U}{U}, Exile this card from your graveyard: Create four 1/1 colorless Elemental creature tokens. Kindle only as a sorcery.)

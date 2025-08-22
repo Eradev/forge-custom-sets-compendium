@@ -1,0 +1,25 @@
+Name:Patient Ascetic
+ManaCost:W
+Types:Creature Human Monk
+PT:0/3
+
+K:Defender
+
+A:AB$ ChangeZone | Named$ Ascend | Cost$ 1 W W | Origin$ Battlefield | Destination$ Exile | SorcerySpeed$ True | SubAbility$ AscendTransform | RememberChanged$ True | PrecostDesc Ascend— | SpellDescription$ ({1}{W}{W}: Exile this creature, then return it to the battlefield transformed. Ascend only as a sorcery.)
+SVar:AscendTransform:DB$ ChangeZone | Defined$ Remembered | Origin$ All | Destination$ Battlefield | Transformed$ True | GainControl$ True
+
+Oracle:Defender\nAscend {1}{W}{W} ({1}{W}{W}: Exile this creature, then return it to the battlefield transformed. Ascend only as a sorcery.)
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Graceful Angel
+ManaCost:no cost
+Colors:White
+Types:Creature Angel
+PT:3/3
+
+K:Flying
+
+Oracle:Flying

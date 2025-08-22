@@ -3,7 +3,7 @@ Name:Glitched Carcass
 ManaCost:3
 Types:Artifact
 
-A:AB$ Animate | ActivationLimit$ 1 | Cost$ tapXType<1/Artifact.Other> | Defined$ Self | Power$ X | Toughness$ X | Types$ Creature,Artifact,Construct | RemoveCreatureTypes$ True | SpellDescription$ CARDNAME becomes an X/X Construct artifact creature until end of turn. Activate only once each turn.
+A:AB$ Animate | ActivationLimit$ 1 | Cost$ tapXType<1/Artifact.Other> | Defined$ Self | Power$ X | Toughness$ X | Types$ Creature,Artifact,Construct | RemoveCreatureTypes$ True | SpellDescription$ This artifact becomes an X/X Construct artifact creature until end of turn. Activate only once each turn.
 SVar:X:TappedCards$TapCardManaCost
 
-Oracle:Tap another untapped artifact you control: Until end of turn, Glitched Carcass becomes an X/X Construct artifact creature, where X is the mana value of the tapped artifact. Activate only once each turn.
+Oracle:Tap another untapped artifact you control: Until end of turn, this artifact becomes an X/X Construct artifact creature, where X is the mana value of the tapped artifact. Activate only once each turn.

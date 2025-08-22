@@ -2,7 +2,7 @@ Name:Lush Oasis
 ManaCost:no cost
 Types:Land Forest Island
 
-R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ CARDNAME enters tapped unless you control a basic Forest or a basic Island.
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you control a basic Forest or a basic Island.
 SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Land.Forest+Basic+YouCtrl,Land.Island+Basic+YouCtrl | ConditionCompare$ LT1
 
-Oracle:({T}: Add {G} or {U}.)\nLush Oasis enters tapped unless you control a basic Forest or a basic Island.
+Oracle:({T}: Add {G} or {U}.)\nThis land enters tapped unless you control a basic Forest or a basic Island.

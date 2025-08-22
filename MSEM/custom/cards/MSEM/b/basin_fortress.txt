@@ -2,9 +2,9 @@ Name:Basin Fortress
 ManaCost:no cost
 Types:Land
 
-R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ CARDNAME enters tapped unless you control a basic land.
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you control a basic land.
 SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Land.Basic+YouCtrl | ConditionCompare$ EQ0
 
 A:AB$ Mana | Cost$ T | Produced$ Combo B G | SpellDescription$ Add {B} or {G}.
 
-Oracle:Basin Fortress enters tapped unless you control a basic land.\n{T}: Add {B} or {G}.
+Oracle:This land enters tapped unless you control a basic land.\n{T}: Add {B} or {G}.

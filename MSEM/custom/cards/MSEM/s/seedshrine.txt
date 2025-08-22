@@ -2,10 +2,10 @@ Name:Seedshrine
 ManaCost:no cost
 Types:Land Forest
 
-R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
 SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ When CARDNAME enters, you may put a +1/+1 counter on target creature.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ When this land enters, you may put a +1/+1 counter on target creature.
 SVar:TrigCounter:DB$ PutCounter | ValidTgts$ Creature | CounterType$ P1P1 | CounterNum$ 1 | TgtPrompt$ Select target creature
 
-Oracle:({T}: Add {G}.)\nSeedshrine enters tapped.\nWhen Seedshrine enters, you may put a +1/+1 counter on target creature.
+Oracle:({T}: Add {G}.)\nThis land enters tapped.\nWhen this land enters, you may put a +1/+1 counter on target creature.

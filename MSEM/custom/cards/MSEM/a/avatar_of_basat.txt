@@ -5,6 +5,6 @@ PT:2/1
 
 K:Menace
 
-S:Mode$ CantBlock | ValidCard$ Card.Self | Description$ CARDNAME can't block.
+S:Mode$ CantBlock | ValidCard$ Card.Self | Description$ This creature can't block.
 
-Oracle:Menace\nAvatar of Basat can't block.
+Oracle:Menace\nThis creature can't block.

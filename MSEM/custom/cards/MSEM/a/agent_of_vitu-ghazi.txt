@@ -3,7 +3,7 @@ ManaCost:2 G
 Types:Creature Elf Scout
 PT:2/3
 
-T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigInvestigate | TriggerDescription$ Whenever CARDNAME deals combat damage to a player, investigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigInvestigate | TriggerDescription$ Whenever this creature deals combat damage to a player, investigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")
 SVar:TrigInvestigate:DB$ Investigate
 
-Oracle:Whenever Agent of Vitu-Ghazi deals combat damage to a player, investigate. (Create a Colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")
+Oracle:Whenever this creature deals combat damage to a player, investigate. (Create a Colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")

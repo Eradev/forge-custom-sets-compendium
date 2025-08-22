@@ -3,7 +3,7 @@ ManaCost:G
 Types:Creature Plant
 PT:0/2
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | IsPresent$ Creature.Other+YouCtrl | Execute$ TrigDraw | TriggerDescription$ When CARDNAME enters, if you control another creature, draw a card.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | IsPresent$ Creature.Other+YouCtrl | Execute$ TrigDraw | TriggerDescription$ When this creature enters, if you control another creature, draw a card.
 SVar:TrigDraw:DB$ Draw
 
-Oracle:When Loresprout enters, if you control another creature, draw a card.
+Oracle:When this creature enters, if you control another creature, draw a card.

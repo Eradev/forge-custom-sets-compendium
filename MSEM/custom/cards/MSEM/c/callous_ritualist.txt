@@ -1,0 +1,29 @@
+Name:Callous Ritualist
+ManaCost:1 B
+Types:Creature Human Wizard
+PT:2/2
+
+A:AB$ ChangeZone | Named$ Ascend | Cost$ W B Discard<1/Card> Sac<1/Creature.YouCtrl/creature you control> ExileFromGrave<1/Creature/creature card> | Origin$ Battlefield | Destination$ Exile | SorcerySpeed$ True | SubAbility$ AscendTransform | RememberChanged$ True | PrecostDesc Ascend— | SpellDescription$ ({W}{B}, Discard a card, Sacrifice a creature, Exile a creature card from your graveyard: Exile this creature, then return it to the battlefield transformed. Ascend only as a sorcery.)
+SVar:AscendTransform:DB$ ChangeZone | Defined$ Remembered | Origin$ All | Destination$ Battlefield | Transformed$ True | GainControl$ True
+
+Oracle:Ascend {W}{B}, Discard a card, Sacrifice a creature, Exile a creature card from your graveyard. ({W}{B}, Discard a card, Sacrifice a creature, Exile a creature card from your graveyard: Exile this creature, then return it to the battlefield transformed. Ascend only as a sorcery.)
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Heartless Angel
+ManaCost:no cost
+Colors:White,black
+Types:Creature Angel
+PT:4/4
+
+K:Flying
+
+K:Vigilance
+
+K:Deathtouch
+
+K:Lifelink
+
+Oracle:Flying, vigilance, deathtouch, lifelink

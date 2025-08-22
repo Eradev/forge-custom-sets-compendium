@@ -5,9 +5,9 @@ PT:2/1
 
 K:Flying
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ When CARDNAME enters, target creature gets +2/+1 until end of turn.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ When this creature enters, target creature gets +2/+1 until end of turn.
 SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ +2 | NumDef$ +1
 
-Oracle:Flying\nWhen Courier Eagle enters, target creature gets +2/+1 until end of turn.
+Oracle:Flying\nWhen this creature enters, target creature gets +2/+1 until end of turn.
 
 SVar:PlayMain1:TRUE
