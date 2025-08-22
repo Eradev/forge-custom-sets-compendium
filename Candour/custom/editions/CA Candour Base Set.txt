@@ -129,7 +129,15 @@ Type=Custom
 128 M Unforgiving Nightmare @Sandara Tang
 129 R Dance with Fatality @Raul Bottero
 130 R Ghoulcalling @Dmitry Polynkov
-# 131-150
+131 R Barren Doom @Timi Honkanen
+132 R Bowmaster Revenant @Bear Frymire
+133 R Corpsewail Corsair @Bear Frymire
+134 R Midnight Prowl @Sandara Tang
+135 U Afflicted Dagger @Sandara Tang
+136 U Blighted Stinger @Ryan Van Dongen
+137 M Fading Battlefield @Alex Petruk
+138 M Necropolis Seed Engine @Dominik Mayer
+# 139-150
 151 U Spellbomb Detonation @Romain Kurdi
 152 U Glitterfowl Curio @Valentin Gloaguen & Alessandro Poli
 153 U Divine Deflagration @Sandara Tang
@@ -143,7 +151,10 @@ Type=Custom
 161 R Omicron Cannoneer @Sandara Tang
 162 R Candid Scoundrel @Oleg Kapustin
 163 R Onyx Instigator @Sandara Tang
-# 164-200
+164 M Parallax Blaze @Dominik Mayer
+165 M Chandra, Young Pyromancer @Fajareka Setiawan
+166 R Lunar Armageddon @Riccardo Rullo
+# 167-200
 201 M Nissa, Unbound Animist @Romain Kurdi
 202 U Nissa's Binding @Simon Marczyk
 203 U Crystalline Petroglyph @Anna Podedworna
@@ -167,6 +178,10 @@ Type=Custom
 271 R Vexed Waterfront @Anthony Avon
 272 R Vexed Mire @Anthony Avon
 273 R Vexed Fen @Anthony Avon
+# 274-278
+279 R Vexed Temple @Anthony Avon
+# 280
+281 R Greed Vaccum @Bear Frymire
 282 R Nightblade Ronin @Dmonik Mayer
 283 R Candlelit Scorge @Noah Thatcher
 285 R Menagerie Caretaker @Sandara Tang
@@ -185,3 +200,4 @@ Type=Custom
 310 M Starlight Carin @Anthony Avon
 311 M Multiform Mauler @Timi Honkanen
 312 U Karn's Bauble @Luc Samori
+313 R Flooded Abyss @Anthony Avon
