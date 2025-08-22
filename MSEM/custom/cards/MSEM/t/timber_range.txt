@@ -2,9 +2,9 @@ Name:Timber Range
 ManaCost:no cost
 Types:Land
 
-R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ DBTap | ReplacementResult$ Updated | Description$ As CARDNAME enters, you may pay 2 life. If you don't, CARDNAME enters tapped.
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ DBTap | ReplacementResult$ Updated | Description$ As this land enters, you may pay 2 life. If you don't, it enters tapped.
 SVar:DBTap:DB$ Tap | ETB$ True | Defined$ Self | UnlessCost$ PayLife<2> | UnlessPayer$ You | StackDescription$ enters tapped.
 
-A:AB$ ChangeZone | Cost$ T Sac<1/CARDNAME> | Origin$ Library | Destination$ Battlefield | ChangeType$ Mountain,Forest | ChangeNum$ 1 | SpellDescription$ Search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle.
+A:AB$ ChangeZone | Cost$ T Sac<1/CARDNAME/this land> | Origin$ Library | Destination$ Battlefield | ChangeType$ Mountain,Forest | ChangeNum$ 1 | SpellDescription$ Search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle.
 
-Oracle:As Timber Range enters, you may pay 2 life. If you don't, Timber Range enters tapped.\n{T}, Sacrifice Timber Range: Search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle.
+Oracle:As this land enters, you may pay 2 life. If you don't, it enters tapped.\n{T}, Sacrifice this land: Search your library for a Mountain or Forest card, put it onto the battlefield, then shuffle.
