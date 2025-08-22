@@ -2,7 +2,7 @@ Name:Jagged Crag
 ManaCost:no cost
 Types:Land Mountain Plains
 
-R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
 SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
 
-Oracle:({T}: Add {R} or {W}.)\nJagged Crag enters tapped.
+Oracle:({T}: Add {R} or {W}.)\nThis land enters tapped.
