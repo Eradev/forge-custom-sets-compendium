@@ -4,6 +4,6 @@ Types:Sorcery
 
 A:SP$ Destroy | ValidTgts$ Artifact,Land | TgtPrompt$ Select target artifact or land | SpellDescription$ Destroy target artifact or land.
 
-A:AB$ Token | TokenScript$ c_1_1_elemental | TokenAmount$ 2 | PrecostDesc$ Kindle 2 — | Cost$ R Sac<1/Artifact|Land> ExileFromGrave<1/CARDNAME> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create two 1/1 colorless Elemental creature tokens.
+A:AB$ Token | TokenScript$ c_1_1_elemental | TokenAmount$ 2 | PrecostDesc$ Kindle 2 — | Cost$ R Sac<1/Artifact|Land> ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create two 1/1 colorless Elemental creature tokens.
 
 Oracle:Destroy target artifact or land.\nKindle 2—{R}, Sacrifice an artifact or land. ({R}, Sacrifice an artifact or land, Exile this card from your graveyard: Create two 1/1 colorless Elemental creature tokens. Kindle only as a sorcery.)

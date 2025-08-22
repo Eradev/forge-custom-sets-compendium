@@ -3,7 +3,7 @@ ManaCost:B
 Types:Creature Mutant Rogue
 PT:1/2
 
-S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | ValidBlocker$ Creature.powerGTX | Description$ Creatures with power greater than CARDNAME's power can't block it.
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | ValidBlocker$ Creature.powerGTX | Description$ Creatures with power greater than this creature's power can't block it.
 SVar:X:Count$CardPower
 
-Oracle:Creatures with power greater than Deformed Vagrant's power can't block it.
+Oracle:Creatures with power greater than this creature's power can't block it.
