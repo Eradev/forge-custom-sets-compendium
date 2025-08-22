@@ -5,7 +5,7 @@ Types:Enchantment
 T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigUntap | TriggerDescription$ When this enchantment enters, untap up to two lands.
 SVar:TrigUntap:DB$ Untap | UntapUpTo$ True | UntapType$ Land | Amount$ 2
 
-T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | CheckSVar$ Z | SVarCompare$ GE2 | Execute$ TrigToken | TriggerDescription$ At the beginning of each end step, if you've cast both a creature spell and a noncreature spell this turn, draw a card, then you may put a land card from your hand onto the battlefield.
+T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | CheckSVar$ Z | SVarCompare$ GE2 | Execute$ TrigDraw | TriggerDescription$ At the beginning of each end step, if you've cast both a creature spell and a noncreature spell this turn, draw a card, then you may put a land card from your hand onto the battlefield.
 SVar:TrigDraw:DB$ Draw | NumCards$ 1 | Defined$ You | SubAbility$ DBPutLand
 SVar:DBPutLand:DB$ ChangeZone | Origin$ Hand | Destination$ Battlefield | ChangeType$ Land.YouCtrl
 SVar:X:Count$ThisTurnCast_Creature.YouCtrl/LimitMax.1
