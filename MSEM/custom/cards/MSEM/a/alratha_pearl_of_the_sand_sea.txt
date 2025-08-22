@@ -3,7 +3,7 @@ ManaCost:no cost
 Types:Land Desert
 
 K:ETBReplacement:Other:ChooseCT
-SVar:ChooseCT:DB$ GenericChoice | DefinedPlayer$ You | Choices$ LetOpponentInvestigate,TapSelf | SpellDescription$ As CARDNAME enters, you may have an opponent investigate. If you don't, it enters tapped.
+SVar:ChooseCT:DB$ GenericChoice | DefinedPlayer$ You | Choices$ LetOpponentInvestigate,TapSelf | SpellDescription$ As this land enters, you may have an opponent investigate. If you don't, it enters tapped.
 SVar:LetOpponentInvestigate:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | SubAbility$ DBInvestigate | SpellDescription$ An opponent investigate
 SVar:DBInvestigate:DB$ Investigate | Defined$ ChosenPlayer
 SVar:TapSelf:DB$ Tap | Defined$ Self | ETB$ True | SpellDescription$ Enters tapped
@@ -12,4 +12,4 @@ A:AB$ Mana | Cost$ T | Produced$ U | SpellDescription$ Add {U}.
 
 A:AB$ Investigate | Cost$ 1 U T | SpellDescription$ Investigate.
 
-Oracle:As Alratha, Pearl of the Sand Sea enters, you may have an opponent investigate. If you don't, it enters tapped.\n{T}: Add {U}.\n{1}{U}, {T}: Investigate.
+Oracle:As this land enters, you may have an opponent investigate. If you don't, it enters tapped.\n{T}: Add {U}.\n{1}{U}, {T}: Investigate.

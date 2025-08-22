@@ -3,11 +3,11 @@ ManaCost:2 B G
 Types:Creature Human Berserker
 PT:*/*
 
-S:Mode$ Continuous | CharacteristicDefining$ True | SetPower$ CreatureCount | SetToughness$ CreatureCount | Description$ CARDNAME's power and toughness are each equal to the number of creatures you control.
+S:Mode$ Continuous | CharacteristicDefining$ True | SetPower$ CreatureCount | SetToughness$ CreatureCount | Description$ This creature's power and toughness are each equal to the number of creatures you control.
 SVar:CreatureCount:Count$Valid Creature.YouCtrl
 
-T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigDestroy | TriggerDescription$ Whenever CARDNAME deals combat damage to a player, destroy target creature with toughness less than CARDNAME's power.
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigDestroy | TriggerDescription$ Whenever this creature deals combat damage to a player, destroy target creature with toughness less than its power.
 SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Creature.toughnessLTX | TgtPrompt$ Select target creature with toughness less than CARDNAME's power.
 SVar:X:Count$CardToughness
 
-Oracle:Bestial Mob's power and toughness are each equal to the number of creatures you control.\nWhenever Bestial Mob deals combat damage to a player, destroy target creature with toughness less than Bestial Mob's power.
+Oracle:This creature's power and toughness are each equal to the number of creatures you control.\nWhenever this creature deals combat damage to a player, destroy target creature with toughness less than its power.

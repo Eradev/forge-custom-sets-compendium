@@ -4,6 +4,6 @@ Types:Land
 
 A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
 
-A:AB$ ChangeZone | Cost$ 3 T Sac<1/CARDNAME> | Origin$ Library | Destination$ Battlefield | ChangeType$ Land.hasABasicLandType | Tapped$ True | ChangeNum$ 1 | SpellDescription$ Search your library for a land card with a basic land type, put it onto the battlefield tapped, then shuffle.
+A:AB$ ChangeZone | Cost$ 3 T Sac<1/CARDNAME/this land> | Origin$ Library | Destination$ Battlefield | ChangeType$ Land.hasABasicLandType | Tapped$ True | ChangeNum$ 1 | SpellDescription$ Search your library for a land card with a basic land type, put it onto the battlefield tapped, then shuffle.
 
-Oracle:{T}: Add {C}.\n{3}, {T}, Sacrifice Enduring Vestige: Search your library for a land card with a basic land type, put it onto the battlefield tapped, then shuffle.
+Oracle:{T}: Add {C}.\n{3}, {T}, Sacrifice this land: Search your library for a land card with a basic land type, put it onto the battlefield tapped, then shuffle.

@@ -1,0 +1,27 @@
+Name:Horizon Gazer
+ManaCost:2 U
+Types:Creature Human Scout
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigReveal | TriggerDescription$ When this creature enters, reveal the top two cards of your library. Put a noncreature card revealed this way into your hand and the rest into your graveyard.
+SVar:TrigReveal:DB$ Dig | DigNum$ 2 | Reveal$ True | DestinationZone$ Library | ChangeNum$ 1 | ChangeValid$ Card.nonCreature | DestinationZone2$ Graveyard
+
+A:AB$ ChangeZone | Named$ Ascend | Cost$ 3 G | Origin$ Battlefield | Destination$ Exile | SorcerySpeed$ True | SubAbility$ AscendTransform | RememberChanged$ True | PrecostDesc Ascend— | SpellDescription$ ({3}{G}: Exile this creature, then return it to the battlefield transformed. Ascend only as a sorcery.)
+SVar:AscendTransform:DB$ ChangeZone | Defined$ Remembered | Origin$ All | Destination$ Battlefield | Transformed$ True | GainControl$ True
+
+Oracle:When this creature enters, reveal the top two cards of your library. Put a noncreature card revealed this way into your hand and the rest into your graveyard.\nAscend {3}{G} ({3}{G}: Exile this creature, then return it to the battlefield transformed. Ascend only as a sorcery.)
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Weathered Pilgrim
+ManaCost:no cost
+Colors:Green
+Types:Creature Human Scout
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChangeZone | TriggerDescription$ When this creature enters, return target card from your graveyard to your hand.
+SVar:TrigChangeZone:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Card.YouCtrl
+
+Oracle:When this creature enters, return target card from your graveyard to your hand.

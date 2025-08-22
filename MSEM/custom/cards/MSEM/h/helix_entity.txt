@@ -7,10 +7,10 @@ K:Flying
 K:Lifelink
 K:Haste
 
-T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | Execute$ TrigSacrifice | TriggerDescription$ At the beginning of the end step, sacrifice CARDNAME.
+T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | Execute$ TrigSacrifice | TriggerDescription$ At the beginning of the end step, sacrifice this creature.
 SVar:TrigSacrifice:DB$ Sacrifice
 
-Oracle:Flying, lifelink, haste\nAt the beginning of the end step, sacrifice Helix Entity.
+Oracle:Flying, lifelink, haste\nAt the beginning of the end step, sacrifice this creature.
 
 SVar:EndOfTurnLeavePlay:True
 SVar:PlayMain1:TRUE

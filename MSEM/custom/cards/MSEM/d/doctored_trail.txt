@@ -2,9 +2,9 @@ Name:Doctored Trail
 ManaCost:1
 Types:Artifact
 
-A:AB$ Draw | Cost$ 2 Sac<1/CARDNAME> | SpellDescription$ Draw a card.
+A:AB$ Draw | Cost$ 2 Sac<1/CARDNAME/this artifact> | SpellDescription$ Draw a card.
 
-A:AB$ Destroy | Cost$ T Sac<1/CARDNAME> | ValidTgts$ Card.Clue | TgtPrompt$ Select target Clue | SubAbility$ DBDraw | SpellDescription$ Destroy target Clue. If you do, draw a card.
+A:AB$ Destroy | Cost$ T Sac<1/CARDNAME/this artifact> | ValidTgts$ Card.Clue | TgtPrompt$ Select target Clue | SubAbility$ DBDraw | SpellDescription$ Destroy target Clue. If you do, draw a card.
 SVar:DBDraw:DB$ Draw
 
-Oracle:{2}, Sacrifice Doctored Trail: Draw a card.\n{T}, Sacrifice Doctored Trail: Destroy target Clue. If you do, draw a card.
+Oracle:{2}, Sacrifice this artifact: Draw a card.\n{T}, Sacrifice this artifact: Destroy target Clue. If you do, draw a card.
