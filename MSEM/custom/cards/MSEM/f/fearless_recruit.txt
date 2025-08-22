@@ -3,10 +3,10 @@ ManaCost:2 W
 Types:Creature Human Rebel
 PT:2/3
 
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME dies, create a 1/1 white Rebel creature token.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature dies, create a 1/1 white Rebel creature token.
 SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ w_1_1_rebel | TokenOwner$ You
 
-Oracle:When Fearless Recruit dies, create a 1/1 white Rebel creature token.
+Oracle:When this creature dies, create a 1/1 white Rebel creature token.
 
 SVar:SacMe:2
 DeckHas:Ability$Token
