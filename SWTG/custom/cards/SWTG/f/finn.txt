@@ -1,0 +1,10 @@
+Name:Finn
+ManaCost:3 G
+Types:Legendary Creature Human Trooper Soldier
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self,Creature.!token+Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigGainLife | TriggerDescription$ Whenever CARDNAME or another nontoken creature you control enters, you gain 1 life for each nontoken creature you control.
+SVar:TrigGainLife:DB$ GainLife | Defined$ You | LifeAmount$ X
+SVar:X:Count$Valid Creature.YouCtrl+!token
+
+Oracle:Whenever Finn or another nontoken creature you control enters, you gain 1 life for each nontoken creature you control.

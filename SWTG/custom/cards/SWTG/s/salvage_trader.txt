@@ -1,0 +1,9 @@
+Name:Salvage Trader
+ManaCost:3 U
+Types:Creature Crolute
+PT:2/3
+
+A:AB$ Pump | Cost$ T | ValidTgts$ Artifact.YouCtrl | TgtPrompt$ Select target artifact you control | SubAbility$ DBExchange | SpellDescription$ Exchange control of target artifact you control and target artifact an opponent controls with the same mana value.
+SVar:DBExchange:DB$ ExchangeControl | Defined$ ParentTarget | ValidTgts$ Artifact.YouDontCtrl+SharesCMCWith ParentTarget | TgtPrompt$ Select target artifact an opponent controls with the same mana value
+
+Oracle:{T}: Exchange control of target artifact you control and target artifact an opponent controls with the same mana value.

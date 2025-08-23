@@ -1,0 +1,8 @@
+Name:Flame Trooper
+ManaCost:2 R
+Types:Creature Human Trooper
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Creature.Trooper+YouCtrl | AddKeyword$ Menace | Description$ Trooper creatures you control have menace. (They can't be blocked except by two or more creatures.)
+
+Oracle:Trooper creatures you control have menace. (They can't be blocked except by two or more creatures.)
