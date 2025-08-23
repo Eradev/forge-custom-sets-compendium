@@ -13,6 +13,4 @@ SVar:TrigGrantFlight:DB$ Pump | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select 
 SVar:TrigGrantFlight:DB$ Animate | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | Keywords$ Spaceflight | staticAbilities$ STSpaceflight
 SVar:STSpaceflight:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight & BlockBySpaceflight
 
-
-
 Oracle:Spaceflight (This creature can only block or be blocked by creatures with spaceflight.)\nWhenever Upsilon-class Shuttle attacks, target creature you control gains spaceflight until end of turn.
