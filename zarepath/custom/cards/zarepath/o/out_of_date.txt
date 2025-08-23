@@ -2,6 +2,6 @@ Name:Out of Date
 ManaCost:1 B
 Types:Instant
 
-A:SP$ Destroy | Cost$ 1 B | ValidTgts$ Creature.nonArtifact+unequipped | TgtPrompt$ Select target unequipped nonartifact creature | SpellDescription$ Destroy target unequipped nonartifact creature.
+A:SP$ Destroy | Cost$ 1 B | ValidTgts$ Creature.nonArtifact+!equipped | TgtPrompt$ Select target unequipped nonartifact creature | SpellDescription$ Destroy target unequipped nonartifact creature.
 
 Oracle:Destroy target unequipped nonartifact creature.
