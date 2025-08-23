@@ -9,9 +9,8 @@ SVar:BlockSpaceflight:Mode$ CantBlockBy | ValidAttacker$ Creature.withoutSpacefl
 SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpaceflight+withoutSpacereach | ValidAttacker$ Creature.Self | Description$ CARDNAME can be blocked only by creatures with spaceflight.
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGrantFlight | TriggerDescription$ When CARDNAME enters, up to two target Jedi creatures you control gain spaceflight until end of turn.
-SVar:TrigGrantFlight:DB$ Animate | ValidTgts$ Creature.Jedi+YouCtrl | TgtPrompt$ Select up to two target Jedi creatures you control | TargetMin$ 0 | TargetMax$ 2 | Keywords$ Spaceflight | staticAbilities$ Spaceflight1,Spaceflight2 | sVars$ BlockSpaceflight,BlockBySpaceflight
-SVar:Spaceflight1:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight
-SVar:Spaceflight2:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockBySpaceflight
+SVar:TrigGrantFlight:DB$ Animate | ValidTgts$ Creature.Jedi+YouCtrl | TgtPrompt$ Select up to two target Jedi creatures you control | TargetMin$ 0 | TargetMax$ 2 | Keywords$ Spaceflight | staticAbilities$ STSpaceflight
+SVar:STSpaceflight:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight & BlockBySpaceflight
 
 K:Meditate
 S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withoutDiscountmeditate | AddAbility$ Meditate
@@ -23,5 +22,6 @@ SVar:DiscountMeditate:AB$ ChangeZone | Cost$ W | ActivationZone$ Battlefield | S
 SVar:FastMeditate:AB$ ChangeZone | Cost$ 1 W | ActivationZone$ Battlefield | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand.)
 SVar:DiscountFastMeditate:AB$ ChangeZone | Cost$ W | ActivationZone$ Battlefield | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SubAbility$ JediScry | SpellDescription$ Meditate (Return this creature to its owner's hand.)
 SVar:JediScry:DB$ Scry | ScryNum$ 1 | ConditionDefined$ Self | ConditionPresent$ Card.Jedi
+
 
 Oracle:Spaceflight (This creature can only block or be blocked by creatures with spaceflight.)\nWhen Jedi Starfighter enters, up to two target Jedi creatures you control gain spaceflight until end of turn.\nMeditate 1W (Return this creature to its owner's hand. Meditate only as a sorcery.)
