@@ -1,0 +1,10 @@
+Name:Hedron Seraph
+ManaCost:W
+Types:Creature Angel Warrior
+PT:1/2
+
+K:Flying
+
+A:AB$ Pump | Cost$ Sac<1/CARDNAME> | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | AddKeyword$ Protection from everything | SpellDescription$ Target creature you control gains protection from everything until the end of turn. 
+
+Oracle:Flying\nSacrifice this creature: Target creature you control gains protection from everything until the end of turn.

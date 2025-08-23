@@ -1,0 +1,9 @@
+Name:Thriving Order
+ManaCost:1 G G
+Types:Sorcery
+
+A:SP$ ChangeZone | Cost$ 1 G G Sac<1/Creature> | Origin$ Library | Destination$ Battlefield | ChangeType$ Creature.cmcLE5 | ChangeNum$ 1 | StackDescription$ SpellDescription | SpellDescription$ Search your library for a creature card with mana value 5 or less, put it onto the battlefield, then shuffle.
+
+Oracle:As an additional cost to cast this spell, sacrifice a creature.\nSearch your library for a creature card with mana value 5 or less, put it onto the battlefield, then shuffle.
+
+SVar:AIPreference:SacCost$Creature

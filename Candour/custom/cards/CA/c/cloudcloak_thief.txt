@@ -1,0 +1,11 @@
+Name:Cloudcloak Thief
+ManaCost:W
+Types:Creature Human Wizard
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may exile target artifact or enchantment until it leaves the battlefield.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment | Duration$ UntilHostLeavesPlay
+
+Oracle:When this creature enters, you may exile target artifact or enchantment until it leaves the battlefield.
+
+SVar:PlayMain1:TRUE

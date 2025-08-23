@@ -1,0 +1,15 @@
+Name:Ire
+ManaCost:1 R R
+Types:Creature Elemental Incarnation
+PT:1/1
+
+K:Double Strike
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigPumpAll | TriggerDescription$ When this creature enters, creatures you control get +1/+0 and gain haste until end of turn.
+SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | KW$ Haste
+
+K:Evoke:ExileFromHand<1/Card.Red+Other/red card>
+
+Oracle:Double strike\nWhen this creature enters, creatures you control get +1/+0 and gain haste until end of turn.\nEvoke—Exile a red card from your hand.
+
+SVar:PlayMain1:TRUE
