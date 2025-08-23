@@ -1,7 +1,7 @@
 [metadata]
 Code=SWTG_TFA
 Date=2019-05-01
-Name=SW:TG The Force Awakens
+Name=The Force Awakens
 Type=Custom
 Foil=NotSupported
 
