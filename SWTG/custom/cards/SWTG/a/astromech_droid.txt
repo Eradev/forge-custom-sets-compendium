@@ -1,0 +1,16 @@
+Name:Astromech Droid
+ManaCost:W
+Types:Artifact Creature Droid
+PT:0/1
+
+A:AB$ Pump | Cost$ T | ValidTgts$ Creature.Starship+YouCtrl | TgtPrompt$ Select target Starship creature you control | NumAtt$ +1 | NumDef$ +1 | KW$ Vigilance | SpellDescription$ Target Starship creature you control gets +1/+1 and gains vigilance until end of turn.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigRepair | TriggerDescription$ When CARDNAME dies, put four repair counters on it.
+SVar:TrigRepair:DB$ PutCounter | CounterType$ REPAIR | CounterNum$ 4 | Defined$ TriggeredCard
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | IsPresent$ Card.Self+counters_GE1_REPAIR | PresentZone$ Graveyard | Execute$ TrigRemoveRepair | TriggerDescription$ At the beginning of your upkeep, if CARDNAME is in your graveyard with repair counters, remove a repair counter. When the last is removed, you may cast it from your graveyard until end of turn.
+SVar:TrigRemoveRepair:DB$ RemoveCounter | CounterType$ REPAIR | CounterNum$ 1 | Defined$ Self
+T:Mode$ CounterRemoved | TriggerZones$ Graveyard | ValidCard$ Card.Self | CounterType$ REPAIR | NewCounterAmount$ 0 | Execute$ DBCast | TriggerDescription$ When the last repair counter is removed from this card, you may cast it until end of turn.
+SVar:DBCast:DB$ Effect | StaticAbilities$ STPlay | ForgetOnMoved$ Graveyard | RememberObjects$ Self | Duration$ EndOfTurn
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Graveyard | Description$ Until the end of turn, you may play EFFECTSOURCE.
+
+Oracle:{T}: Target starship creature you control gets +1/+1 and gains vigilance until end of turn.\nRepair 4 (When this creature dies, put four repair counters on it. At the beginning of your upkeep, remove a repair counter. Whenever the last is removed, you may cast it from your graveyard until end of turn.)
