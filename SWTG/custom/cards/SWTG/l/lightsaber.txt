@@ -8,4 +8,4 @@ K:Equip:3
 
 S:Mode$ ReduceCost | ValidTarget$ Creature.Jedi,Creature.Sith | ValidSpell$ Activated.Equip | Amount$ 2 | ValidCard$ Card.Self | Description$ CARDNAME's equip ability costs {1} if it targets a Jedi or Sith.
 
-Oracle:Equipped creature gets +1/+0 and has first strike.\nEquip {3}\nUnderworld Slums' equip ability costs {1} if it targets a Jedi or Sith.
+Oracle:Equipped creature gets +1/+0 and has first strike.\nEquip {3}\nLightsaber's equip ability costs {1} if it targets a Jedi or Sith.
