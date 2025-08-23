@@ -190,7 +190,7 @@ Type=Custom
 # 280
 281 R Greed Vaccum @Bear Frymire
 282 R Nightblade Ronin @Dmonik Mayer
-283 R Candlelit Scorge @Noah Thatcher
+283 R Candlelit Scourge @Noah Thatcher
 285 R Menagerie Caretaker @Sandara Tang
 286 R Mindrake Trawler @Diane Franco
 287 R Emergent Penmanship @Sandara Tang
