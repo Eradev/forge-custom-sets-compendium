@@ -5,6 +5,6 @@ PT:2/1
 
 K:Vigilance
 
-A:AB$ Protection | Cost$ {T} | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | Gains$ Choice | Choices$ AnyColor | SpellDescription$ Target creature you control gains protection from the color of your choice until end of turn.
+A:AB$ Protection | Cost$ T | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | Gains$ Choice | Choices$ AnyColor | SpellDescription$ Target creature you control gains protection from the color of your choice until end of turn.
 
 Oracle:Vigilance\n{T}: Target creature you control gains protection from the color of your choice until end of turn.
