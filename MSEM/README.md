@@ -4,8 +4,6 @@ Sets part of [MSEM](https://snapdragonfirework.wixsite.com/msem2).
 
 Sets information can be found on [lackeybot](https://lackeybot.com/msem/search).
 
-> These sets contains custom creature and Planeswalker types. You need to add them every time you update Forge.
-
 ## Changes
 
 These changes might not be reflected in their official ruling.
@@ -19,12 +17,10 @@ These changes might not be reflected in their official ruling.
 
 * Drop the `custom` folder in `%appdata%\Forge`;
 * Drop the `pics` folder in `%appdata%\..\Local\Forge\cache`;
-* Copy the custom types inside `custom\typelists\MSEM.txt` into `res\lists\TypeLists.txt` located under your Forge installation.
 
 ### Scripts (Powershell)
 
 * Run the `install.ps1` script;
-* Run the `install-custom-types.ps1` script.
 
 ## Set implementation progress
 
