@@ -1,4 +1,4 @@
-Name:Vivacious Ridgline
+Name:Vivacious Ridgeline
 ManaCost:no cost
 Types:Land
 
