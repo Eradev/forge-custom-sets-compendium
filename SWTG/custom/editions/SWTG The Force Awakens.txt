@@ -1,7 +1,7 @@
 [metadata]
-Code=TFA
+Code=SWTG_TFA
 Date=2019-05-01
-Name=SWTG The Force Awakens
+Name=SW:TG The Force Awakens
 Type=Custom
 Foil=NotSupported
 
@@ -21,6 +21,3 @@ Foil=NotSupported
 13 R Rey
 14 C Upsilon-class Shuttle
 15 C Buried Ruin
-
-
-[tokens]
