@@ -1,0 +1,8 @@
+Name:Skull of the World
+ManaCost:4
+Types:Legendary Artifact
+
+A:AB$ ChangeZone | Cost$ T Discard<0/Hand> | ChangeType$ Card | Origin$ Library | Destination$ Hand | Shuffle$ True | ConditionCheckSVar$ X | ConditionSVarCompare$ GE2 | SpellDescription$ If two or more cards were discarded this way, search your library for a card and put that card into your hand, then shuffle.
+SVar:X:Discarded$Valid Card
+
+Oracle:{T}, Discard your hand: If two or more cards were discarded this way, search your library for a card and put that card into your hand, then shuffle.
