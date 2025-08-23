@@ -154,3 +154,6 @@ TokenFallbackCode=MSEM_CHAMPIONS
 148 S Clawing Shaman @Felipe Castro
 149 S Boundless Hopes @Bhaskar Rac
 150 S Reflected Moment @randiocalrissian
+
+[CreatureTypes]
+Artist:Artists
