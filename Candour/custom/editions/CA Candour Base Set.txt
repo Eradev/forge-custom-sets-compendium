@@ -188,7 +188,7 @@ Type=Custom
 # 274-278
 279 R Vexed Temple @Anthony Avon
 # 280
-281 R Greed Vaccum @Bear Frymire
+281 R Greed Vacuum @Bear Frymire
 282 R Nightblade Ronin @Dmonik Mayer
 283 R Candlelit Scourge @Noah Thatcher
 285 R Menagerie Caretaker @Sandara Tang
