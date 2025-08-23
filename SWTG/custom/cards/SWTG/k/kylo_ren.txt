@@ -13,4 +13,4 @@ SVar:TrigPumpTap:DB$ Pump | Defined$ Self | NumAtt$ X | NumDef$ 0 | SubAbility$ 
 SVar:DBTap:DB$ Tap | ValidTgts$ Creature.DefenderCtrl | TgtPrompt$ Select up to one target creature defending player controls | TargetMin$ 0 | TargetMax$ 1
 SVar:X:Count$ValidGraveyard Creature.YouOwn
 
-Oracle:Haste, first strike\nCARDNAME attacks each turn if able.\nWhenever CARDNAME attacks, it gets +1/+0 for each creature card in your graveyard and you may tap target creature defending player controls.
+Oracle:Haste, first strike\nKylo Ren attacks each turn if able.\nWhenever Kylo Ren attacks, it gets +1/+0 for each creature card in your graveyard and you may tap target creature defending player controls.
