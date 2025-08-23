@@ -7,7 +7,7 @@ S:Mode$ Continuous | CharacteristicDefining$ True | SetPower$ CreatureCount | Se
 SVar:CreatureCount:Count$Valid Creature.YouCtrl
 
 T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigDestroy | TriggerDescription$ Whenever this creature deals combat damage to a player, destroy target creature with toughness less than its power.
-SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Creature.toughnessLTX | TgtPrompt$ Select target creature with toughness less than CARDNAME's power.
-SVar:X:Count$CardToughness
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Creature.toughnessLTX | TgtPrompt$ Select target creature with toughness less than this creature's power.
+SVar:X:Count$CardPower
 
 Oracle:This creature's power and toughness are each equal to the number of creatures you control.\nWhenever this creature deals combat damage to a player, destroy target creature with toughness less than its power.
