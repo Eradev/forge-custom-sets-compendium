@@ -274,3 +274,10 @@ Booster=7 Common, 5 Uncommon, 2 RareMythic, 1 BasicLand
 8 c_a_weapon_equipment
 9 c_a_weapon_equipment
 10 c_a_weapon_equipment
+
+[CreatureTypes]
+Nanobot:Nanobots
+[WalkerTypes]
+Nic
+L3-T
+Talya

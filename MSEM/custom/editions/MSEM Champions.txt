@@ -183,3 +183,6 @@ Type=Custom
 [other]
 26 emblem_simul
 27 plains
+
+[CreatureTypes]
+Artist:Artists
