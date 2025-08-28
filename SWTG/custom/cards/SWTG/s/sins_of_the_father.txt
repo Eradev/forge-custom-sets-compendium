@@ -1,0 +1,10 @@
+Name:Sins of the Father
+ManaCost:1 B
+Types:Sorcery
+
+A:SP$ ChangeZoneAll | ValidTgts$ Player | TgtPrompt$ Select target player | Origin$ Graveyard | Destination$ Exile | ChangeType$ Card | RememberChanged$ True | SubAbility$ DBLoseLife | SpellDescription$ Exile target player's graveyard. That player loses 1 life for each instant or sorcery card exiled this way.
+SVar:DBLoseLife:DB$ LoseLife | Defined$ TargetedPlayer | LifeAmount$ X | SubAbility$ DBCleanup
+SVar:X:Remembered$Valid Instant,Sorcery
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Exile target player's graveyard. That player loses 1 life for each instant or sorcery card exiled this way.

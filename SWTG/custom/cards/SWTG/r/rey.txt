@@ -1,0 +1,16 @@
+Name:Rey
+ManaCost:G W U
+Types:Legendary Creature Human Knight
+PT:3/3
+
+K:Vigilance
+K:First Strike
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReveal | TriggerDescription$ Whenever CARDNAME enters or leaves the battlefield, reveal the top card of target player's library. You gain life equal to that card's mana value.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigReveal | Secondary$ True | TriggerDescription$ Whenever CARDNAME enters or leaves the battlefield, reveal the top card of target player's library. You gain life equal to that card's mana value.
+SVar:TrigReveal:DB$ PeekAndReveal | ValidTgts$ Player | TgtPrompt$ Select target player | PeekAmount$ 1 | NoPeek$ True | RememberRevealed$ True | SubAbility$ DBGainLife | SpellDescription$ Reveal the top card of target player's library. You gain life equal to that card's mana value.
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ X | SubAbility$ DBCleanup
+SVar:X:Remembered$CardManaCost
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Vigilance, first strike\nWhenever Rey enters or leaves the battlefield, reveal the top card of target player's library. You gain life equal to that card's mana value.

@@ -1,0 +1,11 @@
+Name:Force Stasis
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Charm | Choices$ TapFreeze,ReturnSpell
+SVar:TapFreeze:DB$ Tap | ValidTgts$ Creature | TgtPrompt$ Select target creature | SubAbility$ DBNoUntap | SpellDescription$ Tap target creature. It doesn't untap during its controller's next untap step.
+SVar:DBNoUntap:DB$ Pump | Defined$ Targeted | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent
+
+SVar:ReturnSpell:DB$ Counter | TargetType$ Spell | ValidTgts$ Instant.YouDontCtrl,Sorcery.YouDontCtrl | TgtPrompt$ Select target instant or sorcery spell you don't control | Destination$ Hand | SpellDescription$ Return target instant or sorcery spell you don't control to its owner's hand. (That spell won't resolve.)
+
+Oracle:Choose one -\n• Tap target creature. It doesn't untap during its controller's next untap step.\n• Return target instant or sorcery spell you don't control to its owner's hand. (That spell won't resolve.)
