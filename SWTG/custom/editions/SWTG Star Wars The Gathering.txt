@@ -306,7 +306,6 @@ Bith:Bith
 Calamari:Calamari
 Cerean:Cereans
 Chiss:Chiss
-Crolute:Crolutes
 Dathomirian
 Droid:Droids
 Ewok:Ewoks
