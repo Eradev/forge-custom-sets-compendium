@@ -298,7 +298,6 @@ Foil=NotSupported
 13 emblem_obi-wan_kenobi
 
 [CreatureTypes]
-Advisor:Advisors
 Aqualish:Aqualish
 Arcona:Arcona
 AT-AT:AT-ATs
