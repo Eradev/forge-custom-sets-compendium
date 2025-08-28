@@ -23,7 +23,6 @@ Foil=NotSupported
 15 C Buried Ruin
 
 [CreatureTypes]
-Advisor:Advisors
 Crolute:Crolutes
 Droid:Droids
 Sith:Sith
