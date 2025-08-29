@@ -21,3 +21,10 @@ Foil=NotSupported
 13 R Rey
 14 C Upsilon-class Shuttle
 15 C Buried Ruin
+
+[CreatureTypes]
+Crolute:Crolutes
+Droid:Droids
+Sith:Sith
+Starship:Starships
+Trooper:Troopers
