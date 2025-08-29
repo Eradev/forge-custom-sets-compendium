@@ -1,0 +1,9 @@
+Name:Echoes of Valour
+ManaCost:R
+Types:Instant
+
+A:SP$ CopyPermanent | Defined$ You | ValidTgts$ Artifact,Creature | TgtPrompt$ Select target artifact or creature | RememberTokens$ True | SpellDescription$ Create a token that's a copy of target artifact or creature, then sacrifice that token. | SubAbility$ DBSac
+SVar:DBSac:DB$ SacrificeAll | Defined$ Remembered | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Create a token that's a copy of target artifact or creature, then sacrifice that token.
