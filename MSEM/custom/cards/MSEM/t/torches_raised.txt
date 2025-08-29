@@ -1,4 +1,4 @@
-Name:Torch Raised
+Name:Torches Raised
 ManaCost:3 R
 Types:Enchantment
 
