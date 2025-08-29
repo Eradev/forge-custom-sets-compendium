@@ -1,0 +1,20 @@
+Name:Chronicles of the Kitsune
+ManaCost:W
+Types:Enchantment Gallery
+
+Text:(Choose only one work as a sorcery to add its ability.)
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ When this Gallery enters, create a 2/1 red and white Fox creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ rw_2_1_fox | TokenAmount$ 1 | TokenOwner$ You
+
+A:AB$ Effect | Cost$ 2 W W | SorcerySpeed$ True | CheckSVar$ GalleryUnlocked | SVarCompare$ EQ0 | StaticAbilities$ DBPumpToken | Duration$ Permanent | SubAbility$ DBGalleryUnlocked | SpellDescription$ Act I:Ascent — Creature tokens you control get +1/+1 and have flying.
+SVar:DBPumpToken:Mode$ Continuous | Affected$ Creature.token+YouCtrl | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Flying | Description$ Act I:Ascent — Creature tokens you control get +1/+1 and have flying.
+
+A:AB$ Effect | Cost$ 3 W W | SorcerySpeed$ True | CheckSVar$ GalleryUnlocked | SVarCompare$ EQ0 | Triggers$ TrigHuLiCheck | Duration$ Permanent | SubAbility$ DBGalleryUnlocked | SpellDescription$ Act II:Descent — At the beginning of your end step, if you control no creatures, create Hu Li, a legendary 4/4 white Fox Spirit creature token with flying and lifelink.
+SVar:TrigHuLiCheck:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Creature.YouCtrl | PresentCompare$ EQ0 | Execute$ TrigHuLi | TriggerDescription$ Act II:Descent — At the beginning of your end step, if you control no creatures, create Hu Li, a legendary 4/4 white Fox Spirit creature token with flying and lifelink.
+SVar:TrigHuLi:DB$ Token | TokenScript$ hu_li | TokenAmount$ 1 | TokenOwner$ You
+
+SVar:DBGalleryUnlocked:DB$ StoreSVar | SVar$ GalleryUnlocked | Type$ Number | Expression$ 1
+SVar:GalleryUnlocked:0
+
+Oracle:(Choose only one work as a sorcery to add its ability.)\nWhen this Gallery enters, create a 2/1 red and white Fox creature token.\nAct I: Ascent—{2}{W}{W}: Creature tokens you control get +1/+1 and have flying.\nAct II: Descent—{3}{W}{W}: At the beginning of your end step, if you control no creatures, create Hu Li, a legendary 4/4 white Fox Spirit creature token with flying and lifelink.

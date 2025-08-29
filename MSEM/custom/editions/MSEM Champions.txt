@@ -186,3 +186,6 @@ Type=Custom
 
 [CreatureTypes]
 Artist:Artists
+
+[EnchantmentTypes]
+Gallery:Galleries
