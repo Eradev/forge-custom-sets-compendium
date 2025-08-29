@@ -26,7 +26,7 @@ These changes might not be reflected in their official ruling.
 
 ```text
 Video Horror System (VHS)             -  26% (23/86)
-MSEM Champions (CHAMPIONS)            -  16% (24/146)
+MSEM Champions (CHAMPIONS)            -  17% (25/146)
 MSEM Champions: Masterpiece (MPS_MSE)
 Kaleidoscope (KLC)                    -  97% (105/108)
   Missing cards:
