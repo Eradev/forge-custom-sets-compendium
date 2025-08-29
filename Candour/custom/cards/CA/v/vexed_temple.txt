@@ -7,11 +7,11 @@ SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ Combo R W | SpellDescription$ Add {R} or {W}.
 
-A:AB$ Animate | Cost$ 1 R W | Defined$ Self | Power$ 3 | Toughness$ 2 | Types$ Elemental | Colors$ Red,White | OverwriteColors$ True | Keywords$ First Strike | Triggers$ TrigAttack | SpellDescription$ This land becomes a 3/2 red and white Elemental creature with first strike until end of turn. It's still a land.
+A:AB$ Animate | Cost$ 1 R W | Defined$ Self | Power$ 3 | Toughness$ 2 | Types$ Elemental | Colors$ Red,White | OverwriteColors$ True | Keywords$ First Strike | Triggers$ TrigAttack | SpellDescription$ Until end of turn, this land becomes a 3/2 red and white Elemental creature with first strike. It's still a land.
 SVar:TrigAttack:Mode$ Attacks | ValidCard$ Card.Self | Execute$ DBDamage | TriggerDescription$ Whenever this land attacks, it deals 2 damage to each opponent and you gain 2 life.
 SVar:DBDamage:DB$ DamageAll | NumDmg$ 2 | ValidPlayers$ Player.Opponent | SubAbility$ DBGainLife
 SVar:DBGainLife:DB$ GainLife | LifeAmount$ 2
 
-Oracle:This land enters tapped.\n{T}: Add {R} or {W}.\n{1}{R}{W}: This land becomes a 3/2 red and white Elemental creature with first strike until end of turn. It's still a land.\nWhenever this land attacks, it deals 2 damage to each opponent and you gain 2 life.
+Oracle:This land enters tapped.\n{T}: Add {R} or {W}.\n{1}{R}{W}: Until end of turn, this land becomes a 3/2 red and white Elemental creature with first strike. It's still a land.\nWhenever this land attacks, it deals 2 damage to each opponent and you gain 2 life.
 
 SVar:HasAttackEffect:TRUE
