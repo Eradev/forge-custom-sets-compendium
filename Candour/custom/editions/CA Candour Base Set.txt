@@ -100,8 +100,8 @@ Type=Custom
 93 R Momentum Weaver @Nathan Mohamed
 94 U Prismatic Fissure @Timi Honkanen
 95 U Curious Peregrination @Edgar Sánchez Hidalgo
-96 R Trap Essence @Sandara Tang
-# 95-100
+96 R Trap Essence (CA) @Sandara Tang
+# 97-100
 101 M Force of Anguish @Dominik Mayer
 102 U Guardian Thrull @PINDURSKI
 103 U Perilous Depths @PINDURSKI
