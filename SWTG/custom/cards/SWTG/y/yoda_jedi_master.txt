@@ -1,6 +1,6 @@
 Name:Yoda, Jedi Master
 ManaCost:1 G U
-Types:Planeswalker Yoda
+Types:Legendary Planeswalker Yoda
 Loyalty:3
 
 A:AB$ Dig | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | DigNum$ 2 | ChangeNum$ 1 | DestinationZone$ Library | LibraryPosition$ -1 | DestinationZone2$ Library | LibraryPosition2$ 0 | NoReveal$ True | SpellDescription$ Look at the top two cards of your library. Put one on the bottom of your library.
