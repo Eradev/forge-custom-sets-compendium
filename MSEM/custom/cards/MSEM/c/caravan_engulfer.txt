@@ -1,0 +1,12 @@
+Name:Caravan Engulfer
+ManaCost:4 R R
+Types:Creature Beast
+PT:4/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ OppCantBlock | TriggerDescription$ When this creature enters, creatures you don't control can't block this turn.
+SVar:OppCantBlock:DB$ Effect | StaticAbilities$ KWPump | Description$ Creatures you don't control can't block this turn.
+SVar:KWPump:Mode$ CantBlock | ValidCard$ Creature.YouDontCtrl | Description$ Creatures you don't control can't block this turn.
+
+Oracle:When this creature enters, creatures you don't control can't block this turn.
+
+SVar:PlayMain1:TRUE
