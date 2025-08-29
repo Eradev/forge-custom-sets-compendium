@@ -1,0 +1,13 @@
+Name:Gilt-Leaf Slasher
+ManaCost:B G
+Types:Creature Elf Warrior
+PT:1/1
+
+K:First Strike
+
+K: Deathtouch
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this creature enters, draw a card.
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+Oracle:First strike, deathtouch\nWhen this creature enters, draw a card.
