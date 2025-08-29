@@ -5,7 +5,7 @@ Date=2023-01-01
 Type=Custom
 
 [cards]
-1 U Hedron Seraph @PINDURSKI
+1 R Spectral Confluence @Dominik Mayer
 2 U Impermanate @Dominik Mayer
 3 R Flickerfowl @Rene Bartang
 4 R Pride Runemage @Nereviza
@@ -33,11 +33,11 @@ Type=Custom
 26 U Tranquil Brightblade @Sandara Tang
 27 R Parallax Procession @Dominik Mayer
 28 M Duskspine Leopard @Sandara Tang
-29 U White Orchid Exile @Dominik Mayer
+29 U Consign to Stardust @Sandara Tang
 30 R Sarpadian Dreadlands @Grady Frederick
 31 R Dune Rager @Damien Mammolti
 32 U Snowy Standoff @Samara Tang
-33 R Ceaseless Dragon @Samara Tang
+33 R Welcoming Virtuoso @Samara Tang
 34 M Lotus Herald @Sandara Tang
 35 U Dormant Chromeseed @Sandara Tang
 36 R Scenic Detour @Sandara Tang
@@ -53,15 +53,15 @@ Type=Custom
 46 R Gilded Pouncer @Daniel Cotter
 47 R Angelic Wrath @Andreas Huang
 48 M Alabaster Equipoise @Evyn Fong
-49 R Renewed Blessing @Acrassan
-50 R Sunblaze Exemplar @Julie Dillon
+49 M Thalia, Steadfast Cathar @Mark Henry Bustamante
+50 U Havengul Splicer @Jeremy Carver
 51 U Maddening Revelation @Carl Van Laguun
 52 U Fleeting Rootwalla @Guillermo Redongo
 53 U Seeker of Secrets @Steve Argyle
 54 U Pilgrim of the Wind @Edgar Sánchez Hidalgo
 55 R Mirror Crisis @Oleg Kapustin
 56 U Reap the Catacombs @Minh Nguyen
-57 R Knight of the Tides @Edgar Sánchez Hidalgo
+57 R Tidal Conflience @Edgar Sánchez Hidalgo
 58 U Predestine @Romain Kurdi
 59 M Mu Yangling, Seeing Wind @Romain Kurdi
 60 R Conduit Mage @Romain Kurdi
@@ -99,6 +99,8 @@ Type=Custom
 92 R Memory Severance @Noah Thatcher
 93 R Momentum Weaver @Nathan Mohamed
 94 U Prismatic Fissure @Timi Honkanen
+95 U Curious Peregrination @Edgar Sánchez Hidalgo
+96 R Trap Essence @Sandara Tang
 # 95-100
 101 M Force of Anguish @Dominik Mayer
 102 U Guardian Thrull @PINDURSKI
@@ -140,7 +142,11 @@ Type=Custom
 138 M Necropolis Seed Engine @Dominik Mayer
 139 U Malevolent Tranquility @Dominik Mayer
 140 U Opalescent Effacement @Jeremy Carver
-# 141-150
+141 R Bloodcrazed Brawler @Oleg Kapustin
+142 U Grave Trawler @Oleg Kapustin
+143 R Erudition Dissolution @Nick Moskvin
+144 R Oblivion Confluence @Timi Honkanen
+# 145-150
 151 U Spellbomb Detonation @Romain Kurdi
 152 U Glitterfowl Curio @Valentin Gloaguen & Alessandro Poli
 153 U Divine Deflagration @Sandara Tang
@@ -158,7 +164,16 @@ Type=Custom
 165 M Chandra, Young Pyromancer @Fajareka Setiawan
 166 R Lunar Armageddon @Riccardo Rullo
 167 U Kaleidoclasm @Timi Honkanen
-# 168-200
+168 R Delusions of Grandeur @Dominik Mayer
+169 U Pyrostatic Captain @Dominik Mayer
+170 U Smiting Bolt @Oscar Valverde
+171 R Crust Dismantler @Diane Franco
+172 R Echoes of Valour @Steven Shan
+173 R Wildfire Confluence @Dominik Mayer
+174 M Chaotic Tutor @Matt Crowdery
+175 U Ashes to Ashes // Dust to Dust @Dominik Mayer
+176 R Collected Construction @Biagio D'Alessandro
+# 177-200
 201 M Nissa, Unbound Animist @Romain Kurdi
 202 U Nissa's Binding @Simon Marczyk
 203 U Crystalline Petroglyph @Anna Podedworna
@@ -174,7 +189,13 @@ Type=Custom
 213 M Odyssey @Jeremy Carver
 214 R Bonded Hermit @Teemu Husso
 215 U Polychrome Metamorphosis @Dominik Mayer
-# 216-250
+216 U Arboreal Mahesty @Timi Honkanen
+217 M Feral Rage @Edgar Sánchez Hidalgo
+218 R Undergrowth Confluence @Jeremy Carver
+219 M Regal Tutor @Sandara Tang
+220 U Pollenburst Dryad @Ave Tetsuya
+221 R Imperious Loamspeaker @Jeremy Carver
+# 222-250
 251 R Waterlogged Archipelago @Anthony Avon
 252 R Contaminated Rivulet @Anthony Avon
 253 R Sanguinary Morass @Anthony Avon
@@ -191,10 +212,14 @@ Type=Custom
 281 R Greed Vacuum @Bear Frymire
 282 R Nightblade Ronin @Dmonik Mayer
 283 R Candlelit Scourge @Noah Thatcher
+284 R Botanical Behemoth @Timi Honkanen
 285 R Menagerie Caretaker @Sandara Tang
 286 R Mindrake Trawler @Diane Franco
 287 R Emergent Penmanship @Sandara Tang
-# 288-300
+288 R Gilt-Leaf Slasher @Aldo Domínguez
+289 R Resplendent Chargers @Dominik Mayer
+290 R Terramancy @Alex Petruk
+# 291-300
 301 R Bloodblitz Battle-Axe @Dominik Mayer
 302 M Mox Bismuth @Robert Maldonado
 303 R Vivacious Ridgeline @Sandara Tang
@@ -208,3 +233,8 @@ Type=Custom
 311 M Multiform Mauler @Timi Honkanen
 312 U Karn's Bauble @Luc Samori
 313 R Flooded Abyss @Anthony Avon
+314 M Terramorphic Vista @Timi Honkanen
+315 R Prosperous Lotus @Jeremy Carver
+316 M Karn, Phyrexian Golem @Noah Thatcher
+317 M Cruciform Stalker @Biagio D'Alessandro
+318 U Manaform Hart @Jeremy Carver
