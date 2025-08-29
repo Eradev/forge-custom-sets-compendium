@@ -1,0 +1,17 @@
+Name:Vexed Fen
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ Combo B R | SpellDescription$ Add {B} or {R}.
+
+A:AB$ Animate | Cost$ B R | Defined$ Self | Power$ 1 | Toughness$ 2 | Types$ Elemental | Colors$ Black,Red | OverwriteColors$ True | Keywords$ Deathtouch | Triggers$ TrigAttack | SpellDescription$ Until end of turn, this land becomes a 1/2 black and red Elemental creature with deathtouch. It's still a land.
+SVar:TrigAttack:Mode$ Attacks | ValidCard$ Card.Self | Execute$ DBDiscard | TriggerDescription$ Whenever this land attacks, discard a card, then draw a card.
+SVar:DBDiscard:DB$ Discard | Defined$ You | NumCards$ 1 | Mode$ TgtChoose | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | Defined$ You
+
+Oracle:This land enters tapped.\n{T}: Add {B} or {R}.\n{B}{R}: Until end of turn, this land becomes a 1/2 black and red Elemental creature with deathtouch. It's still a land.\nWhenever this land attacks, discard a card, then draw a card.
+
+SVar:HasAttackEffect:TRUE

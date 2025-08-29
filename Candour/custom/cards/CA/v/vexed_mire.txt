@@ -1,0 +1,14 @@
+Name:Vexed Mire
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ Combo U B | SpellDescription$ Add {U} or {B}.
+
+A:AB$ Animate | Cost$ 1 U B | Defined$ Self | Power$ 2 | Toughness$ 3 | Types$ Elemental | Colors$ Blue,Black | OverwriteColors$ True | Keywords$ Skulk | Triggers$ TrigCombatDamage | SpellDescription$ Until end of turn, this land becomes a 2/3 blue and black Elemental creature with skulk. It's still a land.
+SVar:TrigCombatDamage:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ DBLoseLifeOpp | TriggerDescription$ Whenever this land deals combat damage to a player, that player loses 2 life.
+SVar:DBLoseLifeOpp:DB$ LoseLife | Defined$ TriggeredTarget | LifeAmount$ 2
+
+Oracle:This land enters tapped.\n{T}: Add {U} or {B}.\n{1}{U}{B}: Until end of turn, this land becomes a 2/3 blue and black Elemental creature with skulk. It's still a land.\nWhenever this land deals combat damage to a player, that player loses 2 life.

@@ -1,0 +1,13 @@
+Name:Wildfire Confluence
+ManaCost:3 R R
+Types:Instant
+
+A:SP$ Charm | Choices$ DBDamage,DBFlashback,DBMana | CharmNum$ 3 | CanRepeatModes$ True
+
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 2 | SpellDescription$ CARDNAME deals 2 damage to any target.
+
+SVar:DBFlashback:DB$ Pump | ValidTgts$ Instant.YouCtrl,Sorcery.YouCtrl | TgtZone$ Graveyard | KW$ Flashback | TgtPrompt$ Choose target instant or sorcery card in your graveyard | SpellDescription$ Target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost.
+
+SVar:DBMana:DB$ Mana | Produced$ R | Amount$ 2 | SpellDescription$ Add {R}{R}.
+
+Oracle:Choose three. You may choose the same mode more than once.\n• Wildfire Confluence deals 2 damage to any target.\n• Target instant or sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost.\n• Add {R}{R}.
