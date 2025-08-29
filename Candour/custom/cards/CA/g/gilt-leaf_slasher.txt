@@ -5,7 +5,7 @@ PT:1/1
 
 K:First Strike
 
-K: Deathtouch
+K:Deathtouch
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this creature enters, draw a card.
 SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
