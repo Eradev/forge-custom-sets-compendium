@@ -1,0 +1,10 @@
+Name:Priestess of Menhet
+ManaCost:3 U
+Types:Creature Human Cleric
+PT:1/4
+
+K:Flying
+
+K:Prowess
+
+Oracle:Flying, prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)

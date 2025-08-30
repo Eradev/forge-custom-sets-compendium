@@ -4,6 +4,6 @@ Types:Land
 
 A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
 
-A:AB$ ChangeZone | Cost$ T Sac<1/CARDNAME> | Origin$ Library | Destination$ Battlefield | Tapped$ True | ChangeType$ Land.Island,Land.Swamp | ChangeNum$ 1 | SpellDescription$ Search your library for a Island or Swamp card, put it onto the battlefield tapped, then shuffle.
+A:AB$ ChangeZone | Cost$ T Sac<1/CARDNAME/this land> | Origin$ Library | Destination$ Battlefield | Tapped$ True | ChangeType$ Land.Island,Land.Swamp | ChangeNum$ 1 | SpellDescription$ Search your library for an Island or Swamp card, put it onto the battlefield tapped, then shuffle.
 
-Oracle:{T}: Add {C}.\n{T}, Sacrifice Umbrous Depths: Search your library for a Island or Swamp card, put it onto the battlefield tapped, then shuffle.
+Oracle:{T}: Add {C}.\n{T}, Sacrifice this land: Search your library for an Island or Swamp card, put it onto the battlefield tapped, then shuffle.

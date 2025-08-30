@@ -1,0 +1,13 @@
+Name:Reform Reality
+ManaCost:5 U R
+Types:Sorcery
+
+A:SP$ RepeatEach | RepeatPlayers$ Player | RepeatSubAbility$ DBExileAll | SubAbility$ DBExile | SpellDescription$ Each player discards all the cards in their hand, then draws that many cards.
+SVar:DBExileAll:DB$ ChangeZoneAll | Origin$ Battlefield | Destination$ Exile | ChangeType$ Permanent.OwnedBy Player.IsRemembered | RememberChanged$ True | SubAbility$ DBDraw | SpellDescription$ Each player exiles all permanents they control, draws that many cards, then puts up to that many permanent cards from their hand onto the battlefield. Exile Reform Reality.
+SVar:DBDraw:DB$ Draw | NumCards$ X | Defined$ Player.IsRemembered | SubAbility$ DBPutIntoPlay
+SVar:DBPutIntoPlay:DB$ ChangeZone | Origin$ Hand | Destination$ Battlefield | DefinedPlayer$ Player.IsRemembered | Chooser$ Player.IsRemembered | ChangeType$ Permanent | ChangeNum$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$Amount
+SVar:DBExile:DB$ ChangeZone | Origin$ Stack | Destination$ Exile | Defined$ Self
+
+Oracle:Each player exiles all permanents they control, draws that many cards, then puts up to that many permanent cards from their hand onto the battlefield. Exile Reform Reality.

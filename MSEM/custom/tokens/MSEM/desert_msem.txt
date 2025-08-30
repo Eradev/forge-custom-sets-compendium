@@ -1,0 +1,8 @@
+Name:Desert Token
+ManaCost:no cost
+Colors:colorless
+Types:Land Desert
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+Oracle:{T}: Add {C}.

@@ -1,0 +1,14 @@
+Name:Avatar of Senmut
+ManaCost:U U
+Types:Creature Avatar
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Creature.Crocodile+YouCtrl | AddPower$ 1 | AddToughness$ 1 | Description$ Crocodile creatures you control get +1/+1.
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self,Creature.Crocodile+YouCtrl | CheckSVar$ X | SVarCompare$ GE4 | Description$ This creature and Crocodile creatures you control can't be blocked as long as you control four or more Islands.
+SVar:X:Count$Valid Island.YouCtrl
+
+Oracle:Crocodile creatures you control get +1/+1.\nThis creature and Crocodile creatures you control can't be blocked as long as you control four or more Islands.
+
+DeckHints:Type$Crocodile
+SVar:BuffedBy:Island

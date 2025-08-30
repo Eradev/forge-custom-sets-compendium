@@ -8,9 +8,9 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.S
 SVar:X:Count$CardPower
 SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 1 | ValidTgts$ Creature.powerLTX | TgtPrompt$ Select target creature
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigTap | TriggerDescription$ When CARDNAME enters, you may tap target creature.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigTap | TriggerDescription$ When this creature enters, you may tap target creature.
 SVar:TrigTap:DB$ Tap | ValidTgts$ Creature | TgtPrompt$ Select target creature
 
-Oracle:Motivate 1 (When this creature enters, you may motivate target creature with less power than this by putting a +1/+1 counter on it.)\nWhen Goriana Tactician enters, you may tap target creature.
+Oracle:Motivate 1 (When this creature enters, you may motivate target creature with less power than this by putting a +1/+1 counter on it.)\nWhen this creature enters, you may tap target creature.
 
 SVar:PlayMain1:TRUE

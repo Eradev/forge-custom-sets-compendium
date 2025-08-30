@@ -1,0 +1,16 @@
+Name:Coastal Cairn
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSurveil | TriggerDescription$ When this land enters, surveil 1.
+SVar:TrigSurveil:DB$ Surveil | Amount$ 1
+
+A:AB$ Mana | Cost$ T | Produced$ Combo G W | SpellDescription$ Add {U} or {R}.
+
+Oracle:This land enters tapped. When it enters, surveil 1.\n{T}: Add {U} or {R}.
+
+DeckHas:Ability$Surveil|Graveyard
+DeckHints:Ability$Graveyard

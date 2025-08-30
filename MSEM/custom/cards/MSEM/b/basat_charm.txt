@@ -1,0 +1,11 @@
+Name:Basat Charm
+ManaCost:R
+Types:Sorcery
+
+A:SP$ Charm | Choices$ DBPump,DBDmg
+
+SVar:DBPump:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ +2 | NumDef$ -1 | IsCurse$ True | SpellDescription$ Target creature gets +2/-1 until end of turn.
+
+SVar:DBDmg:DB$ DealDamage | ValidTgts$ Creature,Planeswalker | TgtPrompt$ Select target creature or planeswalker | NumDmg$ 3 | SpellDescription$ CARDNAME deals 3 damage to target creature or planeswalker.
+
+Oracle:Choose one —\n• Target creature gets +2/-1 until end of turn.\n• Basat Charm deals 3 damage to target creature or planeswalker.

@@ -1,0 +1,12 @@
+Name:Scaled Lurker
+ManaCost:1 U U
+Types:Creature Elemental Crocodile Rogue
+PT:2/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigTap | TriggerDescription$ When this creature enters, tap target creature an opponent controls. That creature doesn't untap during its controller's next untap step.
+SVar:TrigTap:DB$ Tap | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Choose target creature an opponent controls. | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | Defined$ Targeted | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent
+
+Oracle:When this creature enters, tap target creature an opponent controls. That creature doesn't untap during its controller's next untap step.
+
+SVar:PlayMain1:TRUE

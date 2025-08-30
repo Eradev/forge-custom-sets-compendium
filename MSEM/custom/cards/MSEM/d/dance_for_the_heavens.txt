@@ -1,0 +1,10 @@
+Name:Dance for the Heavens
+ManaCost:1 R
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Exile | TgtPrompt$ Choose target card in your graveyard | ValidTgts$ Card | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Exile target card from a graveyard. You may play it this turn.
+SVar:DBEffect:DB$ Effect | StaticAbilities$ STPlay | ExileOnMoved$ Exile | RememberObjects$ Remembered | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ You may play that card this turn.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Exile target card from a graveyard. Your may play it this turn.

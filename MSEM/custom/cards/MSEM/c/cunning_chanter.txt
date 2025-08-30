@@ -1,0 +1,11 @@
+Name:Cunning Chanter
+ManaCost:1 U
+Types:Creature Siren
+PT:2/1
+
+A:AB$ Mana | Cost$ T | Produced$ C | Amount$ 1 | SpellDescription$ Add {C}.
+
+T:Mode$ Taps | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ Whenever this creature becomes tapped, each opponent mills a card.
+SVar:TrigMill:DB$ Mill | Defined$ Opponent | NumCards$ 1
+
+Oracle:{T}: Add {C}.\nWhenever this creature becomes tapped, each opponent mills a card.

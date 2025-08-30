@@ -1,0 +1,10 @@
+Name:Sixpod Sprinter
+ManaCost:2 R R
+Types:Creature Beast
+PT:3/2
+
+K:Haste
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | ValidBlocker$ Creature.withoutFlying+withoutReach | Description$ This creature can't be blocked except by creatures with flying or reach.
+
+Oracle:Haste\nThis creature can't be blocked except by creatures with flying or reach.

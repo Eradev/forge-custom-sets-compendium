@@ -1,0 +1,10 @@
+Name:Bearer of the Lantern
+ManaCost:1 W W
+Types:Creature Human Soldier
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigLife | TriggerDescription$ When this creature enters, you gain 3 life.
+SVar:TrigLife:DB$ GainLife | Defined$ You | LifeAmount$ 3
+
+K:Persist
+
+Oracle:When this creature enters, you gain 3 life.\nPersist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)

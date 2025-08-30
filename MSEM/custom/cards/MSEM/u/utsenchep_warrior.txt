@@ -1,0 +1,8 @@
+Name:Utsenchep Warrior
+ManaCost:1 W
+Types:Creature Human Warrior
+PT:2/1
+
+K:First Strike
+
+Oracle:First strike (This creature deals combat damage before creatures without first strike.)

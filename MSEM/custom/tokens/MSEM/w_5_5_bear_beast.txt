@@ -1,0 +1,6 @@
+Name:Bear Beast Token
+ManaCost:no cost
+Colors:white
+Types:Creature Bear Beast
+PT:5/5
+Oracle:

@@ -26,31 +26,19 @@ These changes might not be reflected in their official ruling.
 
 ```text
 Video Horror System (VHS)             -  26% (23/86)
-MSEM Champions (CHAMPIONS)            -  16% (24/146)
-MSEM Champions: Masterpiece (MPS_MSE)
-Kaleidoscope (KLC)                    -  84% (91/108)
+Kaleidoscope (KLC)                    -  98% (106/108)
   Missing cards:
-    * Chronic Traitor: TODO Check for Paranoia
-    * Kofe-District Scholar: TODO Check for Paranoia
-    * Fractal Findings: TODO Check timing on Clue
-    * Reform Reality
-    * Miede-District Alchemist
-    * Miede-District Enforcer
-    * Rakdos Drakeswarm
-    * Remy, Last of Evanescier
-    * Rheila Rachy
-    * Savants of the Ley
-    * Skull of the World
-    * Strive for the Heavens
-    * Tears of Samang
-    * The Midwife
-    * Thomar's Sowing
-    * Thomar, Fearbringer
-    * Torches Raised
+    * Chronic Traitor: TODO Check for Paranoia paid
+    * Kofe-District Scholar: TODO Check for Paranoia paid
 A Tourney at Whiterun (TWR)           -  11% (31/269)
 The Land Bundle (L)                   - 100% (80/80)
 Tides of War (TOW)                    -  28% (77/271)
-Pyramids of Atuum (POA)               -  15% (20/128)
+Pyramids of Atuum (POA)               -  31% (40/128)
+
+Reprints / Promo sets:
+MSEM Champions (CHAMPIONS)
+MSEM Champions: Masterpiece (MPS_MSE)
+MSEM Secret Lair Drops (LAIR)
 ```
 
 ## Keywords and mechanisms implementation

@@ -1,0 +1,6 @@
+Name:Juggernaut Token
+ManaCost:no cost
+Colors:colorless
+Types:Artifact Creature Juggernaut
+PT:*/*
+Oracle:

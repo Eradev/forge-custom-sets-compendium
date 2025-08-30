@@ -1,0 +1,11 @@
+Name:Banished Companion
+ManaCost:R
+Types:Creature Human Warrior
+PT:2/2
+
+K:Haste
+
+T:Mode$ Attacks | ValidCard$ Creature.Self | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever this creature attacks, it deals 2 damage to you.
+SVar:TrigDamage:DB$ DealDamage | Defined$ You | NumDmg$ 2
+
+Oracle:Haste\nWhenever this creature attacks, it deals 2 damage to you.

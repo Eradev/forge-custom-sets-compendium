@@ -1,0 +1,18 @@
+Name:Miede-District Enforcer
+ManaCost:3 R
+Types:Creature Human Soldier
+PT:2/1
+
+K:Haste
+
+A:AB$ DealDamage | NumDmg$ 2 | Cost$ R T | ValidTgts$ Creature.ThisTurnEntered,Player.IsRemembered | TgtPrompt$ Select target creature that entered this turn, or player that cast a creature spell this turn | SpellDescription$ This creature deals 2 damage to target creature that entered this turn, or player that cast a creature spell this turn.
+# Used to track "player that cast a creature spell this turn." via Player.IsRemembered
+T:Mode$ SpellCast | ValidCard$ Creature | ValidActivatingPlayer$ Player | Static$ True | Execute$ DBRemember
+SVar:DBRemember:DB$ Pump | RememberObjects$ TriggeredCardController
+T:Mode$ Phase | Phase$ Cleanup | Static$ True | Execute$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+T:Mode$ ChangesZone | TriggerZones$ Hand | ValidCard$ Permanent.YouCtrl | Origin$ Battlefield | Destination$ Any | Execute$ PayParanoia | TriggerDescription$ Paranoia {1}{R} (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)
+SVar:PayParanoia:DB$ Play | PlayCost$ 1 R | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
+
+Oracle:Haste\n{R},{T}: This creature deals 2 damage to target creature that entered this turn, or player that cast a creature spell this turn.\nParanoia {1}{R} (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)

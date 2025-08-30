@@ -113,3 +113,6 @@ Type=Custom
 
 [other]
 4 emblem_rheila_rachy @Mad1984
+
+[WalkerTypes]
+Rheila

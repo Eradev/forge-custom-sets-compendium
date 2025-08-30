@@ -1,0 +1,10 @@
+Name:Demon Token
+ManaCost:no cost
+Colors:black
+Types:Creature Demon
+PT:4/4
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigRegrowth | TriggerDescription$ Whenever this creature deals combat damage to a player, return target card from your graveyard to your hand.
+SVar:TrigRegrowth:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | TgtPrompt$ Select target card in your graveyard | ValidTgts$ Card.YouCtrl
+
+Oracle:Whenever this creature deals combat damage to a player, return target card from your graveyard to your hand.

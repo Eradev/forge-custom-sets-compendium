@@ -1,0 +1,8 @@
+Name:Far-Off Lands Token
+ManaCost:no cost
+Colors:colorless
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+Oracle:{T}: Add one mana of any color.

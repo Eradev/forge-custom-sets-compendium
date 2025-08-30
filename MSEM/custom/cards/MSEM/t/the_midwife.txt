@@ -1,0 +1,10 @@
+Name:The Midwife
+ManaCost:2 G G G
+Types:Legendary Creature Elemental
+PT:6/6
+
+A:AB$ PutCounter | Cost$ X G | ValidTgts$ Permanent.nonCreature+nonPlaneswalker+YouCtrl | TgtPrompt$ Select target noncreature, non-planeswalker permanent you control | CounterType$ P1P1 | CounterNum$ X | SubAbility$ DBAnimate | SpellDescription$ Put X +1/+1 counters on target noncreature, non-planeswalker permanent you control. It becomes an Elemental creature with base power and toughness 0/0 in addition to its other types. (This effect lasts indefinitely.)
+SVar:DBAnimate:DB$ Animate | Defined$ Targeted | Power$ 0 | Toughness$ 0 | Types$ Creature,Elemental | Duration$ Permanent
+SVar:X:Count$xPaid
+
+Oracle:{X}{G}: Put X +1/+1 counters on target noncreature, non-planeswalker permanent you control. It becomes an Elemental creature with base power and toughness 0/0 in addition to its other types. (This effect lasts indefinitely.)

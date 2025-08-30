@@ -1,0 +1,10 @@
+Name:Thomar's Sowing
+ManaCost:2 U B
+Types:Sorcery
+
+A:SP$ Mill | NumCards$ 5 | ValidTgts$ Player | TgtPrompt$ Choose a player | RememberMilled$ True | SubAbility$ DBDraw | SpellDescription$ Target player mills five cards. Draw a card for each card type among cards milled this way.
+SVar:DBDraw:DB$ Draw | NumCards$ X | Defined$ You | SubAbility$ DBCleanup
+SVar:X:Remembered$CardTypes
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Target player mills five cards. Draw a card for each card type among cards milled this way.

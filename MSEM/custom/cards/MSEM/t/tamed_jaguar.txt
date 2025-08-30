@@ -1,0 +1,8 @@
+Name:Tamed Jaguar
+ManaCost:R R
+Types:Creature Cat
+PT:2/2
+
+K:Prowess
+
+Oracle:Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)
