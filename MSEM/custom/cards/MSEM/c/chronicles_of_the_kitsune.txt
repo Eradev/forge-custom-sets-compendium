@@ -18,3 +18,5 @@ SVar:DBGalleryUnlocked:DB$ StoreSVar | SVar$ GalleryUnlocked | Type$ Number | Ex
 SVar:GalleryUnlocked:0
 
 Oracle:(Choose only one work as a sorcery to add its ability.)\nWhen this Gallery enters, create a 2/1 red and white Fox creature token.\nAct I: Ascent—{2}{W}{W}: Creature tokens you control get +1/+1 and have flying.\nAct II: Descent—{3}{W}{W}: At the beginning of your end step, if you control no creatures, create Hu Li, a legendary 4/4 white Fox Spirit creature token with flying and lifelink.
+
+DeckHas:Ability$Token
