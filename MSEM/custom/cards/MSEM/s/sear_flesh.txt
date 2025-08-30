@@ -1,0 +1,9 @@
+Name:Sear Flesh
+ManaCost:R
+Types:Sorcery
+
+A:SP$ DealDamage | ValidTgts$ Creature,Planeswalker | NumDmg$ Y | SpellDescription$ CARDNAME deals 3 damage to target creature or planeswalker. If you've cast another spell this turn, it deals 5 damage instead.
+SVar:X:Count$ThisTurnCast_Card.YouCtrl
+SVar:Y:Count$Compare X GE1.5.3
+
+Oracle:Sear Flesh deals 3 damage to target creature or planeswalker. If you've cast another spell this turn, it deals 5 damage instead.
