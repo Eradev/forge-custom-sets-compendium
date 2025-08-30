@@ -1,6 +1,6 @@
-Name:Rebel Token
+Name:Dwarf Token
 ManaCost:no cost
 Colors:white
-Types:Creature Rebel
+Types:Creature Dwarf
 PT:1/1
 Oracle:

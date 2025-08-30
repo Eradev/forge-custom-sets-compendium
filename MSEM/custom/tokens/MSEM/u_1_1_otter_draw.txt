@@ -1,0 +1,10 @@
+Name:Otter Token
+ManaCost:no cost
+Colors:blue
+Types:Creature Otter
+PT:1/1
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigDraw | TriggerDescription$ Whenever this creature deals combat damage to a player, draw a card.
+SVar:TrigDraw:DB$ Draw | NumCards$ 1
+
+Oracle:Whenever this creature deals combat damage to a player, draw a card.

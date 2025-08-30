@@ -1,0 +1,9 @@
+Name:Plant Token
+ManaCost:no cost
+Colors:green
+Types:Creature Plant
+PT:0/1
+
+S:Mode$ CantBlock | ValidCard$ Card.Self | Description$ This creature can't block.
+
+Oracle:This creature can't block.

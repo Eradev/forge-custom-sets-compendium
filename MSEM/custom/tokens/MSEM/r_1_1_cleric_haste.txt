@@ -1,0 +1,9 @@
+Name:Cleric Token
+ManaCost:no cost
+Colors:red
+Types:Creature Cleric
+PT:1/1
+
+K:Haste
+
+Oracle:Haste
