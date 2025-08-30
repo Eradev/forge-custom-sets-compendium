@@ -26,17 +26,19 @@ These changes might not be reflected in their official ruling.
 
 ```text
 Video Horror System (VHS)             -  26% (23/86)
-MSEM Champions (CHAMPIONS)            -  17% (25/146)
-MSEM Champions: Masterpiece (MPS_MSE)
-Kaleidoscope (KLC)                    -  97% (105/108)
+Kaleidoscope (KLC)                    -  98% (106/108)
   Missing cards:
     * Chronic Traitor: TODO Check for Paranoia paid
     * Kofe-District Scholar: TODO Check for Paranoia paid
-    * Miede-District Enforcer: TODO How to target "player that cast a creature spell this turn"
 A Tourney at Whiterun (TWR)           -  11% (31/269)
 The Land Bundle (L)                   - 100% (80/80)
 Tides of War (TOW)                    -  28% (77/271)
 Pyramids of Atuum (POA)               -  31% (40/128)
+
+Reprints / Promo sets:
+MSEM Champions (CHAMPIONS)
+MSEM Champions: Masterpiece (MPS_MSE)
+MSEM Secret Lair Drops (LAIR)
 ```
 
 ## Keywords and mechanisms implementation
