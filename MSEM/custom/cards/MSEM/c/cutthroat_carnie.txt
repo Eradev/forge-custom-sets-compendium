@@ -10,7 +10,7 @@ SVar:DBPump:DB$ Pump | RememberObjects$ TriggeredTarget
 T:Mode$ Phase | Phase$ Cleanup | Execute$ DBCleanup | Static$ True
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.IsRemembered | TriggerZones$ Battlefield | Execute$ TrigFight | OptionalDecider$ You | TriggerDescription$ Whenever a creature dealt combat damage by CARDNAME this turn dies, you may have CARDNAME fight target creature.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.IsRemembered | TriggerZones$ Battlefield | Execute$ TrigFight | OptionalDecider$ You | TriggerDescription$ Whenever a creature dealt combat damage by this creature this turn dies, you may have this creature fight target creature.
 SVar:TrigFight:DB$ Fight | Defined$ Self | ValidTgts$ Creature.Other | TgtPrompt$ Select target creature
 
-Oracle:Haste\nWhenever a creature dealt combat damage by Cutthroat Carnie this turn dies, you may have Cutthroat Carnie fight target creature.
+Oracle:Haste\nWhenever a creature dealt combat damage by this creature this turn dies, you may have this creature fight target creature.
