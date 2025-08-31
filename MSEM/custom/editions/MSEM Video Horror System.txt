@@ -94,6 +94,6 @@ Type=Custom
 
 [tokens]
 1 w_1_1_spirit_flying
-2 u_8_8_token_hexproof
+2 u_8_8_kraken_hexproof
 3 mother
 4 c_a_treasure_sac
