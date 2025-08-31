@@ -3,9 +3,9 @@ ManaCost:1 B
 Types:Artifact Creature Horror
 PT:3/1
 
-S:Mode$ CantBlock | ValidCard$ Creature.Self | Description$ CARDNAME can't block.
+S:Mode$ CantBlock | ValidCard$ Creature.Self | Description$ This creature can't block.
 
-T:Mode$ SpellCast | ValidCard$ Card.wasCastFromExile | ValidActivatingPlayer$ You | TriggerZones$ Graveyard | OptionalDecider$ You | Execute$ TrigReturn | TriggerDescription$ Whenever you cast a spell from exile, you may return CARDNAME from your graveyard to your hand.
+T:Mode$ SpellCast | ValidCard$ Card.wasCastFromExile | ValidActivatingPlayer$ You | TriggerZones$ Graveyard | OptionalDecider$ You | Execute$ TrigReturn | TriggerDescription$ Whenever you cast a spell from exile, you may return this creature from your graveyard to your hand.
 SVar:TrigReturn:DB$ ChangeZone | Defined$ Self | Origin$ Graveyard | Destination$ Hand
 
-Oracle:Living Broadcast can't block.\nWhenever you cast a spell from exile, you may return Living Broadcast from your graveyard to your hand.
+Oracle:This creature can't block.\nWhenever you cast a spell from exile, you may return this creature from your graveyard to your hand.
