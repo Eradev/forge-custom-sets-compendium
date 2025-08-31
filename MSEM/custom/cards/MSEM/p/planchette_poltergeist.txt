@@ -5,10 +5,10 @@ PT:2/2
 
 K:Flying
 
-T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigExile | TriggerDescription$ When CARDNAME enters, you may exile target creature. Its owner may cast it from exile for as long as it remains exiled.
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigExile | TriggerDescription$ When this creature enters, you may exile target creature. Its owner may cast it from exile for as long as it remains exiled.
 SVar:TrigExile:DB$ ChangeZone | Optional$ True | ValidTgts$ Creature | TgtPrompt$ Select target creature | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBEffect
 SVar:DBEffect:DB$ Effect | StaticAbilities$ STPlay | RememberObjects$ Remembered | Duration$ Permanent | ExileOnMoved$ Exile | SubAbility$ DBCleanup
 SVar:STPlay:Mode$ Continuous | Affected$ Card.IsRemembered | AffectedZone$ Exile | MayPlay$ True | MayPlayPlayer$ CardOwner | Description$ Its owner may cast it from exile for as long as it remains exiled.
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
-Oracle:Flying\nWhen Planchette Poltergeist enters, you may exile target creature. Its owner may cast it from exile for as long as it remains exiled.
+Oracle:Flying\nWhen this creature enters, you may exile target creature. Its owner may cast it from exile for as long as it remains exiled.
