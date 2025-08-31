@@ -2,12 +2,12 @@ Name:Enshrouded Village
 ManaCost:no cost
 Types:Land
 
-R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
 SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ G | SpellDescription$ Add {G}.
 
-A:AB$ Animate | Cost$ 1 G G | CheckSVar$ Horrific | SVarCompare$ GE1 | Defined$ Self | Power$ 4 | Toughness$ 4 | Types$ Creature,Human | RemoveTypes$ Land | Keywords$ Trample | SpellDescription$ Until end of turn, CARDNAME becomes a 4/4 Human creature with trample. Activate only if you're horrific.
+A:AB$ Animate | Cost$ 1 G G | CheckSVar$ Horrific | SVarCompare$ GE1 | Defined$ Self | Power$ 4 | Toughness$ 4 | Types$ Creature,Human | RemoveTypes$ Land | Keywords$ Trample | SpellDescription$ Until end of turn, this land becomes a 4/4 Human creature with trample. Activate only if you're horrific.
 SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
 
-Oracle:Enshrouded Village enters tapped.\n{T}: Add {G}.\n{1}{G}{G}: Until end of turn, Enshrouded Village becomes a 4/4 Human creature with trample. Activate only if you're horrific.
+Oracle:This land enters tapped.\n{T}: Add {G}.\n{1}{G}{G}: Until end of turn, this land becomes a 4/4 Human creature with trample. Activate only if you're horrific.
