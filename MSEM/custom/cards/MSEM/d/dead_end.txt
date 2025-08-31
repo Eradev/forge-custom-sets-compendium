@@ -1,0 +1,7 @@
+Name:Dead End
+ManaCost:U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card.!wasCastFromHand | SpellDescription$ Counter target spell if it wasn't cast from a player's hand.
+
+Oracle:Counter target spell if it wasn't cast from a player's hand.

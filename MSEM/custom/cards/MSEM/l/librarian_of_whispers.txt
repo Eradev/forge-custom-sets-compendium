@@ -2,10 +2,11 @@ Name:Librarian of Whispers
 ManaCost:1 W
 Types:Creature Spirit
 PT:1/1
+
 K:Lifelink
 
-R:Event$ Moved | ActiveZones$ Battlefield | Origin$ Battlefield | Destination$ Graveyard | ValidLKI$ Creature,Planeswalker | ReplaceWith$ ExileTrig | Description$ If a creature or planeswalker would die, instead exile it and put a +1/+1 counter on this creature.
-SVar:ExileTrig:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Exile | Defined$ ReplacedCard | SubAbility$ DBPump
-SVar:DBPump:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
+R:Event$ Moved | ActiveZones$ Battlefield | Origin$ Battlefield | Destination$ Graveyard | ValidLKI$ Creature,Planeswalker | ReplaceWith$ Exile | Description$ If a creature or planeswalker would die, instead exile it and put a +1/+1 counter on CARDNAME.
+SVar:Exile:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Exile | Defined$ ReplacedCard | SubAbility$ DBPutCounter
+SVar:DBPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
 
-Oracle:Lifelink\nIf a creature or planeswalker would die, instead exile it and put a +1/+1 counter on this creature.
+Oracle:Lifelink\nIf a creature or planeswalker would die, instead exile it and put a +1/+1 counter on Librarian of Whispers.

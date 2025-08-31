@@ -1,0 +1,19 @@
+Name:Keeper of the Collection
+ManaCost:2 U B
+Types:Legendary Artifact Creature Illusion
+PT:2/4
+
+T:Mode$ SpellCast | ValidCard$ Card.wasCastFromExile | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCopy | TriggerDescription$ Whenever you cast a spell from exile, copy that spell. You may choose new targets for the copy.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | MayChooseTarget$ True
+
+A:AB$ DelayedTrigger | Cost$ B Discard<1/Card> | Mode$ SpellCast | ValidCard$ Card.wasCastFromYourHand | ValidActivatingPlayer$ You | ThisTurn$ True | Execute$ ExileSpell | ActivationLimit$ 1 | SpellDescription$ When you next cast a spell from your hand this turn, it gains rerun. Activate only once each turn. | TriggerDescription$ When you next cast a spell from your hand this turn, it gains rerun. (Exile it as it resolves. Whenever a creature you control dies, you may cast that card from exile without paying its mana cost.)
+SVar:ExileSpell:DB$ ChangeZone | Defined$ TriggeredCard.withoutRerun | Origin$ Stack | Destination$ Exile | RememberChanged$ True
+
+T:Mode$ ChangesZone | ValidCard$ Card.IsRemembered | Origin$ Exile | Destination$ Any | Execute$ ForgetCard | Static$ True
+SVar:ForgetCard:DB$ Cleanup | ForgetDefined$ TriggeredCard
+
+S:Mode$ Continuous | EffectZone$ All | Affected$ Card.IsRemembered | AffectedZone$ Exile | AddTrigger$ RerunTrig
+SVar:RerunTrig:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Exile | Execute$ CastRerun | TriggerDescription$ Rerun — Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.
+SVar:CastRerun:DB$ Play | Defined$ Self | Controller$ You | WithoutManaCost$ True | Optional$ True | ActivationZone$ Exile
+
+Oracle:Whenever you cast a spell from exile, copy that spell. You may choose new targets for the copy.\n{B}, Discard a card: When you next cast a spell from your hand this turn, it gains rerun. Activate only once each turn. (Exile it as it resolves if you cast it from your hand. Whenever a creature you control dies, you may cast that card from exile without paying its mana cost.)

@@ -1,0 +1,13 @@
+Name:Brutalize
+ManaCost:1 B
+Types:Sorcery
+
+K:Rerun
+
+A:SP$ Sacrifice | ValidTgts$ Opponent | TgtPrompt$ Select target opponent | SacValid$ Creature | SpellDescription$ Target opponent sacrifices a creature. | SubAbility$ ExileSelf
+SVar:ExileSelf:DB$ ChangeZone | Origin$ Stack | Destination$ Exile | ConditionDefined$ Self | ConditionPresent$ Card.wasCastFromYourHandByYou
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Exile | Execute$ CastRerun | TriggerDescription$ Rerun — Then if you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.
+SVar:CastRerun:DB$ Play | Defined$ Self | Amount$ 1 | Controller$ You | WithoutManaCost$ True | Optional$ True | ActivationZone$ Exile
+
+Oracle:Target opponent sacrifices a creature.\nRerun — Then if you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.

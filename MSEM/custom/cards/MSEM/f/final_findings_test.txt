@@ -1,0 +1,18 @@
+Name:Final Findings Test
+ManaCost:3 U
+Types:Instant
+
+A:SP$ Draw | Defined$ You | NumCards$ 2 | SpellDescription$ Draw two cards.
+
+R:Event$ Moved | ValidLKI$ Card.Self+wasCastFromHand+YouOwn+YouCtrl | Origin$ Stack | Destination$ Graveyard | Fizzle$ False | ReplaceWith$ Exile | Description$ Rerun (Then if you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.)
+SVar:Exile:DB$ ChangeZone | Defined$ ReplacedCard | Origin$ Stack | Destination$ Exile | RememberChanged$ True
+# SVar:delTrig:DB$ DelayedTrigger | Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Exile | OptionalDecider$ You | RememberObjects$ Remembered | Execute$ DBPlay | TriggerDescription$ Whenever a creature you control dies, you may cast CARDNAME from exile without paying its mana cost.
+# SVar:DBPlay:DB$ Play | Defined$ DelayTriggerRememberedLKI | WithoutManaCost$ True | Optional$ True | ActivationZone$ Exile
+
+# SVar:ExileSelf:DB$ ChangeZone | Origin$ Stack | Destination$ Exile | Defined$ Self | ConditionDefined$ Self | ConditionPresent$ Card.wasCast+wasCastFromHand | ConditionCompare$ EQ1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Exile | RememberObjects$ Remembered | Execute$ CastRerun | TriggerDescription$ Rerun — Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.
+
+SVar:CastRerun:DB$ Play | Defined$ Self | Amount$ 1 | Controller$ You | WithoutManaCost$ True | Optional$ True | ActivationZone$ Exile
+
+Oracle:Draw two cards.\nRerun — Then if you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.

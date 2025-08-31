@@ -3,11 +3,13 @@ ManaCost:2 U U
 Types:Creature Yeti
 PT:4/4
 
-S:Mode$ RaiseCost | ValidTarget$ Card.Self | Activator$ Opponent | Type$ Spell | Amount$ 2 | Description$ Spells your opponents cast that target this creature cost {2} more to cast.
+S:Mode$ RaiseCost | ValidTarget$ Card.Self | Activator$ Opponent | Type$ Spell | Amount$ 2 | Description$ Spells your opponents cast that target CARDNAME cost {2} more to cast.
 
-T:Mode$ SpellCast | ValidCard$ Card.wasCastFromExile | ValidActivatingPlayer$ You | Execute$ DBPump | TriggerZones$ Battlefield | TriggerDescription$ Whenever you cast a spell from exile, put a +1/+1 counter on this creature. It can't be blocked this turn.
-SVar:DBPump:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBUnblockable
+T:Mode$ SpellCast | ValidCard$ Card.wasCastFromExile | ValidActivatingPlayer$ You | Execute$ TrigPutCounter | TriggerZones$ Battlefield | TriggerDescription$ Whenever you cast a spell from exile, put a +1/+1 counter on CARDNAME. It can't be blocked this turn.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBUnblockable
 SVar:DBUnblockable:DB$ Effect | RememberObjects$ Self | ExileOnMoved$ Battlefield | StaticAbilities$ Unblockable
-SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ This creature can't be blocked this turn.
+SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ EFFECTSOURCE can't be blocked this turn.
 
-Oracle:Spells your opponents cast that target this creature cost {2} more to cast.\nWhenever you cast a spell from exile, put a +1/+1 counter on this creature. It can't be blocked this turn.
+Oracle:Spells your opponents cast that target Sheltered Snowman cost {2} more to cast.\nWhenever you cast a spell from exile, put a +1/+1 counter on Sheltered Snowman. It can't be blocked this turn.
+
+DeckHas:Ability$Counters

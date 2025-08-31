@@ -5,10 +5,10 @@ PT:4/4
 
 K:Flying
 
-T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigBranch | TriggerDescription$ At the beginning of your end step, put a +1/+1 counter on this creature if you're horrific. Otherwise, sacrifice it.
-SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigBranch | TriggerDescription$ At the beginning of your end step, put a +1/+1 counter on CARDNAME if you're horrific. Otherwise, sacrifice it.
 SVar:TrigBranch:DB$ Branch | BranchConditionSVar$ Horrific | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBPutCounter | FalseSubAbility$ DBSac
-SVar:DBPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1
+SVar:DBPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
 SVar:DBSac:DB$ Sacrifice | SacValid$ Self
+SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
 
-Oracle:Flying\nAt the beginning of your end step, put a +1/+1 counter on this creature if you're horrific. Otherwise, sacrifice it. (You're horrific as long as you've sacrificed a permanent or discarded a card this turn.)
+Oracle:Flying\nAt the beginning of your end step, put a +1/+1 counter on Lepidopteradator if you're horrific. Otherwise, sacrifice it. (You're horrific as long as you've sacrificed a permanent or discarded a card this turn.)

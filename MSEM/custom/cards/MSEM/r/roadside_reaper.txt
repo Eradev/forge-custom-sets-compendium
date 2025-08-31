@@ -1,0 +1,13 @@
+Name:Roadside Reaper
+ManaCost:1 R R
+Types:Creature Human Horror
+PT:3/1
+
+K:First Strike
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.DamagedBy | TriggerZones$ Battlefield | Execute$ TrigDiscard | OptionalDecider$ You | TriggerDescription$ Whenever a creature dealt damage by CARDNAME this turn dies, you may discard a card. If you do, put a +1/+1 counter on CARDNAME and draw a card.
+SVar:TrigDiscard:DB$ Discard | Defined$ You | NumCards$ 1 | Mode$ TgtChoose | SubAbility$ DBPutCounter
+SVar:DBPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+Oracle:First strike\nWhenever a creature dealt damage by Roadside Reaper this turn dies, you may discard a card. If you do, put a +1/+1 counter on Roadside Reaper and draw a card.

@@ -3,12 +3,12 @@ ManaCost:W B
 Types:Creature Human Horror
 PT:2/1
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ Whenever this creature enters or attacks, exile up to one target creature card from a graveyard.
-T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigExile | Secondary$ True | TriggerDescription$ Whenever this creature enters or attacks, exile up to one target creature card from a graveyard.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ Whenever CARDNAME enters or attacks, exile up to one target creature card from a graveyard.
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigExile | Secondary$ True | TriggerDescription$ Whenever CARDNAME enters or attacks, exile up to one target creature card from a graveyard.
 SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Card.Creature | TgtPrompt$ Select up to one target creature card from a graveyard
 
-S:Mode$ Continuous | Affected$ Card.Self | EffectZone$ Battlefield | GainsAbilitiesOf$ Creature.ExiledWithSource | GainsAbilitiesOfZones$ Exile | Description$ This creature has all activated abilities of all creature cards exiled with it.
+S:Mode$ Continuous | Affected$ Card.Self | EffectZone$ Battlefield | GainsAbilitiesOf$ Creature.ExiledWithSource | GainsAbilitiesOfZones$ Exile | Description$ CARDNAME has all activated abilities of all creature cards exiled with it.
 
-Oracle:Whenever this creature enters or attacks, exile up to one target creature card from a graveyard.\nThis creature has all activated abilities of cards exiled with it.
+Oracle:Whenever Morbid Mimic enters or attacks, exile up to one target creature card from a graveyard.\nMorbid Mimic has all activated abilities of cards exiled with it.
 
 SVar:HasAttackEffect:TRUE

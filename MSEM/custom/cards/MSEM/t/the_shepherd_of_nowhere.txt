@@ -1,0 +1,14 @@
+Name:The Shepherd of Nowhere
+ManaCost:5 G W
+Types:Legendary Creature Giant Horror
+PT:5/5
+
+K:Trample
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSac | TriggerDescription$ When CARDNAME enters, each player sacrifices each other nontoken creature they control.
+SVar:TrigSac:DB$ SacrificeAll | ValidCards$ Creature.!token+Other
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.!token+Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigCopy | TriggerDescription$ Whenever another nontoken creature you control dies, create a token that's a copy of that creature.
+SVar:TrigCopy:DB$ CopyPermanent | Defined$ TriggeredCardLKICopy
+
+Oracle:Trample\nWhen The Shepherd of Nowhere enters, each player sacrifices each other nontoken creature they control.\nWhenever another nontoken creature you control dies, create a token that's a copy of that creature.

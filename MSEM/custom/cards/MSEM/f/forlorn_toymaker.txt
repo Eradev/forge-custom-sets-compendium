@@ -1,0 +1,8 @@
+Name:Forlorn Toymaker
+ManaCost:G
+Types:Creature Human Artificer
+PT:1/1
+
+A:AB$ CopyPermanent | Cost$ 1 G T Sac<1/Creature.Other+!token/another nontoken creature> | Defined$ Sacrificed | NumCopies$ 2 | SetPower$ 0 | SetToughness$ 1 | SorcerySpeed$ True | SpellDescription$ Create two tokens that are copies of the sacrificed creature, except they have base power and toughness 0/1. Activate only as a sorcery.
+
+Oracle:{1}{G}, {T}, Sacrifice another nontoken creature: Create two tokens that are copies of the sacrificed creature, except they have base power and toughness 0/1. Activate only as a sorcery.

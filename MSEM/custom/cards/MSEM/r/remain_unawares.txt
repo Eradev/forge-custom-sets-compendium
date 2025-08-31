@@ -1,0 +1,8 @@
+Name:Remain Unawares
+ManaCost:5 W W
+Types:Sorcery
+
+A:SP$ ChooseCard | Defined$ You | Choices$ Creature | ChoiceTitle$ Choose a creature to keep | Mandatory$ True | Reveal$ True | SubAbility$ ExileRest | StackDescription$ SpellDescription | SpellDescription$ Choose a creature. Exile the rest.
+SVar:ExileRest:DB$ ChangeZoneAll | ChangeType$ Creature.nonChosenCard | Origin$ Battlefield | Destination$ Exile
+
+Oracle:Choose a creature. Exile the rest.

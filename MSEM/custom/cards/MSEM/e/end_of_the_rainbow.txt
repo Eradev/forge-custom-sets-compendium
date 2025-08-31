@@ -2,7 +2,7 @@ Name:End of the Rainbow
 ManaCost:1 R
 Types:Sorcery
 
-A:SP$ Token | Cost$ 1 R Sac<1/Creature> | TokenScript$ c_a_treasure_sac | TokenAmount$ X | SpellDescription$ Create X Treasure tokens, where X is the sacrificed creature's mana value.
+A:SP$ Token | Cost$ 1 R Sac<1/Creature> | TokenScript$ c_a_treasure_sac | TokenAmount$ X | TokenOwner$ You | SpellDescription$ Create X Treasure tokens, where X is the sacrificed creature's mana value.
 SVar:X:Sacrificed$CardManaCost
 
 Oracle:As an additional cost to cast this spell, sacrifice a creature.\nCreate X Treasure tokens, where X is the sacrificed creature's mana value.

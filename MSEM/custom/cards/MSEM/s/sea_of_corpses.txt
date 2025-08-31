@@ -1,0 +1,15 @@
+Name:Sea of Corpses
+ManaCost:6 B R
+Types:Sorcery
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ X | EffectZone$ All | Description$ This spell costs {2} less to cast for each creature that died this turn.
+SVar:X:Count$ThisTurnEntered_Graveyard_from_Battlefield_Creature/Times.2
+
+A:SP$ ChangeZoneAll | ChangeType$ Creature | Origin$ Graveyard | Destination$ Exile | RememberChanged$ True | SubAbility$ DBSac | SpellDescription$ Each player exiles all creature cards from their graveyard, then sacrifices each creature they control, then puts all creature cards they own exiled this way onto the battlefield. Exile CARDNAME.
+SVar:DBSac:DB$ SacrificeAll | ValidCards$ Creature | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | SubAbility$ DBExileSelf
+SVar:DBExileSelf:DB$ ChangeZone | Origin$ Stack | Destination$ Exile | Defined$ Self
+
+Oracle:This spell costs {2} less to cast for each creature that died this turn.\nEach player exiles all creature cards from their graveyard, then sacrifices each creature they control, then puts all creature cards they own exiled this way onto the battlefield. Exile Sea of Corpses.
+
+SVar:IsReanimatorCard:TRUE

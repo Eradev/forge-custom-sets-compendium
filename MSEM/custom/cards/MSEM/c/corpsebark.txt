@@ -1,0 +1,13 @@
+Name:Corpsebark
+ManaCost:1 G
+Types:Creature Plant
+PT:0/4
+
+K:Defender
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigExile | TriggerDescription$ Whenever a land you control enters, you may exile target permanent card from your graveyard.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Permanent.YouOwn | TgtPrompt$ Select target permanent card from your graveyard | Optional$ True | ExileWithSource$ True
+
+A:AB$ ChangeZone | Cost$ Sac<1/Land> | Origin$ Exile | Destination$ Hand | ChangeType$ Card.ExiledWithSource | Hidden$ True | ChangeNum$ 1 | Mandatory$ True | SpellDescription$ Put a card exiled with CARDNAME into its owner's hand.
+
+Oracle:Defender\nWhenever a land you control enters, you may exile target permanent card from your graveyard.\nSacrifice a land: Put a card exiled with Corpsebark into its owner's hand.

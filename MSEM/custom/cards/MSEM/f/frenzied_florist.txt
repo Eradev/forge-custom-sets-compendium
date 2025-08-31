@@ -1,0 +1,12 @@
+Name:Frenzied Florist
+ManaCost:1 G
+Types:Creature Human
+PT:0/1
+
+A:AB$ Mana | Cost$ T Sac<1/Permanent.Other/another permanent> | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ Horrific | SVarCompare$ GE1 | Execute$ TrigCounter | TriggerDescription$ At the beginning of your end step, if you're horrific, put a +1/+1 counter on target creature.
+SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 1 | ValidTgts$ Creature | TgtPrompt$ Select target creature
+SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
+
+Oracle:{T}, Sacrifice another permanent: Add one mana of any color.\nAt the beginning of your end step, if you're horrific, put a +1/+1 counter on target creature. (You're horrific as long as you've sacrificed a permanent or discarded a card this turn.)

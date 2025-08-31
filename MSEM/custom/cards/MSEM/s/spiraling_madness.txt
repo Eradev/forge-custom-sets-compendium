@@ -1,0 +1,14 @@
+Name:Spiraling Madness
+ManaCost:3 B B
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Player | TriggerZones$ Battlefield | Execute$ Branch1 | TriggerDescription$ At the beginning of each player's upkeep, that player discards a card. If that player has no cards in hand, they instead sacrifice a permanent. If they control no permanents, they instead lose the game.
+SVar:Branch1:DB$ Branch | BranchConditionSVar$ HandCount | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBDiscard | FalseSubAbility$ Branch2
+SVar:Branch2:DB$ Branch | BranchConditionSVar$ PermCount | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBSac | FalseSubAbility$ DBLose
+SVar:DBDiscard:DB$ Discard | Defined$ TriggeredPlayer | NumCards$ 1 | Mode$ TgtChoose
+SVar:DBSac:DB$ Sacrifice | Defined$ TriggeredPlayer | SacValid$ Permanent | Amount$ 1
+SVar:DBLose:DB$ LosesGame | Defined$ TriggeredPlayer
+SVar:HandCount:TriggeredPlayer$CardsInHand
+SVar:PermCount:Count$Valid Permanent.ControlledBy TriggeredPlayer
+
+Oracle:At the beginning of each player's upkeep, that player discards a card. If that player has no cards in hand, they instead sacrifice a permanent. If they control no permanents, they instead lose the game.

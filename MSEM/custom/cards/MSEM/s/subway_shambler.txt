@@ -1,0 +1,13 @@
+Name:Subway Shambler
+ManaCost:1 G G
+Types:Creature Human Horror
+PT:3/3
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | ValidBlocker$ Creature.powerLTX | Description$ CARDNAME can't be blocked by creatures with lesser power.
+SVar:X:Count$CardPower
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ Player | TriggerZones$ Battlefield | CheckSVar$ Horrific | SVarCompare$ GE1 | Execute$ TrigCounter | TriggerDescription$ At the beginning of each end step, if you're horrific, put a +1/+1 counter on CARDNAME.
+SVar:TrigCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
+SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
+
+Oracle:Subway Shambler can't be blocked by creatures with lesser power.\nAt the beginning of each end step, if you're horrific, put a +1/+1 counter on Subway Shambler. (You're horrific as long as you've sacrificed a permanent or discarded a card this turn.)

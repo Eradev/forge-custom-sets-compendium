@@ -1,0 +1,11 @@
+Name:Catastrophic Crash
+ManaCost:R R
+Types:Instant
+
+A:SP$ Charm | MinCharmNum$ 1 | CharmNum$ Count$Compare Y GE1.2.1 | Choices$ DBDestroy,DBDamage | AdditionalDescription$ If you're horrific, you may choose both instead. (You're horrific as long as you've sacrificed a permanent or discarded a card this turn.)
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Artifact | TgtPrompt$ Select target artifact | SpellDescription$ Destroy target artifact.
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ 3 | SpellDescription$ CARDNAME deals 3 damage to target creature.
+SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
+SVar:Y:SVar$Horrific
+
+Oracle:Choose one. If you're horrific, you may choose both instead. (You're horrific as long as you've sacrificed a permanent or discarded a card this turn.)\n• Destroy target artifact.\n• Catastrophic Crash deals 3 damage to target creature.
