@@ -5,9 +5,9 @@ PT:1/1
 
 K:Menace
 
-A:AB$ GenericChoice | Cost$ 0 | Choices$ DoDiscard,DoSacrifice,DoExile | ActivationLimit$ 1 | SpellDescription$ Discard a creature card or sacrifice a creature or exile a creature card from your graveyard: Put a +1/+1 counter on Starving Stalker. Activate only once each turn.
+A:AB$ GenericChoice | Cost$ 0 | Choices$ DoDiscard,DoSacrifice,DoExile | ActivationLimit$ 1 | SpellDescription$ Discard a creature card or sacrifice a creature or exile a creature card from your graveyard: Put a +1/+1 counter on this creature. Activate only once each turn.
 SVar:DoDiscard:DB$ PutCounter | UnlessCost$ Discard<1/Creature> | UnlessPayer$ You | UnlessSwitched$ True | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | SpellDescription$ Discard a creature card.
 SVar:DoSacrifice:DB$ PutCounter | UnlessCost$ Sac<1/Creature> | UnlessPayer$ You | UnlessSwitched$ True | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | SpellDescription$ Sacrifice a creature.
 SVar:DoExile:DB$ PutCounter | UnlessCost$ ExileFromGrave<1/Creature/creature card> | UnlessPayer$ You | UnlessSwitched$ True | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | SpellDescription$ Exile a creature card from your graveyard.
 
-Oracle:Menace\nDiscard a creature card or sacrifice a creature or exile a creature card from your graveyard: Put a +1/+1 counter on Starving Stalker. Activate only once each turn.
+Oracle:Menace\nDiscard a creature card or sacrifice a creature or exile a creature card from your graveyard: Put a +1/+1 counter on this creature. Activate only once each turn.
