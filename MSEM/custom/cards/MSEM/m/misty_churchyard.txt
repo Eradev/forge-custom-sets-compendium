@@ -2,16 +2,16 @@ Name:Misty Churchyard
 ManaCost:no cost
 Types:Land
 
-R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
 SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ W | SpellDescription$ Add {W}.
 
-A:AB$ Animate | Cost$ 1 W W | CheckSVar$ Horrific | SVarCompare$ GE1 | Defined$ Self | Power$ 1 | Toughness$ 4 | Types$ Creature,Cleric | RemoveTypes$ Land | Triggers$ DamageCounters | SpellDescription$ Until end of turn, CARDNAME becomes a 1/4 Cleric creature with "Whenever this creature is dealt damage, put that many +1/+1 counters on it." Activate only if you're horrific.
+A:AB$ Animate | Cost$ 1 W W | CheckSVar$ Horrific | SVarCompare$ GE1 | Defined$ Self | Power$ 1 | Toughness$ 4 | Types$ Creature,Cleric | RemoveTypes$ Land | Triggers$ DamageCounters | SpellDescription$ Until end of turn, this land becomes a 1/4 Cleric creature with "Whenever this creature is dealt damage, put that many +1/+1 counters on it." Activate only if you're horrific.
 SVar:DamageCounters:Mode$ DamageDoneOnce | ValidTarget$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever this creature is dealt damage, put that many +1/+1 counters on it.
 SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ Y
 SVar:Y:TriggerCount$DamageAmount
 
 SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
 
-Oracle:Misty Churchyard enters tapped.\n{T}: Add {W}.\n{1}{W}{W}: Until end of turn, Misty Churchyard becomes a 1/4 Cleric creature with "Whenever this creature is dealt damage, put that many +1/+1 counters on it." Activate only if you're horrific.
+Oracle:This land enters tapped.\n{T}: Add {W}.\n{1}{W}{W}: Until end of turn, this land becomes a 1/4 Cleric creature with "Whenever this creature is dealt damage, put that many +1/+1 counters on it." Activate only if you're horrific.
