@@ -5,10 +5,10 @@ PT:2/2
 
 K:Trample
 
-T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigSac | TriggerDescription$ At the beginning of your upkeep, sacrifice another creature. If you do, put X +1/+1 counters on CARDNAME, where X is that creature's power.
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigSac | TriggerDescription$ At the beginning of your upkeep, sacrifice another creature. If you do, put X +1/+1 counters on this creature, where X is that creature's power.
 SVar:TrigSac:DB$ Sacrifice | Defined$ You | SacValid$ Creature.Other | RememberSacrificed$ True | SubAbility$ DBPut
 SVar:DBPut:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ X | ConditionDefined$ Remembered | ConditionPresent$ Card | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:X:RememberedLKI$CardPower
 
-Oracle:Trample\nAt the beginning of your upkeep, sacrifice another creature. If you do, put X +1/+1 counters on Demented Host, where X is that creature's power.
+Oracle:Trample\nAt the beginning of your upkeep, sacrifice another creature. If you do, put X +1/+1 counters on this creature, where X is that creature's power.
