@@ -2,13 +2,13 @@ Name:Lost Station
 ManaCost:no cost
 Types:Land
 
-R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
 SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ U | SpellDescription$ Add {U}.
 
-A:AB$ Animate | Cost$ U U | CheckSVar$ Horrific | SVarCompare$ GE1 | Defined$ Self | Power$ 2 | Toughness$ 2 | Types$ Creature,Horror | RemoveTypes$ Land | staticAbilities$ CantBeBlockedBy | SpellDescription$ Until end of turn, CARDNAME becomes a 2/2 Horror creature that can't be blocked. Activate only if you're horrific.
-SVar:CantBeBlockedBy:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | Description$ CARDNAME can't be blocked.
+A:AB$ Animate | Cost$ U U | CheckSVar$ Horrific | SVarCompare$ GE1 | Defined$ Self | Power$ 2 | Toughness$ 2 | Types$ Creature,Horror | RemoveTypes$ Land | staticAbilities$ CantBeBlockedBy | SpellDescription$ Until end of turn, this land becomes a 2/2 Horror creature that can't be blocked. Activate only if you're horrific.
+SVar:CantBeBlockedBy:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | Description$ This creature can't be blocked.
 SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
 
-Oracle:Lost Station enters tapped.\n{T}: Add {U}.\n{U}{U}: Until end of turn, Lost Station becomes a 2/2 Horror creature that can't be blocked. Activate only if you're horrific.
+Oracle:This land enters tapped.\n{T}: Add {U}.\n{U}{U}: Until end of turn, this land becomes a 2/2 Horror creature that can't be blocked. Activate only if you're horrific.
