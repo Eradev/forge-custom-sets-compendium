@@ -201,6 +201,7 @@ Rerun is defined as:
 
 ```text
 If you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.
+Note: Rerun allows a card to be cast from exile regardless of how it got there or from where.
 ```
 
 Implementation:
@@ -232,4 +233,5 @@ SVar:DBLoseLifeFallback:DB$ LoseLife | Defined$ You | LifeAmount$ 3
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
+
 
