@@ -6,8 +6,8 @@ PT:2/2
 R:Event$ Moved | ActiveZones$ Battlefield | Origin$ Battlefield | Destination$ Graveyard | ValidLKI$ Creature.Other+YouCtrl | ReplaceWith$ Exile | Description$ If another creature you control would die, exile it instead.
 SVar:Exile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | Defined$ ReplacedCard
 
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigEffect | TriggerDescription$ When CARDNAME dies, until your next end step, you may play cards exiled with CARDNAME.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigEffect | TriggerDescription$ When NICKNAME dies, until your next end step, you may play cards exiled with NICKNAME.
 SVar:TrigEffect:DB$ Effect | StaticAbilities$ STPlay | Duration$ UntilYourNextEndStep
-SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.ExiledWithEffectSource | AffectedZone$ Exile | Description$ Until your next end step, you may play cards exiled with CARDNAME.
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.ExiledWithEffectSource | AffectedZone$ Exile | Description$ Until your next end step, you may play cards exiled with NICKNAME.
 
-Oracle:If another creature you control would die, exile it instead.\nWhen John Furo, the Unfortunate dies, until your next end step, you may play cards exiled with John Furo.
+Oracle:If another creature you control would die, exile it instead.\nWhen John Furo dies, until your next end step, you may play cards exiled with John Furo.
