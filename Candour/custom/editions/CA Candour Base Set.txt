@@ -46,7 +46,7 @@ Type=Custom
 39 U Duskpine Cultivation @Sandara Tang
 40 U Duskwing Glider @Sandara Tang
 41 M Basri, Oketra's Faithful @Wilson Nugraha
-42 R Windscultor Prodigy @Adrien Gonzalez
+42 R Clightos, Mystic Peak @Anthony Avon
 43 M Herald of Sovereignty @Acrassan
 44 M Ria Ivor, Corrupter Champion @Mike Jordana
 45 R Nullmancer @F3LC4T
@@ -100,7 +100,7 @@ Type=Custom
 93 R Momentum Weaver @Nathan Mohamed
 94 U Prismatic Fissure @Timi Honkanen
 95 U Curious Peregrination @Edgar Sánchez Hidalgo
-96 R Trap Essence (CA) @Sandara Tang
+96 R Mox Collector @Edgar Sánchez Hidalgo
 # 97-100
 101 M Force of Anguish @Dominik Mayer
 102 U Guardian Thrull @PINDURSKI
@@ -149,7 +149,7 @@ Type=Custom
 # 145-150
 151 U Spellbomb Detonation @Romain Kurdi
 152 U Glitterfowl Curio @Valentin Gloaguen & Alessandro Poli
-153 U Divine Deflagration @Sandara Tang
+153 U Shattering Blast @Melissa Spandri
 154 R Stonesmelt Regent @Sandara Tang
 155 M Artificial Creativity @Julie Dillon
 156 R Starfall Impact @Ryan Anelowe
@@ -195,7 +195,8 @@ Type=Custom
 219 M Regal Tutor @Sandara Tang
 220 U Pollenburst Dryad @Ave Tetsuya
 221 R Imperious Loamspeaker @Jeremy Carver
-# 222-250
+222 R Ein, Tree of Horizons @Peter Mohrbracher
+# 223-250
 251 R Waterlogged Archipelago @Anthony Avon
 252 R Contaminated Rivulet @Anthony Avon
 253 R Sanguinary Morass @Anthony Avon
@@ -219,7 +220,12 @@ Type=Custom
 288 R Gilt-Leaf Slasher @Aldo Domínguez
 289 R Resplendent Chargers @Dominik Mayer
 290 R Terramancy @Alex Petruk
-# 291-300
+# 291-292
+293 U Marrow Harvester @Bastien Grivet
+294 U Burnwillow Blossoming @Bastien Grivet 
+# 295
+296 U Candelabrum Vestige @Illarstration
+# 297-300
 301 R Bloodblitz Battle-Axe @Dominik Mayer
 302 M Mox Bismuth @Robert Maldonado
 303 R Vivacious Ridgeline @Sandara Tang
