@@ -11,7 +11,7 @@ Base=Rare:fromSheet("MSEM_VHS cards")
 
 [RareSpecial]
 Base=Rare:fromSheet("MSEM_VHS cards")
-Replace=.50 Special:fromSheet("MESM_VHS cards")
+Replace=.50F Special:fromSheet("MESM_VHS cards")
 
 [cards]
 1 R Aspiring Hero @Evgenij Kungur
