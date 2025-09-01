@@ -3,6 +3,15 @@ Code=MSEM_VHS
 Name=Video Horror System
 Date=2023-02-01
 Type=Custom
+BoosterSlots=Rare,RareSpecial
+Booster=3 Rare, 1 RareSpecial
+
+[RareMythic]
+Base=Rare:fromSheet("MSEM_VHS cards")
+
+[RareSpecial]
+Base=Rare:fromSheet("MSEM_VHS cards")
+Replace=.50 Special:fromSheet("MESM_VHS cards")
 
 [cards]
 1 R Aspiring Hero @Evgenij Kungur
