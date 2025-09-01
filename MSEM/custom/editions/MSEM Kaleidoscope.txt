@@ -3,6 +3,7 @@ Code=MSEM_KLC
 Name=Kaleidoscope
 Date=2017-10-01
 Type=Custom
+Booster=7 Common, 5 Uncommon, 2 RareMythic
 
 [cards]
 1 C Courier Eagle @Gaudi Buendia
