@@ -1,0 +1,10 @@
+Name:Stream of Light
+ManaCost:X W
+Types:Sorcery
+
+A:SP$ GainLife | ValidTgts$ Player | TgtPrompt$ Select target player | LifeAmount$ X | SpellDescription$ Target player gains X life.
+SVar:X:Count$xPaid
+
+Oracle:Target player gains X life.
+
+DeckHas:Ability$LifeGain

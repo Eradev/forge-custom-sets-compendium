@@ -1,0 +1,11 @@
+Name:Hu Li
+ManaCost:no cost
+Colors:white
+Types:Legendary Creature Fox Spirit
+PT:4/4
+
+K:Flying
+
+K:Lifelink
+
+Oracle:Flying, lifelink

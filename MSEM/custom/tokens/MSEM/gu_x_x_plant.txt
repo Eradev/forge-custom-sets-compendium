@@ -1,0 +1,6 @@
+Name:Plant Token
+ManaCost:no cost
+Colors:green,blue
+Types:Creature Plant
+PT:*/*
+Oracle:
