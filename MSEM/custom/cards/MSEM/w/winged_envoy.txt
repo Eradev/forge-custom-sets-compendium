@@ -1,0 +1,10 @@
+Name:Winged Envoy
+ManaCost:1 U
+Types:Creature Sphinx
+PT:1/1
+
+K:Flying
+
+K:Hexproof
+
+Oracle:Flying, hexproof (This creature can't be the target of spells or abilities your opponents control.)

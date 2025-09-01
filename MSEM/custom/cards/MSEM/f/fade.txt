@@ -1,0 +1,7 @@
+Name:Fade
+ManaCost:1 W
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | UnlessCost$ 2 | TgtPrompt$ Select target spell | ValidTgts$ Card | Destination$ Exile | SpellDescription$ Counter target spell unless its controller pays {2}. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.
+
+Oracle:Counter target spell unless its controller pays {2}. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.

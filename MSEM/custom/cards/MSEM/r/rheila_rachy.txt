@@ -1,0 +1,17 @@
+Name:Rheila Rachy
+ManaCost:1 W B G
+Types:Legendary Planeswalker Rheila
+Loyalty:3
+
+A:AB$ Pump | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | TargetMin$ 0 | TargetMax$ 1 | KW$ Hexproof & Indestructible | ValidTgts$ Permanent.Other | Duration$ UntilYourNextTurn | TgtPrompt$ Select up to one target permanent. | SpellDescription$ Up to one other target permanent gains hexproof and indestructible until your next turn.
+
+A:AB$ Destroy | Cost$ SubCounter<3/LOYALTY> | Planeswalker$ True | ValidTgts$ Permanent.tapped | TgtPrompt$ Select target permanent | SpellDescription$ Destroy target tapped permanent.
+
+A:AB$ Effect | Cost$ SubCounter<7/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Rheila Rachy | Image$ emblem_rheila_rachy | ReplacementEffects$ LoseReplace | Duration$ Permanent | SpellDescription$ You get an emblem with "If you would lose the game, instead exile this emblem, shuffle all cards you own that aren't on the battlefield ito your library, then draw seven cards. Your life total becomes 40."
+SVar:LoseReplace:Event$ GameLoss | ActiveZones$ Command | ValidPlayer$ You | ReplaceWith$ ExileSetLife | Description$ If you would lose the game, instead exile this emblem, shuffle all cards you own that aren't on the battlefield into your library, then draw seven cards. Your life total becomes 40.
+SVar:ExileSetLife:DB$ ChangeZone | Origin$ Command | Defined$ Self | Destination$ Exile | SubAbility$ DBShuffleAllBack
+SVar:DBShuffleAllBack:DB$ ChangeZoneAll | Origin$ Hand,Graveyard,Exile,Command,Stack | ChangeType$ Card.YouOwn | Destination$ Library | Shuffle$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 7 | SubAbility$ DBSetLife
+SVar:DBSetLife:DB$ SetLife | Defined$ You | LifeAmount$ 40
+
+Oracle:[+1]: Up to one other target permanent gains hexproof and indestructible until your next turn.\n[-3]: Destroy target tapped permanent.\n[-7]: You get an emblem with "If you would lose the game, instead exile this emblem, shuffle all cards you own that aren't on the battlefield ito your library, then draw seven cards. Your life total becomes 40."

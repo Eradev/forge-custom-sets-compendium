@@ -1,0 +1,32 @@
+Name:Savants of the Ley
+ManaCost:3 G G
+Types:Creature Human Shaman
+PT:3/3
+
+T:Mode$ Phase | Phase$ Untap | TriggerZones$ Battlefield | Execute$ TrigUntap | TriggerDescription$ Untap all creatures and lands you control during each other player's untap step.
+SVar:TrigUntap:DB$ UntapAll | ValidCards$ Creature.YouCtrl,Land.YouCtrl
+
+A:AB$ ChangeZone | Named$ AscendMSEM | Cost$ 4 R R R | Origin$ Battlefield | Destination$ Exile | SorcerySpeed$ True | SubAbility$ AscendTransform | RememberChanged$ True | PrecostDesc Ascend— | SpellDescription$ ({4}{R}{R}{R}: Exile this creature, then return it to the battlefield transformed. Ascend only as a sorcery.)
+SVar:AscendTransform:DB$ ChangeZone | Defined$ Remembered | Origin$ All | Destination$ Battlefield | Transformed$ True | GainControl$ True
+
+Oracle:Untap all creatures and lands you control during each other player's untap step.\nAscend {4}{R}{R}{R} ({4}{R}{R}{R}: Exile this creature, then return it to the battlefield transformed. Ascend only as a sorcery.)
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Tyrants of Bundan
+ManaCost:no cost
+Colors:Red
+Types:Creature Human Shaman
+PT:4/4
+
+K:Trample
+
+K:Haste
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigTapAll | TriggerDescription$ When CARDNAME enters, tap all lands target player controls. They don't untap during their controller's next untap step.
+SVar:TrigTapAll:DB$ TapAll | ValidTgts$ Player | TgtPrompt$ Select target player | ValidCards$ Land | SubAbility$ DBPumpAll
+SVar:DBPumpAll:DB$ PumpAll | Defined$ Targeted | ValidCards$ Land | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent
+
+Oracle:Trample, haste\nWhen this creature enters, tap all lands target player controls. They don't untap during their controller's next untap step.

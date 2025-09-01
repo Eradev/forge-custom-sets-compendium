@@ -1,0 +1,6 @@
+Name:Elk Spirit Token
+ManaCost:no cost
+Colors:green,white
+Types:Creature Elk Spirit
+PT:1/1
+Oracle:
