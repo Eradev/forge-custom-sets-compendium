@@ -1,0 +1,10 @@
+Name:Chromatic Lotus
+ManaCost:1
+Types:Artifact
+
+A:AB$ Mana | Cost$ 2 T Sac<1/CARDNAME/this artifact> | Produced$ Any | Amount$ 3 | SpellDescription$ Add three mana of any one color.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this artifact is put into a graveyard from the battlefield, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:{2}, {T}, Sacrifice this artifact: Add three mana of any one color.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.
