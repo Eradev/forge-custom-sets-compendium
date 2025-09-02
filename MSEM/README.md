@@ -9,6 +9,7 @@ Sets information can be found on [lackeybot](https://lackeybot.com/msem/search).
 These changes might not be reflected in their official ruling.
 
 * All Hounds are now Dogs. This also apply to abilities that target and/or applies to Hounds.
+  * Haggard Jackal is now a Zombie Jackal instead of a Zombie Hound.
 * Some cards have their wording changed to better reflect real MTG cards.
 
 ## How to install?
