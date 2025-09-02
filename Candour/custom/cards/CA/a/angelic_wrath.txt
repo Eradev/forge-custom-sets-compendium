@@ -1,0 +1,8 @@
+Name:Angelic Wrath
+ManaCost:3 W W
+Types:Sorcery
+
+A:SP$ ChangeZoneAll | ChangeType$ Creature | Origin$ Battlefield | Destination$ Exile | SpellDescription$ Exile all creatures. Create a 4/4 white Angel creature token with flying and vigilance. | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenAmount$ 1 | TokenScript$ w_4_4_angel_flying_vigilance | TokenOwner$ You
+
+Oracle:Exile all creatures. Create a 4/4 white Angel creature token with flying and vigilance.
