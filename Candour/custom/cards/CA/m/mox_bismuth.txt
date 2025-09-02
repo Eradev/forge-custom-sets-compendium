@@ -1,0 +1,13 @@
+Name:Mox Bismuth
+ManaCost:0
+Types:Artifact
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | OptionalDecider$ You | Execute$ TrigExile | TriggerDescription$ When this artifact enters, you may exile an artifact card from your hand.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Hand | Destination$ Exile | ChangeType$ Card.Artifact | ChangeNum$ 1
+
+A:AB$ ManaReflected | Cost$ T | Valid$ Defined.ExiledWith | ColorOrType$ Color | ReflectProperty$ Is | SpellDescription$ Add one mana of any of the exiled card's colors.
+
+Oracle:When this artifact enters, you may exile an artifact card from your hand.\n{T}: Add one mana of any of the exiled card's colors.
+
+SVar:X:Count$ValidHand Card.Artifact+YouOwn+nonColorless
+SVar:NeedsToPlayVar:X GE1
