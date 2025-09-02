@@ -1,0 +1,9 @@
+Name:Wurm Token
+ManaCost:no cost
+Colors:red
+Types:Creature Wurm
+PT:6/6
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | ValidBlocker$ Creature.withFlying | Description$ This creature can't be blocked by creatures with flying.
+
+Oracle:This creature can't be blocked by creatures with flying.
