@@ -1,0 +1,13 @@
+Name:Spectral Confluence
+ManaCost:1 W W
+Types:Sorcery
+
+A:SP$ Charm | Choices$ DBToken,DBExile,DBGainLife | CharmNum$ 3 | CanRepeatModes$ True
+
+SVar:DBToken:DB$ Token | TokenAmount$ 1 | TokenOwner$ You | TokenScript$ w_1_1_spirit_flying | SpellDescription$ Create a 1/1 white Spirit creature token with flying.
+
+SVar:DBExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | TgtPrompt$ Choose target nonland permanent with mana value 1 or less | ValidTgts$ Permanent.nonLand+cmcLE1 | SpellDescription$ Exile target nonland permanent with mana value 1 or less.
+
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 3 | SpellDescription$ You gain 3 life.
+
+Oracle:Choose three. You may choose the same mode more than once.\n• Create a 1/1 white Spirit creature token with flying.\n• Exile target nonland permanent with mana value 1 or less.\n• You gain 3 life.

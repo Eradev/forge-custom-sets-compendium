@@ -1,0 +1,11 @@
+Name:Consign to Stardust
+ManaCost:1 W
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Card.inZoneStack | TgtZone$ Stack | Origin$ Stack | Destination$ Hand | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Return target spell to its owner's hand. That spell's owner can't cast spells with the same name as that spell until your next turn.
+SVar:DBEffect:DB$ Effect | RememberObjects$ RememberedCard,RememberedOwner | StaticAbilities$ CantCast | Duration$ UntilYourNextTurn | SubAbility$ DBCleanup
+SVar:CantCast:Mode$ CantBeCast | ValidCard$ Card.nonLand+sharesNameWith RememberedCard | Caster$ Player.IsRemembered | Description$ That spell's owner can't cast spells with the same name as that spell until your next turn.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw
+
+Oracle:Return target spell to its owner's hand. That spell's owner can't cast spells with the same name as that spell until your next turn.\nDraw a card

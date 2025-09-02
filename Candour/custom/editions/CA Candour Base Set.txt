@@ -101,13 +101,14 @@ Type=Custom
 94 U Prismatic Fissure @Timi Honkanen
 95 U Curious Peregrination @Edgar Sánchez Hidalgo
 96 R Mox Collector @Edgar Sánchez Hidalgo
-# 97-100
+97 U Hieroglyphic Constrictor @Illarstration
+# 98-100
 101 M Force of Anguish @Dominik Mayer
 102 U Guardian Thrull @PINDURSKI
 103 U Perilous Depths @PINDURSKI
 104 M Swift Shadowhawk @Mariah Tekulve
 # 105
-106 R Bitter Ophiomancer @Irina Kuzmina
+106 R Corvomancer @Álvaro Jiménez
 107 U Agonizing Edict @Dominik Mayer
 108 M Bloodcaster Prodigy @Alex Ngo
 109 R Pernicious Revenant @Edgar Sánchez Hidalgo
@@ -173,7 +174,8 @@ Type=Custom
 174 M Chaotic Tutor @Matt Crowdery
 175 U Ashes to Ashes // Dust to Dust @Dominik Mayer
 176 R Collected Construction @Biagio D'Alessandro
-# 177-200
+177 R Astral Wish @Sandara Tang
+# 178-200
 201 M Nissa, Unbound Animist @Romain Kurdi
 202 U Nissa's Binding @Simon Marczyk
 203 U Crystalline Petroglyph @Anna Podedworna
@@ -230,7 +232,7 @@ Type=Custom
 302 M Mox Bismuth @Robert Maldonado
 303 R Vivacious Ridgeline @Sandara Tang
 304 M Ulamog, Voracious Calamity @Reinaldo Indrajaya
-305 U Omnicranial Clamp @Jeremy Carver
+305 U Omicranial Clamp @Jeremy Carver
 306 U Chromatic Lotus @Jeremy Carver
 307 M Worldcarver Crucible @Jeremy Carver
 308 U Coveted Key @Rudy Siswanto
@@ -244,3 +246,4 @@ Type=Custom
 316 M Karn, Phyrexian Golem @Noah Thatcher
 317 M Cruciform Stalker @Biagio D'Alessandro
 318 U Manaform Hart @Jeremy Carver
+319 R Torpor Sanctuary @Biagio D'Alessandro

@@ -1,0 +1,9 @@
+Name:Shattering Blast
+ManaCost:2 R R
+Types:Sorcery
+
+A:SP$ DestroyAll | ValidCards$ Artifact | SpellDescription$ Destroy all artifacts.
+
+K:TypeCycling:Mountain:1
+
+Oracle:Destroy all artifacts.\nMountaincycling {1} ({1}, Discard this card: Search your library for a Mountain card, reveal it, put it into your hand, then shuffle.)
