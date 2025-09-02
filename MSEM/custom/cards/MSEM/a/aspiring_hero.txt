@@ -13,3 +13,4 @@ SVar:X:TriggeredCard$CardPower
 Oracle:Whenever this creature attacks alone, put a +1/+1 counter on it.\nWhen this creature dies, each opponent gains life equal to its power.
 
 SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Counters

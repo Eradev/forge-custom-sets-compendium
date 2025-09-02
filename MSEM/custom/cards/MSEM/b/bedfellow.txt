@@ -1,0 +1,11 @@
+Name:Bedfellow
+ManaCost:1 B B
+Types:Creature Horror
+PT:2/2
+
+S:Mode$ CantBlock | ValidCard$ Creature.Self | Description$ This creature can't block or be blocked.
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self
+
+A:AB$ Pump | Cost$ ExileFromGrave<2/Card> | NumAtt$ +1 | NumDef$ +1 | SpellDescription$ This creature gets +1/+1 until end of turn.
+
+Oracle:This creature can't block or be blocked.\nExile two cards from your graveyard: This creature gets +1/+1 until end of turn.

@@ -1,0 +1,8 @@
+Name:Rite of the Unnatural
+ManaCost:G G
+Types:Sorcery
+
+A:SP$ ChangeZone | Cost$ G G Sac<1/Permanent.nonCreature/noncreature permanent> | CostDesc$ As an additional cost to cast this spell, sacrifice a noncreature permanent. | Origin$ Library | Destination$ Battlefield | ChangeType$ Creature.cmcEQX | ChangeNum$ 1 | SpellDescription$ Search your library for a creature card with mana value equal to 1 plus the sacrificed permanent's mana value, put it onto the battlefield, then shuffle.
+SVar:X:Sacrificed$CardManaCost/Plus.1
+
+Oracle:As an additional cost to cast this spell, sacrifice a noncreature permanent.\nSearch your library for a creature card with mana value equal to 1 plus the sacrificed permanent's mana value, put it onto the battlefield, then shuffle.

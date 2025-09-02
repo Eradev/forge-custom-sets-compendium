@@ -1,0 +1,11 @@
+Name:Ravenous Attraction
+ManaCost:1 G U
+Types:Creature Octopus Horror
+PT:0/0
+
+K:etbCounter:P1P1:1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDouble | TriggerDescription$ Whenever a creature you control dies, double the number of each kind of counter on this creature.
+SVar:TrigDouble:DB$ MultiplyCounter | Defined$ Self
+
+Oracle:This creature enters with a +1/+1 counter on it.\nWhenever a creature you control dies, double the number of each kind of counter on this creature.

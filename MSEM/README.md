@@ -25,7 +25,12 @@ These changes might not be reflected in their official ruling.
 ## Set implementation progress
 
 ```text
-Video Horror System (VHS)             -  26% (23/86)
+Video Horror System (VHS)             -  95% (82/86)
+  Missing cards:
+    * Maddened Preacher
+    * Snowfield Doppelganger
+    * Wiretapper
+    * Mr. Jackston, the Proprietor
 Kaleidoscope (KLC)                    -  98% (106/108)
   Missing cards:
     * Chronic Traitor: TODO Check for Paranoia paid
@@ -52,6 +57,7 @@ Examples on how to implement custom keywords and mechanisms.
 * [Mirage](#mirage)
 * [Motivate](#motivate)
 * [Paranoia](#paranoia)
+* [Rerun](#rerun)
 * [Torment](#torment)
 
 ### Ascend
@@ -177,6 +183,27 @@ SVar:PayParanoia:DB$ Play | PlayCost$ G | ValidSA$ Spell.Self | Controller$ You 
 
 [Jump to top](#keywords-and-mechanisms-implementation)
 
+### Rerun
+
+Rerun is defined as:
+
+```text
+If you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.
+```
+
+> Note: Rerun allows a card to be cast from exile regardless of how it got there or from where.
+
+Implementation:
+
+```text
+SVar:ExileSelf:DB$ ChangeZone | Origin$ Stack | Destination$ Exile | ConditionDefined$ Self | ConditionPresent$ Card.wasCastFromYourHandByYou
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Exile | Execute$ CastRerun | TriggerDescription$ Rerun (If you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.)
+SVar:CastRerun:DB$ Play | Defined$ Self | Amount$ 1 | Controller$ You | WithoutManaCost$ True | Optional$ True | ActivationZone$ Exile
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
 ### Torment
 
 Torment is defined as:
@@ -195,3 +222,6 @@ SVar:DBLoseLifeFallback:DB$ LoseLife | Defined$ You | LifeAmount$ 3
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
+
+
+

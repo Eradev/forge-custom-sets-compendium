@@ -3,6 +3,15 @@ Code=MSEM_VHS
 Name=Video Horror System
 Date=2023-02-01
 Type=Custom
+BoosterSlots=Rare,RareSpecial
+Booster=3 Rare, 1 RareSpecial
+
+[Rare]
+Base=Rare:fromSheet("MSEM_VHS cards")
+
+[RareSpecial]
+Base=Rare:fromSheet("MSEM_VHS cards")
+Replace=.50F Special:fromSheet("MSEM_VHS cards")
 
 [cards]
 1 R Aspiring Hero @Evgenij Kungur
@@ -94,6 +103,6 @@ Type=Custom
 
 [tokens]
 1 w_1_1_spirit_flying
-2 u_8_8_token_hexproof
+2 u_8_8_kraken_hexproof
 3 mother
 4 c_a_treasure_sac

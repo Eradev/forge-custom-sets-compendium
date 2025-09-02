@@ -1,0 +1,13 @@
+Name:Hellfire Caverns
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ R | SpellDescription$ Add {R}.
+
+A:AB$ Animate | Cost$ 2 R | CheckSVar$ Horrific | SVarCompare$ GE1 | Defined$ Self | Power$ 3 | Toughness$ 3 | Types$ Creature,Devil | RemoveTypes$ Land | Keywords$ Menace | SpellDescription$ Until end of turn, this land becomes a 3/3 Devil creature with menace. Activate only if you're horrific.
+SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
+
+Oracle:This land enters tapped.\n{T}: Add {R}.\n{2}{R}: Until end of turn, this land becomes a 3/3 Devil creature with menace. Activate only if you're horrific.

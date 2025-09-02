@@ -1,0 +1,9 @@
+Name:Veil of Innocence
+ManaCost:W 
+Types:Enchantment 
+
+S:Mode$ AttackRestrict | MaxAttackers$ 1 | IsPresent$ Creature.YouCtrl | PresentCompare$ EQ1 | Description$ As long as you control exactly one creature, no more than one creature can attack each combat.
+
+S:Mode$ BlockRestrict | MaxBlockers$ 1 | IsPresent$ Creature.YouCtrl | PresentCompare$ EQ1 | Description$ As long as you control exactly one creature, no more than one creature can block each combat.
+
+Oracle:As long as you control exactly one creature, no more than one creature can attack or block each combat.

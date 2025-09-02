@@ -1,0 +1,15 @@
+Name:The Collection
+ManaCost:5
+Types:Legendary Artifact
+
+T:Mode$ SpellCast | Static$ True | ValidCard$ Card.Instant+wasCastFromYourHand+withoutRerun,Card.Sorcery+wasCastFromYourHand+withoutRerun | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ ExileSpell | TriggerDescription$ Instant and sorcery spells you control have rerun. (Exile the spell as it resolves if you cast it from your hand. Whenever a creature you control dies, you may cast that card from exile without paying its mana cost.)
+SVar:ExileSpell:DB$ ChangeZone | Defined$ TriggeredCard | Origin$ All | Destination$ Exile | RememberChanged$ True
+
+T:Mode$ ChangesZone | ValidCard$ Card.IsRemembered | Origin$ Exile | Destination$ Any | Execute$ ForgetCard | Static$ True
+SVar:ForgetCard:DB$ Cleanup | ForgetDefined$ TriggeredCard
+
+S:Mode$ Continuous | EffectZone$ All | Affected$ Card.IsRemembered | AffectedZone$ Exile | AddTrigger$ RerunTrig
+SVar:RerunTrig:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Exile | Execute$ CastRerun | TriggerDescription$ Rerun — Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.
+SVar:CastRerun:DB$ Play | Defined$ Self | Controller$ You | WithoutManaCost$ True | Optional$ True | ActivationZone$ Exile
+
+Oracle:Instant and sorcery spells you control have rerun. (Exile the spell as it resolves if you cast it from your hand. Whenever a creature you control dies, you may cast that card from exile without paying its mana cost.)

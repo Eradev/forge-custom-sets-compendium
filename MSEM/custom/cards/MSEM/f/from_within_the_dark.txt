@@ -1,0 +1,12 @@
+Name:From Within the Dark
+ManaCost:3 R
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | CheckSVar$ X | SVarCompare$ EQ0 | Execute$ LogFirst | TriggerDescription$ Whenever a creature you control enters for the first time each turn, you may sacrifice it. If you do, exile cards from the top of your library until you exile a creature card. Put that card onto the battlefield.
+SVar:LogFirst:DB$ StoreSVar | SVar$ X | Type$ Number | Expression$ 1 | SubAbility$ TrigDig
+SVar:TrigDig:DB$ DigUntil | UnlessCost$ Sac<1/Card.TriggeredCard> | UnlessPayer$ You | UnlessSwitched$ True | Valid$ Creature | ValidDescription$ creature card | FoundDestination$ Battlefield | RevealedDestination$ Exile
+
+T:Mode$ Phase | Phase$ Cleanup | Execute$ TrigReset | Static$ True
+SVar:TrigReset:DB$ StoreSVar | SVar$ X | Type$ Number | Expression$ 0
+
+Oracle:Whenever a creature you control enters for the first time each turn, you may sacrifice it. If you do, exile cards from the top of your library until you exile a creature card. Put that card onto the battlefield.
