@@ -146,6 +146,9 @@ Type=Custom
 7 emblem_menes_the_great_pyramid
 8 emblem_jachsechep_gods_wife
 
+[CreatureTypes]
+Mummy:Mummies
+
 [WalkerTypes]
 Fortress
 Jachsechep
