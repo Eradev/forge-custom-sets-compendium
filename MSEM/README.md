@@ -9,6 +9,7 @@ Sets information can be found on [lackeybot](https://lackeybot.com/msem/search).
 These changes might not be reflected in their official ruling.
 
 * All Hounds are now Dogs. This also apply to abilities that target and/or applies to Hounds.
+  * Haggard Jackal is now a Zombie Jackal instead of a Zombie Hound.
 * Some cards have their wording changed to better reflect real MTG cards.
 
 ## How to install?
@@ -36,14 +37,14 @@ Kaleidoscope (KLC)                    -  98% (106/108)
     * Chronic Traitor: TODO Check for Paranoia paid
     * Kofe-District Scholar: TODO Check for Paranoia paid
 A Tourney at Whiterun (TWR)           -  11% (31/269)
-The Land Bundle (L)                   - 100% (80/80)
 Tides of War (TOW)                    -  28% (77/271)
-Pyramids of Atuum (POA)               -  31% (40/128)
+Pyramids of Atuum (POA)               -  39% (50/128)
 
 Reprints / Promo sets:
 MSEM Champions (CHAMPIONS)
 MSEM Champions: Masterpiece (MPS_MSE)
 MSEM Secret Lair Drops (LAIR)
+The Land Bundle (L)
 ```
 
 ## Keywords and mechanisms implementation

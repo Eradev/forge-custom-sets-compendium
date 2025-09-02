@@ -5,56 +5,56 @@ Date=2017-06-08
 Type=Custom
 
 [cards]
-1 C Alpha Lion @Ilona Mikolajczyk
+1 U Alpha Lion @Ilona Mikolajczyk
 2 R Angel of Sands @Emanuella Kozas
 3 R Avatar of Utsenchep @Eryk Szczygiel
 4 C Awestruck @Rainer Petter Ribeiro
 5 C Camelriding Archer @Jacob Kohlberg
 6 C Caravan Sumpter @Nicole Cardiff
-7 C Dawn Silhouette @Jason Engle
-8 C Dignified Serpent @Julie Dillon
-9 C Diligent Believer @Linda Lithén
+7 U Dawn Silhouette @Jason Engle
+8 U Dignified Serpent @Julie Dillon
+9 U Diligent Believer @Linda Lithén
 10 R Divine Protection @Vuk Kostic
 11 R Eternal Banishment @draxmusthurt
 12 C Expulse to the Desert @Indre Lelertaviciute
 13 C Giant Dromad @GENZOMAN
 14 M High-Priestess Nebti @Bryan Marvin P. Sola
-15 C Judge Unworthy @Brolo
-16 C Leonin Sandfighter @George Evangelista
+15 U Judge Unworthy @Brolo
+16 U Leonin Sandfighter @George Evangelista
 17 C Menhet Charm @GENZOMAN
 18 R Menhet's Edict @EthicallyChallenged
-19 C Mounted Charge @serranef
+19 U Mounted Charge @serranef
 20 C Observing Guardian @paulobarrios
 21 C Peaceful Sunbath @gadax
 22 M Righteous Priestess @Inna Vjuzhanina
 23 C Savannah Scout @aditya777
 24 C Sprawled Arming @Paizo Publishing, LLC
-25 C Stream of Light @Bob Greyvenstein
+25 U Stream of Light @Bob Greyvenstein
 26 C Suntail Hawk @Heather Hudson
 27 C Survive @imrooniel
 28 C Utsenchep Warrior @Sergio Quijada
 29 R Ancestral Memories @Frederic St-Arnaud
 30 C Atuum Serpent @Lin Shunding
 31 R Avatar of Senmut @Andy Timm
-32 C Bath in the Solitude @NaomiVanDoren
+32 U Bath in the Solitude @NaomiVanDoren
 33 C Blurring Mists @Lee J. Yuan
 34 R Blurry Counterpart @Alexander Alexandrov
 35 C Crippling Spirit @Luis María Dumont
-36 C Cunning Chanter @Eric Ridgeway
-37 C Diligent Fishermen @Sam Hogg
+36 U Cunning Chanter @Eric Ridgeway
+37 U Diligent Fishermen @Sam Hogg
 38 C Divination @David Gaillet
 39 R Divine Denial @Vuk Kostic
 40 C Dripping Turtle @Adam Vehige
-41 C Excellent Architecture @Miguel Coimbra
+41 U Excellent Architecture @Miguel Coimbra
 42 R Gift of the Sphinx @Nicole Cardiff
 43 C Life-Giving Waters @YU QI WANG
 44 C Pharaoh Guardian @Mike Capprotti
 45 C Preserving Cloak @Katerina Romanova
 46 C Priestess of Menhet @Mizhak
-47 C Sandborn Mage @0BO
+47 U Sandborn Mage @0BO
 48 C Scaled Lurker @Alexander Alexandrov
-49 C Sharp Eyed Sentinel @Juan Arrabal Hernández
-50 C Spell Dilution @GENZOMAN
+49 U Sharp Eyed Sentinel @Juan Arrabal Hernández
+50 U Spell Dilution @GENZOMAN
 51 R Sphinx of Riddles @laclillac
 52 C Streaming Waters @Avionetca
 53 M Through the Dust @Disse86
@@ -67,46 +67,46 @@ Type=Custom
 60 R Antithesis @tarel abdel-kawi
 61 R Avatar of Amosis @Chris Bjors
 62 C Depraved Disciple @monkeydoodles
-63 C Descendant of Caaseb @Jose Ochoa
+63 U Descendant of Caaseb @Jose Ochoa
 64 R Desert Slaughterer @Veli Nyström
-65 C Despise @Javier Charro
-66 C Doomed Journey @Alector Fencer
+65 U Despise @Javier Charro
+66 U Doomed Journey @Alector Fencer
 67 C Double Arming @David Gaillet
 68 C Essence Dehydration @GENZOMAN
-69 C Gates to the Afterlife @Alector Fencer
+69 U Gates to the Afterlife @Alector Fencer
 70 C Giant Scarab @Mike Lim
 71 C Gruesome Transport @mucuss33
 72 C Haggard Jackal @Ilona Mikolajczyk
 73 C Kill the Competition @Joannie Goulet
 74 C Lasis Persecutor @Dusan Markovic
 75 R Menes, the Great Pyramid @Paul Fisher
-76 C Mummification @Carlos Valenzuela
+76 U Mummification @Carlos Valenzuela
 77 C Njel Crocodile @Sandro Rybak
-78 C Poisoned Well @Fantasy Flight Games
+78 U Poisoned Well @Fantasy Flight Games
 79 C Ruthless Monstrosity @Adam Vehige
 80 R Sinister Pact @Andrzej-Korytkowski
 81 C Sudden Drought @theGorer
 82 C Tendrils of Corruption @Andrew Murray
-83 C Terrifying Ankh @Veli Nyström
-84 C Tireless Vulture @James Wolf Strehle
+83 U Terrifying Ankh @Veli Nyström
+84 U Tireless Vulture @James Wolf Strehle
 85 R Avatar of Basat @Grishin Alexey
 86 C Basat Charm @Anastia Sudakova Lerno
 87 C Basat Priest @Robert Kim
 88 C Brute Force @ZHOU
-89 C Caravan Engulfer @GENZOMAN
-90 C Dance for the Heavens @Wu Xi, Athena
+89 U Caravan Engulfer @GENZOMAN
+90 U Dance for the Heavens @Wu Xi, Athena
 91 C Desert Warriors @Danil Shunkov
 92 M Desert Wurms @minenanoah
 93 C Dune Peregrination @SweetSeri
 94 C Dune Scorpion @laclillac
 95 R Ferocious Desert-Hunter @Jb Pain
-96 C Fire from Above @Baton123
+96 U Fire from Above @Baton123
 97 C Haughty Priest @A.Heublein
 98 C Haze Raptor @Marta Mospinek
-99 C Heat of Battle @Chris Kuhlmann
+99 U Heat of Battle @Chris Kuhlmann
 100 C Imaginary Flames @Mike Capprotti
-101 C Inspiring Melodies @Wu Xi, Athena
-102 C Mounted Marksman @Nicole Cardiff
+101 U Inspiring Melodies @Wu Xi, Athena
+102 U Mounted Marksman @Nicole Cardiff
 103 R Pyramid Lord @RyanMahonArt
 104 R Rockpounding Saurian @Jeff Teo
 105 C Sanding @Darkdeliverians
@@ -114,8 +114,8 @@ Type=Custom
 107 C Sixpod Sprinter @Adam Vehige
 108 C Tamed Jaguar @riikozor
 109 R Warrior's Pride @Jason Engle
-110 C Whistled Dragons @Alector Fencer
-111 C Wurm Spawning @Chris Cold
+110 U Whistled Dragons @Alector Fencer
+111 U Wurm Spawning @Chris Cold
 112 M Zarchepet, Master of Sands @Elin Tan
 113 R Daunting Gaze @Eric Ridgeway
 114 M Jachsechep, God's Wife @Leonid Kozienko
@@ -145,6 +145,9 @@ Type=Custom
 3 copy_mummy @dylanpierpont
 7 emblem_menes_the_great_pyramid
 8 emblem_jachsechep_gods_wife
+
+[CreatureTypes]
+Mummy:Mummies
 
 [WalkerTypes]
 Fortress
