@@ -1,0 +1,17 @@
+Name:Lotus Herald
+ManaCost:1 W
+Types:Creature Angel
+PT:2/1
+
+K:Flash
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | CheckSVar$ X | SVarCompare$ GTY | ValidCard$ Card.Self | Execute$ TrigCopy | TriggerDescription$ When this creature enters, if an opponent controls more lands than you, create a Black Lotus token. (It's a {0} Artifact with "{T}, Sacrifice this artifact: Add three mana of any one color.")
+SVar:TrigCopy:DB$ CopyPermanent | DefinedName$ Black Lotus
+SVar:X:PlayerCountOpponents$HighestValid Land.YouCtrl
+SVar:Y:Count$Valid Land.YouCtrl
+
+Oracle:Flash\nFlying\nWhen this creature enters, if an opponent controls more lands than you, create a Black Lotus token. (It's a {0} Artifact with "{T}, Sacrifice this artifact: Add three mana of any one color.")
+
+SVar:NeedsToPlay:X GTY
