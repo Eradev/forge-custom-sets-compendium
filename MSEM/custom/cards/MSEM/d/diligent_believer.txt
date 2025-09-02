@@ -1,0 +1,9 @@
+Name:Diligent Believer
+ManaCost:1 W
+Types:Creature Human Cleric
+PT:1/1
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +1/+1 for each +1/+1 counter on other creatures you control.
+SVar:X:Count$Valid Creature.YouCtrl+Other$CardCounters.P1P1
+
+Oracle:This creature gets +1/+1 for each +1/+1 counter on other creatures you control.
