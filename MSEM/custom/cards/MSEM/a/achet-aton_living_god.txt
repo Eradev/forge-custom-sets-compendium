@@ -1,0 +1,17 @@
+Name:Achet-Aton, Living God
+ManaCost:2 B B B
+Types:Creature Human Advisor
+PT:5/5
+
+K:Menace
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigLife | CheckSVar$ YourLife | SVarCompare$ LT5 | TriggerDescription$ When NICKNAME enters, if your life total is less than 5, your life total becomes 5.
+SVar:TrigLife:DB$ SetLife | Defined$ You | LifeAmount$ 5
+SVar:YourLife:Count$YourLifeTotal
+
+R:Event$ LifeReduced | ActiveZones$ Battlefield | ValidPlayer$ You.lifeGE5 | Result$ LT5 | IsDamage$ True | ReplaceWith$ ReduceLoss | Description$ As long as you have 5 or more life, damage that would reduce your life total to less than 5 reduces it to 5 instead.
+SVar:ReduceLoss:DB$ ReplaceEffect | VarName$ Amount | VarValue$ X
+SVar:X:ReplaceCount$Amount/LimitMax.Difference
+SVar:Difference:Count$YourLifeTotal/Minus.5
+
+Oracle:Menace (This creature can't be blocked except by two or more creatures.)\nWhen Achet-Aton enters, if your life total is less than 5, your life total becomes 5.\nAs long as you have 5 or more life, damage that would reduce your life total to less than 5 reduces it to 5 instead.
