@@ -1,0 +1,8 @@
+Name:Nullmancer
+ManaCost:W
+Types:Creature Human Wizard
+PT:1/1
+
+S:Mode$ CantBeActivated | ValidSA$ Activated.nonManaAbility | Description$ Activated abilities can't be activated unless they're mana abilities.
+
+Oracle:Activated abilities can't be activated unless they're mana abilities.
