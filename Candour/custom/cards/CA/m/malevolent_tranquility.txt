@@ -1,0 +1,9 @@
+Name:Malevolent Tranquility
+ManaCost:B B
+Types:Enchantment
+
+K:Flash
+
+S:Mode$ Continuous | Affected$ Creature | AddPower$ -1 | AddToughness$ -1 | IsCurse$ True | Description$ Creatures get -1/-1.
+
+Oracle:Flash\nCreatures get -1/-1.
