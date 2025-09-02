@@ -232,7 +232,7 @@ Type=Custom
 302 M Mox Bismuth @Robert Maldonado
 303 R Vivacious Ridgeline @Sandara Tang
 304 M Ulamog, Voracious Calamity @Reinaldo Indrajaya
-305 U Omnicranial Clamp @Jeremy Carver
+305 U Omicranial Clamp @Jeremy Carver
 306 U Chromatic Lotus @Jeremy Carver
 307 M Worldcarver Crucible @Jeremy Carver
 308 U Coveted Key @Rudy Siswanto
