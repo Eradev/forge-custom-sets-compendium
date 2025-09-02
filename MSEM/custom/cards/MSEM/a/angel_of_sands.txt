@@ -1,0 +1,15 @@
+Name:Angel of Sands
+ManaCost:4 W
+Types:Creature Angel
+PT:3/5
+
+K:Flying
+
+K:Vigilance
+
+T:Mode$ Phase | Phase$ Upkeep | TriggerZones$ Battlefield | ValidPlayer$ You | IsPresent$ Plains.YouCtrl | PresentCompare$ GE4 | Execute$ TrigPutCounter | TriggerDescription$ At the beginning of your upkeep, if you control four or more Plains, put a +1/+1 counter on each other creature you control.
+SVar:TrigPutCounter:DB$ PutCounterAll | CounterType$ P1P1 | CounterNum$ 1 | ValidCards$ Creature.YouCtrl+Other
+
+Oracle:Flying, vigilance\nAt the beginning of your upkeep, if you control four or more Plains, put a +1/+1 counter on each other creature you control.
+
+SVar:BuffedBy:Plains
