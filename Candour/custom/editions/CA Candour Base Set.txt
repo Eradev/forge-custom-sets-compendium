@@ -48,7 +48,7 @@ Type=Custom
 41 M Basri, Oketra's Faithful @Wilson Nugraha
 42 R Clightos, Mystic Peak @Anthony Avon
 43 M Herald of Sovereignty @Acrassan
-44 M Ria Ivor, Corrupter Champion @Mike Jordana
+44 M Ria Ivor, Corrupted Champion @Mike Jordana
 45 R Nullmancer @F3LC4T
 46 R Gilded Pouncer @Daniel Cotter
 47 R Angelic Wrath @Andreas Huang
