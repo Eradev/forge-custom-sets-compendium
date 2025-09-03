@@ -181,7 +181,7 @@ Type=Custom
 29 c_1_1_a_construct
 
 [other]
-26 emblem_simul
+26 emblem_simul_sylvan_alchemist
 27 plains
 
 [CreatureTypes]
