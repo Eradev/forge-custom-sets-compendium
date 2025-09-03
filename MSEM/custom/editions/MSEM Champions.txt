@@ -153,35 +153,35 @@ Type=Custom
 150 M Reflected Moment @randiocalrissian
 
 [tokens]
-1 b_x_x_demon_flying
-2 g_0_1_plant
-3 b_5_5_demon_flying
-4 w_1_1_cat_warrior
-5 g_3_3_elemental
-6 w_1_1_citizen
-7 c_1_1_a_construct
-8 all_1_1_scout
-9 r_1_1_elemental
-10 u_1_1_a_thopter_flying
+1 b_x_x_demon_flying @Mateusz Ozminski
+2 g_0_1_plant @Tatmeup
+3 b_5_5_demon_flying @Bill Creative
+4 w_1_1_cat_warrior @Shagan-fury
+5 g_3_3_elemental @LozanoX
+6 w_1_1_citizen @Bruno Galuzzi Corsini
+7 c_1_1_a_construct @Matt Dixon
+8 all_1_1_scout @Tohad
+9 r_1_1_elemental @Emory
+10 u_1_1_a_thopter_flying @Andrew Murray
 11 b_1_1_imp
-12 b_x_x_horror
-13 u_1_1_elemental_flying
-14 gu_x_x_plant
-15 u_1_1_jellyfish_slipstream
-16 w_1_1_bird_flying
-17 hilas_favor
-18 g_1_1_antelope
-19 w_1_1_bird_flying
-20 w_0_2_ox
-21 b_1_1_bird_flying
-22 b_3_3_cat_deathtouch
-23 b_5_5_golem_trample
-24 r_2_2_elemental_shaman_haste_scry
-25 all_1_1_scout
+12 b_x_x_horror @Alex Stone
+13 u_1_1_elemental_flying @Amanda Gyllin
+14 gu_x_x_plant @Anastasia Bulgakova
+15 u_1_1_jellyfish_slipstream @ShootingStarLogBook
+16 w_1_1_bird_flying @禍夜
+17 hilas_favor @Syllie
+18 g_1_1_antelope @nina reyes
+19 w_1_1_bird_flying @Váradi Paszkál
+20 w_0_2_ox @Rosa Bonheur
+21 b_1_1_bird_flying @Zetsuai89
+22 b_3_3_cat_deathtouch @Masashi Kishimoto
+23 b_5_5_golem_trample @Masashi Kishimoto
+24 r_2_2_elemental_shaman_haste_scry @Excellero
+25 all_1_1_scout @Mack Sztaba
 29 c_1_1_a_construct
 
 [other]
-26 emblem_simul
+26 emblem_simul_sylvan_alchemist
 27 plains
 
 [CreatureTypes]
