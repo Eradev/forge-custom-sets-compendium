@@ -6,274 +6,274 @@ Type=Custom
 Booster=7 Common, 5 Uncommon, 2 RareMythic, 1 BasicLand
 
 [cards]
-1 U Arms Merchant
-2 R Atares Amplifier
-3 U Back in Action
-4 C Battle Ready
-5 C Battle Tested
-6 C Citizen Programming
-7 C Council Attendants
-8 R Cymurai Blademaster
-9 C District Raid
-10 M Dominator Droid
-11 C Force Deployment
-12 C Freedom Fighters
-13 M L3-T, Equalizer
-14 R Liberated Armory
-15 R Martial Dictate
-16 C Mecha Technician
-17 U N-FORCE Captain
-18 C N-FORCE Trooper
-19 M New World Order
-20 C Overwatch Droid
-21 U Parameter Halo
-22 C Peacekeeper Droid
-23 U Police Discretion
-24 U Precog Pilot
-25 U Psychic Obligator
-26 C Public Broadcast
-27 U Rebel Advance
-28 U Rebel Sniper
-29 C Rocketeer
-30 C Rooftop Rebel
-31 C Scion Mark IV
-32 C Skilled Protector
-33 C Sonic Scream
-34 U Sovereign Droid
-35 C Sting Droid
-36 R Taken for Questioning
-37 R Theos Artene, Demagogue
-38 U TR-12 Deliverer
-39 U Viral Fame
-40 R Wrath of Mod
-41 U Accelerated Assembly
-42 R Ancestral Research
-43 U Atares 14
-44 U Automated Archivist
-45 C Automatic Override
-46 R Back Door
-47 R Cloud Colossus
-48 C Colossal Construct
-49 R Corporate Ascension
-50 U Corporate Control
-51 C Cryo Cell
-52 C Cyber Savant
-53 C CyCorp Engineer
-54 C Data Dig
-55 C Digiblade Shinobi
-56 U Flutter Droid
-57 M Full Automation
-58 C Hacker Prodigy
-59 U Masq Agent
-60 R Masq Maven
-61 R Mat Harden, Detective
-62 C Minimize
-63 U Moderator's Discretion
-64 C Net Run
-65 C NuGolem
-66 C Private Eye (NET)
-67 U Quarantine
-68 C Reprogram
-69 R Scion Mimic
-70 U Shunt Access
-71 C Silicon Drake
-72 C Skyguard Droid
-73 C Skyguard Officer
-74 U Steel Sabotage
-75 M Talya, Cyber Wayfarer
-76 U Tempest Droid
-77 C Torrent Seed
-78 U Vat-Grown Infiltrator
-79 C Virtual Reality
-80 C Abuse of Power
-81 U Amalgamech
-82 U Blackwatch Ace
-83 C Blackwatch Assassin
-84 C Blackwatch Intimidator
-85 R Corporate Confidant
-86 U Corporate Infiltrator
-87 R Data Demon
-88 M Deep Net
-89 C Dreadmoth
-90 C Failed Creation
-91 R Ghost in the Machine
-92 U Heaps Baron
-93 U Hitman's Discretion
-94 C Info Dump
-95 C Malware
-96 C Masq Hacker
-97 R Misclick
-98 C MX Dreadnought
-99 U Online Tutor
-100 U Out of Date
-101 R Phantom Walker
-102 U Plugged In
-103 C Reassembler
-104 U Reboot Droid
-105 U Redeploy
-106 C Robo Boxer
-107 C Robo Rodent
-108 C Salvage Slasher
-109 U Scythe VII
-110 R Self-Destruct Sequence
-111 C Server Wipe
-112 U Shrieking Affliction
-113 M Sick Nic, Baron of Crime
-114 C Sky Prowler
-115 R Szaro, Bounty Hunter
-116 C Turf Killing
-117 C Vainglorious Pilot
-118 C Vape Fiend
-119 U Aggressive Demining
-120 R Andreux Von, Extremist
-121 U Angry Flamer
-122 U Assault Squad
-123 U Blitz Suit
-124 C Civil Unrest
-125 M Corporate Gamble
-126 C Cyber Courier
-127 U Deadeye Shinobi
-128 C Demolish
-129 U Doxxing
-130 U Extremist's Discretion
-131 C Gun Runner
-132 U Hard Crash
-133 C Hired Hit
-134 U Hunter-Seeker
-135 C Junkyard Boss
-136 U Lab Wrecker
-137 C Lizardman Outbreak
-138 R Lock and Load (NET)
-139 M Mecha Dragon
-140 R Motley Crew
-141 R MX Juggernaut
-142 C Out for Blood
-143 U Particular Skills
-144 C Quick Draw (NET)
-145 U Rabid Tri-Limb
-146 C Road Rebel
-147 C Robotic Revolutionary
-148 C Rogue Prototype
-149 R Saurian Mechanic
-150 C Saurian Striker
-151 C Smash Droid
-152 R Spice Den
-153 R Street Hacker
-154 C Street Thief
-155 C Thrill Seekers
-156 C Torrent Feed
-157 C Turn to Slag
-158 U Amphin Vigilante
-159 U Arachdroid
-160 U Arcologize
-161 C City Councilman
-162 R City Wrecker
-163 C Commune Colossus
-164 R Creeping Corrosion
-165 U Digital Witness
-166 C District Explorer
-167 U Garden Grafter
-168 R Gunmetal Hydra
-169 C Hulk Droid
-170 U Hunter's Discretion
-171 R Machine Oracle
-172 M Monstrous Apex
-173 U N-FORCE Ranger
-174 C Nano Field
-175 M Nanobirther
-176 C Natural End
-177 C Plummet
-178 U Redistricting
-179 C Refuge Warden
-180 C Resilient Recluse
-181 R Sapien Sergeant
-182 C Secret Keeper
-183 U Sewer Skinner
-184 U Shark Splice
-185 C Showmatch
-186 C Soylent Soaker
-187 C Splice Thug
-188 R State of Affairs
-189 C Streetwise Saurian
-190 C Substantial Upgrade
-191 U TC-7 Titan
-192 R TC-14 Behemoth
-193 C Toxic Leper
-194 U Unfettered Lusus
-195 C Urban Sprawl
-196 C Web Crawler
-197 U Aerial Gunner
-198 R Duplicate Results
-199 U Escaped Specimen
-200 U Expansion Plans
-201 U Gun Collector
-202 U Institutional Inertia
-203 R Masq Saboteur
-204 U Mecha Contract
-205 R Mercenary Autopilot
-206 R Mirsi, Mother of Mutants
-207 U Night Hacker
-208 R Quickdraw Vigilante
-209 R Re-spec
-210 U Short Circuit (NET)
-211 U Skyguard Ascendant
-212 R Skyguard Sovereign
-213 R Stirring Pride
-214 M Strings of the Masquerade
-215 M Switchflit
-216 R Toxic Scrap Heap
-217 R Turf Tender
-218 U Underworld Deeds
-219 U Awakened Droid
-220 U Butler Droid
-221 C Citizen Droid
-222 C Combat Droid
-223 C Cultivation Nanotech
-224 U Cybersmith
-225 U Data Petal
-226 M Dystopilith
-227 C Invasive Nanotech
-228 U JMD Dome
-229 C Malign Nanotech
-230 C Medicinal Nanotech
-231 M The Network
-232 C Neural Nanotech
-233 C Rebel Cocktail
-234 R Scrap Market
-235 C Security Drone
-236 C Server Farm
-237 R Soylent Station
-238 R Supercomputer
-239 R Ascending Spires
-240 U BiHelix Laboratory
-241 U Blackwatch Turf
-242 R Coruscating Cityscape
-243 U CyCorp Research Facility
-244 C Holo-Den
-245 U MekLab Factory
-246 U N-FORCE Station
-247 R Shadowed Pillar
-248 R Sprawling Coils
-249 R Umbrous Depths
-250 R Vibrant Locale
-251 L Plains
-252 L Island
-253 L Swamp
-254 L Mountain
-255 L Forest
+1 U Arms Merchant @Erik Van Helvoirt
+2 R Atares Amplifier @Rettag (DeviantArt)
+3 U Back in Action @Marek Okon
+4 C Battle Ready @Wenjuinn Png
+5 C Battle Tested @David Kaye (Katmachiavelli)
+6 C Citizen Programming @Michael Broussard
+7 C Council Attendants @Madspartan013
+8 R Cymurai Blademaster @GeorgeLovesyArt
+9 C District Raid @Adam Kuczek
+10 M Dominator Droid @Duster132
+11 C Force Deployment @fxEVo
+12 C Freedom Fighters @Eva Kosmos
+13 M L3-T, Equalizer @Duster132
+14 R Liberated Armory @Shimmering-Sword
+15 R Martial Dictate @Adam Burn
+16 C Mecha Technician @Arman Akopian
+17 U N-FORCE Captain @Geoffroy Thoorens
+18 C N-FORCE Trooper @Yvan Quinet
+19 M New World Order @Adam Kuczek
+20 C Overwatch Droid @Reza-ilyasa
+21 U Parameter Halo @Yvan Quinet
+22 C Peacekeeper Droid @Ptitvinc
+23 U Police Discretion @Ian Llanas
+24 U Precog Pilot @Saturnoarg
+25 U Psychic Obligator @Yvan Quinet
+26 C Public Broadcast @Chris Ostrowski
+27 U Rebel Advance @Tnounsy
+28 U Rebel Sniper @Bogdan Marica
+29 C Rocketeer @Concept Art House
+30 C Rooftop Rebel @Genessis-d4nkpho
+31 C Scion Mark IV @Zhangx
+32 C Skilled Protector @Yvan Quinet
+33 C Sonic Scream @Fredaugis
+34 U Sovereign Droid @Deryl Braun
+35 C Sting Droid @Adam Kuczek
+36 R Taken for Questioning @TD-Vice (DeviantArt)
+37 R Theos Artene, Demagogue @Jake Gumbleton
+38 U TR-12 Deliverer @Ukitakumuki
+39 U Viral Fame @Ortheza
+40 R Wrath of Mod @Torvenius
+41 U Accelerated Assembly @JenZee
+42 R Ancestral Research @Alexandr Elichev
+43 U Atares 14 @Reza-ilyasa
+44 U Automated Archivist @DarkGeometryArt
+45 C Automatic Override @DarkGeometryArt
+46 R Back Door @Phelan Davion
+47 R Cloud Colossus @Hikaruga (DeviantArt)
+48 C Colossal Construct @Moonworker1
+49 R Corporate Ascension @Fragged Empire
+50 U Corporate Control @Adam Kuczek
+51 C Cryo Cell @Marc Brunet
+52 C Cyber Savant @Ian Llanas
+53 C CyCorp Engineer @Yvan Quinet
+54 C Data Dig @Traaw
+55 C Digiblade Shinobi @Yvan Quinet
+56 U Flutter Droid @Nickolay Taranenko
+57 M Full Automation @BMJ Metalik
+58 C Hacker Prodigy @Hybridgothica
+59 U Masq Agent @AKIRAwrong
+60 R Masq Maven @Fantasy Flight Games
+61 R Mat Harden, Detective @Jonas De Ro
+62 C Minimize @Udonnodu
+63 U Moderator's Discretion @Ian Llanas
+64 C Net Run @Tibor Bedats
+65 C NuGolem @Noistromo
+66 C Private Eye (NET) @Nathantwist
+67 U Quarantine @Hybridgothica
+68 C Reprogram @KypcaHT
+69 R Scion Mimic @Sbalac
+70 U Shunt Access @Hybridgothica
+71 C Silicon Drake @DarkGeometryArt
+72 C Skyguard Droid @Davis Engel
+73 C Skyguard Officer @Duster132
+74 U Steel Sabotage @Adam Kuczek
+75 M Talya, Cyber Wayfarer @Hybridgothica
+76 U Tempest Droid @Xenoblade Chronicles
+77 C Torrent Seed @Vombavr
+78 U Vat-Grown Infiltrator @Rostyslav Zagornov
+79 C Virtual Reality @OmeN2501
+80 C Abuse of Power @DanLuVisi
+81 U Amalgamech @DasAdam
+82 U Blackwatch Ace @Eduardo Pena
+83 C Blackwatch Assassin @Panelgutter
+84 C Blackwatch Intimidator @Chrisnfy85
+85 R Corporate Confidant @Yvan Quinet
+86 U Corporate Infiltrator @Yvan Quinet
+87 R Data Demon @Jose Arias
+88 M Deep Net @Sparrow-chan
+89 C Dreadmoth @GeorgeLovesyArt
+90 C Failed Creation @Marko Djurdjevic
+91 R Ghost in the Machine @Victor Leza
+92 U Heaps Baron @Thylacinee
+93 U Hitman's Discretion @Adam Schumpert
+94 C Info Dump @Clark Wiggins
+95 C Malware @Gordon Benneito
+96 C Masq Hacker @El-grimlock
+97 R Misclick @Victor Leza
+98 C MX Dreadnought @Jessada Suthi
+99 U Online Tutor @Ian Llanas
+100 U Out of Date @BorjaPindado
+101 R Phantom Walker @Thomas Pringle
+102 U Plugged In @BorjaPindado
+103 C Reassembler @Mirobudis
+104 U Reboot Droid @Marko Djurdjevic
+105 U Redeploy @Bodan MRK
+106 C Robo Boxer @Zgfisher
+107 C Robo Rodent @Thomaswievegg (DeviantArt)
+108 C Salvage Slasher @BetoLima
+109 U Scythe VII @Mauricio Herrera
+110 R Self-Destruct Sequence @Macarious
+111 C Server Wipe @Torvenius
+112 U Shrieking Affliction @Thomaswievegg
+113 M Sick Nic, Baron of Crime @DanLuVisi
+114 C Sky Prowler @Alejandro Mirabal
+115 R Szaro, Bounty Hunter @Jean-Sebastien Rossbach
+116 C Turf Killing @Panelgutter
+117 C Vainglorious Pilot @AsahiSuperdry
+118 C Vape Fiend @Raggedy-Annedroid
+119 U Aggressive Demining @Adam Kuczek
+120 R Andreux Von, Extremist @Boris Dyatlov
+121 U Angry Flamer @Madspartan013
+122 U Assault Squad @Cryptcrawler
+123 U Blitz Suit @Ukitakumuki
+124 C Civil Unrest @CD Projekt RED
+125 M Corporate Gamble @Cory Brindley
+126 C Cyber Courier @Tower-raven
+127 U Deadeye Shinobi @Nerkin
+128 C Demolish @Kikicianjur
+129 U Doxxing @Aurore Folny
+130 U Extremist's Discretion @Hobo-the-Dinosaur
+131 C Gun Runner @WildWeasel339
+132 U Hard Crash @Claudio Pilia
+133 C Hired Hit @Romix44 (DeviantArt)
+134 U Hunter-Seeker @Atey Ghailan
+135 C Junkyard Boss @Neisbeis
+136 U Lab Wrecker @Cryptcrawler
+137 C Lizardman Outbreak @AspectusFuturus
+138 R Lock and Load (NET) @Ameeeeba
+139 M Mecha Dragon @Tapwing
+140 R Motley Crew @HOON
+141 R MX Juggernaut @LasloLF
+142 C Out for Blood @Maciej Kuciara
+143 U Particular Skills @Mlaapas
+144 C Quick Draw (NET) @Florent Llamas
+145 U Rabid Tri-Limb @DarioJart
+146 C Road Rebel @Perun-tworek
+147 C Robotic Revolutionary @Fredaugis
+148 C Rogue Prototype @Marc Brunet
+149 R Saurian Mechanic @MoonSkinned
+150 C Saurian Striker @Chesterocampo
+151 C Smash Droid @Mr-Jack
+152 R Spice Den @5ofnovember
+153 R Street Hacker @KM33
+154 C Street Thief @Remton (DeviantArt)
+155 C Thrill Seekers @BrandNewNostalgia
+156 C Torrent Feed @Fredaugis
+157 C Turn to Slag @Cyberpunk 2077
+158 U Amphin Vigilante @Fragged Empire
+159 U Arachdroid @Ramsés Meléndez
+160 U Arcologize @Jbballaran
+161 C City Councilman @Robert Simons
+162 R City Wrecker @Pacific Rim
+163 C Commune Colossus @Reza-ilyasa
+164 R Creeping Corrosion @Solarsouth
+165 U Digital Witness @Neil Branouinho
+166 C District Explorer @Madspartan013
+167 U Garden Grafter @Fantasio
+168 R Gunmetal Hydra @soSiiCK
+169 C Hulk Droid @Jakub Rebelka
+170 U Hunter's Discretion @TotmoArtsStudio2
+171 R Machine Oracle @SoupAndButter
+172 M Monstrous Apex @Michael Kutsche
+173 U N-FORCE Ranger @Romal-R
+174 C Nano Field @Tower-raven
+175 M Nanobirther @TSRodriguez
+176 C Natural End @Ultracold
+177 C Plummet @Chesterocampo
+178 U Redistricting @Lun-art (DeviantArt)
+179 C Refuge Warden @Bear1037
+180 C Resilient Recluse @Rafael Boo
+181 R Sapien Sergeant @Mikhail Rakhmatullin
+182 C Secret Keeper @Sarichev
+183 U Sewer Skinner @Jonas Petrauskas
+184 U Shark Splice @Alejandro Mirabal
+185 C Showmatch @hailsR
+186 C Soylent Soaker @Chase Velarde
+187 C Splice Thug @Fragged-Empire
+188 R State of Affairs @Tekkoontan
+189 C Streetwise Saurian @Two Horns United
+190 C Substantial Upgrade @Awaken-Destruction
+191 U TC-7 Titan @Reza-ilyasa
+192 R TC-14 Behemoth @Ptitvinc
+193 C Toxic Leper @Wen-JR
+194 U Unfettered Lusus @Tibor Bedats
+195 C Urban Sprawl @ANTIFAN-REAL
+196 C Web Crawler @Neisbeis
+197 U Aerial Gunner @Edsfox
+198 R Duplicate Results @HeliacWolf
+199 U Escaped Specimen @JoeSlucher
+200 U Expansion Plans @Torvenius
+201 U Gun Collector @Echo-X
+202 U Institutional Inertia @Hokunin
+203 R Masq Saboteur @Eclipse Phase
+204 U Mecha Contract @Kevin Swartz
+205 R Mercenary Autopilot @Thomaswievegg
+206 R Mirsi, Mother of Mutants @Angel5art
+207 U Night Hacker @Yvan Quinet
+208 R Quickdraw Vigilante @Guesscui
+209 R Re-spec @DOFRESH
+210 U Short Circuit (NET) @REAL-ELMARIACHI
+211 U Skyguard Ascendant @Eddy Shintuku
+212 R Skyguard Sovereign @Aiyeahhs
+213 R Stirring Pride @KypcaHT
+214 M Strings of the Masquerade @Piotr Tekien
+215 M Switchflit @Rayph
+216 R Toxic Scrap Heap @Goran Delic
+217 R Turf Tender @Ptitvinc
+218 U Underworld Deeds @Maxime Teppe
+219 U Awakened Droid @Thiago Almeida
+220 U Butler Droid @Adam Dawidowicz
+221 C Citizen Droid @08000
+222 C Combat Droid @ArtDoge
+223 C Cultivation Nanotech @Adam Baines
+224 U Cybersmith @Torvenius
+225 U Data Petal @Lili Ibrahim
+226 M Dystopilith @Lorenz Hideyoshi Ruwwe
+227 C Invasive Nanotech @Alex Figini
+228 U JMD Dome @Jan Urschel
+229 C Malign Nanotech @Christine Choi
+230 C Medicinal Nanotech @Shutterstock
+231 M The Network @Fredaugis
+232 C Neural Nanotech @E-Spaces 3D Art Studio
+233 C Rebel Cocktail @Brendan Hoffman
+234 R Scrap Market @Artcobain
+235 C Security Drone @MatLatArt
+236 C Server Farm @Razorb
+237 R Soylent Station @Cementiet
+238 R Supercomputer @ArtificialDesign
+239 R Ascending Spires @Gary Tonge
+240 U BiHelix Laboratory @Xvortexbladex
+241 U Blackwatch Turf @Brosa
+242 R Coruscating Cityscape @Artur Sadlos
+243 U CyCorp Research Facility @Ian Llanas
+244 C Holo-Den @Warner Bros. Pictures
+245 U MekLab Factory @ClaudioPilia (DeviantArt)
+246 U N-FORCE Station @J-Humphries
+247 R Shadowed Pillar @Gary Tonge
+248 R Sprawling Coils @Gary Tonge
+249 R Umbrous Depths @Gary Tonge
+250 R Vibrant Locale @Gary Tonge
+251 L Plains @Dante Corvus
+252 L Island @Bdraw2012
+253 L Swamp @Eric Pfeiffer
+254 L Mountain @Joseph Biwald
+255 L Forest @Jeffrey van der Heijden
 
 [tokens]
-1 w_1_1_soldier
-2 u_x_x_shark_mutant
-3 r_1_1_lizard_mutant
+1 w_1_1_soldier @Jon McCoy
+2 u_x_x_shark_mutant @Alejandro Mirabal
+3 r_1_1_lizard_mutant @Nopespider95
 # Duplicated as there is no r_1_1_lizard_mutant_haste
-3 r_1_1_lizard_mutant_haste
-5 c_2_2_a_construct
-6 c_3_3_a_equalizer
-7 c_a_weapon_equipment
-8 c_a_weapon_equipment
-9 c_a_weapon_equipment
-10 c_a_weapon_equipment
+3 r_1_1_lizard_mutant_haste @Nopespider95
+5 c_2_2_a_construct @GeorgeLovesyArt (DeviantArt)
+6 c_3_3_a_equalizer @Duster132 (DeviantArt)
+7 c_a_weapon_equipment @JasonTN
+8 c_a_weapon_equipment @Klaus Witimann
+9 c_a_weapon_equipment @Yang Bilong
+10 c_a_weapon_equipment @Phelan A Davion
 
 [CreatureTypes]
 Nanobot:Nanobots
