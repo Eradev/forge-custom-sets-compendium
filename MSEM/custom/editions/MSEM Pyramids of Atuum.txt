@@ -137,7 +137,7 @@ Type=Custom
 [tokens]
 1 w_2_2_cat @Meghann Beardsley
 2 b_2_3_mummy @totmoartsstudio2 (DeviantArt)
-4 r_5_5_wurm_noblock_flying @Nathan Rosario
+4 r_6_6_wurm_noblock_flying @Nathan Rosario
 5 rw_1_1_sand_warrior @Riyahd Cassiem
 6 desert_msem @Karbo (DeviantArt)
 
