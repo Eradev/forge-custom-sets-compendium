@@ -1,0 +1,11 @@
+Name:Hieroglyphic Constrictor
+ManaCost:0
+Colors:Blue
+Types:Artifact Creature Snake
+PT:1/1
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self+wasCast+!wasCastFromYourHand | Origin$ Any | Destination$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ When this creature enters, if it was cast from anywhere other than your hand, put a +1/+1 counter on it and draw a card.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw
+
+Oracle:When this creature enters, if it was cast from anywhere other than your hand, put a +1/+1 counter on it and draw a card.
