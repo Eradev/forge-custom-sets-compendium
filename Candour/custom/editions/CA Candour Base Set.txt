@@ -102,7 +102,9 @@ Type=Custom
 95 U Curious Peregrination @Edgar Sánchez Hidalgo
 96 R Mox Collector @Edgar Sánchez Hidalgo
 97 U Hieroglyphic Constrictor @Illarstration
-# 98-100
+98 M Gitaxian Archangel @Thomas Ricci
+99 R Snapcast @Thomas Ricci
+100 R Moon Sage's Talent @Gauthier Redon
 101 M Force of Anguish @Dominik Mayer
 102 U Guardian Thrull @PINDURSKI
 103 U Perilous Depths @PINDURSKI
@@ -175,7 +177,8 @@ Type=Custom
 175 U Ashes to Ashes // Dust to Dust @Dominik Mayer
 176 R Collected Construction @Biagio D'Alessandro
 177 R Astral Wish @Sandara Tang
-# 178-200
+178 U Stimulated Eruption @Sandara Tang
+# 179-200
 201 M Nissa, Unbound Animist @Romain Kurdi
 202 U Nissa's Binding @Simon Marczyk
 203 U Crystalline Petroglyph @Anna Podedworna
@@ -198,7 +201,12 @@ Type=Custom
 220 U Pollenburst Dryad @Ave Tetsuya
 221 R Imperious Loamspeaker @Jeremy Carver
 222 R Ein, Tree of Horizons @Peter Mohrbracher
-# 223-250
+223 R Terragoyf @Robert Maldonado
+224 R Magnagoyf @Thomas Ricci
+225 R T'ranta, Baloth Tamer @Jeremy Carver
+226 M Animar, Heart of the World @Peter Mohrbracher
+227 M Kamahl, Krosan Lorekeeper @Edgar Sánchez Hidalgo
+# 228-250
 251 R Waterlogged Archipelago @Anthony Avon
 252 R Contaminated Rivulet @Anthony Avon
 253 R Sanguinary Morass @Anthony Avon
@@ -247,3 +255,4 @@ Type=Custom
 317 M Cruciform Stalker @Biagio D'Alessandro
 318 U Manaform Hart @Jeremy Carver
 319 R Torpor Sanctuary @Biagio D'Alessandro
+320 M Weatherlight, Legacy Flagship @Chase Stone
