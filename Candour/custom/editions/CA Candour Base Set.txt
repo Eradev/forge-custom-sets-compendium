@@ -96,7 +96,7 @@ Type=Custom
 89 M Fatefall Maelstrom @Sandara Tang
 90 U Contrasurveil @Diane Franco
 91 U Ethereal Companions @Bear Frymire
-92 U Memory Spike @Carmen Sinek
+92 U Memory Spike @Adrien Gonzalez
 93 R Momentum Weaver @Nathan Mohamed
 94 U Prismatic Fissure @Timi Honkanen
 95 U Curious Peregrination @Edgar Sánchez Hidalgo
