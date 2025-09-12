@@ -3,7 +3,7 @@ ManaCost:no cost
 Types:Legendary Land Desert
 
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
-SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ Tributes
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
 
 K:ETBReplacement:Other:ChoosePlayer
 SVar:ChoosePlayer:DB$ ChoosePlayer | Choices$ Opponent | ChoiceTitle$ Choose an opponent | SubAbility$ DBChoice | SpellDescription$ As CARDNAME enters, an opponent of your choice chooses Oasis or Desiccation.
