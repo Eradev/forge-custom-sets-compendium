@@ -1,4 +1,4 @@
-Name:Abadonned by the Gods
+Name:Abandonned by the Gods
 ManaCost:2 B B
 Types:Sorcery
 
