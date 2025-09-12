@@ -1,0 +1,7 @@
+Name:Consult the Dewdrops
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Dig | DigNum$ 4 | ChangeNum$ 1 | Optional$ True | ForceRevealToController$ True | ChangeValid$ Card.nonCreature | RestRandomOrder$ True | SpellDescription$ Look at the top four cards of your library. You may reveal a noncreature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.
+
+Oracle:Look at the top four cards of your library. You may reveal a noncreature card from among them and put it into your hand. Put the rest on the bottom of your library in any order.
