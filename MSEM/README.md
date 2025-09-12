@@ -38,7 +38,7 @@ Kaleidoscope (KLC)                    -  98% (106/108)
     * Kofe-District Scholar: TODO Check for Paranoia paid
 A Tourney at Whiterun (TWR)           -  11% (31/269)
 Tides of War (TOW)                    -  28% (77/271)
-Pyramids of Atuum (POA)               -  39% (50/128)
+Pyramids of Atuum (POA)               -  50% (64/128)
 
 Reprints / Promo sets:
 MSEM Champions (CHAMPIONS)
@@ -223,6 +223,3 @@ SVar:DBLoseLifeFallback:DB$ LoseLife | Defined$ You | LifeAmount$ 3
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
-
-
-
