@@ -1,0 +1,11 @@
+Name:Artificer's Prowess
+ManaCost:1 U
+Types: Sorcery
+
+A:SP$ Branch | BranchConditionSVar$ X | BranchConditionSVarCompare$ GE6 | TrueSubAbility$ DBGolem | FalseSubAbility$ DBConstruct | SpellDescription$ Create a 1/1 colorless Construct artifact creature token. If you control six or more artifacts, create a 6/6 colorless Golem artifact creature token instead. Draw a card.
+SVar:DBConstruct:DB$ Token | TokenAmount$ 1 | TokenScript$ c_1_1_a_construct | TokenOwner$ You | SubAbility$ DBDraw
+SVar:DBGolem:DB$ Token | TokenAmount$ 1 | TokenScript$ c_6_6_a_golem | TokenOwner$ You | SubAbility$ DBDraw
+SVar:X:Count$Valid Artifact.YouCtrl
+SVar:DBDraw:DB$ Draw
+
+Oracle:Create a 1/1 colorless Construct artifact creature token. If you control six or more artifacts, create a 6/6 colorless Golem artifact creature token instead.\nDraw a card.
