@@ -1,0 +1,10 @@
+Name:Desert Slaughterer
+ManaCost:1 B
+Types:Creature Human Warrior
+PT:2/1
+
+S:Mode$ CantBlock | ValidCard$ Card.Self | Description$ This creature can't block.
+
+A:AB$ ChangeZone | Cost$ B SubCounter<1/P1P1/Creature.YouCtrl/a creature you control> | Origin$ Graveyard | Destination$ Battlefield | ActivationZone$ Graveyard | WithCountersType$ P1P1 | SpellDescription$ Return this creature from your graveyard to the battlefield with a +1/+1 counter on it.
+
+Oracle:This creature can't block.\n{B}, Remove a +1/+1 counter from a creature you control: Return this creature from your graveyard to the battlefield with a +1/+1 counter on it.
