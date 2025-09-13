@@ -1,0 +1,17 @@
+Name:Glitterfowl Curio
+ManaCost:1 R
+Types:Artifact
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Destination$ Battlefield | Execute$ TrigDig | TriggerDescription$ When this artifact enters or leaves the battlefield, exile the top card of your library. Until end of turn, you may play that card.
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Battlefield | Execute$ TrigDig | Secondary$ True | TriggerDescription$ When this artifact enters or leaves the battlefield, exile the top card of your library. Until end of turn, you may play that card.
+SVar:TrigDig:DB$ Dig | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ RememberedCard | StaticAbilities$ Play | SubAbility$ DBCleanup | ExileOnMoved$ Exile
+SVar:Play:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ You may play the exiled card.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+A:AB$ Token | Cost$ R Sac<1/CARDNAME/this artifact> | TokenScript$ c_a_treasure_sac | SpellDescription$ Create a Treasure token.
+
+Oracle:When this artifact enters or leaves the battlefield, exile the top card of your library. Until end of turn, you may play that card.\n{R}, Sacrifice this artifact: Create a Treasure token.
+
+SVar:SacMe:4
+DeckHas:Ability$Sacrifice|Token & Type$Treasure

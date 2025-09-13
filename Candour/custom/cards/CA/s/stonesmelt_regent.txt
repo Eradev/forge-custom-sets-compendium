@@ -1,0 +1,15 @@
+Name:Stonesmelt Regent
+ManaCost:2 R R
+Types:Creature Elemental Dragon
+PT:5/4
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDealDamage | TriggerDescription$ When this creature enters, it deals 2 damage to any target.
+SVar:TrigDealDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 2
+
+K:Evoke:Sac<1/Artifact;Land/artifact or land>
+
+Oracle:Flying\nWhen this creature enters, it deals 2 damage to any target.\nEvoke—Sacrifice an artifact or land.
+
+SVar:PlayMain1:TRUE

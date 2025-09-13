@@ -1,0 +1,10 @@
+Name:Memory Spike
+ManaCost:UB
+Types:Sorcery
+
+A:SP$ Dig | ValidTgts$ Opponent | DigNum$ 3 | ChangeNum$ 1 | DestinationZone$ Exile | DestinationZone2$ Library | LibraryPosition2$ 0 | ExileFaceDown$ True | WithMayLook$ True | ChangeValid$ Card | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Look at the top three cards of target opponent's library, exile one of them face down, then put the rest on the top of that library in a random order. You may cast that card for as long as it remains exiled, and mana of any type can be spent to cast that spell.
+SVar:DBEffect:DB$ Effect | RememberObjects$ Remembered | StaticAbilities$ STPlay | Duration$ Permanent | ForgetOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | MayPlayIgnoreType$ True | Affected$ Card.IsRemembered+nonLand | AffectedZone$ Exile | Description$ You may cast that card for as long as it remains exiled, and mana of any type can be spent to cast that spell.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Look at the top three cards of target opponent's library, exile one of them face down, then put the rest on the top of that library in any order. You may cast that card for as long as it remains exiled, and mana of any type can be spent to cast that spell.

@@ -1,0 +1,9 @@
+Name:Spellbomb Detonation
+ManaCost:R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ 1 | SpellDescription$ CARDNAME deals 1 damage to any target.
+
+K:Flashback:Sac<1/Artifact>
+
+Oracle:Spellbomb Detonation deals 1 damage to any target.\nFlashback—Sacrifice an artifact. (You may cast this card from your graveyard for its flashback cost. Then exile it.)
