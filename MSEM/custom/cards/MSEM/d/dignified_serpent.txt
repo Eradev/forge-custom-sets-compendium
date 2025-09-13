@@ -1,0 +1,11 @@
+Name:Dignified Serpent
+ManaCost:3 W W
+Types:Creature Snake
+PT:3/3
+
+K:Vigilance
+
+K:Tribute:3
+SVar:TrigNotTribute:DB$ PutCounterAll | ValidCards$ Creature.StrictlyOther+YouCtrl | CounterType$ P1P1 | CounterNum$ 1 | SpellDescription$ When this creature enters, if tribute wasn't paid, put a +1/+1 counter on each other creature you control.
+
+Oracle:Vigilance\nTribute 3 (As this creature enters, an opponent of your choice may put three +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, put a +1/+1 counter on each other creature you control.

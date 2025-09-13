@@ -1,0 +1,8 @@
+Name:Expulse to the Desert
+ManaCost:5 W
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Creature | SubAbility$ DBDraw | SpellDescription$ Exile target creature. Draw a card.
+SVar:DBDraw:DB$ Draw
+
+Oracle:Exile target creature.\nDraw a card.

@@ -1,0 +1,23 @@
+Name:Desert Temple
+ManaCost:no cost
+Types:Legendary Land Desert
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+K:ETBReplacement:Other:ChoosePlayer
+SVar:ChoosePlayer:DB$ ChoosePlayer | Choices$ Opponent | ChoiceTitle$ Choose an opponent | SubAbility$ DBChoice | SpellDescription$ As CARDNAME enters, an opponent of your choice chooses Oasis or Desiccation.
+SVar:DBChoice:DB$ GenericChoice | Defined$ ChosenPlayer | Choices$ OasisChoice,DesiccationChoice | SetChosenMode$ True | ShowChoice$ True | SubAbility$ DBClearChosen
+SVar:OasisChoice:DB$ Pump | SpellDescription$ Oasis
+SVar:DesiccationChoice:DB$ Pump | SpellDescription$ Desiccation
+SVar:DBClearChosen:DB$ Cleanup | ClearChosenPlayer$ True
+
+S:Mode$ Continuous | Affected$ Card.Self+ChosenModeOasis | AddAbility$ OasisAbility | Description$ • Oasis — {T}: Add one mana of any color.
+S:Mode$ Continuous | Affected$ Card.Self+ChosenModeDesiccation | AddAbility$ DesiccationAbility | Description$ • Desiccation — {T}: Add {C}{C}. You lose 1 life.
+
+SVar:OasisAbility:AB$ Mana | PrecostDesc$ Oasis — | Cost$ T | Produced$ Any | Amount$ 1 | SpellDescription$ Add one mana of any color.
+
+SVar:DesiccationAbility:AB$ Mana | PrecostDesc$ Desiccation — | Cost$ T | Produced$ C | Amount$ 2 | SubAbility$ DBLoseLife | SpellDescription$ Add {C}{C}. You lose 1 life.
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1 | Defined$ You
+
+Oracle:Desert Temple enters tapped.\nAs Desert Temple enters, an opponent of your choice chooses Oasis or Desiccation.\n• Oasis — {T}: Add one mana of any color.\n• Desiccation — {T}: Add {C}{C}. You lose 1 life.

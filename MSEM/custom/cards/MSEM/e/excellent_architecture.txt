@@ -1,0 +1,7 @@
+Name:Excellent Architecture
+ManaCost:U
+Types:Instant
+
+A:SP$ Scry | ScryNum$ 5 | SpellDescription$ Scry 5.
+
+Oracle:Scry 5.

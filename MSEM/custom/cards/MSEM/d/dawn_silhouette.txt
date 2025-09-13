@@ -1,0 +1,17 @@
+Name:Dawn Silhouette
+ManaCost:2 W
+Types:Creature Human Illusion
+PT:2/2
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigExile | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may exile target creature not named Dawn Silhouette you control. Return that card to the battlefield under your control at the beginning of the next end step.
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Creature.YouCtrl+notnamedDawn Silhouette | TgtPrompt$ Select target creature not named Dawn Silhouette you control | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DelTrig
+SVar:DelTrig:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | Execute$ TrigBounce | TriggerDescription$ Return that card to the battlefield under your control at the beginning of the next end step. | RememberObjects$ RememberedLKI | SubAbility$ DBCleanup
+SVar:TrigBounce:DB$ ChangeZone | Origin$ Exile | Destination$ Battlefield | GainControl$ True | Defined$ DelayTriggerRememberedLKI
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+S:Mode$ Continuous | Affected$ Card.Self | MayPlay$ True | MayPlayAltManaCost$ 1 W | MayPlayWithFlash$ True | AffectedZone$ Hand | EffectZone$ Hand | Description$ Mirage {1}{W} (You may cast this spell as though it had flash for its mirage cost. If you do, sacrifice it at the beginning of the next cleanup step.)
+T:Mode$ SpellCast | ValidCard$ Card.Self | ValidSA$ Spell.MayPlaySource | Static$ True | Execute$ MirageCleanup
+SVar:MirageCleanup:DB$ DelayedTrigger | Mode$ Phase | Phase$ Cleanup | RememberObjects$ Self | TriggerDescription$ At the beginning of the next cleanup step, sacrifice CARDNAME. | Execute$ TrigSacrifice
+SVar:TrigSacrifice:DB$ SacrificeAll | Defined$ DelayTriggerRememberedLKI
+
+Oracle:When this creature enters, you may exile target creature not named Dawn Silhouette you control. Return that card to the battlefield under your control at the beginning of the next end step.\nMirage {1}{W} (You may cast this spell as though it had flash for its mirage cost. If you do, sacrifice it at the beginning of the next cleanup step.)
