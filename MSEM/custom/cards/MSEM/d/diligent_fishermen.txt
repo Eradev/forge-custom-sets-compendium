@@ -1,4 +1,4 @@
-Name:Diligent Fisherman
+Name:Diligent Fishermen
 ManaCost:1 U
 Types:Creature Human Citizen
 PT:1/3
