@@ -1,0 +1,9 @@
+Name:Fatefall Maelstrom
+ManaCost:3 U U U
+Types:Sorcery
+
+A:SP$ AddTurn | NumTurns$ 1 | SpellDescription$ Take an extra turn after this one.
+
+K:Flashback:9 U U U
+
+Oracle:Take an extra turn after this one.\nFlashback {9}{U}{U}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)

@@ -1,0 +1,12 @@
+Name:Force of Impulse
+ManaCost:1 R
+Types:Sorcery
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ PayLife<1> ExileFromHand<1/Card.Red+Other> | Description$ You may pay 1 life and exile a red card from your hand rather than pay this spell's mana cost.
+
+A:SP$ Dig | Defined$ You | DigNum$ 2 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Exile the top two cards of your library. Until the end of your next turn, you may play those cards.
+SVar:DBEffect:DB$ Effect | RememberObjects$ RememberedCard | StaticAbilities$ STPlay | SubAbility$ DBCleanup | ForgetOnMoved$ Exile | Duration$ UntilTheEndOfYourNextTurn
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ Until the end of your next turn, you may play the exiled cards.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:You may pay 1 life and exile a red card from your hand rather than pay this spell's mana cost.\nExile the top two cards of your library. Until the end of your next turn, you may play those cards.

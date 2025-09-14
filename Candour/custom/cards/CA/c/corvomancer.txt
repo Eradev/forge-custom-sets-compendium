@@ -1,0 +1,9 @@
+Name:Corvomancer
+ManaCost:2 B
+Types:Creature Human Shaman
+PT:4/2
+
+T:Mode$ Phase | Phase$ Upkeep | TriggerZones$ Battlefield | Execute$ TrigToken | IsPresent$ Bird.YouCtrl | PresentCompare$ EQ0 | TriggerDescription$ At the beginning of each upkeep, if you control no Birds, create two 1/1 black Bird creature tokens with flying and "This token can't block."
+SVar:TrigToken:DB$ Token | TokenAmount$ 2 | TokenScript$ b_1_1_bird_flying_noblock | TokenOwner$ You
+
+Oracle:At the beginning of each upkeep, if you control no Birds, create two 1/1 black Bird creature tokens with flying and "This token can't block."

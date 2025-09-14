@@ -1,0 +1,9 @@
+Name:Anarchy Storm
+ManaCost:2 R
+Types:Sorcery
+
+A:SP$ Destroy | Cost$ 2 R | ValidTgts$ Land.nonBasic | TgtPrompt$ Select target nonbasic land | SubAbility$ DBAbound | SpellDescription$ Destroy target nonbasic land. Abound. (To abound, you may cast a card that costs less than this from your hand without paying its mana cost.)
+SVar:DBAbound:DB$ Play | Valid$ Card.nonLand+YouOwn+cmcLTX | ValidZone$ Hand | WithoutManaCost$ True | Amount$ 1 | Controller$ You | Optional$ True
+SVar:X:Count$CardManaCost
+
+Oracle:Destroy target nonbasic land.\nAbound. (To abound, you may cast a card that costs less than this from your hand without paying its mana cost.)

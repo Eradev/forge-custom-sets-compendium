@@ -1,0 +1,11 @@
+Name:Necropolis Seed Engine
+ManaCost:4 B B
+Types:Legendary Artifact
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSac | TriggerDescription$ When this artifact enters or leaves the battlefield, each opponent sacrifices two creatures.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigSac | Secondary$ True | TriggerDescription$ When this artifact enters or leaves the battlefield, each opponent sacrifices two creatures.
+SVar:TrigSac:DB$ Sacrifice | Amount$ 2 | Defined$ Player.Opponent | SacValid$ Creature
+
+A:AB$ ChangeZone | Cost$ Sac<1/CARDNAME/this artifact> | Origin$ Graveyard | Destination$ Battlefield | GainControl$ True | TgtPrompt$ Select target creature card in a graveyard | ValidTgts$ Creature | ChangeNum$ 1 | SpellDescription$ Put target creature card from a graveyard onto the battlefield under your control.
+
+Oracle:When this artifact enters or leaves the battlefield, each opponent sacrifices two creatures.\nSacrifice this artifact: Put target creature card from a graveyard onto the battlefield under your control.

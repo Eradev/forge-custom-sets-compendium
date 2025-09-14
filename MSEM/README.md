@@ -36,9 +36,9 @@ Kaleidoscope (KLC)                    -  98% (106/108)
   Missing cards:
     * Chronic Traitor: TODO Check for Paranoia paid
     * Kofe-District Scholar: TODO Check for Paranoia paid
-A Tourney at Whiterun (TWR)           -  11% (31/269)
+A Tourney at Whiterun (TWR)           -  11% (32/269)
 Tides of War (TOW)                    -  28% (77/271)
-Pyramids of Atuum (POA)               -  39% (50/128)
+Pyramids of Atuum (POA)               -  50% (64/128)
 
 Reprints / Promo sets:
 MSEM Champions (CHAMPIONS)
@@ -52,6 +52,7 @@ The Land Bundle (L)
 Examples on how to implement custom keywords and mechanisms.
 
 * [Ascend](#ascend)
+* [Bleed](#bleed)
 * [Fleeting](#fleeting)
 * [Horrific](#horrific)
 * [Kindle](#kindle)
@@ -74,6 +75,23 @@ Implementation:
 ```text
 A:AB$ ChangeZone | Named$ Ascend | Cost$ 2 G | Origin$ Battlefield | Destination$ Exile | SorcerySpeed$ True | SubAbility$ AscendTransform | RememberChanged$ True | PrecostDesc Ascend— | SpellDescription$ ({2}{G}: Exile this creature, then return it to the battlefield transformed. Ascend only as a sorcery.)
 SVar:AscendTransform:DB$ ChangeZone | Defined$ Remembered | Origin$ All | Destination$ Battlefield | Transformed$ True | GainControl$ True
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Bleed
+
+Bleed is defined as:
+
+```text
+Bleed {1}{U} (You may cast this spell for its bleed cost if an opponent lost life this turn.)
+```
+
+Implementation:
+
+```text
+S:Mode$ Continuous | Affected$ Card.Self | MayPlayAltManaCost$ 1 U | MayPlay$ True | CheckSVar$ Bleed | SVarCompare$ GE1 | AffectedZone$ Hand | EffectZone$ Hand | Description$ Bleed {1}{U} (You may cast this spell for its bleed cost if an opponent lost life this turn.)
+SVar:Bleed:Count$LifeOppsLostThisTurn
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
@@ -223,6 +241,3 @@ SVar:DBLoseLifeFallback:DB$ LoseLife | Defined$ You | LifeAmount$ 3
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
-
-
-
