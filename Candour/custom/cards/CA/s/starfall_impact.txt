@@ -1,0 +1,9 @@
+Name:Starfall Impact
+ManaCost:2 R
+Types:Instant
+
+A:SP$ Token | TokenScript$ meteorite | TokenAmount$ 1 | TokenTapped$ True | TokenOwner$ You
+
+K:Flashback:4 R
+
+Oracle:Create a tapped colorless artifact token named Meteorite with "When Meteorite enters, it deals 2 damage to any target" and "{T}: Add one mana of any color."\nFlashback {4}{R}

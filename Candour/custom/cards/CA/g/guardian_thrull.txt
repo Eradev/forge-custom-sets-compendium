@@ -1,0 +1,13 @@
+Name:Guardian Thrull
+ManaCost:5 B
+Types:Creature Beast
+PT:7/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | TriggerDescription$ When this creature enters, destroy target creature an opponent controls.
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls.
+
+K:TypeCycling:Swamp:1
+
+Oracle:When this creature enters, destroy target creature an opponent controls.\nSwampcycling {1} ({1}, Discard this card: Search your library for a Swamp card, reveal it, put it into your hand, then shuffle.)
+
+SVar:PlayMain1:TRUE

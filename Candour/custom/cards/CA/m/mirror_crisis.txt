@@ -1,0 +1,15 @@
+Name:Mirror Crisis
+ManaCost:U
+Types:Instant
+
+A:SP$ Effect | ValidTgts$ Creature | TgtPrompt$ Choose target creature | RememberObjects$ Targeted | ReplacementEffects$ ReplaceETB | Triggers$ TrigRemove | SpellDescription$ Choose target creature. The next time one or more creatures enter this turn, they enter as copies of the chosen creature.
+SVar:ReplaceETB:Event$ Moved | Destination$ Battlefield | ValidCard$ Creature | ReplaceWith$ EnterAsCopy | Layer$ Copy | ReplacementResult$ Updated | Description$ The next time one or more creatures enter this turn, they enter as copies of the chosen creature.
+SVar:EnterAsCopy:DB$ Clone | Defined$ Remembered | CloneTarget$ ReplacedCard | SubAbility$ DBImprint
+SVar:DBImprint:DB$ Pump | ImprintCards$ ReplacedCard
+SVar:TrigRemove:Mode$ ChangesZoneAll | CheckSVar$ Z | Execute$ ExileSelf | Static$ True
+SVar:ExileSelf:DB$ ChangeZone | Origin$ Command | Destination$ Exile | Defined$ Self
+SVar:Z:Imprinted$Amount
+
+K:Rebound
+
+Oracle:Choose target creature. The next time one or more creatures enter this turn, they enter as copies of the chosen creature.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)
