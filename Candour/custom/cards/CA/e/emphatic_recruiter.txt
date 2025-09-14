@@ -8,4 +8,4 @@ K:Mentor
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigChange | TriggerDescription$ When this creature enters, you may search your library for a creature card with mana value 1 or less, reveal that card, reveal it, put it into your hand, then shuffle.
 SVar:TrigChange:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Creature.cmcLE1 | ChangeNum$ 1 | ShuffleNonMandatory$ True
 
-Oracle:Mentor (Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power.)\nAt the beginning of combat on your turn, choose up to one target creature you control. Until end of turn, that creature gets +2/+0, gains trample if it's red, and gains vigilance if it's white.
+Oracle:Mentor (Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power.)\nWhen this creature enters, you may search your library for a creature card with mana value 1 or less, reveal that card, reveal it, put it into your hand, then shuffle.
