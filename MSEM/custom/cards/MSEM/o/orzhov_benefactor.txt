@@ -6,13 +6,13 @@ PT:5/5
 K:Flying
 K:Vigilance
 
-S:Mode$ CantAttackUnless | ValidCard$ Card.Self | Cost$ X | Description$ CARDNAME can't attack unless you pay {1} for each debt counter on it.
-S:Mode$ CantBlockUnless | ValidCard$ Card.Self | Cost$ X | Description$ CARDNAME block unless you pay {1} for each debt counter on it.
+S:Mode$ CantAttackUnless | ValidCard$ Card.Self | Cost$ X | Description$ This creature can't attack unless you pay {1} for each debt counter on it.
+S:Mode$ CantBlockUnless | ValidCard$ Card.Self | Cost$ X | Description$ This creature block unless you pay {1} for each debt counter on it.
 SVar:X:Count$CardCounters.DEBT
 
-T:Mode$ Phase | Phase$ Upkeep | TriggerZones$ Battlefield | ValidPlayer$ You | Execute$ TrigDebt | TriggerDescription$ At the beginning of your upkeep, put a debt counter on CARDNAME.
+T:Mode$ Phase | Phase$ Upkeep | TriggerZones$ Battlefield | ValidPlayer$ You | Execute$ TrigDebt | TriggerDescription$ At the beginning of your upkeep, put a debt counter on this creature.
 SVar:TrigDebt:DB$ PutCounter | CounterType$ DEBT | CounterNum$ 1
 
-A:AB$ RemoveCounter | Cost$ 2 | CounterType$ DEBT | CounterNum$ 1 | SpellDescription$ Remove a debt counter from CARDNAME.
+A:AB$ RemoveCounter | Cost$ 2 | CounterType$ DEBT | CounterNum$ 1 | SpellDescription$ Remove a debt counter from this creature.
 
-Oracle:Flying, vigilance\nOrzhov Benefactor can't attack or block unless you pay {1} for each debt counter on it.\nAt the beginning of your upkeep, put a debt counter on Orzhov Benefactor.\n{2}: Remove a debt counter from Orzhov Benefactor.
+Oracle:Flying, vigilance\nThis creature can't attack or block unless you pay {1} for each debt counter on it.\nAt the beginning of your upkeep, put a debt counter on this creature.\n{2}: Remove a debt counter from this creature.

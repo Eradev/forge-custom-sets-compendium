@@ -1,0 +1,11 @@
+Name:Bloody Valentine
+ManaCost:1 R
+Types:Creature Human
+PT:2/2
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ Player | TriggerZones$ Battlefield | CheckSVar$ Horrific | SVarCompare$ LE0 | Execute$ DBDamage | TriggerDescription$ At the beginning of each player's end step, if they aren't horrific, this creature deals 2 damage to that player. (You're horrific as long as you've sacrificed a permanent or discarded a card this turn.)
+SVar:DBDamage:DB$ DealDamage | Defined$ TriggeredPlayer | NumDmg$ 2
+
+SVar:Horrific:PlayerCountPropertyTriggeredPlayer$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyTriggeredPlayer$CardsDiscardedThisTurn
+
+Oracle:At the beginning of each player's end step, if they aren't horrific, this creature deals 2 damage to that player. (You're horrific as long as you've sacrificed a permanent or discarded a card this turn.)

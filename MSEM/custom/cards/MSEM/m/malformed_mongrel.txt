@@ -1,0 +1,11 @@
+Name:Malformed Mongrel
+ManaCost:R
+Types:Creature Dog Horror
+PT:2/2
+
+K:Haste
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigDiscard | TriggerDescription$ Whenever this creature deals combat damage to a player, discard a card.
+SVar:TrigDiscard:DB$ Discard | Defined$ You | NumCards$ 1 | Mode$ TgtChoose
+
+Oracle:Haste\nWhenever this creature deals combat damage to a player, discard a card.

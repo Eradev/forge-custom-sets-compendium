@@ -1,0 +1,154 @@
+[metadata]
+Code=MSEM_POA
+Name=Pyramids of Atuum
+Date=2017-06-08
+Type=Custom
+
+[cards]
+1 U Alpha Lion @Ilona Mikolajczyk
+2 R Angel of Sands @Emanuella Kozas
+3 R Avatar of Utsenchep @Eryk Szczygiel
+4 C Awestruck @Rainer Petter Ribeiro
+5 C Camelriding Archer @Jacob Kohlberg
+6 C Caravan Sumpter @Nicole Cardiff
+7 U Dawn Silhouette @Jason Engle
+8 U Dignified Serpent @Julie Dillon
+9 U Diligent Believer @Linda Lithén
+10 R Divine Protection @Vuk Kostic
+11 R Eternal Banishment @draxmusthurt
+12 C Expulse to the Desert @Indre Lelertaviciute
+13 C Giant Dromad @GENZOMAN
+14 M High-Priestess Nebti @Bryan Marvin P. Sola
+15 U Judge Unworthy @Brolo
+16 U Leonin Sandfighter @George Evangelista
+17 C Menhet Charm @GENZOMAN
+18 R Menhet's Edict @EthicallyChallenged
+19 U Mounted Charge @serranef
+20 C Observing Guardian @paulobarrios
+21 C Peaceful Sunbath @gadax
+22 M Righteous Priestess @Inna Vjuzhanina
+23 C Savannah Scout @aditya777
+24 C Sprawled Arming @Paizo Publishing, LLC
+25 U Stream of Light @Bob Greyvenstein
+26 C Suntail Hawk @Heather Hudson
+27 C Survive @imrooniel
+28 C Utsenchep Warrior @Sergio Quijada
+29 R Ancestral Memories @Frederic St-Arnaud
+30 C Atuum Serpent @Lin Shunding
+31 R Avatar of Senmut @Andy Timm
+32 U Bath in the Solitude @NaomiVanDoren
+33 C Blurring Mists @Lee J. Yuan
+34 R Blurry Counterpart @Alexander Alexandrov
+35 C Crippling Spirit @Luis María Dumont
+36 U Cunning Chanter @Eric Ridgeway
+37 U Diligent Fishermen @Sam Hogg
+38 C Divination @David Gaillet
+39 R Divine Denial @Vuk Kostic
+40 C Dripping Turtle @Adam Vehige
+41 U Excellent Architecture @Miguel Coimbra
+42 R Gift of the Sphinx @Nicole Cardiff
+43 C Life-Giving Waters @YU QI WANG
+44 C Pharaoh Guardian @Mike Capprotti
+45 C Preserving Cloak @Katerina Romanova
+46 C Priestess of Menhet @Mizhak
+47 U Sandborn Mage @0BO
+48 C Scaled Lurker @Alexander Alexandrov
+49 U Sharp Eyed Sentinel @Juan Arrabal Hernández
+50 U Spell Dilution @GENZOMAN
+51 R Sphinx of Riddles @laclillac
+52 C Streaming Waters @Avionetca
+53 M Through the Dust @Disse86
+54 C Wachet Charm @GENZOMAN
+55 C Wall of Fog @Dustin4Pictor
+56 C Winged Envoy @Caroline Lahaise
+57 M Achet-Aton, Living God @GENZOMAN
+58 R Adept Necromancer @Simon Eckert
+59 C Amosis Charm @GENZOMAN
+60 R Antithesis @tarel abdel-kawi
+61 R Avatar of Amosis @Chris Bjors
+62 C Depraved Disciple @monkeydoodles
+63 U Descendant of Caaseb @Jose Ochoa
+64 R Desert Slaughterer @Veli Nyström
+65 U Despise @Javier Charro
+66 U Doomed Journey @Alector Fencer
+67 C Double Arming @David Gaillet
+68 C Essence Dehydration @GENZOMAN
+69 U Gates to the Afterlife @Alector Fencer
+70 C Giant Scarab @Mike Lim
+71 C Gruesome Transport @mucuss33
+72 C Haggard Jackal @Ilona Mikolajczyk
+73 C Kill the Competition @Joannie Goulet
+74 C Lasis Persecutor @Dusan Markovic
+75 R Menes, the Great Pyramid @Paul Fisher
+76 U Mummification @Carlos Valenzuela
+77 C Njel Crocodile @Sandro Rybak
+78 U Poisoned Well @Fantasy Flight Games
+79 C Ruthless Monstrosity @Adam Vehige
+80 R Sinister Pact @Andrzej-Korytkowski
+81 C Sudden Drought @theGorer
+82 C Tendrils of Corruption @Andrew Murray
+83 U Terrifying Ankh @Veli Nyström
+84 U Tireless Vulture @James Wolf Strehle
+85 R Avatar of Basat @Grishin Alexey
+86 C Basat Charm @Anastia Sudakova Lerno
+87 C Basat Priest @Robert Kim
+88 C Brute Force @ZHOU
+89 U Caravan Engulfer @GENZOMAN
+90 U Dance for the Heavens @Wu Xi, Athena
+91 C Desert Warriors @Danil Shunkov
+92 M Desert Wurms @minenanoah
+93 C Dune Peregrination @SweetSeri
+94 C Dune Scorpion @laclillac
+95 R Ferocious Desert-Hunter @Jb Pain
+96 U Fire from Above @Baton123
+97 C Haughty Priest @A.Heublein
+98 C Haze Raptor @Marta Mospinek
+99 U Heat of Battle @Chris Kuhlmann
+100 C Imaginary Flames @Mike Capprotti
+101 U Inspiring Melodies @Wu Xi, Athena
+102 U Mounted Marksman @Nicole Cardiff
+103 R Pyramid Lord @RyanMahonArt
+104 R Rockpounding Saurian @Jeff Teo
+105 C Sanding @Darkdeliverians
+106 C Sandmouth Dragon @Mark Bulahao
+107 C Sixpod Sprinter @Adam Vehige
+108 C Tamed Jaguar @riikozor
+109 R Warrior's Pride @Jason Engle
+110 U Whistled Dragons @Alector Fencer
+111 U Wurm Spawning @Chris Cold
+112 M Zarchepet, Master of Sands @Elin Tan
+113 R Daunting Gaze @Eric Ridgeway
+114 M Jachsechep, God's Wife @Leonid Kozienko
+115 R Kalro, Desert Outpost @Tuomas Korpi
+116 R Mesmerizing Shimmer @Chris Cold
+117 R Mummy's Grin @Adam Vehige
+118 M Slaughter (MSEM) @Ivan Laliashvili
+119 R Staff of Authority @Javier Charro
+120 R Desert Temple @Markus Holzum
+121 L Plains @Joakim Olofsson
+122 L Plains @Andre de Freitas Cardozo
+123 L Island @lepyoshka
+124 L Island @Chris Cold
+125 L Swamp @Yury Krylou
+126 L Swamp @Chris Cold
+127 L Mountain @Chris Cold
+128 L Mountain @Logan Feliciano
+
+[tokens]
+1 w_2_2_cat @Meghann Beardsley
+2 b_2_3_mummy @totmoartsstudio2 (DeviantArt)
+4 r_6_6_wurm_noblock_flying @Nathan Rosario
+5 rw_1_1_sand_warrior @Riyahd Cassiem
+6 desert_msem @Karbo (DeviantArt)
+
+[other]
+3 copy_mummy @dylanpierpont
+7 emblem_menes_the_great_pyramid
+8 emblem_jachsechep_gods_wife
+
+[CreatureTypes]
+Mummy:Mummies
+
+[WalkerTypes]
+Fortress
+Jachsechep

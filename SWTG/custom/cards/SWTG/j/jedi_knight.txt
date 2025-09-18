@@ -1,6 +1,6 @@
 Name:Jedi Knight
 ManaCost:G W U
-Types:Creature Human Jedi
+Types:Creature Human Jedi Knight
 PT:3/3
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigBounce | TriggerDescription$ When Jedi Knight leaves the battlefield, return target nonland permanent you don't control to its owner's hand.

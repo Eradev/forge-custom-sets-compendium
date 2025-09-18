@@ -1,0 +1,9 @@
+Name:Elemental Mouse Token
+ManaCost:no cost
+Colors:red
+Types:Creature Elemental Mouse
+PT:3/3
+
+K:Haste
+
+Oracle:Haste

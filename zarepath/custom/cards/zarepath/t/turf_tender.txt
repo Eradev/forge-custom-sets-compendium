@@ -11,4 +11,4 @@ SVar:Y:PlayerCountOpponents$LowestLifeTotal
 A:AB$ LoseLife | Cost$ 2 B G | Defined$ Player.Opponent | LifeAmount$ 2 | SubAbility$ DBGainLife | SpellDescription$ Each opponent loses 2 life and you gain 2 life.
 SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 2
 
-Oracle:Superiority - Whenever you tap a land for mana, if you have more life than an opponent, add one mana of any type that land produced.\n{2}{B}{G}:Each opponent loses 2 life and you gain 2 life.
+Oracle:Superiority - Whenever you tap a land for mana, if you have more life than an opponent, add one mana of any type that land produced.\n{2}{B}{G}: Each opponent loses 2 life and you gain 2 life.

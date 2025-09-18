@@ -1,0 +1,9 @@
+Name:Ethereal Dissension
+ManaCost:1 W W
+Types:Sorcery
+
+A:SP$ ChangeZoneAll | ChangeType$ Permanent.nonLand+cmcLE2 | Origin$ Battlefield | Destination$ Exile | SpellDescription$ Exile each nonland permanent with mana value 2 or less.
+
+K:Foretell:W
+
+Oracle:Exile each nonland permanent with mana value 2 or less.\nForetell {W} (During your turn, you may pay {2} and exile this card from your hand face down. Cast it on a later turn for its foretell cost.)

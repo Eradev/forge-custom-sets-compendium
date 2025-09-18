@@ -1,0 +1,9 @@
+Name:Arctic Mine
+ManaCost:no cost
+Types:Land Plains Swamp
+
+T:Mode$ Taps | ValidCard$ Card.Self | ConditionCheckSVar$ X | ConditionSVarCompare$ LT2 | Execute$ TrigLoseLife | TriggerDescription$ Whenever land becomes tapped, you lose 1 life unless you control two or more basic lands.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1
+SVar:X:Land.Basic+YouCtrl
+
+Oracle:({T}: Add {W} or {B}.)\nWhenever land becomes tapped, you lose 1 life unless you control two or more basic lands.

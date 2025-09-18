@@ -13,8 +13,8 @@ Get-ChildItem -Path $forgeCustomDestination -Recurse -Directory -Force | Where-O
 }
 
 # Remove existing edition files
-Get-ChildItem -Path $forgeCustomDestination -Recurse -File -Force | Where-Object {
-    $_.Extension -eq ".txt" -and $_.Name -like "$prefix*.txt"
+Get-ChildItem -Path "$forgeCustomDestination\custom\editions" -Recurse -File -Force | Where-Object {
+    $_.Extension -eq ".txt" -and $_.Name -like "$prefix *.txt"
 } | ForEach-Object {
     Remove-Item -Path $_.FullName -Force
     Write-Host "Deleted file: $($_.FullName)"

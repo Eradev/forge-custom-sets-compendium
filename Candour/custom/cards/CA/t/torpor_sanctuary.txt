@@ -1,0 +1,10 @@
+Name:Torpor Sanctuary
+ManaCost:2
+Types:Artifact
+
+S:Mode$ DisableTriggers | ValidCause$ Permanent | ValidMode$ ChangesZone,ChangesZoneAll | Destination$ Battlefield | Description$ Permanents entering or leaving the battlefield don't cause abilities to trigger.
+S:Mode$ DisableTriggers | ValidCause$ Permanent | ValidMode$ ChangesZone,ChangesZoneAll | Origin$ Battlefield | Secondary$ True | Description$ Permanents entering or leaving the battlefield don't cause abilities to trigger.
+
+A:AB$ Draw | Cost$ 1 T Sac<1/CARDNAME/this artifact> | SpellDescription$ Draw a card.
+
+Oracle:Permanents entering or leaving the battlefield don't cause abilities to trigger.\n{1}, {T}, Sacrifice this artifact: Draw a card

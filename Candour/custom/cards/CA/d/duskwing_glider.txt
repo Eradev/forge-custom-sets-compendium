@@ -1,0 +1,14 @@
+Name:Duskwing Glider
+ManaCost:1 W
+Types:Creature Bird
+PT:2/1
+
+K:Flying
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Destination$ Battlefield | Execute$ TrigLife | TriggerDescription$ When this creature enters, you gain 1 life and draw a card.
+SVar:TrigLife:DB$ GainLife | LifeAmount$ 1 | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw
+
+Oracle:Flying\nWhen this creature enters, you gain 1 life and draw a card.
+
+DeckHas:Ability$LifeGain

@@ -1,0 +1,8 @@
+Name:Dune Scorpion
+ManaCost:1 R
+Types:Creature Scorpion
+PT:3/1
+
+K:Reach
+
+Oracle:Reach (This creature can block creatures with flying.)

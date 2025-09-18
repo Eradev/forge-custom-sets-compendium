@@ -1,0 +1,12 @@
+Name:Unstoppable Slaughter
+ManaCost:1 R R
+Types:Sorcery
+
+A:SP$ DamageAll | ValidCards$ Creature | ValidPlayers$ Player | NumDmg$ 1 | RememberDamaged$ True | SubAbility$ DBEffect | SpellDescription$ CARDNAME deals 1 damage to each creature and each player. Whenever a creature dealt damage by CARDNAME this turn dies, repeat that process.
+SVar:DBEffect:DB$ Effect | RememberObjects$ Remembered | Triggers$ TrigDies | SubAbility$ DBCleanup
+SVar:TrigDies:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.IsRemembered | Execute$ TrigDamageAll | TriggerDescription$ Whenever a creature dealt damage by CARDNAME this turn dies, CARDNAME deals 1 damage to each creature and each player.
+SVar:TrigDamageAll:DB$ DamageAll | ValidCards$ Creature | ValidPlayers$ Player | NumDmg$ 1 | RememberDamaged$ True | SpellDescription$ CARDNAME deals 1 damage to each creature and each player.
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Unstoppable Slaughter deals 1 damage to each creature and each player. Whenever a creature dealt damage by Unstoppable Slaughter this turn dies this turn, repeat that process.

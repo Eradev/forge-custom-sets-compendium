@@ -1,0 +1,10 @@
+Name:Scion of Fecundity Token
+ManaCost:no cost
+Colors:green,white
+Types:Creature Elk Spirit
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChange | TriggerDescription$ When this creature enters, search your library for a creature card with mana value 2 or less, reveal it, put it into your hand, then shuffle.
+SVar:TrigChange:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Creature.cmcLE2 | ChangeNum$ 1 | ShuffleNonMandatory$ True
+
+Oracle:When this creature enters, search your library for a creature card with mana value 2 or less, reveal it, put it into your hand, then shuffle.

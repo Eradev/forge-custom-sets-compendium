@@ -1,0 +1,16 @@
+Name:Inked Summoner
+ManaCost:1 B
+Types:Creature Human Warlock Artist
+PT:1/2
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigBranch | CheckSVar$ X | SVarCompare$ GE2 | TriggerDescription$ At the beginning of your end step, if you lost 2 or more life this turn, create a 1/1 black Bird creature token with flying. If you lost 4 or more life this turn, instead create a 3/3 black Cat creature token with deathtouch. If you lost 6 or more life this turn, instead create a 5/5 black Golem creature token with trample.
+SVar:TrigBranch:DB$ Branch | BranchConditionSVar$ Y | TrueSubAbility$ TrigBranch2 | FalseSubAbility$ DBBird
+SVar:TrigBranch2:DB$ Branch | BranchConditionSVar$ Z | TrueSubAbility$ DBGolem | FalseSubAbility$ DBCat
+SVar:DBBird:DB$ Token | TokenScript$ b_1_1_bird_flying | TokenAmount$ 1
+SVar:DBCat:DB$ Token | TokenScript$ b_3_3_cat_deathtouch | TokenAmount$ 1
+SVar:DBGolem:DB$ Token | TokenScript$ b_5_5_golem_trample | TokenAmount$ 1
+SVar:X:PlayerCountPropertyYou$LifeLostThisTurn
+SVar:Y:Count$Compare X GE4.1.0
+SVar:Z:Count$Compare X GE6.1.0
+
+Oracle:At the beginning of your end step, if you lost 2 or more life this turn, create a 1/1 black Bird creature token with flying.\nIf you lost 4 or more life this turn, instead create a 3/3 black Cat creature token with deathtouch.\nIf you lost 6 or more life this turn, instead create a 5/5 black Golem creature token with trample.

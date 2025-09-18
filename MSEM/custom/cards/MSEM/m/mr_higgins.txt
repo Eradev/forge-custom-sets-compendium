@@ -1,0 +1,13 @@
+Name:Mr. Higgins
+ManaCost:1 R G
+Types:Legendary Creature Horror
+PT:3/3
+
+T:Mode$ TapsForMana | ValidCard$ Land | Activator$ You | Execute$ TrigMana | TriggerZones$ Battlefield | Static$ True | TriggerDescription$ Whenever you tap a land for mana, add one mana of any type that land produced.
+SVar:TrigMana:DB$ ManaReflected | ColorOrType$ Type | ReflectProperty$ Produced | Defined$ You
+
+T:Mode$ SpellCast | ValidCard$ Card.cmcGTX | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigSac | TriggerDescription$ Whenever you cast a spell with mana value greater than the number of lands you control, sacrifice a land.
+SVar:TrigSac:DB$ Sacrifice | Defined$ You | SacValid$ Land
+SVar:X:Count$Valid Permanent.Land+YouCtrl
+
+Oracle:Whenever you tap a land for mana, add one mana of any type that land produced.\nWhenever you cast a spell with mana value greater than the number of lands you control, sacrifice a land.

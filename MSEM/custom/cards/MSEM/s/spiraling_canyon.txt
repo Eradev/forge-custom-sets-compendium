@@ -2,7 +2,7 @@ Name:Spiraling Canyon
 ManaCost:no cost
 Types:Land Mountain Plains
 
-R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ CARDNAME enters tapped unless you control a basic Mountain or a basic Plains.
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you control a basic Mountain or a basic Plains.
 SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Land.Mountain+Basic+YouCtrl,Land.Plains+Basic+YouCtrl | ConditionCompare$ LT1
 
-Oracle:({T}: Add {R} or {W}.)\nSpiraling Canyon enters tapped unless you control a basic Mountain or a basic Plains.
+Oracle:({T}: Add {R} or {W}.)\nThis land enters tapped unless you control a basic Mountain or a basic Plains.

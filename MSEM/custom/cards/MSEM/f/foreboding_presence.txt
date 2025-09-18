@@ -1,0 +1,14 @@
+Name:Foreboding Presence
+ManaCost:R
+Types:Enchantment
+
+T:Mode$ SpellCast | ValidActivatingPlayer$ Player | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ Whenever a player casts a spell, put a doom counter on this enchantment.
+SVar:TrigCounter:DB$ PutCounter | Defined$ Self | CounterType$ DOOM | CounterNum$ 1
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ Player | TriggerZones$ Battlefield | Execute$ TrigDamage | CheckSVar$ SpellsCast | SVarCompare$ EQ0 | TriggerDescription$ At the beginning of each player's end step, if no spells were cast this turn, sacrifice this enchantment. It deals damage equal to the number of doom counters on it to that player.
+SVar:TrigDamage:DB$ DealDamage | Defined$ TriggeredPlayer | NumDmg$ X | SubAbility$ DBSac
+SVar:DBSac:DB$ Sacrifice | Defined$ Self
+SVar:X:Count$CardCounters.DOOM
+SVar:SpellsCast:PlayerCountPlayers$SpellsCastThisTurn
+
+Oracle:Whenever a player casts a spell, put a doom counter on this enchantment.\nAt the beginning of each player's end step, if no spells were cast this turn, sacrifice this enchantment. It deals damage equal to the number of doom counters on it to that player.

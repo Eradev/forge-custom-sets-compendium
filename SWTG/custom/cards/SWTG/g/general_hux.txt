@@ -1,0 +1,10 @@
+Name:General Hux
+ManaCost:3 B
+Types:Legendary Creature Human Advisor
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self,Creature.!token+Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigGrant | TriggerDescription$ Whenever CARDNAME or another nontoken creature enters under your control, until end of turn, target creature gains "{B}: This creature gets +1/+1 until end of turn."
+SVar:TrigGrant:DB$ Animate | ValidTgts$ Creature | TgtPrompt$ Select target creature | Abilities$ ABPump | SpellDescription$ Until end of turn, target creature gains "{B}: This creature gets +1/+1 until end of turn."
+SVar:ABPump:AB$ Pump | Cost$ B | Defined$ Self | NumAtt$ +1 | NumDef$ +1 | SpellDescription$ CARDNAME gets +1/+1 until end of turn.
+
+Oracle:Whenever General Hux or another nontoken creature enters under your control, until end of turn, target creature gains "{B}: This creature gets +1/+1 until end of turn."

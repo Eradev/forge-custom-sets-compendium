@@ -5,9 +5,9 @@ PT:2/1
 
 K:Flying
 
-T:Mode$ Attacks | ValidCard$ Creature.Self | Execute$ TrigCounters | TriggerDescription$ Whenever CARDNAME attacks, put a +1/+1 counter on each other attacking creature you control.
+T:Mode$ Attacks | ValidCard$ Creature.Self | Execute$ TrigCounters | TriggerDescription$ Whenever NICKNAME attacks, put a +1/+1 counter on each other attacking creature you control.
 SVar:TrigCounters:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature.attacking+Other | CounterNum$ 1
 
-Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever Lord Jared, the Griffin Knight attacks, put a +1/+1 counter on each other attacking creature you control.
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever Lord Jared attacks, put a +1/+1 counter on each other attacking creature you control.
 
 SVar:HasAttackEffect:TRUE

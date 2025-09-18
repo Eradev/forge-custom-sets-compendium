@@ -1,0 +1,9 @@
+Name:Outer Rim Gang
+ManaCost:2 B R G
+Types:Creature Human Rogue Hunter
+PT:4/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPumpAll | TriggerDescription$ When CARDNAME enters, each creature with a bounty counter on it gets -2/-2 until end of turn.
+SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.counters_GE1_BOUNTY | NumAtt$ -2 | NumDef$ -2 | IsCurse$ True
+
+Oracle:When Outer Rim Gang enters, each creature with a bounty counter on it gets -2/-2 until end of turn.

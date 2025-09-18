@@ -2,12 +2,11 @@
 
 More information can be found on its [official website](https://www.starwarsthegathering.com).
 
-> These sets contains custom creature and Planeswalker types. You need to add them every time you update Forge.
-
 ## Set implementation progress
 
 ```text
 Star Wars: the Gathering (SWTG) - 100% (271/271)
+The Force Awakens (SWTG_TFA)    - 100% (15/15)
 ```
 
 ## How to install?
@@ -16,12 +15,10 @@ Star Wars: the Gathering (SWTG) - 100% (271/271)
 
 * Drop the `custom` folder in `%appdata%\Forge`;
 * Drop the `pics` folder in `%appdata%\..\Local\Forge\cache`;
-* Copy the custom types inside `custom\typelists\SWTG.txt` into `res\lists\TypeLists.txt` located under your Forge installation.
 
 ### Scripts (Powershell)
 
 * Run the `install.ps1` script;
-* Run the `install-custom-types.ps1` script.
 
 ## Keywords and mechanisms implementation
 
@@ -94,8 +91,7 @@ Implementation:
 ```text
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigRepair | TriggerDescription$ When CARDNAME dies, put four repair counters on it.
 SVar:TrigRepair:DB$ PutCounter | CounterType$ REPAIR | CounterNum$ 4 | Defined$ TriggeredCard
-T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | ValidCard$ Card.Self+inGraveyard | CheckSVar$ RepairCount | SVarCompare$ GE1 | Execute$ TrigRemoveRepair | TriggerDescription$ At the beginning of your upkeep, if CARDNAME is in your graveyard with repair counters, remove a repair counter.
-SVar:RepairCount:Count$CardCounters.REPAIR
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | IsPresent$ Card.Self+counters_GE1_REPAIR | PresentZone$ Graveyard | Execute$ TrigRemoveRepair | TriggerDescription$ At the beginning of your upkeep, if CARDNAME is in your graveyard with repair counters, remove a repair counter.
 SVar:TrigRemoveRepair:DB$ RemoveCounter | CounterType$ REPAIR | CounterNum$ 1 | Defined$ Self
 T:Mode$ CounterRemoved | TriggerZones$ Graveyard | ValidCard$ Card.Self | CounterType$ REPAIR | NewCounterAmount$ 0 | Execute$ DBCast | TriggerDescription$ When the last repair counter is removed from this card, you may cast it until end of turn.
 SVar:DBCast:DB$ Effect | StaticAbilities$ STPlay | ForgetOnMoved$ Graveyard | RememberObjects$ Self | Duration$ EndOfTurn
@@ -116,8 +112,7 @@ Implementation:
 
 ```text
 K:Spaceflight
-S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight
-S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockBySpaceflight
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight & BlockBySpaceflight
 SVar:BlockSpaceflight:Mode$ CantBlockBy | ValidAttacker$ Creature.withoutSpaceflight | ValidBlocker$ Creature.Self | Description$ CARDNAME can block only creatures with spaceflight.
 SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpaceflight+withoutSpacereach | ValidAttacker$ Creature.Self | Description$ CARDNAME can be blocked only by creatures with spaceflight.
 ```

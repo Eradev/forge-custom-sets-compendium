@@ -1,0 +1,11 @@
+Name:Fleeting Memory
+ManaCost:U
+Types:Creature Illusion
+PT:0/0
+
+K:ETBReplacement:Copy:DBCopy:Optional
+SVar:DBCopy:DB$ Clone | Choices$ Creature.Other | AddTriggers$ ExileEOT | AddSVars$ TrigExile | SpellDescription$ You may have this creature enter as a copy of any creature on the battlefield, except it has "At the beginning of the end step, exile this creature."
+SVar:ExileEOT:Mode$ Phase | ValidPlayer$ You | Phase$ End of Turn | Execute$ TrigExile | TriggerZones$ Battlefield | TriggerDescription$ At the beginning of your end step, exile this creature.
+SVar:TrigExile:DB$ ChangeZone | Defined$ Self | Origin$ Battlefield | Destination$ Exile
+
+Oracle:You may have this creature enter as a copy of any creature on the battlefield, except it has "At the beginning of the end step, exile this creature."

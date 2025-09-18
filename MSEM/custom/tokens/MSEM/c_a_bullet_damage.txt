@@ -1,0 +1,8 @@
+Name:Bullet Token
+ManaCost:no cost
+Colors:colorless
+Types:Artifact Bullet
+
+A:AB$ DealDamage | Cost$ T Sac<1/CARDNAME/this token> | ValidTgts$ Any | NumDmg$ 1 | SpellDescription$ It deals 1 damage to any target.
+
+Oracle:{T}, Sacrifice this token: It deals 1 damage to any target.

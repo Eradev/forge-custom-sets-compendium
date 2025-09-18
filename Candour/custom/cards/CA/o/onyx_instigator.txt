@@ -1,0 +1,15 @@
+Name:Onyx Instigator
+ManaCost:2 R
+Types:Creature Elemental
+PT:3/3
+
+K:Flying
+
+T:Mode$ Drawn | ValidCard$ Card | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever a player draws a card, this creature deals 2 damage to that player.
+SVar:TrigDamage:DB$ DealDamage | Defined$ TriggeredCardOwner | NumDmg$ 2
+
+S:Mode$ CantGainLife | ValidPlayer$ Player | Description$ Players can't gain life.
+
+S:Mode$ CantPreventDamage | Description$ Damage can't be prevented.
+
+Oracle:Flying\nWhenever a player draws a card, this creature deals 2 damage to that player.\nPlayers can't gain life.\nDamage can't be prevented.

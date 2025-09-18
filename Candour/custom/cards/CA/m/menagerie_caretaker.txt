@@ -1,0 +1,11 @@
+Name:Menagerie Caretaker
+ManaCost:G W
+Types:Creature Wolf
+PT:1/3
+
+A:AB$ Mana | Cost$ T | Produced$ Any | Amount$ 1 | SpellDescription$ Add one mana of any color.
+
+T:Mode$ SpellCast | ValidCard$ Card.YouCtrl+Creature | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigToken | ActivatorThisTurnCast$ EQ2 | TriggerDescription$ When you cast your second creature spell in a turn, create a Spirited Companion token. (It's a {1}{W} Dog enchantment creature with "When Spirited Companion enters, draw a card.")
+SVar:TrigToken:DB$ CopyPermanent | DefinedName$ Spirited Companion
+
+Oracle:{T}: Add one mana of any color.\nWhenever you cast your second creature spell each turn, create a Spirited Companion token. (It's a {1}{W} Dog enchantment creature with "When Spirited Companion enters, draw a card.")

@@ -1,0 +1,8 @@
+Name:Delusions of Grandeur
+ManaCost:R
+Types:Sorcery
+
+A:SP$ GainControl | ValidTgts$ Creature.cmcLE3 | TgtPrompt$ Select target creature an opponent controls. | LoseControl$ EOT | Untap$ True | AddKWs$ Trample & Haste | SubAbility$ DBPump | SpellDescription$ Gain control of target creature with mana value 3 of less until end of turn. Untap that creature. It gets +2/0 and gains trample and haste until end of turn.
+SVar:DBPump:DB$ Pump | Defined$ Targeted | NumAtt$ +2
+
+Oracle:Gain control of target creature with mana value 3 of less until end of turn. Untap that creature. It gets +2/0 and gains trample and haste until end of turn.

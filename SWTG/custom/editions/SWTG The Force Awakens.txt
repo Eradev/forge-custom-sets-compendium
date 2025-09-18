@@ -1,0 +1,30 @@
+[metadata]
+Code=SWTG_TFA
+Date=2019-05-01
+Name=The Force Awakens
+Type=Custom
+Foil=NotSupported
+
+[cards]
+1 C Astromech Droid
+2 U Poe Dameron
+3 C Riot Trooper
+4 C Force Stasis
+5 C Salvage Trader
+6 U General Hux
+7 C Sins of the Father
+8 C Flame Trooper
+9 U Finn
+10 C Rathtar
+11 M Kylo Ren
+12 C Outer Rim Gang
+13 R Rey
+14 C Upsilon-class Shuttle
+15 C Buried Ruin
+
+[CreatureTypes]
+Crolute:Crolutes
+Droid:Droids
+Sith:Sith
+Starship:Starships
+Trooper:Troopers

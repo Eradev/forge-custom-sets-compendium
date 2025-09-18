@@ -1,0 +1,6 @@
+Name:Phyrexian Token
+ManaCost:no cost
+Colors:colorless
+Types:Artifact Creature Phyreixan
+PT:1/1
+Oracle:

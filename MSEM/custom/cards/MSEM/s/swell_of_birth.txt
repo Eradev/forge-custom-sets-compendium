@@ -2,8 +2,8 @@ Name:Swell of Birth
 ManaCost:2 W W
 Types:Enchantment
 
-T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ DBCharge | TriggerDescription$ At the beginning of your upkeep, put a charge counter on CARDNAME, then create a 1/1 colorless Elemental creature token for each charge counter on it.
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ DBCharge | TriggerDescription$ At the beginning of your upkeep, put a charge counter on this enchantment, then create a 1/1 colorless Elemental creature token for each charge counter on it.
 SVar:DBCharge:DB$ PutCounter | CounterType$ Charge | CounterNum$ 1 | SubAbility$ DBToken
 SVar:DBToken:DB$ Token | TokenScript$ c_1_1_elemental | TokenAmount$ Count$CardCounters.CHARGE
 
-Oracle:At the beginning of your upkeep, put a charge counter on Swell of Birth, then create a 1/1 colorless Elemental creature token for each charge counter on it.
+Oracle:At the beginning of your upkeep, put a charge counter on this enchantment, then create a 1/1 colorless Elemental creature token for each charge counter on it.

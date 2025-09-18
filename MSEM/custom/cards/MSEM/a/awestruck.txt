@@ -1,0 +1,12 @@
+Name:Awestruck
+ManaCost:1 W
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddKeyword$ Defender | Description$ Enchanted creature has defender and its activated abilities can't be activated.
+S:Mode$ CantBeActivated | ValidCard$ Creature.EnchantedBy | Secondary$ True | Description$ Enchanted creature has defender and its activated abilities can't be activated.
+
+Oracle:Enchant creature\nEnchanted creature has defender and its activated abilities can't be activated.
+
+SVar:AttachAILogic:Curse

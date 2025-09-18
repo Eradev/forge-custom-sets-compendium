@@ -1,0 +1,15 @@
+Name:Basat Priest
+ManaCost:3 R
+Types:Creature Human Cleric
+PT:2/1
+
+K:Menace
+
+S:Mode$ Continuous | Affected$ Creature.Cat+YouCtrl | AddKeyword$ Menace | Description$ Cat creatures you control have menace.
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 2/2 white Cat creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ w_2_2_cat | TokenAmount$ 1 | TokenOwner$ You
+
+Oracle:Menace\nCat creatures you control have menace.\nWhen this creature enters, create a 2/2 white Cat creature token.
+
+DeckHints:Type$Cat

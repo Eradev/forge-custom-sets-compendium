@@ -3,7 +3,7 @@ ManaCost:2 B
 Types:Creature Human Rogue
 PT:2/2
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDrain | TriggerDescription$ When CARDNAME enters, each opponent loses 1 life. You gain life equal to the life lost this way.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDrain | TriggerDescription$ When this creature enters, each opponent loses 1 life. You gain life equal to the life lost this way.
 SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 1 | SubAbility$ DBGainLife
 SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ AFLifeLost
 # AFLifeLost will be set by LoseLife
@@ -12,4 +12,4 @@ SVar:AFLifeLost:Number$0
 T:Mode$ ChangesZone | TriggerZones$ Hand | ValidCard$ Permanent.YouCtrl | Origin$ Battlefield | Destination$ Any | Execute$ PayParanoia | TriggerDescription$ Paranoia {1}{B} (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)
 SVar:PayParanoia:DB$ Play | PlayCost$ 1 B | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
 
-Oracle:When Gnuge-District Hoarder enters, each opponent loses 1 life. You gain life equal to the life lost this way.\nParanoia {1}{B} (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)
+Oracle:When this creature enters, each opponent loses 1 life. You gain life equal to the life lost this way.\nParanoia {1}{B} (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)

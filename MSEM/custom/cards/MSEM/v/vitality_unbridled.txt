@@ -5,6 +5,6 @@ Types:Sorcery
 A:SP$ GainLife | LifeAmount$ Count$xPaid/Twice | SpellDescription$ You gain twice X life.
 SVar:X:Count$xPaid
 
-A:AB$ Token | TokenAmount$ X | TokenScript$ c_1_1_elemental | PrecostDesc$ Kindle X — | Cost$ X G G ExileFromGrave<1/CARDNAME> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create X 1/1 colorless Elemental creature tokens.
+A:AB$ Token | TokenAmount$ X | TokenScript$ c_1_1_elemental | PrecostDesc$ Kindle X — | Cost$ X G G ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create X 1/1 colorless Elemental creature tokens.
 
 Oracle:You gain twice X life.\nKindle X—{X}{G}{G} ({X}{G}{G}, Exile this card from your graveyard: Create X 1/1 colorless Elemental creature tokens. Kindle only as a sorcery.)

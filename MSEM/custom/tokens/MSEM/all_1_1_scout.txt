@@ -1,0 +1,9 @@
+Name:Scout Token
+ManaCost:no cost
+Colors:all
+Types:Creature Scout
+PT:1/1
+
+Text:This creature is all colors.
+
+Oracle:This creature is all colors.

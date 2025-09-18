@@ -1,0 +1,11 @@
+Name:Knight Token
+ManaCost:no cost
+Colors:red,white,black
+Types:Creature Knight
+PT:2/2
+
+Text:(This token in red, white, and black.)
+
+K:Haste
+
+Oracle:(This token in red, white, and black.)\nHaste

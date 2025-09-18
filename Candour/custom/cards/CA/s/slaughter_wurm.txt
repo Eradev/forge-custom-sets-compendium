@@ -1,0 +1,13 @@
+Name:Slaughter Wurm
+ManaCost:3 B B B
+Types:Creature Phyrexian Wurm
+PT:7/6
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPumpAll | TriggerDescription$ When this creature enters, creatures your opponents control get -3/-3 until end of turn.
+SVar:TrigPumpAll:DB$ PumpAll | NumAtt$ -3 | NumDef$ -3 | ValidCards$ Creature.OppCtrl | IsCurse$ True
+
+A:AB$ Pump | Cost$ 1 B Discard<1/CARDNAME/this card> | ActivationZone$ Hand | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ -3 | NumDef$ -3 | IsCurse$ True | SpellDescription$ Target creature gets -3/-3 until end of turn.
+
+Oracle:When this creature enters, creatures your opponents control get -3/-3 until end of turn.\n{1}{B}, Discard this card: Target creature gets -3/-3 until end of turn.
+
+SVar:PlayMain1:TRUE

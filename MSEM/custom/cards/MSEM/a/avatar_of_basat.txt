@@ -1,0 +1,10 @@
+Name:Avatar of Basat
+ManaCost:R
+Types:Creature Avatar
+PT:2/1
+
+K:Menace
+
+S:Mode$ CantBlock | ValidCard$ Card.Self | Description$ This creature can't block.
+
+Oracle:Menace\nThis creature can't block.

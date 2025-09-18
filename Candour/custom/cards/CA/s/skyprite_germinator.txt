@@ -1,0 +1,18 @@
+Name:Skysprite Germinator
+ManaCost:1 G
+Types:Creature Faerie Dragon
+PT:1/1
+
+K:Flash
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ When this creature enters, mill four cards. You may put a land card from among the cards milled this way into your hand. If you don't, put a +1/+1 counter on target creature.
+SVar:TrigMill:DB$ Mill | NumCards$ 4 | Defined$ You | Imprint$ True | SubAbility$ DBChangeZone
+SVar:DBChangeZone:DB$ ChangeZone | Origin$ Graveyard,Exile | Destination$ Hand | ChangeType$ Land.YouOwn+IsImprinted | RememberChanged$ True | Hidden$ True | Optional$ True | SubAbility$ DBCounter
+SVar:DBCounter:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ0 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearImprinted$ True
+
+Oracle:Flash, flying\nWhen this creature enters, mill four cards. You may put a land card from among the cards milled this way into your hand. If you don't, put a +1/+1 counter on target creature.
+
+DeckHas:Ability$Graveyard|Mill|Counters

@@ -1,0 +1,9 @@
+Name:Leyline Alignment Field
+ManaCost:no cost
+Types:Legendary Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Cost$ 2T | Produced$ Special EachColorAmongGraveyard_Card.YouOwn | SpellDescription$ For each color among cards in your graveyard, add one mana of that color.
+
+Oracle:{T}: Add {C}.\n{2}, {T}: For each color among cards in your graveyard, add one mana of that color.

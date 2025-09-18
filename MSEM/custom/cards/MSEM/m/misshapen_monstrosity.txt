@@ -1,0 +1,12 @@
+Name:Misshapen Monstrosity
+ManaCost:2 R
+Types:Creature Horror
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Creature.Other+YouCtrl | AddPower$ 2 | AddKeyword$ Menace | Description$ Other creatures you control get +2/+0 and have menace.
+
+T:Mode$ ChangesZone | ValidCard$ Creature.Other+YouCtrl | CheckOnTriggeredCard$ X EQ0 | Origin$ Battlefield | Destination$ Graveyard | TriggerZones$ Battlefield | Execute$ DBSac | TriggerDescription$ Whenever another creature you control dies, if it wasn't sacrificed, sacrifice a creature.
+SVar:DBSac:DB$ Sacrifice | Defined$ You | SacValid$ Creature | Amount$ 1
+SVar:X:PlayerCountPlayers$SacrificedThisTurn Card.StrictlySelf
+
+Oracle:Other creatures you control get +2/+0 and have menace.\nWhenever another creature you control dies, if it wasn't sacrificed, sacrifice a creature.

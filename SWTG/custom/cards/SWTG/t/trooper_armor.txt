@@ -9,4 +9,4 @@ SVar:TrigAttach:DB$ Attach | Defined$ TriggeredCardLKICopy
 
 K:Equip:2
 
-Oracle:Equipped creature gets +1/+1 and is a Trooper in addition to its other types.\nWhenever a Trooper enters under your control, you may attach Underworld Slums to it.\nEquip {2}
+Oracle:Equipped creature gets +1/+1 and is a Trooper in addition to its other types.\nWhenever a Trooper enters under your control, you may attach Trooper Armor to it.\nEquip {2}

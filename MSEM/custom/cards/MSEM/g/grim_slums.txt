@@ -4,6 +4,6 @@ Types:Land
 
 A:AB$ Mana | Cost$ T PayLife<1> | Produced$ Combo B R | SpellDescription$ Add {B} or {R}.
 
-A:AB$ Investigate | Cost$ 1 T Sac<1/CARDNAME> | SpellDescription$ Investigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")
+A:AB$ Investigate | Cost$ 1 T Sac<1/CARDNAME/this land> | SpellDescription$ Investigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")
 
-Oracle:{T}, Pay 1 life: Add {B} or {R}.\n{1}, {T}, Sacrifice Grim Slums: Investigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")
+Oracle:{T}, Pay 1 life: Add {B} or {R}.\n{1}, {T}, Sacrifice this land: Investigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")

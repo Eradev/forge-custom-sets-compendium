@@ -1,0 +1,13 @@
+Name:Derange
+ManaCost:3 B
+Types:Sorcery
+
+K:Rerun
+
+A:SP$ Discard | ValidTgts$ Player | TgtPrompt$ Select target player | NumCards$ 2 | Mode$ TgtChoose | SpellDescription$ Target player discards two cards. | SubAbility$ ExileSelf
+SVar:ExileSelf:DB$ ChangeZone | Origin$ Stack | Destination$ Exile | ConditionDefined$ Self | ConditionPresent$ Card.wasCastFromYourHandByYou
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Exile | Execute$ CastRerun | TriggerDescription$ Rerun (If you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.)
+SVar:CastRerun:DB$ Play | Defined$ Self | Amount$ 1 | Controller$ You | WithoutManaCost$ True | Optional$ True | ActivationZone$ Exile
+
+Oracle:Target player discards two cards.\nRerun (If you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.)

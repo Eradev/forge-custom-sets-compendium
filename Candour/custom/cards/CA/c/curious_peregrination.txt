@@ -1,0 +1,18 @@
+Name:Curious Peregrination
+ManaCost:U
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 1 | AddTrigger$ TrigDamageDone | Description$ Enchanted creature gets +1/+0 and has "Whenever this creature deals combat damage to a player, you may draw a card."
+SVar:TrigDamageDone:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigDraw | OptionalDecider$ You | TriggerDescription$ Whenever this creature deals combat damage to a player, you may draw a card.
+SVar:TrigDraw:DB$ Draw
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigChangeZone | TriggerDescription$ When this Aura is put into a graveyard from the battlefield, return it to its owner's hand.
+SVar:TrigChangeZone:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | Defined$ TriggeredNewCardLKICopy
+
+Oracle:Enchant creature\nEnchanted creature gets +1/+0 and has "Whenever this creature deals combat damage to a player, you may draw a card."\nWhen this Aura is put into a graveyard from the battlefield, return it to its owner's hand.
+
+SVar:SacMe:2
+SVar:PlayMain1:TRUE
+SVar:AttachAILogic:Curiosity

@@ -2,7 +2,7 @@ Name:Gloomcover Steppe
 ManaCost:no cost
 Types:Land Plains Swamp
 
-R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ CARDNAME enters tapped unless you control a basic Plains or a basic Swamp.
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you control a basic Plains or a basic Swamp.
 SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Land.Plains+Basic+YouCtrl,Land.Swamp+Basic+YouCtrl | ConditionCompare$ LT1
 
-Oracle:({T}: Add {W} or {B}.)\nGloomcover Steppe enters tapped unless you control a basic Plains or a basic Swamp.
+Oracle:({T}: Add {W} or {B}.)\nThis land enters tapped unless you control a basic Plains or a basic Swamp.

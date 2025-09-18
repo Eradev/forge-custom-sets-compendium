@@ -1,0 +1,16 @@
+Name:Akrianos' Command
+ManaCost:1 W W
+Types:Instant
+
+A:SP$ Charm | CharmNum$ 2 | Choices$ TrigToken,TrigExile,TrigPump,TrigPutCounter
+
+SVar:TrigToken:DB$ Token | ValidTgts$ Player | TgtPrompt$ Select target player | TokenOwner$ ThisTargetedPlayer | TokenScript$ w_1_1_soldier | TokenAmount$ 2 | SpellDescription$ Target player creates two 1/1 white Soldier creature tokens.
+
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Creature.attacking | TgtPrompt$ Select target attacking creature | Origin$ Battlefield | Destination$ Exile | SpellDescription$ Exile target attacking creature.
+
+SVar:TrigPump:DB$ PumpAll | ValidTgts$ Player | TgtPrompt$ Select target player  | ValidCards$ Creature.TargetedPlayerCtrl | KW$ Indestructible | SpellDescription$ Creatures target player controls gain indestructible until end of turn.
+
+SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature | TgtPrompt$ Select target creature | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBUntap | SpellDescription$ Put a +1/+1 counter on target creature and untap it.
+SVar:DBUntap:DB$ Untap | Defined$ Targeted
+
+Oracle:Choose two —\n• Target player creates two 1/1 white Soldier creature tokens.\n• Exile target attacking creature.\n• Creatures target player controls gain indestructible until end of turn.\n• Put a +1/+1 counter on target creature and untap it.

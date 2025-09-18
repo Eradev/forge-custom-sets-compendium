@@ -1,0 +1,9 @@
+Name:Elemental Token
+ManaCost:no cost
+Colors:blue
+Types:Creature Elemental
+PT:1/1
+
+K:Flying
+
+Oracle:Flying

@@ -1,0 +1,259 @@
+[metadata]
+Code=CA_CA0
+Name=Candour Base Set
+Date=2023-01-01
+Type=Custom
+
+[cards]
+1 R Spectral Confluence @Dominik Mayer
+2 U Impermanate @Dominik Mayer
+3 R Flickerfowl @Rene Bartang
+4 R Pride Runemage @Nereviza
+5 U Keeper of Solitude @Dominik Mayer
+6 R Cloudcloak Thief @Jake Murray
+7 M Ajani, White as Death @Darko Stojanovic
+8 R Bronzeforge Fanatic @Jason Nguyen
+9 R Emphatic Recruiter @Carl Van Laguun
+10 U Tinkerleaf Sprites @Asur Misoa
+11 U Journey to Oblivion (CA) @Dominik Mayer
+12 R Sunrise Champion @Otto Metzger
+13 M Force of Justice @Dominik Mayer
+14 R Thought Partition @Dominik Mayer
+15 U Solar Sanction @James Brough
+16 R Exalted Solitude @Mateusz Michalski
+17 M Argivian Exemplar @Marcos V. Monken
+18 R Ethereal Dissension @PINDURSKI
+19 R Sand-Strider Battalion @Gabriel Schmidt
+20 U Veil of Spring @Dominik Mayer
+21 M High Artificer of Eos @Edgar Sánchez Hidalgo
+22 R Labyrinth Sentinel @Darren Tan
+23 M Chromatic Seraph @Asur Misoa
+24 M Sanctity @Anato Finnstark
+25 M Divine Tutor @Jason Ngyen
+26 U Tranquil Brightblade @Sandara Tang
+27 R Parallax Procession @Dominik Mayer
+28 M Duskspine Leopard @Sandara Tang
+29 U Consign to Stardust @Sandara Tang
+30 R Sarpadian Dreadlands @Grady Frederick
+31 R Dune Rager @Damien Mammolti
+32 U Snowy Standoff @Samara Tang
+33 R Welcoming Virtuoso @Samara Tang
+34 M Lotus Herald @Sandara Tang
+35 U Dormant Chromeseed @Sandara Tang
+36 R Scenic Detour @Sandara Tang
+37 R Lightrender Archon @Sandara Tang
+38 R Young Animator @Sandara Tang
+39 U Duskpine Cultivation @Sandara Tang
+40 U Duskwing Glider @Sandara Tang
+41 M Basri, Oketra's Faithful @Wilson Nugraha
+42 R Clightos, Mystic Peak @Anthony Avon
+43 M Herald of Sovereignty @Acrassan
+44 M Ria Ivor, Corrupted Champion @Mike Jordana
+45 R Nullmancer @F3LC4T
+46 R Gilded Pouncer @Daniel Cotter
+47 R Angelic Wrath @Andreas Huang
+48 M Alabaster Equipoise @Evyn Fong
+49 M Thalia, Steadfast Cathar @Mark Henry Bustamante
+50 U Havengul Splicer @Jeremy Carver
+51 U Maddening Revelation @Carl Van Laguun
+52 U Fleeting Rootwalla @Guillermo Redongo
+53 U Seeker of Secrets @Steve Argyle
+54 U Pilgrim of the Wind @Edgar Sánchez Hidalgo
+55 R Mirror Crisis @Oleg Kapustin
+56 U Reap the Catacombs @Minh Nguyen
+57 R Tidal Conflience @Edgar Sánchez Hidalgo
+58 U Predestine @Romain Kurdi
+59 M Mu Yangling, Seeing Wind @Romain Kurdi
+60 R Conduit Mage @Romain Kurdi
+61 R Unsettled Compass @Marcel Mercado
+62 R Tempest Angler (CA) @Grazia Ferlito
+# 63
+64 U Mismatch @Kritian Agerkvist
+65 R Phyrexian Scrap Searcher @Thomas Ricci
+# 66
+67 R Paradoxical Ritual @Biagio D'Alessandro
+68 M Mizzium Micromancer @Kevin McKenna
+69 U Ancestral Ambition @Botos Vlad
+70 R Lantern of Control @Frank Reire
+71 R Harbinger of Equilibrium @Alessandro Calbini
+72 M Arcane Tutor @Simon Marczyk
+73 M Force of Tenacity @Mari Morgan
+74 U Aqueous Bauble @Sandara Tang
+75 M Emry, Inquisitive Lurker @F3LC4T
+76 U Bauble Mage @F3LC4T
+# 77
+78 R Astral Epiphany @F3LC4T
+79 R Travelling Thaumaturge @Thanathorn
+80 R Deepcoral Guardian @Sebastian Horoszko
+81 U Spectral Captain @Diane Franco
+82 M Jin-Gitaxias, Matter Shaper @Diana Franco
+83 R Disparage @Felipe Gaona
+84 U Swept Away @Dominik Mayer
+85 M Depth @Rick Turf
+86 M Dreamcoil Despot @Sandara Tang
+87 U Perpend @Sandara Tang
+88 R Forgetful Fish @Sandara Tang
+89 M Fatefall Maelstrom @Sandara Tang
+90 U Contrasurveil @Diane Franco
+91 U Ethereal Companions @Bear Frymire
+92 R Memory Severance @Noah Thatcher
+93 R Momentum Weaver @Nathan Mohamed
+94 U Prismatic Fissure @Timi Honkanen
+95 U Curious Peregrination @Edgar Sánchez Hidalgo
+96 R Mox Collector @Edgar Sánchez Hidalgo
+97 U Hieroglyphic Constrictor @Illarstration
+98 M Gitaxian Archangel @Thomas Ricci
+99 R Snapcast @Thomas Ricci
+100 R Moon Sage's Talent @Gauthier Redon
+101 M Force of Anguish @Dominik Mayer
+102 U Guardian Thrull @PINDURSKI
+103 U Perilous Depths @PINDURSKI
+104 M Swift Shadowhawk @Mariah Tekulve
+# 105
+106 R Corvomancer @Álvaro Jiménez
+107 U Agonizing Edict @Dominik Mayer
+108 M Bloodcaster Prodigy @Alex Ngo
+109 R Pernicious Revenant @Edgar Sánchez Hidalgo
+110 U Fatal Impact @Daniela Ivanova
+111 M Slaughter Wurm @Nelson Bern
+112 R Contracted Aetherborn @Jelle Van Loo
+113 M Sinister Tutor @Kristian Agerkvist
+114 M Liliana, of Death's Design @Dominik Mayer
+115 R Twisted Bog @Las Pinter
+116 U Sanguinary Temptation @Nereida
+117 U Squandered Hopes @Edgar Sánchez Hidalgo
+118 U Seething Return @Edgar Sánchez Hidalgo
+119 R Altar of the Dross @Jeremy Carver
+120 R Sorin, Luxurious Bloodlord @Romain Kurdi
+121 R Sadistic Standoff @Sebastian Horoszko
+122 M Octumbra @Diane Franco
+123 R Apocalypse Obliterator @Noah Thatcher
+124 M Misery @Diane Franco
+125 R Embalmed Gargoyle @Diane Franco
+126 R Deathrite Mystic @Felipe Gaona
+127 M Sanguine Pilgrimage @Noah Thatcher
+128 M Unforgiving Nightmare @Sandara Tang
+129 R Dance with Fatality @Raul Bottero
+130 R Ghoulcalling @Dmitry Polynkov
+131 R Barren Doom @Timi Honkanen
+132 R Bowmaster Revenant @Bear Frymire
+133 R Corpsewail Corsair @Bear Frymire
+134 R Midnight Prowl @Sandara Tang
+135 U Afflicted Dagger @Sandara Tang
+136 U Blighted Stinger @Ryan Van Dongen
+137 M Fading Battlefield @Alex Petruk
+138 M Necropolis Seed Engine @Dominik Mayer
+139 U Malevolent Tranquility @Dominik Mayer
+140 U Opalescent Effacement @Jeremy Carver
+141 R Bloodcrazed Brawler @Oleg Kapustin
+142 U Grave Trawler @Oleg Kapustin
+143 R Erudition Dissolution @Nick Moskvin
+144 R Oblivion Confluence @Timi Honkanen
+# 145-150
+151 U Spellbomb Detonation @Romain Kurdi
+152 U Glitterfowl Curio @Valentin Gloaguen & Alessandro Poli
+153 U Shattering Blast @Melissa Spandri
+154 R Stonesmelt Regent @Sandara Tang
+155 M Artificial Creativity @Julie Dillon
+156 R Starfall Impact @Ryan Anelowe
+157 M Force of Impulse @Dominik Mayer
+158 M Agony Revenant @Dominik Mayer
+159 R Guide of Questionable Authenticity @Felipe Gaona
+160 M Ire @Ryan Van Dongen
+161 R Omicron Cannoneer @Sandara Tang
+162 R Candid Scoundrel @Oleg Kapustin
+163 R Onyx Instigator @Sandara Tang
+164 M Parallax Blaze @Dominik Mayer
+165 M Chandra, Young Pyromancer @Fajareka Setiawan
+166 R Lunar Armageddon @Riccardo Rullo
+167 U Kaleidoclasm @Timi Honkanen
+168 R Delusions of Grandeur @Dominik Mayer
+169 U Pyrostatic Captain @Dominik Mayer
+170 U Smiting Bolt @Oscar Valverde
+171 R Crust Dismantler @Diane Franco
+172 R Echoes of Valour @Steven Shan
+173 R Wildfire Confluence @Dominik Mayer
+174 M Chaotic Tutor @Matt Crowdery
+175 U Ashes to Ashes // Dust to Dust @Dominik Mayer
+176 R Collected Construction @Biagio D'Alessandro
+177 R Astral Wish @Sandara Tang
+178 U Stimulated Eruption @Sandara Tang
+# 179-200
+201 M Nissa, Unbound Animist @Romain Kurdi
+202 U Nissa's Binding @Simon Marczyk
+203 U Crystalline Petroglyph @Anna Podedworna
+204 R Lifecraft Sprite @F3LC4T
+205 U Skysprite Germinator @Sandara Tang
+206 M Force of Burgeoning @Dominik Mayer
+207 M Thriving Order @Sandara Tang
+208 U Llanowar Tracker @Evelien Picavet
+209 M Amathrassil, Crux of Bounty @LUAN C
+210 M Oldgrowth Treant @Oleg Kapustin
+211 M Bile @Timi Honkanen
+212 R Wilderness Rendezvous @Sandara Tang
+213 M Odyssey @Jeremy Carver
+214 R Bonded Hermit @Teemu Husso
+215 U Polychrome Metamorphosis @Dominik Mayer
+216 U Arboreal Mahesty @Timi Honkanen
+217 M Feral Rage @Edgar Sánchez Hidalgo
+218 R Undergrowth Confluence @Jeremy Carver
+219 M Regal Tutor @Sandara Tang
+220 U Pollenburst Dryad @Ave Tetsuya
+221 R Imperious Loamspeaker @Jeremy Carver
+222 R Ein, Tree of Horizons @Peter Mohrbracher
+223 R Terragoyf @Robert Maldonado
+224 R Magnagoyf @Thomas Ricci
+225 R T'ranta, Baloth Tamer @Jeremy Carver
+226 M Animar, Heart of the World @Peter Mohrbracher
+227 M Kamahl, Krosan Lorekeeper @Edgar Sánchez Hidalgo
+# 228-250
+251 R Waterlogged Archipelago @Anthony Avon
+252 R Contaminated Rivulet @Anthony Avon
+253 R Sanguinary Morass @Anthony Avon
+254 R Wildwood Knolls @Anthony Avon
+255 R Blustery Steppe @Anthony Avon
+256 R Stark Wetland @Anthony Avon
+# 257-270
+271 R Vexed Waterfront @Anthony Avon
+272 R Vexed Mire @Anthony Avon
+273 R Vexed Fen @Anthony Avon
+# 274-278
+279 R Vexed Temple @Anthony Avon
+# 280
+281 R Greed Vacuum @Bear Frymire
+282 R Nightblade Ronin @Dmonik Mayer
+283 R Candlelit Scourge @Noah Thatcher
+284 R Botanical Behemoth @Timi Honkanen
+285 R Menagerie Caretaker @Sandara Tang
+286 R Mindrake Trawler @Diane Franco
+287 R Emergent Penmanship @Sandara Tang
+288 R Gilt-Leaf Slasher @Aldo Domínguez
+289 R Resplendent Chargers @Dominik Mayer
+290 R Terramancy @Alex Petruk
+# 291
+292 U Memory Spike @Adrien Gonzalez
+293 U Marrow Harvester @Bastien Grivet
+294 U Burnwillow Blossoming @Bastien Grivet 
+# 295
+296 U Candelabrum Vestige @Illarstration
+# 297-300
+301 R Bloodblitz Battle-Axe @Dominik Mayer
+302 M Mox Bismuth @Robert Maldonado
+303 R Vivacious Ridgeline @Sandara Tang
+304 M Ulamog, Voracious Calamity @Reinaldo Indrajaya
+305 U Omicranial Clamp @Jeremy Carver
+306 U Chromatic Lotus @Jeremy Carver
+307 M Worldcarver Crucible @Jeremy Carver
+308 U Coveted Key @Rudy Siswanto
+309 U Insidious Mask @Oleg Kapustin
+310 M Starlight Carin @Anthony Avon
+311 M Multiform Mauler @Timi Honkanen
+312 U Karn's Bauble @Luc Samori
+313 R Flooded Abyss @Anthony Avon
+314 M Terramorphic Vista @Timi Honkanen
+315 R Prosperous Lotus @Jeremy Carver
+316 M Karn, Phyrexian Golem @Noah Thatcher
+317 M Cruciform Stalker @Biagio D'Alessandro
+318 U Manaform Hart @Jeremy Carver
+319 R Torpor Sanctuary @Biagio D'Alessandro
+320 M Weatherlight, Legacy Flagship @Chase Stone

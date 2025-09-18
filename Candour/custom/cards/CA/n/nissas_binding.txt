@@ -1,0 +1,11 @@
+Name:Nissa's Binding
+ManaCost:1 G
+Types:Instant
+
+A:SP$ Charm | MinCharmNum$ 1 | CharmNum$ 2 | Choices$ TrigExileArtEnch,TrigExileGrave
+SVar:TrigExileArtEnch:DB$ ChangeZone | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment | Origin$ Battlefield | Destination$ Exile | SpellDescription$ Exile target artifact or enchantment.
+SVar:TrigExileGrave:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | TgtPrompt$ Choose target card in a graveyard | ValidTgts$ Card | SpellDescription$ Exile target card from a graveyard.
+
+K:TypeCycling:Forest:1
+
+Oracle:Choose one or both —\n• Exile target artifact or enchantment.\n• Exile target card from a graveyard.\nForestcycling {1} ({1}, Discard this card: Search your library for a Forest card, reveal it, put it into your hand, then shuffle.)

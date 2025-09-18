@@ -3,8 +3,8 @@ ManaCost:1 W
 Types:Creature Cat Cleric
 PT:2/1
 
-S:Mode$ Continuous | Affected$ Card.Self+counters_GE1_P1P1 | AddKeyword$ Lifelink | Description$ CARDNAME has lifelink as long as it has a +1/+1 counter on it.
+S:Mode$ Continuous | Affected$ Card.Self+counters_GE1_P1P1 | AddKeyword$ Lifelink | Description$ This creature has lifelink as long as it has a +1/+1 counter on it.
 
-Oracle:Disciple of Atemhar has lifelink as long as it has a +1/+1 counter on it.
+Oracle:This creature has lifelink as long as it has a +1/+1 counter on it.
 
 DeckHints:Ability$Counters

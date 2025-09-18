@@ -1,0 +1,16 @@
+Name:Gilded Pouncer
+ManaCost:1 W
+Types:Creature Cat
+PT:1/2
+
+K:Flash
+
+K:Ward:2
+
+K:Double Strike
+
+K:Cycling:2
+
+K:Eternalize:2 W W
+
+Oracle:Flash\nWard {2}\nDouble strike\nCycling {2}\nEternalize {2}{W}{W}

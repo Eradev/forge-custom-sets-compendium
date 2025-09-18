@@ -1,0 +1,11 @@
+Name:Starlight Cairn
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | Amount$ 1 | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Activation$ Metalcraft | PrecostDesc$ Metalcraft — | Cost$ T | Produced$ Combo Any | Amount$ 3 | SpellDescription$ Add three mana in any combination of colors. Activate only if you control three or more artifacts.
+
+Oracle:{T}: Add {C}.\nMetalcraft — {T}: Add three mana in any combination of colors. Activate only if you control three or more artifacts.
+
+DeckNeeds:Type$Artifact

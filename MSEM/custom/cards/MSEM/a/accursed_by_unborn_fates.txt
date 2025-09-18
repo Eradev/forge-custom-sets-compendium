@@ -1,0 +1,10 @@
+Name:Accursed by Unborn Fates
+ManaCost:2 UB UB
+Types:Sorcery
+
+K:Flashback:3 UB UB
+
+A:SP$ Mill | NumCards$ X | ValidTgts$ Player | TgtPrompt$ Choose a player | SpellDescription$ Target player mills X cards, where X is the number of cards in your graveyard.
+SVar:X:Count$ValidGraveyard Card.YouOwn
+
+Oracle:Target player mills X cards, where X is the number of cards in your graveyard.\nFlashback {3}{UB}{UB} (You may cast this card from your graveyard for its flashback cost. Then exile it.)

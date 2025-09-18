@@ -1,0 +1,8 @@
+Name:Night of the Unliving
+ManaCost:2 B B
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.nonCreature+YouOwn | PresentZone$ Graveyard | PresentCompare$ EQ0 | OptionalDecider$ You | Execute$ TrigReturn | TriggerDescription$ At the beginning of your upkeep, if there are no noncreature cards in your graveyard, you may return target creature card from your graveyard to the battlefield.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature.YouOwn | TgtPrompt$ Select target creature card in your graveyard | ChangeNum$ 1
+
+Oracle:At the beginning of your upkeep, if there are no noncreature cards in your graveyard, you may return target creature card from your graveyard to the battlefield.

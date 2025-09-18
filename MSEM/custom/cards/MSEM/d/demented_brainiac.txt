@@ -1,0 +1,15 @@
+Name:Demented Brainiac
+ManaCost:2 U
+Types:Creature Horror Advisor
+PT:1/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ When this creature enters, each opponent mills two cards.
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigMill | Secondary$ True | TriggerDescription$ At the beginning of your upkeep, each opponent mills two cards.
+SVar:TrigMill:DB$ Mill | Defined$ Opponent | NumCards$ 2
+
+A:AB$ ChangeZoneAll | Cost$ U Sac<1/CARDNAME/this creature> | ChangeType$ Card.OppOwn | Origin$ Graveyard | Destination$ Exile | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Exile each opponent's graveyard. Until end of turn, you may cast instant and sorcery spells exiled this way, and you may spend mana as though it were mana of any color to cast them.
+SVar:DBEffect:DB$ Effect | StaticAbilities$ STPlay | RememberObjects$ Remembered | Duration$ EndOfTurn | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | MayPlayIgnoreColor$ True | Affected$ Card.IsRemembered+Instant,Card.IsRemembered+Sorcery | AffectedZone$ Exile | Description$ Until end of turn, you may cast instant and sorcery spells exiled this way, and you may spend mana as though it were mana of any color to cast them.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When this creature enters and at the beginning of your upkeep, each opponent mills two cards.\n{U}, Sacrifice this creature: Exile each opponent's graveyard. Until end of turn, you may cast instant and sorcery spells exiled this way, and you may spend mana as though it were mana of any color to cast them.

@@ -1,0 +1,8 @@
+Name:Riot Trooper
+ManaCost:2 W
+Types:Creature Human Trooper
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Creature.Trooper+YouCtrl | CanBlockAmount$ 1 | Description$ Each Trooper creature you control can block an additional creature each combat.
+
+Oracle:Each Trooper creature you control can block an additional creature each combat.

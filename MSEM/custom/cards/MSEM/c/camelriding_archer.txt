@@ -1,0 +1,8 @@
+Name:Camelriding Archer
+ManaCost:3 W
+Types:Creature Human Archer
+PT:2/4
+
+K:Reach
+
+Oracle:Reach (This creature can block creatures with flying.)

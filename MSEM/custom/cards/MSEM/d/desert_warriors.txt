@@ -1,0 +1,9 @@
+Name:Desert Warriors
+ManaCost:2 R
+Types:Instant
+
+A:SP$ Token | TokenAmount$ 2 | TokenScript$ rw_1_1_sand_warrior | TokenOwner$ You | SpellDescription$ Create two 1/1 red and white Sand Warrior creature tokens.
+
+Oracle:Create two 1/1 red and white Sand Warrior creature tokens.
+
+DeckHas:Ability$Token

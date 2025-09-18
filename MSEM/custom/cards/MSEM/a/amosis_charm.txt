@@ -1,0 +1,12 @@
+Name:Amosis Charm
+ManaCost:B
+Types:Sorcery
+
+A:SP$ Charm | Choices$ DBDiscard,DBDrain
+
+SVar:DBDiscard:DB$ Discard | ValidTgts$ Opponent | NumCards$ 1 | Mode$ TgtChoose | SpellDescription$ Target opponent discards a card.
+
+SVar:DBDrain:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 1 | SubAbility$ DBGainLife | SpellDescription$ CARDNAME deals 1 damage to any target and you gain 1 life.
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 1
+
+Oracle:Choose one —\n• Target opponent discards a card.\n• Amosis Charm deals 1 damage to any target and you gain 1 life.

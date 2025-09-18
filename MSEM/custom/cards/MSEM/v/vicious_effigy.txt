@@ -1,0 +1,11 @@
+Name:Vicious Effigy
+ManaCost:B
+Types:Artifact Creature Construct
+PT:1/1
+
+K:Flying
+
+T:Mode$ SpellCast | ValidCard$ Card.wasCastFromExile | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ Whenever you cast a spell from exile, each opponent loses 2 life.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ Opponent | LifeAmount$ 2
+
+Oracle:Flying\nWhenever you cast a spell from exile, each opponent loses 2 life.
