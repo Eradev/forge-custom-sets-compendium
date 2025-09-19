@@ -1,0 +1,14 @@
+Name:Imperial Mox
+ManaCost:0
+Types:Legendary Artifact
+
+A:AB$ Mana | Cost$ T | Produced$ C | Amount$ 1 | CheckSVar$ Z | SVarCompare$ EQ2 | SpellDescription$ Add {C}. Activate only if you have less life and control fewer creatures than each opponent.
+SVar:YourLife:Count$YourLifeTotal
+SVar:LowestLifeOpp:PlayerCountOpponents$LowestLifeTotal
+SVar:CreatureYouControl:Count$Valid Creature.YouCtrl
+SVar:LowestCreatureOppControl:PlayerCountOpponents$LowestValid Creature.YouCtrl
+SVar:LifeCompare:Count$Compare YourLife LTLowestLifeOpp.1.0
+SVar:CreatureCompare:Count$Compare CreatureYouControl LTLowestCreatureOppControl.1.0
+SVar:Z:SVar$LifeCompare/Plus.CreatureCompare
+
+Oracle:{T}: Add {C}. Activate only if you have less life and control fewer creatures than each opponent.
