@@ -1,0 +1,11 @@
+Name:Coil Remnant
+ManaCost:1 B
+Types:Creature Snake Warrior
+PT:2/2
+
+K:Poisonous:2
+
+S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Deathtouch | CheckSVar$ X | SVarCompare$ GE1 | Description$ This creature has deathtouch as long as an opponent is poisoned.
+SVar:X:Count$TotalOppPoisonCounters
+
+Oracle:Poisonous 2 (Whenever this creature deals combat damage to a player, that player gets two poison counters.)\nThis creature has deathtouch as long as an opponent is poisoned.
