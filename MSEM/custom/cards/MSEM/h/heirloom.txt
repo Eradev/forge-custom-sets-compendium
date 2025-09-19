@@ -1,0 +1,11 @@
+Name:Heirloom
+ManaCost:2 W
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | Execute$ TrigAttach | TriggerZones$ Battlefield | OptionalDecider$ You | TriggerDescription$ At the beginning of combat on your turn, you may attach any number of Equipment you control to target creature you control.
+SVar:TrigAttach:DB$ Attach | Defined$ Targeted | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | Object$ Valid Equipment.YouCtrl | Optional$ True
+
+Oracle:At the beginning of combat on your turn, you may attach any number of Equipment you control to target creature you control.
+
+SVar:NonStackingEffect:True
+DeckNeeds:Type$Equipment
