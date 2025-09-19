@@ -73,20 +73,8 @@ Meditate 1W (Return this creature to its owner's hand. Meditate only as a sorcer
 Implementation
 
 ```text
-K:Meditate
-S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withoutDiscountmeditate | AddAbility$ Meditate
-S:Mode$ Continuous | Affected$ Card.Self+withoutFastmeditate+withDiscountmeditate | AddAbility$ DiscountMeditate
-S:Mode$ Continuous | Affected$ Card.Self+withFastmeditate+withoutDiscountmeditate | AddAbility$ FastMeditate
-S:Mode$ Continuous | Affected$ Card.Self+withFastmeditate+withDiscountmeditate | AddAbility$ DiscountFastMeditate
-SVar:Meditate:AB$ ChangeZone | Cost$ 1 W | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
-SVar:DiscountMeditate:AB$ ChangeZone | Cost$ W | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SubAbility$ JediScry | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
-SVar:FastMeditate:AB$ ChangeZone | Cost$ 1 W | ActivationZone$ Battlefield | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand.)
-SVar:DiscountFastMeditate:AB$ ChangeZone | Cost$ W | ActivationZone$ Battlefield | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SubAbility$ JediScry | SpellDescription$ Meditate (Return this creature to its owner's hand.)
-SVar:JediScry:DB$ Scry | ScryNum$ 1 | ConditionDefined$ Self | ConditionPresent$ Card.Jedi
+A:AB$ ChangeZone | Named$ Meditate | Cost$ 1 W | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
 ```
-
-> Fastmeditate is an internal keyword used to implement Plo Koon.
-> Discountmeditate is an internal keyword used to implement Jedi Training.
 
 [Jump to top](#keywords-and-mechanisms-implementation)
 
@@ -130,6 +118,5 @@ SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpacef
 ```
 
 > Spacereach is an internal keyword used to implement Exogorth.
-
 
 [Jump to top](#keywords-and-mechanisms-implementation)
