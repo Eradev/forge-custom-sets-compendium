@@ -1,0 +1,11 @@
+Name:Sea Hunter
+ManaCost:1 U
+Types:Creature Human Pirate
+PT:4/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChangeZone | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may return target creature with mana value 4 or greater to its owner's hand.
+SVar:TrigChangeZone:DB$ ChangeZone | Origin$ Battlefield | Destination$ Hand | ValidTgts$ Creature.cmcGE4 | TgtPrompt$ Select target creature.
+
+Oracle:When this creature enters, you may return target creature with mana value 4 or greater to its owner's hand.
+
+SVar:PlayMain1:TRUE

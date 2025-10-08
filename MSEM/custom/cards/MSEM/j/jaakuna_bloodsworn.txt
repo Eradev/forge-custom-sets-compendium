@@ -1,0 +1,9 @@
+Name:Jaakuna Bloodsworn
+ManaCost:R
+Types:Creature Human Samurai
+PT:4/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ DBSacrifice | TriggerDescription$ When this creature enters, any opponent may have it deal 3 damage to them. If a player does, sacrifice it.
+SVar:DBSacrifice:DB$ Sacrifice | UnlessCost$ DamageYou<3> | UnlessPayer$ Opponent | UnlessSwitched$ True
+
+Oracle:When this creature enters, any opponent may have it deal 3 damage to them. If a player does, sacrifice it.

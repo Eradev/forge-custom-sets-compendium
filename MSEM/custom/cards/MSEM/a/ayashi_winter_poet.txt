@@ -1,0 +1,17 @@
+Name:Ayashi, Winter Poet
+ManaCost:2
+Types:Legendary Planeswalker Ayashi
+Loyalty:1
+
+T:Mode$ Phase | Phase$ Upkeep | TriggerZones$ Battlefield | ValidPlayer$ You | Execute$ TrigPutCounter | TriggerDescription$ At the beginning of your upkeep, put a loyalty counter on each planeswalker you control.
+SVar:TrigPutCounter:DB$ PutCounterAll | ValidCards$ Planeswalker.YouCtrl | CounterType$ LOYALTY | CounterNum$ 1
+
+A:AB$ Tap | Cost$ AddCounter<0/LOYALTY> | ValidTgts$ Creature | TgtPrompt$ Choose target creature to tap. | Planeswalker$ True | SubAbility$ DovinPump | SpellDescription$ Tap target creature.
+
+A:AB$ Untap | Cost$ SubCounter<1/LOYALTY> | Planeswalker$ true | ValidTgts$ Land.Basic | TgtPrompt$ Select target basic land | SpellDescription$ Untap target basic land.
+
+A:AB$ Draw | Cost$ SubCounter<7/LOYALTY> | Planeswalker$ true | Ultimate$ True | Defined$ You | Upto$ True | NumCards$ 6 | AILogic$ OptionalDraw | SpellDescription$ Draw up to six cards.
+
+Oracle:At the beginning of your upkeep, put a loyalty counter on each planeswalker you control.\n[0]: Tap target creature.\n[-1]: Untap target basic land.\n[-7]: Draw up to six cards.
+
+DeckHints:Type$Planeswalker

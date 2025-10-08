@@ -1,0 +1,10 @@
+Name:Doushirou, Master of Dragonsteel
+ManaCost:R
+Types:Legendary Creature Human Artificer
+PT:1/1
+
+A:AB$ ChangeZone | Cost$ T Sac<1/Equipment/an Equipment> | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Card.Equipment+YouCtrl | SorcerySpeed$ True | SpellDescription$ Return target Equipment card from your graveyard to the battlefield. Activate only as a sorcery.
+
+Oracle:{T}, Sacrifice an Equipment: Return target Equipment card from your graveyard to the battlefield. Activate only as a sorcery.
+
+AI:RemoveDeck:All

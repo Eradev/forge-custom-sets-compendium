@@ -1,0 +1,5 @@
+Name:Sheraku Swordsman
+ManaCost:1 G
+Types:Creature Human Samurai
+PT:3/2
+Oracle:

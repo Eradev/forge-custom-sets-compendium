@@ -1,0 +1,11 @@
+Name:Ikari-no-Oni
+ManaCost:2 R R
+Types:Creature Demon
+PT:4/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPumpAll | TriggerDescription$ Whenever this creature enters, other creatures you control get +1/+0 until end of turn.
+SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.StrictlyOther+YouCtrl | NumAtt$ +1
+
+Oracle:Whenever this creature enters, other creatures you control get +1/+0 until end of turn.
+
+SVar:PlayMain1:TRUE

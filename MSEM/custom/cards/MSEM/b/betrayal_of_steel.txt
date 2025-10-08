@@ -1,0 +1,11 @@
+Name:Betrayal of Steel
+ManaCost:U
+Types:Enchantment Aura
+
+K:Enchant:Equipment
+
+S:Mode$ Continuous | Affected$ Card.EnchantedBy | GainControl$ You | Description$ You control enchanted Equipment.
+
+Oracle:Enchant Equipment\nYou control enchanted Equipment.
+
+SVar:AttachAILogic:GainControl

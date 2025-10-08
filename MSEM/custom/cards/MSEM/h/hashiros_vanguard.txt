@@ -1,0 +1,12 @@
+Name:Hashiro's Vanguard
+ManaCost:2 B
+Types:Creature Human Samurai
+PT:3/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSac | TriggerDescription$ When this creature enters, each player sacrifices a nontoken creature.
+SVar:TrigSac:DB$ Sacrifice | Defined$ Player | SacValid$ Creature.!token | SacMessage$ nontoken creature
+
+Oracle:When this creature enters, each player sacrifices a nontoken creature.
+
+SVar:NeedsToPlay:Creature.!token+OppCtrl
+DeckHas:Ability$Sacrifice

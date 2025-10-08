@@ -1,0 +1,234 @@
+[metadata]
+Code=MSEM_PSA
+Name=Path of Shadows
+Date=2017-10-01
+Type=Custom
+
+[cards]
+1 R Faceless Animist @Luis Nuñez de Castro Torres
+2 M Hirukari, Daughter of the Sun @Zielinska Graciana
+3 M Mua, Seishin Ascendant @Jason Engle
+4 C Shadowstrider @Sergio Camarena
+5 C Silent Wanderer @Mike Capprotti
+6 C Voiceless Assailant @Carlos Nuñez de Castro Torres
+7 R Absolve @Jason Behnke
+8 C Aokara Devoted @Le Vuong
+9 R Chochin the Silent Moth @Adam Schumpert
+10 R Commander Hyctaleon @Charles Urbach
+11 R Hanabira, Kogane's Legacy @Immar Palomera
+12 C Heirloom @Gong Studios
+13 C Hinasa Historian @Matt Zeilinger
+14 C Hinasa Lorekeeper @IFS
+15 R Imperator Valtasius @Charles Urbach
+16 C Inner Peace @Albert Tavira
+17 C Inner Purity @Mario Wibisono
+18 C Kiboshi's Guardian @Héctor Herrera
+19 C Lesson in Discipline @IFS
+20a M Little Kibo @Hector Herrera
+21 C One with Seishin @Jason Behnke
+22 C Oshiruko Purifier @Matt Zeilinger
+23 C Phasmophobia @Steve Argyle
+24 C Scions of Old Jidai @Mario Wibisono
+25 C Senaturian Legion @Charles Urbach
+26 C Serene Form @IFS
+27 C Shokan Battalion @Polar Engine
+28 C Shokan Captain @Shawn Ignatius Tan
+29 R Spiritual Ascension @Dieter Miller
+30 C Strident Retainer @Andrew Sonea
+31 C Takaki's Kihei @Shen Fei
+32 C Teikoku Captain @Jason Engle
+33 C Teikoku Songcrafter @Mario Wibisono
+34 R White Petal Ronin @Mario Wibisono
+35 C Aokara Duelists @Immar Palomera
+36 C Aokara Elite @Kris Cooper
+37 C Betrayal of Steel @Felipe Gaona
+38 C Disciple of Winds @Shen Fei
+39 C Fleeting Thoughts @William O'Connor
+40 C Gifts of the Oshiruko @Jake Murray
+41 R Himitsu, Shigure's Legacy @Gong Studios
+42 C Hisana-no-Oni @Paul Herbert
+43 C Imperial Artisan @Conceptopolis
+44 R Imposition @Sheila Amajida
+45 C Jidai Clairvoyant @Conceptopolis
+46 R Kaiju-no-Oni @Calderon Studios
+47 R Kasoha, Keeper of Truths @Jason Juta
+48 C Kowareta Informant @Sergio Camarena
+49 M Lord Rokai @Jason Engle
+50 C Mana Corruption @Mario Wibisono
+51 C Mystic Arts @Ian Lanas
+52 C Path of the Waters @Stephanie Pui-Mun Law
+53 C Raiun Bay Scourge @ryurai
+54 C Rokai's Vassal @Drew Baker
+55 R Scrollmaster @Florian Stitz
+56 C Sea Hunter @Edwin David
+57 C Seishin Tidekeeper @Mateusz Ozminski
+58 C Spirit Reflections @Matt Zeilinger
+59 R Stormwake @Steve Argyle
+60 C Tales of Old Jidai @Caravan Studio
+61 R Unearthly Grace @Mario Wibisono
+62 C Whisper of the Winds @Stephanie Pui-Mun Law
+63 C Abura-no-Oni @Anthony Francisco
+64 C Awoken Nightmares @Luis Nuñez de Castro Torres
+65 C Coil Remnant @Aurelien Hubert
+66 C Curse of Kurayami @Carlos Nuñez de Castro Torres
+67 C Duskscale Marauder @Drew Baker
+68 M Emperor Azuma Hashiro @Diego Gisbert Llorens
+69 R End of the Empire @Diego Gisbert Llorens
+70 C Favor of the Emperor @Drew Baker
+71 C Finishing Touches @Michael Komarck
+72 C Fleshcage Shambler @Chris Ng
+73 C Forbidden Brew @Polar Engine
+74 C Hashiro's Devoted @Mario Wibisono
+75 C Hashiro's Vanguard @Chris Ostrowski
+76 C Heralds of Shikai @Conceptopolis
+77 R Keeper of Dark Shadows @Sergio Camarena
+78 C Kemono-no-Oni @Adam Bray
+79 R Ketsueki, Kiyomi's Legacy @Gong Studios
+80 C Kurayami Butcher @Jason Engle
+81 C Kurayami Necromancer @Luis Nuñez de Castro Torres
+82 C Light Within Shadow @Jeffrey Lai
+83 R Ronin of Broken Vows @Matthew S. Armstrong
+84 C Sasori Nightrunner @Conceptopolis
+85 C Sever Limbs @Carlos Nuñez de Castro Torres
+86 C Shikai Hunters @Polar Engine
+87 R Shikai Revenant @Carlos Nuñez de Castro Torres
+88 R Shizura, Keeper of Traditions @Jason Engle
+89 R Soulbreaker of Mautakesh @Jason Engle
+90 C Unhallow @Luis Nuñez de Castro Torres
+91 C Disciple of Flames @Oliver Specht
+92 R Doushirou, Master of Dragonsteel @Diego Gisbert Llorens
+93 C Firebloom @Matt Zeilinger
+94 R Iaijutsu @Justin Norman
+95 C Ikari-no-Oni @Wen Juinn
+96 C Imperial Siege @Nikolay Stoyanov
+97 C Jaakuna Betrayer @Steve Argyle
+98 C Jaakuna Bloodsworn @Diego Gisbert Llorens
+99 C Jaakuna Tyrant @Shawn Ignatius Tan
+100 C Kami's Greed @Adam Schumpert
+101 C Kamito Champion @Paul Herbet
+102 R Kamito Eternalist @Sergio Camarena
+103 C Kamito Pathseeker @Randolph A. Williams III
+104 C Kamito Rageweaver @Erich Schreiner
+105 R Kamito Warcaster @Tony Foti
+106 R Kasai, Asharo's Legacy @Nikolay Stoyanov
+107 M Masahita, Bloodtongue @Jason Behnke
+108 C Masahita's Servant @Le Vuong & Shawn Ignatius Tan
+109 C Scintillate @Mario Wibisono
+110 C Seishin Rageshaper @Matt Zeilinger
+111 C Seishin Smokeshaper @Isuardi Therianto
+112 C Shaping Dragonsteel @William O'Connor
+113 R Sovereign of Old Jidai @Steve Argyle
+114 C Stormshaper Adept @Jason Engle
+115 C Thousand Cuts @Florian Stitz
+116 C Unleash the Dragon @IFS
+117 R Way of the Dragon @Michael Komarck
+118 C Yamisaran Bladedancer @Masterchomic
+119 C Blade of Mautakesh @Le Vuong
+120 C Forgotten Homelands @Chris Ostrowski
+121 C Fuhai-no-Oni @Christopher Burdett
+122 C Hinode Ranger @Mario Wibisono
+123 C Kaiju Renegades @Guillaume Ducos
+124 C Kareki Heretic @Ed Cox
+125 C Kizoku Valiant @Edwin David
+126 M Konoe the Traitor's Hand @Wen Juinn
+127 C Konoe's Lieutenant @Miguel Coimbra
+128 C Kumo-no-Oni @Jason Engle
+129 C Kuryu Swordsman @Drew Baker
+130 C Last Stand of the Coil @Conceptopolis
+131 C Legacy's End @Jason Engle
+132 R Mana Ascetic @Diego Gisbert Llorens
+133 R Master of Balance @Le Vuong
+134 R Moranai Paragon @IFS
+135 C One with the World @Eli Ring
+136 C Prayer of Drifting Lights @John Donahue
+137 R Scion of Scales @Lu Vazquez
+138 C Sevenfold Monk @Laurent Beauvallet
+139 C Sheraku Swordsman @Diego Gisbert Llorens
+140 C Snake Tattoo @Jason Juta
+141 C Speaker of Seasons @Diego Gisbert Llorens
+142 C Spectral Kitsune @Heather V. Kreiter
+143 C Student of the Coil @Matthew Armstrong
+144 R Tarraka-no-Oni @Christopher Burdett
+145 R Tsang Jin, Master of the Jade Sea @Adam Schumpert
+146 R Uguisu, Kenshiro's Legacy @Jason Juta
+147 R General Takaki @Polar Engine
+148 R Haruna, Master Architect @Calderon Studio
+149 R Imako, Ninefingers @Edwin David
+150 R Inoshi the Wild Boar @Conceptopolis
+151 R Junan Venomtongue @Magali Villeneuve
+152 R Kogane the Crimson Consort @Mario Wibisono
+153 C Kuma Strike @Edwin David
+154 R Lady Ashima @Le Vuong
+155 M Mautakesh @Aurelien Hubert
+156 C Only Memories Remain @John Donahue
+157 M Ryukami, the First Sovereign @Doug Shuler
+158 R Saki of the Sea and Sky @Mario Wibisono
+159 C Sanctified Presence @Mario Wibisono
+160 C Treacherous Ways @Mario Wibisono
+161 R Urushi, the Ripple in the Smoke @Jason Behnke
+162 C Worthy of the Name @kikicianjur
+163 R Yuso, Light of Jidai @Drew Baker
+164 R Zahar, Aghavaan's Legacy @Rob Alexander
+165 R Asahi Yoroi @Aurelien Hubert
+166 C Bladed Warfan @Raymond Guastadnes
+167 C Emblem of Aghavaan @Conceptopolis
+168 R Envenomed Shuriken @John Donahue
+169 R Eternal Inheritance @Brian Snoddy
+170 C Fortune Charm @Gong Studios
+171 C Imperial Katana @Veronica V. Jones
+172 M Imperial Mox @Mario Wibisono
+173 C Inscribed Histories @Brent Chumley
+174 C Kameno Yoroi @Gong Studios
+175 C Kiri Yoroi @Aurelien Hubert
+176 R Mask of Shikai @Christopher Appel
+177 R Mysterious Coffer @Nora Brisotti
+178 C Nidohagane Warfans @Gong Studios
+179 R Pagoda of Longevity @Chris Ostrowski
+180 C Seishin's Edge @Gong Studios
+181 R Sekitsui Yoroi @Ramon Puasa
+182 C Shadow Lantern @Drew Baker
+183a M Shionoshio, Ocean's Vow @Jason Juta & Shawn Ignatius Tan
+184 C Sigiled Scrollcase @Gong Studios
+185 R Soulstone @Brent Chumley
+186 R Spellblade @Immar Palomera
+187 M Sword of Silver and Gold @Jason Engle
+188 M Anzen, Beyond the Sea @Chris Ostrowski
+189 M Chikami Castle @Chris Ostrowski
+190 C Dragonwall Gates @Chris Ostrowski
+191 C House of Forgotten Whispers @John Donahue
+192 C Imperial Port @Chris Ostrowski
+193 C Kurayami Shrine @Charles Urbach
+194 M The Last Sacred Gate @Alaynna Lemmer
+195 R Memorial of the Fallen @Chris Ostrowski
+196 R Midnight Keep @Chris Ostrowski
+197 C Perilous Passage @Chris Ostrowski
+198 M Saishuteki Castle @Chris Ostrowski
+199 C Seishin Dojo @Chris Ostrowski
+200 C Shikai's Redoubt @Chris Ostrowski
+201 R Sunset Monastery @Chris Ostrowski
+202 R Temple of Falling Leaves @Chris Ostrowski
+203 M Tower of Long Shadows @Chris Ostrowski
+204 R Unzari Ruins @Christopher Burdett
+205 L Plains @Hai Hoang
+206 L Island @Hai Hoang
+207 L Swamp @Hai Hoang
+208 L Mountain @Hai Hoang
+209 L Forest @Hai Hoang
+210 S Forest @Hai Hoang
+211 S Island @Hai Hoang
+212 S Mountain @Hai Hoang
+213 S Plains @Hai Hoang
+214 S Swamp @Hai Hoang
+
+[tokens]
+1 c_4_4_demon_spirit_menace
+2 c_1_1_samurai
+3 c_2_2_spirit
+4 g_1_1_snake_poisonous
+5 c_a_nidohagane_warfans_equipment
+
+[other]
+6 emblem_hirukari_daughter_of_the_sun
+
+[WalkerTypes]
+Ayashi

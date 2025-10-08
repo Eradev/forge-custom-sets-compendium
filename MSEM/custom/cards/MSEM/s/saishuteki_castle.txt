@@ -1,0 +1,11 @@
+Name:Saishuteki Castle
+ManaCost:no cost
+Types:Legendary Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ ChangeZone | Cost$ 2 T | ValidTgts$ Aura.YouCtrl,Equipment.YouCtrl | Origin$ Graveyard | Destination$ Library | TgtPrompt$ Choose target Aura or Equipment card in your graveyard | SpellDescription$ Put target Aura or Equipment card from your graveyard on top of your library.
+
+Oracle:{T}: Add {C}.\n{2}, {T}: Put target Aura or Equipment card from your graveyard on top of your library.
+
+AI:RemoveDeck:All

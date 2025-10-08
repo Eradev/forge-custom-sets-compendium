@@ -1,0 +1,8 @@
+Name:Sevenfold Monk
+ManaCost:1 G
+Types:Creature Human Monk
+PT:2/2
+
+K:Flash
+
+Oracle:Flash

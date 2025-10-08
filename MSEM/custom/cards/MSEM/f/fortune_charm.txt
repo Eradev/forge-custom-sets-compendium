@@ -1,0 +1,8 @@
+Name:Fortune Charm
+ManaCost:1
+Types:Artifact
+
+A:AB$ RearrangeTopOfLibrary | Cost$ T Sac<1/CARDNAME/this artifact> | Defined$ You | NumCards$ 2 | SuBAbility$ DBDraw | SpellDescription$ Look at the top two cards of your library, then put them back in any order. Draw a card.
+SVar:DBDraw:DB$ Draw
+
+Oracle:{T}, Sacrifice this artifact: Look at the top two cards of your library, then put them back in any order. Draw a card.

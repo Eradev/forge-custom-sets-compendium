@@ -1,0 +1,10 @@
+Name:Chochin the Silent Moth
+ManaCost:2 W
+Types:Legendary Creature Human Samurai
+PT:1/1
+
+A:AB$ Animate | Cost$ T | ValidTgts$ Creature | RemoveAllAbilities$ True | RememberAnimated$ True |  SubAbility$ DBExile | SpellDescription$ Target creature loses all abilities until end of turn. Exile NICKNAME and that creature.
+SVar:DBExile:DB$ ChangeZone | AllDefined$ Self,Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:{T}: Target creature loses all abilities until end of turn. Exile Chochin and that creature.

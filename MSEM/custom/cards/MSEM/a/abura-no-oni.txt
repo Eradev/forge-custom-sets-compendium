@@ -1,0 +1,9 @@
+Name:Abura-no-Oni
+ManaCost:1 B
+Types:Creature Demon
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ When this creature enters, target player mills two cards.
+SVar:TrigMill:DB$ Mill | NumCards$ 2 | ValidTgts$ Player
+
+Oracle:When this creature enters, target player mills two cards.

@@ -1,0 +1,14 @@
+Name:Sekitsui Yoroi
+ManaCost:3
+Types:Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+equipped | AddPower$ 1 | AddToughness$ 1 | Description$ Equipped creatures you control get +1/+1.
+
+S:Mode$ CastWithFlash | ValidSA$ Activated.Equip | Caster$ You | Description$ You may activate equip abilities any time you could cast an instant.
+
+K:Equip:2
+
+Oracle:Equipped creatures you control get +1/+1.\nYou may activate equip abilities any time you could cast an instant.\nEquip {2}
+
+DeckNeeds:Type$Equipment
+SVar:PlayMain1:TRUE

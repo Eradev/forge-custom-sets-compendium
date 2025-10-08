@@ -1,0 +1,9 @@
+Name:Spectral Kitsune
+ManaCost:1 G
+Types:Creature Fox Spirit
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigRemoveCounter | TriggerDescription$ When this creature enters, you may remove a counter from target player or permanent.
+SVar:TrigRemoveCounter:DB$ RemoveCounter | ValidTgts$ Player,Permanent | TgtPrompt$ Select target player or permanent | CounterType$ Any | CounterNum$ 1
+
+Oracle:When this creature enters, you may remove a counter from target player or permanent.

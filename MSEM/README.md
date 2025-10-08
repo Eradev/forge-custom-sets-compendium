@@ -36,6 +36,7 @@ Kaleidoscope (KLC)                    -  98% (106/108)
   Missing cards:
     * Chronic Traitor: TODO Check for Paranoia paid
     * Kofe-District Scholar: TODO Check for Paranoia paid
+Path of Shadows (PSA)                 -  35% (76/214)
 A Tourney at Whiterun (TWR)           -  11% (32/269)
 Tides of War (TOW)                    -  28% (77/271)
 Pyramids of Atuum (POA)               -  50% (64/128)

@@ -1,7 +1,6 @@
-Name:Shark Mutant
+Name:Shark Mutant Token
 ManaCost:no cost
 Types:Creature Shark Mutant
 Colors:blue
 PT:*/*
-
 Oracle:

@@ -1,0 +1,14 @@
+Name:Imperator Valtasius
+ManaCost:3 W W
+Types:Legendary Creature Human Soldier
+PT:5/5
+
+K:First Strike
+K:Vigilance
+
+K:Partner:Commander Hyctaleon
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigChange | OptionalDecider$ You | TriggerDescription$ At the beginning of your upkeep, you may search your library for a Soldier card, reveal it, put it into your hand, then shuffle.
+SVar:TrigChange:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Card.Soldier | ChangeNum$ 1 | ShuffleNonMandatory$ True
+
+Oracle:First strike, vigilance\nPartner with Commander Hyctaleon (When this creature enters, target player may put Commander Hyctaleon into their hand from their library, then shuffle.)\nAt the beginning of your upkeep, you may search your library for a Soldier card, reveal it, put it into your hand, then shuffle.

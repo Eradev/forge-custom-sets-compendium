@@ -1,0 +1,7 @@
+Name:Soulstone
+ManaCost:1
+Types:Artifact
+
+S:Mode$ ReduceCost | ValidCard$ Card.YouOwn | Type$ Ability | Amount$ 1 | MinMana$ 1 | AffectedZone$ Hand | Description$ Activated abilities of cards in your hand cost {1} less to activate. This effect can't reduce the mana in that ability's activation cost to less than one mana.
+
+Oracle:Activated abilities of cards in your hand cost {1} less to activate. This effect can't reduce the mana in that ability's activation cost to less than one mana.

@@ -1,0 +1,10 @@
+Name:Iaijutsu
+ManaCost:1 R
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ +X | KW$ Haste | ActivationPhases$ Upkeep->BeginCombat | ActivationFirstCombat$ True | SubAbility$ DelTrig | AILogic$ Berserk | SpellDescription$ Cast this spell only before attackers are declared. Target creature gets +X/+0 until and gains haste end of turn, where X is its power. At the beginning of the next end step, sacrifice that creature if it attacked this turn.
+SVar:DelTrig:DB$ DelayedTrigger | Mode$ Phase | Phase$ End Of Turn | Execute$ TrigSacrifice | RememberObjects$ Targeted | TriggerDescription$ At the beginning of the next end step, sacrifice that creature if it attacked this turn. | AILogic$ Always
+SVar:TrigSacrifice:DB$ SacrificeAll | Defined$ DelayTriggerRemembered | ConditionDefined$ DelayTriggerRemembered | ConditionPresent$ Card.attackedThisTurn | ConditionCompare$ GE1
+SVar:X:Targeted$CardPower
+
+Oracle:Cast this spell only before attackers are declared.\nTarget creature gets +X/+0 and gains haste until end of turn, where X is its power. At the beginning of the next end step, sacrifice that creature if it attacked this turn.

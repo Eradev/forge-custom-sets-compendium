@@ -1,0 +1,9 @@
+Name:Fuhai-no-Oni
+ManaCost:6 G
+Types:Creature Demon Worm
+PT:6/6
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ X | EffectZone$ All | Description$ This spell costs {1} less to cast for each creature card in your graveyard.
+SVar:X:Count$ValidGraveyard Creature.YouOwn
+
+Oracle:This spell costs {1} less to cast for each creature card in your graveyard.

@@ -1,7 +1,6 @@
-Name:Lizard Mutant
+Name:Lizard Mutant Token
 ManaCost:no cost
 Types:Creature Lizard Mutant
 Colors:red
 PT:1/1
-
 Oracle:

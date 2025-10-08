@@ -1,0 +1,9 @@
+Name:Envenomed Shuriken
+ManaCost:1
+Types:Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddKeyword$ Poisonous:1 | AddPower$ 1 | Description$ Equipped creature gets +1/+0 and has poisonous 1. (Whenever it deals combat damage to a player, that player gets a poison counter.)
+
+K:Equip:1
+
+Oracle:Equipped creature gets +1/+0 and has poisonous 1. (Whenever it deals combat damage to a player, that player gets a poison counter.)\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)
