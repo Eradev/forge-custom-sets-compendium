@@ -1,0 +1,10 @@
+Name:Ronin of Broken Vows
+ManaCost:1 B B
+Types:Creature Human Samurai
+PT:2/2
+
+A:AB$ PutCounter | Cost$ PayLife<3> | ValidTgts$ Creature | TgtPrompt$ Select target creature | CounterType$ P1P1 | CounterNum$ 1 | SpellDescription$ Put a +1/+1 counter on target creature.
+
+Oracle:Pay 3 life: Put a +1/+1 counter on target creature.
+
+AI:RemoveDeck:All

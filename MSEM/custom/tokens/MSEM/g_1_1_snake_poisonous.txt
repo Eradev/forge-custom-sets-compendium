@@ -1,0 +1,9 @@
+Name:Snake Token
+ManaCost:no cost
+Colors:green
+Types:Creature Snake
+PT:1/1
+
+K:Poisonous:1
+
+Oracle:Poisonous 1 (Whenever this creature deals combat damage to a player, that player gets a poison counter.)

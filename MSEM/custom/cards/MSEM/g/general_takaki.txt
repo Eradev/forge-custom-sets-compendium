@@ -1,0 +1,9 @@
+Name:General Takaki
+ManaCost:1 R G W
+Types:Legendary Creature Human Samurai
+PT:1/4
+
+R:Event$ DamageDone | ActiveZones$ Battlefield | ValidSource$ Card.YouCtrl,Emblem.YouCtrl | ValidTarget$ Permanent,Player | DamageAmount$ EQ1 | ReplaceWith$ DamageReplace | Description$ If a source you control would deal exactly 1 damage to a permanent or player, it deals 3 damage instead.
+SVar:DamageReplace:DB$ ReplaceEffect | VarName$ DamageAmount | VarValue$ 3
+
+Oracle:If a source you control would deal exactly 1 damage to a permanent or player, it deals 3 damage instead.

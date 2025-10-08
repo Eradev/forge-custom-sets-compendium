@@ -1,0 +1,9 @@
+Name:Seishin Dojo
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Token | Cost$ 7 T | TokenAmount$ 1 | TokenScript$ c_2_2_spirit | TokenOwner$ You | SpellDescription$ Create a 2/2 colorless Spirit creature token.
+
+Oracle:{T}: Add {C}.\n{7}, {T}: Create a 2/2 colorless Spirit creature token.

@@ -1,0 +1,10 @@
+Name:Shadow Lantern
+ManaCost:1
+Types:Artifact
+
+S:Mode$ Continuous | AffectedZone$ Hand | Affected$ Card.OppOwn | MayLookAt$ Player | Description$ Your opponents play with their hands revealed.
+
+Oracle:Your opponents play with their hands revealed.
+
+SVar:NonStackingEffect:True
+AI:RemoveDeck:All

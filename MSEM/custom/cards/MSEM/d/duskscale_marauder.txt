@@ -1,0 +1,10 @@
+Name:Duskscale Marauder
+ManaCost:1 B
+Types:Creature Snake Rogue
+PT:1/2
+
+K:Poisonous:1
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | Description$ This creature can't be blocked.
+
+Oracle:Poisonous 1 (Whenever this creature deals combat damage to a player, that player gets a poison counter.)\nThis creature can't be blocked.

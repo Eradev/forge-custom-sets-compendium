@@ -1,0 +1,9 @@
+Name:Dragonwall Gates
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | Amount$ 1 | SpellDescription$ Add {C}.
+
+A:AB$ Animate | Cost$ tapXType<1/Creature> | Defined$ Self | Power$ 0 | Toughness$ 4 | Types$ Artifact,Creature,Wall | Keywords$ Defender | SpellDescription$ Until end of turn, this land becomes a 0/4 Wall artifact creature with defender. It's still a land.
+
+Oracle:{T}: Add {C}.\nTap an untapped creature you control: Until end of turn, this land becomes a 0/4 Wall artifact creature with defender. It's still a land.

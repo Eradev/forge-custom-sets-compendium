@@ -1,0 +1,7 @@
+Name:Finishing Touches
+ManaCost:B
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Creature | AITgts$ Creature.wasDealtDamageThisTurn | ConditionDefined$ Targeted | Condition$ Creature.wasDealtDamageThisTurn | SpellDescription$ Destroy target creature if it was dealt damage this turn.
+
+Oracle:Destroy target creature if it was dealt damage this turn.

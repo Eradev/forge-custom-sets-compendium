@@ -1,0 +1,16 @@
+Name:Emperor Azuma Hashiro
+ManaCost:3 B B B B
+Types:Legendary Creature Demon Samurai
+PT:7/7
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChange | TriggerDescription$ When CARDNAME enters, gain control of target creature for as long as you control him.
+SVar:TrigChange:DB$ GainControl | TgtPrompt$ Choose target creature | ValidTgts$ Creature | LoseControl$ LeavesPlay,LoseControl
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDrain | TriggerDescription$ At the beginning of your upkeep, each opponent loses life equal to the number of permanents you control but don't own.
+SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ X
+SVar:X:Count$Valid Permanent.YouCtrl/Minus.Y
+SVar:Y:Count$Valid Permanent.YouCtrl+YouOwn
+
+Oracle:When Emperor Azuma Hashiro enters, gain control of target creature for as long as you control him.\nAt the beginning of your upkeep, each opponent loses life equal to the number of permanents you control but don't own.
+
+SVar:PlayMain1:TRUE

@@ -1,0 +1,10 @@
+Name:Emblem of Aghavaan
+ManaCost:2
+Types:Artifact
+
+A:AB$ PutCounter | Cost$ T Sac<1/Snake> | ValidTgts$ Permanent,Player | TgtPrompt$ Select target player or permanent | CounterType$ ExistingCounter | CounterNum$ 1 | OptionalDecider$ You | SpellDescription$ Choose a counter on target permanent or player. You may give that permanent or player another counter of that kind.
+
+Oracle:{T}, Sacrifice a Snake: Choose a counter on target permanent or player. You may give that permanent or player another counter of that kind.
+
+DeckNeeds:Type$Snake & Ability$Counters
+AI:RemoveDeck:All

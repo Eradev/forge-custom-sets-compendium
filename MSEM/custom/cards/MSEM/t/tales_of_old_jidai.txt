@@ -1,0 +1,7 @@
+Name:Tales of Old Jidai
+ManaCost:1 U U
+Types:Instant
+
+A:SP$ Draw | NumCards$ 2 | SpellDescription$ Draws two cards.
+
+Oracle:Draws two cards.

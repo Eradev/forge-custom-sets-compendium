@@ -1,0 +1,11 @@
+Name:Blade of Mautakesh
+ManaCost:1 G G
+Types:Creature Human Warrior
+PT:3/2
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When this creature enters, creatures you control gain poisonous 1 until end of turn. (Whenever those creatures deal combat damage to a player, that player gets a poison counter. Multiple instances of poisonous trigger separately.)
+SVar:TrigPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | KW$ Poisonous:1
+
+Oracle:Flash\nWhen this creature enters, creatures you control gain poisonous 1 until end of turn. (Whenever those creatures deal combat damage to a player, that player gets a poison counter. Multiple instances of poisonous trigger separately.)

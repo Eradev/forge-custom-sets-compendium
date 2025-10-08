@@ -1,0 +1,11 @@
+Name:Perilous Passage
+ManaCost:no cost
+Types:Land
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Destroy | Cost$ 1 T Sac<1/CARDNAME/this land> | ValidTgts$ Land.nonBasic | TgtPrompt$ Select target nonbasic land. | CheckSVar$ X | SVarCompare$ GE4 | AILogic$ LandForLand | SpellDescription$ Destroy target nonbasic land. Activate only if an opponent controls four or more lands.
+SVar:X:PlayerCountOpponents$HighestValid Land.YouCtrl
+
+Oracle:{T}: Add {C}.\n{1}, {T}, Sacrifice this land: Destroy target nonbasic land. Activate only if an opponent controls four or more lands.
+
+AI:RemoveDeck:Random

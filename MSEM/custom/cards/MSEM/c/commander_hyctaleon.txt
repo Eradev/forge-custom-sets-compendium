@@ -1,0 +1,13 @@
+Name:Commander Hyctaleon
+ManaCost:2 W W
+Types:Legendary Creature Human Soldier
+PT:4/4
+
+K:Lifelink
+
+K:Partner:Imperator Valtasius
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigReturn | TriggerDescription$ At the beginning of your upkeep, return target Soldier card from your graveyard to your hand.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Soldier.YouCtrl | TgtPrompt$ Select target Soldier card in your graveyard
+
+Oracle:Lifelink\nPartner with Imperator Valtasius (When this creature enters, target player may put Imperator Valtasius into their hand from their library, then shuffle.)\nAt the beginning of your upkeep, return target Soldier card from your graveyard to your hand.

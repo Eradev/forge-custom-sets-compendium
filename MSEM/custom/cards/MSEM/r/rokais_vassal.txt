@@ -1,0 +1,10 @@
+Name:Rokai's Vassal
+ManaCost:U
+Types:Creature Human Wizard
+PT:1/1
+
+S:Mode$ Continuous | Affected$ Creature.Legendary+YouCtrl | AddKeyword$ Hexproof | Description$ Legendary creatures you control have hexproof.
+
+Oracle:Legendary creatures you control have hexproof.
+
+DeckNeeds:Type$Legendary & Type$Creature

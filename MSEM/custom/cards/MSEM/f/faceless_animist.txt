@@ -1,0 +1,9 @@
+Name:Faceless Animist
+ManaCost:3
+Types:Creature Spirit Wizard
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigChange | OptionalDecider$ You | TriggerDescription$ When this creature dies, you may return another colorless card from your graveyard to your hand.
+SVar:TrigChange:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | TgtPrompt$ Choose target colorless card in your graveyard | ValidTgts$ Card.Colorless+Other | TargetsWithDefinedController$ TriggeredCardController
+
+Oracle:When this creature dies, you may return another colorless card from your graveyard to your hand.
