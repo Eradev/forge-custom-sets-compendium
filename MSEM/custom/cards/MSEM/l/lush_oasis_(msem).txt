@@ -1,4 +1,4 @@
-Name:Lush Oasis
+Name:Lush Oasis (MSEM)
 ManaCost:no cost
 Types:Land Forest Island
 
