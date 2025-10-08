@@ -7,18 +7,18 @@ Booster=7 Common, 5 Uncommon, 2 RareMythic
 
 [cards]
 1 C Courier Eagle @Gaudi Buendia
-2 C Ephemeral Support @Jesper Ejsing
+2 U Ephemeral Support @Jesper Ejsing
 3 C Evanescier Priest @silentfuneral
 4 C Flickercloak @Gaudi Buendia
-5 C Hold Fast @faustsketcher
+5 U Hold Fast @faustsketcher
 6 C Insightful Blow @forgottenpantaloons
 7 M Liguno, Who Transcends All @Director-16
-8 C Moonshadow Remnant @ladywinde
+8 U Moonshadow Remnant @ladywinde
 9 R Orzhov Benefactor @LordHannu
 10a C Patient Ascetic @snatti89
 11 C Phantasmal Samaritan @fightingfailure
 12 C Solar Wisp @rob-powell
-13 C Stalked Healer @Katchoute
+13 U Stalked Healer @Katchoute
 14 R Strive for the Heavens @yuumei
 15 R Swell of Birth @Cindiq
 16 C Wehre-District Patrollers @Jb Casacop
@@ -26,56 +26,56 @@ Booster=7 Common, 5 Uncommon, 2 RareMythic
 18a C Danawan Wanderer @BlackJack0919
 19 R Fleeting Memory @Lavah
 20 R Flood of Information @Art-Kombinat
-21 C Fractal Findings @ohmybug
+21 U Fractal Findings @ohmybug
 22 C Highspire Informant @RuaCharl
-23a C Horizon Gazer @Martith
-24 C Kofe-District Scholar @yuumei
+23a U Horizon Gazer @Martith
+24 U Kofe-District Scholar @yuumei
 25 C Lifeshell Crab @JusticeVonBrandt
 26 R Living Antimagic @Aaron Miller
 27 C Paralyzing Ennui @inthesweetmadness
-28 C Precursors' Disdain @Earl-Graey
+28 U Precursors' Disdain @Earl-Graey
 29 C Reclusive Mermaid @kasho
 30 M Remy, Last of Evanescier @Nyanfood
 31 C Still the Pandemonium @VladMRK
 32 C Wheat from Chaff @AmandineVanRay
 33a R Callous Ritualist @Solfour
-34 C Choking Despair @Gericho Agonoy
-35 C Chronic Traitor @Yin Yuming
+34 U Choking Despair @Gericho Agonoy
+35 U Chronic Traitor @Yin Yuming
 36 C Creeping Terror @3abden
 37 R Dead of Night @Hellien
 38 C Deformed Vagrant @NanFe
 39 C Foul Drifter @asawaki
 40 C Gnuge-District Hoarder @whispwill
 41 C Kanlan Marauders @Multiimage
-42 C Lifecraft Aberration @Robotpencil
+42 U Lifecraft Aberration @Robotpencil
 43 C Mongrel of Grenoui Hill @SinnedWolf
 44 C Past Unresolved @Mojotaian
 45 C Revenge of the Disfigured @TitikAwalCreative
 46 M Saljan, Lord of the Disfigured @cobaltplasma
-47 C Secrets Unearthed @Blood-Of-A-Pirate
+47 U Secrets Unearthed @Blood-Of-A-Pirate
 48 R Stay Determined @Talventuoja
 49a C Bundan Firebrand @conorburkeart
 50 C Burned-Mind Seer @engelszorn
 51 C Dancing Flames @Ravietta
-52 C Descent of the Stars @Benedick Bana
+52 U Descent of the Stars @Benedick Bana
 53 C Distant Thunder @theon07
 54 C Emberling @Ishutani
 55 C Hollow Hooligan @VoydKessler
-56a C Leyline Tracer @Bob Kehl
+56a U Leyline Tracer @Bob Kehl
 57 R Mass Pandemonium @Slaine69
 58 C Miede-District Alchemist @yuumei
-59 C Miede-District Enforcer @Brother-Ostavia
+59 U Miede-District Enforcer @Brother-Ostavia
 60 R Rakdos Drakeswarm @DreadJim
 61 C Split-Second Decision @maxetormer
 62 R Tears of Samang @Nerkin
 63 M Thomar, Fearbringer @erebus-odora
-64 C Torches Raised @gerezon
+64 U Torches Raised @gerezon
 65 C Agent of Vitu-Ghazi @Conceptopolis
-66 C Breaking News @njay
+66 U Breaking News @njay
 67 C Essence of Nurture @Peter Mohrbacher
-68 C Evanescier Greypelt @deskridge
+68 U Evanescier Greypelt @deskridge
 69 C Fertile Soil @Bonka-chan
-70 C Grete-District Hermit @ryky
+70 U Grete-District Hermit @ryky
 71 C Grete-District Strider @Ka-Wo
 72 R Guardian's Resolve @GloomyLavv
 73a C Kin of the Rainforest @real4fantasy
@@ -85,21 +85,21 @@ Booster=7 Common, 5 Uncommon, 2 RareMythic
 77 C Mystic's Mantle @Sickbrush
 78 C Punan Mammoth @deskridge
 79a R Savants of the Ley @Dmitry Burmak
-80 C Vitality Unbridled @Syntetyc
+80 U Vitality Unbridled @Syntetyc
 81 R Anguished Unmaking @Mojotaian
 82 R Bestial Mob @Suzanne Helmigh
-83 C Blood Fugue @HeliacWolf
+83 U Blood Fugue @HeliacWolf
 84 R Embrace Samang @Movco
 85 R Helix Entity @Naiyus
-86 C Lost in Fugue @HeliacWolf
+86 U Lost in Fugue @HeliacWolf
 87 R Reform Reality @tatasz
 88 M Rheila Rachy @mad1984
-89 C Sanctuary for the Forsaken @AyameFataru
-90 C Thomar's Sowing @delira
-91 C Threshold Guardian @Tekamza
-92 C Boneforged Arms @DiegooCunha
-93 C Doctored Trail @emilieleger
-94 C Looking Glass @Marzzaret
+89 U Sanctuary for the Forsaken @AyameFataru
+90 U Thomar's Sowing @delira
+91 U Threshold Guardian @Tekamza
+92 U Boneforged Arms @DiegooCunha
+93 U Doctored Trail @emilieleger
+94 U Looking Glass @Marzzaret
 95 M Skull of the World @Artozi
 96 R Abandoned Forge @NukeDan
 97 R Abandoned Hideout @VityaR83
