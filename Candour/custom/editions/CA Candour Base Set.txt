@@ -42,7 +42,7 @@ Type=Custom
 35 U Dormant Chromeseed @Sandara Tang
 36 R Scenic Detour @Sandara Tang
 37 R Lightrender Archon @Sandara Tang
-38 R Young Animator @Sandara Tang
+38 R Lithomancer's Talent @Bryan F. Rosado
 39 U Duskpine Cultivation @Sandara Tang
 40 U Duskwing Glider @Sandara Tang
 41 M Basri, Oketra's Faithful @Wilson Nugraha
@@ -54,7 +54,7 @@ Type=Custom
 47 R Angelic Wrath @Andreas Huang
 48 M Alabaster Equipoise @Evyn Fong
 49 M Thalia, Steadfast Cathar @Mark Henry Bustamante
-50 U Havengul Splicer @Jeremy Carver
+50 M Linvala, Warden of Stability @Asur Misoa
 51 U Maddening Revelation @Carl Van Laguun
 52 U Fleeting Rootwalla @Guillermo Redongo
 53 U Seeker of Secrets @Steve Argyle
@@ -149,7 +149,11 @@ Type=Custom
 142 U Grave Trawler @Oleg Kapustin
 143 R Erudition Dissolution @Nick Moskvin
 144 R Oblivion Confluence @Timi Honkanen
-# 145-150
+145 R Putrid Regent @Matt Cowdery
+146 R Necromancer's Talent @Charin Makkawiman
+147 M Coldhearted Ballad @Wylie Beckert
+148 R Inquisition of the Pit @Gezi
+# 149-150
 151 U Spellbomb Detonation @Romain Kurdi
 152 U Glitterfowl Curio @Valentin Gloaguen & Alessandro Poli
 153 U Shattering Blast @Melissa Spandri
@@ -178,7 +182,14 @@ Type=Custom
 176 R Collected Construction @Biagio D'Alessandro
 177 R Astral Wish @Sandara Tang
 178 U Stimulated Eruption @Sandara Tang
-# 179-200
+# 179
+180 R Overcurrent @Dominik Mayer
+181 R Zo-Zu, Punisher of Progress @WiffyLeCrabe
+182 U Hellmane Lion @Mariah Tekulve
+183 R Fool's Errand @Konstantin Turovec
+184 U Reckless Conflagration @Peter Lee
+185 R Hellfire @Nia Kovalevski
+# 186-200
 201 M Nissa, Unbound Animist @Romain Kurdi
 202 U Nissa's Binding @Simon Marczyk
 203 U Crystalline Petroglyph @Anna Podedworna
@@ -206,7 +217,9 @@ Type=Custom
 225 R T'ranta, Baloth Tamer @Jeremy Carver
 226 M Animar, Heart of the World @Peter Mohrbracher
 227 M Kamahl, Krosan Lorekeeper @Edgar Sánchez Hidalgo
-# 228-250
+228 R Automated Wanderer @Jeremy Carver
+229 U Argothian Caretaker @Frank Freire
+# 230-250
 251 R Waterlogged Archipelago @Anthony Avon
 252 R Contaminated Rivulet @Anthony Avon
 253 R Sanguinary Morass @Anthony Avon
@@ -226,7 +239,7 @@ Type=Custom
 284 R Botanical Behemoth @Timi Honkanen
 285 R Menagerie Caretaker @Sandara Tang
 286 R Mindrake Trawler @Diane Franco
-287 R Emergent Penmanship @Sandara Tang
+287 R Sorcerer's Folly @Wylie Beckert
 288 R Gilt-Leaf Slasher @Aldo Domínguez
 289 R Resplendent Chargers @Dominik Mayer
 290 R Terramancy @Alex Petruk
