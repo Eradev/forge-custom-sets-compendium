@@ -1,0 +1,17 @@
+Name:Welcoming Virtuoso
+ManaCost:W
+Types:Creature Cat Cleric
+PT:1/2
+
+K:Level up:1
+
+S:Mode$ Continuous | Affected$ Card.Self | SetPower$ 2 | SetToughness$ 3 | IsPresent$ Card.Self+counters_GE1_LEVEL+counters_LE4_LEVEL | PresentCompare$ EQ1 | AddTrigger$ TrigLowPowDraw | Description$ LEVEL 1-4 2/3 Whenever one or more other creatures you control with power 2 or less enter, draw a card. This ability triggers only once each turn.
+SVar:TrigLowPowDraw:Mode$ ChangesZoneAll | ValidCards$ Creature.powerLE2+YouCtrl+Other | Destination$ Battlefield | TriggerZones$ Battlefield | ActivationLimit$ 1 | Execute$ DBDraw | TriggerDescription$ Whenever one or more other creatures you control with power 2 or less enter, draw a card.
+SVar:DBDraw:DB$ Draw
+
+S:Mode$ Continuous | Affected$ Card.Self | SetPower$ 4 | SetToughness$ 4 | IsPresent$ Card.Self+counters_GE5_LEVEL | PresentCompare$ EQ1 | AddTrigger$ TrigLowPowDrawUnlimited | Description$ LEVEL 5+ 4/4 Whenever one or more other creatures you control with power 2 or less enter, draw a card.
+SVar:TrigLowPowDrawUnlimited:Mode$ ChangesZoneAll | ValidCards$ Creature.powerLE2+YouCtrl+Other | Destination$ Battlefield | TriggerZones$ Battlefield | Execute$ DBDraw | TriggerDescription$ Whenever one or more other creatures you control with power 2 or less enter, draw a card.
+
+Oracle:Level up {1} ({1}: Put a level counter on this. Level up only as a sorcery.)\nLEVEL 1-4\n3/3\nWhenever one or more other creatures you control with power 2 or less enter, draw a card. This ability triggers only once each turn.\nLEVEL 5+\n4/4\nWhenever one or more other creatures you control with power 2 or less enter, draw a card.
+
+SVar:maxLevel:5
