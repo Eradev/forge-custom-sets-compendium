@@ -1,0 +1,11 @@
+Name:Clightos, Mystic Peak
+ManaCost:no cost
+Types:Legendary Land
+A:AB$ Mana | Cost$ T | Produced$ W | SpellDescription$ Add {W}.
+
+A:AB$ PutCounter | PrecostDesc$ Channel — | Cost$ 2 W Discard<1/CARDNAME/this card> | ActivationZone$ Hand | ValidTgts$ Creature | TgtPrompt$ Select target creature | CounterType$ P1P1 | CounterNum$ 2 | SpellDescription$ Put two +1/+1 counters on target creature. It gains vigilance, trample, lifelink, and indestructible until end of turn. | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | Defined$ Targeted | KW$ Vigilance & Trample & Lifelink & Indestructible | StackDescription$ SpellDescription | SpellDescription$ It gains vigilance, trample, lifelink, and indestructible until end of turn.
+
+Oracle:{T}: Add {W}.\nChannel — {2}{W}, Discard this card: Put two +1/+1 counters on target creature. It gains vigilance, trample, lifelink, and indestructible until end of turn.
+
+DeckHas:Ability$Discard|Counters
