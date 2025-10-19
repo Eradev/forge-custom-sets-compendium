@@ -1,0 +1,15 @@
+Name:Sanctity
+ManaCost:2 W W
+Types:Creature Elemental Incarnation
+PT:3/3
+
+K:Lifelink
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChange | TriggerDescription$ When this creature enters, return target creature with mana value 3 or less from your graveyard to the battlefield.
+SVar:TrigChange:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | TgtPrompt$ Choose target creature card with mana value 3 or less in your graveyard | ValidTgts$ Creature.cmcLE3 | TargetsWithDefinedController$ TriggeredCardController
+
+K:Evoke:ExileFromHand<1/Card.White+Other/white card>
+
+Oracle:Lifelink\nWhen this creature enters, return target creature card with mana value 3 or less from your graveyard to the battlefield.\nEvoke—Exile a white card from your hand.
+
+DeckHints:Ability$Graveyard
