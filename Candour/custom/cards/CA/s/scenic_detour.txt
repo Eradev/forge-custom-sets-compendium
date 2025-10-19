@@ -1,0 +1,9 @@
+Name:Scenic Detour
+ManaCost:X 1 W
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Library | LibraryPosition$ X | SubAbility$ DBDraw | SpellDescription$ Put target creature into its owner's library just beneath the top X cards of that library. Draw a card.
+SVar:DBDraw:DB$ Draw
+SVar:X:Count$xPaid
+
+Oracle:Put target creature into its owner's library just beneath the top X cards of that library.\nDraw a card.
