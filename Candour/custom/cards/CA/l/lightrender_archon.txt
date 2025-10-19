@@ -1,0 +1,18 @@
+Name:Lightrender Archon
+ManaCost:2 W
+Types:Creature Archon
+PT:3/3
+
+K:Flying
+
+R:Event$ Moved | ActiveZones$ Battlefield | Destination$ Graveyard | ValidCard$ Card | ReplaceWith$ Exile | Description$ If a card or token would be put into a graveyard from anywhere, exile it instead.
+SVar:Exile:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Exile | Defined$ ReplacedCard
+
+S:Mode$ CantPayLife | ValidPlayer$ Player | ValidCause$ Spell,Activated | ForCost$ True | Description$ Players can't pay life, sacrifice permanents, or discard cards to cast spells or activate abilities.
+S:Mode$ CantSacrifice | ValidCard$ Permanent | ValidCause$ Spell,Activated | ForCost$ True | Secondary$ True | Description$ Players can't pay life, sacrifice permanents, or discard cards to cast spells or activate abilities.
+S:Mode$ CantDiscard | ValidPlayer$ Player | ValidCause$ Spell,Activated | ForCost$ True | Secondary$ True | Description$ Players can't pay life, sacrifice permanents, or discard cards to cast spells or activate abilities.
+
+Oracle:Flying\nIf a card or token would be put into a graveyard from anywhere, exile it instead.\nPlayers can't pay life, sacrifice permanents, or discard cards to cast spells or activate abilities.
+
+SVar:NonStackingEffect:True
+AI:RemoveDeck:All
