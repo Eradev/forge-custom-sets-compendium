@@ -43,7 +43,7 @@ Type=Custom
 36 R Scenic Detour @Sandara Tang
 37 R Lightrender Archon @Sandara Tang
 38 R Lithomancer's Talent @Bryan F. Rosado
-39 U Duskpine Cultivation @Sandara Tang
+39 U Duskspine Cultivation @Sandara Tang
 40 U Duskwing Glider @Sandara Tang
 41 M Basri, Oketra's Faithful @Wilson Nugraha
 42 R Clightos, Mystic Peak @Anthony Avon
