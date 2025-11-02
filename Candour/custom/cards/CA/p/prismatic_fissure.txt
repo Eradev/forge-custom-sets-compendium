@@ -1,0 +1,9 @@
+Name:Prismatic Fissure
+ManaCost:X U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | UnlessCost$ Y | PrecostDesc$ Converge — | SpellDescription$ Counter target spell unless its controller pays {1} for each color of mana spent to cast this spell.
+SVar:X:Count$xPaid
+SVar:Y:Count$Converge
+
+Oracle:Converge — Counter target spell unless its controller pays {1} for each color of mana spent to cast this spell.
