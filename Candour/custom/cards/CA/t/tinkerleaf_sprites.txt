@@ -9,6 +9,6 @@ K:Flying
 
 K:Lifelink
 
-A:AB$ Token | Cost$ 2 W ExileFromGrave<1/CARDNAME/yhis card> | ActivationZone$ Graveyard | TokenAmount$ 2 | TokenScript$ w_1_1_a_faerie_flying_lifelink | SpellDescription$ Create two 1/1 white Faerie artifact creature tokens with flying and lifelink.
+A:AB$ Token | Cost$ 2 W ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | TokenAmount$ 2 | TokenScript$ w_1_1_a_faerie_flying_lifelink | SpellDescription$ Create two 1/1 white Faerie artifact creature tokens with flying and lifelink.
 
 Oracle:Flash\nFlying, lifelink\n{2}{W}, Exile this card from your graveyard: Create two 1/1 white Faerie artifact creature tokens with flying and lifelink.
