@@ -8,7 +8,7 @@ S:Mode$ MustAttack | ValidCreature$ Creature.Other | Secondary$ True
 
 S:Mode$ Continuous | AffectedZone$ Hand | Affected$ Card.nonLand+YouOwn | AddTrigger$ TrigParanoia | AddSVar$ PayParanoia4 | Description$ Nonland cards in your hand have paranoia {4}. (The owner of a card with paranoia {4} may cast it from their hand for {4} when a permanent they control leaves the battlefield.)
 SVar:TrigParanoia:Mode$ ChangesZone | TriggerZones$ Hand | ValidCard$ Permanent.YouCtrl | Origin$ Battlefield | Destination$ Any | Execute$ PayParanoia4 | TriggerDescription$ Paranoia — {4} (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)
-SVar:PayParanoia4:DB$ Play | PlayCost$ 4 | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
+SVar:PayParanoia4:DB$ Play | Named$ Paranoia | PlayCost$ 4 | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
 
 Oracle:Other creatures have haste and attack each combat if able.\nNonland cards in your hand have paranoia {4}. (The owner of a card with paranoia {4} may cast it from their hand for {4} when a permanent they control leaves the battlefield.)
 
