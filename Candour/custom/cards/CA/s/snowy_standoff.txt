@@ -1,0 +1,14 @@
+Name:Snowy Standoff
+ManaCost:W
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Creature.attacking,Creature.blocking | TgtPrompt$ Select target creature | NumDmg$ 3 | RememberTargets$ True | SpellDescription$ CARDNAME deals 3 damage to target creature. If that creature would die this turn, exile it instead.
+
+R:Event$ Moved | ValidLKI$ Creature.IsRemembered | Origin$ Battlefield | Destination$ Graveyard | ReplaceWith$ Exile | Description$ If this creature would die this turn, exile it and create a Food token instead.
+SVar:Exile:DB$ ChangeZone | Defined$ ReplacedCard | Origin$ Battlefield | Destination$ Exile | SubAbility$ MakeFood
+SVar:MakeFood:DB$ Token | TokenAmount$ 1 | TokenScript$ c_a_food_sac | TokenOwner$ You | SubAbility$ DBCleanup
+
+T:Mode$ Phase | Phase$ Cleanup | Execute$ DBCleanup | Static$ True
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Snowy Standoff deals 3 damage to target attacking or blocking creature. If that creature would die this turn, exile it and create a Food token instead.
