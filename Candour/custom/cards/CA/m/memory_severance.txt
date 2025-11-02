@@ -1,0 +1,10 @@
+Name:Memory Severance
+ManaCost:U
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigSurveil | TriggerDescription$ At the beginning of your upkeep, surveil 1.
+SVar:TrigSurveil:DB$ Surveil
+
+A:AB$ ChangeZone | Cost$ 2 U Sac<1/CARDNAME/this enchantment> | Origin$ Graveyard | Destination$ Hand | TgtPrompt$ Choose target instant or sorcery card in your graveyard | ValidTgts$ Instant.YouCtrl,Sorcery.YouCtrl | SpellDescription$ Return target instant or sorcery card from your graveyard to your hand.
+
+Oracle:At the beginning of your upkeep, surveil 1.\n{2}{U}, Sacrifice this enchantment: Return target instant or sorcery card from your graveyard to your hand.
