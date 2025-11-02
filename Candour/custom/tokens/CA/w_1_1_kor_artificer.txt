@@ -1,0 +1,6 @@
+Name:Kor Artificer Token
+ManaCost:no cost
+Colors:white
+Types:Creature Kor Artificer
+PT:1/1
+Oracle:
