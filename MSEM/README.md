@@ -32,7 +32,9 @@ Video Horror System (VHS)             -  95% (82/86)
     * Snowfield Doppelganger
     * Wiretapper
     * Mr. Jackston, the Proprietor
-Kaleidoscope (KLC)                    - 100% (108/108)
+Kaleidoscope (KLC)                    -  99% (107/108)
+  Missing cards:
+    * Tears of Samang
 Path of Shadows (PSA)                 -  35% (76/214)
 A Tourney at Whiterun (TWR)           -  11% (32/269)
 Tides of War (TOW)                    -  28% (77/271)
