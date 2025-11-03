@@ -7,8 +7,8 @@ SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ U | SpellDescription$ Add {U}.
 
-A:AB$ Animate | Cost$ U U | CheckSVar$ Horrific | SVarCompare$ GE1 | Defined$ Self | Power$ 2 | Toughness$ 2 | Types$ Creature,Horror | RemoveTypes$ Land | staticAbilities$ CantBeBlockedBy | SpellDescription$ Until end of turn, this land becomes a 2/2 Horror creature that can't be blocked. Activate only if you're horrific.
+A:AB$ Animate | Cost$ U U | CheckSVar$ Horrific | SVarCompare$ GE1 | Defined$ Self | Power$ 2 | Toughness$ 2 | Types$ Creature,Horror | RemoveTypes$ Land | staticAbilities$ CantBeBlockedBy | SpellDescription$ Until end of turn, this land becomes a 2/2 Horror creature that can't be blocked. Activate only if you're horrific. (You're horrific as long as you've sacrificed a permanent or discarded a card this turn.)
 SVar:CantBeBlockedBy:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | Description$ This creature can't be blocked.
 SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
 
-Oracle:This land enters tapped.\n{T}: Add {U}.\n{U}{U}: Until end of turn, this land becomes a 2/2 Horror creature that can't be blocked. Activate only if you're horrific.
+Oracle:This land enters tapped.\n{T}: Add {U}.\n{U}{U}: Until end of turn, this land becomes a 2/2 Horror creature that can't be blocked. Activate only if you're horrific. (You're horrific as long as you've sacrificed a permanent or discarded a card this turn.)
