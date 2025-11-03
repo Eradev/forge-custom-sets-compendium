@@ -33,7 +33,7 @@ Video Horror System (VHS)             -  95% (82/86)
     * Wiretapper
     * Mr. Jackston, the Proprietor
 Kaleidoscope (KLC)                    -  100% (108/108)
-Path of Shadows (PSA)                 -  35% (76/214)
+Path of Shadows (PSA)                 -  44% (96/214)
 A Tourney at Whiterun (TWR)           -  11% (32/269)
 Tides of War (TOW)                    -  28% (77/271)
 Pyramids of Atuum (POA)               -  50% (64/128)
