@@ -1,0 +1,7 @@
+Name:Awoken Nightmares
+ManaCost:B
+Types:Sorcery
+
+A:SP$ ChangeZone | ValidTgts$ Opponent | TgtPrompt$ Select target opponent | DefinedPlayer$ Targeted | Origin$ Hand | Destination$ Library | NoReveal$ True | Shuffle$ True | ChangeType$ Card | StackDescription$ SpellDescription | SpellDescription$ Target opponent shuffles a card from their hand into their library.
+
+Oracle:Target opponent shuffles a card from their hand into their library.
