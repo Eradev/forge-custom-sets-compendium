@@ -1,0 +1,12 @@
+Name:Tranquil Brightblade
+ManaCost:1 W
+Types:Creature Cat Cleric
+PT:3/1
+
+K:Vigilance
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this creature enters, draw a card. Then discard a card unless you control an artifact.
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | NumCards$ 1 | Mode$ TgtChoose | ConditionPresent$ Artifact.YouCtrl | ConditionCompare$ EQ0
+
+Oracle:Vigilance\nWhen this creature enters, draw a card. Then discard a card unless you control an artifact.

@@ -1,0 +1,14 @@
+Name:Herald of Sovereignty
+ManaCost:6 W W
+Types:Creature Angel
+PT:6/6
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChooseCards | TriggerDescription$ Whenever this creature enters or attacks, each opponent chooses a permanent they control of each permanent type and sacrifices them.
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigChooseCards | TriggerZones$ Battlefield | Secondary$ True | TriggerDescription$ Whenever this creature enters or attacks, each opponent chooses a permanent they control of each permanent type and sacrifices them.
+SVar:TrigChooseCards:DB$ ChooseCard | Defined$ Opponent | Choices$ Permanent | ChooseEach$ Artifact & Battle & Creature & Enchantment & Land & Planeswalker | ControlledByPlayer$ Chooser | Mandatory$ True | Reveal$ True | SubAbility$ SacAllChosen
+SVar:SacAllChosen:DB$ SacrificeAll | ValidCards$ Permanent.ChosenCardStrict | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
+
+Oracle:Flying\nWhenever this creature enters or attacks, each opponent chooses a permanent they control of each permanent type and sacrifices them.

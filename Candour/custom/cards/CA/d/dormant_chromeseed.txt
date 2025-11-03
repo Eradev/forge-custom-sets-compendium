@@ -1,0 +1,14 @@
+Name:Dormant Chromeseed
+ManaCost:1 W
+Types:Artifact
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChange | TriggerDescription$ When this artifact enters or leaves, return target creature with mana value 3 or less from your graveyard to the battlefield.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigChange | Secondary$ True | TriggerDescription$ When this artifact enters or leaves, return target creature with mana value 3 or less from your graveyard to the battlefield.
+SVar:TrigChange:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | TgtPrompt$ Choose target creature card with mana value 3 or less in your graveyard | ValidTgts$ Creature.cmcLE3 | TargetsWithDefinedController$ TriggeredCardController
+
+A:AB$ Draw | Cost$ 3 W Sac<1/CARDNAME/this artifact> | SpellDescription$ Draw a card.
+
+Oracle:When this artifact enters or leaves, return target creature card with mana value 3 or less from your graveyard to the battlefield.\n{3}{W}, Sacrifice this artifact: Draw a card.
+
+DeckNeeds:Ability$Graveyard
+DeckHints:Ability$Sacrifice

@@ -1,0 +1,14 @@
+Name:Basri, Oketra's Faithful
+ManaCost:3 W
+Types:Legendary Creature Human Warrior
+PT:4/2
+
+K:First Strike
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReturn | TriggerDescription$ When NICKNAME enters, return any number of target creature cards with total power 3 or less from your graveyard to the battlefield.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | TargetMin$ 0 | TargetMax$ X | ValidTgts$ Creature.YouOwn | MaxTotalTargetPower$ 3 | TgtPrompt$ Select any number of creature cards with total power 3 or less
+SVar:X:Count$ValidGraveyard Creature.YouOwn
+
+Oracle:First strike\nWhen Basri enters, return any number of target creature cards with total power 3 or less from your graveyard to the battlefield.
+
+DeckHints:Ability$Graveyard
