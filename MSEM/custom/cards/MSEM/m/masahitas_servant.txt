@@ -1,0 +1,11 @@
+Name:Masahita's Servant
+ManaCost:1 R
+Types:Creature Human Wizard
+PT:2/1
+
+A:AB$ Dig | Cost$ Sac<1/CARDNAME/this creature> | Defined$ You | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Exile the top card of your library. You may play it this turn.
+SVar:DBEffect:DB$ Effect | StaticAbilities$ STPlay | RememberObjects$ Remembered | ForgetOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | AffectedZone$ Exile | Affected$ Card.IsRemembered | MayPlay$ True | Description$ You may play that card this turn.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Sacrifice this creature: Exile the top card of your library. You may play that card this turn.
