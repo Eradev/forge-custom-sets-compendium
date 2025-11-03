@@ -1,0 +1,11 @@
+Name:Mua, Seishin Ascendant
+ManaCost:1
+Types:Legendary Creature Spirit Samurai
+PT:1/1
+
+A:AB$ PutCounter | Cost$ Sac<1/Creature.Colorless+Other> | CounterType$ P1P1 | CounterNum$ 1 | ValidTgts$ Creature | SpellDescription$ Sacrifice another colorless creature: Put a +1/+1 counter on target creature.
+
+Oracle:Sacrifice another colorless creature: Put a +1/+1 counter on target creature.
+
+DeckHints:Color$Colorless & Type$Creature
+DeckHas:Ability$Counters
