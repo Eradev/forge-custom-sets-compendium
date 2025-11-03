@@ -1,0 +1,11 @@
+Name:Voiceless Assailant
+ManaCost:2
+Types:Creature Spirit Samurai
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChange | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may search your library for up to three cards named CARDNAME, reveal them, put them into your hand, then shuffle.
+SVar:TrigChange:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Card.namedVoiceless Assailant | ChangeNum$ 3 | ShuffleNonMandatory$ True
+
+Oracle:When this creature enters, you may search your library for up to three cards named Voiceless Assailant, reveal them, put them into your hand, then shuffle.
+
+DeckHints:Name$Voiceless Assailant
