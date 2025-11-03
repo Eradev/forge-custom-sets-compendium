@@ -1,0 +1,9 @@
+Name:Kiboshi's Guardian
+ManaCost:1 W
+Types:Creature Human Samurai
+PT:2/2
+
+T:Mode$ SpellCast | ValidActivatingPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ DBPump | TriggerDescription$ Whenever an opponent casts a spell, this creature gains indestructible until end of turn.
+SVar:DBPump:DB$ Pump | Defined$ Self | KW$ Indestructible
+
+Oracle:Whenever an opponent casts a spell, this creature gains indestructible until end of turn.
