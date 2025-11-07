@@ -7,6 +7,6 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.S
 SVar:TrigMana:DB$ Mana | Produced$ R | Amount$ 3
 
 T:Mode$ ChangesZone | TriggerZones$ Hand | ValidCard$ Permanent.YouCtrl | Origin$ Battlefield | Destination$ Any | Execute$ PayParanoia | TriggerDescription$ Paranoia {1}{R} (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)
-SVar:PayParanoia:DB$ Play | PlayCost$ 1 R | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
+SVar:PayParanoia:DB$ Play | Named$ Paranoia | PlayCost$ 1 R | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
 
 Oracle:When this creature enters, add {R}{R}{R}.\nParanoia {1}{R} (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)

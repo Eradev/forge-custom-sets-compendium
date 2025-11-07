@@ -1,0 +1,15 @@
+Name:Chronic Traitor
+ManaCost:2 B
+Types:Creature Human Rogue
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSac | TriggerDescription$ When this creature enters, each player sacrifices a creature. If its paranoia cost was paid, each player sacrifices two creatures instead.
+SVar:TrigSac:DB$ Sacrifice | Defined$ Player | SacValid$ Creature | Amount$ X
+SVar:X:Count$FromNamedAbilityParanoia.2.1
+
+T:Mode$ ChangesZone | TriggerZones$ Hand | ValidCard$ Permanent.YouCtrl | Origin$ Battlefield | Destination$ Any | Execute$ PayParanoia | TriggerDescription$ Paranoia — {2}{B}{B}. (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)
+SVar:PayParanoia:DB$ Play | Named$ Paranoia | PlayCost$ 2 B B | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
+
+Oracle:When this creature enters, each player sacrifices a creature. If its paranoia cost was paid, each player sacrifices two creatures instead.\nParanoia—{2}{B}{B}. (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)
+
+SVar:NeedsToPlay:Creature.OppCtrl

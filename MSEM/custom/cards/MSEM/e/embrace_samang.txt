@@ -1,0 +1,16 @@
+Name:Embrace Samang
+ManaCost:1 G U
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPutCounter | TriggerDescription$ When this enchantment enters, put a charge counter on it for each color among permanents you control.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ CHARGE | CounterNum$ X
+SVar:X:Count$Valid Permanent.YouCtrl$Colors
+
+T:Mode$ Phase | Phase$ Main1 | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigRemoveCounter | TriggerDescription$ At the beginning of your first main phase, remove a charge counter from this enchantment. If you do, draw a card, then add one mana of any color.
+SVar:TrigRemoveCounter:DB$ RemoveCounter | CounterType$ CHARGE | CounterNum$ 1 | RememberRemoved$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | NumCards$ 1 | ConditionCheckSVar$ Y | ConditionSVarCompare$ GE1 | SubAbility$ DBGetMana
+SVar:DBGetMana:DB$ Mana | Produced$ Any | Amount$ 1 | ConditionCheckSVar$ Y | ConditionSVarCompare$ GE1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:Y:Count$RememberedSize
+
+Oracle:When this enchantment enters, put a charge counter on it for each color among permanents you control.\nAt the beginning of your first main phase, remove a charge counter from this enchantment. If you do, draw a card, then add one mana of any color.

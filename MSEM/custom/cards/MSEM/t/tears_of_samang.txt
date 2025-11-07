@@ -1,0 +1,14 @@
+Name:Tears of Samang
+ManaCost:2 R R
+Types:Sorcery
+
+A:SP$ DamageAll | NumDmg$ 3 | ValidCards$ Creature | SubAbility$ DBRepeatOpponents | DamageMap$ True | SpellDescription$ CARDNAME deals 3 damage to each creature and each player. If an opponent would be dealt damage this way, you may have CARDNAME deal 3 damage to a planeswalker they control instead.
+SVar:DBRepeatOpponents:DB$ RepeatEach | RepeatPlayers$ Opponent | RepeatSubAbility$ DBChooseCard | SubAbility$ DBDamageYou
+SVar:DBChooseCard:DB$ ChooseCard | Choices$ Planeswalker.ControlledBy Remembered | Amount$ 1 | SubAbility$ DBDamagePlayer
+SVar:DBDamagePlayer:DB$ DealDamage | Defined$ Remembered | NumDmg$ 3 | ConditionDefined$ ChosenCard | ConditionPresent$ Card | ConditionCompare$ EQ0 | SubAbility$ DBDamageChosen
+SVar:DBDamageChosen:DB$ DealDamage | Defined$ ChosenCard | NumDmg$ 3 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
+SVar:DBDamageYou:DB$ DealDamage | Defined$ You | NumDmg$ 3 | SubAbility$ DBDamageResolve
+SVar:DBDamageResolve:DB$ DamageResolve
+
+Oracle:Tears of Samang deals 3 damage to each creature and each player. If an opponent would be dealt damage this way, you may have Tears of Samang deal 3 damage to a planeswalker they control instead.

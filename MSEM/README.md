@@ -32,10 +32,7 @@ Video Horror System (VHS)             -  95% (82/86)
     * Snowfield Doppelganger
     * Wiretapper
     * Mr. Jackston, the Proprietor
-Kaleidoscope (KLC)                    -  98% (106/108)
-  Missing cards:
-    * Chronic Traitor: TODO Check for Paranoia paid
-    * Kofe-District Scholar: TODO Check for Paranoia paid
+Kaleidoscope (KLC)                    -  100% (108/108)
 Path of Shadows (PSA)                 -  35% (76/214)
 A Tourney at Whiterun (TWR)           -  11% (32/269)
 Tides of War (TOW)                    -  28% (77/271)
@@ -198,7 +195,7 @@ Implementation:
 
 ```text
 T:Mode$ ChangesZone | TriggerZones$ Hand | ValidCard$ Permanent.YouCtrl | Origin$ Battlefield | Destination$ Any | Execute$ PayParanoia | TriggerDescription$ Paranoia {G} (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)
-SVar:PayParanoia:DB$ Play | PlayCost$ G | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
+SVar:PayParanoia:DB$ Play | Named$ Paranoia | PlayCost$ G | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
@@ -242,3 +239,4 @@ SVar:DBLoseLifeFallback:DB$ LoseLife | Defined$ You | LifeAmount$ 3
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
+
