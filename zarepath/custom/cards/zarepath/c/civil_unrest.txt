@@ -2,8 +2,7 @@ Name:Civil Unrest
 ManaCost:1 R
 Types:Instant
 
-A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ 2 | RememberDamaged$ True | SubAbility$ DBPump
-SVar:DBPump:DB$ Pump | Defined$ Remembered.Creature | KW$ CARDNAME can't block. | SubAbility$ DBCleanup
-SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ 2 | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | Defined$ Targeted.Creature | KW$ HIDDEN CARDNAME can't block.
 
 Oracle:Civil Unrest deals 2 damage to any target. If a creature is dealt damage this way, it can't block this turn.
