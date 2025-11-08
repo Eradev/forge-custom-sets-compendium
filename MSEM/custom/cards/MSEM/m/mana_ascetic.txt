@@ -1,0 +1,8 @@
+Name:Mana Ascetic
+ManaCost:G
+Types:Creature Human Wizard
+PT:0/1
+
+A:AB$ Mana | Cost$ T | Produced$ Any | Amount$ 1 | SpellDescription$ Add one mana of any color.
+
+Oracle:{T}: Add one mana of any color.

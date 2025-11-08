@@ -1,0 +1,9 @@
+Name:Hinode Ranger
+ManaCost:1 G
+Types:Creature Human Archer Ranger
+PT:1/1
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigPutCounter | TriggerDescription$ Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, put a +1/+1 counter on it.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
+
+Oracle:Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, put a +1/+1 counter on it.

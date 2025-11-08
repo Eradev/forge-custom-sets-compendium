@@ -5,7 +5,7 @@ PT:2/2
 
 K:Hexproof
 
-T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigScry | IsPresent$ Card.Self+dealtDamageToOppThisTurn | TriggerDescription$ Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, scry 2. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigScry | TriggerDescription$ Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, scry 2. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)
 SVar:TrigScry:DB$ Scry | ScryNum$ 2
 
 Oracle:Hexproof\nArt of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, scry 2. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom of your library and the rest on top in any order.)

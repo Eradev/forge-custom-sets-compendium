@@ -1,0 +1,12 @@
+Name:Shadowstrider
+ManaCost:3
+Types:Creature Spirit Samurai
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature dies, create a 2/2 colorless Spirit creature token.
+SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ c_2_2_spirit | TokenOwner$ You
+
+Oracle:When this creature dies, create a 2/2 colorless Spirit creature token.
+
+SVar:SacMe:2
+DeckHas:Ability$Token

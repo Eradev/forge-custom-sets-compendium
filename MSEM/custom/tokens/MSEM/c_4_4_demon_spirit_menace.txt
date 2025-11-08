@@ -1,0 +1,9 @@
+Name:Demon Spirit Token
+ManaCost:no cost
+Colors:colorless
+Types:Creature Demon Spirit
+PT:4/4
+
+K:Menace
+
+Oracle:Menace

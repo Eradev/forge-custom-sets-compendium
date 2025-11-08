@@ -5,7 +5,7 @@ PT:2/1
 
 K:Prowess
 
-T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | Execute$ TrigPutCounter | IsPresent$ Card.Self+dealtDamageToOppThisTurn | TriggerDescription$ Art of war — At the beginning of each end step, if this creature dealt damage to an opponent this turn, put a +1/+1 counter on it.
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigPutCounter | TriggerDescription$ Art of war — At the beginning of each end step, if this creature dealt damage to an opponent this turn, put a +1/+1 counter on it.
 SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
 
-Oracle:Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nArt of war — At the beginning of each end step, if this creature dealt damage to an opponent this turn, put a +1/+1 counter on it.
+Oracle:Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nArt of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, put a +1/+1 counter on it.
