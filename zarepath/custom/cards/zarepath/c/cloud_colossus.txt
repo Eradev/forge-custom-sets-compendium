@@ -6,7 +6,7 @@ PT:6/6
 K:Flying
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigUntap | TriggerDescription$ When CARDNAME enters, untap each artifact you control.
-T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigUntap | TriggerDescription$ At the beginning of your end step, untap each artifact you control.
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigUntap | Secondary$ True | TriggerDescription$ At the beginning of your end step, untap each artifact you control.
 SVar:TrigUntap:DB$ UntapAll | ValidCards$ Artifact.YouCtrl
 
 Oracle:Flying\nWhen Cloud Colossus enters and at the beginning of your end step, untap each artifact you control.
