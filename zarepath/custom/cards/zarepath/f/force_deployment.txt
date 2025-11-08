@@ -2,8 +2,8 @@ Name:Force Deployment
 ManaCost:3 W
 Types:Sorcery
 
-A:SP$ Token | Cost$ 3 W | TokenAmount$ 3 | TokenScript$ w_1_1_soldier | TokenOwner$ You | SubAbility$ DBSkip | SpellDescription$ Create three 1/1 white Soldier creature tokens.
-SVar:DBSkip:DB$ SkipPhase | ValidTgts$ Player | TgtPrompt$ Select player to skip their next combat step | Phase$ Combat | ConditionCheckSVar$ X | ConditionSVarCompare$ GTY | SpellDescription$ Superiority — If you have more life than an opponent, target player skips their next combat phase.
+A:SP$ Token | TokenAmount$ 3 | TokenScript$ w_1_1_soldier | TokenOwner$ You | SubAbility$ DBSkip | SpellDescription$ Create three 1/1 white Soldier creature tokens.
+SVar:DBSkip:DB$ SkipPhase | ValidTgts$ Player | TgtPrompt$ Select player to skip their next combat step | Phase$ BeginCombat | ConditionCheckSVar$ X | ConditionSVarCompare$ GTY | SpellDescription$ Superiority — If you have more life than an opponent, target player skips their next combat phase.
 SVar:X:Count$YourLifeTotal
 SVar:Y:PlayerCountOpponents$LowestLifeTotal
 
