@@ -3,7 +3,7 @@ ManaCost:2 R
 Types:Enchantment
 
 T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigPump | TriggerDescription$ At the beginning of combat on your turn, you may choose at least three creatures you control that share no creature types among them. They each get +3/+0 and gain menace until end of turn.
-SVar:TrigPump:DB$ Pump | TargetMin$ 3 | TargetMax$ MaxTargets | ValidTgts$ Creature.YouCtrl+!sharesCreatureTypeWith Other | TargetsWithoutSameCreatureType$ True | TgtPrompt$ Select at least three target creatures you control that share no creature types | NumAtt$ 3 | KW$ Menace
+SVar:TrigPump:DB$ Pump | TargetMin$ 3 | TargetMax$ MaxTargets | ValidTgts$ Creature.YouCtrl | TargetsWithoutSameCreatureType$ True | TgtPrompt$ Select at least three target creatures you control that share no creature types | NumAtt$ 3 | KW$ Menace
 SVar:MaxTargets:Count$Valid Creature.YouCtrl
 
 Oracle:At the beginning of combat on your turn, you may choose at least three creatures you control that share no creature types among them. They each get +3/+0 and gain menace until end of turn.
