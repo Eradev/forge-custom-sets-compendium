@@ -9,7 +9,7 @@ R:Event$ GainLife | ActiveZones$ Battlefield | ValidPlayer$ You | ReplaceWith$ G
 SVar:GainDouble:DB$ ReplaceEffect | VarName$ LifeGained | VarValue$ X
 SVar:X:ReplaceCount$LifeGained/Twice
 
-S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 4 | AddToughness$ 4| CheckSVar$ Y | SVarCompare$ GEZ | Description$ As long as your life total is at least twice the life total of an opponent, CARDNAME gets +4/+4.
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 4 | AddToughness$ 4 | CheckSVar$ Y | SVarCompare$ GEZ | Description$ As long as your life total is at least twice the life total of an opponent, CARDNAME gets +4/+4.
 SVar:Y:Count$YourLifeTotal
 SVar:Z:PlayerCountOpponents$LowestLifeTotal/Twice
 
