@@ -1,6 +1,7 @@
 Name:Turf Killing
 ManaCost:4 B
 Types:Instant
+
 S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ 3 | EffectZone$ All | CheckSVar$ X | SVarCompare$ GTY | Description$ Superiority - This spell costs {3} less to cast if you have more life than an opponent. Target creature gets -4/-4 until end of turn.
 SVar:X:Count$YourLifeTotal
 SVar:Y:PlayerCountOpponents$LowestLifeTotal
