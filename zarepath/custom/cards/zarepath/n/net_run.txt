@@ -2,10 +2,10 @@ Name:Net Run
 ManaCost:1 U
 Types:Sorcery
 
-A:SP$ Animate | Cost$ 1 U | ValidTgts$ Creature | TgtPrompt$ Select target creature | Triggers$ NetRunDmg | sVars$ NetRunDraw | SubAbility$ DBDraw | SpellDescription$ Target creature gains "Whenever this creature deals combat damage to a player, draw a card." until end of turn. Draw a card.
-SVar:NetRunDmg:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Opponent | CombatDamage$ True | Execute$ NetRunDraw | TriggerDescription$ Whenever this creature deals combat damage to a player, draw a card.
-SVar:NetRunDraw:DB$ Draw | Defined$ You | NumCards$ 1
+A:SP$ Effect | ValidTgts$ Creature | TgtPrompt$ Select target creature | Triggers$ TrigDam | RememberObjects$ Targeted | SubAbility$ DBDraw | SpellDescription$ Until end of turn, whenever target creature deals combat damage to an opponent, draw a card.
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 1
 
-SVar:DBDraw:DB$Draw | Defined$ You | NumCards$ 1
+SVar:TrigDam:Mode$ DamageDone | ValidSource$ Creature.IsRemembered | ValidTarget$ Opponent | CombatDamage$ True | TriggerZones$ Command | Execute$ TrigDraw | TriggerDescription$ Whenever this creature deals combat damage to a player, draw a card.
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
 
 Oracle:Until end of turn, whenever target creature deals combat damage to an opponent, draw a card.\nDraw a card.
