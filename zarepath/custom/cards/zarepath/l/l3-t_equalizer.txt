@@ -6,12 +6,13 @@ Loyalty:4
 A:AB$ ImmediateTrigger | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Execute$ TrigGainLife | OptionalDecider$ You | SpellDescription$ You may have each player gain 3 life.
 SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 3 | Defined$ Player | SpellDescription$ You may have each player gain 3 life.
 
-A:AB$ Charm | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | Choices$ DBArtifact,DBCreature,DBEnchantment,DBPlaneswalker | SpellDescription$ Choose a permanent type other than land. Each player who controls the most permanents of that type sacrifices one of them.
+A:AB$ Charm | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | Choices$ DBArtifact,DBBattle,DBCreature,DBEnchantment,DBPlaneswalker | SpellDescription$ Choose a permanent type other than land. Each player who controls the most permanents of that type sacrifices one of them.
 SVar:DBArtifact:DB$ Sacrifice | Amount$ 1 | SacValid$ Artifact | Defined$ Player.withMostTypeArtifact | SpellDescription$ Artifact
+SVar:DBBattle:DB$ Sacrifice | Amount$ 1 | SacValid$ Battle | Defined$ Player.withMostTypeBattle | SpellDescription$ Battle
 SVar:DBCreature:DB$ Sacrifice | Amount$ 1 | SacValid$ Creature | Defined$ Player.withMostTypeCreature | SpellDescription$ Creature
 SVar:DBEnchantment:DB$ Sacrifice | Amount$ 1 | SacValid$ Enchantment | Defined$ Player.withMostTypeEnchantment | SpellDescription$ Enchantment
 SVar:DBPlaneswalker:DB$ Sacrifice | Amount$ 1 | SacValid$ Planeswalker | Defined$ Player.withMostTypePlaneswalker | SpellDescription$ Planeswalker
 
-A:AB$ Token | Cost$ SubCounter<7/LOYALTY> | TokenAmount$ 3 | TokenScript$ c_3_3_a_equalizer | TokenOwner$ You | Planeswalker$ True | SpellDescription$ Create three 3/3 colorless Construct artifact creature tokens named Equalizer with "Players can't cast more than one spell each turn." and "When this creature dies, each player draws a card."
+A:AB$ Token | Cost$ SubCounter<7/LOYALTY> | Planeswalker$ True | Ultimate$ True | TokenAmount$ 3 | TokenScript$ c_3_3_a_equalizer | TokenOwner$ You | SpellDescription$ Create three 3/3 colorless Construct artifact creature tokens named Equalizer with "Players can't cast more than one spell each turn." and "When this creature dies, each player draws a card."
 
-Oracle:[+1]: You may have each player gain 3 life.\n[−2]: Choose a permanent type other than land. Each player who controls the most permanents of that type sacrifices one of them.\n[−7]: Create three 3/3 colorless Construct artifact creature tokens named Equalizer with "Players can't cast more than one spell each turn." and "When this creature dies, each player draws a card."
+Oracle:[+1]: You may have each player gain 3 life.\n[-2]: Choose a permanent type other than land. Each player who controls the most permanents of that type sacrifices one of them.\n[-7]: Create three 3/3 colorless Construct artifact creature tokens named Equalizer with "Players can't cast more than one spell each turn." and "When this creature dies, each player draws a card."
