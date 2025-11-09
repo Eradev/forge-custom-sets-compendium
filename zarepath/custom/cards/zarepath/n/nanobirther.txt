@@ -6,4 +6,4 @@ PT:1/1
 T:Mode$ SpellCast | ValidCard$ Creature | ValidActivatingPlayer$ You | Execute$ TrigDBCopy | TriggerZones$ Battlefield | TriggerDescription$ Whenever you cast a creature spell, create a token that's a copy of CARDNAME.
 SVar:TrigDBCopy:DB$ CopyPermanent | Defined$ Self
 
-Oracle:Whenever you cast a creature spell, creatue a token that's a copy of Nanobirther.
+Oracle:Whenever you cast a creature spell, create a token that's a copy of Nanobirther.
