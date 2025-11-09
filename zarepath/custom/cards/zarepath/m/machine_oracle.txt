@@ -3,8 +3,7 @@ ManaCost:G
 Types:Artifact Creature Construct Advisor
 PT:2/1
 
-S:Mode$ Continuous | Affected$ Card.Self | AddAbility$ ManaTap | CheckSVar$ X | SVarCompare$ GTY | Description$ Superiority - {T}: Add one mana of any color. Activate this ability only if you have more life than an opponent.
-SVar:ManaTap:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
+A:AB$ Mana | Cost$ T | Produced$ Any | CheckSVar$ X | SVarCompare$ GTY | SpellDescription$ Superiority - Add one mana of any color. Activate this ability only if you have more life than an opponent.
 SVar:X:Count$YourLifeTotal
 SVar:Y:PlayerCountOpponents$LowestLifeTotal
 
