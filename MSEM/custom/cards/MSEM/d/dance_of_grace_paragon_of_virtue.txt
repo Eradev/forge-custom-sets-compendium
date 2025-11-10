@@ -1,0 +1,34 @@
+Name:Dance of Grace
+ManaCost:1 W
+Types:Instant
+
+K:Fabled
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 3 W | Description$ Fabled {3}{W} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
+
+A:SP$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | KW$ Indestructible | SubAbility$ DBScry | SpellDescription$ Target creature gains indestructible until end of turn. Scry 1.
+SVar:DBScry:DB$ Scry | ScryNum$ 1 | SubAbility$ DBTransform
+
+SVar:DBTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | AttachedTo$ Targeted | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1 | SpellDescription$ If CARDNAME's fabled cost was paid, put it onto the battlefield transformed attached to that creature.
+SVar:AltCostPaid:Count$AltCost.1.0
+
+Oracle:Target creature gains indestructible until end of turn. Scry 1.\nFabled {3}{W} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Paragon of Virtue
+ManaCost:no cost
+Colors:white
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 1 | AddToughness$ 1 | AddTrigger$ GainLifeTrigger | Description$ Enchanted creature gets +1/+1 and has "At the beginning of each end step, you gain 1 life."
+SVar:GainLifeTrigger:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | Execute$ TrigGainLife | TriggerDescription$ At the beginning of each end step, you gain 1 life.
+SVar:TrigGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 1 | Description$ At the beginning of each end step, you gain 1 life.
+
+Oracle:Enchant creature\nEnchanted creature gets +1/+1 and has "At the beginning of each end step, you gain 1 life."
+
+SVar:AttachAILogic:Pump
