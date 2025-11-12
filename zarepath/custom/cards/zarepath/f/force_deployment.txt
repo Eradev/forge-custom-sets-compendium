@@ -8,5 +8,3 @@ SVar:X:Count$YourLifeTotal
 SVar:Y:PlayerCountOpponents$LowestLifeTotal
 
 Oracle:Create three 1/1 white Soldier creature tokens.\nSuperiority — If you have more life than an opponent, target player skips their next combat phase.
-
-AI:RemoveDeck:All
