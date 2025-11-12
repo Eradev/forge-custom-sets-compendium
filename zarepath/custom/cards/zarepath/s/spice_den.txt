@@ -2,9 +2,9 @@ Name:Spice Den
 ManaCost:1 R
 Types:Enchantment
 
-S:Mode$ Continuous | Affected$ Creature.YouCtrl | AddAbility$ Rummage | Description$ Creatures you control have "{T},Discard a card: Draw a card."
+S:Mode$ Continuous | Affected$ Creature.YouCtrl | AddAbility$ Rummage | Description$ Creatures you control have "{T}, Discard a card: Draw a card."
 SVar:Rummage:AB$ Draw | Cost$ T Discard<1/Card> | NumCards$ 1 | SpellDescription$ Draw a card.
 
-Oracle:Creatures you control have "{T},Discard a card: Draw a card."
+Oracle:Creatures you control have "{T}, Discard a card: Draw a card."
 
 SVar:PlayMain1:TRUE
