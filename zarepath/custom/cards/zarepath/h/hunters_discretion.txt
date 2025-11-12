@@ -2,7 +2,7 @@ Name:Hunter's Discretion
 ManaCost:1 G
 Types:Instant
 
-A:SP$ Charm | Cost$ 1 G | Choices$ Fight,Untap | CharmNum$ 1
+A:SP$ Charm | Choices$ Fight,Untap | CharmNum$ 1
 SVar:Fight:DB$ Pump | ValidTgts$ Creature.YouCtrl | AILogic$ Fight | TgtPrompt$ Choose target creature you control | StackDescription$ None | SubAbility$ DBFight | SpellDescription$ Target creature you control fights target creature you don't control.
 SVar:DBFight:DB$ Fight | Defined$ ParentTarget | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Choose target creature you don't control
 SVar:Untap:DB$ Untap | ValidTgts$ Creature | TgtPrompt$ Choose target creature | SubAbility$ DBPump | SpellDescription$ Untap target creature. It gets +0/+4 and gains deathtouch until end of turn.
