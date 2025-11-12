@@ -2,7 +2,7 @@ Name:Strings of the Masquerade
 ManaCost:8 U B
 Types:Sorcery
 
-A:SP$ ControlPlayer | ValidTgts$ Player | TgtPrompt$ Select target player | SubAbility$ DBDelTrig | SpellDescription$ Target player takes another turn after this one. You control that player during their next two turns. Exile Strings of the Masquerade.
+A:SP$ ControlPlayer | ValidTgts$ Player | TgtPrompt$ Select target player | SubAbility$ DBDelTrig | SpellDescription$ Target player takes another turn after this one. You control that player during their next two turns. Exile CARDNAME.
 SVar:DBDelTrig:DB$ DelayedTrigger | Mode$ Phase | DelayedTriggerDefinedPlayer$ Targeted | RememberObjects$ Targeted | Phase$ Cleanup | Execute$ DBAddTurn | Static$ True | SubAbility$ DBExile
 SVar:DBAddTurn:DB$ AddTurn | Defined$ DelayTriggerRemembered | NumTurns$ 1 | SubAbility$ DBControl
 SVar:DBControl:DB$ ControlPlayer | Defined$ DelayTriggerRemembered
@@ -10,4 +10,5 @@ SVar:DBControl:DB$ ControlPlayer | Defined$ DelayTriggerRemembered
 SVar:DBExile:DB$ ChangeZone | Origin$ Stack | Destination$ Exile | StackDescription$ None
 
 Oracle:Target player takes another turn after this one. You control that player during their next two turns. Exile Strings of the Masquerade.
+
 
