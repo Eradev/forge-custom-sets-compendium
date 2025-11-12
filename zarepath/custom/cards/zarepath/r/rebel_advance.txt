@@ -10,4 +10,4 @@ SVar:Z:Count$Valid Creature.YouCtrl+inZoneBattlefield
 
 Oracle:Arm each creature you control. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.) They gain vigilance until end of turn.
 
-AI:RemoveDeck:Random
+SVar:PlayMain1:TRUE
