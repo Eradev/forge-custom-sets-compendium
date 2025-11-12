@@ -3,7 +3,7 @@ ManaCost:1 U
 Types:Legendary Creature Human Pirate
 PT:2/1
 
-S:Mode$ Continuous | Affected$ Creature.Other+YouCtrl+withoutInfiltrate | AddTrigger$ AttackerUnblockedOnce | AddKeyword$ Infiltrate | Description$ Other creatures you control have infiltrate.
+S:Mode$ Continuous | Affected$ Creature.Other+YouCtrl | AddTrigger$ AttackerUnblockedOnce | Description$ Other creatures you control have infiltrate.
 SVar:AttackerUnblockedOnce:Mode$ AttackerUnblockedOnce | ValidAttackingPlayer$ You | Execute$ TrigPump | TriggerZones$ Battlefield | TriggerDescription$ Infiltrate (Whenever one or more attacking creatures you control attack and aren't blocked, this creature gets +1/+1 until end of turn.)
 
 T:Mode$ AttackerUnblockedOnce | ValidAttackingPlayer$ You | Execute$ TrigPump | TriggerZones$ Battlefield | TriggerDescription$ Infiltrate (Whenever one or more attacking creatures you control aren't blocked, this creature gets +1/+1 until end of turn.)
