@@ -10,5 +10,4 @@ SVar:TrigToken:DB$ Token | TokenAmount$ 2 | TokenScript$ w_1_1_soldier | TokenOw
 
 Oracle:Renown 1 (When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned.)\nWhen this creature becomes renowned, create two 1/1 white Soldier creature tokens.
 
-DeckHas:Ability$Token
-DeckHas:Ability$Counters
+DeckHas:Ability$Token|Counters
