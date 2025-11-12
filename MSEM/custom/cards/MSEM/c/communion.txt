@@ -5,9 +5,9 @@ Types:Sorcery
 K:Rerun
 
 A:SP$ GainControl | ValidTgts$ Creature | TgtPrompt$ Select target creature | Untap$ True | AddKWs$ Haste | LoseControl$ EOT | SubAbility$ ExileSelf | SpellDescription$ Gain control of target creature until end of turn. Untap it. It gains haste until end of turn.
-SVar:ExileSelf:DB$ ChangeZone | Origin$ Stack | Destination$ Exile | ConditionDefined$ Self | ConditionPresent$ Card.wasCastFromYourHandByYou
+SVar:ExileSelf:DB$ ChangeZone | Origin$ Stack | Destination$ Exile | WithCountersType$ RERUN | ConditionDefined$ Self | ConditionPresent$ Card.wasCastFromYourHandByYou
 
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Exile | Execute$ CastRerun | TriggerDescription$ Rerun (If you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.)
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Exile | IsPresent$ Card.Self+counters_GE1_RERUN | PresentZone$ Exile | Execute$ CastRerun | TriggerDescription$ Rerun (If you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.)
 SVar:CastRerun:DB$ Play | Defined$ Self | Amount$ 1 | Controller$ You | WithoutManaCost$ True | Optional$ True | ActivationZone$ Exile
 
 Oracle:Gain control of target creature until end of turn. Untap it. It gains haste until end of turn.\nRerun (If you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.)
