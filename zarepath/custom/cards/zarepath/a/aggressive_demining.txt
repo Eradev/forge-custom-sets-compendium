@@ -2,7 +2,7 @@ Name:Aggressive Demining
 ManaCost:2 R
 Types:Sorcery
 
-A:SP$ DestroyAll | Cost$ 2 R | ValidCards$ Artifact.token | SubAbility$ DBDeal2all | SpellDescription$ Destroy all artifact tokens. Aggressive Demining deals 2 damage to all creatures.
-SVar:DBDeal2all:DB$ DamageAll | NumDmg$ 2 | ValidCards$ Creature | ValidDescription$ each creature.
+A:SP$ DestroyAll | ValidCards$ Artifact.token | SubAbility$ DBDamageAll | SpellDescription$ Destroy all artifact tokens.
+SVar:DBDamageAll:DB$ DamageAll | NumDmg$ 2 | ValidCards$ Creature | ValidDescription$ each creature.
 
-Oracle:Destroy all artifact tokens. Aggressive Demining deals 2 damage to all creatures.
+Oracle:Destroy all artifact tokens. Aggressive Demining deals 2 damage to each creature.

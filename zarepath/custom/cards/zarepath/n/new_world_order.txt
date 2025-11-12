@@ -2,7 +2,7 @@ Name:New World Order
 ManaCost:4 W W
 Types:Sorcery
 
-A:SP$ ExchangeLife | Cost$ 4 W W | ValidTgts$ Player | SpellDescription$ Exchange life totals with target player.
+A:SP$ ExchangeLife | ValidTgts$ Player | SpellDescription$ Exchange life totals with target player.
 
 Oracle:Exchange life totals with target player.
 

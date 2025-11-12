@@ -7,4 +7,4 @@ K:Flying
 
 K:Deathtouch
 
-Oracle:Flying \nDeathtouch
+Oracle:Flying\nDeathtouch

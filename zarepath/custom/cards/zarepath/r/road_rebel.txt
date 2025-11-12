@@ -3,9 +3,7 @@ ManaCost:3 R
 Types:Creature Human Rebel
 PT:3/2
 
-K:Haste
-
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken |TriggerDescription$ When CARDNAME enters, create a colorless Equipment artifact token named Weapon attached to it with Equip: {2} "({2}: Attach to target creature you control. Equip only as a sorcery.)"
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, arm it. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to this creature.)
 SVar:TrigToken:DB$Token | TokenAmount$ 1 | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | AttachedTo$ Self
 
-Oracle:When Road Rebel enters, arm it. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to this creature.)
+Oracle:When this creature enters, arm it. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to this creature.)

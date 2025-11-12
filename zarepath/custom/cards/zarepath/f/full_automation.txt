@@ -2,8 +2,8 @@ Name:Full Automation
 ManaCost:3 U U U
 Types:Sorcery
 
-A:SP$ Draw | Defined$ You | NumCards$ 3 | SubAbility$ DBChangeArt | SpellDescription$ Target player draws three cards.
-SVar:DBChangeArt:DB$ ChangeZone | Origin$ Hand | Destination$ Battlefield | ChangeType$ Artifact | ChangeNum$ X
+A:SP$ Draw | Defined$ You | NumCards$ 3 | SubAbility$ DBChangeZone | SpellDescription$ Target player draws three cards.
+SVar:DBChangeZone:DB$ ChangeZone | Origin$ Hand | Destination$ Battlefield | ChangeType$ Artifact | ChangeNum$ X
 SVar:X:Count$ValidHand Artifact.YouCtrl
 
 Oracle:Draw three cards, then put any number of artifact cards from your hand onto the battlefield.

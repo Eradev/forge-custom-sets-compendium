@@ -5,7 +5,7 @@ PT:4/4
 
 K:Flying
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainLife | TriggerDescription$ When CARDNAME enters, gain 6 life.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainLife | TriggerDescription$ When CARDNAME enters, you gain 6 life.
 SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 6
 
 K:Crew:2

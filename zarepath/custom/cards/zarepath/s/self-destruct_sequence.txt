@@ -2,7 +2,7 @@ Name:Self-Destruct Sequence
 ManaCost:3 B B
 Types:Enchantment
 
-T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDestroyAll | TriggerDescription$ At the beginning of your upkeep, destroy all creatures and planeswalkers.
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDestroyAll | TriggerDescription$ At the beginning of your upkeep, destroy all creatures and planeswalkers then sacrifice CARDNAME.
 SVar:TrigDestroyAll:DB$ DestroyAll | ValidCards$ Creature,Planeswalker | SubAbility$ DBSac
 SVar:DBSac:DB$ SacrificeAll | Defined$ Self
 

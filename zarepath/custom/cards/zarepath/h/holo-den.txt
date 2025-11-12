@@ -5,7 +5,7 @@ Types:Land
 A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
 
 A:AB$ ChooseType | Cost$ 1 | Defined$ You | Type$ Basic Land | SubAbility$ DBAnimate | SpellDescription$ CARDNAME becomes the basic land type of your choice until end of turn.
-SVar:DBAnimate:DB$ Animate | Defined$ Self | Types$ ChosenType | RemoveLandTypes$ True | RemoveIntrinsicAbilities$ True
+SVar:DBAnimate:DB$ Animate | Defined$ Self | Types$ ChosenType | RemoveLandTypes$ True
 
 Oracle:{T}: Add {C}.\n{1}: Holo-Den becomes the basic land type of your choice until end of turn. (You may tap it to add mana that the chosen basic land type produces.)
 

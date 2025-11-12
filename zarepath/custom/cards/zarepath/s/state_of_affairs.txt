@@ -5,8 +5,7 @@ Types:Enchantment
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigLife | TriggerDescription$ Whenever a land enters under your control, you gain 1 life.
 SVar:TrigLife:DB$ GainLife | Defined$ You | LifeAmount$ 1 | SpellDescription$ You gain 1 life.
 
-S:Mode$ Continuous | Affected$ Card.Self | AddAbility$ SuperiorityDraw | CheckSVar$ X | SVarCompare$ GTY | Description$
-SVar:SuperiorityDraw:AB$ Draw | Cost$ Sac<1/CARDNAME>
+A:AB$ Draw | Cost$ Sac<1/CARDNAME> | CheckSVar$ X | SVarCompare$ GTY | SpellDescription$ Superiority — Draw a card. Activate this ability only if you have more life than an opponent.
 SVar:X:Count$YourLifeTotal
 SVar:Y:PlayerCountOpponents$LowestLifeTotal
 

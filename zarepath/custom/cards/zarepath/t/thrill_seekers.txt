@@ -4,6 +4,6 @@ Types:Creature Human Rogue
 PT:3/2
 K:Menace
 
-S:Mode$ MustAttack | ValidCreature$ Card.Self | Description$ CARDNAME attacks each combat if able.
+S:Mode$ MustAttack | ValidCreature$ Card.Self | Description$ This creature attacks each combat if able.
 
-Oracle:Menace \nThrill Seekers attack each combat if able.
+Oracle:Menace \nThis creature attacks each combat if able.

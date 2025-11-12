@@ -4,6 +4,6 @@ Types:Instant
 
 A:SP$ Charm | Cost$ 1 U | Choices$ DBCounter,DBReturn | CharmNum$ 1
 SVar:DBCounter:DB$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | UnlessCost$ 1 | SpellDescription$ Counter target spell unless its controller pays {1}.
-SVar:DBReturn:DB$ ChangeZone | ValidTgts$ Card | TgtZone$ Stack | Origin$ Stack | Fizzle$ True | Destination$ Hand | SpellDescription$ Return target spell to its owner's hand.
+SVar:DBReturn:DB$ ChangeZone | ValidTgts$ Card.inZoneStack | TgtZone$ Stack | Origin$ Stack | Destination$ Hand | SpellDescription$ Return target spell to its owner's hand.
 
-Oracle:Choose one —\n• Counter target spell unless it's controller pays {1}.\n• Return target spell to its owner's hand.
+Oracle:Choose one —\n• Counter target spell unless its controller pays {1}.\n• Return target spell to its owner's hand.
