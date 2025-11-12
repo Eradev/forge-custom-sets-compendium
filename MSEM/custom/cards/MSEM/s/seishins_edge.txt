@@ -1,6 +1,4 @@
-
-
-Name:Civic Saber
+Name:Seishin's Edge
 ManaCost:1
 Types:Artifact Equipment
 

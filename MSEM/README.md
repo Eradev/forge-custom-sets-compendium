@@ -34,7 +34,7 @@ Video Horror System (VHS)             -  95% (82/86)
     * Mr. Jackston, the Proprietor
 Kaleidoscope (KLC)                    -  100% (108/108)
 Path of Shadows (PSA)                 -  44% (96/214)
-A Tourney at Whiterun (TWR)           -  11% (32/269)
+A Tourney at Whiterun (TWR)           -  20% (55/269)
 Tides of War (TOW)                    -  28% (77/271)
 Pyramids of Atuum (POA)               -  50% (64/128)
 
@@ -51,8 +51,10 @@ Examples on how to implement custom keywords and mechanisms.
 
 * [Ascend](#ascend)
 * [Bleed](#bleed)
+* [Fabled](#fabled)
 * [Fleeting](#fleeting)
 * [Horrific](#horrific)
+* [Infiltrate](#infiltrate)
 * [Kindle](#kindle)
 * [Mirage](#mirage)
 * [Motivate](#motivate)
@@ -88,8 +90,27 @@ Bleed {1}{U} (You may cast this spell for its bleed cost if an opponent lost lif
 Implementation:
 
 ```text
-S:Mode$ Continuous | Affected$ Card.Self | MayPlayAltManaCost$ 1 U | MayPlay$ True | CheckSVar$ Bleed | SVarCompare$ GE1 | AffectedZone$ Hand | EffectZone$ Hand | Description$ Bleed {1}{U} (You may cast this spell for its bleed cost if an opponent lost life this turn.)
-SVar:Bleed:Count$LifeOppsLostThisTurn
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 R | CheckSVar$ X | SVarCompare$ GE1 | Description$ Bleed {2}{R} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
+SVar:X:Count$LifeOppsLostThisTurn
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Fabled
+
+Fabled is defined as:
+
+```text
+Fabled {4}{G} (If you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
+```
+Used on Instant and Sorceries that target an object and then transform into an enchantment (or equipment) attached to the targetted object.
+
+Implementation:
+```text
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 W | Description$ Fabled {2}{W} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
+
+SVar:DBTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | AttachedTo$ Targeted | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1 | SpellDescription$ If CARDNAME's fabled cost was paid, put it onto the battlefield transformed attached to that creature.
+SVar:AltCostPaid:Count$AltCost.1.0
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
@@ -125,6 +146,23 @@ To check if you're horrific, you can check this var if it is greater than 0:
 
 ```text
 SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Infiltrate
+
+Infiltrate is defined as:
+
+```text
+Whenever one or more attacking creatures you control aren't blocked, this creature gets +1/+1 until end of turn.
+```
+
+Implementation:
+
+```text
+T:Mode$ AttackerUnblockedOnce | ValidAttackingPlayer$ You | Execute$ TrigPump | TriggerZones$ Battlefield | TriggerDescription$ Infiltrate (Whenever one or more attacking creatures you control aren't blocked, this creature gets +1/+1 until end of turn.)
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +1 | NumDef$ +1
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
@@ -239,4 +277,5 @@ SVar:DBLoseLifeFallback:DB$ LoseLife | Defined$ You | LifeAmount$ 3
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
+
 

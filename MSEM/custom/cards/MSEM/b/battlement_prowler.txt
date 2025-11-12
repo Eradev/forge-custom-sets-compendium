@@ -1,0 +1,10 @@
+Name:Battlement Prowler
+ManaCost:5 B
+Types:Creature Bat
+PT:3/1
+
+K:Flying
+
+K:Lifelink
+
+Oracle:Flying, lifelink

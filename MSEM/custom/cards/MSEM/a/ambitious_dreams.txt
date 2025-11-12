@@ -2,7 +2,7 @@ Name:Ambitious Dreams
 ManaCost:3 U
 Types:Instant
 
-S:Mode$ Continuous | Affected$ Card.Self | MayPlayAltManaCost$ 1 U | MayPlay$ True | CheckSVar$ Bleed | SVarCompare$ GE1 | AffectedZone$ Hand | EffectZone$ Hand | Description$ Bleed {1}{U} (You may cast this spell for its bleed cost if an opponent lost life this turn.)
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 1 U | CheckSVar$ Bleed | SVarCompare$ GE1 | Description$ Bleed {1}{U} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
 SVar:Bleed:Count$LifeOppsLostThisTurn
 
 A:SP$ Draw | NumCards$ 2 | SpellDescription$ Draw two cards.

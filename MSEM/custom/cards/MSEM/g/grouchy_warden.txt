@@ -1,0 +1,13 @@
+Name:Grouchy Warden
+ManaCost:1 W
+Types:Creature Human Soldier
+PT:2/3
+
+K:Defender
+
+S:Mode$ Continuous | Affected$ Card.Self+enchanted,Card.Self+equipped | AddPower$ 2 | AddToughness$ 3 | Description$ Adorned — This creature gets +2/+3 as long as it's equipped and/or enchanted.
+
+Oracle:Defender\nAdorned — This creature gets +2/+3 as long as it's equipped and/or enchanted.
+
+SVar:EnchantMe:Once
+SVar:EquipMe:Once

@@ -1,0 +1,8 @@
+Name:Alpine Meadow (MSEM)
+ManaCost:no cost
+Types:Land Forest Plains
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+Oracle:({T}: Add {G} or {W}.)\nThis land enters tapped.
