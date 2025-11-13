@@ -221,7 +221,7 @@ Type=Custom
 229 U Argothian Caretaker @Frank Freire
 230 U Mothdust Dryad @Tius
 # 231
-232 Sylvan Survey @Ahmad Hilmi
+232 U Sylvan Survey @Ahmad Hilmi
 # 233-250
 251 R Waterlogged Archipelago @Anthony Avon
 252 R Contaminated Rivulet @Anthony Avon
