@@ -1,0 +1,11 @@
+Name:Worldcarver Crucible
+ManaCost:2
+Types:Artifact
+
+A:AB$ ChangeZone | Cost$ T Sac<1/Land> | Origin$ Graveyard | Destination$ Battlefield | TgtPrompt$ Select target land card in your graveyard | ValidTgts$ Land.YouOwn | SpellDescription$ Return target land card from your graveyard to the battlefield.
+
+A:AB$ Untap | Cost$ 2 | SpellDescription$ Untap this artifact.
+
+Oracle:{T}, Sacrifice a land: Return target land card from your graveyard to the battlefield.\n{2}: Untap this artifact.
+
+AI:RemoveDeck:All
