@@ -1,0 +1,11 @@
+Name:Karn's Bauble
+ManaCost:0
+Types:Artifact
+
+A:AB$ Mana | Cost$ T Sac<1/CARDNAME/this artifact> | RestrictValid$ CantCastNonArtifactSpells | SubAbility$ DelTrigSlowtrip | SpellDescription$ Add {C}. This mana can't be spent to cast a nonartifact spell.
+SVar:DelTrigSlowtrip:DB$ DelayedTrigger | NextTurn$ True | Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Player | Execute$ DrawSlowtrip | StackDescription$ SpellDescription | SpellDescription$ Draw a card at the beginning of the next turn's upkeep.
+SVar:DrawSlowtrip:DB$ Draw | NumCards$ 1 | Defined$ You
+
+Oracle:{T}, Sacrifice this artifact: Add {C}. This mana can't be spent to cast a nonartifact spell. Draw a card at the beginning of the next turn's upkeep.
+
+DeckNeeds:Type$Artifact
