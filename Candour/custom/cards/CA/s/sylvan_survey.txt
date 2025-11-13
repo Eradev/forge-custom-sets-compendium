@@ -1,0 +1,8 @@
+Name:Sylvan Survey
+ManaCost:G
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Land.Basic | ChangeTypeDesc$ basic land | SubAbility$ DBInvestigate | SpellDescription$ Search your library for a basic land card, reveal it, put it into your hand, then shuffle. Investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")
+SVar:DBInvestigate:DB$ Investigate
+
+Oracle:Search your library for a basic land card, reveal it, put it into your hand, then shuffle.\nInvestigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")
