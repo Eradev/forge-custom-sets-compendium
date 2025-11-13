@@ -1,0 +1,17 @@
+Name:Argothian Caretaker
+ManaCost:1 G
+Types:Creature Elf Druid
+PT:1/2
+
+A:AB$ Charm | Cost$ T | Choices$ DBMana,DBPutCounter,DBExile
+
+SVar:DBMana:DB$ Mana | Produced$ G | SpellDescription$ Add {G}.
+
+SVar:DBPutCounter:DB$ PutCounter | CounterNum$ 1 | CounterType$ P1P1 | ValidTgts$ Creature | TgtPrompt$ Select target creature | SpellDescription$ Put a +1/+1 counter on target creature.
+
+SVar:DBExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Permanent | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one permanent card in a graveyard | AITgtOwnCards$ True | SubAbility$ DBGainLife | SpellDescription$ Exile up to one target permanent card from a graveyard. You gain 2 life.
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 2
+
+Oracle:{T}: Choose one —\n• Add {G}.\n• Put a +1/+1 counter on target creature.\n• Exile up to one target permanent card from a graveyard. You gain 2 life.
+
+DeckHas:Ability$Counters
