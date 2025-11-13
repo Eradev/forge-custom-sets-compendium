@@ -1,0 +1,19 @@
+Name:Automated Wanderer
+ManaCost:2 G
+Types:Artifact Creature Construct
+PT:1/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCharm | TriggerDescription$ When this creature enters, ABILITY
+SVar:TrigCharm:DB$ Charm | Choices$ DBCityOfBrass,DBGaeasCradle,DBKhalniGarden,DBStripMine
+
+SVar:DBCityOfBrass:DB$ CopyPermanent | DefinedName$ City of Brass | SpellDescription$ Create a City of Brass token.
+
+SVar:DBGaeasCradle:DB$ CopyPermanent | DefinedName$ Gaea's Cradle | SpellDescription$ Create a Gaea's Cradle token.
+
+SVar:DBKhalniGarden:DB$ CopyPermanent | DefinedName$ Khalni Garden | SpellDescription$ Create a Khalni Garden token.
+
+SVar:DBStripMine:DB$ CopyPermanent | DefinedName$ Strip Mine | SpellDescription$ Create a Strip Mine token.
+
+Oracle:When this creature enters, choose one —\n• Create a City of Brass token.\n• Create a Gaea's Cradle token.\n• Create a Khalni Garden token.\n• Create a Strip Mine token.
+
+DeckHas:Ability$Token

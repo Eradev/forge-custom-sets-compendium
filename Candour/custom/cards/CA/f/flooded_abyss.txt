@@ -1,0 +1,12 @@
+Name:Flooded Abyss
+ManaCost:no cost
+Types:Land
+
+K:Vanishing:3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this land enters, exile target land an opponent controls until this land leaves the battlefield.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Land.OppCtrl | TgtPrompt$ Select target land an opponent controls | Duration$ UntilHostLeavesPlay
+
+Oracle:Vanishing 3 (This creature enters with three time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen this land enters, exile target land an opponent controls until this land leaves the battlefield.
+
+AI:RemoveDeck:All
