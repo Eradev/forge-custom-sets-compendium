@@ -1,0 +1,17 @@
+Name:Ulamog, Voracious Calamity
+ManaCost:10
+Types:Legendary Creature Eldrazi
+PT:10/10
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigSacAll | TriggerDescription$ When you cast this spell, each player sacrifices all permanents they control that are one or more colors.
+SVar:TrigSacAll:DB$ SacrificeAll | ValidCards$ Permanent.nonColorless
+
+K:Indestructible
+
+K:Annihilator:4
+
+Oracle:When you cast this spell, each player sacrifices all permanents they control that are one or more colors.\nIndestructible\nAnnihilator 4 (Whenever this creature attacks, defending player sacrifices four permanents of their choice.)
+
+SVar:HasAttackEffect:TRUE
+SVar:PlayMain1:TRUE
+DeckNeeds:Color$Colorless
