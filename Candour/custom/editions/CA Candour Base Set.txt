@@ -15,7 +15,7 @@ Type=Custom
 8 R Bronzeforge Fanatic @Jason Nguyen
 9 R Emphatic Recruiter @Carl Van Laguun
 10 U Tinkerleaf Sprites @Asur Misoa
-11 U Journey to Oblivion (CA) @Dominik Mayer
+11 U Journey to Oblivion (CA) @Dominik Mayer ${"flavorName": "Journey to Oblivion"}
 12 R Sunrise Champion @Otto Metzger
 13 M Force of Justice @Dominik Mayer
 14 R Thought Partition @Dominik Mayer
@@ -66,7 +66,7 @@ Type=Custom
 59 M Mu Yangling, Seeing Wind @Romain Kurdi
 60 R Conduit Mage @Romain Kurdi
 61 R Unsettled Compass @Marcel Mercado
-62 R Tempest Angler (CA) @Grazia Ferlito
+62 R Tempest Angler (CA) @Grazia Ferlito ${"flavorName": "Tempest Angler"}
 # 63
 64 U Mismatch @Kritian Agerkvist
 65 R Phyrexian Scrap Searcher @Thomas Ricci
@@ -188,7 +188,7 @@ Type=Custom
 182 U Hellmane Lion @Mariah Tekulve
 183 R Fool's Errand @Konstantin Turovec
 184 U Reckless Conflagration @Peter Lee
-185 R Hellfire (CA) @Nia Kovalevski
+185 R Hellfire (CA) @Nia Kovalevski ${"flavorName": "Hellfire"}
 # 186-200
 201 M Nissa, Unbound Animist @Romain Kurdi
 202 U Nissa's Binding @Simon Marczyk
