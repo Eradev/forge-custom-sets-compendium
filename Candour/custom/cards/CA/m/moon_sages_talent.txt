@@ -15,5 +15,3 @@ SVar:TrigClassLevel:Mode$ ClassLevelGained | ClassLevel$ 3 | ValidCard$ Card.Sel
 SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ tamiyos_notebook | LockTokenScript$ True | TokenOwner$ You
 
 Oracle:(Gain the next level as a sorcery to add its ability.)\nWhen this Class enters, draw three cards, then put two cards from your hand on top of your library in any order.\n{3}{U}: Level 2\nWhenever you draw a card, put a +1/+1 counter on target creature.\n{1}{W}: Level 3\nWhen this Class becomes level 3, create Tamiyo's Notebook, a legendary artifact token with "Spells you cast cost {2} less to cast" and "{T}: Draw a card."
-
-DeckNeeds:Type$Instant|Sorcery
