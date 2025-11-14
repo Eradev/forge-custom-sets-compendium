@@ -1,0 +1,31 @@
+[metadata]
+Code=SWTG_RO
+Date=2019-05-01
+Name=Rogue One
+Type=Custom
+Foil=NotSupported
+
+[cards]
+1 C Force Protection @Darren Tan
+2 U U-Wing @Ben Zweifel
+3 C Bludgeoning Pain @Richard Lim
+4 R Director Krennic @Simon Myhus
+5 C TIE Striker @Anthony Devine
+6 R Vader's Command @Jerry Vanderstelt
+7 C Gerrera's Revolutionary @Darren Tan
+8 U Hammerhead Corvette @Star Wars Rebels
+9 U Bor Gullet @Ivan Manzella
+10 U Imperial Hovertank @Rogue One: Visual Story Guide
+11 U Occupation @JB Casacop
+12 R Jyn Erso and Cassian Andor @Eric Wiguna
+13 U Resistance @Marek Okon
+14 R Chirrut Imwe @Julien Girardy
+15 C Thermal Detonator @Kieran Yanner
+
+[tokens]
+b_1_1_trooper @Yvan Quinet
+
+[CreatureTypes]
+Barabel:Barabels
+Starship:Starships
+Trooper:Troopers
