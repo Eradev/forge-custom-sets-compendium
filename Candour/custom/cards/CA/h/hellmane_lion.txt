@@ -1,0 +1,13 @@
+Name:Hellmane Lion
+ManaCost:R
+Types:Creature Elemental Cat
+PT:1/1
+
+A:AB$ Mana | Cost$ T Discard<1/Card> | Produced$ R | SpellDescription$ Add {R}.
+
+K:Escape:1 R R ExileFromGrave<6/Card.Other/other>
+K:etbCounter:P1P1:3:ValidCard$ Card.Self+escaped:This creature escapes with three +1/+1 counters on it.
+
+Oracle:{T}, Discard a card: Add {R}.\nEscape—{1}{R}{R}, Exile six other cards from your graveyard. (You may cast this card from your graveyard for its escape cost.)\nThis creatures escapes with three +1/+1 counters on it.
+
+DeckHas:Ability$Counters|Discard
