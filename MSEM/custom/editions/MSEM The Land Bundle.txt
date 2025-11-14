@@ -9,7 +9,7 @@ Type=Custom
 2 C Sodden Cavern @Ferdinand Ladera
 3 C Fiery Chasm @Ferdinand Ladera
 4 C Highland Vale @Ferdinand Ladera
-5 C Alpine Meadow (MSEM) @Sebastian Wagner
+5 C Alpine Meadow (MSEM) @Sebastian Wagner ${"flavorName": "Alpine Meadow"}
 6 C Desolate Barrens @Sebastian Wagner
 7 C Roaring Cascade @UnidColor
 8 C Somber Marsh @Sebastian Wagner
