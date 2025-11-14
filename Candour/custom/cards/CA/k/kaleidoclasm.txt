@@ -1,0 +1,9 @@
+Name:Kaleidoclasm
+ManaCost:X R
+Types:Sorcery
+
+A:SP$ DamageAll | NumDmg$ Y | ValidCards$ Creature | ValidDescription$ each creature | SpellDescription$ Converge — CARDNAME deals X damage to each creature equal to the number of colors of mana spent to cast this spell.
+SVar:X:Count$xPaid
+SVar:Y:Count$Converge
+
+Oracle:Converge — Kaleidoclasm deals X damage to each creature equal to the number of colors of mana spent to cast this spell.
