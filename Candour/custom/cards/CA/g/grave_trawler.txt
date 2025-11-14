@@ -1,0 +1,16 @@
+Name:Grave Trawler
+ManaCost:B
+Types:Creature Spirit
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill3 | TriggerDescription$ When this creature enters or leaves the battlefield, mill three cards.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any  | ValidCard$ Card.Self | Execute$ TrigMill3 | Secondary$ True | TriggerDescription$ When this creature enters or leaves the battlefield, mill three cards.
+SVar:TrigMill3:DB$ Mill | NumCards$ 3
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigMill | TriggerDescription$ At the beginning of your end step, mill a card.
+SVar:TrigMill:DB$ Mill | NumCards$ 1
+
+Oracle:When this creature enters or leaves the battlefield, mill three cards.\nAt the beginning of your end step, mill a card.
+
+DeckHas:Ability$Mill
+DeckHints:Ability$Graveyard

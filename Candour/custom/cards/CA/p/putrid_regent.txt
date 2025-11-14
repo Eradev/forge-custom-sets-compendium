@@ -1,0 +1,13 @@
+Name:Putrid Regent
+ManaCost:2 B B
+Types:Creature Zombie Dragon
+PT:4/4
+
+K:Flying
+
+T:Mode$ ChangesZoneAll | TriggerZones$ Battlefield | ValidCards$ Creature.Other | Origin$ Battlefield | Destination$ Graveyard | Execute$ TrigDraw | TriggerDescription$ Whenever one or more other creatures die, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+A:AB$ Pump | Cost$ Sac<1/Creature.Other> | Defined$ Self | KW$ Indestructible | SpellDescription$ This creature gains indestructible until end of turn.
+
+Oracle:Flying\nWhenever one or more other creatures die, draw a card.\nSacrifice another creature: This creature gains indestructible until end of turn.

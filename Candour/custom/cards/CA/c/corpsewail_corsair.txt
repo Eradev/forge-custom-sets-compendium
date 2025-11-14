@@ -1,0 +1,18 @@
+Name:Corpsewail Corsair
+ManaCost:2 B
+Types:Creature Human Pirate
+PT:2/4
+
+K:Menace
+
+K:Deathtouch
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ Whenever this creature attacks, you lose 1 life and draw a card.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1 | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw
+
+K:Unearth:B
+
+Oracle:Menace, deathtouch\nWhenever this creature attacks, you lose 1 life and draw a card.\nUnearth {B} ({B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)
+
+SVar:HasAttackEffect:TRUE

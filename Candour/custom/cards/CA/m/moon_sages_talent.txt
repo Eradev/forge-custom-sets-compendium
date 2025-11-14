@@ -1,0 +1,17 @@
+Name:Moon Sage's Talent
+ManaCost:U
+Types:Enchantment Class
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Optional$ True | Execute$ TrigDraw | TriggerDescription$ When this Class enters, draw three cards, then put two cards from your hand on top of your library in any order.
+SVar:TrigDraw:DB$ Draw | NumCards$ 3 | SubAbility$ ChangeZoneDB
+SVar:ChangeZoneDB:DB$ ChangeZone | Origin$ Hand | Destination$ Library | ChangeNum$ 2 | Mandatory$ True | Reorder$ True
+
+K:Class:2:3 U:AddTrigger$ TrigDrawn
+SVar:TrigDrawn:Mode$ Drawn | ValidCard$ Card.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever you draw a card, put a +1/+1 counter on target creature.
+SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature | CounterType$ P1P1
+
+K:Class:3:5 U:AddTrigger$ TrigClassLevel
+SVar:TrigClassLevel:Mode$ ClassLevelGained | ClassLevel$ 3 | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ When this Class becomes level 3, create Tamiyo's Notebook, a legendary artifact token with "Spells you cast cost {2} less to cast" and "{T}: Draw a card."
+SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ tamiyos_notebook | LockTokenScript$ True | TokenOwner$ You
+
+Oracle:(Gain the next level as a sorcery to add its ability.)\nWhen this Class enters, draw three cards, then put two cards from your hand on top of your library in any order.\n{3}{U}: Level 2\nWhenever you draw a card, put a +1/+1 counter on target creature.\n{1}{W}: Level 3\nWhen this Class becomes level 3, create Tamiyo's Notebook, a legendary artifact token with "Spells you cast cost {2} less to cast" and "{T}: Draw a card."

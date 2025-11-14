@@ -1,0 +1,9 @@
+Name:Opalescent Effacement
+ManaCost:X B
+Types:Sorcery
+
+A:SP$ LoseLife | ValidTgts$ Player | TgtPrompt$ Select a player | LifeAmount$ Y | SpellDescription$ Converge — Target player loses 2 life for each color of mana spent to cast this spell.
+SVar:X:Count$xPaid
+SVar:Y:Count$Converge/Times.2
+
+Oracle:Converge — Target player loses 2 life for each color of mana spent to cast this spell.

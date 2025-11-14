@@ -1,0 +1,12 @@
+Name:Blighted Stinger
+ManaCost:B
+Types:Creature Insect Horror
+PT:2/3
+
+K:Flying
+
+T:Mode$ DamageDoneOnce | Execute$ TrigDamage | ValidTarget$ Card.Self | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature is dealt damage, it deals that much damage to you.
+SVar:TrigDamage:DB$ DealDamage | NumDmg$ X | Defined$ You
+SVar:X:TriggerCount$DamageAmount
+
+Oracle:Flying\nWhenever this creature is dealt damage, it deals that much damage to you.
