@@ -1,0 +1,11 @@
+Name:Overcurrent
+ManaCost:1 R
+Types:Enchantment
+
+T:Mode$ SpellCast | ValidCard$ Card.nonCreature | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDealDamage | TriggerDescription$ Whenever you cast a noncreature spell, this enchantment deals 2 damage to any target.
+SVar:TrigDealDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 2
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigSac | TriggerDescription$ At the beginning of your end step, sacrifice this enchantment.
+SVar:TrigSac:DB$ Sacrifice
+
+Oracle:Whenever you cast a noncreature spell, this enchantment deals 2 damage to any target.\nAt the beginning of your end step, sacrifice this enchantment.
