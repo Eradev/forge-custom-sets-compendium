@@ -15,7 +15,7 @@ Replace=.50F Special:fromSheet("MSEM_VHS cards")
 
 [cards]
 1 R Aspiring Hero @Evgenij Kungur
-2 R Exorcise (MSEM) @Lucas Villalva
+2 R Exorcise (MSEM) @Lucas Villalva ${"flavorName": "Exorcise"}
 3 R Friends from the Beyond @Rexton
 4 R Grasping Souls @Stefan Koidl
 5 R Librarian of Whispers @Sally Jackson
@@ -102,7 +102,7 @@ Replace=.50F Special:fromSheet("MSEM_VHS cards")
 86 S Swamp @Kami Spirit
 
 [tokens]
-1 w_1_1_spirit_flying
-2 u_8_8_kraken_hexproof
-3 mother
-4 c_a_treasure_sac
+1 w_1_1_spirit_flying @Danny Ingrassia
+2 u_8_8_kraken_hexproof @Wang Miao
+3 mother @Erik Szczygie
+4 c_a_treasure_sac @Aaron Miller

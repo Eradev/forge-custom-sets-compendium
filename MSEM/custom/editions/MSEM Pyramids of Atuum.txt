@@ -122,7 +122,7 @@ Type=Custom
 115 R Kalro, Desert Outpost @Tuomas Korpi
 116 R Mesmerizing Shimmer @Chris Cold
 117 R Mummy's Grin @Adam Vehige
-118 M Slaughter (MSEM) @Ivan Laliashvili
+118 M Slaughter (MSEM) @Ivan Laliashvili ${"flavorName": "Slaughter"}
 119 R Staff of Authority @Javier Charro
 120 R Desert Temple @Markus Holzum
 121 L Plains @Joakim Olofsson
