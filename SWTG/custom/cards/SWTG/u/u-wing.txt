@@ -5,10 +5,10 @@ PT:2/2
 
 K:Spaceflight
 S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight & BlockBySpaceflight
-SVar:BlockSpaceflight:Mode$ CantBlockBy | ValidAttacker$ Creature.withoutSpaceflight | ValidBlocker$ Creature.Self | Description$ CARDNAME can block only creatures with spaceflight.
-SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpaceflight+withoutSpacereach | ValidAttacker$ Creature.Self | Description$ CARDNAME can be blocked only by creatures with spaceflight.
+SVar:BlockSpaceflight:Mode$ CantBlockBy | ValidAttacker$ Creature.withoutSpaceflight | ValidBlocker$ Creature.Self | Description$ this creature can block only creatures with spaceflight.
+SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpaceflight+withoutSpacereach | ValidAttacker$ Creature.Self | Description$ this creature can be blocked only by creatures with spaceflight.
 
 S:Mode$ Continuous | Affected$ Card.Self+tapped | AddPower$ 1 | Description$ As long as this creature is tapped, it gets +1/+0.
 S:Mode$ Continuous | Affected$ Card.Self+untapped | AddToughness$ 1 | Description$ As long as this creature is untapped, it gets +0/+1.
 
-Oracle:Spaceflight (This creature can only block or be blocked by creatures with spaceflight.)\nAs long as U-Wing is tapped, it gets +1/+0.\nAs long as U-Wing is untapped, it gets +0/+1.
+Oracle:Spaceflight (This creature can only block or be blocked by creatures with spaceflight.)\nAs long as this creature is tapped, it gets +1/+0.\nAs long as this creature is untapped, it gets +0/+1.
