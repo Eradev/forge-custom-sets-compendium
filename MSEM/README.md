@@ -32,7 +32,7 @@ Video Horror System (VHS)             -  95% (82/86)
     * Snowfield Doppelganger
     * Wiretapper
     * Mr. Jackston, the Proprietor
-Kaleidoscope (KLC)                    -  100% (108/108)
+Kaleidoscope (KLC)                    -  100%
 Path of Shadows (PSA)                 -  44% (96/214)
 A Tourney at Whiterun (TWR)           -  20% (55/269)
 Tides of War (TOW)                    -  28% (77/271)
@@ -103,9 +103,11 @@ Fabled is defined as:
 ```text
 Fabled {4}{G} (If you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
 ```
+
 Used on Instant and Sorceries that target an object and then transform into an enchantment (or equipment) attached to the targetted object.
 
 Implementation:
+
 ```text
 S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 W | Description$ Fabled {2}{W} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
 
@@ -246,15 +248,13 @@ Rerun is defined as:
 If you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.
 ```
 
-> Note: Rerun allows a card to be cast from exile regardless of how it got there or from where.
-
 Implementation:
 
 ```text
-SVar:ExileSelf:DB$ ChangeZone | Origin$ Stack | Destination$ Exile | ConditionDefined$ Self | ConditionPresent$ Card.wasCastFromYourHandByYou
-
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Exile | Execute$ CastRerun | TriggerDescription$ Rerun (If you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.)
-SVar:CastRerun:DB$ Play | Defined$ Self | Amount$ 1 | Controller$ You | WithoutManaCost$ True | Optional$ True | ActivationZone$ Exile
+R:Event$ Moved | ValidLKI$ Card.Self+wasCastFromHand | Origin$ Stack | Destination$ Graveyard | Fizzle$ False | ReplaceWith$ RerunExile | Description$ Rerun (If you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.)
+SVar:RerunExile:DB$ ChangeZone | Defined$ ReplacedCard | Origin$ Stack | Destination$ Exile | RememberChanged$ True | SubAbility$ RerunDelayTrig
+SVar:RerunDelayTrig:DB$ DelayedTrigger | Mode$ ChangesZone | ValidCard$ Creature.YouCtrl | Origin$ Battlefield | Destination$ Graveyard | OptionalDecider$ You | RememberObjects$ Remembered | Execute$ CastRerun | TriggerDescription$ Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.
+SVar:CastRerun:DB$ Play | Defined$ Remembered | WithoutManaCost$ True
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
@@ -277,5 +277,3 @@ SVar:DBLoseLifeFallback:DB$ LoseLife | Defined$ You | LifeAmount$ 3
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
-
-
