@@ -3,6 +3,7 @@ Code=MSEM_CHAMPIONS
 Name=MSEM Champions
 Date=2017-10-01
 Type=Custom
+TokenFallbackCode=MSEM_MPS_MSE
 
 [cards]
 1 M Master of Tranquility @Jian Guo
