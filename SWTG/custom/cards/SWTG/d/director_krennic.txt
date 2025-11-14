@@ -1,0 +1,12 @@
+Name:Director Krennic
+ManaCost:3 B B
+Types:Legendary Creature Human Advisor
+PT:3/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters, create two 1/1 black Trooper creature tokens.
+SVar:TrigToken:DB$ Token | TokenAmount$ 2 | TokenScript$ b_1_1_trooper | TokenOwner$ You
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigDestroy
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Land.Basic
+
+Oracle:When Director Krennic enters, create two 1/1 black Trooper creature tokens.\nWhen Director Krennic leaves, destroy target basic land.

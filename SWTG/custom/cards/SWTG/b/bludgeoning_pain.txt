@@ -1,0 +1,8 @@
+Name:Bludgeoning Pain
+ManaCost:1 B
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ -2 | NumDef$ -2 | IsCurse$ True | SubAbility$ DBTap | SpellDescription$ Target creature gets -2/-2 until end of turn. Tap that creature.
+SVar:DBTap:DB$ Tap | Defined$ Targeted
+
+Oracle:Target creature gets -2/-2 until end of turn. Tap that creature.

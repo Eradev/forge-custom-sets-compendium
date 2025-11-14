@@ -1,0 +1,10 @@
+Name:Occupation
+ManaCost:W B
+Types:Enchantment
+
+R:Event$ Moved | ValidCard$ Creature.OppCtrl | Destination$ Battlefield | ReplaceWith$ ETBTapped | ReplacementResult$ Updated | ActiveZones$ Battlefield | Description$ Creatures your opponents control enter tapped.
+SVar:ETBTapped:DB$ Tap | ETB$ True | Defined$ ReplacedCard
+
+A:AB$ Pump | Cost$ W B | ValidTgts$ Creature | TgtPrompt$ Choose target creature | KW$ HIDDEN CARDNAME can't attack or block. & HIDDEN CARDNAME's activated abilities can't be activated. | IsCurse$ True | AILogic$ DetainNonLand | SpellDescription$ Target creature can't attack or block this turn, and its activated abilities can't be activated until end of turn.
+
+Oracle:Creatures your opponents control enter tapped.\n{W}{B}: Target creature can't attack or block this turn, and its activated abilities can't be activated until end of turn.
