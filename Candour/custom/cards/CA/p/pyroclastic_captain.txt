@@ -1,0 +1,12 @@
+Name:Pyroclastic Captain
+ManaCost:1 R
+Types:Creature Skeleton Pirate
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMana | TriggerDescription$ When this creature enters, add {R}.
+SVar:TrigMana:DB$ Mana | Produced$ R
+
+T:Mode$ SpellCast | ValidCard$ Card.YouCtrl | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigAnimate | ActivatorThisTurnCast$ EQ2 | TriggerDescription$ Whenever you cast your second spell each turn, this creature becomes a 4/4 Elemental with flying and haste in addition to its other types until end of turn.
+SVar:TrigAnimate:DB$ Animate | Defined$ Self | Types$ Elemental | Power$ 4 | Toughness$ 4 | Keywords$ Flying & Haste
+
+Oracle:When this creature enters, add {R}.\nWhenever you cast your second spell each turn, this creature becomes a 4/4 Elemental with flying and haste in addition to its other types until end of turn.

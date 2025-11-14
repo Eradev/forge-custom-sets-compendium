@@ -172,7 +172,7 @@ Type=Custom
 166 R Lunar Armageddon @Riccardo Rullo
 167 U Kaleidoclasm @Timi Honkanen
 168 R Delusions of Grandeur @Dominik Mayer
-169 U Pyrostatic Captain @Dominik Mayer
+169 U Pyroclastic Captain @Dominik Mayer
 170 U Smiting Bolt @Oscar Valverde
 171 R Crust Dismantler @Diane Franco
 172 R Echoes of Valour @Steven Shan
