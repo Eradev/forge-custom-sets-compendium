@@ -11,7 +11,7 @@ Type=Custom
 # 4
 5 M Ryukami, the First Sovereign @Dongbiao Lu
 6 M Sunken Ambitions @RHADS
-7 M Master Chef (MSEM) @Ricky Ryan
+7 M Master Chef (MSEM) @Ricky Ryan ${"flavorName": "Master Chef"}
 8 M Savage Congregation @sandara
 9 M Dark Rite Cultist @uildrim
 10 M Azun, Sheriff of Daisite @Artozi
@@ -151,8 +151,17 @@ Type=Custom
 148 M Clawing Shaman @Felipe Castro
 149 M Boundless Hopes @Bhaskar Rac
 150 M Reflected Moment @randiocalrissian
+151 S Seal the Tomb @ArcDraws
+152 S Forgotten Idol @Kati StarSoulArt
+153 S Spark Hunter Kajiwara Ai @Dongshi389
+154 S Cindergeather Phoenix @Blackie Maiden
+155 S Nitrous Renewer @マルケー
+156 S Curse of Doubt @jiuri
+157 S Hunter's Mark (MSEM) @Scott Uminga ${"flavorName": "Hunter's Mark"}
+158 S Skirsdag Edict @dusk ming
 
 [tokens]
+0 g_1_1_saproling @AndrewMcIntosh
 1 b_x_x_demon_flying @Mateusz Ozminski
 2 g_0_1_plant @Tatmeup
 3 b_5_5_demon_flying @Bill Creative
@@ -178,11 +187,12 @@ Type=Custom
 23 b_5_5_golem_trample @Masashi Kishimoto
 24 r_2_2_elemental_shaman_haste_scry @Excellero
 25 all_1_1_scout @Mack Sztaba
-29 c_1_1_a_construct
+29 c_1_1_a_construct @Michael Penta
+30 c_2_2_a_soldier @NishikujiC
 
 [other]
-26 emblem_simul_sylvan_alchemist
-27 plains
+26 emblem_simul_sylvan_alchemist @AI-Blues
+27 plains @Hmmuk
 
 [CreatureTypes]
 Artist:Artists
