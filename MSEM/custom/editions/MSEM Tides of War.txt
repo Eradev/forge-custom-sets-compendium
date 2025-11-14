@@ -253,18 +253,18 @@ Type=Custom
 246 R Fungal Mire @JKRoots
 247 R Gloomcover Steppe @AnekaShu
 248 M Kellythross' Workshop @VityaR83
-249 R Lush Oasis (MSEM) @jerry8448
+249 R Lush Oasis (MSEM) @jerry8448 ${"flavorName": "Lush Oasis"}
 250 U Shrine of the Six Pillars @Van-Syl-Production
 251 R Spiraling Canyon @Sebastian Wagner
 252 U War Golem Forge @KoTnoneKoT
-# 253 was removed
+253 L Plains @MathieuSeddas
 254 L Plains @Karbo
 255 L Plains @jcbarquet
 256 L Plains @Andreas Rocha
-257 L Island @Y-mir
-258 L Island @PietZooter
-259 L Island @Chris Cold
-260 L Island @len-yan
+257 L Island @len-yan
+258 L Island @Chris Cold
+259 L Island @PietZooter
+260 L Island @Y-mir
 261 L Swamp @Spex84
 262 L Swamp @LeoJr
 263 L Swamp @Satoru Wada
@@ -279,7 +279,18 @@ Type=Custom
 272 L Forest @merl1ncz
 
 [tokens]
-2 w_1_1_rebel
-7 r_1_1_goblin
-9 c_3_3_a_golem
-10 c_1_1_a_thopter_flying
+1 w_1_1_bird_flying @Howard Lyon
+2 w_1_1_rebel @HELMUTTT
+3 w_1_1_soldier @Nemanja-S
+4 u_8_8_kraken_trample @MaBuArt
+5 b_2_2_zombie @Dave Kendall
+6 r_3_3_dragon_flying @akreon
+7 r_1_1_goblin @moonga
+8 g_1_1_saproling @Cyril Van Der Haegen
+9 c_3_3_a_golem @AlexRuizArt
+10 c_1_1_a_thopter_flying @AlexRuizArt
+
+[other]
+11 emblem_fatresya_protector_of_the_people @lacliliac
+12 emblem_akrianos_redeemed_avenger @hgjart
+13 emblem_jeska_neolition_leader @merkymerx
