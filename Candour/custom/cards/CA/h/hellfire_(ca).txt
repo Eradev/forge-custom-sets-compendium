@@ -1,0 +1,11 @@
+Name:Hellfire (CA)
+ManaCost:R
+Types:Sorcery
+
+A:SP$ DealDamage | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ 4 | ReplaceDyingDefined$ Targeted | SpellDescription$ CARDNAME deals 4 damage to target creature. If that creature would die this turn, exile it instead.
+
+K:Madness:0
+
+Oracle:Hellfire deals 4 damage to target creature. If that creature would die this turn, exile it instead.\nMadness {0} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)
+
+DeckHints:Ability$Discard

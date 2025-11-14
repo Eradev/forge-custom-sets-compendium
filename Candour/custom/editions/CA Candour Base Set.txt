@@ -188,7 +188,7 @@ Type=Custom
 182 U Hellmane Lion @Mariah Tekulve
 183 R Fool's Errand @Konstantin Turovec
 184 U Reckless Conflagration @Peter Lee
-185 R Hellfire @Nia Kovalevski
+185 R Hellfire (CA) @Nia Kovalevski
 # 186-200
 201 M Nissa, Unbound Animist @Romain Kurdi
 202 U Nissa's Binding @Simon Marczyk
