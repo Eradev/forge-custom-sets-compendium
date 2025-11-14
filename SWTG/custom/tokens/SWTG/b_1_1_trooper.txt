@@ -1,0 +1,6 @@
+Name:Trooper
+ManaCost:no cost
+Colors:black
+Types:Creature Trooper
+PT:1/1
+Oracle:

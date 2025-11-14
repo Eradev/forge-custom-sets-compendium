@@ -1,0 +1,11 @@
+Name:Jyn Erso and Cassian Andor
+ManaCost:2 R W
+Types:Legendary Creature Human Rebel
+PT:4/4
+
+T:Mode$ Phase | Phase$ BeginCombat | TriggerZones$ Battlefield | ValidPlayer$ You | Execute$ TrigPump
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | NumAtt$ +1 | KW$ Haste
+
+Oracle:At the beginning of combat on your turn, target creature gets +1/+0 and gains haste until end of turn.
+
+SVar:PlayMain1:TRUE

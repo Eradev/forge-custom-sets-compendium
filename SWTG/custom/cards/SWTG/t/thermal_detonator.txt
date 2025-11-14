@@ -1,0 +1,7 @@
+Name:Thermal Detonator
+ManaCost:1
+Types:Artifact
+
+A:AB$ DealDamage | Cost$ 2 Sac<1/CARDNAME/this artifact> | ValidTgts$ Creature.withoutSpaceflight,Player | TgtPrompt$ Select target creature without spaceflight or player | NumDmg$ 2 | SpellDescription$ This artifact deals 2 damage to target creature without spaceflight or target player.
+
+Oracle:{2}, Sacrifice this artifact: This artifact deals 2 damage to target creature without spaceflight or target player.

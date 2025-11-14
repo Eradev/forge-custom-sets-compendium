@@ -1,0 +1,15 @@
+Name:Hammerhead Corvette
+ManaCost:3 G
+Types:Artifact Creature Rebel Starship
+PT:3/3
+
+K:Spaceflight
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight & BlockBySpaceflight
+SVar:BlockSpaceflight:Mode$ CantBlockBy | ValidAttacker$ Creature.withoutSpaceflight | ValidBlocker$ Creature.Self | Description$ CARDNAME can block only creatures with spaceflight.
+SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpaceflight+withoutSpacereach | ValidAttacker$ Creature.Self | Description$ CARDNAME can be blocked only by creatures with spaceflight.
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigUntap | TriggerZones$ Battlefield | OptionalDecider$ You | TriggerDescription$ Whenever this creature attacks, you may untap target Starship creature defending player controls and have that creature block this creature this turn if able.
+SVar:TrigUntap:DB$ Untap | ValidTgts$ Creature.Starship+DefenderCtrl | SubAbility$ DBMustBlock
+SVar:DBMustBlock:DB$ MustBlock | Defined$ Targeted
+
+Oracle:Spaceflight (This creature can only block or be blocked by creatures with spaceflight.)\nWhenever this creature attacks, you may untap target Starship creature defending player controls and have that creature block this creature this turn if able.

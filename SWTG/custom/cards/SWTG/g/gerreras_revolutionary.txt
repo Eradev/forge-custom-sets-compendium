@@ -1,0 +1,8 @@
+Name:Gerrera's Revolutionary
+ManaCost:R
+Types:Creature Barabel Rebel
+PT:2/1
+
+S:Mode$ MustAttack | ValidCreature$ Card.Self | Description$ This creature attacks each combat if able.
+
+Oracle:This creature attacks each combat if able.
