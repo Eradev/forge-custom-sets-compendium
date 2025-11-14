@@ -8,3 +8,5 @@ SVar:TrigDiscard:DB$ Discard | Mode$ Hand
 SVar:X:Count$xPaid
 
 Oracle:Draw X cards.\nAt the beginning of the next end step, discard your hand.
+
+AI:RemoveDeck:Random
