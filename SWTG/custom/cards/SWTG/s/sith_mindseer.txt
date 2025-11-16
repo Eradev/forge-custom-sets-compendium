@@ -5,6 +5,18 @@ PT:3/3
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ HateFlag | SVarCompare$ GE1 | Execute$ TrigGainControl | TriggerZones$ Battlefield | TriggerDescription$ Hate — When CARDNAME enters, if an opponent lost life from a source other than combat damage this turn, gain control of target creature for as long as CARDNAME remains on the battlefield.
 SVar:TrigGainControl:DB$ GainControl | ValidTgts$ Creature | TgtPrompt$ Select target creature | LoseControl$ LeavesPlay | SpellDescription$ Gain control of target creature for as long as CARDNAME remains on the battlefield.
-SVar:HateFlag:PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+SVar:HateFlag:Count$YourCountersHateLL/Minus.Count$YourCountersHateCD
+
+T:Mode$ LifeLost | ValidTarget$ Opponent | Static$ True | Execute$ DBCounterLL
+SVar:DBCounterLL:DB$ PutCounter | Defined$ You | CounterType$ HateLL | CounterNum$ Y
+SVar:Y:TriggerCount$LifeAmount
+
+T:Mode$ DamageDone | ValidTarget$ Opponent | CombatDamage$ True | Static$ True | Execute$ DBCounter
+SVar:DBCounter:DB$ PutCounter | Defined$ You | CounterType$ HateCD | CounterNum$ X
+SVar:X:TriggerCount$DamageAmount
+
+T:Mode$ Phase | Phase$ Cleanup | Execute$ CleanHateCD | Static$ True
+SVar:CleanHateCD:DB$ RemoveCounter | Defined$ You | CounterType$ HateCD | CounterNum$ All | SubAbility$ CleanHateLL
+SVar:CleanHateLL:DB$ RemoveCounter | Defined$ You | CounterType$ HateLL | CounterNum$ All
 
 Oracle:Hate — When Sith Mindseer enters, if an opponent lost life from a source other than combat damage this turn, gain control of target creature for as long as Sith Mindseer remains on the battlefield.
