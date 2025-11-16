@@ -7,6 +7,18 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.S
 SVar:TrigBranch:DB$ Branch | BranchConditionSVar$ HateFlag | BranchConditionSVarCompare$ GE1 | ValidTgts$ Creature | TgtPrompt$ Select target creature | TrueSubAbility$ ToLibrary | FalseSubAbility$ ToHand
 SVar:ToHand:DB$ ChangeZone | Origin$ Battlefield | Destination$ Hand | Defined$ Targeted
 SVar:ToLibrary:DB$ ChangeZone | Origin$ Battlefield | Destination$ Library | Defined$ Targeted | LibraryPosition$ 0
-SVar:HateFlag:PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+SVar:HateFlag:Count$YourCountersHateLL/Minus.Count$YourCountersHateCD
+
+T:Mode$ LifeLost | ValidTarget$ Opponent | Static$ True | Execute$ DBCounterLL
+SVar:DBCounterLL:DB$ PutCounter | Defined$ You | CounterType$ HateLL | CounterNum$ Y
+SVar:Y:TriggerCount$LifeAmount
+
+T:Mode$ DamageDone | ValidTarget$ Opponent | CombatDamage$ True | Static$ True | Execute$ DBCounter
+SVar:DBCounter:DB$ PutCounter | Defined$ You | CounterType$ HateCD | CounterNum$ X
+SVar:X:TriggerCount$DamageAmount
+
+T:Mode$ Phase | Phase$ Cleanup | Execute$ CleanHateCD | Static$ True
+SVar:CleanHateCD:DB$ RemoveCounter | Defined$ You | CounterType$ HateCD | CounterNum$ All | SubAbility$ CleanHateLL
+SVar:CleanHateLL:DB$ RemoveCounter | Defined$ You | CounterType$ HateLL | CounterNum$ All
 
 Oracle:When Sith Manipulator enters, return target creature to its owner's hand.\nHate — If an opponent lost life from a source other than combat damage this turn, put that card on top of its owner's library instead.
