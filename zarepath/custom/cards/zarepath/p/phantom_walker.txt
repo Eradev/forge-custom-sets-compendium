@@ -7,6 +7,6 @@ K:Menace
 
 K:Crew:3
 
-S:Mode$ AlternativeCost | ValidSA$ Activated.Crew+Vehicle | ValidCard$ Card.Self | ValidPlayer$ You | Cost$ ExileFromGrave<2/Creature> | Description$ You may exile two creature cards from your graveyard rather than pay CARDNAME's crew cost.
+S:Mode$ AlternativeCost | ValidSA$ Activated.Crew+Vehicle | ValidCard$ Card.Self | ValidPlayer$ You | Cost$ ExileFromGrave<2/Creature> | Description$ You may exile two creature cards from your graveyard rather than pay this Vehicle's crew cost.
 
-Oracle:Menace\nCrew 3 (Tap any number of creatures you control with total power 3 or more: This Vehicle becomes an artifact creature until end of turn.)\nYou may exile two creature cards from your graveyard rather than pay Phantom Walker's crew cost.
+Oracle:Menace\nCrew 3 (Tap any number of creatures you control with total power 3 or more: This Vehicle becomes an artifact creature until end of turn.)\nYou may exile two creature cards from your graveyard rather than pay this Vehicle's crew cost.

@@ -5,9 +5,9 @@ PT:4/4
 
 K:Flying
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainLife | TriggerDescription$ When CARDNAME enters, you gain 6 life.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainLife | TriggerDescription$ When this creature enters, you gain 6 life.
 SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 6
 
 K:Crew:2
 
-Oracle:Flying\nWhen TR-12 Deliverer enters, you gain 6 life.\nCrew 2 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)
+Oracle:Flying\nWhen this creature enters, you gain 6 life.\nCrew 2 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)
