@@ -5,6 +5,18 @@ PT:5/4
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ HateFlag | SVarCompare$ GE1 | Execute$ TrigDamage | TriggerDescription$ Hate — When CARDNAME enters, if an opponent lost life from a source other than combat damage this turn, CARDNAME deals 3 damage to any target.
 SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 3 | TgtPrompt$ Select any target
-SVar:HateFlag:PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+SVar:HateFlag:Count$YourCountersHateLL/Minus.Count$YourCountersHateCD
+
+T:Mode$ LifeLost | ValidTarget$ Opponent | Static$ True | Execute$ DBCounterLL
+SVar:DBCounterLL:DB$ PutCounter | Defined$ You | CounterType$ HateLL | CounterNum$ Y
+SVar:Y:TriggerCount$LifeAmount
+
+T:Mode$ DamageDone | ValidTarget$ Opponent | CombatDamage$ True | Static$ True | Execute$ DBCounter
+SVar:DBCounter:DB$ PutCounter | Defined$ You | CounterType$ HateCD | CounterNum$ X
+SVar:X:TriggerCount$DamageAmount
+
+T:Mode$ Phase | Phase$ Cleanup | Execute$ CleanHateCD | Static$ True
+SVar:CleanHateCD:DB$ RemoveCounter | Defined$ You | CounterType$ HateCD | CounterNum$ All | SubAbility$ CleanHateLL
+SVar:CleanHateLL:DB$ RemoveCounter | Defined$ You | CounterType$ HateLL | CounterNum$ All
 
 Oracle:Hate — When Sith Marauder enters, if an opponent lost life from a source other than combat damage this turn, Sith Marauder deals 3 damage to any target.
