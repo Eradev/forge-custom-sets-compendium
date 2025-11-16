@@ -18,8 +18,8 @@ SVar:DBCounterLL:DB$ PutCounter | Defined$ You | CounterType$ HateLL | CounterNu
 SVar:Y:TriggerCount$LifeAmount
 
 T:Mode$ DamageDone | ValidTarget$ Opponent | CombatDamage$ True | Static$ True | Execute$ DBCounter
-SVar:DBCounter:DB$ PutCounter | Defined$ You | CounterType$ HateCD | CounterNum$ X
-SVar:X:TriggerCount$DamageAmount
+SVar:DBCounter:DB$ PutCounter | Defined$ You | CounterType$ HateCD | CounterNum$ DmgX
+SVar:DmgX:TriggerCount$DamageAmount
 
 T:Mode$ Phase | Phase$ Cleanup | Execute$ CleanHateCD | Static$ True
 SVar:CleanHateCD:DB$ RemoveCounter | Defined$ You | CounterType$ HateCD | CounterNum$ All | SubAbility$ CleanHateLL
