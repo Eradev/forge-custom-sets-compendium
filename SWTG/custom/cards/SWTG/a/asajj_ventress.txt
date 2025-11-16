@@ -13,7 +13,7 @@ T:Mode$ Attacks | ValidCard$ Card.Self | CheckSVar$ HateFlag | SVarCompare$ GE1 
 SVar:TrigMustBlock:DB$ MustBlock | ValidTgts$ Creature | TgtPrompt$ Choose target creature to block this card
 SVar:HateFlag:Count$YourCountersHateLL/Minus.Count$YourCountersHateCD
 
-T:Mode$ LifeLost | ValidTarget$ Opponent | Static$ True | Execute$ DBCounterLL
+T:Mode$ LifeLost | ValidPlayer$ Opponent | Static$ True | Execute$ DBCounterLL
 SVar:DBCounterLL:DB$ PutCounter | Defined$ You | CounterType$ HateLL | CounterNum$ Y
 SVar:Y:TriggerCount$LifeAmount
 

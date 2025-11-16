@@ -8,7 +8,7 @@ SVar:DBPump:DB$ Pump | Defined$ Remembered | KW$ Lifelink & Haste | Duration$ Pe
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:HateFlag:Count$YourCountersHateLL/Minus.Count$YourCountersHateCD
 
-T:Mode$ LifeLost | ValidTarget$ Opponent | Static$ True | Execute$ DBCounterLL
+T:Mode$ LifeLost | ValidPlayer$ Opponent | Static$ True | Execute$ DBCounterLL
 SVar:DBCounterLL:DB$ PutCounter | Defined$ You | CounterType$ HateLL | CounterNum$ Y
 SVar:Y:TriggerCount$LifeAmount
 

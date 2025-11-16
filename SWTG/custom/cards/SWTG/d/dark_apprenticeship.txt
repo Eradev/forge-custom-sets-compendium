@@ -6,7 +6,7 @@ T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | CheckSVar$ HateFlag | SV
 SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Player | NumDmg$ 2 | TgtPrompt$ Select target player | SpellDescription$ CARDNAME deals 2 damage to target player.
 SVar:HateFlag:Count$YourCountersHateLL/Minus.Count$YourCountersHateCD
 
-T:Mode$ LifeLost | ValidTarget$ Opponent | Static$ True | Execute$ DBCounterLL
+T:Mode$ LifeLost | ValidPlayer$ Opponent | Static$ True | Execute$ DBCounterLL
 SVar:DBCounterLL:DB$ PutCounter | Defined$ You | CounterType$ HateLL | CounterNum$ Y
 SVar:Y:TriggerCount$LifeAmount
 

@@ -7,7 +7,7 @@ SVar:HateFlag:Count$YourCountersHateLL/Minus.Count$YourCountersHateCD
 SVar:TrigEffect:DB$ GainLife | Defined$ You | LifeAmount$ 2 | SubAbility$ DBToken
 SVar:DBToken:DB$ Token | TokenAmount$ 1 | TokenScript$ royal_guard | TokenOwner$ You
 
-T:Mode$ LifeLost | ValidTarget$ Opponent | Static$ True | Execute$ DBCounterLL
+T:Mode$ LifeLost | ValidPlayer$ Opponent | Static$ True | Execute$ DBCounterLL
 SVar:DBCounterLL:DB$ PutCounter | Defined$ You | CounterType$ HateLL | CounterNum$ Y
 SVar:Y:TriggerCount$LifeAmount
 

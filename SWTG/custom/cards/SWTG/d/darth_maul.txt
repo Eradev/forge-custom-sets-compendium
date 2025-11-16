@@ -12,7 +12,7 @@ SVar:TrigCantBlock:DB$ Effect | ValidTgts$ Creature | TgtPrompt$ Choose target c
 SVar:STCantBlock:Mode$ CantBlockBy | ValidAttacker$ Creature.EffectSource | ValidBlocker$ Creature.IsRemembered | Description$ {c:Remembered} can't block EFFECTSOURCE this turn.
 SVar:HateFlag:Count$YourCountersHateLL/Minus.Count$YourCountersHateCD
 
-T:Mode$ LifeLost | ValidTarget$ Opponent | Static$ True | Execute$ DBCounterLL
+T:Mode$ LifeLost | ValidPlayer$ Opponent | Static$ True | Execute$ DBCounterLL
 SVar:DBCounterLL:DB$ PutCounter | Defined$ You | CounterType$ HateLL | CounterNum$ Y
 SVar:Y:TriggerCount$LifeAmount
 

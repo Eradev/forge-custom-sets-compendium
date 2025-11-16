@@ -9,7 +9,7 @@ SVar:ToHand:DB$ ChangeZone | Origin$ Battlefield | Destination$ Hand | Defined$ 
 SVar:ToLibrary:DB$ ChangeZone | Origin$ Battlefield | Destination$ Library | Defined$ Targeted | LibraryPosition$ 0
 SVar:HateFlag:Count$YourCountersHateLL/Minus.Count$YourCountersHateCD
 
-T:Mode$ LifeLost | ValidTarget$ Opponent | Static$ True | Execute$ DBCounterLL
+T:Mode$ LifeLost | ValidPlayer$ Opponent | Static$ True | Execute$ DBCounterLL
 SVar:DBCounterLL:DB$ PutCounter | Defined$ You | CounterType$ HateLL | CounterNum$ Y
 SVar:Y:TriggerCount$LifeAmount
 
