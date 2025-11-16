@@ -8,6 +8,18 @@ SVar:TrigScry:DB$ Scry | ScryNum$ 2
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | CheckSVar$ HateFlag | SVarCompare$ GE1 | Execute$ TrigDraw | TriggerDescription$ Hate — When CARDNAME dies, if an opponent lost life from a source other than combat damage this turn, draw a card.
 SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
-SVar:HateFlag:PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+SVar:HateFlag:Count$YourCountersHateLL/Minus.Count$YourCountersHateCD
+
+T:Mode$ LifeLost | ValidTarget$ Opponent | Static$ True | Execute$ DBCounterLL
+SVar:DBCounterLL:DB$ PutCounter | Defined$ You | CounterType$ HateLL | CounterNum$ Y
+SVar:Y:TriggerCount$LifeAmount
+
+T:Mode$ DamageDone | ValidTarget$ Opponent | CombatDamage$ True | Static$ True | Execute$ DBCounter
+SVar:DBCounter:DB$ PutCounter | Defined$ You | CounterType$ HateCD | CounterNum$ X
+SVar:X:TriggerCount$DamageAmount
+
+T:Mode$ Phase | Phase$ Cleanup | Execute$ CleanHateCD | Static$ True
+SVar:CleanHateCD:DB$ RemoveCounter | Defined$ You | CounterType$ HateCD | CounterNum$ All | SubAbility$ CleanHateLL
+SVar:CleanHateLL:DB$ RemoveCounter | Defined$ You | CounterType$ HateLL | CounterNum$ All
 
 Oracle:When Sith Sorcerer enters, scry 2.\nHate — When Sith Sorcerer dies, if an opponent lost life from a source other than combat damage this turn, draw a card.
