@@ -4,6 +4,18 @@ Types:Enchantment
 
 T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | CheckSVar$ HateFlag | SVarCompare$ GE1 | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Hate — At the beginning of your end step, if an opponent lost life from a source other than combat damage this turn, CARDNAME deals 2 damage to target player.
 SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Player | NumDmg$ 2 | TgtPrompt$ Select target player | SpellDescription$ CARDNAME deals 2 damage to target player.
-SVar:HateFlag:PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+SVar:HateFlag:Count$YourCountersHateLL/Minus.Count$YourCountersHateCD
+
+T:Mode$ LifeLost | ValidTarget$ Opponent | Static$ True | Execute$ DBCounterLL
+SVar:DBCounterLL:DB$ PutCounter | Defined$ You | CounterType$ HateLL | CounterNum$ Y
+SVar:Y:TriggerCount$LifeAmount
+
+T:Mode$ DamageDone | ValidTarget$ Opponent | CombatDamage$ True | Static$ True | Execute$ DBCounter
+SVar:DBCounter:DB$ PutCounter | Defined$ You | CounterType$ HateCD | CounterNum$ X
+SVar:X:TriggerCount$DamageAmount
+
+T:Mode$ Phase | Phase$ Cleanup | Execute$ CleanHateCD | Static$ True
+SVar:CleanHateCD:DB$ RemoveCounter | Defined$ You | CounterType$ HateCD | CounterNum$ All | SubAbility$ CleanHateLL
+SVar:CleanHateLL:DB$ RemoveCounter | Defined$ You | CounterType$ HateLL | CounterNum$ All
 
 Oracle:Hate — At the beginning of your end step, if an opponent lost life from a source other than combat damage this turn, Dark Apprenticeship deals 2 damage to target player.
