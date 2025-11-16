@@ -2,12 +2,11 @@ Name:Horrific Invocation
 ManaCost:4 G
 Types:Sorcery
 
-K:Rerun
+A:SP$ ChangeZone | Origin$ Hand | Destination$ Battlefield | ChangeType$ Permanent | Optional$ True | SpellDescription$ You may put a permanent card from your hand onto the battlefield.
 
-A:SP$ ChangeZone | Origin$ Hand | Destination$ Battlefield | ChangeType$ Permanent | Optional$ True | SpellDescription$ You may put a permanent card from your hand onto the battlefield. | SubAbility$ ExileSelf
-SVar:ExileSelf:DB$ ChangeZone | Origin$ Stack | Destination$ Exile | ConditionDefined$ Self | ConditionPresent$ Card.wasCastFromYourHandByYou
-
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Exile | Execute$ CastRerun | TriggerDescription$ Rerun — Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.
-SVar:CastRerun:DB$ Play | Defined$ Self | Amount$ 1 | Controller$ You | WithoutManaCost$ True | Optional$ True | ActivationZone$ Exile
+R:Event$ Moved | ValidLKI$ Card.Self+wasCastFromHand | Origin$ Stack | Destination$ Graveyard | Fizzle$ False | ReplaceWith$ RerunExile | Description$ Rerun (If you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.)
+SVar:RerunExile:DB$ ChangeZone | Defined$ ReplacedCard | Origin$ Stack | Destination$ Exile | RememberChanged$ True | SubAbility$ RerunDelayTrig
+SVar:RerunDelayTrig:DB$ DelayedTrigger | Mode$ ChangesZone | ValidCard$ Creature.YouCtrl | Origin$ Battlefield | Destination$ Graveyard | OptionalDecider$ You | RememberObjects$ Remembered | Execute$ CastRerun | TriggerDescription$ Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.
+SVar:CastRerun:DB$ Play | Defined$ Remembered | WithoutManaCost$ True
 
 Oracle:You may put a permanent card from your hand onto the battlefield.\nRerun — Then if you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.

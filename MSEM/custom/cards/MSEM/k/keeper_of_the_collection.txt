@@ -6,14 +6,13 @@ PT:2/4
 T:Mode$ SpellCast | ValidCard$ Card.wasCastFromExile | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCopy | TriggerDescription$ Whenever you cast a spell from exile, copy that spell. You may choose new targets for the copy.
 SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | MayChooseTarget$ True
 
-A:AB$ DelayedTrigger | Cost$ B Discard<1/Card> | Mode$ SpellCast | ValidCard$ Card.wasCastFromYourHand | ValidActivatingPlayer$ You | ThisTurn$ True | Execute$ ExileSpell | ActivationLimit$ 1 | SpellDescription$ When you next cast a spell from your hand this turn, it gains rerun. Activate only once each turn. | TriggerDescription$ When you next cast a spell from your hand this turn, it gains rerun. (Exile it as it resolves. Whenever a creature you control dies, you may cast that card from exile without paying its mana cost.)
-SVar:ExileSpell:DB$ ChangeZone | Defined$ TriggeredCard.withoutRerun | Origin$ Stack | Destination$ Exile | RememberChanged$ True
+A:AB$ DelayedTrigger | Cost$ B Discard<1/Card> | Mode$ SpellCast | ValidCard$ Card.wasCastFromYourHand | ValidActivatingPlayer$ You | ThisTurn$ True | Execute$ AddRerunKW | ActivationLimit$ 1 | SpellDescription$ When you next cast a spell from your hand this turn, it gains rerun. Activate only once each turn.
+SVar:AddRerunKW:DB$ Pump | Defined$ TriggeredCard | KW$ Rerun | PumpZone$ Stack
 
-T:Mode$ ChangesZone | ValidCard$ Card.IsRemembered | Origin$ Exile | Destination$ Any | Execute$ ForgetCard | Static$ True
-SVar:ForgetCard:DB$ Cleanup | ForgetDefined$ TriggeredCard
-
-S:Mode$ Continuous | EffectZone$ All | Affected$ Card.IsRemembered | AffectedZone$ Exile | AddTrigger$ RerunTrig
-SVar:RerunTrig:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Exile | Execute$ CastRerun | TriggerDescription$ Rerun — Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.
-SVar:CastRerun:DB$ Play | Defined$ Self | Controller$ You | WithoutManaCost$ True | Optional$ True | ActivationZone$ Exile
+S:Mode$ Continuous | EffectZone$ Battlefield | AffectedZone$ Stack | Affected$ Card.withRerun | AddReplacementEffect$ AddRerunImpl
+SVar:AddRerunImpl:Event$ Moved | ValidCard$ Card.Self | Origin$ Stack | ReplaceWith$ RerunExile | Description$ Rerun (If you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.)
+SVar:RerunExile:DB$ ChangeZone | Defined$ ReplacedCard | Origin$ All | Destination$ Exile | RememberChanged$ True | SubAbility$ RerunDelayTrig
+SVar:RerunDelayTrig:DB$ DelayedTrigger | Mode$ ChangesZone | ValidCard$ Creature.YouCtrl | Origin$ Battlefield | Destination$ Graveyard | OptionalDecider$ You | RememberObjects$ Remembered | Execute$ CastRerun | TriggerDescription$ Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.
+SVar:CastRerun:DB$ Play | Defined$ Remembered | WithoutManaCost$ True
 
 Oracle:Whenever you cast a spell from exile, copy that spell. You may choose new targets for the copy.\n{B}, Discard a card: When you next cast a spell from your hand this turn, it gains rerun. Activate only once each turn. (Exile it as it resolves if you cast it from your hand. Whenever a creature you control dies, you may cast that card from exile without paying its mana cost.)
