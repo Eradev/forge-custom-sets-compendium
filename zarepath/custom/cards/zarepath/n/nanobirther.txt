@@ -3,7 +3,7 @@ ManaCost:2 G G
 Types:Artifact Creature Nanobot
 PT:1/1
 
-T:Mode$ SpellCast | ValidCard$ Creature | ValidActivatingPlayer$ You | Execute$ TrigDBCopy | TriggerZones$ Battlefield | TriggerDescription$ Whenever you cast a creature spell, create a token that's a copy of CARDNAME.
+T:Mode$ SpellCast | ValidCard$ Creature | ValidActivatingPlayer$ You | Execute$ TrigDBCopy | TriggerZones$ Battlefield | TriggerDescription$ Whenever you cast a creature spell, create a token that's a copy of this creature.
 SVar:TrigDBCopy:DB$ CopyPermanent | Defined$ Self
 
-Oracle:Whenever you cast a creature spell, create a token that's a copy of Nanobirther.
+Oracle:Whenever you cast a creature spell, create a token that's a copy of this creature.

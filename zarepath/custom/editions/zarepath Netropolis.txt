@@ -71,7 +71,7 @@ Booster=7 Common, 5 Uncommon, 2 RareMythic, 1 BasicLand
 63 U Moderator's Discretion @Ian Llanas
 64 C Net Run @Tibor Bedats
 65 C NuGolem @Noistromo
-66 C Private Eye (NET) @Nathantwist
+66 C Private Eye (NET) @Nathantwist ${"flavorName": "Private Eye"}
 67 U Quarantine @Hybridgothica
 68 C Reprogram @KypcaHT
 69 R Scion Mimic @Sbalac
@@ -143,13 +143,13 @@ Booster=7 Common, 5 Uncommon, 2 RareMythic, 1 BasicLand
 135 C Junkyard Boss @Neisbeis
 136 U Lab Wrecker @Cryptcrawler
 137 C Lizardman Outbreak @AspectusFuturus
-138 R Lock and Load (NET) @Ameeeeba
+138 R Lock and Load (NET) @Ameeeeba ${"flavorName": "Lock and Load"}
 139 M Mecha Dragon @Tapwing
 140 R Motley Crew @HOON
 141 R MX Juggernaut @LasloLF
 142 C Out for Blood @Maciej Kuciara
 143 U Particular Skills @Mlaapas
-144 C Quick Draw (NET) @Florent Llamas
+144 C Quick Draw (NET) @Florent Llamas ${"flavorName": "Quick Draw"}
 145 U Rabid Tri-Limb @DarioJart
 146 C Road Rebel @Perun-tworek
 147 C Robotic Revolutionary @Fredaugis
@@ -215,7 +215,7 @@ Booster=7 Common, 5 Uncommon, 2 RareMythic, 1 BasicLand
 207 U Night Hacker @Yvan Quinet
 208 R Quickdraw Vigilante @Guesscui
 209 R Re-spec @DOFRESH
-210 U Short Circuit (NET) @REAL-ELMARIACHI
+210 U Short Circuit (NET) @REAL-ELMARIACHI ${"flavorName": "Short Circuit"}
 211 U Skyguard Ascendant @Eddy Shintuku
 212 R Skyguard Sovereign @Aiyeahhs
 213 R Stirring Pride @KypcaHT
@@ -269,7 +269,7 @@ Booster=7 Common, 5 Uncommon, 2 RareMythic, 1 BasicLand
 # Duplicated as there is no r_1_1_lizard_mutant_haste
 3 r_1_1_lizard_mutant_haste @Nopespider95
 5 c_2_2_a_construct @GeorgeLovesyArt (DeviantArt)
-6 c_3_3_a_equalizer @Duster132 (DeviantArt)
+6 equalizer @Duster132 (DeviantArt)
 7 c_a_weapon_equipment @JasonTN
 8 c_a_weapon_equipment @Klaus Witimann
 9 c_a_weapon_equipment @Yang Bilong

@@ -4,8 +4,8 @@ Types:Creature Mutant Rogue
 PT:2/1
 
 K:ETBReplacement:Other:ChooseCT
-SVar:ChooseCT:DB$ ChooseType | Type$ Creature | AILogic$ MostProminentInComputerDeck | SpellDescription$ As CARDNAME enters, choose a creature type.
-S:Mode$ Continuous | Affected$ Card.Self | AddType$ ChosenType | Description$ CARDNAME is the chosen type in addition to its other types.
+SVar:ChooseCT:DB$ ChooseType | Type$ Creature | AILogic$ MostProminentInComputerDeck | SpellDescription$ As this creature enters, choose a creature type.
+S:Mode$ Continuous | Affected$ Card.Self | AddType$ ChosenType | Description$ This creature is the chosen type in addition to its other types.
 
 T:Mode$ DamageDone | ValidSource$ Creature.YouCtrl+ChosenType | ValidTarget$ Opponent | CombatDamage$ True | Execute$ DBDig | TriggerZones$ Battlefield
 SVar:DBDig:DB$ Dig | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBAnimate | StackDescription$ {p:You} uploads the top card of their library. | SpellDescription$ Upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
@@ -15,4 +15,4 @@ SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:ABRemoveUpload:AB$ RemoveCounter | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBDownload | PrecostDesc$ Download – | SpellDescription$ Return this card to your hand any time you could cast a sorcery.
 SVar:DBDownload:DB$ ChangeZone | Defined$ Self | Hidden$ True | Origin$ Exile | Destination$ Hand | StackDescription$ SpellDescription
 
-Oracle:As Vat-Grown Infiltrator enters, choose a creature type.\nVat-Grown Infiltrator is the chosen type in addition to its other types.\nWhenever a creature you control of the chosen type deals combat damage to an opponent, upload the top card of your library. (To upload a card, exile it. Its owner may pay  to return it to their hand any time they could cast a sorcery.)
+Oracle:As this creature enters, choose a creature type.\nThis creature is the chosen type in addition to its other types.\nWhenever a creature you control of the chosen type deals combat damage to an opponent, upload the top card of your library. (To upload a card, exile it. Its owner may pay  to return it to their hand any time they could cast a sorcery.)

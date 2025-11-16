@@ -5,7 +5,7 @@ Sets released by [zarepath](https://www.planesculptors.net/user/zarepath).
 ## Set implementation progress
 
 ```text
-Netropolis (NET) - 100% (255/255)
+Netropolis (NET) - 100%
 ```
 
 ## How to install?

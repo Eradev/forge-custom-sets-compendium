@@ -10,5 +10,3 @@ SVar:DBControl:DB$ ControlPlayer | Defined$ DelayTriggerRemembered
 SVar:DBExile:DB$ ChangeZone | Origin$ Stack | Destination$ Exile | StackDescription$ None
 
 Oracle:Target player takes another turn after this one. You control that player during their next two turns. Exile Strings of the Masquerade.
-
-
