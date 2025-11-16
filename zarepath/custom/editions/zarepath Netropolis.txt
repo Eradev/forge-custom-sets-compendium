@@ -269,7 +269,7 @@ Booster=7 Common, 5 Uncommon, 2 RareMythic, 1 BasicLand
 # Duplicated as there is no r_1_1_lizard_mutant_haste
 3 r_1_1_lizard_mutant_haste @Nopespider95
 5 c_2_2_a_construct @GeorgeLovesyArt (DeviantArt)
-6 c_3_3_a_equalizer @Duster132 (DeviantArt)
+6 equalizer @Duster132 (DeviantArt)
 7 c_a_weapon_equipment @JasonTN
 8 c_a_weapon_equipment @Klaus Witimann
 9 c_a_weapon_equipment @Yang Bilong
