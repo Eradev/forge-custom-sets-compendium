@@ -5,6 +5,6 @@ PT:0/2
 
 A:AB$ Draw | Cost$ T | Defined$ You | SpellDescription$ Draw a card.
 
-A:AB$ Untap | Cost$ 4 | SpellDescription$ Untap CARDNAME.
+A:AB$ Untap | Cost$ 4 | SpellDescription$ Untap this creature.
 
-Oracle:{T}: Draw a card.\n{4}: Untap Automated Archivist.
+Oracle:{T}: Draw a card.\n{4}: Untap this creature.

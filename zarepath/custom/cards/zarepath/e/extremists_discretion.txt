@@ -3,8 +3,10 @@ ManaCost:3 R
 Types:Instant
 
 A:SP$ Charm | Cost$ 3 R | Choices$ DBDmgC,DBDmgP
+
 SVar:DBDmgC:DB$ DealDamage | ValidTgts$ Creature | AILogic$ PowerDmg | NumDmg$ X | ConditionDefined$ Targeted | ConditionPresent$ Creature | ConditionCompare$ EQ1 | SpellDescription$ Extremist's Discretion deals damage to target creature equal to that creature's power.
 SVar:X:Targeted$CardPower
+
 SVar:DBDmgP:DB$ DealDamage | ValidTgts$ Player | NumDmg$ Y | SpellDescription$ CARDNAME deals damage to target player equal to the number of cards in that player's hand.
 SVar:Y:TargetedPlayer$CardsInHand
 

@@ -5,9 +5,9 @@ PT:3/3
 
 K:Haste
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPumpAll | TriggerDescription$ When CARDNAME enters, other creatures you control get +1/+0 and gain haste until end of turn.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPumpAll | TriggerDescription$ When this Vehicle enters, other creatures you control get +1/+0 and gain haste until end of turn.
 SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | KW$ Haste
 
 K:Crew:1
 
-Oracle:Haste\nWhen Blitz Suit enters, other creatures you control get +1/+0 and gain haste until end of turn.\nCrew 1 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)
+Oracle:Haste\nWhen this Vehicle enters, other creatures you control get +1/+0 and gain haste until end of turn.\nCrew 1 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)

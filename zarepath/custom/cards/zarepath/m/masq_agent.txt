@@ -3,11 +3,11 @@ ManaCost:2 U
 Types:Creature Human Rogue
 PT:3/2
 
-T:Mode$ BecomesTarget | ValidTarget$ Card.Self | TriggerZones$ Battlefield | ValidSource$ Spell | Execute$ TrigSac | TriggerDescription$ When CARDNAME becomes the target of a spell, sacrifice it.
+T:Mode$ BecomesTarget | ValidTarget$ Card.Self | TriggerZones$ Battlefield | ValidSource$ Spell | Execute$ TrigSac | TriggerDescription$ When this creature becomes the target of a spell, sacrifice it.
 SVar:TrigSac:DB$ Sacrifice | Defined$ Self
 
-S:Mode$ CantBlockBy | ValidAttacker$ Card.Self | ValidBlocker$ Creature.nonRogue | Description$ CARDNAME can't be blocked except by Rogues.
+S:Mode$ CantBlockBy | ValidAttacker$ Card.Self | ValidBlocker$ Creature.nonRogue | Description$ This creature can't be blocked except by Rogues.
 
-Oracle:When Masq Agent becomes the target of a spell, sacrifice it.\nMasq Agent can't be blocked except by Rogues.
+Oracle:When this creature becomes the target of a spell, sacrifice it.\nThis creature can't be blocked except by Rogues.
 
 SVar:Targeting:Dies

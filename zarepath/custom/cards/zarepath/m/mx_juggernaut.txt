@@ -7,11 +7,11 @@ K:Trample
 
 K:Haste
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSteal | TriggerDescription$ When CARDNAME enters, gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.
-SVar:TrigSteal:DB$ GainControl | ValidTgts$ Creature | TgtPrompt$ Select target creature | LoseControl$ EOT | Untap$ True | AddKWs$ Haste | SpellDescription$ Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSteal | TriggerDescription$ When this Vehicle enters, gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.
+SVar:TrigSteal:DB$ GainControl | ValidTgts$ Creature | TgtPrompt$ Select target creature | LoseControl$ EOT | Untap$ True | AddKWs$ Haste
 
 K:Crew:3
 
-Oracle:Trample, haste\nWhen MX Juggernaut enters, gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.\nCrew 3 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)
+Oracle:Trample, haste\nWhen this Vehicle enters, gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.\nCrew 3 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)
 
 SVar:PlayMain1:OPPONENTCREATURES
