@@ -11,7 +11,8 @@ SVar:X:Count$Valid Creature.blockingTriggeredAttacker
 
 T:Mode$ Attacks | ValidCard$ Card.Self | CheckSVar$ HateFlag | SVarCompare$ GE1 | Execute$ TrigMustBlock | TriggerDescription$ Hate — Whenever CARDNAME attacks, if an opponent lost life from a source other than combat damage this turn, target creature blocks this turn if able.
 SVar:TrigMustBlock:DB$ MustBlock | ValidTgts$ Creature | TgtPrompt$ Choose target creature to block this card
-SVar:HateFlag:PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+SVar:HateFlag:PlayerCountRegisteredOpponents$LifeLostThisTurn/Minus.OppCombatDmg
+SVar:OppCombatDmg:PlayerCountRegisteredOpponents$DamageThisTurn/Minus.PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
 
 Oracle:Double strike\nWhen Asajj Ventress becomes blocked, she gets +1/+1 for each creature blocking her until end of turn.\nHate — Whenever Asajj Ventress attacks, if an opponent lost life from a source other than combat damage this turn, target creature blocks this turn if able.
 

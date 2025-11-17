@@ -5,6 +5,7 @@ PT:3/2
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ HateFlag | SVarCompare$ GE1 | Execute$ TrigDestroy | OptionalDecider$ You | TriggerDescription$ Hate — When CARDNAME enters, if an opponent lost life from a source other than combat damage this turn, you may destroy target nonblack creature.
 SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Creature.nonBlack | TgtPrompt$ Select target nonblack creature
-SVar:HateFlag:PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+SVar:HateFlag:PlayerCountRegisteredOpponents$LifeLostThisTurn/Minus.OppCombatDmg
+SVar:OppCombatDmg:PlayerCountRegisteredOpponents$DamageThisTurn/Minus.PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
 
 Oracle:Hate — When Sith Assassin enters, if an opponent lost life from a source other than combat damage this turn, you may destroy target nonblack creature.

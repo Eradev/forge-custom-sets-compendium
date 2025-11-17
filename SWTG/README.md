@@ -57,7 +57,8 @@ Hate — [...], if an opponent lost life from a source other than combat damage 
 To check for Hate, you can check this var if it is greater than 0:
 
 ```text
-SVar:HateFlag:PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+SVar:HateFlag:PlayerCountRegisteredOpponents$LifeLostThisTurn/Minus.OppCombatDmg
+SVar:OppCombatDmg:PlayerCountRegisteredOpponents$DamageThisTurn/Minus.PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
