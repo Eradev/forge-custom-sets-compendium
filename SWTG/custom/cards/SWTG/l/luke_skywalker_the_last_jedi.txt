@@ -1,0 +1,16 @@
+Name:Luke Skywalker, the Last Jedi
+ManaCost:2 G W
+Types:Legendary Planeswalker Luke
+Loyalty:3
+
+A:AB$ PutCounter | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | CounterType$ P1P1 | CounterNum$ 2 | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Creature | TgtPrompt$ Select up to one target creature | SpellDescription$ Put two +1/+1 counters on up to one target creature.
+
+A:AB$ ChangeZone | Cost$ SubCounter<3/LOYALTY> | Planeswalker$ True | ValidTgts$ Permanent.nonCreature | TgtPrompt$ Select target noncreature permanent | Origin$ Battlefield | Destination$ Library | LibraryPosition$ 0 | SpellDescription$ Put target noncreature permanent on top of its owner's library.
+
+A:AB$ Effect | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Luke Skywalker, the Last Jedi | Image$ emblem_luke_skywalker_the_last_jedi | ReplacementEffects$ RPreventCombat | Duration$ Permanent | SubAbility$ DBExileSelf | SpellDescription$ You get an emblem with "Prevent all damage that would be dealt to you during combat." Exile Luke Skywalker.
+SVar:RPreventCombat:Event$ DamageDone | Prevent$ True | ValidTarget$ You | IsCombat$ True | Description$ Prevent all damage that would be dealt to you during combat.
+SVar:DBExileSelf:DB$ ChangeZone | Defined$ Self | Origin$ Battlefield | Destination$ Exile
+
+Oracle:[+1]: Put two +1/+1 counters on up to one target creature.\n[-3]: Put target noncreature permanent on top of its owner's library.\n[-6]: You get an emblem with "Prevent all damage that would be dealt to you during combat." Exile Luke Skywalker.
+
+DeckHas:Ability$Counters

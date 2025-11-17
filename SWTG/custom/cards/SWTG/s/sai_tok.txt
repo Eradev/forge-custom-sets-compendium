@@ -1,0 +1,7 @@
+Name:Sai Tok
+ManaCost:B B
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Creature.cmcLE4,Planeswalker.cmcLE4 | TgtPrompt$ Select target creature or planeswalker with mana value 4 or less | SpellDescription$ Destroy target creature or planeswalker with mana value 4 or less.
+
+Oracle:Destroy target creature or planeswalker with mana value 4 or less.

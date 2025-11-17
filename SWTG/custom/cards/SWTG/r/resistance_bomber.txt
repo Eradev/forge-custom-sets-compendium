@@ -1,0 +1,17 @@
+Name:Resistance Bomber
+ManaCost:3 R
+Types:Artifact Creature Rebel Starship
+PT:2/2
+
+K:Spaceflight
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight & BlockBySpaceflight
+SVar:BlockSpaceflight:Mode$ CantBlockBy | ValidAttacker$ Creature.withoutSpaceflight | ValidBlocker$ Creature.Self | Description$ This creature can only block or be blocked by creatures with spaceflight.
+SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpaceflight+withoutSpacereach | ValidAttacker$ Creature.Self
+
+K:etbCounter:CHARGE:1
+
+A:AB$ DealDamage | Cost$ SubCounter<1/CHARGE> | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ 5 | IsPresent$ Creature.attacking+Self | PresentCompare$ EQ1 | SpellDescription$ Remove a charge counter from this creature: This creature deals 5 damage to target creature. Activate this ability only if this creature is attacking.
+
+Oracle:Spaceflight (This creature can only block or be blocked by creatures with spaceflight.)\nThis creature enters with a charge counter on it.\nRemove a charge counter from this creature: This creature deals 5 damage to target creature. Activate this ability only if this creature is attacking.
+
+DeckHas:Ability$Counters

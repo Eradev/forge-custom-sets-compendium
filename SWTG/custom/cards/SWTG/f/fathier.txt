@@ -1,0 +1,10 @@
+Name:Fathier
+ManaCost:2 R R
+Types:Creature Beast
+PT:3/3
+
+K:Haste
+
+K:Monstrosity:2:4 R R
+
+Oracle:Haste\n{4}{R}{R}: Monstrosity 2. (If this creature isn't monstrous, put two +1/+1 counters on it and it becomes monstrous.)

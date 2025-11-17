@@ -1,0 +1,11 @@
+Name:Code Slice
+ManaCost:R
+Types:Sorcery
+
+A:SP$ PutCounter | ValidTgts$ Creature | TgtPrompt$ Select target creature | CounterType$ BOUNTY | CounterNum$ 1 | IsCurse$ True | SubAbility$ DBCantBlock | SpellDescription$ Put a bounty counter on target creature.
+SVar:DBCantBlock:DB$ PumpAll | ValidCards$ Artifact.Creature+counters_GE1_BOUNTY | KW$ HIDDEN CARDNAME can't block. | SpellDescription$ Artifact creatures with bounty counters on them can't block this turn.
+
+Oracle:Put a bounty counter on target creature.\nArtifact creatures with bounty counters on them can't block this turn.
+
+DeckHas:Ability$Counters
+SVar:PlayMain1:TRUE

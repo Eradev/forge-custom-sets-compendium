@@ -1,0 +1,8 @@
+Name:Inspire
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Untap | ValidTgts$ Creature | TgtPrompt$ Select target creature | SubAbility$ DBDraw | SpellDescription$ Untap target creature.
+SVar:DBDraw:DB$ Draw | SpellDescription$ Draw a card.
+
+Oracle:Untap target creature.\nDraw a card.
