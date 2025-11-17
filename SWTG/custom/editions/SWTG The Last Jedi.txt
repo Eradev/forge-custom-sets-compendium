@@ -1,0 +1,50 @@
+[metadata]
+Code=SWTG_TLJ
+Date=2019-05-01
+Name=SWTG The Last Jedi
+Type=Custom
+Foil=NotSupported
+
+[cards]
+1 R Captain Phasma @Yasar Vurdem
+2 C Glorious Charge @Andreas Bazylweski
+3 C Vulptex @William Burkert
+4 C Delay Tactic @HSR
+5 R Force Projection @cylonka
+6 C Inspire @BriLan Imagery
+7 C Mouse Droid @Kuang Hong
+8 U Canto Bight Enforcer @William Burkert
+9 M First Order Dreadnought @Carl Milner
+10 U Sai Tok @Drew Baker
+11 C Code Slice @Kieran Yanner
+12 C Fathier @Art of The Last Jedi
+13 R Praetorian Trooper @Topps
+14 U Resistance Bomber @X-Wing Miniatures
+15 U Porg Nest @TLJ: The Visual Dictionary
+16 R TIE Silencer @Lucasfilm
+17 M Luke Skywalker, the Last Jedi @Sarayu-Ruangvesh
+18 M Supreme Leader Snoke @Iain Reed
+19 C Force Telepathy @Rene Muñoz Rios
+20 R Cantonica Casino @Khaj
+21 L Plains @David Hakobian
+22 L Island @David Alonso Lara
+
+[promo]
+5★ R Force Projection @Yaroslav Lotsmanov
+
+[tokens]
+1 w_1_1_trooper @jamga
+2 porg @Emma Nettip
+
+[other]
+3 emblem_luke_skywalker_the_last_jedi @Sarayu-Ruangvesh
+
+[CreatureTypes]
+Droid:Droids
+Hunter:Hunters
+Starship:Starships
+Trooper:Troopers
+
+[WalkerTypes]
+Luke
+Snoke
