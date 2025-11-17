@@ -10,18 +10,7 @@ K:Haste
 T:Mode$ Attacks | ValidCard$ Card.Self | CheckSVar$ HateFlag | SVarCompare$ GE1 | Execute$ TrigCantBlock | TriggerDescription$ Hate — Whenever CARDNAME attacks, if an opponent lost life from a source other than combat damage this turn, target creature can't block CARDNAME this turn.
 SVar:TrigCantBlock:DB$ Effect | ValidTgts$ Creature | TgtPrompt$ Choose target creature that can't block this creature this turn | RememberObjects$ ThisTargetedCard | ForgetOnMoved$ Battlefield | StaticAbilities$ STCantBlock | Duration$ UntilHostLeavesPlayOrEOT
 SVar:STCantBlock:Mode$ CantBlockBy | ValidAttacker$ Creature.EffectSource | ValidBlocker$ Creature.IsRemembered | Description$ {c:Remembered} can't block EFFECTSOURCE this turn.
-SVar:HateFlag:Count$YourCountersHateLL/Minus.Count$YourCountersHateCD
-
-T:Mode$ LifeLost | ValidPlayer$ Opponent | Static$ True | Execute$ DBCounterLL
-SVar:DBCounterLL:DB$ PutCounter | Defined$ You | CounterType$ HateLL | CounterNum$ Y
-SVar:Y:TriggerCount$LifeAmount
-
-T:Mode$ DamageDone | ValidTarget$ Opponent | CombatDamage$ True | Static$ True | Execute$ DBCounter
-SVar:DBCounter:DB$ PutCounter | Defined$ You | CounterType$ HateCD | CounterNum$ X
-SVar:X:TriggerCount$DamageAmount
-
-T:Mode$ Phase | Phase$ Cleanup | Execute$ CleanHateCD | Static$ True
-SVar:CleanHateCD:DB$ RemoveCounter | Defined$ You | CounterType$ HateCD | CounterNum$ All | SubAbility$ CleanHateLL
-SVar:CleanHateLL:DB$ RemoveCounter | Defined$ You | CounterType$ HateLL | CounterNum$ All
+SVar:HateFlag:PlayerCountRegisteredOpponents$LifeLostThisTurn/Minus.OppCombatDmg
+SVar:OppCombatDmg:PlayerCountRegisteredOpponents$DamageThisTurn/Minus.PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
 
 Oracle:Double strike, haste\nHate — Whenever Darth Maul attacks, if an opponent lost life from a source other than combat damage this turn, target creature can't block Darth Maul this turn.

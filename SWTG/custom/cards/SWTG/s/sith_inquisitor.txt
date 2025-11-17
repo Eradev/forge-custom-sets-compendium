@@ -5,18 +5,7 @@ PT:5/1
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ HateFlag | SVarCompare$ GE1 | Execute$ TrigDiscard | TriggerDescription$ Hate — When CARDNAME enters, if an opponent lost life from a source other than combat damage this turn, target player discards a card at random.
 SVar:TrigDiscard:DB$ Discard | ValidTgts$ Player | NumCards$ 1 | Mode$ Random | TgtPrompt$ Select target player
-SVar:HateFlag:Count$YourCountersHateLL/Minus.Count$YourCountersHateCD
-
-T:Mode$ LifeLost | ValidPlayer$ Opponent | Static$ True | Execute$ DBCounterLL
-SVar:DBCounterLL:DB$ PutCounter | Defined$ You | CounterType$ HateLL | CounterNum$ Y
-SVar:Y:TriggerCount$LifeAmount
-
-T:Mode$ DamageDone | ValidTarget$ Opponent | CombatDamage$ True | Static$ True | Execute$ DBCounter
-SVar:DBCounter:DB$ PutCounter | Defined$ You | CounterType$ HateCD | CounterNum$ X
-SVar:X:TriggerCount$DamageAmount
-
-T:Mode$ Phase | Phase$ Cleanup | Execute$ CleanHateCD | Static$ True
-SVar:CleanHateCD:DB$ RemoveCounter | Defined$ You | CounterType$ HateCD | CounterNum$ All | SubAbility$ CleanHateLL
-SVar:CleanHateLL:DB$ RemoveCounter | Defined$ You | CounterType$ HateLL | CounterNum$ All
+SVar:HateFlag:PlayerCountRegisteredOpponents$LifeLostThisTurn/Minus.OppCombatDmg
+SVar:OppCombatDmg:PlayerCountRegisteredOpponents$DamageThisTurn/Minus.PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
 
 Oracle:Hate — When Sith Inquisitor enters, if an opponent lost life from a source other than combat damage this turn, target player discards a card at random.

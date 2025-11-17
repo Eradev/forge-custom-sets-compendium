@@ -6,18 +6,7 @@ T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ Player | TriggerZones$ Battlef
 SVar:TrigReanimate:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature | TgtPrompt$ Select target creature card in a graveyard | GainControl$ True | RememberChanged$ True | SubAbility$ DBPump
 SVar:DBPump:DB$ Pump | Defined$ Remembered | KW$ Lifelink & Haste | Duration$ Permanent | AtEOT$ Exile | ExileOnMoved$ Battlefield | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
-SVar:HateFlag:Count$YourCountersHateLL/Minus.Count$YourCountersHateCD
-
-T:Mode$ LifeLost | ValidPlayer$ Opponent | Static$ True | Execute$ DBCounterLL
-SVar:DBCounterLL:DB$ PutCounter | Defined$ You | CounterType$ HateLL | CounterNum$ Y
-SVar:Y:TriggerCount$LifeAmount
-
-T:Mode$ DamageDone | ValidTarget$ Opponent | CombatDamage$ True | Static$ True | Execute$ DBCounter
-SVar:DBCounter:DB$ PutCounter | Defined$ You | CounterType$ HateCD | CounterNum$ X
-SVar:X:TriggerCount$DamageAmount
-
-T:Mode$ Phase | Phase$ Cleanup | Execute$ CleanHateCD | Static$ True
-SVar:CleanHateCD:DB$ RemoveCounter | Defined$ You | CounterType$ HateCD | CounterNum$ All | SubAbility$ CleanHateLL
-SVar:CleanHateLL:DB$ RemoveCounter | Defined$ You | CounterType$ HateLL | CounterNum$ All
+SVar:HateFlag:PlayerCountRegisteredOpponents$LifeLostThisTurn/Minus.OppCombatDmg
+SVar:OppCombatDmg:PlayerCountRegisteredOpponents$DamageThisTurn/Minus.PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
 
 Oracle:Hate — At the beginning of each combat, if an opponent lost life from a source other than combat damage this turn, you may return target creature card from a graveyard to the battlefield under your control. It gains lifelink and haste. Exile it at the beginning of the next end step or if it would leave the battlefield.
