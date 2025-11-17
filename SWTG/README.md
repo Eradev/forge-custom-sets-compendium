@@ -7,6 +7,7 @@ More information can be found on its [official website](https://www.starwarstheg
 ```text
 Star Wars: the Gathering (SWTG) - 100% (271/271)
 The Force Awakens (SWTG_TFA)    - 100% (15/15)
+Solo (SWTG_SOLO)                - 100% (16/16)
 ```
 
 ## How to install?
