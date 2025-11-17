@@ -1,0 +1,7 @@
+Name:Despair (SWTG)
+ManaCost:B B
+Types:Instant
+
+A:SP$ Sacrifice | Defined$ Opponent | SacValid$ Creature | Amount$ 1 | SpellDescription$ Each opponent sacrifices a creature.
+
+Oracle:Each opponent sacrifices a creature.

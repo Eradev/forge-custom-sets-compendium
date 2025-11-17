@@ -1,0 +1,7 @@
+Name:Maelstrom Blockade
+ManaCost:2 W B
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Creature.attacking | TgtPrompt$ Select target attacking creature | Origin$ Battlefield | Destination$ Exile | SpellDescription$ Exile target attacking creature.
+
+Oracle:Exile target attacking creature.
