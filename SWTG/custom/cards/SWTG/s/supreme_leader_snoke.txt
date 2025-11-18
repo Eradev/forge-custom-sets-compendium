@@ -16,16 +16,4 @@ SVar:X:Count$xPaid
 SVar:OppCombatDmg:PlayerCountRegisteredOpponents$DamageThisTurn/Minus.PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
 SVar:HateFlag:PlayerCountRegisteredOpponents$LifeLostThisTurn/Minus.OppCombatDmg
 
-T:Mode$ LifeLost | ValidPlayer$ Opponent | Static$ True | Execute$ DBCounterLL
-SVar:DBCounterLL:DB$ PutCounter | Defined$ You | CounterType$ OppLL | CounterNum$ Y
-SVar:Y:TriggerCount$LifeAmount
-
-T:Mode$ DamageDone | ValidTarget$ Opponent | CombatDamage$ True | Static$ True | Execute$ DBCounterCD
-SVar:DBCounterCD:DB$ PutCounter | Defined$ You | CounterType$ OppCD | CounterNum$ DmgX
-SVar:DmgX:TriggerCount$DamageAmount
-
-T:Mode$ Phase | Phase$ Cleanup | Execute$ CleanOppCD | Static$ True
-SVar:CleanOppCD:DB$ RemoveCounter | Defined$ You | CounterType$ OppCD | CounterNum$ All | SubAbility$ CleanOppLL
-SVar:CleanOppLL:DB$ RemoveCounter | Defined$ You | CounterType$ OppLL | CounterNum$ All
-
 Oracle:[+1]: Put a loyalty counter on Supreme Leader Snoke for each life lost by all opponents from noncombat sources this turn.\n[-1]: Draw a card and lose 1 life.\n[-X]: Gain control of target creature with mana value X. Untap that creature. It gains haste. Sacrifice that creature at the beginning of the next end step.
