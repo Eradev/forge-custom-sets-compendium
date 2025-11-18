@@ -4,13 +4,13 @@ Types:Enchantment Aura
 
 K:Enchant:Creature
 
-T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigTap | TriggerDescription$ When CARDNAME enters, tap enchanted creature.
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigTap | TriggerDescription$ When this Aura enters, tap enchanted creature.
 SVar:TrigTap:DB$ Tap | Defined$ Enchanted
 
 S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddHiddenKeyword$ CARDNAME doesn't untap during your untap step. | AddAbility$ DestroyCell | Description$ Enchanted creature doesn't untap during its controller's untap step.
 SVar:DestroyCell:AB$ Destroy | Cost$ 4 | Defined$ OriginalHost | SubAbility$ DBUntap | SpellDescription$ Destroy ORIGINALHOST and untap this creature.
 SVar:DBUntap:DB$ Untap | Defined$ Self
 
-Oracle:Enchant creature\nWhen Cryo Cell enters, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.\nEnchanted creature has "{4}: Destroy Cryo Cell and untap this creature."
+Oracle:Enchant creature\nWhen this Aura enters, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.\nEnchanted creature has "{4}: Destroy Cryo Cell and untap this creature."
 
 SVar:AttachAILogic:KeepTapped

@@ -10,10 +10,10 @@ SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:ABRemoveUpload:AB$ RemoveCounter | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBDownload | PrecostDesc$ Download – | SpellDescription$ Return this card to your hand any time you could cast a sorcery.
 SVar:DBDownload:DB$ ChangeZone | Defined$ Self | Hidden$ True | Origin$ Exile | Destination$ Hand | StackDescription$ SpellDescription
 
-T:Mode$ CounterRemoved | ValidCard$ Card.YouOwn | TriggerZones$ Battlefield | CounterType$ UPLOAD | Execute$ TrigPutCounter | TriggerDescription$ Whenever you put an uploaded card into your hand, put a profit counter on Corporate Ascension.
+T:Mode$ CounterRemoved | ValidCard$ Card.YouOwn | TriggerZones$ Battlefield | CounterType$ UPLOAD | Execute$ TrigPutCounter | TriggerDescription$ Whenever you put an uploaded card into your hand, put a profit counter on this enchantment.
 SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self.StrictlySelf | CounterType$ PROFIT | CounterNum$ 1
 
-T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+counters_GE10_PROFIT | Execute$ TrigWinGame | TriggerDescription$ At the beginning of your upkeep, if CARDNAME has ten or more Profit counters on it, you win the game.
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+counters_GE10_PROFIT | Execute$ TrigWinGame | TriggerDescription$ At the beginning of your upkeep, if this enchantment has ten or more Profit counters on it, you win the game.
 SVar:TrigWinGame:DB$ WinsGame | Defined$ You
 
-Oracle:At the beginning of your upkeep, upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)\nWhenever you put an uploaded card into your hand, put a profit counter on Corporate Ascension.\nAt the beginning of your upkeep, if there are ten or more profit counters on Corporate Ascension, you win the game.
+Oracle:At the beginning of your upkeep, upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)\nWhenever you put an uploaded card into your hand, put a profit counter on this enchantment.\nAt the beginning of your upkeep, if there are ten or more profit counters on this enchantment, you win the game.

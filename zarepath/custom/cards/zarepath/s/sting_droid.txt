@@ -5,8 +5,8 @@ PT:1/2
 
 K:Flying
 
-A:AB$ Tap | Cost$ W Sac<1/CARDNAME> | ValidTgts$ Creature | TgtPrompt$ Select target creature | SpellDescription$ Tap target creature.
+A:AB$ Tap | Cost$ W Sac<1/CARDNAME/this creature> | ValidTgts$ Creature | TgtPrompt$ Select target creature | SpellDescription$ Tap target creature.
 
-Oracle:Flying\n{W}, Sacrifice Sting Droid: Tap target creature.
+Oracle:Flying\n{W}, Sacrifice this creature: Tap target creature.
 
 AI:RemoveDeck:All

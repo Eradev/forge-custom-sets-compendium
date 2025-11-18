@@ -3,11 +3,11 @@ ManaCost:2 B
 Types:Artifact Creature Construct Rogue
 PT:2/3
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigUpload | TriggerDescription$ When CARDNAME enters, target player uploads a card from their hand. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigUpload | TriggerDescription$ When this creature enters, target player uploads a card from their hand. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
 SVar:TrigUpload:DB$ ChangeZone | ValidTgts$ Player | TgtPrompt$ Select a player | TgtPrompt$ Select target player | Origin$ Hand | Destination$ Exile | ChangeType$ Card | ChangeNum$ 1 | WithCountersType$ UPLOAD | RememberChanged$ True | Chooser$ Targeted | Hidden$ True | IsCurse$ True | Mandatory$ True | SubAbility$ DBAnimate
 SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Abilities$ ABRemoveUpload | sVars$ DBDownload | Duration$ Permanent | SubAbility$ DBCleanup | StackDescription$ None
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:ABRemoveUpload:AB$ RemoveCounter | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBDownload | PrecostDesc$ Download – | SpellDescription$ Return this card to your hand any time you could cast a sorcery.
 SVar:DBDownload:DB$ ChangeZone | Defined$ Self | Hidden$ True | Origin$ Exile | Destination$ Hand | StackDescription$ SpellDescription
 
-Oracle:When Masq Hacker enters, target player uploads a card from their hand. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
+Oracle:When this creature enters, target player uploads a card from their hand. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)

@@ -3,10 +3,10 @@ ManaCost:G
 Types:Creature Human Scout
 PT:1/1
 
-S:Mode$ CantBlockBy | ValidAttacker$ Card.Self | ValidBlocker$ Creature.powerLE2 | Description$ CARDNAME can't be blocked by creatures with power 2 or less.
+S:Mode$ CantBlockBy | ValidAttacker$ Card.Self | ValidBlocker$ Creature.powerLE2 | Description$ This creature can't be blocked by creatures with power 2 or less.
 
-S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Hexproof | CheckSVar$ X | SVarCompare$ GTY | Description$ CARDNAME has hexproof as long as you have more life than an opponent.
+S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Hexproof | CheckSVar$ X | SVarCompare$ GTY | Description$ As long as you have more life than an opponent, this creature has hexproof.
 SVar:X:Count$YourLifeTotal
 SVar:Y:PlayerCountOpponents$LowestLifeTotal
 
-Oracle:N-FORCE Ranger can't be blocked by creatures with power 2 or less.\nSupremacy - As long as you have more life than an opponent, N-FORCE Ranger has hexproof.
+Oracle:This creature can't be blocked by creatures with power 2 or less.\nSupremacy - As long as you have more life than an opponent, this creature has hexproof.

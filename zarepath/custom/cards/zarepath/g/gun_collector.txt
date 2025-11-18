@@ -3,6 +3,6 @@ ManaCost:1 B R
 Types:Creature Human Rebel
 PT:2/2
 
-A:AB$ Token | Cost$ 1 Sac<1/Creature.Other> | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | TokenAmount$ 1 | AttachedTo$ Self | SpellDescription$ Arm CARDNAME. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to this creature.)
+A:AB$ Token | Cost$ 1 Sac<1/Creature.Other> | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | TokenAmount$ 1 | AttachedTo$ Self | SpellDescription$ Arm this creature. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to this creature.)
 
-Oracle:{1}, Sacrifice another creature: Arm Gun Collector. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to this creature.)
+Oracle:{1}, Sacrifice another creature: Arm this creature. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to this creature.)

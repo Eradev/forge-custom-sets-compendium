@@ -3,10 +3,10 @@ ManaCost:1 B
 Types:Artifact Creature Construct
 PT:1/1
 
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigToken | TriggerController$ TriggeredCardController | TriggerDescription$ When CARDNAME dies, create a 2/2 colorless Construct artifact creature token.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigToken | TriggerController$ TriggeredCardController | TriggerDescription$ When this creature dies, create a 2/2 colorless Construct artifact creature token.
 SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ c_2_2_a_construct | TokenOwner$ You
 
-Oracle:When Reassembler dies, create a 2/2 colorless Construct artifact creature token.
+Oracle:When this creature dies, create a 2/2 colorless Construct artifact creature token.
 
 SVar:SacMe:2
 DeckHas:Ability$Token

@@ -2,13 +2,13 @@ Name:Cultivation Nanotech
 ManaCost:1
 Types:Artifact
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigScry | TriggerDescription$ When CARDNAME enters or leaves the battlefield, scry 1.
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigScry | TriggerController$ TriggeredCardController | Secondary$ True | TriggerDescription$ When CARDNAME enters or leaves the battlefield, scry 1.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigScry | TriggerDescription$ When this artifact enters or leaves the battlefield, scry 1.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigScry | TriggerController$ TriggeredCardController | Secondary$ True | TriggerDescription$ When this artifact enters or leaves the battlefield, scry 1.
 SVar:TrigScry:DB$ Scry | ScryNum$ 1 | Defined$ TriggeredCardController
 
-A:AB$ ChangeZone | Cost$ G Sac<1/CARDNAME> | Origin$ Hand | Destination$ Battlefield | ChangeType$ Land | ChangeNum$ 1 | SpellDescription$ Put a land card from your hand onto the battlefield.
+A:AB$ ChangeZone | Cost$ G Sac<1/CARDNAME/this artifact> | Origin$ Hand | Destination$ Battlefield | ChangeType$ Land | ChangeNum$ 1 | SpellDescription$ Put a land card from your hand onto the battlefield.
 
-Oracle:When Cultivation Nanotech enters or leaves the battlefield, scry 1. \n{G},Sacrifice Cultivation Nanotech: Put a land card from your hand onto the battlefield.
+Oracle:When this artifact enters or leaves the battlefield, scry 1. \n{G},Sacrifice this artifact: Put a land card from your hand onto the battlefield.
 
 AI:RemoveDeck:Random
 SVar:SacMe:5

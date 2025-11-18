@@ -3,9 +3,8 @@ ManaCost:3 U
 Types:Artifact Creature Construct Ninja
 PT:3/3
 
-T:Mode$ CounterRemoved | ValidCard$ Card.YouOwn | TriggerZones$ Battlefield | CounterType$ UPLOAD | Execute$ TrigUnblockable | TriggerDescription$ Whenever you put an uploaded card into your hand, Digiblade Shinobi can't be blocked until end of turn.
+T:Mode$ CounterRemoved | ValidCard$ Card.YouOwn | TriggerZones$ Battlefield | CounterType$ UPLOAD | Execute$ TrigUnblockable | TriggerDescription$ Whenever you put an uploaded card into your hand, this creature can't be blocked until end of turn.
+SVar:TrigUnblockable:DB$ Effect | RememberObjects$ Self | ExileOnMoved$ Battlefield | StaticAbilities$ Unblockable
+SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ This creature can't be blocked this turn.
 
-SVar:TrigUnblockable:DB$ Effect | RememberObjects$ Self | ExileOnMoved$ Battlefield | StaticAbilities$ Unblockable | SpellDescription$ CARDNAME can't be blocked this turn.
-SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ EFFECTSOURCE can't be blocked this turn.
-
-Oracle:Whenever you put an uploaded card into your hand, Digiblade Shinobi can't be blocked until end of turn.
+Oracle:Whenever you put an uploaded card into your hand, this creature can't be blocked until end of turn.

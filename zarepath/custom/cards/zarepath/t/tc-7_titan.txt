@@ -5,11 +5,11 @@ PT:7/7
 
 K:Trample
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | OptionalDecider$ You | TriggerDescription$ When CARDNAME enters, you may destroy target artifact or enchantment.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | OptionalDecider$ You | TriggerDescription$ When this Vehicle enters, you may destroy target artifact or enchantment.
 SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment.
 
 K:Crew:3
 
-Oracle:Trample\nWhen TC-7 Titan enters, you may destroy target artifact or enchantment.\nCrew 3 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)
+Oracle:Trample\nWhen this Vehicle enters, you may destroy target artifact or enchantment.\nCrew 3 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)
 
 SVar:PlayMain1:TRUE

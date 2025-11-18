@@ -5,7 +5,7 @@ PT:3/4
 
 K:Flying
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Artifact.Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigUntap | TriggerDescription$ Whenever another artifact enters under your control, untap CARDNAME.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Artifact.Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigUntap | TriggerDescription$ Whenever another artifact enters under your control, untap this creature.
 SVar:TrigUntap:DB$ Untap | Defined$ Self
 
-Oracle:Flying\nWhenever another artifact enters under your control, untap Skyguard Droid.
+Oracle:Flying\nWhenever another artifact enters under your control, untap this creature.

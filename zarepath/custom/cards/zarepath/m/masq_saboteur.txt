@@ -3,13 +3,13 @@ ManaCost:U B
 Types:Creature Human Rogue
 PT:2/2
 
-S:Mode$ CantBlockBy | ValidAttacker$ Card.Self | IsPresent$ Land.DefenderCtrl+untapped | Description$ CARDNAME can't be blocked as long as defending player controls an untapped land.
+S:Mode$ CantBlockBy | ValidAttacker$ Card.Self | IsPresent$ Land.DefenderCtrl+untapped | Description$ This creature can't be blocked as long as defending player controls an untapped land.
 
-T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigExileCard | TriggerDescription$ Whenever CARDNAME deals combat damage to an opponent, they upload a card from their hand. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigExileCard | TriggerDescription$ Whenever this creature deals combat damage to an opponent, they upload a card from their hand. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
 SVar:TrigExileCard:DB$ ChangeZone | Origin$ Hand | Destination$ Exile | DefinedPlayer$ TriggeredTarget | Chooser$ TriggeredTarget | ChangeType$ Card | Hidden$ True | ChangeNum$ 1 | Mandatory$ True | WithCountersType$ UPLOAD | RememberChanged$ True | SubAbility$ DBAnimate
 SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Abilities$ ABRemoveUpload | sVars$ DBDownload | Duration$ Permanent | SubAbility$ DBCleanup | StackDescription$ None
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:ABRemoveUpload:AB$ RemoveCounter | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBDownload | PrecostDesc$ Download – | SpellDescription$ Return this card to your hand any time you could cast a sorcery.
 SVar:DBDownload:DB$ ChangeZone | Defined$ Self | Hidden$ True | Origin$ Exile | Destination$ Hand | StackDescription$ SpellDescription
 
-Oracle:Masq Saboteur can't be blocked unless defending player controls an untapped land.\nWhenever Masq Saboteur deals combat damage to an opponent, they upload a card from their hand. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
+Oracle:This creature can't be blocked unless defending player controls an untapped land.\nWhenever this creature deals combat damage to an opponent, they upload a card from their hand. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)

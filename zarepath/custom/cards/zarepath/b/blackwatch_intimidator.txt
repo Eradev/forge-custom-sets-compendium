@@ -3,6 +3,6 @@ ManaCost:3 B
 Types:Creature Human Ninja
 PT:4/2
 
-A:AB$ Pump | Cost$ Sac<1/Artifact;Creature/artifact or creature> | Defined$ Self | KW$ Lifelink | SpellDescription$ CARDNAME gains lifelink until end of turn.
+A:AB$ Pump | Cost$ Sac<1/Artifact;Creature/artifact or creature> | Defined$ Self | KW$ Lifelink | SpellDescription$ This creature gains lifelink until end of turn.
 
-Oracle:Sacrifice an artifact or creature: Blackwatch Intimidator gains lifelink until end of turn.
+Oracle:Sacrifice an artifact or creature: This creature gains lifelink until end of turn.
