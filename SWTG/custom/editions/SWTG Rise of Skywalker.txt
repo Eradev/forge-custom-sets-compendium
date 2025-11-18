@@ -1,0 +1,52 @@
+[metadata]
+Code=SWTG_ROS
+Date=2019-05-01
+Name=SWTG Rise of Skywalker
+Type=Custom
+Foil=NotSupported
+
+[cards]
+1 C Festival of the Ancestors @Jake Lunt Davies
+2 M Balance @Madison Thames
+3 U Brave the Elements @Ralph McQuarrie
+4 U A Jedi's Fervor @SoulOfZendikar
+5 C Lightspeed Skipping @TROS
+6 C Orbak @Stalking Presa
+7 C Dyad Force Transfer @Ralph McQuarrie
+8 U Holochess @Dario Ricardo
+9 U Propaganda @Fallen Order
+10 M Rey Skywalker @Jake Bartok
+11 R Sith Eternal Lightning @Romana Kendelic
+12 R Allegiant General Pryde @GetWreckedHux
+13 C Unpleasant Discovery @Adam Brockbank
+14 R Xyston Star Destroyer @TROS
+15 C Betray @Darren Tan
+16 R War Room (SWTG) @Anthony Foti ${"flavorName": "War Room"}
+17 R Zorii Bliss @Epic
+18 C Band Together @Darek Zabrocki
+19 U Vexis @Luke Fisher
+20 U Droidsmith @Neal Scanlan
+21 U First Order Jet Trooper @SoulOfZendikar
+22 R General Organa @Ryan Valle
+23 C Hold Captive @Ralph McQuarrie
+24 R Knights of Ren @John McCoy
+25 M Ben Solo @Mikolaj Birek
+26 C Force Lift @Anthony Foti
+27 U Culling Dais @Ralph McQuarrie
+28 R Luke's Lightsaber @Jargus Kinford
+29 R Mimic Vat @Hviezdne Vojny
+30 R Rey's Lightsaber @JNetRocks
+31 C Sith Wayfinder @SoulOfZendikar
+32 C Training Droid @TROS Concept Art
+33 U Hidden Base @WraithDT
+34 L Swamp @Jeff Dobson
+
+[CreatureTypes]
+Anzellan:Anzellans
+Droid:Droids
+Sith:Sith
+Starship:Starships
+Trooper:Troopers
+
+[WalkerTypes]
+Rey
