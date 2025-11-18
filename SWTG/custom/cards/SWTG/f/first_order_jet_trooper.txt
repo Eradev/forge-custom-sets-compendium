@@ -1,0 +1,8 @@
+Name:First Order Jet Trooper
+ManaCost:R W
+Types:Creature Trooper
+PT:1/1
+
+S:Mode$ Continuous | Affected$ Creature.Trooper+YouCtrl | AddKeyword$ Haste & First Strike | Description$ Trooper creatures you control have haste and first strike.
+
+Oracle:Trooper creatures you control have haste and first strike.

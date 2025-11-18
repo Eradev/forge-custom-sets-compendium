@@ -1,0 +1,12 @@
+Name:Luke's Lightsaber
+ManaCost:3
+Types:Legendary Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddKeyword$ First Strike & Protection from black | Description$ Equipped creature gets +2/+0 and has first strike and protection from black.
+
+T:Mode$ DamageDone | ValidSource$ Creature.AttachedBy | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigLife | TriggerDescription$ Whenever equipped creature deals combat damage to a player, target player gains 2 life.
+SVar:TrigLife:DB$ GainLife | ValidTgts$ Player | LifeAmount$ 2
+
+K:Equip:2
+
+Oracle:Equipped creature gets +2/+0 and has first strike and protection from black.\nWhenever equipped creature deals combat damage to a player, target player gains 2 life.\nEquip {2}

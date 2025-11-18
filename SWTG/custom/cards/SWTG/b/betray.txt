@@ -1,0 +1,11 @@
+Name:Betray
+ManaCost:2 R
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | SubAbility$ DBDamage | SpellDescription$ Target creature an opponent controls deals damage to its controller equal to that creature's power. | StackDescription$ SpellDescription
+
+SVar:DBDamage:DB$ DealDamage | Defined$ TargetedController | DamageSource$ Targeted | NumDmg$ X
+
+SVar:X:Targeted$CardPower
+
+Oracle:Target creature an opponent controls deals damage to its controller equal to that creature's power.

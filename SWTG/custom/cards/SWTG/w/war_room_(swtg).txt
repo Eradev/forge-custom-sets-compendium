@@ -1,0 +1,13 @@
+Name:War Room (SWTG)
+ManaCost:1 R
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCantBlock | TriggerDescription$ At the beginning of each combat on your turn, target creature can't block this turn.
+
+SVar:TrigCantBlock:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | KW$ HIDDEN CARDNAME can't block. | IsCurse$ True | Duration$ UntilEndOfTurn
+
+A:AB$ DealDamage | Cost$ 1 | ValidTgts$ Player | TgtPrompt$ Select target player | NumDmg$ 1 | CheckSVar$ AttackCheck | SVarCompare$ GE1 | ActivationLimit$ 1 | SpellDescription$ This enchantment deals 1 damage to target player. Activate this ability only if a creature you control attacked this turn and only once per turn.
+
+SVar:AttackCheck:Count$AttackersDeclared
+
+Oracle:At the beginning of each combat on your turn, target creature can't block this turn.\n{1}: This enchantment deals 1 damage to target player. Activate this ability only if a creature you control attacked this turn and only once per turn.

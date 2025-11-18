@@ -1,0 +1,7 @@
+Name:Festival of the Ancestors
+ManaCost:3
+Types:Sorcery
+
+A:SP$ GainLife | LifeAmount$ 5 | ValidTgts$ Player | TgtPrompt$ Choose a player | SpellDescription$ Target player gains 5 life.
+
+Oracle:Target player gains 5 life.

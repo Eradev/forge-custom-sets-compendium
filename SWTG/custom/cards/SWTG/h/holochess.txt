@@ -1,0 +1,15 @@
+Name:Holochess
+ManaCost:2 U
+Types:Instant
+
+A:SP$ ChooseNumber | Min$ 0 | Max$ 3 | Defined$ You | ListTitle$ Choose a number between 0 and 3 | SubAbility$ DBDraw | SpellDescription$ Choose a number between 0 and 3. If the chosen number is less than the number of creatures an opponent controls, draw X cards where X is the chosen number. Otherwise, counter target spell unless its controller pays {X}. | StackDescription$ SpellDescription
+
+SVar:DBDraw:DB$ Draw | NumCards$ X | ConditionCheckSVar$ X | ConditionSVarCompare$ LTY | SubAbility$ DBCounterUnless
+
+SVar:DBCounterUnless:DB$ Counter | ConditionCheckSVar$ X | ConditionSVarCompare$ GEY | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | UnlessCost$ X
+
+SVar:X:Count$ChosenNumber
+
+SVar:Y:PlayerCountOpponents$HighestValid Creature.YouCtrl
+
+Oracle:Choose a number between 0 and 3. If the chosen number is less than the number of creatures an opponent controls, draw X cards where X is the chosen number. Otherwise, counter target spell unless its controller pays {X}.

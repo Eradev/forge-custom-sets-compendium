@@ -1,0 +1,15 @@
+Name:Vexis
+ManaCost:4 G
+Types:Creature Wurm
+PT:4/4
+
+K:Trample
+
+K:Monstrosity:2:W
+
+T:Mode$ CounterAddedOnce | ValidCard$ Card.Self | TriggerZones$ Battlefield | CounterType$ P1P1 | Execute$ TrigPump | TriggerDescription$ Whenever a +1/+1 counter is put on this creature, it gains vigilance until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | KW$ Vigilance
+
+Oracle:Trample\n{W}: Monstrosity 2. (If this creature isn't monstrous, put two +1/+1 counters on it and it becomes monstrous.)\nWhenever a +1/+1 counter is put on this creature, it gains vigilance until end of turn.
+
+DeckHas:Ability$Counters

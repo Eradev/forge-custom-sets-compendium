@@ -1,0 +1,15 @@
+Name:Rey's Lightsaber
+ManaCost:3
+Types:Legendary Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddKeyword$ First Strike & Protection from red | Description$ Equipped creature gets +2/+0 and has first strike and protection from red.
+
+T:Mode$ DamageDone | ValidSource$ Creature.EquippedBy | CombatDamage$ True | Execute$ TrigExile | TriggerZones$ Battlefield | TriggerDescription$ Whenever equipped creature deals combat damage to a player, target player exiles the top card of their library. That player may play that card until your next turn.
+SVar:TrigExile:DB$ Dig | ValidTgts$ Player | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | StaticAbilities$ STPlay | RememberObjects$ Remembered | Duration$ UntilYourNextTurn | ForgetOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | MayPlayPlayer$ CardOwner | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ That player may play that card until your next turn.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+K:Equip:2
+
+Oracle:Equipped creature gets +2/+0 and has first strike and protection from red.\nWhenever equipped creature deals combat damage to a player, target player exiles the top card of their library. That player may play that card until your next turn.\nEquip {2}

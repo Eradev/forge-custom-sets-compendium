@@ -1,0 +1,9 @@
+Name:Unpleasant Discovery
+ManaCost:B
+Types:Sorcery
+
+A:SP$ RevealHand | Defined$ Player.Opponent | SubAbility$ DBLoseLife | SpellDescription$ Each opponent reveals their hand, loses 1 life, and mills two cards.
+SVar:DBLoseLife:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 1 | SubAbility$ DBMill
+SVar:DBMill:DB$ Mill | Defined$ Player.Opponent | NumCards$ 2
+
+Oracle:Each opponent reveals their hand, loses 1 life, and mills two cards.

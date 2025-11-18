@@ -1,0 +1,11 @@
+Name:General Organa
+ManaCost:W U
+Types:Legendary Creature Human Rebel Advisor
+PT:2/2
+
+S:Mode$ RaiseCost | ValidCard$ Card | Activator$ Opponent | ValidSpell$ Spell | Amount$ 2 | Condition$ PlayerTurn | Description$ Spells your opponents cast during your turn cost {2} more to cast.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ DBScry | TriggerDescription$ When CARDNAME leaves the battlefield, scry 2.
+SVar:DBScry:DB$ Scry | ScryNum$ 2
+
+Oracle:Spells your opponents cast during your turn cost {2} more to cast.\nWhen General Organa leaves the battlefield, scry 2.

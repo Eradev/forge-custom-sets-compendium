@@ -1,0 +1,11 @@
+Name:Droidsmith
+ManaCost:U B
+Types:Creature Anzellan
+PT:1/1
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | Description$ This creature can't be blocked.
+
+S:Mode$ Continuous | Affected$ Creature.Droid+YouCtrl | AddPower$ 1 | IsPresent$ Card.Self+tapped | Description$ Droid creatures you control get +1/+0 as long as this creature is tapped.
+S:Mode$ Continuous | Affected$ Creature.Droid+YouCtrl | AddToughness$ 1 | IsPresent$ Card.Self+untapped | Description$ Droid creatures you control get +0/+1 as long as this creature is untapped.
+
+Oracle:This creature can't be blocked.\nDroid creatures you control get +1/+0 as long as this creature is tapped.\nDroid creatures you control get +0/+1 as long as this creature is untapped.

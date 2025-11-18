@@ -1,0 +1,9 @@
+Name:Hidden Base
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Pump | Cost$ T | ValidTgts$ Creature.Starship | TgtPrompt$ Select target starship creature | KW$ Haste | SpellDescription$ Target starship creature gains haste until end of turn.
+
+Oracle:{T}: Add {C}\n{T}: Target starship creature gains haste until end of turn.

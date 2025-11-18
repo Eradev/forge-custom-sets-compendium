@@ -1,0 +1,8 @@
+Name:Orbak
+ManaCost:1 W
+Types:Creature Beast
+PT:2/2
+
+K:Monstrosity:3:4 W
+
+Oracle:{4}{W}: Monstrosity 3

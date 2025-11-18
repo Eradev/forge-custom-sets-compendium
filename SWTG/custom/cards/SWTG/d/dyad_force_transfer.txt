@@ -1,0 +1,9 @@
+Name:Dyad Force Transfer
+ManaCost:1 U
+Types:Instant
+
+A:SP$ GainControl | ValidTgts$ Permanent.nonCreature | TgtPrompt$ Select target noncreature permanent | LoseControl$ EOT | Untap$ True | SubAbility$ DBScry | SpellDescription$ Gain control of target noncreature permanent until end of turn. Untap it. Scry 3.
+
+SVar:DBScry:DB$ Scry | ScryNum$ 3
+
+Oracle:Gain control of target noncreature permanent until end of turn. Untap it. Scry 3.

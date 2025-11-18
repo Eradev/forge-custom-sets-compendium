@@ -1,0 +1,15 @@
+Name:Rey Skywalker
+ManaCost:2 U U
+Types:Legendary Planeswalker Rey
+Loyalty:2
+
+A:AB$ Untap | Cost$ AddCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Permanent | TgtPrompt$ Select target permanent | SubAbility$ DBScry | SpellDescription$ Untap target permanent. Scry 1.
+
+A:AB$ Tap | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | TgtPrompt$ Select target creature | SubAbility$ DBPumpDontUntap | SpellDescription$ Tap target creature. That creature doesn't untap during its controller's next untap step. Scry 1.
+SVar:DBPumpDontUntap:DB$ Pump | Defined$ Targeted | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent | IsCurse$ True | SubAbility$ DBScry
+
+A:AB$ Draw | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | NumCards$ 1 | SubAbility$ DBScry | SpellDescription$ Draw a card. Scry 1.
+
+SVar:DBScry:DB$ Scry | ScryNum$ 1
+
+Oracle:[+2]: Untap target permanent. Scry 1.\n[+1]: Tap target creature. That creature doesn't untap during its controller's next untap step. Scry 1.\n[0]: Draw a card. Scry 1.
