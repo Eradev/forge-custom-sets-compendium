@@ -1,0 +1,8 @@
+Name:Praetorian Trooper
+ManaCost:3 R
+Types:Creature Human Trooper
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Creature.Trooper+YouCtrl | AddKeyword$ Double Strike | Description$ Trooper creatures you control have double strike.
+
+Oracle:Trooper creatures you control have double strike.

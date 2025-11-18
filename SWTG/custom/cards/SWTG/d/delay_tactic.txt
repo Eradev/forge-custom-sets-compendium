@@ -1,0 +1,11 @@
+Name:Delay Tactic
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Charm | Choices$ DBHexproof,DBNoUntap | CharmNum$ 1
+
+SVar:DBHexproof:DB$ PumpAll | ValidCards$ Creature.YouCtrl | KW$ Hexproof | SpellDescription$ Creatures you control gain hexproof until end of turn.
+
+SVar:DBNoUntap:DB$ PumpAll | ValidTgts$ Opponent | TgtPrompt$ Select target opponent | ValidCards$ Creature | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent | SpellDescription$ Creatures target opponent controls don't untap during their untap step.
+
+Oracle:Choose one —\n• Creatures you control gain hexproof until end of turn.\n• Creatures target opponent controls don't untap during their untap step.

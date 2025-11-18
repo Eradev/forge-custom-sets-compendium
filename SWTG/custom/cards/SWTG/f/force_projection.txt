@@ -1,0 +1,13 @@
+Name:Force Projection
+ManaCost:1 U U
+Types:Sorcery
+
+A:SP$ CopyPermanent | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | AddTypes$ Illusion | AddTriggers$ IllusionTargetSpellSac | AddSVars$ IllusionTargetSpellSac,IllusionSac | SubAbility$ DBScry | SpellDescription$ Create a token that is a copy of target creature you control except that it is an Illusion in addition to its other types and gains "When this creature becomes the target of a spell, sacrifice it."
+
+SVar:IllusionTargetSpellSac:Mode$ BecomesTarget | ValidTarget$ Card.Self | ValidSource$ Spell | TriggerZones$ Battlefield | Execute$ IllusionSac | TriggerDescription$ When this creature becomes the target of a spell, sacrifice it.
+SVar:IllusionSac:DB$ Sacrifice | SacValid$ Self
+
+SVar:DBScry:DB$ Scry | ScryNum$ 2 | SpellDescription$ Scry 2.
+
+Oracle:Create a token that is a copy of target creature you control except that it is an Illusion in addition to its other types and gains "When this creature becomes the target of a spell, sacrifice it."
+Scry 2.
