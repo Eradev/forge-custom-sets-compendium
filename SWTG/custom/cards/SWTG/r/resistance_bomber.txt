@@ -10,7 +10,7 @@ SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpacef
 
 K:etbCounter:CHARGE:1
 
-A:AB$ DealDamage | Cost$ SubCounter<1/CHARGE> | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ 5 | IsPresent$ Creature.attacking+Self | PresentCompare$ EQ1 | SpellDescription$ Remove a charge counter from this creature: This creature deals 5 damage to target creature. Activate this ability only if this creature is attacking.
+A:AB$ DealDamage | Cost$ SubCounter<1/CHARGE> | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ 5 | IsPresent$ Creature.attacking+Self | PresentCompare$ EQ1 | SpellDescription$ This creature deals 5 damage to target creature. Activate this ability only if this creature is attacking.
 
 Oracle:Spaceflight (This creature can only block or be blocked by creatures with spaceflight.)\nThis creature enters with a charge counter on it.\nRemove a charge counter from this creature: This creature deals 5 damage to target creature. Activate this ability only if this creature is attacking.
 
