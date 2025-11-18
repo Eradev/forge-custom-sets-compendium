@@ -10,6 +10,7 @@ The Force Awakens (SWTG_TFA)    - 100% (15/15)
 Solo (SWTG_SOLO)                - 100% (16/16)
 Rogue One (SWTG_RO)             - 100% (15/15)
 The Last Jedi (SWTG_TLJ)        - 100% (22/22)
+Rise of Skywalker (SWTG_ROS)    - 100% (34/34)
 ```
 
 ## How to install?
