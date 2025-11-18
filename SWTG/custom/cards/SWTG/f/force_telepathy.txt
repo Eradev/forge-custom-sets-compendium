@@ -2,7 +2,7 @@ Name:Force Telepathy
 ManaCost:UB
 Types:Instant
 
-A:SP$ RevealHand | Defined$ Targeted | ValidTgts$ Player | SubAbility$ DBScry | StackDescription$ SpellDescription | SpellDescription$ Target player reveals their hand.
-SVar:DBScry:DB$ Scry | ScryNum$ 2 | SpellDescription$ Scry 2
+A:SP$ RevealHand | Defined$ Targeted | ValidTgts$ Player | SubAbility$ DBScry | StackDescription$ SpellDescription | SpellDescription$ Target player reveals their hand. Scry 2
+SVar:DBScry:DB$ Scry | ScryNum$ 2
 
 Oracle:Target player reveals their hand.\nScry 2
