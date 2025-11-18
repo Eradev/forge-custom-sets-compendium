@@ -1,0 +1,10 @@
+Name:Caylin Whirlwind
+ManaCost:2 W U
+Types:Legendary Creature Human Artificer
+PT:2/2
+
+K:Flash
+
+A:AB$ Pump | Cost$ Return<1/Artifact.Other+YouCtrl,Creature.Other+YouCtrl,Enchantment.Other+YouCtrl/another artifact, creature, or enchantment you control> | Defined$ Self | NumAtt$ +3 | NumDef$ +3 | ActivationLimit$ 1 | SpellDescription$ CARDNAME gets +3/+3 until end of turn. Activate only once each turn.
+
+Oracle:Flash\nReturn another artifact, creature, or enchantment you control to its owner's hand: Caylin Whirlwind gets +3/+3 until end of turn. Activate only once each turn.
