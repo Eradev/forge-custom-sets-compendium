@@ -7,7 +7,7 @@ A:AB$ PutCounter | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | CounterTyp
 
 A:AB$ ChangeZone | Cost$ SubCounter<3/LOYALTY> | Planeswalker$ True | ValidTgts$ Permanent.nonCreature | TgtPrompt$ Select target noncreature permanent | Origin$ Battlefield | Destination$ Library | LibraryPosition$ 0 | SpellDescription$ Put target noncreature permanent on top of its owner's library.
 
-A:AB$ Effect | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Luke Skywalker, the Last Jedi | Image$ emblem_luke_skywalker_the_last_jedi | ReplacementEffects$ RPreventCombat | Duration$ Permanent | SubAbility$ DBExileSelf | SpellDescription$ You get an emblem with "Prevent all damage that would be dealt to you during combat." Exile Luke Skywalker.
+A:AB$ Effect | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Luke Skywalker, the Last Jedi | Image$ emblem_luke_skywalker_the_last_jedi | ReplacementEffects$ RPreventCombat | Duration$ Permanent | SubAbility$ DBExileSelf | SpellDescription$ You get an emblem with "Prevent all damage that would be dealt to you during combat." Exile NICKNAME.
 SVar:RPreventCombat:Event$ DamageDone | Prevent$ True | ValidTarget$ You | IsCombat$ True | Description$ Prevent all damage that would be dealt to you during combat.
 SVar:DBExileSelf:DB$ ChangeZone | Defined$ Self | Origin$ Battlefield | Destination$ Exile
 
