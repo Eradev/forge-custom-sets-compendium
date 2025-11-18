@@ -6,7 +6,7 @@ PT:0/2
 K:Defender
 
 T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ At the beginning of your upkeep, create a 0/1 green Bird creature token named Porg with "{G}: Monstrosity 1."
-SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ porg | TokenOwner$ You
+SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ porg | TokenOwner$ You | LockTokenScript$ True
 
 DeckHas:Ability$Token|Counters
 
