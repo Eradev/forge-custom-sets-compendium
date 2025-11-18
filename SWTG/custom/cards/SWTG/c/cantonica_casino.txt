@@ -1,0 +1,14 @@
+Name:Cantonica Casino
+ManaCost:2
+Types:Artifact
+
+A:AB$ RollDice | Cost$ T | Sides$ 6 | Amount$ 2 | ResultSVar$ Result | NoteDoubles$ True | SubAbility$ DBLifeEffect | SpellDescription$ Roll two six-sided dice. If you roll doubles, gain 10 life. Otherwise, lose 1 life.
+SVar:DBLifeEffect:DB$ Branch | BranchConditionSVar$ Doubles | BranchConditionSVarCompare$ EQ1 | TrueSubAbility$ DBGainLife | FalseSubAbility$ DBLoseLife
+
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 10
+
+SVar:DBLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1
+
+Oracle:{T}: Roll two six-sided dice. If you roll doubles, gain 10 life. Otherwise, lose 1 life.
+
+DeckHas:Ability$LifeGain

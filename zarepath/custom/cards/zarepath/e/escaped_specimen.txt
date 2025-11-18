@@ -5,9 +5,9 @@ PT:2/2
 
 S:Mode$ Continuous | Affected$ Creature.Mutant+YouCtrl+Other | AddPower$ 1 | AddToughness$ 1 | Description$ Other Mutants you control get +1/+1.
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters, create two 1/1 red Lizard Mutant creature tokens with haste.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create two 1/1 red Lizard Mutant creature tokens with haste.
 SVar:TrigToken:DB$ Token | TokenAmount$ 2 | TokenScript$ r_1_1_lizard_mutant_haste | TokenOwner$ You
 
-Oracle:Other Mutants you control get +1/+1. \nWhen Escaped Specimen enters, create two 1/1 red Lizard Mutant creature tokens with haste.
+Oracle:Other Mutants you control get +1/+1. \nWhen this creature enters, create two 1/1 red Lizard Mutant creature tokens with haste.
 
 SVar:PlayMain1:TRUE

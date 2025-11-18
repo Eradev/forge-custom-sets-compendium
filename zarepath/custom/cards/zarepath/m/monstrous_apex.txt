@@ -7,6 +7,6 @@ K:Trample
 
 K:Hexproof
 
-A:AB$ ChangeZone | Cost$ ExileFromGrave<6/Creature.Other/other creature card> | Origin$ Graveyard | Destination$ Hand | ActivationZone$ Graveyard | SpellDescription$ Return CARDNAME from your graveyard to your hand.
+A:AB$ ChangeZone | Cost$ ExileFromGrave<6/Creature.Other/other creature card> | Origin$ Graveyard | Destination$ Hand | ActivationZone$ Graveyard | SpellDescription$ Return this creature from your graveyard to your hand.
 
-Oracle:Trample, hexproof\nExile six other creature cards from your graveyard: Return Monstrous Apex from your graveyard to your hand.
+Oracle:Trample, hexproof\nExile six other creature cards from your graveyard: Return this creature from your graveyard to your hand.

@@ -1,0 +1,8 @@
+Name:Porg
+Colors:Green
+Types:Creature Bird
+PT:0/1
+
+K:Monstrosity:1:G
+
+Oracle:{G}: Monstrosity 1.

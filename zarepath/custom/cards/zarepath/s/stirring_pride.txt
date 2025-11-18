@@ -6,9 +6,9 @@ K:Enchant:Creature
 
 S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 2 | AddToughness$ 2 | AddKeyword$ Trample & Lifelink | Description$ Enchanted creature gets +2/+2 and has trample and lifelink.
 
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | CheckSVar$ X | SVarCompare$ GTY | Execute$ TrigChangeZone | TriggerController$ TriggeredCardController | TriggerDescription$ When CARDNAME is put into a graveyard from the battlefield, if you have more life than an opponent, return it to its owner's hand.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | CheckSVar$ X | SVarCompare$ GTY | Execute$ TrigChangeZone | TriggerController$ TriggeredCardController | TriggerDescription$ When this Aura is put into a graveyard from the battlefield, if you have more life than an opponent, return it to its owner's hand.
 SVar:TrigChangeZone:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | Defined$ TriggeredNewCardLKICopy
 SVar:X:Count$YourLifeTotal
 SVar:Y:PlayerCountOpponents$LowestLifeTotal
 
-Oracle:Enchant creature\nEnchanted creature gets +2/+2 and has trample and lifelink.\nSuperiority - When Stirring Pride is put into a graveyard from the battlefield, if you have more life than an opponent, return it to its owner's hand.
+Oracle:Enchant creature\nEnchanted creature gets +2/+2 and has trample and lifelink.\nSuperiority - When this Aura is put into a graveyard from the battlefield, if you have more life than an opponent, return it to its owner's hand.

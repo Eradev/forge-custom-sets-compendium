@@ -2,7 +2,7 @@ Name:Doxxing
 ManaCost:3 R
 Types:Enchantment
 
-T:Mode$ CounterRemoved | ValidCard$ Card.YouOwn | TriggerZones$ Battlefield | CounterType$ UPLOAD | Execute$ TrigDmg | TriggerDescription$ Whenever you put an uploaded card into your hand, CARDNAME deals 2 damage to any target.
+T:Mode$ CounterRemoved | ValidCard$ Card.YouOwn | TriggerZones$ Battlefield | CounterType$ UPLOAD | Execute$ TrigDmg | TriggerDescription$ Whenever you put an uploaded card into your hand, this enchantment deals 2 damage to any target.
 SVar:TrigDmg:DB$ DealDamage | ValidTgts$ Any | TgtPrompt$ Select any target | NumDmg$ 2
 
-Oracle:Whenever you put an uploaded card into your hand, Doxxing deals 2 damage to any target.
+Oracle:Whenever you put an uploaded card into your hand, this enchantment deals 2 damage to any target.

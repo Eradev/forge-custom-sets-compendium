@@ -3,6 +3,6 @@ ManaCost:3 R
 Types:Creature Human
 PT:3/3
 
-A:AB$ Pump | Cost$ Sac<1/Artifact> | NumAtt$ 2 | NumDef$ 2 | SpellDescription$ CARDNAME gets +2/+2 until end of turn.
+A:AB$ Pump | Cost$ Sac<1/Artifact> | NumAtt$ 2 | NumDef$ 2 | SpellDescription$ This creature gets +2/+2 until end of turn.
 
-Oracle:Sacrifice an artifact: Junkyard Boss gets +2/+2 until end of turn.
+Oracle:Sacrifice an artifact: This creature gets +2/+2 until end of turn.

@@ -3,7 +3,7 @@ ManaCost:2 B
 Types:Creature Human Pilot
 PT:2/2
 
-T:Mode$ Taps | ValidCard$ Card.Self | Execute$ TrigDrain | TriggerDescription$ Whenever CARDNAME becomes tapped, each opponent loses 2 life.
+T:Mode$ Taps | ValidCard$ Card.Self | Execute$ TrigDrain | TriggerDescription$ Whenever this creature becomes tapped, each opponent loses 2 life.
 SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 2
 
-Oracle:Whenever Vainglorious Pilot becomes tapped, each opponent loses 2 life.
+Oracle:Whenever this creature becomes tapped, each opponent loses 2 life.
