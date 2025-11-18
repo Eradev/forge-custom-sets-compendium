@@ -2,8 +2,8 @@ Name:Crystal Cavern
 ManaCost:no cost
 Types:Land Island Mountain
 
-T:Mode$ Taps | ValidCard$ Card.Self | ConditionCheckSVar$ X | ConditionSVarCompare$ LT2 | Execute$ TrigLoseLife | TriggerDescription$ Whenever land becomes tapped, you lose 1 life unless you control two or more basic lands.
+T:Mode$ Taps | ValidCard$ Card.Self | ConditionCheckSVar$ X | ConditionSVarCompare$ LT2 | Execute$ TrigLoseLife | TriggerDescription$ Whenever this land becomes tapped, you lose 1 life unless you control two or more basic lands.
 SVar:TrigLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1
 SVar:X:Land.Basic+YouCtrl
 
-Oracle:({T}: Add {U} or {R}.)\nWhenever land becomes tapped, you lose 1 life unless you control two or more basic lands.
+Oracle:({T}: Add {U} or {R}.)\nWhenever this land becomes tapped, you lose 1 life unless you control two or more basic lands.
