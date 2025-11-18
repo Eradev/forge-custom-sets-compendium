@@ -5,7 +5,7 @@ PT:3/3
 
 K:Partner:Han Solo, Scrumrat
 
-T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPump | TriggerZones$ Battlefield | TriggerDescription$ Whenever CARDNAME attacks, another target attacking creature you control gains indestructible until end of turn.
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPump | TriggerZones$ Battlefield | TriggerDescription$ Whenever NICKNAME attacks, another target attacking creature you control gains indestructible until end of turn.
 SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.Other+attacking+YouCtrl | TgtPrompt$ Select another target attacking creature you control | KW$ Indestructible | SpellDescription$ another target attacking creature you control gains indestructible until end of turn.
 
 Oracle:Partner with Han Solo, Scrumrat\nWhenever Chewbacca attacks, another target attacking creature you control gains indestructible until end of turn.
