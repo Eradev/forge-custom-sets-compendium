@@ -2,7 +2,7 @@ Name:Conscription
 ManaCost:2 U U
 Types:Sorcery
 
-A:SP$ GainControl | ValidTgts$ Creature.powerLE2 | TgtPrompt$ Select target creature with power 2 or less | NewController$ You | SubAbility$ DBAnimate | SpellDescription$ Gain control of target creature with power 2 or less.
-SVar:DBAnimate:DB$ Animate | Defined$ Targeted | Types$ Trooper | Duration$ Permanent | SpellDescription$ It becomes a Trooper in addition to its other types.
+A:SP$ GainControl | ValidTgts$ Creature.powerLE2 | TgtPrompt$ Select target creature with power 2 or less | NewController$ You | SubAbility$ DBAnimate | SpellDescription$ Gain control of target creature with power 2 or less. It becomes a Trooper in addition to its other types.
+SVar:DBAnimate:DB$ Animate | Defined$ Targeted | Types$ Trooper | Duration$ Permanent
 
-Oracle:Gain control of target creature with power 2 or less.\nIt becomes a Trooper in addition to its other types.
+Oracle:Gain control of target creature with power 2 or less. It becomes a Trooper in addition to its other types.
