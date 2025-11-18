@@ -4,7 +4,7 @@ Types:Legendary Creature Human
 PT:1/1
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When NICKNAME enters, create Mother, a legendary 4/1 black Demon creature token with flying that can't block.
-SVar:TrigToken:DB$ Token | TokenScript$ mother | TokenAmount$ 1 | TokenOwner$ You
+SVar:TrigToken:DB$ Token | TokenScript$ mother | TokenAmount$ 1 | TokenOwner$ You | LockTokenScript$ True
 
 R:Event$ DamageDone | ActiveZones$ Battlefield | ValidTarget$ Card.Self | ReplaceWith$ DBImmediateTrigger | PreventionEffect$ True | IsPresent$ Creature.Demon+YouCtrl | Description$ If NICKNAME would be dealt damage, that damage is dealt to a Demon you control instead.
 SVar:DBImmediateTrigger:DB$ ImmediateTrigger | Execute$ TrigDamage | RememberSVarAmount$ X | TriggerDescription$ Damage is dealt to a Demon you control instead.
