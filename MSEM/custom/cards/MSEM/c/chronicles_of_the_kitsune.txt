@@ -12,7 +12,7 @@ SVar:DBPumpToken:Mode$ Continuous | Affected$ Creature.token+YouCtrl | AddPower$
 
 A:AB$ Effect | PrecostDesc$ Act II:Descent — | Cost$ 3 W W | SorcerySpeed$ True | CheckSVar$ GalleryUnlocked | SVarCompare$ EQ0 | Triggers$ TrigHuLiCheck | Duration$ Permanent | SubAbility$ DBGalleryUnlocked | SpellDescription$ At the beginning of your end step, if you control no creatures, create Hu Li, a legendary 4/4 white Fox Spirit creature token with flying and lifelink.
 SVar:TrigHuLiCheck:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Creature.YouCtrl | PresentCompare$ EQ0 | Execute$ TrigHuLi | TriggerDescription$ Act II:Descent — At the beginning of your end step, if you control no creatures, create Hu Li, a legendary 4/4 white Fox Spirit creature token with flying and lifelink.
-SVar:TrigHuLi:DB$ Token | TokenScript$ hu_li | TokenAmount$ 1 | TokenOwner$ You
+SVar:TrigHuLi:DB$ Token | TokenScript$ hu_li | TokenAmount$ 1 | TokenOwner$ You | LockTokenScript$ True
 
 SVar:DBGalleryUnlocked:DB$ StoreSVar | SVar$ GalleryUnlocked | Type$ Number | Expression$ 1
 SVar:GalleryUnlocked:0
