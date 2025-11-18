@@ -1,0 +1,10 @@
+Name:Mud Trooper
+ManaCost:B
+Types:Creature Human Trooper
+PT:1/1
+
+S:Mode$ Continuous | Affected$ Creature.Trooper+YouCtrl | AddAbility$ ABPump | Description$ Trooper creatures you control have "{2}: This creature gets +1/+1 until end of turn."
+
+SVar:ABPump:AB$ Pump | Cost$ 2 | Defined$ Self | NumAtt$ +1 | NumDef$ +1 | SpellDescription$ This creature gets +1/+1 until end of turn.
+
+Oracle:Trooper creatures you control have "{2}: This creature gets +1/+1 until end of turn."

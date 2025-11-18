@@ -1,0 +1,13 @@
+Name:Underground Forum
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Cost$ 1 T | Produced$ Combo B R G | SpellDescription$ Add {B}, {R}, or {G}.
+
+A:AB$ PutCounter | Cost$ 2 T | ValidTgts$ Creature | TgtPrompt$ Select target creature | CounterType$ BOUNTY | CounterNum$ 1 | IsCurse$ True | SpellDescription$ Put a bounty counter on target creature.
+
+Oracle:{T}: Add {C}.\n{1}, {T}: Add {B}, {R}, or {G}.\n{2}, {T}: Put a bounty counter on target creature.
+
+DeckHas:Ability$Counters

@@ -1,0 +1,11 @@
+Name:Afterburn
+ManaCost:R
+Types:Instant
+
+A:SP$ Charm | Choices$ DBHasteFS,DBRemoveCombat | CharmNum$ 1
+
+SVar:DBHasteFS:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | KW$ Haste & First Strike | SpellDescription$ Target creature gains haste and first strike until end of turn.
+
+SVar:DBRemoveCombat:DB$ RemoveFromCombat | ValidTgts$ Creature | TgtPrompt$ Select target creature to remove from combat | SpellDescription$ Remove target creature from combat. (Blocked creatures are still blocked.)
+
+Oracle:Choose one —\n• Target creature gains haste and first strike until end of turn.\n• Remove target creature from combat. (Blocked creatures are still blocked.)

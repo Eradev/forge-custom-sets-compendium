@@ -1,0 +1,19 @@
+Name:Tobias Beckett
+ManaCost:3 B
+Types:Legendary Creature Human Hunter
+PT:4/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPutCounter | TriggerZones$ Battlefield | TriggerDescription$ When CARDNAME enters, put a bounty counter on target creature an opponent controls.
+SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | CounterType$ BOUNTY | CounterNum$ 1 | IsCurse$ True
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.OppCtrl+counters_GE1_BOUNTY | Execute$ TrigExileTop | TriggerZones$ Battlefield | TriggerDescription$ Whenever a creature an opponent controls with a bounty counter on it dies, exile the top card of its controller's library. You may cast cards exiled this way and spend mana as though it were mana of any type to cast that spell.
+
+SVar:TrigExileTop:DB$ Dig | DigNum$ 1 | ChangeNum$ All | Defined$ TriggeredCardController | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBPlayPermission
+SVar:DBPlayPermission:DB$ Effect | StaticAbilities$ STPlay | ExileOnMoved$ Exile | RememberObjects$ Remembered | Duration$ Permanent | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | MayPlayIgnoreColor$ True | Affected$ Card.nonLand.IsRemembered | AffectedZone$ Exile | Description$ You may cast cards exiled this way and spend mana as though it were mana of any type to cast that spell.
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When Tobias Beckett enters, put a bounty counter on target creature an opponent controls.\nBounty — Whenever a creature an opponent controls with a bounty counter on it dies, exile the top card of its controller's library. You may cast cards exiled this way and spend mana as though it were mana of any type to cast that spell.
+
+DeckHas:Ability$Counters

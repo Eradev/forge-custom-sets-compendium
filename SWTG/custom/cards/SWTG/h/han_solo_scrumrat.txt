@@ -1,0 +1,15 @@
+Name:Han Solo, Scrumrat
+ManaCost:2 W
+Types:Legendary Creature Human Rogue
+PT:2/2
+
+K:Partner:Chewbacca, the Beast
+
+A:AB$ Pump | Cost$ R | Defined$ Self | KW$ First Strike | SpellDescription$ NICKNAME gains first strike until end of turn.
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | PlayerTurn$ True | Execute$ TrigPutCounter | TriggerZones$ Battlefield | TriggerDescription$ Whenever NICKNAME deals damage during your turn, put a +1/+1 counter on another target creature you control.
+SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature.Other+YouCtrl | TgtPrompt$ Select another target creature you control | CounterType$ P1P1 | CounterNum$ 1
+
+Oracle:Partner with Chewbacca, the Beast\n{R}: Han Solo gains first strike until end of turn.\nWhenever Han Solo deals damage during your turn, put a +1/+1 counter on another target creature you control.
+
+DeckHas:Ability$Counters

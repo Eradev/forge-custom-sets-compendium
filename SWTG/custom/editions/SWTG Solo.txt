@@ -1,0 +1,34 @@
+[metadata]
+Code=SWTG_SOLO
+Date=2019-05-01
+Name=SWTG Solo
+Type=Custom
+Foil=NotSupported
+
+[cards]
+1 U Droid Uprising @SOLO
+2 R Han Solo, Scrumrat @SW: Galaxies
+3 U Range Trooper @Topps
+4 U Conscription @Cristi Balanescu
+5 U Despair (SWTG) @RIC ${"flavorName": "Despair"}
+6 U Kalevan Star Yacht @Mariusz Gandzel
+7 U Mud Trooper @Kai Lim
+8 R Tobias Beckett @SOLO: Promotional Art
+9 C Afterburn @Ameen Naksewee
+10 C Corellian Gunship @Volemlock
+11 R Gamble @Orbsah
+12 R Chewbacca, the Beast @Aaron McBride
+13 R Dryden Vos @SOLO: Promotional Art
+14 M Enfys Nest @Topps
+15 C Maelstrom Blockade @Mark Houston
+16 U Underground Forum @1313 Concept Art
+
+
+[tokens]
+1 c_1_1_a_droid @Doug Chiang
+
+[CreatureTypes]
+Hunter:Hunters
+Starship:Starships
+Trooper:Troopers
+Wookiee:Wookiees
