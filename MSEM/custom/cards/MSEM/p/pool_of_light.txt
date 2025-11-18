@@ -1,0 +1,8 @@
+Name:Pool of Light
+ManaCost:no cost
+Types:Land Plains Island
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you control a basic Plains or a basic Island.
+SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Land.Basic+Plains+YouCtrl,Land.Basic+Island+YouCtrl | ConditionCompare$ EQ0
+
+Oracle:({T}: Add {W} or {U}.)\nThis land enters tapped unless you control a basic Plains or a basic Island.
