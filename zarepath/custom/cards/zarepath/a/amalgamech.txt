@@ -4,7 +4,7 @@ Types:Artifact Creature Construct
 PT:3/5
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigImmediateTrig | TriggerDescription$ When this creature enters, you may sacrifice an artifact. If you do, create two 2/2 colorless Construct artifact creature tokens.
-SVar:TrigImmediateTrig:AB$ ImmediateTrigger | Cost$ Sac<1/Artifact> | Execute$ TrigToken | SpellDescription$ If you do, create two 2/2 colorless Construct artifact creature tokens.
+SVar:TrigImmediateTrig:AB$ ImmediateTrigger | Cost$ Sac<1/Artifact> | Execute$ TrigToken | SpellDescription$ Create two 2/2 colorless Construct artifact creature tokens.
 SVar:TrigToken:DB$ Token | Cost$ Sac<1/Artifact> | TokenAmount$ 2 | TokenScript$ c_2_2_a_construct | TokenOwner$ You
 
 Oracle:When this creature enters, you may sacrifice an artifact. If you do, create two 2/2 colorless Construct artifact creature tokens.
