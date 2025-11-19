@@ -1,6 +1,6 @@
 [metadata]
 Code=SWTG_ROS
-Date=2019-05-01
+Date=2020-08-15
 Name=SWTG Rise of Skywalker
 Type=Custom
 Foil=NotSupported
