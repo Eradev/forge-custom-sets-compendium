@@ -1,0 +1,8 @@
+Name:Sanding
+ManaCost:1 R
+Types:Sorcery
+
+A:SP$ Destroy | ValidTgts$ Land | TgtPrompt$ Select target land | SubAbility$ DBToken | SpellDescription$ Destroy target land. Its controller creates a colorless Desert land token with "{T}: Add {C}."
+SVar:DBToken:DB$ Token | TokenScript$ desert_msem | LockTokenScript$ true | TokenOwner$ TargetedController
+
+Oracle:Destroy target land. Its controller creates a colorless Desert land token with "{T}: Add {C}."
