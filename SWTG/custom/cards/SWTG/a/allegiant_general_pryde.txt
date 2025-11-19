@@ -1,0 +1,14 @@
+Name:Allegiant General Pryde
+ManaCost:2 B
+Types:Legendary Creature Trooper Advisor
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Creature.Trooper+YouCtrl | AddTrigger$ ETBTrigger | Description$ Trooper creatures you control have "When this creature enters, you may sacrifice a creature. If you do, draw two cards and lose 2 life."
+
+SVar:ETBTrigger:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDrawLoss | TriggerZones$ Battlefield | TriggerDescription$ When this creature enters, you may sacrifice a creature. If you do, draw two cards and lose 2 life.
+
+SVar:TrigDrawLoss:AB$ Draw | Cost$ Sac<1/Creature> | Defined$ You | NumCards$ 2 | SubAbility$ DBLoseLife
+
+SVar:DBLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 2
+
+Oracle:Trooper creatures you control have "When this creature enters, you may sacrifice a creature. If you do, draw two cards and lose 2 life."

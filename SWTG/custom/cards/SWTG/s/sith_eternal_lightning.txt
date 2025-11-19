@@ -1,0 +1,11 @@
+Name:Sith Eternal Lightning
+ManaCost:2 U U
+Types:Sorcery
+
+R:Event$ Counter | ValidCard$ Card.Self | ValidSA$ Spell | Layer$ CantHappen | Description$ This spell can't be countered.
+
+A:SP$ TapAll | ValidCards$ Creature.OppCtrl | SubAbility$ DBPumpAll | SpellDescription$ Tap all creatures your opponents control. Those creatures don't untap during their controller's next untap step. Scry 4.
+SVar:DBPumpAll:DB$ PumpAll | ValidCards$ Creature.OppCtrl | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent | IsCurse$ True | SubAbility$ DBScry
+SVar:DBScry:DB$ Scry | ScryNum$ 4
+
+Oracle:This spell can't be countered.\nTap all creatures your opponents control. Those creatures don't untap during their controller's next untap step. Scry 4.

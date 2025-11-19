@@ -1,0 +1,16 @@
+Name:Knights of Ren
+ManaCost:1 B R
+Types:Legendary Creature Human Sith
+PT:4/2
+
+K:Menace
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | CheckSVar$ HateFlag | SVarCompare$ GE1 | Execute$ TrigSac | TriggerDescription$ Whenever CARDNAME enters, if an opponent lost life from a source other than combat damage this turn, you may have each player sacrifice a creature.
+T:Mode$ Attacks | ValidCard$ Card.Self | OptionalDecider$ You | CheckSVar$ HateFlag | SVarCompare$ GE1 | Execute$ TrigSac | TriggerDescription$ Whenever CARDNAME attacks, if an opponent lost life from a source other than combat damage this turn, you may have each player sacrifice a creature.
+
+SVar:TrigSac:DB$ Sacrifice | SacValid$ Creature | Defined$ Player
+
+SVar:HateFlag:PlayerCountRegisteredOpponents$LifeLostThisTurn/Minus.OppCombatDmg
+SVar:OppCombatDmg:PlayerCountRegisteredOpponents$DamageThisTurn/Minus.PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
+
+K:Menace\nHate - Whenever Knights of Ren enters or attacks, if an opponent lost life from a source other than combat damage this turn, you may have each player sacrifice a creature.

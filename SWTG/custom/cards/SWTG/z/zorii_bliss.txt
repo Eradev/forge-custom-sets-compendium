@@ -1,0 +1,16 @@
+Name:Zorii Bliss
+ManaCost:2 R
+Types:Legendary Creature Rebel Rogue
+PT:3/2
+
+K:Haste
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigDrawPlayers | TriggerZones$ Battlefield | TriggerDescription$ Whenever CARDNAME attacks, you may discard a card. If you do, any number of target players each draw a card.
+
+SVar:TrigDrawPlayers:AB$ Draw | Cost$ Discard<1/Card> | ValidTgts$ Player | TgtPrompt$ Select any number of target players | TargetMin$ 0 | TargetMax$ MaxTgt | NumCards$ 1
+SVar:MaxTgt:PlayerCountPlayers$Amount
+
+Oracle:Haste\nWhenever Zorii Bliss attacks, you may discard a card. If you do, any number of target players each draw a card.
+
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Discard

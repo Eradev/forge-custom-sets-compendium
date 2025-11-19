@@ -1,0 +1,14 @@
+Name:A Jedi's Fervor
+ManaCost:1 W
+Types:Instant
+
+T:Mode$ SpellCast | ValidCard$ Card.Black | ValidActivatingPlayer$ Opponent | Static$ True | Execute$ RememberCaster
+SVar:RememberCaster:DB$ Pump | Defined$ TriggeredCardController | RememberObjects$ TriggeredCardController
+
+A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | KW$ Indestructible | SubAbility$ DBSacrifice | SpellDescription$ Creatures you control gain indestructible until end of turn. If an opponent cast a black spell this turn, that player sacrifices a creature or planeswalker. | StackDescription$ SpellDescription
+SVar:DBSacrifice:DB$ Sacrifice | Defined$ Opponent.IsRemembered | SacValid$ Creature,Planeswalker | SubAbility$ DBCleanup | SacMessage$ creature or planeswalker
+
+T:Mode$ Phase | Phase$ Cleanup | Static$ True | Execute$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Creatures you control gain indestructible until end of turn. If an opponent cast a black spell this turn, that player sacrifices a creature or planeswalker.

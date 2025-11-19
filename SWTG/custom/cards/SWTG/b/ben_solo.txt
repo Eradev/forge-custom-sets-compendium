@@ -1,0 +1,12 @@
+Name:Ben Solo
+ManaCost:2 RW W
+Types:Legendary Creature Human Knight
+PT:4/4
+
+K:Vigilance
+
+T:Mode$ DamageDoneOnce | Execute$ DBDmg | ValidTarget$ Card.Self | TriggerZones$ Battlefield | TriggerDescription$ Whenever CARDNAME is dealt damage, it deals that much damage to target player or planeswalker.
+SVar:DBDmg:DB$ DealDamage | ValidTgts$ Player,Planeswalker | TgtPrompt$ Select target player or planeswalker | NumDmg$ X
+SVar:X:TriggerCount$DamageAmount
+
+Oracle:Vigilance\nWhenever Ben Solo is dealt damage, it deals that much damage to target player or planeswalker.
