@@ -1,0 +1,8 @@
+Name:Saved by the Rebellion
+ManaCost:1 G
+Types:Instant
+
+A:SP$ PutCounter | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBProtection | SpellDescription$ Put a +1/+1 counter on target creature you control. That creature gains protection from blue, black, and red until end of turn.
+SVar:DBProtection:DB$ Protection | Defined$ Targeted | Gains$ blue,black,red
+
+Oracle:Put a +1/+1 counter on target creature you control. That creature gains protection from blue, black, and red until end of turn.

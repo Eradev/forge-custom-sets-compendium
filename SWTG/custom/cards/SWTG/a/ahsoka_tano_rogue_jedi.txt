@@ -1,0 +1,16 @@
+Name:Ahsoka Tano, Rogue Jedi
+ManaCost:3 R W
+Types:Legendary Creature Togruta Jedi
+PT:3/3
+
+K:Double Strike
+
+K:Vigilance
+
+K:Haste
+
+A:AB$ RemoveFromCombat | Cost$ 1 R W T | ValidTgts$ Creature.attacking,Creature.blocking | TgtPrompt$ Select target attacking or blocking creature | SpellDescription$ Remove target attacking or blocking creature from combat.
+
+A:AB$ Pump | Cost$ 2 R W | Defined$ Self | NumAtt$ +1 | NumDef$ +1 | SpellDescription$ Ahsoka Tano gets +1/+1 until end of turn.
+
+Oracle:Double strike, vigilance, haste\n{1}{RW}, {T}: Remove target attacking or blocking creature from combat.\n{2}{R}{W}: Ahsoka Tano gets +1/+1 until end of turn.

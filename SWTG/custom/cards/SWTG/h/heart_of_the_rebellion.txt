@@ -1,0 +1,11 @@
+Name:Heart of the Rebellion
+ManaCost:G W
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ Rebel.YouCtrl | AddPower$ 1 | AddToughness$ 1 | Description$ Rebel creature you control get +1/+1
+
+A:AB$ Animate | Cost$ 1 G | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | Types$ Rebel | SpellDescription$ Target creature you control becomes a rebel in addition to its other types until end of turn.
+
+A:AB$ Token | Cost$ 3 W W | TokenAmount$ 1 | TokenScript$ w_1_1_rebel | TokenOwner$ You | SpellDescription$ Create a 1/1 white Rebel creature token.
+
+Oracle:Rebel creature you control get +1/+1\n{1}{G}: Target creature you control becomes a rebel in addition to its other types until end of turn.\n{3}{W}{W}: Create a 1/1 white Rebel creature token.

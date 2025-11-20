@@ -1,0 +1,8 @@
+Name:Trooper Medic
+ManaCost:4 W
+Types:Creature Human Trooper
+PT:3/3
+
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Creature.Trooper+YouCtrl | AddKeyword$ Lifelink | Description$ Trooper creatures you control have lifelink.
+
+Oracle:Trooper creatures you control have lifelink.

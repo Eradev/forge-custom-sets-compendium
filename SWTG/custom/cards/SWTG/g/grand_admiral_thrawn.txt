@@ -1,0 +1,13 @@
+Name:Grand Admiral Thrawn
+ManaCost:1 U B
+Types:Legendary Creature Chiss Advisor
+PT:2/3
+
+T:Mode$ AttackersDeclared | Execute$ TrigLoseLife | TriggerDescription$ Whenever one or more creatures attack, each opponent loses 1 life.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ Opponent | LifeAmount$ 1
+
+A:AB$ Effect | Cost$ 3 U T | ValidTgts$ Creature | StaticAbilities$ MustAttack | RememberObjects$ Targeted | ExileOnMoved$ Battlefield | SubAbility$ DBNoUntap | SpellDescription$ Target creature attacks this turn if able. That creature doesn't untap during its controller's next untap step.
+SVar:MustAttack:Mode$ MustAttack | ValidCreature$ Card.IsRemembered | Description$ This creature attacks this turn if able.
+SVar:DBNoUntap:DB$ Pump | Defined$ ParentTarget | KW$ HIDDEN This card doesn't untap during its controller's next untap step. | Duration$ Permanent
+
+Oracle:Whenever one or more creatures attack, each opponent loses 1 life.\n{3}{U}, {T}: Target creature attacks this turn if able. That creature doesn't untap during its controller's next untap step.

@@ -1,0 +1,10 @@
+Name:Spark of Rebellion
+ManaCost:1 W
+Types:Sorcery
+
+A:SP$ Dig | DigNum$ 6 | ChangeNum$ 1 | Optional$ True | ChangeValid$ Legendary | RestRandomOrder$ True | ForceRevealToController$ True | RememberChanged$ True | SubAbility$ DBImmediateTrigger | SpellDescription$ Look at the top six cards of your library. You may reveal a legendary card from among them and put it into your hand. Put the rest on the bottom of your library in a random order.
+SVar:DBImmediateTrigger:DB$ ImmediateTrigger | Execute$ TrigToken | ConditionDefined$ Remembered | ConditionPresent$ Legendary | ConditionCompare$ EQ0 | SubAbility$ DBCleanup | TriggerDescription$ If no card was revealed this way, create two 1/1 white Rebel creature tokens.
+SVar:TrigToken:DB$ Token | TokenAmount$ 2 | TokenScript$ w_1_1_rebel
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Look at the top six cards of your library. You may reveal a legendary card from among them and put it into your hand. Put the rest on the bottom of your library in a random order. If no card was revealed this way, create two 1/1 white Rebel creature tokens.

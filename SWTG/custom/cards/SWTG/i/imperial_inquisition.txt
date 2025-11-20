@@ -1,0 +1,11 @@
+Name:Imperial Inquisition
+ManaCost:2 B
+Types:Sorcery
+
+A:SP$ Token | TokenScript$ inquisitor | LockTokenScript$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Graveyard | Execute$ TrigReturn | TriggerDescription$ At the beginning of your end step, you may exile two other cards from your graveyard. If you do, return this card from your graveyard to your hand.
+SVar:TrigReturn:AB$ ChangeZone | Cost$ ExileFromGrave<2/Card.Other/other card> | Defined$ Self | Origin$ Graveyard | Destination$ Hand
+
+Oracle:Create a 2/1 black Sith creature token with menace named Inquisitor, then lose 1 life.\nAt the beginning of your end step, you may exile two other cards from your graveyard. If you do, return this card from your graveyard to your hand.

@@ -1,0 +1,15 @@
+Name:Kallus, Imperial Traitor
+ManaCost:1 B R
+Types:Legendary Creature Human Rebel
+PT:3/2
+
+K:Lifelink
+
+K:Haste
+
+S:Mode$ Continuous | Affected$ Creature.OppCtrl | AddKeyword$ Haste | Description$ Creatures your opponents control have haste.
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ Player.Opponent | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ At the beginning of each opponent's end step, they lose 1 life for each untapped creature they control.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ TriggeredPlayer | LifeAmount$ Count$Valid Creature.untapped+ControlledBy TriggeredPlayer
+
+Oracle:Lifelink, haste\nCreatures your opponents control have haste.\nAt the beginning of each opponent's end step, they lose 1 life for each untapped creature they control.

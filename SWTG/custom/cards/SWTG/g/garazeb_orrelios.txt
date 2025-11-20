@@ -1,0 +1,14 @@
+Name:Garazeb Orrelios
+ManaCost:1 R G
+Types:Legendary Planeswalker Garazeb
+Loyalty:3
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.HasCounters | TriggerZones$ Battlefield | Execute$ TrigMoveCounter | TriggerDescription$ When a creature with a counter on it dies, place up to one counter of a kind on it when it died on another target creature its owner controls.
+SVar:TrigMoveCounter:DB$ MoveCounter | Source$ TriggeredCardLKICopy | ValidTgts$ Creature.Other+ControlledBy TriggeredCardOwner | TgtPrompt$ Select target creature to get counter | CounterType$ Any | CounterNum$ 1
+
+A:AB$ PutCounter | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | CounterType$ P1P1 | CounterNum$ 1 | ValidTgts$ Creature.YouCtrl | TargetMin$ 0 | TargetMax$ 1 | SpellDescription$ Put a +1/+1 counter on up to one target creature you control.
+
+A:AB$ Pump | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Choose target creature you control | SubAbility$ DBFight | SpellDescription$ Target creature you control fights another target creature you don't control.
+SVar:DBFight:DB$ Fight | Defined$ ParentTarget | ValidTgts$ Creature.YouDontCtrl | TargetMin$ 1 | TargetMax$ 1 | TgtPrompt$ Select target creature you don't control
+
+Oracle:When a creature with a counter on it dies, place up to one counter of a kind on it when it died on another target creature its owner controls.\n[+1]: Put a +1/+1 counter on up to one target creature you control.\n[-2]: Target creature you control fights another target creature you don't control.

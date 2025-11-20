@@ -1,0 +1,9 @@
+Name:Demolitions Trooper
+ManaCost:R
+Types:Creature Human Trooper
+PT:1/1
+
+S:Mode$ Continuous | Affected$ Creature.Trooper+YouCtrl | AddAbility$ DestroyArtifact | Description$ Trooper creatures you control have "{2}{R}, {T}, Sacrifice this creature: Destroy target artifact."
+SVar:DestroyArtifact:AB$ Destroy | Cost$ 2 R T Sac<1/CARDNAME/this creature> | ValidTgts$ Artifact | TgtPrompt$ Select target artifact | SpellDescription$ Destroy target artifact.
+
+Oracle:Trooper creatures you control have "{2}{R}, {T}, Sacrifice this creature: Destroy target artifact."

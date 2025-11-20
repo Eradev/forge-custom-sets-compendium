@@ -1,0 +1,11 @@
+Name:Feral Loth-Cat
+ManaCost:1 G
+Types:Creature Cat Beast
+PT:2/1
+
+K:CARDNAME must be blocked if able.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigPutCounter | TriggerDescription$ When this creature dies, put a +1/+1 counter on another target creature you control.
+SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature.Other+YouCtrl | TgtPrompt$ Select another target creature you control | CounterType$ P1P1 | CounterNum$ 1
+
+Oracle:This creature must be blocked if able.\nWhen this creature dies, put a +1/+1 counter on another target creature you control.

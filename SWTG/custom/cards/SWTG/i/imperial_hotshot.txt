@@ -1,0 +1,13 @@
+Name:Imperial Hotshot
+ManaCost:1 U
+Types:Creature Human Pilot
+PT:2/1
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ DBPump | IsPresent$ Creature.attacking+YouCtrl+Other+withSpaceflight | PresentCompare$ GE1 | TriggerDescription$ Whenever this creature attacks, it gains spaceflight until end of turn if you control another attacking creature with spaceflight.
+SVar:DBPump:DB$ Pump | Defined$ Self | KW$ Spaceflight
+
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight & BlockBySpaceflight
+SVar:BlockSpaceflight:Mode$ CantBlockBy | ValidAttacker$ Creature.withoutSpaceflight | ValidBlocker$ Creature.Self | Description$ This creature can only block or be blocked by creatures with spaceflight.
+SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpaceflight+withoutSpacereach | ValidAttacker$ Creature.Self
+
+Oracle:Whenever this creature attacks, it gains spaceflight until end of turn if you control another attacking creature with spaceflight.

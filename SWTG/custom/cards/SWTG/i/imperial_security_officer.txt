@@ -1,0 +1,13 @@
+Name:Imperial Security Officer
+ManaCost:3 B
+Types:Creature Human Advisor
+PT:3/2
+
+K:Menace
+
+K:Haste
+
+T:Mode$ Untaps | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigLoseLife
+SVar:TrigLoseLife:DB$ LoseLife | ValidTgts$ Opponent | LifeAmount$ 1 | UnlessCost$ Discard<1/Card> | UnlessPayer$ Targeted
+
+Oracle:Menace, haste\nWhenever this creature becomes untapped, target opponent may discard a card. If that player doesn't, they lose 1 life.

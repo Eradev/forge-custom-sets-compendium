@@ -1,0 +1,10 @@
+Name:Fulcrum Intelligence
+ManaCost:U
+Types:Enchantment Aura
+K:Enchant:Player
+
+S:Mode$ Continuous | Affected$ Card.TopLibrary+EnchantedPlayerCtrl | AffectedZone$ Library | MayLookAt$ You | Description$ You may look at the top card of your library any time.
+
+A:AB$ Shuffle | Cost$ Sac<1/CARDNAME/this Aura> | Defined$ Player
+
+Oracle:Enchant player\nYou may look at the top card of enchanted player's library at anytime.\nSacrifice this Aura: Each player shuffles their library.

@@ -1,0 +1,16 @@
+Name:Ezra Bridger
+ManaCost:2 G W
+Types:Legendary Creature Human Jedi Rebel
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters, create a 1/1 white Rebel creature token.
+SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ w_1_1_rebel | TokenOwner$ You
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever CARDNAME attacks, put a +1/+1 counter on another target rebel creature you control.
+SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature.Rebel+YouCtrl+Other | TgtPrompt$ Select another target rebel creature you control | CounterType$ P1P1 | CounterNum$ 1
+
+A:AB$ ChangeZone | Named$ Meditate | Cost$ 1 GW | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
+
+Oracle:When Ezra Bridger enters, create a 1/1 white Rebel creature token.\nWhenever Ezra Bridger attacks, put a +1/+1 counter on another target rebel creature you control.\nMeditate {1}{GW} (Return this creature to its owner’s hand. Meditate only as a sorcery.)
+
+SVar:HasAttackEffect:TRUE
