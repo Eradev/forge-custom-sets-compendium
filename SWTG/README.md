@@ -3,7 +3,7 @@
 More information can be found on its [official website](https://www.starwarsthegathering.com).
 
 ## Set implementation progress
-
+Core set and all 6 expansions implemented
 ```text
 Star Wars: the Gathering (SWTG) - 100% (271/271)
 The Force Awakens (SWTG_TFA)    - 100% (15/15)
@@ -11,6 +11,7 @@ Solo (SWTG_SOLO)                - 100% (16/16)
 Rogue One (SWTG_RO)             - 100% (15/15)
 The Last Jedi (SWTG_TLJ)        - 100% (22/22)
 Rise of Skywalker (SWTG_ROS)    - 100% (34/34)
+Rebels (SWTG_RBL)               - 100% (32/32)
 ```
 
 ## How to install?
