@@ -1,0 +1,10 @@
+Name:Gates to the Afterlife
+ManaCost:1 B B
+Types:Creature Wall
+PT:1/6
+
+K:Defender
+
+K:Hexproof
+
+Oracle:Defender (This creature can't attack.)\nHexproof (This creature can't be the target of spells or abilities your opponents control.)
