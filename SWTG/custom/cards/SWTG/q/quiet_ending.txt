@@ -1,0 +1,11 @@
+Name:Quiet Ending
+ManaCost:2 W W
+Types:Sorcery
+
+A:SP$ Charm | MinCharmNum$ 1 | CharmNum$ 3 | Choices$ DBExileTapped,DBExileEnchant,DBExileYard
+
+SVar:DBExileTapped:DB$ ChangeZone | ValidTgts$ Creature.tapped | TgtPrompt$ Select target tapped creature | Origin$ Battlefield | Destination$ Exile | SpellDescription$ Exile target tapped creature.
+SVar:DBExileEnchant:DB$ ChangeZone | ValidTgts$ Enchantment | TgtPrompt$ Select target enchantment | Origin$ Battlefield | Destination$ Exile | SpellDescription$ Exile target enchantment.
+SVar:DBExileYard:DB$ ChangeZone | ValidTgts$ Card | TgtPrompt$ Choose target card in a graveyard | Origin$ Graveyard | Destination$ Exile | SpellDescription$ Exile target card from a graveyard.
+
+Oracle:Choose one or more —\n• Exile target tapped creature.\n• Exile target enchantment.\n• Exile target card from a graveyard.
