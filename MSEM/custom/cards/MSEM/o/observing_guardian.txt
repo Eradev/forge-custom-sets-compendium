@@ -4,7 +4,6 @@ Types:Creature Human Warrior
 PT:2/2
 
 K:Tribute:2
-
-SVar:TrigNotTribute:DB$ Token | TokenScript$ w_2_2_cat
+SVar:TrigNotTribute:DB$ Token | TokenScript$ w_2_2_cat | SpellDescription$ When this creature enters, if tribute wasn't paid, create a 2/2 white Cat creature token.
 
 Oracle:Tribute 2 (As this creature enters, an opponent of your choice may put two +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, create a 2/2 white Cat creature token.
