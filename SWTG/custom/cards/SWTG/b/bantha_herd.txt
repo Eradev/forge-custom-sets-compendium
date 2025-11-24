@@ -10,6 +10,6 @@ SVar:TrigToken:DB$ Token | TokenAmount$ MonstrosityX | TokenScript$ w_1_1_tusken
 SVar:X:Count$xPaid
 SVar:MonstrosityX:TriggerCount$MonstrosityAmount
 
-Oracle:{X}{W}{W}: Monstrosity X. (If this creature isn't monstrous, put X +1/+1 counters on it and it becomes monstrous.)\nWhen Bantha Herd becomes monstrous, create X 1/1 white Tusken Raider creature tokens.
+Oracle:{X}{W}{W}: Monstrosity X. (If this creature isn't monstrous, put X +1/+1 counters on it and it becomes monstrous.)\nWhen this creature becomes monstrous, create X 1/1 white Tusken Raider creature tokens.
 
 DeckHas:Ability$Counters|Token

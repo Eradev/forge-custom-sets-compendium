@@ -3,9 +3,9 @@ ManaCost:2 W
 Types:Creature Human Jedi
 PT:2/2
 
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigExile | OptionalDecider$ You | TriggerDescription$ When CARDNAME leaves the battlefield, you may exile target enchantment.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigExile | OptionalDecider$ You | TriggerDescription$ When this creature leaves the battlefield, you may exile target enchantment.
 SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Enchantment | TgtPrompt$ Select target enchantment to exile
 
 A:AB$ ChangeZone | Named$ Meditate | Cost$ 1 W | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
 
-Oracle:When Jedi Inquirer leaves the battlefield, you may exile target enchantment.\nMeditate 1W (Return this creature to its owner's hand. Meditate only as a sorcery.)
+Oracle:When this creature leaves the battlefield, you may exile target enchantment.\nMeditate 1W (Return this creature to its owner's hand. Meditate only as a sorcery.)

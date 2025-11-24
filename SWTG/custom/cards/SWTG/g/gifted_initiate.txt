@@ -3,10 +3,10 @@ ManaCost:1 W
 Types:Creature Human Jedi
 PT:2/1
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigTap | OptionalDecider$ You | TriggerDescription$ When CARDNAME enters, you may tap target creature and CARDNAME.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigTap | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may tap target creature and this creature.
 SVar:TrigTap:DB$ Tap | ValidTgts$ Creature | TgtPrompt$ Select target creature to tap | SubAbility$ DBTapSelf
 SVar:DBTapSelf:DB$ Tap | Defined$ Self
 
 A:AB$ ChangeZone | Named$ Meditate | Cost$ 1 W | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
 
-Oracle:When Gifted Initiate enters, you may tap target creature and Gifted Initiate.\nMeditate {1}{W} (Return this creature to its owner's hand. Meditate only as a sorcery.)
+Oracle:When this creature enters, you may tap target creature and this creature.\nMeditate {1}{W} (Return this creature to its owner's hand. Meditate only as a sorcery.)

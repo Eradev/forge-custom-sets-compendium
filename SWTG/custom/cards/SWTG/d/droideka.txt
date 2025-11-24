@@ -13,4 +13,4 @@ T:Mode$ CounterRemoved | TriggerZones$ Graveyard | ValidCard$ Card.Self | Counte
 SVar:DBCast:DB$ Effect | StaticAbilities$ STPlay | ForgetOnMoved$ Graveyard | RememberObjects$ Self | Duration$ EndOfTurn
 SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Graveyard | Description$ Until end of turn, you may play EFFECTSOURCE.
 
-Oracle:{2}{U}: Change a target of target spell or ability to Droideka.\nRepair 3 (When this creature dies, put three repair counters on it. At the beginning of your upkeep, remove a repair counter. Whenever the last is removed, you may cast it from your graveyard until end of turn.)
+Oracle:{2}{U}: Change a target of target spell or ability to this creature.\nRepair 3 (When this creature dies, put three repair counters on it. At the beginning of your upkeep, remove a repair counter. Whenever the last is removed, you may cast it from your graveyard until end of turn.)
