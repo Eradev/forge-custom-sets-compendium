@@ -12,4 +12,4 @@ T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ 
 SVar:TrigBountyDeath:DB$ LoseLife | Defined$ TriggeredCardController | LifeAmount$ 2 | SubAbility$ GainLife
 SVar:GainLife:DB$ GainLife | Defined$ Player.!TriggeredCardController | LifeAmount$ 2
 
-Oracle:When Open Season enters, for each opponent, put a bounty counter on target creature that player controls.\nCreatures your opponents control with bounty counters on them can't activate abilities.\nBounty — Whenever a creature an opponent controls with a bounty counter on it dies, that creature's controller loses 2 life. Each other player gains 2 life.
+Oracle:When this enchantment enters, for each opponent, put a bounty counter on target creature that player controls.\nCreatures your opponents control with bounty counters on them can't activate abilities.\nBounty — Whenever a creature an opponent controls with a bounty counter on it dies, that creature's controller loses 2 life. Each other player gains 2 life.
