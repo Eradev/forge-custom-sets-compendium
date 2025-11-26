@@ -5,14 +5,14 @@ PT:2/2
 
 K:Spaceflight
 S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight & BlockBySpaceflight
-SVar:BlockSpaceflight:Mode$ CantBlockBy | ValidAttacker$ Creature.withoutSpaceflight | ValidBlocker$ Creature.Self | Description$ CARDNAME can block only creatures with spaceflight.
-SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpaceflight+withoutSpacereach | ValidAttacker$ Creature.Self | Description$ CARDNAME can be blocked only by creatures with spaceflight.
+SVar:BlockSpaceflight:Mode$ CantBlockBy | ValidAttacker$ Creature.withoutSpaceflight | ValidBlocker$ Creature.Self | Description$ This creature can only block or be blocked by creatures with spaceflight.
+SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpaceflight+withoutSpacereach | ValidAttacker$ Creature.Self
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGrantFlight | TriggerDescription$ When CARDNAME enters, up to two target Jedi creatures you control gain spaceflight until end of turn.
-SVar:TrigGrantFlight:DB$ Animate | ValidTgts$ Creature.Jedi+YouCtrl | TgtPrompt$ Select up to two target Jedi creatures you control | TargetMin$ 0 | TargetMax$ 2 | Keywords$ Spaceflight | staticAbilities$ Spaceflight1,Spaceflight2 | sVars$ BlockSpaceflight,BlockBySpaceflight
-SVar:Spaceflight1:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight
-SVar:Spaceflight2:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockBySpaceflight
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGrantFlight | TriggerDescription$ When this creature enters, up to two target Jedi creatures you control gain spaceflight until end of turn.
+SVar:TrigGrantFlight:DB$ Animate | ValidTgts$ Creature.Jedi+YouCtrl | TgtPrompt$ Select up to two target Jedi creatures you control | TargetMin$ 0 | TargetMax$ 2 | Keywords$ Spaceflight | staticAbilities$ GrantSpaceflight | sVars$ BlockSpaceflight,BlockBySpaceflight
+SVar:GrantSpaceflight:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight & BlockBySpaceflight
+
 
 A:AB$ ChangeZone | Named$ Meditate | Cost$ 1 W | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
 
-Oracle:Spaceflight (This creature can only block or be blocked by creatures with spaceflight.)\nWhen Jedi Starfighter enters, up to two target Jedi creatures you control gain spaceflight until end of turn.\nMeditate 1W (Return this creature to its owner's hand. Meditate only as a sorcery.)
+Oracle:Spaceflight (This creature can only block or be blocked by creatures with spaceflight.)\nWhen this creature enters, up to two target Jedi creatures you control gain spaceflight until end of turn.\nMeditate 1W (Return this creature to its owner's hand. Meditate only as a sorcery.)

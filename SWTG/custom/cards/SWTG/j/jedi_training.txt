@@ -4,7 +4,7 @@ Types:Enchantment
 
 S:Mode$ ReduceCost | ValidCard$ Card | ValidSpell$ Activated.NamedAbilityMeditate | Activator$ You | Amount$ 1 | Description$ Meditate abilities you activate cost {1} less to activate.
 
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Hand | TriggerZones$ Battlefield | ValidCard$ Creature.Jedi+YouCtrl | Condition$ FromNamedAbilityMeditate | SubAbility$ DBScry | TriggerDescription$ Whenever a Jedi creature you control meditates, scry 1.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Hand | TriggerZones$ Battlefield | ValidCard$ Creature.Jedi+YouCtrl | Condition$ FromNamedAbilityMeditate | Execute$ DBScry | TriggerDescription$ Whenever a Jedi creature you control meditates, scry 1.
 SVar:DBScry:DB$ Scry | ScryNum$ 1
 
 Oracle:Meditate abilities you activate cost {1} less to activate.\nWhenever a Jedi creature you control meditates, scry 1.

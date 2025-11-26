@@ -1,10 +1,10 @@
 [metadata]
 Code=SWTG
-Date=2019-05-01
+Date=2016-12-12
 Name=Star Wars: The Gathering
 Type=Custom
 BoosterCovers=1
-Booster=11 Common, 3 Uncommon, 1 RareMythic
+Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 Foil=NotSupported
 
 [cards]
@@ -131,6 +131,7 @@ Foil=NotSupported
 121 C Sith Ravager
 122 U Smash to Smithereens
 123 C Speeder Trooper
+# Syndicate Enforcer doesn't use flavorName due to name conflict
 124 C Syndicate Enforcer (SWTG)
 125 C Terentatek Cub
 126 C V-Wing
@@ -195,7 +196,7 @@ Foil=NotSupported
 185 M General Grievous
 186 M Greater Krayt Dragon
 187 R Greedo
-188 R Hot Pursuit (SWTG)
+188 R Hot Pursuit (SWTG) @Kerim Beyit ${"flavorName": "Hot Pursuit"}
 189 R Hunt to Extinction
 190 C Images of the Past
 191 R Iron Fist of the Empire
