@@ -1,0 +1,9 @@
+Name:Fateful Showdown (SWTG)
+ManaCost:W
+Types:Enchantment
+
+S:Mode$ CantBeCast | ValidCard$ Card | Phases$ BeginCombat->EndCombat | Description$ Players can't cast spells during combat.
+
+A:AB$ Pump | Cost$ 1 R | ValidTgts$ Creature.attacking | TgtPrompt$ Select target attacking creature | KW$ First Strike | SpellDescription$ Target attacking creature gains first strike until end of turn.
+
+Oracle:Players can't cast spells during combat.\n{1}{R}: Target attacking creature gains first strike until end of turn.

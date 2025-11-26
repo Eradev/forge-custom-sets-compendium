@@ -1,0 +1,14 @@
+Name:Sabine Wren
+ManaCost:2 R G
+Types:Legendary Creature Human Rebel
+PT:3/3
+
+K:Vigilance
+
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainControl | TriggerDescription$ When CARDNAME enters, gain control of target artifact. Untap that artifact. It gains haste until the end of turn. At the beginning of your end step, sacrifice that artifact.
+SVar:TrigGainControl:DB$ GainControl | ValidTgts$ Artifact | TgtPrompt$ Select target artifact | Untap$ True | AddKWs$ Haste | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | Defined$ Targeted | AtEOT$ Sacrifice
+
+Oracle:Vigilance, haste\nWhen Sabine Wren enters, gain control of target artifact. Untap that artifact. It gains haste until the end of turn. At the beginning of your end step, sacrifice that artifact.

@@ -1,0 +1,61 @@
+[metadata]
+Code=SWTG_RBL
+Date=2021-05-28
+Name=SWTG Rebels
+Type=Custom
+Foil=NotSupported
+
+# Fateful Showdown name/date conflict prevents using FlavorName
+[cards]
+1 U Fateful Showdown (SWTG) @David Alonso Lara
+2 C Quiet Ending @Daniel De Almeida
+3 C Spark of Rebellion @Dave Filoni
+4 U Trooper Medic @Adam Lane
+5 C Evade the Empire @Dave Filoni
+6 U Fulcrum Intelligence @Kate Laird
+7 C Imperial Hotshot @Aurore Folny
+8 R Imperial Inquisition @Chris Voy
+9 U Imperial Security Officer @Darren Tan
+10 C Recover @Molly Denmark
+11 U Demolitions Trooper @Kai Lim
+12 R Hera Syndulla @David Auden Nash
+13 C Feral Loth-Cat @Aurore Folny
+14 U Saved by the Rebellion @Anthony Foti
+15 R Ahsoka Tano, Rogue Jedi @Darren Tan
+16 R CT-7567, Captain Rex @Robert Shane
+17 R Ezra Bridger @Audrey Hotte
+18 M Garazeb Orrelios @Aurore Folny
+19 R Grand Admiral Thrawn @Darren Tan
+20 U Heart of the Rebellion @Daniel Kyle
+21 U Imperial Power Play @Darren Tan
+22 R Kallus, Imperial Traitor @Nupao
+23 R Kanan Jarrus, Hidden Jedi @Aurore Folny
+24 U Loth-Wolf Pack @Doodlebethel
+25 R Sabine Wren @Viko-BR
+26 U Savage Smash @Benjamin Carre
+27 C Rebel Astromechs @Jeff Carlisle
+28 M The Darksaber @Almanegra
+29 R The Ghost @Darren Tan
+30 L Island @Star Wars Rebels
+31 M Ahsoka Tano, Rogue Jedi @Natalie Herrera
+32 R Grand Admiral Thrawn @Daniel De Almeida
+
+[tokens]
+1 w_1_1_rebel @Ryan Barger
+2 inquisitor @Alexandr Elichev
+3 g_2_2_wolf_beast @Herckeim
+
+[other]
+4 monarch @Eli Hyder
+
+[CreatureTypes]
+Chiss:Chiss
+Droid:Droids
+Jedi:Jedi
+Starship:Starships
+Trooper:Troopers
+Twi'lek:Twi'leks
+Togruta:Togrutas
+
+[WalkerTypes]
+Garazeb

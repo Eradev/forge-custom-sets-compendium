@@ -1,0 +1,11 @@
+Name:Loth-Wolf Pack
+ManaCost:3 G U
+Types:Creature Wolf Beast
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters or leaves the battlefield, create a 2/2 green Wolf Beast creature token, then scry 1.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigToken | Secondary$ True | TriggerDescription$ When this creature enters or leaves the battlefield, create a 2/2 green Wolf Beast creature token, then scry 1.
+SVar:TrigToken:DB$ Token | TokenScript$ g_2_2_wolf_beast | TokenAmount$ 1 | TokenOwner$ You | SubAbility$ DBScry
+SVar:DBScry:DB$ Scry | ScryNum$ 1
+
+Oracle:When this creature enters or leaves the battlefield, create a 2/2 green Wolf Beast creature token, then scry 1.

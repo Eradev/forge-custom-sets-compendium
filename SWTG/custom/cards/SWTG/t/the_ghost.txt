@@ -1,0 +1,15 @@
+Name:The Ghost
+ManaCost:4
+Types:Legendary Artifact Creature Rebel Starship
+PT:2/2
+
+K:Vigilance
+
+K:Spaceflight
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSearch | TriggerDescription$ When CARDNAME enters, you may search your library for a Jedi or Rebel card, reveal it, then shuffle and put that card on top.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Library | LibraryPosition$ 0 | ChangeType$ Jedi,Rebel
+
+A:AB$ PutCounter | Cost$ G W U | CounterType$ P1P1 | CounterNum$ 1 | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | SpellDescription$ Put a +1/+1 counter on target creature you control.
+
+Oracle:Vigilance, Spaceflight\nWhen The Ghost enters, you may search your library for a Jedi or Rebel card, reveal it, then shuffle and put that card on top.\n{G}{W}{U}: Put a +1/+1 counter on target creature you control.

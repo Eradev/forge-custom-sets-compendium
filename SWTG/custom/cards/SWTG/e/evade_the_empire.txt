@@ -1,0 +1,9 @@
+Name:Evade the Empire
+ManaCost:U
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | NumDef$ +1 | KW$ Hexproof | SubAbility$ DBUnblockable | SpellDescription$ Target creature you control gets +0/+1 and gains hexproof until end of turn.
+SVar:DBUnblockable:DB$ Effect | RememberObjects$ Targeted | ExileOnMoved$ Battlefield | StaticAbilities$ Unblockable | SpellDescription$ That creature can't be blocked this turn.
+SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ This creature can't be blocked this turn.
+
+Oracle:Target creature you control gets +0/+1 and gains hexproof until end of turn. That creature can't be blocked this turn.
