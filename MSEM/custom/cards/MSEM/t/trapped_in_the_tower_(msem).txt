@@ -1,0 +1,11 @@
+Name:Trapped in the Tower (MSEM)
+ManaCost:W
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this enchantment enters, exile target creature an opponent controls until this enchantment leaves the battlefield. (That creature returns under its owner's control.)
+SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | Duration$ UntilHostLeavesPlay
+
+T:Mode$ LifeLost | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigSac | TriggerDescription$ When you lose life, sacrifice this enchantment.
+SVar:TrigSac:DB$ Sacrifice | SacValid$ Self
+
+Oracle:When this enchantment enters, exile target creature an opponent controls until this enchantment leaves the battlefield. (That creature returns under its owner's control.)\nWhen you lose life, sacrifice this enchantment.
