@@ -34,7 +34,7 @@ Video Horror System (VHS)             -  95% (82/86)
     * Mr. Jackston, the Proprietor
 Kaleidoscope (KLC)                    -  100%
 Path of Shadows (PSA)                 -  44% (96/214)
-A Tourney at Whiterun (TWR)           -  30% (75/254)
+A Tourney at Whiterun (TWR)           -  39% (99/254)
 Tides of War (TOW)                    -  28% (77/271)
 Pyramids of Atuum (POA)               -  50% (64/128)
 
@@ -277,3 +277,4 @@ SVar:DBLoseLifeFallback:DB$ LoseLife | Defined$ You | LifeAmount$ 3
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
+
