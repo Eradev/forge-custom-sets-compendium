@@ -1,0 +1,11 @@
+Name:Drake Youngling
+ManaCost:3 U U
+Types:Creature Drake
+PT:3/2
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this creature enters, draw a card.
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhen this creature enters, draw a card.

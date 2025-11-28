@@ -1,0 +1,11 @@
+Name:Rapscallion Duo
+ManaCost:U U
+Types:Creature Human Rogue
+PT:1/2
+
+K:Prowess
+
+T:Mode$ AttackerUnblockedOnce | ValidAttackingPlayer$ You | Execute$ TrigPump | TriggerZones$ Battlefield | TriggerDescription$ Infiltrate (Whenever one or more attacking creatures you control aren't blocked, this creature gets +1/+1 until end of turn.)
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +1 | NumDef$ +1
+
+Oracle:Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nInfiltrate (Whenever one or more attacking creatures you control aren't blocked, this creature gets +1/+1 until end of turn.)

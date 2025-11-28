@@ -1,0 +1,8 @@
+Name:Deft Goldsnatch
+ManaCost:U U
+Types:Creature Human Rogue
+PT:2/1
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | Description$ This creature can't be blocked.
+
+Oracle:This creature can't be blocked.
