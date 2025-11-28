@@ -29,9 +29,7 @@ Type=Custom
 22 U Price of Power @Kyoung Hwan Kim
 23 R Proposer of Peace @Aaron Miller
 24a R Publicly Disgraced @Wang Ling
-24b R Kept Under Watch @Wang Ling
 25a U Sage's Foresight @sswanderer
-25b C Sage's Tales @sswanderer
 26a U Seek Glory @Tatiana Kirgetova
 27 C Steward's Tithe @Joel Hustak
 28 M Tearful Reunion @Even Amundsen
@@ -217,7 +215,7 @@ Type=Custom
 208 C Imperious Falconer @Manuel Castañón
 209 C Left for Carrion @Zagornov Rostislav
 210 R Merciless Exiled @Armiche Lora Sánchez
-211a C Moment of Glory @Lius Lasahido
+211a C Moment of Glory @Lius Lasahido & Deiv Calviz
 212 R Opportunistic Raiders @Even Amundsen
 213 C Plated Valiant @Manuel Castañón
 214 U Plunge Through the Heart @Bagus Hutomo
