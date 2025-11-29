@@ -2,6 +2,8 @@ Name:Hasty Intervention
 ManaCost:1 W
 Types:Instant
 
+K:Fabled
+
 S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 1 W W W | Description$ Fabled {1}{W}{W}{W} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that player.)
 
 A:SP$ Effect | ValidTgts$ Player | ReplacementEffects$ RPrevent | RememberObjects$ Targeted | RememberTargets$ True | SubAbility$ DBTransform | SpellDescription$ Prevent all damage that would be dealt to target player this turn.
