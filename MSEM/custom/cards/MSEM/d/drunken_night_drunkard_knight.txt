@@ -2,6 +2,8 @@ Name:Drunken Night
 ManaCost:U
 Types:Sorcery
 
+K:Fabled
+
 S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 3 U | Description$ Fabled {3}{U} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
 SVar:AltCostPaid:Count$AltCost.1.0
 
