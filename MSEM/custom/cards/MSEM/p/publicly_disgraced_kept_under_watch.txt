@@ -2,6 +2,8 @@ Name:Publicly Disgraced
 ManaCost:W
 Types:Instant
 
+K:Fabled
+
 S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 W U | Description$ Fabled {2}{W}{U} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that player.)
 
 A:SP$ Effect | ValidTgts$ Player | TgtPrompt$ Select target player | IsCurse$ True | StaticAbilities$ STCantBeCast | RememberTargets$ True | RememberObjects$ Targeted | Duration$ UntilEOT | SubAbility$ ConditionalTransform | SpellDescription$ Target player can't cast spells this turn.
