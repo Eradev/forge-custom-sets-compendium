@@ -2,6 +2,8 @@ Name:Sage's Foresight
 ManaCost:W
 Types:Instant
 
+K:Fabled
+
 R:Event$ Counter | ValidCard$ Card.Self | ValidSA$ Spell | Layer$ CantHappen | Description$ This spell can't be countered.
 
 S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 W W | Description$ Fabled {2}{W}{W} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that player.)
