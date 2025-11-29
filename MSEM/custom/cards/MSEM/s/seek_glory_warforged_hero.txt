@@ -2,6 +2,8 @@ Name:Seek Glory
 ManaCost:W
 Types:Sorcery
 
+K:Fabled
+
 S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 3 W | Description$ Fabled {3}{W} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
 SVar:AltCostPaid:Count$AltCost.1.0
 
