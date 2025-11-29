@@ -8,4 +8,4 @@ S:Mode$ Continuous | Affected$ Card.Self+enchanted,Card.Self+equipped | AddKeywo
 Oracle:Adorned — This creature has first strike as long as it's equipped and/or enchanted.
 
 SVar:EnchantMe:Once
-SVar:AttachMe:Once
+SVar:EquipMe:Once
