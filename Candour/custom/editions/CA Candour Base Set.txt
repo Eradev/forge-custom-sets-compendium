@@ -249,7 +249,7 @@ Type=Custom
 # 291
 292 U Memory Spike @Adrien Gonzalez
 293 U Marrow Harvester @Bastien Grivet
-294 U Burnwillow Blossoming @Bastien Grivet 
+294 U Burnwillow Blossoming @Bastien Grivet
 # 295
 296 U Candelabrum Vestige @Illarstration
 # 297-300
