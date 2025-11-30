@@ -1,0 +1,9 @@
+Name:Giant Dromad
+ManaCost:2 W
+Types:Creature Camel Beast
+PT:2/3
+
+K:Tribute:1
+SVar:TrigNotTribute:DB$ Destroy | Optional$ True | OptionalDecider$ You | ValidTgts$ Artifact,Enchantment | SpellDescription$ When this creature enters, if tribute wasn't paid, you may destroy target artifact or enchantment.
+
+Oracle:Tribute 1 (As this creature enters, an opponent of your choice may put one +1/+1 counter on it.)\nWhen this creature enters, if tribute wasn't paid, you may destroy target artifact or enchantment.
