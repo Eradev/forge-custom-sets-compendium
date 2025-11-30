@@ -1,0 +1,11 @@
+Name:Pestilent Scavenger
+ManaCost:B
+Types:Creature Rat Rogue
+PT:1/1
+
+K:Deathtouch
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ When this creature enters, you may mill three cards.
+SVar:TrigMill:DB$ Mill | NumCards$ 3 | Defined$ You | Optional$ True
+
+Oracle:Deathtouch\nWhen this creature enters, you may mill three cards.
