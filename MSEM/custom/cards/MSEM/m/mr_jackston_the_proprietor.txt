@@ -1,0 +1,22 @@
+Name:Mr. Jackston, the Proprietor
+ManaCost:2 B
+Types:Legendary Creature Human Horror
+PT:2/2
+
+A:AB$ Dig | Cost$ Sac<1/Creature> | CheckSVar$ X | SVarCompare$ EQ0 | ValidTgts$ Player | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | Activator$ Player | PlayerTurn$ True | ActivationLimit$ 1 | SubAbility$ DBStore | SpellDescription$ Exile the top card of target player's library. You may cast that card for as long as it remains exiled. Any player may activate this ability but only once each turn and only during their turn.
+A:AB$ Dig | Cost$ Discard<1/Card> | CheckSVar$ X | SVarCompare$ EQ0 | ValidTgts$ Player | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | Activator$ Player | PlayerTurn$ True | ActivationLimit$ 1 | SubAbility$ DBStore | SpellDescription$ Exile the top card of target player's library. You may cast that card for as long as it remains exiled. Any player may activate this ability but only once each turn and only during their turn.
+SVar:DBStore:DB$ StoreSVar | SVar$ X | Type$ Number | Expression$ 1 | SubAbility$ DBEffect
+
+SVar:DBEffect:DB$ Effect | RememberObjects$ Remembered | StaticAbilities$ STPlay | Duration$ Permanent | ForgetOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ You may cast that card for as long as it remains exiled.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+# S:Mode$ CantTarget | ValidTarget$ You,Permanent.YouCtrl | ValidSource$ Spell.OppCtrl+sharesNameWith Remembered
+S:Mode$ CantTarget | ValidTarget$ You,Permanent.YouCtrl | ValidSource$ Spell.OppCtrl+ExiledWithSource,Spell.OppCtrl+sharesNameWith ExiledWithSource | Layer$ CantHappen | Description$ You and permanents you control have hexproof from spells that were exiled with CARDNAME or that share a name with a card exiled with CARDNAME.
+
+T:Mode$ Phase | Phase$ Cleanup | Static$ True | Execute$ DBReset
+SVar:DBReset:DB$ StoreSVar | SVar$ X | Type$ Number | Expression$ 0
+
+SVar:X:Number$0
+
+Oracle:You and permanents you control have hexproof from spells that were exiled with Mr. Jackston or that share a name with a card exiled with Mr. Jackston.\nSacrifice a creature or discard a card: Exile the top card of target player's library. You may cast that card for as long as it remains exiled. Any player may activate this ability but only once each turn and only during their turn.
