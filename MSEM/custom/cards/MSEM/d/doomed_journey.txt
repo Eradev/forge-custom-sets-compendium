@@ -1,0 +1,14 @@
+Name:Doomed Journey
+ManaCost:2 B B
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ -2 | AddToughness$ -2 | Description$ Enchanted creature gets -2/-2.
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Player.EnchantedController | TriggerZones$ Battlefield | Execute$ DBDiscard | TriggerDescription$ At the beginning of the upkeep of enchanted creature's controller, that player discard a card.
+SVar:DBDiscard:DB$ Discard | Defined$ TriggeredPlayer | Mode$ TgtChoose
+
+Oracle:Enchant creature\nEnchanted creature gets -2/-2.\nAt the beginning of the upkeep of enchanted creature's controller, that player discard a card.
+
+SVar:AttachAILogic:Curse
