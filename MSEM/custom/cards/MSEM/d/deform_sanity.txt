@@ -1,0 +1,7 @@
+Name:Deform Sanity
+ManaCost:B
+Types:Sorcery
+
+A:SP$ Discard | Cost$ B Discard<1/Card.nonLand/nonland card> | CostDesc$ As an additional cost to cast this spell, discard a nonland card. | ValidTgts$ Player | Mode$ RevealYouChoose | DiscardValid$ Card.nonLand | NumCards$ 1 | SpellDescription$ Target player reveals their hand. You choose a nonland card from it. That player discards that card.
+
+Oracle:As an additional cost to cast this spell, discard a nonland card.\nTarget player reveals their hand. You choose a nonland card from it. That player discards that card.
