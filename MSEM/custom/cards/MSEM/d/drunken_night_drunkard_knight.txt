@@ -1,0 +1,31 @@
+Name:Drunken Night
+ManaCost:U
+Types:Sorcery
+
+K:Fabled
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 3 U | Description$ Fabled {3}{U} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
+SVar:AltCostPaid:Count$AltCost.1.0
+
+A:SP$ Tap | ValidTgts$ Creature | TgtPrompt$ Select target creature | SpellDescription$ Tap target creature. | SubAbility$ ConditionalTransform | SpellDescription$ Tap target creature.
+
+SVar:ConditionalTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | AttachedTo$ Targeted | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1
+
+Oracle:Tap target creature.\nFabled {3}{U} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Drunkard Knight
+ManaCost:no cost
+Types:Enchantment Aura
+Colors:blue
+
+K:Enchant:Creature
+
+R:Event$ Untap | ActiveZones$ Battlefield | ValidCard$ Creature.EnchantedBy | ValidStepTurnToController$ You | Layer$ CantHappen | Description$ Enchanted creature doesn't untap during its controller's untap step.
+
+Oracle:Enchant creature\nEnchanted creature doesn't untap during its controller's untap step.
+
+SVar:AttachAILogic:Curse

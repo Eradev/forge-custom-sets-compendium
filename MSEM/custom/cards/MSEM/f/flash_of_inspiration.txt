@@ -1,0 +1,10 @@
+Name:Flash of Inspiration
+ManaCost:3 U U
+Types:Instant
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 1 U U | CheckSVar$ Bleed | SVarCompare$ GE1 | Description$ Bleed {1}{U}{U} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
+SVar:Bleed:Count$LifeOppsLostThisTurn
+
+A:SP$ Dig | DigNum$ 7 | ChangeNum$ 2 | SpellDescription$ Look at the top seven cards of your library. Put two of those cards into your hand and the rest on the bottom of your library in any order.
+
+Oracle:Bleed {1}{U}{U} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)\nLook at the top seven cards of your library. Put two of those cards into your hand and the rest on the bottom of your library in any order.

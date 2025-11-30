@@ -1,0 +1,8 @@
+Name:Tearful Reunion
+ManaCost:5 W W
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | TargetMin$ 2 | TargetMax$ 2 | TgtPrompt$ Select two target creature cards from your graveyard | ValidTgts$ Creature.YouOwn | SubAbility$ DBShuffleSelf | SpellDescription$ Return two target creature cards from your graveyard to the battlefield.
+SVar:DBShuffleSelf:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Library | Shuffle$ True | SpellDescription$ Shuffle CARDNAME into its owner's library.
+
+Oracle:Return two target creature cards from your graveyard to the battlefield. Shuffle Tearful Reunion into its owner's library.

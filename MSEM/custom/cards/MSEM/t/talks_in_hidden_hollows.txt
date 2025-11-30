@@ -1,0 +1,13 @@
+Name:Talks in Hidden Hollows
+ManaCost:2 U
+Types:Instant
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ B PayLife<2> | CheckSVar$ Bleed | SVarCompare$ GE1 | Description$ Bleed {B}, Pay 2 life. (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
+SVar:Bleed:Count$LifeOppsLostThisTurn
+
+A:SP$ Draw | NumCards$ 2 | SubAbility$ DBDiscard | SpellDescription$ Draw two cards, then discard a card.
+SVar:DBDiscard:DB$ Discard | Mode$ TgtChoose
+
+Oracle:Bleed—{B}, Pay 2 life. (You may cast this spell for its bleed cost if an opponent has lost life this turn.)\nDraw two cards, then discard a card.
+
+DeckHas:Ability$Discard

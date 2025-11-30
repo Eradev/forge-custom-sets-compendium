@@ -1,0 +1,36 @@
+Name:Sage's Foresight
+ManaCost:W
+Types:Instant
+
+K:Fabled
+
+R:Event$ Counter | ValidCard$ Card.Self | ValidSA$ Spell | Layer$ CantHappen | Description$ This spell can't be countered.
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 W W | Description$ Fabled {2}{W}{W} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that player.)
+
+A:SP$ Pump | ValidTgts$ Player | TgtPrompt$ Select target player | KW$ Hexproof | RememberTargets$ True | SubAbility$ ConditionalTransform | SpellDescription$ Target player gains hexproof until end of turn.
+SVar:ConditionalTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1 | SubAbility$ DBCleanup1
+SVar:DBCleanup1:DB$ Cleanup | ClearRemembered$ True | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ EQ0
+SVar:AltCostPaid:Count$AltCost.1.0
+
+Oracle:This spell can't be countered.\nTarget player gains hexproof until end of turn.\nFabled {2}{W}{W} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that player.)
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Sage's Tales
+ManaCost:no cost
+Types:Enchantment Aura
+Colors:white
+
+K:Enchant:Player.IsRemembered
+
+S:Mode$ Continuous | Affected$ Creature.ControlledBy Player.EnchantedBy | AddToughness$ 1 | Description$ Creatures enchanted player controls get +0/+1.
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Battlefield | Destination$ Any | Execute$ DBCleanup2 | Static$ True
+SVar:DBCleanup2:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Enchant player\nCreatures enchanted player controls get +0/+1.
+
+SVar:AttachAILogic:Pump

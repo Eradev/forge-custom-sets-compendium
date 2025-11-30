@@ -1,0 +1,11 @@
+Name:Visserine's Royal Guard
+ManaCost:2 W
+Types:Creature Human Knight
+PT:2/3
+
+S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Lifelink | IsPresent$ Card.Self+equipped,Card.Self+enchanted | Description$ Adorned — This creature has lifelink as long as it's equipped and/or enchanted.
+
+Oracle:Adorned — This creature has lifelink as long as it's equipped and/or enchanted.
+
+SVar:EquipMe:Once
+SVar:EnchantMe:Once

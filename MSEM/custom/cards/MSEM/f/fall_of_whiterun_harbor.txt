@@ -1,0 +1,10 @@
+Name:Fall of Whiterun Harbor
+ManaCost:4 U
+Types:Instant
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 U | CheckSVar$ Bleed | SVarCompare$ GE1 | Description$ Bleed {2}{U} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
+SVar:Bleed:Count$LifeOppsLostThisTurn
+
+A:SP$ ChangeZone | ValidTgts$ Creature | TgtPrompt$ Select target creature | Origin$ Battlefield | Destination$ Library | LibraryPosition$ 0 | SpellDescription$ Put target creature on top of its owner's library.
+
+Oracle:Bleed {2}{U} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)\nPut target creature on top of its owner's library.

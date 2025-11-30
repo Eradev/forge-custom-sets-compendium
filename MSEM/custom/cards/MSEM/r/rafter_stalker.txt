@@ -1,0 +1,12 @@
+Name:Rafter Stalker
+ManaCost:3 U
+Types:Creature Human Rogue
+PT:1/3
+
+K:Renown:1
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | ValidBlocker$ Creature.powerGTX | Description$ This creature can't be blocked by creatures with greater power.
+
+Oracle:Renown 1 (When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned.)\nThis creature can't be blocked by creatures with greater power.
+
+DeckHas:Ability$Counters

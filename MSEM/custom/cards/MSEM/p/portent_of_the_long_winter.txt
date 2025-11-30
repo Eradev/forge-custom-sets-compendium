@@ -1,0 +1,13 @@
+Name:Portent of the Long Winter
+ManaCost:3 W W
+Types:Creature Bird
+PT:2/1
+
+K:Flying
+
+S:Mode$ Continuous | Affected$ Card.TopLibrary+YouOwn | AffectedZone$ Library | MayLookAt$ Player | Description$ Play with the top card of your library revealed.
+
+S:Mode$ RaiseCost | ValidCard$ Card | Type$ Spell | Amount$ X | Description$ Spells cost {X} more to cast, where X is the mana value of the top card of your library.
+SVar:X:Count$TopOfLibraryCMC
+
+Oracle:Flying\nPlay with the top card of your library revealed.\nSpells cost {X} more to cast, where X is the mana value of the top card of your library.

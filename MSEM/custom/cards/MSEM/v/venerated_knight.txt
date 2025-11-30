@@ -1,0 +1,12 @@
+Name:Venerated Knight
+ManaCost:1 W
+Types:Creature Human Noble Knight
+PT:2/2
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+equipped,Card.Self+enchanted | Execute$ TrigPutCounter | TriggerDescription$ Adorned — At the beginning of your end step, if this creature is equipped and/or enchanted, put a +1/+1 counter on it.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
+
+Oracle:Adorned — At the beginning of your end step, if this creature is equipped and/or enchanted, put a +1/+1 counter on it.
+
+SVar:EquipMe:Once
+SVar:EnchantMe:Once
