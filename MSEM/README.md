@@ -26,12 +26,11 @@ These changes might not be reflected in their official ruling.
 ## Set implementation progress
 
 ```text
-Video Horror System (VHS)             -  95% (82/86)
+Video Horror System (VHS)             -  97% (83/86)
   Missing cards:
     * Maddened Preacher
     * Snowfield Doppelganger
     * Wiretapper
-    * Mr. Jackston, the Proprietor
 Kaleidoscope (KLC)                    -  100%
 Path of Shadows (PSA)                 -  44% (96/214)
 A Tourney at Whiterun (TWR)           -  20% (55/269)
@@ -277,3 +276,4 @@ SVar:DBLoseLifeFallback:DB$ LoseLife | Defined$ You | LifeAmount$ 3
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
+
