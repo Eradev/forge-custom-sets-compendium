@@ -3,6 +3,7 @@ Code=MSEM_POA
 Name=Pyramids of Atuum
 Date=2017-06-08
 Type=Custom
+Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 
 [cards]
 1 U Alpha Lion @Ilona Mikolajczyk
