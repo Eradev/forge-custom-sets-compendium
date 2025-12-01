@@ -6,7 +6,7 @@ PT:3/1
 K:Tribute:2
 SVar:TrigNotTribute:DB$ Pump | Defined$ Self | KW$ Double Strike | Duration$ Permanent | SpellDescription$ When this creature enters, if tribute was paid, it gains first strike. Otherwise it gains double strike. (This effect lasts indefinitely.)
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self+Tributed | Execute$ TrigTribute | Secondary$ True | TriggerDescription$ When this creature enters, if tribute was paid, it gains first strike. Otherwise it gains double strike. (This effect lasts indefinitely.)
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self+!notTributed | Execute$ TrigTribute | Secondary$ True | TriggerDescription$ When this creature enters, if tribute was paid, it gains first strike. Otherwise it gains double strike. (This effect lasts indefinitely.)
 SVar:TrigTribute:DB$ Pump | Defined$ Self | KW$ First Strike | Duration$ Permanent
 
 Oracle:Tribute 2 (As this creature enters, an opponent of your choice may put two +1/+1 counters on it.)\nWhen this creature enters, if tribute was paid, it gains first strike. Otherwise it gains double strike. (This effect lasts indefinitely.)
