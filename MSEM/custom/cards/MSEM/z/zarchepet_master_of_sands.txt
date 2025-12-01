@@ -1,0 +1,10 @@
+Name:Zarchepet, Master of Sands
+ManaCost:3 R R
+Types:Legendary Creature Human Wizard
+PT:5/4
+
+A:AB$ Token | Cost$ 1 R T Sac<1/Land> | TokenScript$ desert_msem | LockTokenScript$ true | SpellDescription$ Create a colorless Desert land token with "{T}: Add {C}."
+
+A:AB$ Destroy | Cost$ 1 R T Sac<1/Desert> | ValidTgts$ Land | TargetMin$ 0 | TargetMax$ 2 | TgtPrompt$ Select up to two target lands | SpellDescription$ Destroy up to two target lans.
+
+Oracle:{1}{R}, {T}, Sacrifice a Land: Create a colorless Desert land token with "{T}: Add {C}."\n{1}{R}, {T}, Sacrifice a Desert: Destroy up to two target lans.
