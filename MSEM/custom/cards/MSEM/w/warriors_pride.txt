@@ -1,0 +1,13 @@
+Name:Warrior's Pride
+ManaCost:2 R
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl | AddPower$ 1 | Description$ Creatures you control get +1/+0 and attack each combat if able.
+S:Mode$ MustAttack | ValidCreature$ Creature.YouCtrl | Secondary$ True
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+attacking | AddPower$ 1 | AddKeyword$ First Strike | IsPresent$ Mountain.YouCtrl | PresentCompare$ GE4 | Description$ As long as you control four or more Mountains, attacking creatures you control get an additional +1/+0 and have first strike.
+
+Oracle:Creatures you control get +1/+0 and attack each combat if able. As long as you control four or more Mountains, attacking creatures you control get an additional +1/+0 and have first strike.
+
+SVar:PlayMain1:TRUE
+SVar:BuffedBy:Mountain
