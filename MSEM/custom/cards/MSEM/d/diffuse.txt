@@ -1,0 +1,11 @@
+Name:Diffuse
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | ValidTgts$ Card | TgtPrompt$ Select target spell | UnlessCost$ UnlessCost | UnlessPayer$ TargetedController | SpellDescription$ Counter target spell unless its controller pays {2} plus an additional {2} for each card named Diffuse in your graveyard.
+SVar:Y:Count$ValidGraveyard Card.YouOwn+namedDiffuse/Times.2
+SVar:UnlessCost:Number$2/Plus.Y
+
+Oracle:Counter target spell unless its controller pays {2} plus an additional {2} for each card named Diffuse in your graveyard.
+
+DeckHints:Name$Diffuse
