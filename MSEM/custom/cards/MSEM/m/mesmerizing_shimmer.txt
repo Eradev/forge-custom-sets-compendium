@@ -1,0 +1,21 @@
+Name:Mesmerizing Shimmer
+ManaCost:4 U R
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigUntap | TriggerDescription$ When this Aura enters, untap enchanted creature. It gains haste until end of turn.
+SVar:TrigUntap:DB$ Untap | Defined$ Enchanted | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | Defined$ Enchanted | KW$ Haste | Duration$ UntilEndOfTurn
+
+S:Mode$ Continuous | Affected$ Card.EnchantedBy | GainControl$ You | Description$ You control enchanted creature.
+
+S:Mode$ Continuous | Affected$ Card.Self | MayPlay$ True | MayPlayAltManaCost$ 2 U R | MayPlayWithFlash$ True | AffectedZone$ Hand | EffectZone$ Hand | Description$ Mirage {2}{U}{R} (You may cast this spell as though it had flash for its mirage cost. If you do, sacrifice it at the beginning of the next cleanup step.)
+T:Mode$ SpellCast | ValidCard$ Card.Self | ValidSA$ Spell.MayPlaySource | Static$ True | Execute$ MirageCleanup
+SVar:MirageCleanup:DB$ DelayedTrigger | Mode$ Phase | Phase$ Cleanup | RememberObjects$ Self | TriggerDescription$ At the beginning of the next cleanup step, sacrifice it. | Execute$ TrigSacrifice
+SVar:TrigSacrifice:DB$ SacrificeAll | Defined$ DelayTriggerRememberedLKI
+
+Oracle:Enchant creature\nWhen this Aura enters, untap enchanted creature. It gains haste until end of turn.\nYou control enchanted creature.\nMirage {2}{U}{R} (You may cast this spell as though it had flash for its mirage cost. If you do, sacrifice it at the beginning of the next cleanup step.)
+
+SVar:AttachAILogic:GainControl
+SVar:PlayMain1:TRUE
