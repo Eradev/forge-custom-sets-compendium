@@ -5,6 +5,6 @@ Types:Enchantment
 T:Mode$ ChangesZone | ValidCard$ Card.Self+wasCast | Origin$ Any | Destination$ Battlefield | Execute$ TrigPhaseOut | TriggerDescription$ When this enchantment enters, if it was cast, another target nonland permanent phases out. (Treat it and anything attached to it as though they don't exist.)
 SVar:TrigPhaseOut:DB$ Phases | ValidTgts$ Permanent.nonLand+Other | TgtPrompt$ Select another target nonland permanent
 
-S:Mode$ CantPhaseIn | ValidCard$ Card.nonLand+!YouCtrl+cmcLE3+phasedOutPermanent | Description$ Nonland permanents you don't control with mana value 3 or less can't phase in.
+S:Mode$ CantPhaseIn | ValidCard$ Card.phasedOutnonLand+phasedOutYouDontCtrl+phasedOutcmcLE3+phasedOutPermanent | Description$ Nonland permanents you don't control with mana value 3 or less can't phase in.
 
 Oracle:When this enchantment enters, if it was cast, another target nonland permanent phases out. (Treat it and anything attached to it as though they don't exist.)\nNonland permanents you don't control with mana value 3 or less can't phase in.
