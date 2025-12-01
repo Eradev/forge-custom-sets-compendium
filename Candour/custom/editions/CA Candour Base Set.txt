@@ -29,7 +29,7 @@ Type=Custom
 22 R Labyrinth Sentinel @Darren Tan
 23 M Chromatic Seraph @Asur Misoa
 24 M Sanctity @Anato Finnstark
-25 M Divine Tutor @Jason Ngyen
+25 R Blip, Tranquil Pilgrim @Sandara Tang
 26 U Tranquil Brightblade @Sandara Tang
 27 R Parallax Procession @Dominik Mayer
 28 M Duskspine Leopard @Sandara Tang
@@ -54,7 +54,7 @@ Type=Custom
 47 R Angelic Wrath @Andreas Huang
 48 M Alabaster Equipoise @Evyn Fong
 49 M Thalia, Steadfast Cathar @Mark Henry Bustamante
-50 M Linvala, Warden of Stability @Asur Misoa
+50 R Sungold Mastery @Sam Kanios
 51 U Maddening Revelation @Carl Van Laguun
 52 U Fleeting Rootwalla @Guillermo Redongo
 53 U Seeker of Secrets @Steve Argyle
@@ -96,7 +96,7 @@ Type=Custom
 89 M Fatefall Maelstrom @Sandara Tang
 90 U Contrasurveil @Diane Franco
 91 U Ethereal Companions @Bear Frymire
-92 R Memory Severance @Noah Thatcher
+92 R Roiling Overtow @Sam Burley
 93 R Momentum Weaver @Nathan Mohamed
 94 U Prismatic Fissure @Timi Honkanen
 95 U Curious Peregrination @Edgar Sánchez Hidalgo
@@ -117,7 +117,7 @@ Type=Custom
 110 U Fatal Impact @Daniela Ivanova
 111 M Slaughter Wurm @Nelson Bern
 112 R Contracted Aetherborn @Jelle Van Loo
-113 M Sinister Tutor @Kristian Agerkvist
+113 U Noxious Wallbreaker @Álvaro Jiménez
 114 M Liliana, of Death's Design @Dominik Mayer
 115 R Twisted Bog @Las Pinter
 116 U Sanguinary Temptation @Nereida
@@ -133,7 +133,7 @@ Type=Custom
 126 R Deathrite Mystic @Felipe Gaona
 127 M Sanguine Pilgrimage @Noah Thatcher
 128 M Unforgiving Nightmare @Sandara Tang
-129 R Dance with Fatality @Raul Bottero
+129 M Yawgmoth, Conqueror of the Thran @Tidewolf86
 130 R Ghoulcalling @Dmitry Polynkov
 131 R Barren Doom @Timi Honkanen
 132 R Bowmaster Revenant @Bear Frymire
@@ -153,7 +153,8 @@ Type=Custom
 146 R Necromancer's Talent @Charin Makkawiman
 147 M Coldhearted Ballad @Wylie Beckert
 148 R Inquisition of the Pit @Gezi
-# 149-150
+149 M Pernicious Prefabrications @Bastien Grivet
+# 150
 151 U Spellbomb Detonation @Romain Kurdi
 152 U Glitterfowl Curio @Valentin Gloaguen & Alessandro Poli
 153 U Shattering Blast @Melissa Spandri
@@ -189,7 +190,8 @@ Type=Custom
 183 R Fool's Errand @Konstantin Turovec
 184 U Reckless Conflagration @Peter Lee
 185 R Hellfire (CA) @Nia Kovalevski ${"flavorName": "Hellfire"}
-# 186-200
+186 U Blazing Paroxysm @Dominik Mayer
+# 187-200
 201 M Nissa, Unbound Animist @Romain Kurdi
 202 U Nissa's Binding @Simon Marczyk
 203 U Crystalline Petroglyph @Anna Podedworna
@@ -220,9 +222,11 @@ Type=Custom
 228 R Automated Wanderer @Jeremy Carver
 229 U Argothian Caretaker @Frank Freire
 230 U Mothdust Dryad @Tius
-# 231
+231 R Springtide Heron @Aurore Folny
 232 U Sylvan Survey @Ahmad Hilmi
-# 233-250
+233 R Animist's Talent @Allen Hsieh
+234 M Fractal Terrashifting @Bastien Grivet
+# 235-250
 251 R Waterlogged Archipelago @Anthony Avon
 252 R Contaminated Rivulet @Anthony Avon
 253 R Sanguinary Morass @Anthony Avon
@@ -242,7 +246,7 @@ Type=Custom
 284 R Botanical Behemoth @Timi Honkanen
 285 R Menagerie Caretaker @Sandara Tang
 286 R Mindrake Trawler @Diane Franco
-287 R Sorcerer's Folly @Wylie Beckert
+287 R Warfaring Arcanist @Aurore Folny
 288 R Gilt-Leaf Slasher @Aldo Domínguez
 289 R Resplendent Chargers @Dominik Mayer
 290 R Terramancy @Alex Petruk
@@ -273,3 +277,4 @@ Type=Custom
 318 U Manaform Hart @Jeremy Carver
 319 R Torpor Sanctuary @Biagio D'Alessandro
 320 M Weatherlight, Legacy Flagship @Chase Stone
+321 U Manapierce Feather @Sandara Tang
