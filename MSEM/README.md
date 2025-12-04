@@ -33,11 +33,7 @@ Video Horror System (VHS)             -  97% (83/86)
     * Wiretapper
 Kaleidoscope (KLC)                    -  100%
 Path of Shadows (PSA)                 -  44% (96/214)
-A Tourney at Whiterun (TWR)           -  98% (251/254)
-  Missing cards:
-    * Insurgent Ballads
-    * Plunge Through the Heart
-    * Whiterun Harbor
+A Tourney at Whiterun (TWR)           -  100% (254/254)
 Tides of War (TOW)                    -  28% (77/271)
 Pyramids of Atuum (POA)               -  50% (64/128)
 
@@ -280,6 +276,7 @@ SVar:DBLoseLifeFallback:DB$ LoseLife | Defined$ You | LifeAmount$ 3
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
+
 
 
 
