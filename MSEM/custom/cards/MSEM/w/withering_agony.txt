@@ -1,0 +1,10 @@
+Name:Withering Agony
+ManaCost:1 UB UB
+Types:Instant
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ UB | CheckSVar$ Bleed | SVarCompare$ GE1 | Description$ Bleed {UB} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
+SVar:Bleed:Count$LifeOppsLostThisTurn
+
+A:SP$ Mill | NumCards$ 8 | ValidTgts$ Player | TgtPrompt$ Choose a player | SpellDescription$ Target player mills eight cards.
+
+Oracle:Bleed {UB} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)\nTarget player mills eight cards.

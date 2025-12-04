@@ -1,0 +1,11 @@
+Name:Declan, Wayward Squire
+ManaCost:G
+Types:Legendary Creature Human Warrior
+PT:0/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.Other+YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigAnimate | TriggerDescription$ Whenever another creature you control enters, you may change NICKNAME's base power and toughness to that creature's power and toughness until end of turn.
+SVar:TrigAnimate:DB$ Animate | Defined$ Self | Power$ X | Toughness$ Y
+SVar:X:TriggeredCard$CardPower
+SVar:Y:TriggeredCard$CardToughness
+
+Oracle:Whenever another creature you control enters, you may change Declan's base power and toughness to that creature's power and toughness until end of turn.

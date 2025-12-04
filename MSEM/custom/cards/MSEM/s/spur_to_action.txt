@@ -1,0 +1,12 @@
+Name:Spur to Action
+ManaCost:R
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | KW$ Haste | SubAbility$ DBForceCombat | SpellDescription$ Target creature gains haste until end of turn. That creature attacks or blocks this turn if able.
+SVar:DBForceCombat:DB$ Animate | Defined$ Targeted | staticAbilities$ MustAttack,MustBlock
+
+SVar:MustAttack:Mode$ MustAttack | ValidCreature$ Card.Self | Description$ This creature attacks this turn if able.
+
+SVar:MustBlock:Mode$ MustBlock | ValidCreature$ Card.Self | Description$ This creature blocks this turn if able.
+
+Oracle:Target creature gains haste until end of turn. That creature attacks or blocks this turn if able.

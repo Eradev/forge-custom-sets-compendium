@@ -1,0 +1,10 @@
+Name:Cauldish Schemes
+ManaCost:3 B B
+Types:Sorcery
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 1 B B | CheckSVar$ Bleed | SVarCompare$ GE1 | Description$ Bleed {1}{B}{B} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
+SVar:Bleed:Count$LifeOppsLostThisTurn
+
+A:SP$ PumpAll | ValidCards$ Creature | NumAtt$ -4 | NumDef$ -4 | SpellDescription$ All creatures get -4/-4 until end of turn.
+
+Oracle:Bleed {1}{B}{B} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)\nAll creatures get -4/-4 until end of turn.

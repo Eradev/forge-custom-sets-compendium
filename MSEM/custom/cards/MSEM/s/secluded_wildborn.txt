@@ -1,0 +1,13 @@
+Name:Secluded Wildborn
+ManaCost:1 B
+Types:Creature Human Mutant
+PT:3/3
+
+K:Defender
+
+S:Mode$ CanAttackDefender | ValidCard$ Card.Self | IsPresent$ Card.Self+equipped,Card.Self+enchanted | Description$ This creature can attack as though it didn't have defender as long as it's equipped and/or enchanted.
+
+Oracle:Defender (This creature can't attack.)\nAdorned — This creature can attack as though it didn't have defender as long as it's equipped and/or enchanted.
+
+SVar:EnchantMe:Once
+SVar:EquipMe:Once

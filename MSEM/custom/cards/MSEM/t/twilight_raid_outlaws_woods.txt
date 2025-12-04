@@ -1,0 +1,37 @@
+Name:Twilight Raid
+ManaCost:B
+Types:Instant
+
+K:Fabled
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 B | Description$ Fabled {2}{B} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that player.)
+
+A:SP$ LoseLife | ValidTgts$ Player | RememberTargets$ True | LifeAmount$ 1 | SubAbility$ DBScry | SpellDescription$ Target player loses 1 life. Scry 1.
+SVar:DBScry:DB$ Scry | ScryNum$ 1 | SubAbility$ ConditionalTransform
+SVar:ConditionalTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1 | SubAbility$ DBCleanup1
+SVar:DBCleanup1:DB$ Cleanup | ClearRemembered$ True | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ EQ0
+
+SVar:AltCostPaid:Count$AltCost.1.0
+
+Oracle:Target player loses 1 life. Scry 1.\nFabled {2}{B} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that player.)
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Outlaw's Woods
+ManaCost:no cost
+Types:Enchantment Aura
+Colors:black
+
+K:Enchant:Player.IsRemembered
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ At the beginning of your upkeep, enchanted player loses 1 life.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ EnchantedPlayer | LifeAmount$ 1
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Battlefield | Destination$ Any | Execute$ DBCleanup2 | Static$ True
+SVar:DBCleanup2:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Enchant player\nAt the beginning of your upkeep, enchanted player loses 1 life.
+
+SVar:AttachAILogic:Curse

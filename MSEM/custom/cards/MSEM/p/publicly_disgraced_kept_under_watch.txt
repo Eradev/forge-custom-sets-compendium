@@ -6,7 +6,7 @@ K:Fabled
 
 S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 W U | Description$ Fabled {2}{W}{U} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that player.)
 
-A:SP$ Effect | ValidTgts$ Player | TgtPrompt$ Select target player | IsCurse$ True | StaticAbilities$ STCantBeCast | RememberTargets$ True | RememberObjects$ Targeted | Duration$ UntilEOT | SubAbility$ ConditionalTransform | SpellDescription$ Target player can't cast spells this turn.
+A:SP$ Effect | ValidTgts$ Player | IsCurse$ True | StaticAbilities$ STCantBeCast | RememberTargets$ True | RememberObjects$ Targeted | Duration$ UntilEOT | SubAbility$ ConditionalTransform | SpellDescription$ Target player can't cast spells this turn.
 SVar:STCantBeCast:Mode$ CantBeCast | ValidCard$ Card | Caster$ Player.IsRemembered | Description$ Target player can't cast spells this turn.
 
 SVar:ConditionalTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1 | SubAbility$ DBCleanup1

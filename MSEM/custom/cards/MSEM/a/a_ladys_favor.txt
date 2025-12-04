@@ -1,0 +1,9 @@
+Name:A Lady's Favor
+ManaCost:2
+Types:Artifact Equipment
+
+K:Equip:1
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddKeyword$ Vigilance | Description$ Equipped creature has vigilance.
+
+Oracle:Equipped creature has vigilance.\nEquip {1}

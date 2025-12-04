@@ -1,0 +1,8 @@
+Name:Unburied Relics
+ManaCost:X G G
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Permanent.cmcLEX | ChangeTypeDesc$ permanent card with mana value X or less | ChangeNum$ 1 | SpellDescription$ Search your library for a permanent card with mana value X or less, reveal it, put it into your hand, then shuffle.
+SVar:X:Count$xPaid
+
+Oracle:Search your library for a permanent card with mana value X or less, reveal it, put it into your hand, then shuffle.

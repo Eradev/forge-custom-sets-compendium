@@ -1,0 +1,10 @@
+Name:Left for Carrion
+ManaCost:2 BR
+Types:Instant
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ BR | CheckSVar$ Bleed | SVarCompare$ GE1 | Description$ Bleed {BR} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
+SVar:Bleed:Count$LifeOppsLostThisTurn
+
+A:SP$ DealDamage | ValidTgts$ Creature | NumDmg$ 4 | SpellDescription$ CARDNAME deals 4 damage to target creature.
+
+Oracle:Bleed {BR} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)\nLeft for Carrion deals 4 damage to target creature.

@@ -1,0 +1,8 @@
+Name:Harrowing Knight
+ManaCost:2 B B
+Types:Creature Human Knight
+PT:3/3
+
+A:AB$ Pump | Cost$ Sac<1/Creature> | Defined$ Self | NumAtt$ +2 | NumDef$ +2 | AILogic$ Aristocrat | SpellDescription$ This creature gets +2/+2 until end of turn.
+
+Sacrifice a creature: This creature gets +2/+2 until end of turn.

@@ -1,0 +1,11 @@
+Name:Trystasp Coating
+ManaCost:B
+Types:Enchantment Aura
+
+K:Enchant:creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 1 | AddKeyword$ Deathtouch | Description$ Enchanted creature gets +1/+0 and has deathtouch.
+
+Oracle:Enchant creature (Target a creature as you cast this. This card enters attached to that creature.)\nEnchanted creature gets +1/+0 and has deathtouch. (Any amount of damage it deals to a creature is enough to destroy it.)
+
+SVar:AttachAILogic:Pump

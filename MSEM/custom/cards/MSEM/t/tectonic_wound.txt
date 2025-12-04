@@ -1,0 +1,10 @@
+Name:Tectonic Wound
+ManaCost:4 R R
+Types:Sorcery
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 R | CheckSVar$ Bleed | SVarCompare$ GE1 | Description$ Bleed {2}{R} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
+SVar:Bleed:Count$LifeOppsLostThisTurn
+
+A:SP$ Destroy | ValidTgts$ Land | SpellDescription$ Destroy target land.
+
+Oracle:Bleed {2}{R} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)\nDestroy target land.

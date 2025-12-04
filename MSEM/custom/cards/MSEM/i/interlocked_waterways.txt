@@ -1,0 +1,10 @@
+Name:Interlocked Waterways
+ManaCost:no cost
+Types:Land Island
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Untap | Cost$ U T Reveal<1/Card.Blue/blue card> | ValidTgts$ Creature | SpellDescription$ Untap target creature.
+
+Oracle:({T}: Add {U}.)\nThis land enters tapped.\n{U}, {T}, Reveal a blue card from your hand: Untap target creature.

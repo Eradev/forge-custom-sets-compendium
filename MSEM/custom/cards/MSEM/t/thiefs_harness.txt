@@ -1,0 +1,13 @@
+Name:Thief's Harness
+ManaCost:1
+Types:Artifact Equipment
+
+K:Equip:3
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 1 | AddSVar$ AE | AddTrigger$ TrigDamageDone | Description$ Equipped creature gets +1/+0 and has "Whenever this creature deals combat damage to a player, draw a card."
+SVar:TrigDamageDone:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigDraw | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature deals combat damage to a player, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+SVar:AE:SVar:HasAttackEffect:TRUE
+
+Oracle:Equipped creature gets +1/+0 and has "Whenever this creature deals combat damage to a player, draw a card."\nEquip {3}

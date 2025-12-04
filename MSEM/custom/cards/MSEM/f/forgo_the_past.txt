@@ -1,0 +1,9 @@
+Name:Forgo the Past
+ManaCost:1 B
+Types:Enchantment
+
+A:AB$ ChangeZone | Cost$ 1 | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Card | RememberChanged$ True | SubAbility$ DBScry | SpellDescription$ Exile target card from a graveyard. That card's owner may scry 1.
+SVar:DBScry:DB$ Scry | Defined$ RememberedOwner | ScryNum$ 1 | Optional$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:{1}: Exile target card from a graveyard. That card's owner may scry 1.

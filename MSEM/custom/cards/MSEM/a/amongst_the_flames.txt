@@ -1,0 +1,10 @@
+Name:Amongst the Flames
+ManaCost:2 R
+Types:Sorcery
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ R | CheckSVar$ Bleed | SVarCompare$ GE1 | Description$ Bleed {R} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
+SVar:Bleed:Count$LifeOppsLostThisTurn
+
+A:SP$ DamageAll | NumDmg$ 2 | ValidCards$ Creature | SpellDescription$ CARDNAME deals 2 damage to each creature.
+
+Oracle:Bleed {R} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)\nAmongst the Flames deals 2 damage to each creature.

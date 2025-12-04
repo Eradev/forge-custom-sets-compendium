@@ -1,0 +1,11 @@
+Name:Sunpiercing Bow
+ManaCost:3
+Types:Artifact Equipment
+
+K:Equip:4
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddAbility$ Damage | Description$ Equipped creature has "{T}: This creature deals damage equal to its power to any target."
+SVar:Damage:AB$ DealDamage | Cost$ T | ValidTgts$ Any | NumDmg$ X | SpellDescription$ This creature deals damage equal to its power to any target.
+SVar:X:Count$CardPower
+
+Oracle:Equipped creature has "{T}: This creature deals damage equal to its power to any target."\nEquip {4}

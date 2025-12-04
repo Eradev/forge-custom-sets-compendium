@@ -1,0 +1,13 @@
+Name:Cauldish Cavalier
+ManaCost:2 B
+Types:Creature Human Knight
+PT:2/2
+
+K:Renown:1
+
+T:Mode$ BecomeRenowned | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDrawPay | TriggerDescription$ When this creature becomes renowned, you may pay 2 life. If you do, draw two cards.
+SVar:TrigDrawPay:AB$ Draw | Cost$ PayLife<2> | NumCards$ 2
+
+Oracle:Renown 1 (When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned.)\nWhen this creature becomes renowned, you may pay 2 life. If you do, draw two cards.
+
+DeckHas:Ability$Counters

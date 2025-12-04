@@ -1,0 +1,9 @@
+Name:Reverence Seeker
+ManaCost:2 B
+Types:Creature Human Knight
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigReturn | OptionalDecider$ TriggeredCardController | TriggerDescription$ When this creature dies, you may return another target Knight card from your graveyard to your hand.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Knight.Other+YouOwn
+
+Oracle:When this creature dies, you may return another target Knight card from your graveyard to your hand.

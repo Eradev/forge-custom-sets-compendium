@@ -1,0 +1,11 @@
+Name:Inspirational Copse
+ManaCost:3 R R
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ TrigPutCounter | TriggerZones$ Battlefield | TriggerDescription$ At the beginning of your upkeep, put a lore counter on this enchantment, discard your hand, then draw a card for each lore counter on this enchantment.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ LORE | CounterNum$ 1 | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Mode$ Hand | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ X
+SVar:X:Count$CardCounters.LORE
+
+Oracle:At the beginning of your upkeep, put a lore counter on this enchantment, discard your hand, then draw a card for each lore counter on this enchantment.

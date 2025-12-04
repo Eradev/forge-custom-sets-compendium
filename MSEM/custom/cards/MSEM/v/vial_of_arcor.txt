@@ -1,0 +1,7 @@
+Name:Vial of Arcor
+ManaCost:4
+Types:Artifact
+
+A:AB$ Untap | Cost$ 1 T | ValidTgts$ Creature | SpellDescription$ Untap target creature.
+
+Oracle:{1}, {T}: Untap target creature.

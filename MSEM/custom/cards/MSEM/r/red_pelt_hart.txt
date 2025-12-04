@@ -1,0 +1,18 @@
+Name:Red Pelt Hart
+ManaCost:2 R
+Types:Creature Elk
+PT:4/3
+
+K:Trample
+
+K:Haste
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigReturn | TriggerDescription$ Whenever this creature deals combat damage to a player, return it to its owner's hand, then scry 2.
+SVar:TrigReturn:DB$ ChangeZone | Defined$ Self | Origin$ Battlefield | Destination$ Hand
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigSac | TriggerDescription$ At the beginning of your end step, sacrifice this creature.
+SVar:TrigSac:DB$ Sacrifice
+
+Oracle:Trample, haste\nWhen this creature deals combat damage to a player, return it to its owner's hand.\nAt the beginning of your end step, sacrifice this creature.
+
+SVar:PlayMain1:TRUE

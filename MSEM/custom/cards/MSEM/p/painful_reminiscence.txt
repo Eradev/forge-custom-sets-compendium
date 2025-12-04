@@ -1,0 +1,10 @@
+Name:Painful Reminiscence
+ManaCost:2 R
+Types:Instant
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ R | CheckSVar$ Bleed | SVarCompare$ GE1 | Description$ Bleed {R} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
+SVar:Bleed:Count$LifeOppsLostThisTurn
+
+A:SP$ Mana | Produced$ R | Amount$ 3 | AILogic$ ManaRitual | AINoRecursiveCheck$ True | SpellDescription$ Add {R}{R}{R}.
+
+Oracle:Bleed {R} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)\nAdd {R}{R}{R}.

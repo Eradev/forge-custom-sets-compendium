@@ -1,0 +1,9 @@
+Name:Forbidden Knowledge
+ManaCost:2 B
+Types:Sorcery
+
+A:SP$ Discard | ValidTgts$ Player | Mode$ TgtChoose | SubAbility$ DBLoseLife | SpellDescription$ Target player discards a card and loses 2 life. Draw a card.
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2 | Defined$ Targeted | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw
+
+Oracle:Target player discards a card and loses 2 life.\nDraw a card.

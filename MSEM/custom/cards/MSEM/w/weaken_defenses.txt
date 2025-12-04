@@ -5,7 +5,7 @@ Types:Sorcery
 S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 R | CheckSVar$ X | SVarCompare$ GE1 | Description$ Bleed {2}{R} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
 SVar:X:Count$LifeOppsLostThisTurn
 
-A:SP$ LoseLife | ValidTgts$ Player | TgtPrompt$ Select target player | LifeAmount$ 2 | SubAbility$ DBDamage | SpellDescription$ Target player loses 2 life. If this spell's bleed cost was paid, it deals 1 damage to each creature that player controls.
+A:SP$ LoseLife | ValidTgts$ Player | LifeAmount$ 2 | SubAbility$ DBDamage | SpellDescription$ Target player loses 2 life. If this spell's bleed cost was paid, it deals 1 damage to each creature that player controls.
 SVar:DBDamage:DB$ DamageAll | NumDmg$ 1 | ValidCards$ Creature.TargetedPlayerCtrl | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1
 SVar:AltCostPaid:Count$AltCost.1.0
 

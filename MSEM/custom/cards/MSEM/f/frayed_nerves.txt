@@ -1,0 +1,9 @@
+Name:Frayed Nerves
+ManaCost:W U
+Types:Enchantment
+
+T:Mode$ Attacks | ValidCard$ Creature | Attacked$ You | TriggerZones$ Battlefield | Execute$ TrigTap | TriggerDescription$ Whenever a creature attacks you, tap that creature. It doesn't untap during its controller's next untap step.
+SVar:TrigTap:DB$ Tap | Defined$ TriggeredAttacker | SubAbility$ DBFreeze
+SVar:DBFreeze:DB$ Pump | Defined$ TriggeredAttacker | Duration$ Permanent | KW$ HIDDEN This card doesn't untap during your next untap step.
+
+Oracle:Whenever a creature attacks you, tap that creature. It doesn't untap during its controller's next untap step.

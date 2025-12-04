@@ -1,0 +1,34 @@
+Name:Lone Heroics
+ManaCost:G
+Types:Sorcery
+
+K:Fabled
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 3 G G | Description$ Fabled {3}{G}{G} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
+SVar:AltCostPaid:Count$AltCost.1.0
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ +2 | NumDef$ +2 | SubAbility$ ConditionalTransform | SpellDescription$ Target creature gets +2/+2 until end of turn.
+SVar:ConditionalTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | AttachedTo$ Targeted | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1
+
+Oracle:Target creature gets +2/+2 until end of turn.\nFabled {3}{G}{G} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Exalted Charge
+ManaCost:no cost
+Types:Enchantment Aura
+Colors:green
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 2 | AddToughness$ 2 | Description$ Enchanted creature gets +2/+2.
+
+T:Mode$ Attacks | ValidCard$ Card.AttachedBy | Execute$ TrigToken | TriggerZones$ Battlefield | TriggerDescription$ Whenever enchanted creature attacks, create a 2/2 white Knight creature token that's tapped and attacking.
+SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ w_2_2_knight | TokenOwner$ You | TokenTapped$ True | TokenAttacking$ True
+
+Oracle:Enchant creature\nEnchanted creature gets +2/+2.\nWhenever enchanted creature attacks, create a 2/2 white Knight creature token that's tapped and attacking.
+
+SVar:HasAttackEffect:TRUE
+SVar:AttachAILogic:Pump

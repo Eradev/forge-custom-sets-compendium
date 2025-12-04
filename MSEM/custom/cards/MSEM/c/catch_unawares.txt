@@ -1,0 +1,8 @@
+Name:Catch Unawares
+ManaCost:X G G G
+Types:Sorcery
+
+A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +X | NumDef$ +X | KW$ Trample | SpellDescription$ Creatures you control get +X/+X and gain trample until end of turn.
+SVar:X:Count$xPaid
+
+Oracle:Creatures you control get +X/+X and gain trample until end of turn.
