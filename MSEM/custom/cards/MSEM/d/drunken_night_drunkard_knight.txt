@@ -7,7 +7,7 @@ K:Fabled
 S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 3 U | Description$ Fabled {3}{U} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
 SVar:AltCostPaid:Count$AltCost.1.0
 
-A:SP$ Tap | ValidTgts$ Creature | SpellDescription$ Tap target creature. | SubAbility$ ConditionalTransform | SpellDescription$ Tap target creature.
+A:SP$ Tap | ValidTgts$ Creature | SubAbility$ ConditionalTransform | SpellDescription$ Tap target creature.
 
 SVar:ConditionalTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | AttachedTo$ Targeted | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1
 
