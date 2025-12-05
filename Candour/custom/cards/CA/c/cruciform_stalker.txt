@@ -1,0 +1,17 @@
+Name:Cruciform Stalker
+ManaCost:3
+Types:Artifact Creature Gargoyle Horror
+PT:3/3
+
+K:Flash
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCharm | OptionalDecider$ You | TriggerDescription$ When this creature enters, ABILITY
+SVar:TrigCharm:DB$ Charm | Choices$ DBCounter,DBDestroy
+
+SVar:DBCounter:DB$ Counter | TargetType$ Spell | ValidTgts$ Card.MultiColor | TgtPrompt$ Select target multicolored spell | SpellDescription$ Counter target multicolored spell.
+
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Permanent.MultiColor | TgtPrompt$ Select target multicolored permanent. | SpellDescription$ Destroy target multicolored permanent.
+
+Oracle:Flash\nFlying\nWhen this creature enters, choose up to one —\n• Counter target multicolored spell.\n• Destroy target multicolored permanent.
