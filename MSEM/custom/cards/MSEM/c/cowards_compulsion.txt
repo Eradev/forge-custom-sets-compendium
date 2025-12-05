@@ -2,7 +2,7 @@ Name:Coward's Compulsion
 ManaCost:R
 Types:Sorcery
 
-A:SP$ Pump | ValidTgts$ Creature | IsCurse$ True | KW$ HIDDEN CARDNAME can't block. | SubAbility$ DBDraw
+A:SP$ Pump | ValidTgts$ Creature | IsCurse$ True | KW$ HIDDEN CARDNAME can't block. | SubAbility$ DBDraw | SpellDescription$ Target creature can't block this turn. Draw a card.
 SVar:DBDraw:DB$ Draw
 
 Oracle:Target creature can't block this turn.\nDraw a card.
