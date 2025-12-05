@@ -6,8 +6,9 @@ PT:2/2
 K:Flash
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExplore | TriggerDescription$ When NICKNAME enters, he explores twice X times.
-SVar:TrigExplore:DB$ Explore | Num$ X
-SVar:X:Count$xPaid/Twice
+SVar:TrigExplore:DB$ Explore | Num$ Y
+SVar:X:Count$xPaid
+SVar:Y:Count$xPaid/Twice
 
 A:AB$ TapOrUntap | Cost$ Discard<1/Land> | ValidTgts$ Permanent | TgtPrompt$ Select target permanent | OptionalDecider$ You | SpellDescription$ You may tap or untap target permanent.
 
