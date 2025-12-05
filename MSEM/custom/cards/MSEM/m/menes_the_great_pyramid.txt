@@ -1,0 +1,16 @@
+Name:Menes, the Great Pyramid
+ManaCost:4 B B B
+Types:Legendary Planeswalker Fortress
+Loyalty:5
+
+T:Mode$ AttackersDeclaredOneTarget | ValidCard$ Creature | AttackedTarget$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever one or more creatures attack NICKNAME, create a tapped 2/3 black Mummy creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ b_2_3_mummy | TokenTapped$ true | TokenOwner$ You
+
+A:AB$ Effect | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Name$ Emblem — Menes, the Great Pyramid | Image$ emblem_menes_the_great_pyramid | Duration$ Permanent | StaticAbilities$ StaticPump | SpellDescription$ You get an emblem with "Black creatures you control get +1/+1."
+SVar:StaticPump:Mode$ Continuous | Affected$ Creature.YouCtrl+Black | AffectedZone$ Battlefield | AddPower$ 1 | AddToughness$ 1 | AffectedZone$ Battlefield | Description$ Black creatures you control get +1/+1.
+
+A:AB$ ChangeZone | Cost$ SubCounter<3/LOYALTY> | Planeswalker$ True | RememberLKI$ True | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Creature | ChangeNum$ 1 | SubAbility$ DBCopy | SpellDescription$ Exile target creature card from a graveyard. Create a tapped token that's a copy of it except it's a black Mummy.
+SVar:DBCopy:DB$ CopyPermanent | Defined$ Remembered | Controller$ You | SetColor$ Black | SetCreatureTypes$ Mummy | TokenTapped$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Whenever one or more creatures attack Menes, create a tapped 2/3 black Mummy creature token.\n[+1]: You get an emblem with "Black creatures you control get +1/+1."\n[-3]: Exile target creature card from a graveyard. Create a tapped token that's a copy of it except it's a black Mummy.

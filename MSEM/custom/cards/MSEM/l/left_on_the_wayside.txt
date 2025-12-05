@@ -1,0 +1,11 @@
+Name:Left on the Wayside
+ManaCost:1 R
+Types:Sorcery
+
+A:SP$ Charm | Choices$ DBDestroy,DBMana
+
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Artifact | TgtPrompt$ Select target artifact | SpellDescription$ Destroy target artifact.
+
+SVar:DBMana:DB$ Mana | Produced$ R R R | SpellDescription$ Add {R}{R}{R}.
+
+Oracle:Choose one —\n• Destroy target artifact.\n• Add {R}{R}{R}.

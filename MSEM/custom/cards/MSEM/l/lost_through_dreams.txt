@@ -1,0 +1,9 @@
+Name:Lost Through Dreams
+ManaCost:W U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | SubAbility$ DBConjure | SpellDescription$ Counter target spell. Draw a card.
+SVar:DBConjure:DB$ MakeCard | Conjure$ True | Amount$ 1 | Name$ Fatigue (MSEM) | LibraryPosition$ 0 | Zone$ Library | ConditionCheckSVar$ X | ConditionSVarCompare$ EQ1
+SVar:X:Targeted$Valid Card.nonCreature
+
+Oracle:Counter target spell. If a noncreature spell is countered this way, conjure a card named Fatigue and put it on top of your library. (It's a colorless sorcery that costs {2} with "Draw a card.")

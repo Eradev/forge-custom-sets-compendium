@@ -1,0 +1,11 @@
+Name:Wachet Charm
+ManaCost:U
+Types:Instant
+
+A:SP$ Charm | Choices$ DBMill,DBDraw
+
+SVar:DBMill:DB$ Mill | NumCards$ 4 | ValidTgts$ Player | TgtPrompt$ Choose a player | SpellDescription$ Target player mills four cards.
+
+SVar:DBDraw:DB$ Draw | SpellDescription$ Draw a card.
+
+Oracle:Choose one —\n• Target player mills four cards.\n• Draw a card.

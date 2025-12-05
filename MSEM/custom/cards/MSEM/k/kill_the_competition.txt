@@ -1,0 +1,10 @@
+Name:Kill the Competition
+ManaCost:3 B B
+Types:Sorcery
+
+A:SP$ Destroy | ValidTgts$ Creature | TgtPrompt$ Select target creature to destroy | RememberDestroyed$ True | SubAbility$ DBPutCounter | SpellDescription$ Destroy target creature.
+SVar:DBPutCounter:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select a creature you control | CounterType$ P1P1 | CounterNum$ 1 | Optional$ True | ConditionCheckSVar$ X | ConditionSVarCompare$ EQ1 | SpellDescription$ If you do, you may put a +1/+1 counter on a creature you control. | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Count$RememberedSize
+
+Oracle:Destroy target creature. If you do, you may put a +1/+1 counter on a creature you control.

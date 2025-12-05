@@ -1,0 +1,12 @@
+Name:Staff of Authority
+ManaCost:4
+Types:Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Card.EquippedBy | AddKeyword$ You may choose not to untap CARDNAME during your untap step. | AddAbility$ ABGainControl | Description$ Equipped creature has "You may choose not to untap this creature during your untap step" and "{T}: Gain control of target creature with power 5 or greater for as long as you control this creature and it remains tapped."
+SVar:ABGainControl:AB$ GainControl | Cost$ T | ValidTgts$ Creature.powerGE5 | TgtPrompt$ Select target creature with power equal to five or greater | LoseControl$ Untap,LeavesPlay | SpellDescription$ Gain control of target creature with power 5 or greater for as long as you control this creature and it remains tapped.
+
+K:Equip:3
+
+Oracle:Equipped creature has "You may choose not to untap this creature during your untap step" and "{T}: Gain control of target creature with power 5 or greater for as long as you control this creature and it remains tapped."
+
+AI:RemoveDeck:Random

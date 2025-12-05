@@ -1,0 +1,11 @@
+Name:Gruesome Transport
+ManaCost:3 B
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 3 | AddToughness$ 3 | AddKeyword$ Trample | Description$ Enchanted creature gets +3/+3 and has trample.
+
+Oracle:Enchant creature\nEnchanted creature gets +3/+3 and has trample.
+
+SVar:AttachAILogic:Pump

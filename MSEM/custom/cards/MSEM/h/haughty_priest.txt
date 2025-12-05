@@ -1,0 +1,9 @@
+Name:Haughty Priest
+ManaCost:R
+Types:Creature Human Cleric
+PT:1/1
+
+T:Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | OpponentTurn$ True | Execute$ TrigDealDamage | TriggerDescription$ Whenever you cast a spell during an opponent's turn, this creatrure deals 1 damage to that player.
+SVar:TrigDealDamage:DB$ DealDamage | Defined$ ActivePlayer | NumDmg$ 1
+
+Oracle:Whenever you cast a spell during an opponent's turn, this creatrure deals 1 damage to that player.

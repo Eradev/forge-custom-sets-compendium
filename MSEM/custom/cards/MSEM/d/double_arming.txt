@@ -1,0 +1,16 @@
+Name:Double Arming
+ManaCost:B B
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPutCounter | TriggerDescription$ When this Aura enters, put a +1/+1 counter on enchanted creature.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Enchanted | CounterType$ P1P1 | CounterNum$ 1
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddKeyword$ Menace | Description$ Enchanted creature has menace.
+
+A:AB$ ChangeZone | Cost$ 5 | Origin$ Battlefield | Destination$ Hand | SpellDescription$ Return this Aura to its owner's hand.
+
+Oracle:Enchant creature\nWhen this Aura enters, put a +1/+1 counter on enchanted creature.\nEnchanted creature has menace.\n{5}: Return this Aura to its owner's hand.
+
+SVar:AttachAILogic:Pump

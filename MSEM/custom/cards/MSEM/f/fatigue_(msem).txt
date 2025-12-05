@@ -1,0 +1,7 @@
+Name:Fatigue (MSEM)
+ManaCost:2
+Types:Sorcery
+
+A:SP$ Draw | SpellDescription$ Draw a card.
+
+Oracle:Draw a card.

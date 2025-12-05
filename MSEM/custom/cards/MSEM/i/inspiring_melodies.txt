@@ -1,0 +1,11 @@
+Name:Inspiring Melodies
+ManaCost:2 R R
+Types:Sorcery
+
+A:SP$ Scry | ScryNum$ 3 | SubAbility$ DBReveal | SpellDescription$ Scry 3, then reveal the top card of your library. Discard your hand, then draw cards equal to that card's mana value.
+SVar:DBReveal:DB$ PeekAndReveal | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Mode$ Hand | Defined$ You | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | NumCards$ X | NumCardsDesc$ cards equal to that card's mana value
+SVar:X:Count$TopOfLibraryCMC
+
+Oracle:Scry 3, then reveal the top card of your library. Discard your hand, then draw cards equal to that card's mana value.

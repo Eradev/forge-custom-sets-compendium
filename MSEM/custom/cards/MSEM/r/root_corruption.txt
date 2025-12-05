@@ -1,0 +1,11 @@
+Name:Root Corruption
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Charm | Choices$ DBCounter,DBCopyToken
+
+SVar:DBCounter:DB$ Counter | ValidTgts$ Card | TargetType$ Spell | UnlessCost$ 2 | UnlessPayer$ TargetedController | SpellDescription$ Counter target spell unless its controller pays {2}.
+
+SVar:DBCopyToken:DB$ CopyPermanent | ValidTgts$ Permanent.token+YouCtrl | TgtPrompt$ Select target token you control | NumCopies$ 1 | TokenTapped$ True | SpellDescription$ Create a tapped token that's a copy of target token you control.
+
+Oracle:Choose one —\n• Counter target spell unless its controller pays {2}.\n• Create a tapped token that's a copy of target token you control.

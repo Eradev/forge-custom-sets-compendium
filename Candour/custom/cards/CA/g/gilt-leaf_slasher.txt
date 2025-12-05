@@ -8,6 +8,6 @@ K:First Strike
 K:Deathtouch
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this creature enters, draw a card.
-SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+SVar:TrigDraw:DB$ Draw
 
 Oracle:First strike, deathtouch\nWhen this creature enters, draw a card.

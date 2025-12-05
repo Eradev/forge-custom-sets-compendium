@@ -9,7 +9,7 @@ SVar:TrigDestroy:DB$ Destroy | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Creature
 
 S:Mode$ Continuous | Affected$ Creature | RemoveAllAbilities$ True | Description$ Creatures lose all abilities.
 
-T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | Execute$ TrigSac | TriggerDescription$ At the beginning of the end step, sacrifice CARDNAME.
+T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | Execute$ TrigSac | TriggerDescription$ At the beginning of the end step, sacrifice this enchantment.
 SVar:TrigSac:DB$ Sacrifice | SacValid$ Self
 
 Oracle:Flash\nWhen this enchantment enters, destroy up to one target creature.\nCreatures lose all abilities.\nAt the beginning of the end step, sacrifice this enchnatment.

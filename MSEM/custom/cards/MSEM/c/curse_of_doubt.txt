@@ -1,0 +1,16 @@
+Name:Curse of Doubt
+ManaCost:1 U
+Types:Enchantment Aura Curse
+
+K:Flash
+
+K:Enchant:Player
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigCounter | TriggerDescription$ When this Aura enters, counter target spell enchanted player controls unless they pay {2}.
+SVar:TrigCounter:DB$ Counter | TargetType$ Spell | ValidTgts$ Card.EnchantedPlayerCtrl | UnlessCost$ 2 | TgtPrompt$ Select target spell enchanted player controls
+
+A:AB$ Mill | Cost$ 4 U | Defined$ Player.EnchantedBy | NumCards$ 3 | SpellDescription$ Enchanted player mills three cards.
+
+Oracle:Flash\nEnchant player\nWhen this Aura enters, counter target spell enchanted player controls unless they pay {2}.\n{4}{U}: Enchanted player mills three cards.
+
+SVar:AttachAILogic:Curse

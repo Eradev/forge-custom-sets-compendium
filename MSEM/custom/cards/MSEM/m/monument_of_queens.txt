@@ -1,0 +1,12 @@
+Name:Monument of Queens
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ PutCounter | Cost$ 4 | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBAnimate | AILogic$ CrawlingBarrens | SpellDescription$ Put a +1/+1 counters on this land. You may have it become a 0/0 Avatar creature with flying, first strike, vigilance, trample and lifelink until end of turn. It's still a land.
+SVar:DBAnimate:DB$ Animate | Defined$ Self | Power$ 0 | Toughness$ 0 | Types$ Creature,Avatar | Keywords$ Flying & First Strike & Vigilance & Trample & Lifelink | Optional$ True | StackDescription$ You may have it become a 0/0 Avatar creature with flying, first strike, vigilance, trample and lifelink until end of turn. It's still a land.
+
+Oracle:{T}: Add {C}.\n{4}: Put a +1/+1 counters on this land. You may have it become a 0/0 Avatar creature with flying, first strike, vigilance, trample and lifelink until end of turn. It's still a land.
+
+DeckHas:Ability$Counters

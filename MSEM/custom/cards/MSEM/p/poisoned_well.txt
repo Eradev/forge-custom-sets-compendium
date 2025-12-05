@@ -1,0 +1,12 @@
+Name:Poisoned Well
+ManaCost:2 B
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Land.YouCtrl | ChangeNum$ 1 | Tapped$ True | RememberChanged$ True | SubAbility$ DBPutCounter | StackDescription$ SpellDescription | SpellDescription$ Search your library for a land card and put that card onto the battlefield tapped with a venom counter on it. It gains "Whenever this land is tapped for mana, you lose 1 life." Then shuffle.
+SVar:DBPutCounter:DB$ PutCounter | CounterType$ VENOM | CounterNum$ 1 | Defined$ Remembered | SubAbility$ DBAnimate
+SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Triggers$ ManaTap | Duration$ Permanent | SubAbility$ DBCleanup
+SVar:ManaTap:Mode$ TapsForMana | ValidCard$ Card.Self | Execute$ TrigLoseLife | Static$ True | TriggerDescription$ Whenever this land is tapped for mana, you lose 1 life.
+SVar:TrigLoseLife:DB$ LoseLife | LifeAmount$ 1 | Defined$ You
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Search your library for a land card and put that card onto the battlefield tapped with a venom counter on it. It gains "Whenever this land is tapped for mana, you lose 1 life." Then shuffle.

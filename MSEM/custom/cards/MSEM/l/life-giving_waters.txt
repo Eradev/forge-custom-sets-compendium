@@ -1,0 +1,10 @@
+Name:Life-Giving Waters
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Untap | ValidTgts$ Land.YouCtrl | TargetMin$ 0 | TargetMax$ 2 | TgtPrompt$ Select up to two target lands you control | SubAbility$ DBChooseType | SpellDescription$ Untap up to two target lands you control. Those lands become the basic land type of your choice until end of turn.
+SVar:DBChooseType:DB$ ChooseType | Type$ Basic Land | Defined$ You | AILogic$ MostNeededType | SubAbility$ DBAnimate
+SVar:DBAnimate:DB$ Animate | Defined$ Targeted | Types$ ChosenType | RemoveLandTypes$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw
+
+Oracle:Untap up to two target lands you control. Those lands become the basic land type of your choice until end of turn.\nDraw a card.

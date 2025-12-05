@@ -1,0 +1,14 @@
+Name:Rockpounding Saurian
+ManaCost:3 R R
+Types:Creature Lizard
+PT:4/4
+
+K:Trample
+
+K:Tribute:3
+SVar:TrigNotTribute:DB$ Pump | ValidTgts$ Artifact | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target artifact | AILogic$ Destroy | IsCurse$ True | SubAbility$ DBDestroyLand | SpellDescription$ When this creature enters, if tribute wasn't paid, you may destroy up to one target artifact, up to one target land, and up to one target Fortress.
+SVar:DBDestroyLand:DB$ Pump | ValidTgts$ Land | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target land | AILogic$ Destroy | IsCurse$ True | SubAbility$ DBDestroyFortress
+SVar:DBDestroyFortress:DB$ Pump | ValidTgts$ Fortress | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target Fortress | AILogic$ Destroy | IsCurse$ True | SubAbility$ DBDestroyAll
+SVar:DBDestroyAll:DB$ Destroy | Defined$ Targeted
+
+Oracle:Trample\nTribute 3 (As this creature enters, an opponent of your choice may put three +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, you may destroy up to one target artifact, up to one target land, and up to one target Fortress.

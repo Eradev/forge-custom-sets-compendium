@@ -1,0 +1,9 @@
+Name:Lasis Persecutor
+ManaCost:B
+Types:Creature Human Rogue
+PT:1/1
+
+K:Tribute:1
+SVar:TrigNotTribute:DB$ Pump | Defined$ Self | KW$ Deathtouch | Duration$ Permanent | SpellDescription$ When this creature enters, if tribute wasn't paid, it gains deathtouch. (This effect lasts indefinitely.)
+
+Oracle:Tribute 1 (As this creature enters, an opponent of your choice may put a +1/+1 counter on it.)\nWhen this creature enters, if tribute wasn't paid, it gains deathtouch. (This effect lasts indefinitely.)

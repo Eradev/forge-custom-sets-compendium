@@ -1,4 +1,4 @@
-Name:Re-Spec
+Name:Re-spec
 ManaCost:1 G U
 Types:Instant
 

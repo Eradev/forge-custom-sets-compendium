@@ -2,7 +2,7 @@ Name:Beat & Batter
 ManaCost:R
 Types:Instant
 
-A:SP$ Effect | StaticAbilities$ STCantPrevent | AILogic$ Burn | SubAbility$ DBDamage | SpellDescription$ Damage can't be prevented this turn. Beat & Batter deals 2 damage to target player, then 2 damage to each player that's gained life this turn. 
+A:SP$ Effect | StaticAbilities$ STCantPrevent | AILogic$ Burn | SubAbility$ DBDamage | SpellDescription$ Damage can't be prevented this turn. Beat & Batter deals 2 damage to target player, then 2 damage to each player that's gained life this turn.
 SVar:STCantPrevent:Mode$ CantPreventDamage | Description$ Damage can't be prevented this turn.
 SVar:DBDamage:DB$ DealDamage | ValidTgts$ Player | TgtPrompt$ Select target player | NumDmg$ 2 | NoPrevention$ True | SubAbility$ DBDamage2
 SVar:DBDamage2:DB$ DealDamage | Defined$ Remembered | NumDmg$ 2 | NoPrevention$ True

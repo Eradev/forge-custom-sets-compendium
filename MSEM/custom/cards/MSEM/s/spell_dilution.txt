@@ -1,0 +1,11 @@
+Name:Spell Dilution
+ManaCost:2 U
+Types:Instant
+
+A:SP$ Pump | TargetType$ Spell | TgtZone$ Stack | ValidTgts$ Card | SubAbility$ DBScry | StackDescription$ {p:You} chooses {s:Targeted}. | SpellDescription$ Choose target spell. Scry 3, then reveal the top card of your library. Counter the chosen spell unless its controller pays {X}, where X is that card's mana value.
+SVar:DBScry:DB$ Scry | ScryNum$ 3 | SubAbility$ DBReveal
+SVar:DBReveal:DB$ PeekAndReveal | SubAbility$ DBCounter
+SVar:DBCounter:DB$ Counter | Defined$ Targeted | UnlessCost$ X | UnlessPayer$ TargetedController
+SVar:X:Count$TopOfLibraryCMC
+
+Oracle:Choose target spell. Scry 3, then reveal the top card of your library. Counter the chosen spell unless its controller pays {X}, where X is that card's mana value.

@@ -1,0 +1,10 @@
+Name:Divine Denial
+ManaCost:2 U U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | ValidTgts$ Card | SpellDescription$ Counter target spell.
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ TrigReturn | TriggerZones$ Graveyard | IsPresent$ Creature.YouCtrl+withFlying | PresentCompare$ GE3 | TriggerDescription$ At the beginning of your upkeep, if you control three or more creatures with flying, you may return CARDNAME from your graveyard to your hand.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | Defined$ Self | Optional$ True
+
+Oracle:Counter target spell.\nAt the beginning of your upkeep, if you control three or more creatures with flying, you may return Divine Denial from your graveyard to your hand.

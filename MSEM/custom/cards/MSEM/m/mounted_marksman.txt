@@ -1,0 +1,13 @@
+Name:Mounted Marksman
+ManaCost:1 R R
+Types:Creature Human Archer
+PT:2/1
+
+K:First Strike
+
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDealDamage | TriggerDescription$ When this creature enters, it deals 2 damage to target creature you don't control.
+SVar:TrigDealDamage:DB$ DealDamage | ValidTgts$ Creature.YouDontCtrl | NumDmg$ 2 | TgtPrompt$ Select target creature you don't control
+
+Oracle:First strike, haste\nWhen this creature enters, it deals 2 damage to target creature you don't control.
