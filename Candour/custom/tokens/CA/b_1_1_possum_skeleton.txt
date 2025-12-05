@@ -1,0 +1,6 @@
+Name:Possum Skeleton Token
+ManaCost:no cost
+Colors:black
+Types:Creature Possum Skeleton
+PT:1/1
+Oracle:
