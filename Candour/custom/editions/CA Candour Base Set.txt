@@ -74,7 +74,7 @@ Type=Custom
 67 R Paradoxical Ritual @Biagio D'Alessandro
 68 M Mizzium Micromancer @Kevin McKenna
 69 U Ancestral Ambition @Botos Vlad
-70 U Artic Familiar @Frank Freire
+70 U Arctic Familiar @Frank Freire
 71 R Harbinger of Equilibrium @Alessandro Calbini
 72 M Arcane Tutor @Simon Marczyk
 73 M Force of Tenacity @Mari Morgan
@@ -254,7 +254,7 @@ Type=Custom
 284 R Botanical Behemoth @Timi Honkanen
 285 R Menagerie Caretaker @Sandara Tang
 286 R Mindrake Trawler @Diane Franco
-287 R Warfaring Arcanist @Aurore Folny
+287 R Wayfaring Arcanist @Aurore Folny
 288 R Gilt-Leaf Slasher @Aldo Domínguez
 289 R Resplendent Chargers @Dominik Mayer
 290 R Terramancy @Alex Petruk
