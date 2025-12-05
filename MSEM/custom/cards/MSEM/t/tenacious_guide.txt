@@ -1,0 +1,13 @@
+Name:Tenacious Guide
+ManaCost:RG RG
+Types:Creature Human Mutant
+PT:2/2
+
+R:Event$ Counter | ValidCard$ Card.Self | ValidSA$ Spell | Layer$ CantHappen | Description$ This spell can't be countered.
+
+A:AB$ Effect | Cost$ RG | ReplacementEffects$ AntiMagic | RememberObjects$ TargetedSource | ForgetOnMoved$ Stack | ValidTgts$ Card | TgtZone$ Stack | TargetType$ Spell | SpellDescription$ Target spell can't be countered.
+SVar:AntiMagic:Event$ Counter | ValidCard$ Card.IsRemembered | ValidSA$ Spell | Layer$ CantHappen | Description$ This spell can't be countered.
+
+Oracle:This spell can't be countered.\n{RG}: Target spell can't be countered.
+
+AI:RemoveDeck:All

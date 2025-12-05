@@ -1,0 +1,8 @@
+Name:Thailen's Reprisal
+ManaCost:X R R
+Types:Instant
+
+A:SP$ DealDamage | NumDmg$ 2 | TargetMin$ 0 | TargetMax$ X | ValidTgts$ Any | SpellDescription$ CARDNAME deals 2 damage to each of up to X targets.
+SVar:X:Count$xPaid
+
+Oracle:Thailen's Reprisal deals 2 damage to each of up to X targets.

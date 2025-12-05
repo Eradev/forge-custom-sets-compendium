@@ -1,0 +1,10 @@
+Name:Absence of the Unmaker
+ManaCost:1 UR UR
+Types:Instant
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 1 UR | CheckSVar$ Bleed | SVarCompare$ GE1 | Description$ Bleed {1}{UR} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
+SVar:Bleed:Count$LifeOppsLostThisTurn
+
+A:SP$ CopySpellAbility | ValidTgts$ Instant,Sorcery | TargetType$ Spell | MayChooseTarget$ True | SpellDescription$ Copy target instant or sorcery spell. You may choose new targets for the copy.
+
+Oracle:Bleed {1}{UR} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)\nCopy target instant or sorcery spell. You may choose new targets for the copy.

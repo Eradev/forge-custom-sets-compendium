@@ -1,0 +1,10 @@
+Name:Shadowed Slums
+ManaCost:no cost
+Types:Land Swamp
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ LoseLife | Cost$ B T Reveal<1/Card.Black/black card> | ValidTgts$ Player | TgtPrompt$ Select a player | LifeAmount$ 1 | SpellDescription$ Target player loses 1 life.
+
+Oracle:({T}: Add {B}.)\nThis land enters tapped.\n{B}, {T}, Reveal a black card from your hand: Target player loses 1 life.

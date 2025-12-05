@@ -1,0 +1,12 @@
+Name:Thailen, Heir to Daeland
+ManaCost:R
+Types:Legendary Creature Human Noble
+PT:*/2
+
+K:First Strike
+
+S:Mode$ Continuous | CharacteristicDefining$ True | SetPower$ X | Description$ NICKNAME's power is equal to the number of other attacking or blocking creatures you control.
+
+SVar:X:Count$Valid Creature.YouCtrl+Other+attacking,Creature.YouCtrl+Other+blocking
+
+Oracle:First strike\nThailen's power is equal to the number of other attacking or blocking creatures you control.

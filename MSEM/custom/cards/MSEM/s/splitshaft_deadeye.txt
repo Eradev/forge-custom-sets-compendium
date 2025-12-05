@@ -1,0 +1,13 @@
+Name:Splitshaft Deadeye
+ManaCost:1 G G
+Types:Creature Human Archer
+PT:2/2
+
+K:Vigilance
+
+K:Reach
+
+A:AB$ DealDamage | Cost$ T | ValidTgts$ Creature.withFlying | TgtPrompt$ Select target creature with flying | NumDmg$ X | SpellDescription$ This creature deals damage equal to its power to target creature with flying.
+SVar:X:Count$CardPower
+
+Oracle:Vigilance, reach\n{T}: This creature deals damage equal to its power to target creature with flying.

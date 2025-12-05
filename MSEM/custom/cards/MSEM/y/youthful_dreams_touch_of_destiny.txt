@@ -1,0 +1,30 @@
+Name:Youthful Dreams
+ManaCost:RG
+Types:Sorcery
+
+K:Fabled
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 3 RG RG | Description$ Fabled {3}{RG}{RG} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
+SVar:AltCostPaid:Count$AltCost.1.0
+
+A:SP$ Pump | ValidTgts$ Creature | KW$ Haste & Trample | SubAbility$ ConditionalTransform | SpellDescription$ Target creature gains haste and trample until end of turn.
+SVar:ConditionalTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | AttachedTo$ Targeted | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1
+
+Oracle:Target creature gains haste and trample until end of turn.\nFabled {3}{RG}{RG} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Touch of Destiny
+ManaCost:no cost
+Types:Enchantment Aura
+Colors:red,green
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 3 | AddToughness$ 3 | AddKeyword$ Trample | Description$ Enchanted creature gets +3/+3 and has trample.
+
+Oracle:Enchant creature\nEnchanted creature gets +3/+3 and has trample.
+
+SVar:AttachAILogic:Pump

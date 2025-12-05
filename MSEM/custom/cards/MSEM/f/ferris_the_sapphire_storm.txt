@@ -1,0 +1,10 @@
+Name:Ferris, the Sapphire Storm
+ManaCost:1 U B
+Types:Legendary Creature Human Pirate
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self,Creature.Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigMill | TriggerDescription$ Whenever NICKNAME or another creature you control enters, each opponent mills X cards, where X is that creature's power.
+SVar:TrigMill:DB$ Mill | Defined$ Player.Opponent | NumCards$ X
+SVar:X:TriggeredCard$CardPower
+
+Oracle:Whenever Ferris or another creature you control enters, each opponent mills X cards, where X is that creature's power.

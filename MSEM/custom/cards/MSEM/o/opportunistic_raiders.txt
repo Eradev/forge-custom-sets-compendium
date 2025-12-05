@@ -1,0 +1,16 @@
+Name:Opportunistic Raiders
+ManaCost:2 BR BR
+Types:Creature Human Rogue
+PT:3/3
+
+K:Haste
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 1 BR | CheckSVar$ Bleed | SVarCompare$ GE1 | Description$ Bleed {1}{BR} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
+SVar:Bleed:Count$LifeOppsLostThisTurn
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | PlayerTurn$ True | Phase$ Main1,Main2 | Execute$ TrigAddPhase | TriggerDescription$ When this creature enters, if it's your main phase, after this phase, there is an additional combat phase followed by an additional main phase.
+SVar:TrigAddPhase:DB$ AddPhase | ExtraPhase$ Combat | FollowedBy$ Main2
+
+Oracle:Bleed {1}{BR} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)\nHaste\nWhen this creature enters, if it's your main phase, after this phase, there is an additional combat phase followed by an additional main phase.
+
+SVar:PlayMain1:TRUE

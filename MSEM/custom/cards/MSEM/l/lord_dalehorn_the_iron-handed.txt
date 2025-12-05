@@ -1,0 +1,17 @@
+Name:Lord Dalehorn the Iron-Handed
+ManaCost:3 R W
+Types:Legendary Creature Human Noble Soldier
+PT:3/5
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ TrigCharm | TriggerDescription$ At the beginning of each opponent's upkeep, choose one —
+SVar:TrigCharm:DB$ Charm | Choices$ NoCombatDamage,NoCreatureCast
+
+SVar:NoCombatDamage:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | ThisTurn$ True | Execute$ DBDamagePlayer | CheckSVar$ CombatDamageTaken | SVarCompare$ EQ0 | TriggerDescription$ At the beginning of the next end step, if you haven't been dealt combat damage this turn, CARDNAME deals 3 damage to that player. | SpellDescription$ At the beginning of the next end step, if you haven't been dealt combat damage this turn, CARDNAME deals 3 damage to that player.
+SVar:NoCreatureCast:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | ThisTurn$ True | Execute$ DBDamagePlayer | CheckSVar$ CreatureSpellsCast | SVarCompare$ EQ0 | TriggerDescription$ At the beginning of the next end step, if that player hasn't cast a creature spell this turn, CARDNAME deals 3 damage to that player. | SpellDescription$ At the beginning of the next end step, if that player hasn't cast a creature spell this turn, CARDNAME deals 3 damage to that player.
+
+SVar:DBDamagePlayer:DB$ DealDamage | Defined$ ActivePlayer | NumDmg$ 3
+
+SVar:CombatDamageTaken:PlayerCountPropertyYou$HasPropertywasDealtCombatDamageThisTurn
+SVar:CreatureSpellsCast:Count$ThisTurnCast_Creature.ActivePlayerCtrl
+
+Oracle:At the beginning of each opponent's upkeep, choose one —\n• At the beginning of the next end step, if you haven't been dealt combat damage this turn, Lord Dalehorn the Iron-Handed deals 3 damage to that player.\n• At the beginning of the next end step, if that player hasn't cast a creature spell this turn, Lord Dalehorn the Iron-Handed deals 3 damage to that player.

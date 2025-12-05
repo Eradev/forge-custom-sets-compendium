@@ -6,7 +6,7 @@ K:Fabled
 
 S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 W | Description$ Fabled {2}{W} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
 
-A:SP$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ +1 | NumDef$ +1 | SubAbility$ DBUntap | SpellDescription$ Target creature gets +1/+1 until end of turn. Untap that creature.
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ +1 | NumDef$ +1 | SubAbility$ DBUntap | SpellDescription$ Target creature gets +1/+1 until end of turn. Untap that creature.
 SVar:DBUntap:DB$ Untap | Defined$ Targeted | SubAbility$ DBTransform
 
 SVar:DBTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | AttachedTo$ Targeted | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1 | SpellDescription$ If CARDNAME's fabled cost was paid, put it onto the battlefield transformed attached to that creature.

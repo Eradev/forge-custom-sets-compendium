@@ -1,0 +1,13 @@
+Name:Tranquil Endeavors
+ManaCost:2 G
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 2 | AddToughness$ 2 | AddKeyword$ Vigilance | Description$ Enchanted creature gets +2/+2 and has vigilance.
+
+A:AB$ ChangeZone | Cost$ 2 W | Origin$ Graveyard | Destination$ Hand | ActivationZone$ Graveyard | SpellDescription$ Return this card from your graveyard to your hand.
+
+Oracle:Enchant creature\nEnchanted creature gets +2/+2 and has vigilance.\n{2}{W}: Return this card from your graveyard to your hand.
+
+SVar:DiscardMe:2

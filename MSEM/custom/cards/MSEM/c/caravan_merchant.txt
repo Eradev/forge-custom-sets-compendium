@@ -1,0 +1,8 @@
+Name:Caravan Merchant
+ManaCost:1 R
+Types:Creature Human Warrior
+PT:2/1
+
+A:AB$ Mana | Cost$ Sac<1/CARDNAME/this creature> | Produced$ R | Amount$ 2 | SpellDescription$ Add {R}{R}.
+
+Oracle:Sacrifice this creature: Add {R}{R}.

@@ -1,0 +1,14 @@
+Name:Whiterun Harbor
+ManaCost:no cost
+Types:Legendary Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ RepeatEach | Cost$ T | RepeatSubAbility$ DBDraw1 | RepeatPlayers$ Player.Opponent | SubAbility$ DBDraw2 | ChangeZoneTable$ True | RepeatOptionalForEachPlayer$ True | RepeatOptionalMessage$ Do you want to draw a card? | SpellDescription$ Each opponent may draw a card. For each player who does, draw a card.
+SVar:DBDraw1:DB$ Draw | Defined$ Player.IsRemembered | SubAbility$ DBCount
+SVar:DBCount:DB$ StoreSVar | SVar$ X | Type$ CountSVar | Expression$ X/Plus.1
+SVar:DBDraw2:DB$ Draw | NumCards$ X | SubAbility$ DBReset
+SVar:DBReset:DB$ StoreSVar | SVar$ X | Type$ Number | Expression$ 0
+SVar:X:Number$0
+
+Oracle:{T}: Add {C}.\n{T}: Each opponent may draw a card. For each player who does, draw a card.

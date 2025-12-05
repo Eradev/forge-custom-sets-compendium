@@ -1,0 +1,32 @@
+Name:Moment of Glory
+ManaCost:RW
+Types:Sorcery
+
+K:Fabled
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 RW RW | Description$ Fabled {2}{RW}{RW} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
+SVar:AltCostPaid:Count$AltCost.1.0
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ +1 | NumDef$ +1 | SubAbility$ ConditionalTransform | SpellDescription$ Target creature gets +1/+1 until end of turn.
+SVar:ConditionalTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | AttachedTo$ Targeted | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1
+
+Oracle:Target creature gets +1/+1 until end of turn.\nFabled {2}{RW}{RW} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Legacy of Victory
+ManaCost:no cost
+Types:Enchantment Aura
+Colors:red,white
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddTrigger$ AttackTrig
+SVar:AttackTrig:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPumpAll | TriggerDescription$ Whenever this creature attacks, attacking creatures you control get +1/+1 until end of turn.
+SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.attacking+YouCtrl | NumAtt$ +1 | NumDef$ +1
+
+Oracle:Enchant creature\nEnchanted creature has "Whenever this creature attacks, attacking creatures you control get +1/+1 until end of turn."
+
+SVar:AttachAILogic:Pump

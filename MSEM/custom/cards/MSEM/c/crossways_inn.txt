@@ -1,0 +1,7 @@
+Name:Crossways Inn
+ManaCost:1 G
+Types:Sorcery
+
+A:SP$ Dig | DigNum$ 5 | ChangeNum$ 1 | Optional$ True | ForceRevealToController$ True | ChangeValid$ Card.Creature,Card.Enchantment,Card.withFabled | DestinationZone$ Hand | SpellDescription$ Reveal the top five cards of your library. You may put a creature card, enchantment card, or a card with fabled from among them into your hand. Put the rest on the bottom of your library in any order.
+
+Oracle:Reveal the top five cards of your library. You may put a creature card, enchantment card, or a card with fabled from among them into your hand. Put the rest on the bottom of your library in any order.

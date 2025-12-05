@@ -1,0 +1,17 @@
+Name:Cauldish Arrogant
+ManaCost:3 R
+Types:Creature Human Warrior
+PT:3/1
+
+K:Renown:2
+
+T:Mode$ AttackerBlocked | ValidCard$ Card.Self | Execute$ TrigReveal | TriggerZones$ Battlefield | TriggerDescription$ Whenever Cauldish Arrogant becomes blocked by one or more creatures, reveal the top card of your library. Cauldish Arrogant deals damage equal to that card's mana value to each creature blocking it. Then put that card into your hand.
+SVar:TrigReveal:DB$ PeekAndReveal | NoPeek$ True | RememberRevealed$ True | SubAbility$ TrigDamage | SpellDescription$ Reveal the top card of your library.
+SVar:TrigDamage:DB$ DamageAll | ValidCards$ Creature.blockingSource | NumDmg$ X | SubAbility$ DBChangeZone
+SVar:DBChangeZone:DB$ ChangeZone | Defined$ Remembered | Origin$ Library | Destination$ Hand | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$CardManaCost
+
+Oracle:Renown 2 (When this creature deals combat damage to a player, if it isn't renowned, put two +1/+1 counters on it and it becomes renowned.)\nWhenever this creature becomes blocked by one or more creatures, reveal the top card of your library. This creature deals damage equal to that card's mana value to each creature blocking it. Then put that card into your hand.
+
+DeckHas:Ability$Counters

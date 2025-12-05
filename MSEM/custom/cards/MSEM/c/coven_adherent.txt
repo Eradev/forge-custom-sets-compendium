@@ -1,0 +1,11 @@
+Name:Coven Adherent
+ManaCost:2 B
+Types:Creature — Human Soldier
+PT:3/2
+
+S:Mode$ Continuous | Affected$ Card.Self+enchanted,Card.Self+equipped | AddKeyword$ Indestructible | Description$ Adorned — This creature has indestructible as long as it's equipped and/or enchanted.
+
+Oracle:Adorned — This creature has indestructible as long as it's equipped and/or enchanted.
+
+SVar:EnchantMe:Once
+SVar:EquipMe:Once

@@ -1,0 +1,12 @@
+Name:Wildborn Swindler
+ManaCost:B R
+Types:Creature Human Mutant Shaman
+PT:1/1
+
+A:AB$ DealDamage | Cost$ 1 Sac<1/Creature.Other/another creature> | ValidTgts$ Player,Planeswalker | NumDmg$ 1 | SubAbility$ DBScry | SpellDescription$ This creature deals 1 damage to target player or planeswalker. Scry 1.
+SVar:DBScry:DB$ Scry | ScryNum$ 1
+
+A:AB$ Draw | Cost$ 1 Discard<1/Random/card at random> | NumCards$ 1 | SubAbility$ DBDealDamageSelf | SpellDescription$ This creature deals 1 damage to you. Draw a card.
+SVar:DBDealDamageSelf:DB$ DealDamage | Defined$ You | NumDmg$ 1
+
+Oracle:{1}, Sacrifice another creature: This creature deals 1 damage to target player or planeswalker. Scry 1.\n{1}, Discard a card at random: This creature deals 1 damage to you. Draw a card.

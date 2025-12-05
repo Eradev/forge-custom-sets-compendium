@@ -1,0 +1,9 @@
+Name:Voyaging Devout
+ManaCost:1 G G
+Types:Creature Human Knight
+PT:3/2
+
+S:Mode$ CantBlockBy | ValidAttacker$ Card.Self | ValidBlocker$ Creature.powerLTX | IsPresent$ Card.Self+enchanted,Card.Self+equipped | Description$ Adorned — As long as this creature is equipped and/or enchanted, creatures with power less than its power can't block it.
+SVar:X:Count$CardPower
+
+Oracle:Adorned — As long as this creature is equipped and/or enchanted, creatures with power less than its power can't block it.

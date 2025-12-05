@@ -1,0 +1,13 @@
+Name:Restless Hedonist
+ManaCost:4 R R
+Types:Creature Human Noble
+PT:2/3
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 R R | CheckSVar$ Bleed | SVarCompare$ GE1 | Description$ Bleed {2}{R}{R} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
+SVar:Bleed:Count$LifeOppsLostThisTurn
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ DBDiscard | TriggerDescription$ When this creature enters, discard your hand, then draw three cards.
+SVar:DBDiscard:DB$ Discard | Mode$ Hand | Defined$ You | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 3
+
+Oracle:Bleed {2}{R}{R} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)\nWhen this creature enters, discard your hand, then draw three cards.

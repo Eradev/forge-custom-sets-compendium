@@ -1,0 +1,30 @@
+Name:Death's Door
+ManaCost:1 B
+Types:Instant
+
+K:Fabled
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 3 B B | Description$ Fabled {3}{B}{B} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
+SVar:AltCostPaid:Count$AltCost.1.0
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | TgtPrompt$ Choose target creature card in your graveyard that was put there from the battlefield this turn | ValidTgts$ Card.Creature+ThisTurnEnteredFrom_Battlefield+YouOwn | Tapped$ True | SubAbility$ ConditionalTransform | SpellDescription$ Choose target creature card in your graveyard that was put there from the battlefield this turn. Return that card to the battlefield tapped.
+SVar:ConditionalTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | AttachedTo$ Targeted | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1
+
+Oracle:Choose target creature card in your graveyard that was put there from the battlefield this turn. Return that card to the battlefield tapped.\nFabled {3}{B}{B} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Immortal Butcher
+ManaCost:no cost
+Types:Enchantment Aura
+Colors:black
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 2 | AddToughness$ 2 | AddKeyword$ Trample & Indestructible | Description$ Enchanted creature gets +2/+2 and has trample and indestructible.
+
+Oracle:Enchant creature\nEnchanted creature gets +2/+2 and has trample and indestructible.
+
+SVar:AttachAILogic:Pump

@@ -1,0 +1,11 @@
+Name:Gild-Cloak Strider
+ManaCost:2 WU
+Types:Creature Human Knight
+PT:2/2
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | ValidBlocker$ Creature.powerGTX | Description$ This creature can't be blocked by creatures with greater power.
+SVar:X:Count$CardPower
+
+A:AB$ ChangeZone | Cost$ 1 WU | Defined$ Self | Origin$ Battlefield | Destination$ Hand | SpellDescription$ Return this creature to its owner's hand.
+
+Oracle:This creature can't be blocked by creatures with greater power.\n{1}{WU}: Return this creature to its owner's hand.

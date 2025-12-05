@@ -1,0 +1,10 @@
+Name:Shrouded Cackler
+ManaCost:B
+Types:Creature Human Rogue
+PT:1/2
+
+K:Deathtouch
+
+S:Mode$ CantBlock | ValidCard$ Card.Self | Description$ This creature can't block.
+
+Oracle:Deathtouch\nThis creature can't block.

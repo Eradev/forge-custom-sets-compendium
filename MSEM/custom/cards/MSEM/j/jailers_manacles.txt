@@ -1,0 +1,7 @@
+Name:Jailer's Manacles
+ManaCost:4
+Types:Artifact
+
+A:AB$ Tap | Cost$ 1 T | ValidTgts$ Creature | SpellDescription$ Tap target creature.
+
+Oracle:{1}, {T}: Tap target creature.

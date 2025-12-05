@@ -1,0 +1,14 @@
+Name:Pursued Paranoia
+ManaCost:R
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigScry | TriggerZones$ Battlefield | TriggerDescription$ When this Aura enters, scry 1.
+SVar:TrigScry:DB$ Scry | ScryNum$ 1
+
+S:Mode$ CantBlock | ValidCard$ Creature.EnchantedBy | Description$ Enchanted creature can't block.
+
+Oracle:Enchant creature\nWhen this Aura enters, scry 1.\nEnchanted creature can't block.
+
+SVar:AttachAILogic:Curse

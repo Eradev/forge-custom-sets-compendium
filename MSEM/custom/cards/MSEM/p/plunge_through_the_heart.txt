@@ -1,0 +1,13 @@
+Name:Plunge Through the Heart
+ManaCost:1 WB
+Types:Sorcery
+
+S:Mode$ Continuous | CharacteristicDefining$ True | Affected$ Card.Self | AddKeyword$ Flash | CheckSVar$ X | SVarCompare$ GE1 | Description$ If a player has lost life this turn, this spell has flash and can't be countered.
+
+R:Event$ Counter | ValidCard$ Card.Self | ValidSA$ Spell | Layer$ CantHappen | CheckSVar$ X | SVarCompare$ GE1 | Description$ If a player has lost life this turn, this spell can't be countered.
+
+A:SP$ Destroy | ValidTgts$ Creature.tapped | SpellDescription$ Destroy target tapped creature.
+
+SVar:X:PlayerCountPlayers$HasPropertyLostLifeThisTurn
+
+Oracle:If a player has lost life this turn, this spell has flash and can't be countered.\nDestroy target tapped creature.

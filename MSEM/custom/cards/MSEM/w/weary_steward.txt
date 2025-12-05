@@ -8,7 +8,7 @@ K:Flash
 K:Defender
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPrevent | TriggerDescription$ When this creature enters, prevent all combat damage target creature would deal this turn.
-SVar:TrigPrevent:DB$ Effect | ValidTgts$ Creature | TgtPrompt$ Select target creature | ReplacementEffects$ RPreventSourceCombat | RememberObjects$ Targeted | Duration$ UntilEOT
+SVar:TrigPrevent:DB$ Effect | ValidTgts$ Creature | ReplacementEffects$ RPreventSourceCombat | RememberObjects$ Targeted | Duration$ UntilEOT
 SVar:RPreventSourceCombat:Event$ DamageDone | Prevent$ True | IsCombat$ True | ValidSource$ Card.IsRemembered | Description$ Prevent all combat damage target creature would deal this turn.
 
 Oracle:Flash (You may cast this spell any time you could cast an instant.)\nDefender\nWhen this creature enters, prevent all combat damage target creature would deal this turn.

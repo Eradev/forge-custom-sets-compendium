@@ -1,0 +1,10 @@
+Name:Derelict Amphitheatre
+ManaCost:no cost
+Types:Land Mountain
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Scry | Cost$ R T Reveal<1/Card.Red/red card> | ScryNum$ 1 | SpellDescription$ Scry 1.
+
+Oracle:({T}: Add {R}.)\nThis land enters tapped.\n{R}, {T}, Reveal a red card from your hand: Scry 1.

@@ -1,0 +1,16 @@
+Name:Seal the Tomb
+ManaCost:B
+Types:Instant
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Exile | TgtPrompt$ Choose target card in a graveyard other than a basic land card | ValidTgts$ Card.nonBasic | SubAbility$ ExileYard | RememberChanged$ True | SpellDescription$ Choose target card in a graveyard other than a basic land card. Search its owner's graveyard, hand, and library for any number of cards with the same name as that card and exile them. Then that player shuffles. Scry 1.
+SVar:ExileYard:DB$ ChangeZone | ChangeType$ Remembered.sameName | Origin$ Graveyard | DefinedPlayer$ RememberedOwner | Chooser$ You | Destination$ Exile | ChangeNum$ NumInYard | Hidden$ True | SubAbility$ ExileHand | StackDescription$ None
+SVar:ExileHand:DB$ ChangeZone | Origin$ Hand | Destination$ Exile | DefinedPlayer$ RememberedOwner | ChangeType$ Remembered.sameName | ChangeNum$ NumInHand | Chooser$ You | SubAbility$ ExileLib | StackDescription$ None
+SVar:ExileLib:DB$ ChangeZone | Origin$ Library | Destination$ Exile | DefinedPlayer$ RememberedOwner | ChangeType$ Remembered.sameName | ChangeNum$ NumInLib | Chooser$ You | Shuffle$ True | StackDescription$ None | SubAbility$ DBScry
+SVar:DBScry:DB$ Scry | ScryNum$ 1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
+
+SVar:NumInLib:PlayerCountDefinedRememberedOwner$CardsInLibrary
+SVar:NumInHand:PlayerCountDefinedRememberedOwner$CardsInHand
+SVar:NumInYard:PlayerCountDefinedRememberedOwner$CardsInGraveyard
+
+Oracle:Choose target card in a graveyard other than a basic land card. Search its owner's graveyard, hand, and library for any number of cards with the same name as that card and exile them. Then that player shuffles.\nScry 1.

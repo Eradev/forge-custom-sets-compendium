@@ -1,0 +1,7 @@
+Name:Travel Companions
+ManaCost:1 G W
+Types:Sorcery
+
+A:SP$ ChangeZone | Optional$ True | Origin$ Library | Destination$ Hand | ChangeType$ Creature | ChangeTypeDesc$ basic land | DefinedPlayer$ Player | ChangeNum$ 1 | ShuffleNonMandatory$ True
+
+Oracle:Each player may search their library for a creature card, reveal it, and put it into their hand. Then each player who searched their library this way shuffles it.

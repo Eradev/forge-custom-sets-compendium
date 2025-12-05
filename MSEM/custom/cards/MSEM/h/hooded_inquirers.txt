@@ -1,0 +1,9 @@
+Name:Hooded Inquirers
+ManaCost:3 GU GU
+Types:Creature Human Rogue
+PT:3/3
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigDraw | TriggerDescription$ When this creature enters, draw two cards.
+SVar:TrigDraw:DB$ Draw | NumCards$ 2
+
+Oracle:When this creature enters, draw two cards.

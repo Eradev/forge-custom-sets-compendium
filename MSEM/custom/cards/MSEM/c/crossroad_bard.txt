@@ -1,0 +1,13 @@
+Name:Crossroad Bard
+ManaCost:1 G G
+Types:Creature Human Citizen Bard
+PT:0/3
+
+K:Hexproof
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Enchantment.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever an enchantment you control enters, draw a card.
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+Oracle:Hexproof\nWhenever an enchantment you control enters, draw a card.
+
+DeckHints:Type$Enchantment

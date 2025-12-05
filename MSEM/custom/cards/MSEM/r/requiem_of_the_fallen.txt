@@ -1,0 +1,10 @@
+Name:Requiem of the Fallen
+ManaCost:2 BG
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigSearch | OptionalDecider$ You | TriggerDescription$ Whenever a creature you control dies, you may search your library for an enchantment card or a card with fabled, reveal it, put it into your hand, then shuffle.
+SVar:TrigSearch:AB$ ChangeZone | Cost$ 0 | Origin$ Library | Destination$ Hand | ChangeType$ Enchantment.YouOwn,Card.withFabled | ChangeNum$ 1 | ShuffleNonMandatory$ True
+
+Oracle:Whenever a creature you control dies, you may search your library for an enchantment card or a card with fabled, reveal it, put it into your hand, then shuffle.
+
+SVar:NeedsToPlay:Creature.YouCtrl

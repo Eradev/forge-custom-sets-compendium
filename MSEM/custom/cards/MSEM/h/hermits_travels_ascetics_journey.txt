@@ -1,0 +1,41 @@
+Name:Hermit's Travels
+ManaCost:3 G G
+Types:Sorcery
+
+K:Fabled
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 5 G G | Description$ Fabled {5}{G}{G} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
+SVar:AltCostPaid:Count$AltCost.1.0
+
+A:SP$ Sacrifice | Target$ Player | ValidTgts$ Player | RememberTargets$ True | TgtPrompt$ Choose target player | Defined$ TargetedPlayer | Amount$ SacX | SacValid$ Land | RememberSacrificed$ True | Optional$ True | SubAbility$ DBShift | SpellDescription$ Target player sacrifices any number of lands. That player searches their library for up to that many land cards, puts them onto the battlefield tapped, then shuffles.
+SVar:DBShift:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Land | ChangeNum$ ShiftX | Tapped$ True | DefinedPlayer$ TargetedPlayer | SubAbility$ ConditionalTransform
+SVar:SacX:Count$Valid Land.TargetedPlayerCtrl
+SVar:ShiftX:Remembered$Amount
+
+SVar:ConditionalTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1 | SubAbility$ DBCleanup1
+SVar:DBCleanup1:DB$ Cleanup | ClearRemembered$ True | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ EQ0
+SVar:AltCostPaid:Count$AltCost.1.0
+
+Oracle:Target player sacrifices any number of lands. That player searches their library for up to that many land cards, puts them onto the battlefield tapped, then shuffles.\nFabled {5}{G}{G} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that player.)
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Ascetic's Journey
+ManaCost:no cost
+Types:Enchantment Aura
+Colors:green
+
+K:Enchant:Player.IsRemembered
+
+S:Mode$ Continuous | Affected$ Player.EnchantedBy | AdjustLandPlays$ 1 | Description$ Enchanted player may play an additional land on each of their turns.
+
+S:Mode$ Continuous | Affected$ Card.Land | AffectedZone$ Graveyard | EffectZone$ Battlefield | MayPlay$ True | DefinedPlayer$ Player.EnchantedBy | Description$ Enchanted player may play lands from their graveyard.
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Battlefield | Destination$ Any | Execute$ DBCleanup2 | Static$ True
+SVar:DBCleanup2:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Enchant player\nEnchanted player may play an additional land on each of their turns.\nEnchanted player may play lands from their graveyard.
+
+SVar:AttachAILogic:Pump

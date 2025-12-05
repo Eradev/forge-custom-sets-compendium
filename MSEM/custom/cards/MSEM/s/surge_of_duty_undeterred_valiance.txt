@@ -1,0 +1,31 @@
+Name:Surge of Duty
+ManaCost:X R
+Types:Instant
+
+K:Fabled
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ X R R | Description$ Fabled {X}{R}{R} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
+SVar:AltCostPaid:Count$AltCost.1.0
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ +X | NumDef$ +X | SubAbility$ ConditionalTransform | SpellDescription$ Target creature gets +X/+X until end of turn.
+SVar:X:Count$xPaid
+SVar:ConditionalTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | AttachedTo$ Targeted | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1
+
+Oracle:Target creature gets +X/+X until end of turn.\nFabled {X}{R}{R} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that creature.)
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Undeterred Valiance
+ManaCost:no cost
+Types:Enchantment Aura
+Colors:red
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddKeyword$ First Strike | Description$ Enchanted creature has first strike.
+
+Oracle:Enchant creature\nEnchanted creature has first strike. (That creature deals combat damage before creatures without first strike.)
+
+SVar:AttachAILogic:Pump

@@ -1,0 +1,15 @@
+Name:Maddened Elk
+ManaCost:4 R
+Types:Creature Elk
+PT:3/3
+
+K:Menace
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPump | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature attacks, it gets +1/+1 until end of turn for each other attacking creature you control.
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +X | NumDef$ +X
+
+SVar:X:Count$Valid Creature.attacking+Other+YouCtrl
+
+Oracle:Menace (This creature can't be blocked except by two or more creatures.)\nWhenever this creature attacks, it gets +1/+1 until end of turn for each other attacking creature you control.
+
+SVar:HasAttackEffect:TRUE

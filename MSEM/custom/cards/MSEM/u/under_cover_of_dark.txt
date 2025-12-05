@@ -1,0 +1,11 @@
+Name:Under Cover of Dark
+ManaCost:B
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 1 | AddKeyword$ Menace | Description$ Enchanted creature gets +1/+0 and has menace. (That creature can't be blocked except by two or more creatures.)
+
+Oracle:Enchant creature\nEnchanted creature gets +1/+0 and has menace. (That creature can't be blocked except by two or more creatures.)
+
+SVar:AttachAILogic:Pump
