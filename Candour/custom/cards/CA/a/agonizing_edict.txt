@@ -1,0 +1,9 @@
+Name:Agonizing Edict
+ManaCost:1 B
+Types:Instant
+
+A:SP$ Sacrifice | ValidTgts$ Player | TgtPrompt$ Select target player | SacValid$ Creature.!token | SacMessage$ nontoken creature | SpellDescription$ Target player sacrifices a nontoken creature of their choice.
+
+K:Overload:B
+
+Oracle:Target player sacrifices a nontoken creature of their choice.\nOverload {B} (You may cast this spell for its overload cost. If you do, change its text by replacing all instances of "target" with "each.")

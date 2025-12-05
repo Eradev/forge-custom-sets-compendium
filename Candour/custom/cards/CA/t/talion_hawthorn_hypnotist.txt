@@ -1,0 +1,11 @@
+Name:Talion, Hawthorn Hypnotist
+ManaCost:2 U U
+Types:Legendary Creature Faerie Noble
+PT:3/1
+
+K:Flying
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigPickCard | TriggerDescription$ When NICKNAME enters, look at target player's hand. You may choose a nonland card from it. If you do, that player reveals the chosen card, puts it on the bottom of their library.
+SVar:TrigPickCard:DB$ ChangeZone | ValidTgts$ Player | TgtPrompt$ Select target player | Origin$ Hand | Destination$ Library | LibraryPosition$ -1 | ChangeType$ Card.nonLand | ChangeNum$ 1 | Hidden$ True | Chooser$ You | Optional$ True | IsCurse$ True
+
+Oracle:Flying\nWhen Talion enters, look at target player's hand. You may choose a nonland card from it. If you do, that player reveals the chosen card, puts it on the bottom of their library.

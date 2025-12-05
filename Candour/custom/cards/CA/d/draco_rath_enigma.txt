@@ -1,0 +1,21 @@
+Name:Draco, Rath Enigma
+ManaCost:20
+Types:Legendary Artifact Creature Dragon
+PT:20/20
+
+A:SP$ PermanentCreature | Cost$ 20 | ManaRestriction$ None
+
+Text:You can't spend mana to cast this spell.
+
+K:Convoke
+
+K:Delve
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ X | EffectZone$ All | Description$ NICKNAME costs {1} less to cast for each permanent you control.
+SVar:X:Count$Valid Permanent.YouCtrl
+
+K:Flying
+
+K:Indestructible
+
+Oracle:You can't spend mana to cast this spell.\nConvoke, delve (Each creature you tap while casting this spell pays for {1} or one mana of that creature's color. Each card you exile from your graveyard pays for {1}.)\nDraco costs {1} less to cast for each permanent you control.\nFlying, indestructible

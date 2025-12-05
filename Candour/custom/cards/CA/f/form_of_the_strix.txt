@@ -1,0 +1,12 @@
+Name:Form of the Strix
+ManaCost:B
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this enchantment enters, you draw a card and you lose 2 life.
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
+
+T:Mode$ DamageDone | ValidSource$ Creature | ValidTarget$ You | Execute$ TrigDestroy | TriggerZones$ Battlefield | TriggerDescription$ Whenever a creature deals damage to you, you may sacrifice this enchantment. If you do, destroy that creature.
+SVar:TrigDestroy:AB$ Destroy | Cost$ Sac<1/CARDNAME/this enchantment> | Defined$ TriggeredSourceLKICopy
+
+Oracle:When this enchantment enters, you draw a card and you lose 2 life.\nWhenever a creature deals damage to you, you may sacrifice this enchantment. If you do, destroy that creature.

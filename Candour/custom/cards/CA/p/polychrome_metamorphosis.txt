@@ -3,7 +3,7 @@ ManaCost:X G
 Types:Sorcery
 
 A:SP$ Untap | UntapUpTo$ True | UntapType$ Land | Amount$ Y | SubAbility$ DBDraw | SpellDescription$ Converge — Uptap up to one target land for each color of mana spent to cast this spell. Draw a card.
-SVar:DBDraw:DB$ Draw | NumCards$ 1 | Defined$ You
+SVar:DBDraw:DB$ Draw
 SVar:X:Count$xPaid
 SVar:Y:Count$Converge
 

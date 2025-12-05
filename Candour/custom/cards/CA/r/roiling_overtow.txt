@@ -1,0 +1,9 @@
+Name:Roiling Overtow
+ManaCost:2 U U
+Types:Instant
+
+A:SP$ ChangeZone | TgtZone$ Stack,Battlefield | Origin$ Battlefield,Stack | Destination$ Library | ValidTgts$ Permanent.nonLand,Card.inZoneStack | TgtPrompt$ Select target spell or nonland permanent | LibraryPosition$ 1 | SpellDescription$ Put target spell or nonland permanent into its owner's library second from the top.
+
+K:Surge:Sac<1/Island>
+
+Oracle:Put target spell or nonland permanent into its owner's library second from the top.\nSurge—Sacrifice an Island. (You may cast this spell for its surge cost if you or a teammate has cast another spell this turn.)

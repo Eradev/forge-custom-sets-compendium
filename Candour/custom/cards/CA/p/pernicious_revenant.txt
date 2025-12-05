@@ -1,0 +1,12 @@
+Name:Pernicious Revenant
+ManaCost:B
+Types:Creature Zombie Assassin
+PT:2/1
+
+A:AB$ Pump | Cost$ 1 B Sac<1/CARDNAME/this creature> | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | NumAtt$ -2 | NumDef$ -2 | IsCurse$ True | SpellDescription$ Target creature an opponent controls gets -2/-2 until end of turn.
+
+A:AB$ ChangeZone | Cost$ 2 B | Origin$ Graveyard | Destination$ Battlefield | ActivationZone$ Graveyard | Tapped$ True | SpellDescription$ Return this card from your graveyard to the battlefield tapped.
+
+Oracle:{1}{B}, Sacrifice this creature: Target creature an opponent controls gets -2/-2 until end of turn.\n{2}{B}, Return this card from your graveyard to the battlefield tapped.
+
+DeckHas:Ability$Graveyard

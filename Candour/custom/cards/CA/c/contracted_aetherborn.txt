@@ -1,0 +1,16 @@
+Name:Contracted Aetherborn
+ManaCost:1 B B
+Types:Creature Aetherborn Assassin
+PT:2/1
+
+K:Flash
+
+K:Lifelink
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may destroy another target creature. If a creature is destroyed this way, you lose life equal to its toughness.
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Creature.Other | TgtPrompt$ Select another target creature | RememberLKI$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:RememberedLKI$CardToughness
+
+Oracle:Flash\nLifelink\nWhen this creature enters, you may destroy another target creature. If a creature is destroyed this way, you lose life equal to its toughness.

@@ -1,0 +1,19 @@
+Name:Weatherlight, Legacy Flagship
+ManaCost:4
+Types:Legendary Artifact Vehicle
+PT:4/4
+
+K:Flying
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ Whenever NICKNAME attacks or blocks, draw a card.
+T:Mode$ Blocks | ValidCard$ Card.Self | Execute$ TrigDraw | Secondary$ True | TriggerDescription$ Whenever NICKNAME attacks or blocks, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Haste | IsPresent$ Permanent.YouCtrl+Historic+Other | Description$ If you control another historic permanent, NICKNAME has haste. (Artifacts, legendaries, and Sagas are historic.)
+
+K:Crew:1
+
+Oracle:Flying\nWhenever Weatherlight attacks, draw a card.\nIf you control another historic permanent, Weatherlight has haste. (Artifacts, legendaries, and Sagas are historic.)\nCrew 1
+
+SVar:HasAttackEffect:TRUE
+SVar:HasBlockEffect:TRUE
