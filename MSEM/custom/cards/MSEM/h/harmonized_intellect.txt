@@ -2,9 +2,12 @@ Name:Harmonized Intellect
 ManaCost:2 U R
 Types:Instant
 
-A:SP$ Effect | Triggers$ CastBuff | SpellDescription$ As you cast instant and sorcery spells this turn, they gain "Draw a card" and "This spell deals 1 damage to any target."
+A:SP$ Effect | Triggers$ CastBuff,CounterTrig | SpellDescription$ As you cast instant and sorcery spells this turn, they gain "Draw a card" and "This spell deals 1 damage to any target."
 SVar:CastBuff:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Command | Execute$ TrigDraw | TriggerDescription$ As you cast instant and sorcery spells this turn, they gain "Draw a card" and "This spell deals 1 damage to any target."
 SVar:TrigDraw:DB$ Draw | NumCards$ 1 | Controller$ TriggeredCardController | SubAbility$ TrigDamage
 SVar:TrigDamage:DB$ DealDamage | DamageSource$ TriggeredCard | ValidTgts$ Any | NumDmg$ 1 | TgtPrompt$ Select any target.
+
+SVar:CounterTrig:Mode$ Countered | ValidCard$ Card.Instant+wasCastByYou,Card.Sorcery+wasCastByYou | ValidSA$ Spell | Execute$ TrigCounter | Static$ True
+SVar:TrigCounter:DB$ Counter | Defined$ ValidStack Triggered.Self
 
 Oracle:As you cast instant and sorcery spells this turn, they gain "Draw a card" and "This spell deals 1 damage to any target."
