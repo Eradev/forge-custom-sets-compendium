@@ -7,4 +7,4 @@ K:Deathtouch
 K:CARDNAME must be blocked if able.
 K:Menace
 
-Oracle:Deathtouch\nMenace (This creature can't be blocked except by two or more creatures.)\nSlayer of the Famed must be blocked each combat if able.
+Oracle:Deathtouch\nMenace (This creature can't be blocked except by two or more creatures.)\nThis creature must be blocked each combat if able.
