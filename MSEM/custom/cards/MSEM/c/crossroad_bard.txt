@@ -9,3 +9,5 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Enchan
 SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
 
 Oracle:Hexproof\nWhenever an enchantment you control enters, draw a card.
+
+DeckHints:Type$Enchantment
