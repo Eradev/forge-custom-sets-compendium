@@ -1,4 +1,4 @@
-Name:Lavathorn Fields
+Name:Lavatorn Fields
 ManaCost:no cost
 Types:Land Swamp Mountain
 
