@@ -2,7 +2,7 @@ Name:Crumbling Precipice
 ManaCost:no cost
 Types:Land Swamp Mountain
 
-T:Mode$ Taps | ValidCard$ Card.Self | ConditionCheckSVar$ X | ConditionSVarCompare$ LT2 | Execute$ TrigLoseLife | TriggerDescription$ Whenever this land becomes tapped, you lose 1 life unless you control two or more basic lands.
+T:Mode$ Taps | ValidCard$ Card.Self | CheckSVar$ X | SVarCompare$ LT2 | Execute$ TrigLoseLife | TriggerDescription$ Whenever this land becomes tapped, you lose 1 life unless you control two or more basic lands.
 SVar:TrigLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1
 SVar:X:Land.Basic+YouCtrl
 
