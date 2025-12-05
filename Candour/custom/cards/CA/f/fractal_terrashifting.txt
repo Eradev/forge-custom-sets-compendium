@@ -1,0 +1,7 @@
+Name:Fractal Terrashifting
+ManaCost:2 G
+Types:Enchantment
+
+A:AB$ ChangeZone | Cost$ Sac<1/Land> Return<1/CARDNAME/this enchantment> | TgtPrompt$ Choose up to two target land cards in your graveyard | TargetMin$ 0 | TargetMax$ 2 | ValidTgts$ Land.YouCtrl | Origin$ Graveyard | Destination$ Battlefield | Tapped$ True | SpellDescription$ Return up to two target land cards from your graveyard to the battlefield tapped.
+
+Oracle:Sacrifice a land, Return this enchantment to its owner's hand: Return up to two target land cards from your graveyard to the battlefield tapped.
