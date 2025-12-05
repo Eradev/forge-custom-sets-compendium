@@ -10,3 +10,5 @@ S:Mode$ Continuous | CharacteristicDefining$ True | SetPower$ X | SetToughness$ 
 SVar:X:Count$Valid Land.nonBasic+OppCtrl
 
 Oracle:Trample\nSer Malcomn's power and toughness are each equal to the number of nonbasic lands your opponents control.
+
+SVar:NeedsToPlay:Land.nonBasic.OppCtrl
