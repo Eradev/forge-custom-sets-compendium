@@ -2,12 +2,11 @@ Name:Sinister Pact
 ManaCost:B B
 Types:Sorcery
 
-A:SP$ ChooseNumber | Defined$ You | Min$ 0 | ListTitle$ Amount of life to pay | SubAbility$ DBLoseLife | StackDescription$ SpellDescription | SpellDescription$ Pay any amount of life. Look at twice X cards from the top of your library and put one into your hand. Exile the rest.
+A:SP$ ChooseNumber | Defined$ You | Max$ LifeAmountX | AILogic$ DigACard | ListTitle$ Amount of life to pay | SubAbility$ DBLoseLife | StackDescription$ SpellDescription | SpellDescription$ Pay any amount of life. Look at twice X cards from the top of your library and put one into your hand. Exile the rest.
 SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ X | Defined$ You | SubAbility$ DBDig
 SVar:DBDig:DB$ Dig | DigNum$ Y | ChangeNum$ 1 | DestinationZone2$ Exile
 SVar:Y:SVar$X/Times.2
 SVar:X:Count$ChosenNumber
+SVar:LifeAmountX:Count$YourLifeTotal/LimitMin.0
 
-Oracle:Pay any amount of life.Look at twice X cards from the top of your library and put one into your hand. Exile the rest.
-
-AI:RemoveDeck:All
+Oracle:Pay any amount of life. Look at twice X cards from the top of your library and put one into your hand. Exile the rest.
