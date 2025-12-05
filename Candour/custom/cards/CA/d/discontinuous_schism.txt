@@ -3,7 +3,7 @@ ManaCost:U
 Types:Instant
 
 A:SP$ EndTurn | SubAbility$ DBAddTurn | SpellDescription$ End the turn. (Exile all spells and abilities from the stack, including this card. The player whose turn it is discards down to their maximum hand size. Damage wears off, and "this turn" and "until end of turn" effects end.) If it's not your turn, target opponent takes an extra turn after this one.
-SVar:DBAddTurn:DB$ AddTurn | ValidTgts$ Opponent | NumTurns$ 1 | Condition$ NotPlayerTurn
+SVar:DBAddTurn:DB$ AddTurn | ValidTgts$ Opponent | NumTurns$ 1 | ConditionPlayerTurn$ False
 
 Oracle:End the turn. (Exile all spells and abilities from the stack, including this card. The player whose turn it is discards down to their maximum hand size. Damage wears off, and "this turn" and "until end of turn" effects end.)\nIf it's not your turn, target opponent takes an extra turn after this one.
 
