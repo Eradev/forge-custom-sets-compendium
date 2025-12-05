@@ -8,7 +8,7 @@ K:Flash
 K:Flying
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCharm | OptionalDecider$ You | TriggerDescription$ When this creature enters, ABILITY
-SVar:TrigCharm:DB$ Charm | Choices$ DBCounter,DBDestroy
+SVar:TrigCharm:DB$ Charm | MinCharmNum$ 0 | CharmNum$ 1 | Choices$ DBCounter,DBDestroy
 
 SVar:DBCounter:DB$ Counter | TargetType$ Spell | ValidTgts$ Card.MultiColor | TgtPrompt$ Select target multicolored spell | SpellDescription$ Counter target multicolored spell.
 
