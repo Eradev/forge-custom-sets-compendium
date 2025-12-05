@@ -1,0 +1,12 @@
+Name:Death Pits Trophy
+ManaCost:B
+Types:Artifact Equipment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDiscard | TriggerDescription$ When this Equipment enters, target opponent discards a card.
+SVar:TrigDiscard:DB$ Discard | ValidTgts$ Opponent | NumCards$ 1 | Mode$ TgtChoose
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 1 | AddToughness$ 1 | Description$ Equipped creature gets +1/+1.
+
+K:Equip:1
+
+Oracle:When this Equipment enters, target opponent discards a card.\nEquipped creature gets +1/+1.\nEquip {1}

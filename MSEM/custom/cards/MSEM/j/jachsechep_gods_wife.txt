@@ -1,0 +1,15 @@
+Name:Jachsechep, God's Wife
+ManaCost:3 U B
+Types:Legendary Planeswalker Jachsechep
+Loyalty:3
+
+A:AB$ Pump | Cost$ AddCounter<2/LOYALTY> | Planeswalker$ True | SubAbility$ DBDraw | StackDescription$ SpellDescription | SpellDescription$ Sacrifice a creature. If you do, you may draw two cards.
+SVar:DBDraw:DB$ Draw | UnlessCost$ Sac<1/Creature> | UnlessSwitched$ True | UnlessPayer$ You | NumCards$ 2 | Optional$ True | OptionalDecider$ You
+
+A:AB$ GainControl | Cost$ SubCounter<1/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | LoseControl$ LeavesPlay,LoseControl | Duration$ Permanent | SpellDescription$ Gain control of target creature for as long as you control NICKNAME.
+
+A:AB$ Effect | Cost$ SubCounter<10/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Jachsechep, God's Wife | Image$ emblem_jachsechep_gods_wife | Triggers$ TrigChangesZone | SpellDescription$ You get an emblem with "Whenever a creature enters under an opponent's control, gain control of it."
+SVar:TrigChangesZone:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.OppCtrl | TriggerZones$ Battlefield | Execute$ TrigControl | TriggerDescription$ Whenever a creature enters under an opponent's control, gain control of it.
+SVar:TrigControl:DB$ GainControl | Defined$ TriggeredCard | NewController$ You
+
+Oracle:[+2]: Sacrifice a creature. If you do, you may draw two cards.\n[-1]: Gain control of target creature for as long as you control Jachsechep.\n[-10]: You get an emblem with "Whenever a creature enters under an opponent's control, gain control of it."

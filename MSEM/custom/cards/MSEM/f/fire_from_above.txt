@@ -1,0 +1,7 @@
+Name:Fire from Above
+ManaCost:1 R R
+Types:Sorcery
+
+A:SP$ DamageAll | ValidTgts$ Opponent | NumDmg$ 2 | ValidPlayers$ Targeted | ValidCards$ Creature.TargetedPlayerCtrl+withFlying | ValidDescription$ target opponent and each creature with flying they control. | SpellDescription$ CARDNAME deals 2 damage to target opponent and each creature with flying that player controls.
+
+Oracle:Fire from Above deals 2 damage to target opponent and each creature with flying that player controls.

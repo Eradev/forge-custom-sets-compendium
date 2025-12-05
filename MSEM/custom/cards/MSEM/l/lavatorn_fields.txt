@@ -1,0 +1,8 @@
+Name:Lavatorn Fields
+ManaCost:no cost
+Types:Land Swamp Mountain
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you control a Swamp or a basic Mountain.
+SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Swamp.Basic+YouCtrl,Mountain.Basic+YouCtrl | ConditionCompare$ EQ0
+
+Oracle:({T}: Add {B} or {R}.)\nThis land enters tapped unless you control a basic Swamp or a basic Mountain.

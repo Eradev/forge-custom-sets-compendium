@@ -1,0 +1,10 @@
+Name:Dune Peregrination
+ManaCost:2 R
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 2 | AddToughness$ 2 | Description$ Enchanted creature gets +2/+2 and can't be blocked as long as defending player controls a Desert.
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.EnchantedBy | IsPresent$ Desert.DefenderCtrl | Secondary$ True | Description$ Enchanted creature gets +2/+2 and can't be blocked as long as defending player controls a Desert.
+
+Oracle:Enchant creature\nEnchanted creature gets +2/+2 and can't be blocked as long as defending player controls a Desert.

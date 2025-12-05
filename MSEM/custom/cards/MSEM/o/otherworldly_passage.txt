@@ -9,4 +9,4 @@ SVar:DBReturnGrave:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:X:Count$Valid Creature.YouCtrl
 
-Oracle:Exile any number of target creatures you control. At the beginning of the next end step, return to the battlefield tapped each creature card exiled this way and each creature card put into your graveyard from the battlefield this turn. 
+Oracle:Exile any number of target creatures you control. At the beginning of the next end step, return to the battlefield tapped each creature card exiled this way and each creature card put into your graveyard from the battlefield this turn.

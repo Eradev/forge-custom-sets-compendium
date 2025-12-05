@@ -1,0 +1,11 @@
+Name:Terrifying Ankh
+ManaCost:4 B
+Types:Sorcery
+
+A:SP$ Pump | ValidTgts$ Opponent | SubAbility$ DBScry | StackDescription$ {p:You} chooses {p:Targeted}. | SpellDescription$ Choose target opponent. Scry 3, then reveal the top card of your library. The chosen player discards an amount of cards equal to that card's mana value.
+SVar:DBScry:DB$ Scry | ScryNum$ 3 | SubAbility$ DBReveal
+SVar:DBReveal:DB$ PeekAndReveal | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ TargetedPlayer | NumCards$ X | Mode$ TgtChoose
+SVar:X:Count$TopOfLibraryCMC
+
+Oracle:Choose target opponent. Scry 3, then reveal the top card of your library. The chosen player discards an amount of cards equal to that card's mana value.

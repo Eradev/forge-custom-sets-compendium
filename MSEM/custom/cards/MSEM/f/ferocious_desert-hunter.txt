@@ -1,0 +1,13 @@
+Name:Ferocious Desert-Hunter
+ManaCost:4 R R
+Types:Creature Dragon
+PT:5/5
+
+K:Haste
+
+K:Menace
+
+A:AB$ Pump | Cost$ 4 R R | Defined$ Self | NumAtt$ +X | SpellDescription$ This creature gets +X/+0 until end of turn, where X is its power.
+SVar:X:Count$CardPower
+
+Oracle:Haste\nMenace (This creature can't be blocked except by two or more creatures.)\n{4}{R}{R}: This creature gets +X/+0 until end of turn, where X is its power.

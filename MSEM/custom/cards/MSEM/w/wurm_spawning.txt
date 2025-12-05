@@ -1,0 +1,7 @@
+Name:Wurm Spawning
+ManaCost:3 R R
+Types:Sorcery
+
+A:SP$ Token | Cost$ 3 R R Sac<1/Land> | TokenScript$ r_6_6_wurm_noblock_flying | SpellDescription$ Create a 6/6 red Wurm creature token with "This creature can't be blocked by creatures with flying."
+
+Oracle:As an additional cost to cast this spell, sacrifice a land.\nCreate a 6/6 red Wurm creature token with "This creature can't be blocked by creatures with flying."

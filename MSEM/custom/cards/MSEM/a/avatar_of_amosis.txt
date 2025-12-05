@@ -6,6 +6,6 @@ PT:2/2
 K:Deathtouch
 
 K:Tribute:3
-SVar:TrigNotTribute:DB$ DestroyAll | Optional$ True | OptionalDecider$ You | ValidTgts$ Creature | ValidCards$ Targeted.Self | TgtPrompt$ Select target creature. | SpellDescription$ When this creature enters, if tribute wasn't paid, you may destroy target creature.
+SVar:TrigNotTribute:DB$ Destroy | Optional$ True | OptionalDecider$ You | ValidTgts$ Creature | TgtPrompt$ Select target creature. | SpellDescription$ When this creature enters, if tribute wasn't paid, you may destroy target creature.
 
 Oracle:Deathtouch\nTribute 3 (As this creature enters, an opponent of your choice may put three +1/+1 counters on it.)\nWhen this creature enters, if tribute wasn't paid, you may destroy target creature.

@@ -1,0 +1,9 @@
+Name:Divine Protection
+ManaCost:2 W
+Types:Sorcery
+
+A:SP$ PutCounter | ValidTgts$ Creature | TgtPrompt$ Select target creature | CounterType$ DIVINITY | CounterNum$ 1 | SubAbility$ DBAnimate | SpellDescription$ Put a divinity counter on target creature. It gains "This creature has indestructible as long as it has divinity counter on it." (This effect lasts indefinitely.)
+SVar:DBAnimate:DB$ Animate | Defined$ Targeted | Duration$ Permanent | staticAbilities$ DivinityIndestructible
+SVar:DivinityIndestructible:Mode$ Continuous | Affected$ Card.Self+counters_GE1_DIVINITY | AddKeyword$ Indestructible | Description$ This creature has indestructible as long as it has divinity counter on it.
+
+Oracle:Put a divinity counter on target creature. It gains "This creature has indestructible as long as it has divinity counter on it." (This effect lasts indefinitely.)

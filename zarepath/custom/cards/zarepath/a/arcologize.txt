@@ -1,6 +1,7 @@
 Name:Arcologize
 ManaCost:1 G
 Types:Enchantment Aura
+
 K:Enchant:Permanent.nonCreature:noncreature permanent
 
 S:Mode$ Continuous | Affected$ Card.EnchantedBy | SetColor$ Colorless | AddType$ Land & Forest | RemoveCardTypes$ True | RemoveLandTypes$ True | Description$ Enchanted permanent is a colorless Forest land.

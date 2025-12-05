@@ -1,0 +1,9 @@
+Name:Njel Crocodile
+ManaCost:1 B
+Types:Creature Crocodile
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigFight | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may have it fight target creature. (Each deals damage equal to its power to the other.)
+SVar:TrigFight:DB$ Fight | Defined$ TriggeredCardLKICopy | ValidTgts$ Creature | TgtPrompt$ Choose target creature
+
+Oracle:When this creature enters, you may have it fight target creature. (Each deals damage equal to its power to the other.)

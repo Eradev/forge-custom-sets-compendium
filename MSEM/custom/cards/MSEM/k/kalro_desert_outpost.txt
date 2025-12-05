@@ -1,0 +1,14 @@
+Name:Kalro, Desert Outpost
+ManaCost:2 R W
+Types:Legendary Planeswalker Fortress
+Loyalty:3
+
+T:Mode$ Attacks | ValidCard$ Creature | Attacked$ Card.Self | Execute$ DBDamage | TriggerDescription$ Whenever a creature attacks NICKNAME, it deals 1 damage to that creature.
+SVar:DBDamage:DB$ DealDamage | Defined$ TriggeredAttackerLKICopy | NumDmg$ 1
+
+A:AB$ Token | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | TokenAmount$ 1 | TokenScript$ rw_1_1_sand_warrior | SpellDescription$ Create a 1/1 red and white Sand Warrior creature token.
+
+A:AB$ Destroy | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Land.nonBasic | TgtPrompt$ Select target nonbasic land | SubAbility$ DBToken | SpellDescription$ Destroy target nonbasic land. Its controller creates a colorless Desert land token with "{T}: Add {C}."
+SVar:DBToken:DB$ Token | TokenScript$ desert_msem | LockTokenScript$ true | TokenOwner$ TargetedController
+
+Oracle:Whenever a creature attacks Kalro, it deals 1 damage to that creature.\n[+1]: Create a 1/1 red and white Sand Warrior creature token.\n[-2]: Destroy target nonbasic land. Its controller creates a colorless Desert land token with "{T}: Add {C}."

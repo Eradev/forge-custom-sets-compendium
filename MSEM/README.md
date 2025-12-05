@@ -32,10 +32,13 @@ Video Horror System (VHS)             -  97% (83/86)
     * Snowfield Doppelganger
     * Wiretapper
 Kaleidoscope (KLC)                    -  100%
-Path of Shadows (PSA)                 -  44% (96/214)
+Path of Shadows (PSA)                 -  46% (100/214)
 A Tourney at Whiterun (TWR)           -  39% (99/254)
-Tides of War (TOW)                    -  28% (77/271)
-Pyramids of Atuum (POA)               -  50% (64/128)
+Tides of War (TOW)                    -  28% (78/271)
+Pyramids of Atuum (POA)               -  98% (126/128)
+  Missing cards:
+    * Righteous Priestess
+    * Sphinx of Riddles
 
 Reprints / Promo sets:
 MSEM Champions (CHAMPIONS)
@@ -197,7 +200,7 @@ Implementation:
 ```text
 S:Mode$ Continuous | Affected$ Card.Self | MayPlay$ True | MayPlayAltManaCost$ 1 W | MayPlayWithFlash$ True | AffectedZone$ Hand | EffectZone$ Hand | Description$ Mirage {1}{W} (You may cast this spell as though it had flash for its mirage cost. If you do, sacrifice it at the beginning of the next cleanup step.)
 T:Mode$ SpellCast | ValidCard$ Card.Self | ValidSA$ Spell.MayPlaySource | Static$ True | Execute$ MirageCleanup
-SVar:MirageCleanup:DB$ DelayedTrigger | Mode$ Phase | Phase$ Cleanup | RememberObjects$ Self | TriggerDescription$ At the beginning of the next cleanup step, sacrifice CARDNAME. | Execute$ TrigSacrifice
+SVar:MirageCleanup:DB$ DelayedTrigger | Mode$ Phase | Phase$ Cleanup | RememberObjects$ Self | TriggerDescription$ At the beginning of the next cleanup step, sacrifice it. | Execute$ TrigSacrifice
 SVar:TrigSacrifice:DB$ SacrificeAll | Defined$ DelayTriggerRememberedLKI
 ```
 

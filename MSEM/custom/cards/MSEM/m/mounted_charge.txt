@@ -1,0 +1,9 @@
+Name:Mounted Charge
+ManaCost:2 W W
+Types:Sorcery
+
+A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +2 | NumDef$ +2 | KW$ First Strike | SpellDescription$ Creatures you control get +2/+2 and gain first strike until end of turn.
+
+Oracle:Creatures you control get +2/+2 and gain first strike until end of turn.
+
+SVar:PlayMain1:TRUE

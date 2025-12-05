@@ -1,0 +1,8 @@
+Name:Mummy's Grin
+ManaCost:B R
+Types:Sorcery
+
+A:SP$ Destroy | ValidTgts$ Planeswalker | TgtPrompt$ Select target planeswalker | SubAbility$ DBDealDamage | SpellDescription$ Destroy target planeswalker. CARDNAME deals 2 damage to that planeswalker's controller.
+SVar:DBDealDamage:DB$ DealDamage | Defined$ TargetedController | NumDmg$ 2
+
+Oracle:Destroy target planeswalker. Mummy's Grin deals 2 damage to that planeswalker's controller.

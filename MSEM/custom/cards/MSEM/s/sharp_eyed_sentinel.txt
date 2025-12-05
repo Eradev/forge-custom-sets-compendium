@@ -1,0 +1,12 @@
+Name:Sharp Eyed Sentinel
+ManaCost:1 U U
+Types:Creature Bird Warrior
+PT:2/2
+
+K:Flying
+
+K:Prowess
+
+S:Mode$ ReduceCost | Type$ Spell | Activator$ You | Amount$ 1 | Condition$ NotPlayerTurn | Description$ Spells you cast cost {1} less to cast as long as it's not your turn.
+
+Oracle:Flying\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nSpells you cast cost {1} less to cast as long as it's not your turn.

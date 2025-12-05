@@ -1,0 +1,12 @@
+Name:Hanabira, Kogane's Legacy
+ManaCost:W W
+Types:Legendary Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | Description$ Equipped creature gets +2/+2.
+
+T:Mode$ Attacks | ValidCard$ Card.AttachedBy | Execute$ Detain | TriggerDescription$ Whenever equipped creature attacks, detain target creature. (Until your next turn, that creature can't attack or block and its activated abilities can't be activated.)
+SVar:Detain:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature to detain | KW$ HIDDEN CARDNAME can't attack or block. & HIDDEN CARDNAME's activated abilities can't be activated. | IsCurse$ True | Duration$ UntilYourNextTurn
+
+K:Equip:2
+
+Oracle:Equipped creature gets +2/+2.\nWhenever equipped creature attacks, detain target creature. (Until your next turn, that creature can't attack or block and its activated abilities can't be activated.)\nEquip {2}
