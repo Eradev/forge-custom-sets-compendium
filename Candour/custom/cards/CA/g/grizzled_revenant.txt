@@ -1,0 +1,11 @@
+Name:Grizzled Revenant
+ManaCost:1 B
+Types:Creature Zombie Werewolf
+PT:*/1
+
+S:Mode$ Continuous | CharacteristicDefining$ True | SetPower$ X | Description$ This creature's power is equal to the number of cards in your graveyard.
+SVar:X:Count$ValidGraveyard Card.YouOwn
+
+A:AB$ Pump | Cost$ ExileFromGrave<3/Card> | Defined$ Self | KW$ Indestructible | StackDescription$ SpellDescription | SpellDescription$ This creature gains indestructible until end of turn.
+
+Oracle:This creature's power is equal to the number of cards in your graveyard.\nExile three cards from your graveyard: This creature gains indestructible until end of turn.
