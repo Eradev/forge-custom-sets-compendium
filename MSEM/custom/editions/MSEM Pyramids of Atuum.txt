@@ -123,7 +123,8 @@ Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 115 R Kalro, Desert Outpost @Tuomas Korpi
 116 R Mesmerizing Shimmer @Chris Cold
 117 R Mummy's Grin @Adam Vehige
-118 M Slaughter (MSEM) @Ivan Laliashvili ${"flavorName": "Slaughter"}
+# flavorName conflict with Slaughter|EXO
+118 M Slaughter (MSEM) @Ivan Laliashvili
 119 R Staff of Authority @Javier Charro
 120 R Desert Temple @Markus Holzum
 121 L Plains @Joakim Olofsson
