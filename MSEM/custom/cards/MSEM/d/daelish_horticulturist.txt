@@ -6,3 +6,6 @@ PT:1/3
 S:Mode$ Continuous | Affected$ You | AdjustLandPlays$ 1 | IsPresent$ Card.Self+equipped,Card.Self+enchanted | Description$ Adorned — You may play an additional land on each of your turns as long as this creature is equipped and/or enchanted.
 
 Oracle:Adorned — You may play an additional land on each of your turns as long as this creature is equipped and/or enchanted.
+
+SVar:EnchantMe:Once
+SVar:EquipMe:Once
