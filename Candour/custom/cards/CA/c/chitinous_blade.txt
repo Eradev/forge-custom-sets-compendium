@@ -1,0 +1,17 @@
+Name:Chitinous Blade
+ManaCost:1 B
+Types:Artifact Creature Equipment Insect
+PT:2/2
+
+K:Flash
+
+K:Deathtouch
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigAttach | TriggerDescription$ When this creature enters, attach it to target creature you control.
+SVar:TrigAttach:DB$ Attach | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | AddKeyword$ Deathtouch | Description$ Equipped creature gets +2/+2 and has deathtouch.
+
+K:Reconfigure:Sac<1/Creature>
+
+Oracle:Flash\nDeathtopuch\nWhen this creature enters, attach it to target creature you control.\nEquipped creature gets +2/+2 and has deathtouch.\nReconfigure—Sacrifice a creature
