@@ -1,0 +1,9 @@
+Name:Twisted Bog
+ManaCost:no cost
+Colors:black
+Types:Land Creature Swamp Horror
+PT:1/1
+
+K:Shroud
+
+Oracle:(This land isn't a spell, it's affected by summoning sickness, and it has "{T}: Add {B}.")\nShroud (A permanent with shroud can't be the target of spells or abilities.)
