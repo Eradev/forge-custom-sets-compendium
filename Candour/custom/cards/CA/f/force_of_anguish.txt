@@ -1,0 +1,9 @@
+Name:Force of Anguish
+ManaCost:3 B B
+Types:Instant
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ PayLife<1> ExileFromHand<1/Card.Black+Other/black card> | Description$ You may pay 1 life and exile a black card from your hand rather than pay this spell's mana cost.
+
+A:SP$ PutCounter | ValidTgts$ Creature | TgtPrompt$ Select target creature to distribute counters to | CounterType$ M1M1 | CounterNum$ 4 | TargetMin$ 0 | TargetMax$ 4 | DividedAsYouChoose$ 4 | IsCurse$ True | SpellDescription$ Distribute four -1/-1 counters among any number of target creatures.
+
+Oracle:You may pay 1 life and exile a black card from your hand rather than pay this spell's mana cost.\nDistribute four -1/-1 counters among any number of target creatures.
