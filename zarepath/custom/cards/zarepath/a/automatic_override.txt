@@ -2,9 +2,9 @@ Name:Automatic Override
 ManaCost:2 U
 Types:Instant
 
-A:SP$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | UnlessCost$ X | SubAbility$ DBDraw | SpellDescription$ Counter target spell unless its controller pays {1} for each artifact you control.
+A:SP$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | UnlessCost$ X | SubAbility$ DBDraw | SpellDescription$ Counter target spell unless its controller pays {1} for each artifact you control. Draw a card.
 SVar:X:Count$Valid Artifact.YouCtrl
-SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 1 | SpellDescription$ Draw a card.
+SVar:DBDraw:DB$ Draw
 
 Oracle:Counter target spell unless its controller pays {1} for each artifact you control.\nDraw a card.
 

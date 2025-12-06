@@ -3,7 +3,7 @@ ManaCost:1 U
 Types:Sorcery
 
 A:SP$ Effect | ValidTgts$ Creature | TgtPrompt$ Select target creature | Triggers$ TrigDam | RememberObjects$ Targeted | SubAbility$ DBDraw | SpellDescription$ Until end of turn, whenever target creature deals combat damage to an opponent, draw a card.
-SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 1
+SVar:DBDraw:DB$ Draw
 
 SVar:TrigDam:Mode$ DamageDone | ValidSource$ Creature.IsRemembered | ValidTarget$ Opponent | CombatDamage$ True | TriggerZones$ Command | Execute$ DBDraw | TriggerDescription$ Whenever this creature deals combat damage to a player, draw a card.
 

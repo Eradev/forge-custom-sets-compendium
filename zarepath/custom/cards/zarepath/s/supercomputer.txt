@@ -2,8 +2,7 @@ Name:Supercomputer
 ManaCost:4
 Types:Artifact
 
-T:Mode$ SearchedLibrary | ValidPlayer$ You | SearchOwnLibrary$ True | Execute$ TrigImmediateTrig | TriggerZones$ Battlefield | TriggerDescription$ Whenever you search your library, you may pay {1}. If you do, draw a card.
-SVar:TrigImmediateTrig:AB$ ImmediateTrigger | Cost$ 1 | Execute$ DBDraw | SpellDescription$ If you do, draw a card.
-SVar:DBDraw:DB$ Draw | Defined$ You | Cost$ 1 | NumCards$ 1
+T:Mode$ SearchedLibrary | ValidPlayer$ You | SearchOwnLibrary$ True | Execute$ TrigDraw | TriggerZones$ Battlefield | TriggerDescription$ Whenever you search your library, you may pay {1}. If you do, draw a card.
+SVar:TrigDraw:AB$ Draw | Cost$ 1 | SpellDescription$ Draw a card.
 
 Oracle:Whenever you search your library, you may pay {1}. If you do, draw a card.

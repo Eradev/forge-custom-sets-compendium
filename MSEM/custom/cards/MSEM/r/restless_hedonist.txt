@@ -8,6 +8,6 @@ SVar:Bleed:Count$LifeOppsLostThisTurn
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ DBDiscard | TriggerDescription$ When this creature enters, discard your hand, then draw three cards.
 SVar:DBDiscard:DB$ Discard | Mode$ Hand | Defined$ You | SubAbility$ DBDraw
-SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 3
+SVar:DBDraw:DB$ Draw | NumCards$ 3
 
 Oracle:Bleed {2}{R}{R} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)\nWhen this creature enters, discard your hand, then draw three cards.
