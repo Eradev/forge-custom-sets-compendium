@@ -1,0 +1,9 @@
+Name:Altar of the Dross
+ManaCost:2 BP
+Types:Artifact
+
+A:AB$ Mana | Cost$ Sac<1/Artifact;Creature/artifact or creature> | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+Oracle:Sacrifice an artifact or creature: Add one mana of any color.
+
+AI:RemoveDeck:Random
