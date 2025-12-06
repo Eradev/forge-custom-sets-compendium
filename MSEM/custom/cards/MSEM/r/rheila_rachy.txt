@@ -11,7 +11,7 @@ A:AB$ Effect | Cost$ SubCounter<7/LOYALTY> | Planeswalker$ True | Ultimate$ True
 SVar:LoseReplace:Event$ GameLoss | ActiveZones$ Command | ValidPlayer$ You | ReplaceWith$ ExileSetLife | Description$ If you would lose the game, instead exile this emblem, shuffle all cards you own that aren't on the battlefield into your library, then draw seven cards. Your life total becomes 40.
 SVar:ExileSetLife:DB$ ChangeZone | Origin$ Command | Defined$ Self | Destination$ Exile | SubAbility$ DBShuffleAllBack
 SVar:DBShuffleAllBack:DB$ ChangeZoneAll | Origin$ Hand,Graveyard,Exile,Command,Stack | ChangeType$ Card.YouOwn | Destination$ Library | Shuffle$ True | SubAbility$ DBDraw
-SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 7 | SubAbility$ DBSetLife
+SVar:DBDraw:DB$ Draw | NumCards$ 7 | SubAbility$ DBSetLife
 SVar:DBSetLife:DB$ SetLife | Defined$ You | LifeAmount$ 40
 
 Oracle:[+1]: Up to one other target permanent gains hexproof and indestructible until your next turn.\n[-3]: Destroy target tapped permanent.\n[-7]: You get an emblem with "If you would lose the game, instead exile this emblem, shuffle all cards you own that aren't on the battlefield ito your library, then draw seven cards. Your life total becomes 40."

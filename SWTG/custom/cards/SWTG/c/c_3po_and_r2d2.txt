@@ -5,7 +5,7 @@ PT:2/2
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigGainDraw | TriggerDescription$ When CARDNAME leaves the battlefield, you gain 4 life and draw a card.
 SVar:TrigGainDraw:DB$ GainLife | Defined$ You | LifeAmount$ 4 | SubAbility$ DBDraw
-SVar:DBDraw:DB$ Draw | NumCards$ 1 | Defined$ You
+SVar:DBDraw:DB$ Draw
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigRepair | TriggerDescription$ When CARDNAME dies, put two repair counters on it.
 SVar:TrigRepair:DB$ PutCounter | CounterType$ REPAIR | CounterNum$ 2 | Defined$ TriggeredCard

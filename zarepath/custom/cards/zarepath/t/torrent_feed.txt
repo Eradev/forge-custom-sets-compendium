@@ -10,6 +10,4 @@ SVar:ABRemoveUpload:AB$ RemoveCounter | Cost$ 2 | SorcerySpeed$ True | Activatio
 SVar:DBDownload:DB$ ChangeZone | Defined$ Self | Hidden$ True | Origin$ Exile | Destination$ Hand | StackDescription$ SpellDescription
 SVar:X:Count$InYourHand
 
-SVar:DBDraw:DB$ Draw | NumCards$ 2 | Defined$ You | SubAbility$ DBCleanup | SpellDescription$ Draw two cards.
-
 Oracle:As an additional cost to cast this spell, upload a card from you hand.(To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)\nDraw two cards.

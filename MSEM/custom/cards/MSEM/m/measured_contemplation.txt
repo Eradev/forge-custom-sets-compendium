@@ -3,9 +3,9 @@ ManaCost:2 U
 Types:Sorcery
 
 A:SP$ ChangeZoneAll | Defined$ You | Origin$ Hand | Destination$ Library | Shuffle$ True | RememberChanged$ True | ForgetOtherRemembered$ True | SubAbility$ DBDraw
-SVar:DBDraw:DB$ Draw | NumCards$ X | Defined$ You | SubAbility$ DBCleanup
+SVar:DBDraw:DB$ Draw | NumCards$ X | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | SubAbility$ DBDraw1
-SVar:DBDraw1:DB$ Draw | NumCards$ 1 | Defined$ You
+SVar:DBDraw1:DB$ Draw
 
 SVar:X:Remembered$Amount
 

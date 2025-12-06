@@ -6,6 +6,6 @@ S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 0 | Chec
 SVar:Bleed:Count$LifeOppsLostThisTurn
 
 A:SP$ RevealHand | ValidTgts$ Player | Look$ True | SubAbility$ DBDraw | SpellDescription$ Look at target player's hand. Draw a card.
-SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 1
+SVar:DBDraw:DB$ Draw
 
 Oracle:Bleed {0} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)\nLook at target player's hand.\nDraw a card.
