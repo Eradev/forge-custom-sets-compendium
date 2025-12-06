@@ -1,0 +1,19 @@
+Name:Necromancer's Talent
+ManaCost:B
+Types:Enchantment Class
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Optional$ True | Execute$ TrigToken | TriggerDescription$ When this Class enters, create a tapped 2/2 black Zombie creature token.
+SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ b_2_2_zombie | TokenTapped$ True | TokenOwner$ You
+
+K:Class:2:B:AddTrigger$ TrigSearchedLibrary
+SVar:TrigSearchedLibrary:Mode$ SearchedLibrary | ValidPlayer$ You | SearchOwnLibrary$ True | Execute$ TrigEntomb | TriggerZones$ Battlefield | TriggerDescription$ Whenever you search your library, search your library for a card, put that card into your graveyard, then shuffle. This ability triggers only once each turn.
+SVar:TrigEntomb:DB$ ChangeZone | Origin$ Library | Destination$ Graveyard | ChangeType$ Card | ChangeNum$ 1 | Mandatory$ True | ActivationLimit$ 1
+
+K:Class:3:3 B:AddTrigger$ TriggerClassLevel
+SVar:TriggerClassLevel:Mode$ ClassLevelGained | ClassLevel$ 3 | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigReanimate | Secondary$ True | TriggerDescription$ When this Class becomes level 3, put target creature card from a graveyard onto the battlefield under your control. You lose life equal to its mana value.
+SVar:TrigReanimate:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | GainControl$ True | TgtPrompt$ Choose target creature card in a graveyard | ValidTgts$ Creature | ChangeNum$ 1 | RememberLKI$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:RememberedLKI$CardManaCost
+
+Oracle:(Gain the next level as a sorcery to add its ability.)\nWhen this Class enters, create a tapped 2/2 black Zombie creature token.\n{B}: Level 2\nWhenever you search your library, search your library for a card, put that card into your graveyard, then shuffle. This ability triggers only once each turn.\n{3}{G}: Level 3\nWhen this Class becomes level 3, put target creature card from a graveyard onto the battlefield under your control. You lose life equal to its mana value.
