@@ -1,0 +1,15 @@
+Name:Roar of the Wurmcoil
+ManaCost:3 GP
+Types:Sorcery
+
+A:SP$ Charm | Choices$ DBTokenDeathtouch,DBTokenLifelink
+
+SVar:DBTokenDeathtouch:DB$ Token | TokenAmount$ 1 | TokenScript$ c_3_3_a_phyrexian_wurm_deathtouch | SpellDescription$ Create a 3/3 colorless Phyrexian Wurm artifact creature token with deathtouch.
+
+SVar:DBTokenLifelink:DB$ Token | TokenAmount$ 1 | TokenScript$ c_3_3_a_phyrexian_wurm_lifelink | SpellDescription$ Create a 3/3 colorless Phyrexian Wurm artifact creature token with lifelink.
+
+K:Entwine:3
+
+K:Flashback:3 G
+
+Oracle:Choose one —\n• Create a 3/3 colorless Phyrexian Wurm artifact creature token with deathtouch.\n• Create a 3/3 colorless Phyrexian Wurm artifact creature token with lifelink.\nEntwine {3} (Choose both if you pay the entwine cost.)\nFlashback {3}{G}

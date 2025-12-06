@@ -1,0 +1,19 @@
+Name:Misery
+ManaCost:2 B B
+Types:Creature Elemental Incarnation
+PT:5/3
+
+K:Flash
+
+K:Menace
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigExile | TriggerDescription$ When this creature enters, exile all cards from target player's graveyard. Each opponent loses 1 life and you gain 1 life for each creature card exiled this way.
+SVar:TrigExile:DB$ ChangeZoneAll | ValidTgts$ Player | TgtPrompt$ Select target player | Origin$ Graveyard | Destination$ Exile | ChangeType$ Card | IsCurse$ True | RememberChanged$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | ConditionDefined$ Remembered | ConditionPresent$ Creature | Defined$ Player.Opponent | LifeAmount$ X | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | ConditionDefined$ Remembered | ConditionPresent$ Creature | Defined$ You | LifeAmount$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$Valid Creature
+
+K:Evoke:ExileFromHand<1/Card.Black+Other/black card>
+
+Oracle:Flash\nMenace\nWhen this creature enters, exile all cards from target player's graveyard. Each opponent loses 1 life and you gain 1 life for each creature card exiled this way.\nEvoke—Exile a black card from your hand.

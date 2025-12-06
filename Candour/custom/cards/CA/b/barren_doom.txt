@@ -1,0 +1,14 @@
+Name:Barren Doom
+ManaCost:3 B
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | TriggerZones$ Battlefield | Execute$ TrigSac | TriggerDescription$ At the beginning of each player's upkeep, that player sacrifices a nonland, nontoken permanent of their choice. If that player can't, they discard two cards, they lose 3 life, you draw two cards, you gain 3 life, then you sacrifice this enchantment.
+SVar:TrigSac:DB$ Sacrifice | SacValid$ Permanent.nonLand+!token | Defined$ TriggeredPlayer | RememberSacrificed$ True | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ TriggeredPlayer | NumCards$ 2 | Mode$ TgtChoose | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ0 | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 3 | Defined$ TriggeredPlayer | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ0 | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | NumCards$ 2 | Defined$ You | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ0 | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 3 | Defined$ You | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ0 | SubAbility$ DBSac
+SVar:DBSac:DB$ SacrificeAll | Defined$ Self | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ0 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:At the beginning of each player's upkeep, that player sacrifices a nonland, nontoken permanent of their choice. If that player can't, they discard two cards, they lose 3 life, you draw two cards, you gain 3 life, then you sacrifice this enchantment.

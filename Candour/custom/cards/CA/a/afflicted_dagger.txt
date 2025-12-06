@@ -1,0 +1,15 @@
+Name:Afflicted Dagger
+ManaCost:B
+Types:Artifact Equipment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigAttach | TriggerDescription$ When this Equipment enters, attach it to target creature.
+SVar:TrigAttach:DB$ Attach | ValidTgts$ Creature | TgtPrompt$ Select target creature | AILogic$ Curse
+
+T:Mode$ Attached | ValidSource$ Card.Self | ValidTarget$ Creature | TriggerZones$ Battlefield | Execute$ TrigDealDamage | TriggerDescription$ Whenever this Equipment becomes attached to a creature, it deals 2 damage to that creature.
+SVar:TrigDealDamage:DB$ DealDamage | Defined$ TriggeredTargetLKICopy | NumDmg$ 2
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 3 | Description$ Equipped creature gets +3/+0.
+
+K:Equip:0:::ActivationLimit$ 1:Activate only once each turn
+
+Oracle:When this Equipment enters, attach it to target creature.\nWhenever this Equipment becomes attached to a creature, it deals 2 damage to that creature.\nEquipped creature gets +3/+0\nEquip {0}. Activate only once each turn.

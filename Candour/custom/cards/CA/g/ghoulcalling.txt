@@ -1,0 +1,11 @@
+Name:Ghoulcalling
+ManaCost:1 B B
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this enchantment enters and at the beginning of your upkeep, exile up to one target creature card from a graveyard. If you exiled a card this way, create a token that's a copy of that card, except it's a 1/1 white Spirit with flying.
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ TrigExile | TriggerZones$ Battlefield | Secondary$ True | TriggerDescription$ When this enchantment enters and at the beginning of your upkeep, exile up to one target creature card from a graveyard. If you exiled a card this way, create a token that's a copy of that card, except it's a 1/1 white Spirit with flying.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Creature | RememberChanged$ True | TgtPrompt$ Select up to one target creature card from a graveyard | SubAbility$ DBCopy
+SVar:DBCopy:DB$ CopyPermanent | Defined$ Remembered | SetPower$ 1 | SetToughness$ 1 | SetColor$ White | SetCreatureTypes$ Spirit | AddKeywords$ Flying | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When this enchantment enters and at the beginning of your upkeep, exile up to one target creature card from a graveyard. If you exiled a card this way, create a token that's a copy of that card, except it's a 1/1 white Spirit with flying.

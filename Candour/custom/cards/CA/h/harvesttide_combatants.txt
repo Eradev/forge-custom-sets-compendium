@@ -1,0 +1,11 @@
+Name:Harvesttide Combatants
+ManaCost:2 G
+Types:Creature Human Warlock
+PT:2/3
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Coven — At the beginning of combat on your turn, up to one target creature you control gets +1/+0 and gains deathtouch and trample until end of turn. Then if you control three or more creatures with different powers, draw a card.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.YouCtrl | TargetMin$ 0 | TargetMax$ 1 | NumAtt$ +1 | KW$ Deathtouch & Trample | TgtPrompt$ Select up to one target creature you control | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ X | ConditionSVarCompare$ GE3
+SVar:X:Count$DifferentPower_Creature.YouCtrl
+
+Oracle:Coven — At the beginning of combat on your turn, up to one target creature you control gets +1/+0 and gains deathtouch and trample until end of turn. Then if you control three or more creatures with different powers, draw a card.

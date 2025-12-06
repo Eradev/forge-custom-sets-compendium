@@ -1,0 +1,12 @@
+Name:Sanguinary Temptation
+ManaCost:B
+Types:Instant
+
+A:SP$ GainLife | LifeAmount$ 1 | SubAbility$ DBDraw | SpellDescription$ You gain 1 life and draw a card.
+SVar:DBDraw:DB$ Draw
+
+K:Flashback:Sac<1/Creature>
+
+Oracle:You gain 1 life and draw a card.\nFlashback—Sacrifice a creature. (You may cast this card from your graveyard for its flashback cost. Then exile it.)
+
+DeckHas:Ability$LifeGain

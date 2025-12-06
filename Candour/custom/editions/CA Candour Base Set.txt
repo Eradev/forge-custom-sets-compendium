@@ -234,7 +234,8 @@ Type=Custom
 235 R Harvesttide Combatants @Riz Yangpeiv
 236 R Archon of Autumn @Sandara Tang
 237 R Roar of the Wurmcoil @Joel Hustak
-# 238-250
+238 U Noxious Detonation @Romain Kurdi
+# 239-250
 251 R Waterlogged Archipelago @Anthony Avon
 252 R Contaminated Rivulet @Anthony Avon
 253 R Sanguinary Morass @Anthony Avon

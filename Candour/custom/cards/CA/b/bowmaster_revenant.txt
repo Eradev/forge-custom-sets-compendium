@@ -1,0 +1,13 @@
+Name:Bowmaster Revenant
+ManaCost:2 B B
+Types:Creature Skeleton Archer
+PT:4/2
+
+K:Flash
+
+K:Deathtouch
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDealDamage | TriggerDescription$ When this creature enters, it deals 2 damage to any target.
+SVar:TrigDealDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 2
+
+Oracle:Flash\nDeathtouch\nWhen this creature enters, it deals 2 damage to any target.

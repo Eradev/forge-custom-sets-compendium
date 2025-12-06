@@ -1,0 +1,14 @@
+Name:Archon of Autumn
+ManaCost:1 G
+Types:Creature Archon
+PT:1/2
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this creature enters, exile target land. That land's controller may search their library for a basic land card, put it onto the battlefield, then shuffle.
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Land | TgtPrompt$ Choose target land. | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBSearch
+SVar:DBSearch:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | DefinedPlayer$ TargetedController | ChangeType$ Land.Basic | ChangeTypeDesc$ basic land
+
+S:Mode$ Continuous | Affected$ Card.Self | EffectZone$ Battlefield | GainsAbilitiesOf$ Land.ExiledWithSource | GainsAbilitiesOfZones$ Exile | Description$ This creature has all activated abilities of all land cards exiled with it.
+
+Oracle:Flying\nWhen this creature enters, exile target land. That land's controller may search their library for a basic land card, put it onto the battlefield, then suffle.\nThis creature has all activated abilities of all land cards exiled with it.
