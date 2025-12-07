@@ -289,3 +289,4 @@ Type=Custom
 321 U Manapierce Feather @Sandara Tang
 322 M Draco, Rath Enigma @Bastien Grivet
 323 R Lotus Grove @Alessandro Calbini
+324 R City of Opal @Bastien Grivet
