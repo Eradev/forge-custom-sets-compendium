@@ -1,0 +1,145 @@
+[metadata]
+Code=BEN10_OMV
+Name=Ben 10 Commander
+Date=2025-12-01
+Type=Custom
+
+[cards]
+1 R Ghostfreak, Spectral Terror @Nixant
+2 R The Rustbucket @Man of Action
+3a R Big Chill, Glacial Shade @PlaycenterMD
+4 R Brainstorm, Cerebral Stormcaller @Man of Action
+5 C Interference Protocol @Man of Action
+6 M Motion Carried! @CKVigilla
+7 R Four Arms, Seismic Enforcer
+8 R Heatblast, Walking Supernova
+9 R Blasphemous Act ${"flavorName": "Omnitrix Self Destruct"}
+10 R Diamondhead, Gemblade Sentinel
+11 C Galvan Survey Team
+12 R Goop, Adaptive Slime
+13 C Cultivate ${"flavorName": "Highbreed Weather Array"}
+14 U Kevin's Car
+15 U Crop Rotation ${"flavorName": "Null Void Gateway"}
+16 R Omnitrix Failsafe
+17 U Plumber's Protocol
+18 U Three Visits ${"flavorName": "Swampfire's Insight"}
+19 U Nature's Lore ${"flavorName": "Wildvine's Guidance"}
+20 M Albedo, Twisted Reflection @obarii
+21 M Alien X, Bound by Consensus @AFDS_BM
+22 R And Then There Were 10
+23 R Atomix, Nuclear Winner
+24 M Azmuth, First Thinker
+25 M Ben 10,000, Hero of Heroes
+26 M Ben Tennyson, Aspiring Hero
+27a R Cannonbolt, Wrecking Ball
+28 R Chromastone, Prism of Power
+29a R Echo Echo, Vocal Swarm
+30 R Feedback, Prime Conduit
+31 R Grey Matter, Quantum Thinker
+32 U Grudge Match
+33 R Gwen Tennyson, Wielder of Mana
+34a R Humungousaur, Savage Might
+35 R Jetray, Neuroshock Avenger
+36a M Kevin E. Levin, Adaptive Outlaw
+37 M Max Tennyson, Grandpa and Mentor
+38 R Motion Denied!
+39 R Null Void Breach
+40 U Omnitrix Activation
+41 M Professor Paradox
+42 R Rath, Lord of Left Hooks
+43 U Ripjaws, Leviathan's Bite
+44 R Rook Blonko, Proto-Guardian
+45a R Spidermonkey, Silksaboteur
+46 R Stinkfly, Pestilent Skyhunter
+47a R Swampfire, Verdant Blaze
+48 R Upgrade, Technoform Prime
+49 R War of the Worlds
+50a M Way Big, The Skybreaker
+51a R Wildmutt, Untamed Senses
+52 R XLR8, Slipstream Striker
+53 R Upchuck, The Ever-Hungry
+54 M Vilgax, Galactic Warlord
+55 M Perilous Vault ${"flavorName": "Annihilarrgenesistoriathimiorgost"}
+56a M Central Park Rift
+57 U Fellwar Stone ${"flavorName": "Charms of Bezel"}
+58 R Chromatic Lantern ${"flavorName": "Codon Stream"}
+59 U Galvanic Helix
+60 C Sol Ring ${"flavorName": "Gold Sumo Slammer Card"}
+61 C Expedition Map ${"flavorName": "Map of Infinity"}
+62 M The Omnitrix @Parker-Fox
+63 R Obsidian Obelisk ${"flavorName": "Petropia Back-Up Crystal"}
+64 C Arcane Signet ${"flavorName": "Plumber Badge"}
+65 U Vreedle Salvage Rig
+66 R Indatha Triome ${"flavorName": "Azmuth's Laboratory"}
+67 R Savai Triome ${"flavorName": "Baumann's Store"}
+68 R Bellwood, Hometown Battleground
+69 R Ketria Triome ${"flavorName": "Ben 10,000's Headquarters"}
+70 R Jetmir's Garden ${"flavorName": "Billions Tower"}
+71 R Xander's Lounge ${"flavorName": "Chimeran Hammer Control Room"}
+72 R Raugrin Triome ${"flavorName": "Dimension 23"}
+73 R Reflecting Pool ${"flavorName": "The Forge of Creation"}
+74 R Glacial Fortress ${"flavorName": "Fort Knox"}
+75 M Galvan Prime, Beacon of Innovation
+76 R Drowned Catacomb ${"flavorName": "Highgate Cemetary"}
+77 M Incarcecon Intergalactic Detention Center
+78 R Ziatora's Proving Ground ${"flavorName": "Khyber's Base"}
+79 R Spara's Headquarters ${"flavorName": "Legerdomain"}
+80 R Woodland Cemetary ${"flavorName": "Los Soledad"}
+81 R Dragonskull Summit ${"flavorName": "Mayan Temple of Ek Chuaj"}
+82 U Mr. Smoothy
+83 R Clifftop Retreat ${"flavorName": "Mt. Rushmore"}
+84 R Hinterland Harbor ${"flavorName": "New York City"}
+85 R Sulfur Falls ${"flavorName": "Niagra Falls"}
+86 M Null Void, Dimensional Abyss
+87 R Exotic Orchard ${"flavorName": "Omnitrix City"}
+88 C Command Tower ${"flavorName": "Plumber Headquarters"}
+89 M Primus, Heart of the Omnitrix
+90 R Sunpetal Grove ${"flavorName": "Sparksville"}
+91 R Zagoth Triome ${"flavorName": "Undertown"}
+92 R Isolated Chapel ${"flavorName": "Washington D.C."}
+93 M Xenon, Azmuth's Retreat
+94 R Rootbound Crag ${"flavorName": "Yosemite National Park"}
+95 R Raffine's Tower ${"flavorName": "Z'Castle Zs'Skayr"}
+96 L Plains
+97 L Island
+98 L Swamp
+99 L Mountain
+100 L Forest
+9964 R Arctiguana, Coldsnap Catalyst
+9965 R Terraspin, Soothing Cyclone
+9966 M Armodrillo, Seismic Menace
+9967 R Astrodactyl, Interstellar Soarer
+9968 R Waterhazard, Tidal Floodwalker
+9969 R Bloxx, Polyform Architect
+9970 R Chamalien, Shifting Invader
+9971a M NRG, Contained Reactor
+9972 M Pesky Dust, Dreamspoiler
+9973 R Shocksquatch, Stormfur Titan
+9974 R Fasttrack, Velocity Incarnate
+9975 U Walkatrout, Fish Out of Water
+9976 M Bullfrag, Incursean Interceptor
+9977 R Ampfibian, Voltaic Entity
+9978 R Blitzwolfer, Night Stalker
+9979 R Spitter, Caustic Menace
+9980 U Buzzshock, Sonic Capacitor
+9981 R Wildvine, Thornlash Terror
+9982 U Nanomech, Internal Saboteur
+9983 R Juryrigg, Fixer of Chaos
+9984 R Toepick, Horror Behind Bars
+9985 M Gutrot, Fumes of Corruption
+9986 U Ball Weevil, Unstable Payload
+9987 R Frankenstrike, Amped Abomination
+9988 C The Worst, Miserable Immortal
+9989 R Snare-oh, Curse in Wrappings
+9990 R Whampire, Hunger Unleashed
+9991 R Mole-Stache, Mane in Motion
+9992 R Eatle, Scrap Cannon
+9993 R Ditto, Division Specialist
+9994 R Lodestar, Master of Polarity
+9995 R Crashhopper, Seismic Leaper
+9996 R Kickin' Hawk, Way of the Claw
+9997 R Gravattack, Planetary Force
+9998 R Eye Guy, Thousand-Eyed Watcher
+9999 R Clockwork, The Eternal Tick
+
+[tokens]
