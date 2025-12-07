@@ -1,0 +1,12 @@
+Name:Omnitrix Failsafe
+ManaCost:1 G
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | Origin$ Battlefield | Destination$ Library | Shuffle$ True | SubAbility$ DBDigAlien | SpellDescription$ Shuffle target creature you control into its owner's library. Then reveal cards from the top of your library until you reveal an Alien creature card and put it onto the battlefield under your control. It gains indestructible until the end of turn. Put the rest on the bottom of your library in a random order.
+SVar:DBDigAlien:DB$ DigUntil | Valid$ Creature.Alien | ValidDescription$ Alien creature card | FoundDestination$ Battlefield | RevealedDestination$ Library | RevealedLibraryPosition$ -1 | RevealRandomOrder$ True | RememberFound$ True | SubAbility$ DBPumpIndestructible
+SVar:DBPumpIndestructible:DB$ Pump | Defined$ Remembered | KW$ Indestructible | Duration$ UntilEndOfTurn | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+K:Overload:W U B R G
+
+Oracle:Shuffle target creature you control into its owner's library. Then reveal cards from the top of your library until you reveal an Alien creature card and put it onto the battlefield under your control. It gains indestructible until the end of turn. Put the rest on the bottom of your library in a random order.\nOverload {W}{U}{B}{R}{G} (You may cast this spell for its overload cost. If you do, change its text by replacing all instances of "target" with "each.")
