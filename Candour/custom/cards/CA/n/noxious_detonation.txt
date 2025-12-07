@@ -2,12 +2,12 @@ Name:Noxious Detonation
 ManaCost:G
 Types:Instant
 
-A:SP$ Charm | Choices$ DBSacrificeArt,DBSacrificeEnch,DBFog
+A:SP$ Charm | Choices$ DBSacrifice,DBChangeZoneAll,DBFog
 
-SVar:DBSacrificeArt:DB$ Sacrifice | Defined$ Opponent | SacValid$ Artifact | SpellDescription$ Each opponent sacrifices an artifact of their choice.
+SVar:DBSacrifice:DB$ Sacrifice | Defined$ Opponent | SacValid$ Artifact | SpellDescription$ Each opponent sacrifices an artifact of their choice.
 
-SVar:DBSacrificeEnch:DB$ Sacrifice | Defined$ Opponent | SacValid$ Enchantment | SpellDescription$ Each opponent sacrifices an enchantment of their choice.
+SVar:DBChangeZoneAll:DB$ ChangeZoneAll | ValidTgts$ Player | TgtPrompt$ Select target player | Origin$ Graveyard | Destination$ Library | ChangeType$ Card | Shuffle$ True | SpellDescription$ Target player shuffles their graveyard into their library.
 
 SVar:DBFog:DB$ Fog | SpellDescription$ Prevent all combat damage that would be dealt this turn.
 
-Oracle:Choose one —\n• Each opponent sacrifices an artifact of their choice.\n• Each opponent sacrifices an enchantment of their choice.\n• Prevent all combat damage that would be dealt this turn.
+Oracle:Choose one —\n• Each opponent sacrifices an artifact of their choice.\n• Target player shuffles their graveyard into their library.\n• Prevent all combat damage that would be dealt this turn.
