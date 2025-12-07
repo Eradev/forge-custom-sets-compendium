@@ -144,3 +144,6 @@ Type=Custom
 
 [tokens]
 12 c_1_1_a_drone_flying
+
+[other]
+9 emblem_master_control

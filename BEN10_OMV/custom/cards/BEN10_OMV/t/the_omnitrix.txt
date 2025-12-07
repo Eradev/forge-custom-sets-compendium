@@ -4,11 +4,13 @@ Types:Legendary Artifact Equipment
 K:Equip:2
 
 S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddAbility$ OmnitrixActivate | AddTrigger$ OmniPhaseOut | Description$ Equipped creature has "{3}, {T} For each color of mana spent to activate this ability, you get that many experience counters. Then search your library for an Alien creature card with mana value less than or equal to the number of experience counters you have. You may cast it without paying its mana cost. Whenever a creature enters this way, this creature phases out until it leaves the battlefield."
-SVar:OmnitrixActivate:AB$ Effect | Cost$ 3 T | SubAbility$ DBGainExp | SpellDescription$ For each color of mana spent to activate this ability, you get that many experience counters. Then search your library for an Alien creature card with mana value less than or equal to the number of experience counters you have. You may cast it without paying its mana cost. Whenever a creature enters this way, this creature phases out until it leaves the battlefield.
+SVar:OmnitrixActivate:AB$ Effect | Cost$ 3 T | Named$ OmniActivate | SubAbility$ DBGainExp | SpellDescription$ For each color of mana spent to activate this ability, you get that many experience counters. Then search your library for an Alien creature card with mana value less than or equal to the number of experience counters you have. You may cast it without paying its mana cost. Whenever a creature enters this way, this creature phases out until it leaves the battlefield.
 SVar:Y:Count$ManaColorsPaid
 SVar:DBGainExp:DB$ PutCounter | Defined$ You | CounterType$ Experience | CounterNum$ Y | SubAbility$ DBSearchAndCast
-SVar:DBSearchAndCast:DB$ ChangeZone | Origin$ Library | Destination$ Library | ChangeType$ Creature.Alien+cmcLEX | ChangeNum$ 1 | RememberChanged$ True | NoShuffle$ True | SubAbility$ DBCast
+SVar:DBSearchAndCast:DB$ ChangeZone | Origin$ Library | Destination$ Library | ChangeType$ Creature.Alien+cmcLEX | ConditionCheckSVar$ MasterControlPresent | ConditionSVarCompare$ EQ0 | ChangeNum$ 1 | RememberChanged$ True | NoShuffle$ True | SubAbility$ DBSearch2
+SVar:DBSearch2:DB$ ChangeZone | Origin$ Library | Destination$ Library | ChangeType$ Creature.Alien | ConditionCheckSVar$ MasterControlPresent | ConditionSVarCompare$ EQ1 | ChangeNum$ 1 | RememberChanged$ True | NoShuffle$ True | SubAbility$ DBCast
 SVar:X:Count$YourCountersExperience
+SVar:MasterControlPresent:Count$ValidCommand Effect.namedEmblem - Master Control
 SVar:DBCast:DB$ Play | ValidZone$ Library | Valid$ Card.IsRemembered | ValidSA$ Spell | WithoutManaCost$ True | Optional$ True | ImprintPlayed$ True | SubAbility$ DBCleanRemember
 SVar:DBCleanRemember:DB$ Cleanup | ClearRemembered$ True | SubAbility$ DBShuffle
 SVar:DBShuffle:DB$ Shuffle
