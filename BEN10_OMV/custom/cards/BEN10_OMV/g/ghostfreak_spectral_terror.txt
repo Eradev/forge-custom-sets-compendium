@@ -7,7 +7,7 @@ K:Flying
 
 K:Ward:2
 
-R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ Omnishuffle 1 (If CARDNAME would be put into a graveyard from anywhere, shuffle it into its owner's library instead. Its owner loses 1 life.)
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, shuffle it into its owner's library instead. Its owner loses 1 life.)
 SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ OmniDmg
 SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 1
 
