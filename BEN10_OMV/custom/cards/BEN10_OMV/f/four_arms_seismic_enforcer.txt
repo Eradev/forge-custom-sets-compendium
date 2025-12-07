@@ -1,0 +1,18 @@
+Name:Four Arms, Seismic Enforcer
+ManaCost:2 R R
+Types:Legendary Creature Alien Warrior
+PT:3/3
+
+K:Double Strike
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+S:Mode$ Continuous | Affected$ Card.Self | CanBlockAny$ True | Description$ NICKNAME can block any number of creatures.
+
+T:Mode$ Blocks | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ Whenever NICKNAME blocks, it gets +0/+1 until end of turn for each creature it's blocking.
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumDef$ +X
+SVar:X:Count$Valid Creature.blockedBySource
+
+Oracle:Double strike, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWhenever Four Arms blocks, it gets +0/+1 until end of turn for each creature it's blocking.

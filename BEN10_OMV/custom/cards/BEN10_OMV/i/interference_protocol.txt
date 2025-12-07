@@ -1,0 +1,11 @@
+Name:Interference Protocol
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Charm | Choices$ DBMode1,DBMode2
+SVar:DBMode1:DB$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | UnlessCost$ ColorCount | SpellDescription$ Counter target spell unless its controller pays {1} for each color among creatures you control.
+SVar:DBMode2:DB$ Counter | TargetType$ Activated,Triggered | TgtPrompt$ Choose target activated or triggered ability | ValidTgts$ Card,Emblem | SpellDescription$ Counter target activated or triggered ability.
+
+SVar:ColorCount:Count$Valid Creature.YouCtrl$Colors
+
+Oracle:Choose one —\n• Counter target spell unless its controller pays {1} for each color among creatures you control.\n• Counter target activated or triggered ability.

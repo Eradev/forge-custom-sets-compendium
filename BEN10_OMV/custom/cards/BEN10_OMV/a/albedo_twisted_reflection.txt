@@ -1,0 +1,20 @@
+Name:Albedo, Twisted Reflection
+ManaCost:1 U B R
+Types:Legendary Creature Human Alien Shapeshifter
+PT:1/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainControl | TriggerDescription$ When NICKNAME enters, target opponent gains control of it.
+SVar:TrigGainControl:DB$ GainControl | Defined$ Self | ValidTgts$ Opponent | TgtPrompt$ Select target opponent
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCopy | TriggerDescription$ At the beginning of your upkeep, NICKNAME becomes a copy of target Alien an opponent controls, except its name is Albedo, Twisted Reflection, it's legendary in addition to its other types, it's goaded, and it has this ability and "Whenever NICKNAME deals combat damage to a player, its controller loses 3 life and its owner draws a card."
+
+SVar:TrigCopy:DB$ Clone | Choices$ Creature.Alien+OppCtrl | TgtPrompt$ Select target Alien an opponent controls to copy. | NewName$ Albedo, Twisted Reflection | AddTypes$ Legendary | GainThisAbility$ True | AddTriggers$ DamTrig | AddStaticAbilities$ STGoadApply | AddSVars$ DamTrig,TrigDrain,DBOwnerDraw,STGoadApply | AILogic$ CloneBestCreature
+
+SVar:STGoadApply:Mode$ Continuous | Affected$ Card.Self | Goad$ True
+
+SVar:DamTrig:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigDrain | TriggerDescription$ Whenever NICKNAME deals combat damage to a player, its controller loses 3 life and its owner draws a card.
+
+SVar:TrigDrain:DB$ LoseLife | Defined$ TriggeredSourceController | LifeAmount$ 3 | SubAbility$ DBOwnerDraw
+SVar:DBOwnerDraw:DB$ Draw | Defined$ TriggeredSourceOwner | NumCards$ 1
+
+Oracle:When Albedo enters, target opponent gains control of it.\nAt the beginning of your upkeep, Albedo becomes a copy of target Alien an opponent controls, except its name is Albedo, Twisted Reflection, it's legendary in addition to its other types, it's goaded, and it has this ability and "Whenever Albedo deals combat damage to a player, its controller loses 3 life and its owner draws a card."

@@ -1,0 +1,47 @@
+Name:Big Chill, Glacial Shade
+ManaCost:3 U U
+Types:Legendary Creature Alien Insect Spirit
+PT:3/4
+
+K:Flying
+
+K:Ward:2
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle2 | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBOmniShuffle2:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife2
+SVar:DBLoseLife2:DB$ LoseLife | LifeAmount$ 2
+
+T:Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigTapStun | TriggerDescription$ Whenever you cast a spell, tap up to one target creature and put a stun counter on it.
+SVar:TrigTapStun:DB$ Tap | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Creature | TgtPrompt$ Select up to one target creature | SubAbility$ DBStun
+SVar:DBStun:DB$ PutCounter | Defined$ Targeted | CounterType$ Stun | CounterNum$ 1
+
+A:AB$ SetState | Cost$ 1 B R G W | Defined$ Self | Mode$ Transform | SorcerySpeed$ True | SpellDescription$ Transform NICKNAME.
+
+Oracle:Flying, ward {2}, omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\nWhenever you cast a spell, tap up to one target creature and put a stun counter on it.\nGoin' Ultimate! — {1}{B}{R}{G}{W}: Transform Big Chill. Activate only as a sorcery.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Ultimate Big Chill, The Blazing Cold
+ManaCost:no cost
+Colors:red
+Types:Legendary Creature Alien Insect Spirit
+PT:5/6
+
+K:Flying
+
+K:Menace
+
+K:Ward:2
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle4 | Description$ Omnishuffle 4 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 4 life.)
+SVar:DBOmniShuffle4:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife4
+SVar:DBLoseLife4:DB$ LoseLife | LifeAmount$ 4
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | TriggerZones$ Battlefield | CombatDamage$ True | Execute$ TrigBlaze | TriggerDescription$ Whenever NICKNAME deals combat damage to a player, put a blaze counter on it. Then it deals damage to each creature that player controls equal to the number of blaze counters on NICKNAME.
+SVar:TrigBlaze:DB$ PutCounter | Defined$ Self | CounterType$ BLAZE | CounterNum$ 1 | SubAbility$ DBDamageAll
+SVar:DBDamageAll:DB$ DamageAll | ValidCards$ Creature.ControlledBy TriggeredTarget | NumDmg$ X | ValidDescription$ each creature that player controls.
+SVar:X:Count$CardCounters.BLAZE
+
+Oracle:Flying, menace, ward {2}, omnishuffle 4 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 4 life.)\nWhenever Ultimate Big Chill deals combat damage to a player, put a blaze counter on it. Then it deals damage to each creature that player controls equal to the number of blaze counters on Ultimate Big Chill.
