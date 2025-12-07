@@ -15,4 +15,4 @@ T:Mode$ Blocks | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ 
 SVar:TrigPump:DB$ Pump | Defined$ Self | NumDef$ +X
 SVar:X:Count$Valid Creature.blockedBySource
 
-Double strike, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWhenever Four Arms blocks, it gets +0/+1 until end of turn for each creature it's blocking.
+Oracle:Double strike, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWhenever Four Arms blocks, it gets +0/+1 until end of turn for each creature it's blocking.
