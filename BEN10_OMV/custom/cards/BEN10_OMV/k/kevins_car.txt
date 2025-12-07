@@ -1,0 +1,11 @@
+Name:Kevin's Car 
+ManaCost:2 G
+Types:Artifact Vehicle
+PT:3/2
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigDig | TriggerDescription$ Whenever CARDNAME attacks, reveal the top three cards of your library and put one of them into your hand.
+SVar:TrigDig:DB$ Dig | DigNum$ 3 | Reveal$ True | ChangeNum$ 1 | DestinationZone$ Hand | RememberChanged$ True | DestinationZone2$ Library | LibraryPosition2$ 0 | RestRandomOrder$ True | SubAbility$ DBGain
+SVar:DBGain:DB$ GainLife | LifeAmount$ Y | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:Y:Remembered$CardManaCost
+K:Crew:3
+Oracle:Whenever Kevin's Car attacks, reveal the top three card of your library and put one of them into your hand. You gain life equal to its mana value. Put the rest at the bottom of your library in a random order.

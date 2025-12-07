@@ -1,0 +1,12 @@
+Name:Galvanic Helix 
+ManaCost:2
+Types:Artifact
+
+A:AB$ ManaReflected | Cost$ T | ColorOrType$ Type | Valid$ Land.YouCtrl | ReflectProperty$ Produce | SpellDescription$ Add one mana of any type that a land you control could produce.
+Oracle:{T}: Add one mana of any type that a land you control could produce.
+
+T:Mode$ SpellCast | ValidCard$ Card.MultiColor | ValidSA$ Spell.ManaFromCard.StrictlySelf | ValidActivatingPlayer$ You | OptionalDecider$ You | Execute$ TrigUntap | TriggerDescription$ Whenever you cast a multicolored spell using mana produced by CARDNAME, you may untap it.
+
+SVar:TrigUntap:DB$ Untap | Defined$ Self
+
+

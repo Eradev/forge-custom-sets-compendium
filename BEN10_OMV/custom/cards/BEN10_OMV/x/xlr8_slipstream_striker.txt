@@ -1,0 +1,16 @@
+Name:XLR8, Slipstream Striker 
+ManaCost:1 R W
+Types:Legendary Creature Alien Lizard
+PT:2/3
+K:First strike
+K:Haste
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | TriggerZones$ Battlefield | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigUntapAll | TriggerDescription$ Whenever CARDNAME deals combat damage to a player, if it's the first combat phase of your turn, untap all attacking creatures. After this phase, there is an additional combat phase.
+SVar:TrigUntapAll:DB$ UntapAll | ValidCards$ Creature.attacking  | ConditionFirstCombat$ True | SubAbility$ DBAddCombat
+SVar:DBAddCombat:DB$ AddPhase | ExtraPhase$ Combat | AfterPhase$ EndCombat
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ If CARDNAME would be put into a graveyard from anywhere, shuffle it into its owner's library instead. Its owner loses X life.
+SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Reveal$ True | Defined$ ReplacedCard | Shuffle$ True | SubAbility$ OmniDmg
+SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 1 
+
+Oracle: First strike, haste, omnishuffle 1\nWhen XLR8 deals combat damage to  player, if it's the first combat phase of your turn, untap all attacking creatures. After this phase, there is an additional combat phase.

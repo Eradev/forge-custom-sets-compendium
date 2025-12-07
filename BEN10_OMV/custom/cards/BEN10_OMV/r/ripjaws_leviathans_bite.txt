@@ -1,0 +1,14 @@
+Name:Ripjaws, Leviathan's Bite 
+ManaCost:1 G U
+Types:Legendary Creature Alien Merfolk
+PT:1/4
+K:Landwalk:Island
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ If CARDNAME would be put into a graveyard from anywhere, shuffle it into its owner's library instead. Its owner loses 1 life.
+SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Reveal$ True | Defined$ ReplacedCard | Shuffle$ True | SubAbility$ OmniDmg
+SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player,Planeswalker | CombatDamage$ True | Execute$ TrigExplore | TriggerZones$ Battlefield | TriggerController$ TriggeredSourceController | TriggerDescription$ Whenever CARDNAME deals combat damage to a player or planeswalker, it explores, then it explores again.
+SVar:TrigExplore:DB$ Explore | Num$ 2
+
+Oracle: Islandwalk, omnishuffle 1\nWhenever Ripjaws deals combat damage to a player or planeswalker, it explores, then it explores again.
