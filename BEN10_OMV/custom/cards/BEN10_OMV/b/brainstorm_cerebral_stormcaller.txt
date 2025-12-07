@@ -1,0 +1,21 @@
+Name:Brainstorm, Cerebral Stormcaller
+ManaCost:2 U
+Types:Legendary Creature Alien Crab
+PT:2/3
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If NICKNAME would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReveal
+SVar:TrigReveal:DB$ RevealHand | Defined$ Targeted | ValidTgts$ Player | IsCurse$ True | SubAbility$ ExileCard | StackDescription$ SpellDescription | SpellDescription$ Target player reveals their hand.
+SVar:ExileCard:DB$ ChangeZone | Origin$ Hand | Destination$ Exile | DefinedPlayer$ Targeted | Chooser$ You | ChangeType$ Card.nonLand | ChangeNum$ 1 | Imprint$ True | Mandatory$ True | SubAbility$ DBEffect | StackDescription$ {p:You} chooses a nonland card from it. Exile that card. | SpellDescription$ You choose a nonland card from it. Exile that card.
+SVar:DBEffect:DB$ Effect | Duration$ Permanent | StaticAbilities$ MayPlay,CostsMore | RememberObjects$ Imprinted | ForgetOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:MayPlay:Mode$ Continuous | Affected$ Card.IsRemembered | AffectedZone$ Exile | MayPlay$ True | MayPlayPlayer$ CardOwner
+SVar:CostsMore:Mode$ RaiseCost | ValidCard$ Card.IsRemembered+CastSa Spell.MayPlaySource | AffectedZone$ Exile | Type$ Spell | Amount$ 2
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearImprinted$ True
+
+A:AB$ Draw | Cost$ U T | NumCards$ 3 | StackDescription$ {p:You} draws three cards, | SpellDescription$ Draw three cards, then put two cards from your hand on top of your library in any order. | SubAbility$ ChangeZoneDB
+SVar:ChangeZoneDB:DB$ ChangeZone | Origin$ Hand | Destination$ Library | ChangeNum$ 2 | Mandatory$ True | Reorder$ True | StackDescription$ then puts two cards from their hand on top of their library in any order.
+
+Oracle:Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWhen Brainstorm enters, target player reveals their hand. You choose a nonland card from it. Exile that card. Its owner may cast that card for as long as it remains exiled. A spell cast this way costs {2} more to cast.\n{U}, {T}: Draw three cards, then put two cards from your hand on top of your library in any order.

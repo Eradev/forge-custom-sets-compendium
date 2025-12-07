@@ -1,0 +1,21 @@
+Name:Ghostfreak, Spectral Terror
+ManaCost:4
+Types:Legendary Creature Alien Spirit
+PT:2/2
+
+K:Flying
+
+K:Ward:2
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ Omnishuffle 1 (If CARDNAME would be put into a graveyard from anywhere, shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ OmniDmg
+SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExileCopy | TriggerDescription$ As CARDNAME enters, exile up to one target creature an opponent controls until CARDNAME leaves the battlefield. CARDNAME becomes a copy of that creature except it has CARDNAME's other abilities and is legendary.
+SVar:TrigExileCopy:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select up to one target creature an opponent controls | TargetMin$ 0 | TargetMax$ 1 | Duration$ UntilHostLeavesPlay | SubAbility$ DBCopyGhost
+SVar:DBCopyGhost:DB$ Clone | Defined$ Targeted | AddKeywords$ Flying & Ward:2 | AddTypes$ Legendary | GainThisAbility$ True | AddStaticAbilities$ GetOmnishuffle | AddSVars$ GetOmnishuffle,Omnishuffle,DBShuffle,OmniDmg
+SVar:GetOmnishuffle:Mode$ Continuous | Affected$ Card.Self | AddReplacementEffect$ Omnishuffle
+
+SVar:Omnishuffle:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ Omnishuffle 1 (If CARDNAME would be put into a graveyard from anywhere, shuffle it into its owner's library instead. Its owner loses 1 life.)
+
+Oracle:Flying, ward {2}, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nAs Ghostfreak enters, exile up to one target creature an opponent controls until Ghostfreak leaves the battlefield. Ghostfreak becomes a copy of that creature except it has Ghostfreak's other abilities and is legendary.

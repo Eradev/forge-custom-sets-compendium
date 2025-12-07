@@ -1,0 +1,16 @@
+Name:The Rustbucket
+ManaCost:5 W
+Types:Legendary Artifact Vehicle
+PT:6/5
+
+K:Vigilance
+
+A:AB$ Draw | Cost$ T | NumCards$ 1 | SubAbility$ DBTokenChoice | SpellDescription$ Draw a card. Create a Clue, Food, or Treasure token.
+SVar:DBTokenChoice:DB$ GenericChoice | Choices$ DBClue,DBFood,DBTreasure | Defined$ You | SpellDescription$ Choose a token to create
+SVar:DBClue:DB$ Investigate | SpellDescription$ Create a Clue.
+SVar:DBFood:DB$ Token | TokenScript$ c_a_food_sac | SpellDescription$ Create a Food.
+SVar:DBTreasure:DB$ Token | TokenScript$ c_a_treasure_sac | SpellDescription$ Create a Treasure.
+
+K:Crew:3
+
+Oracle:Vigilance\n{T}: Draw a card, create a Clue, Food, or Treasure.\nCrew 3
