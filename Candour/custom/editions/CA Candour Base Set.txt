@@ -24,7 +24,7 @@ Type=Custom
 17 M Argivian Exemplar @Marcos V. Monken
 18 R Ethereal Dissension @PINDURSKI
 19 R Sand-Strider Battalion @Gabriel Schmidt
-20 U Veil of Spring @Dominik Mayer
+20 R Reluctant Knight @Donato Giancola
 21 M High Artificer of Eos @Edgar Sánchez Hidalgo
 22 R Labyrinth Sentinel @Darren Tan
 23 M Chromatic Seraph @Asur Misoa
@@ -43,7 +43,7 @@ Type=Custom
 36 R Scenic Detour @Sandara Tang
 37 R Lightrender Archon @Sandara Tang
 38 R Lithomancer's Talent @Bryan F. Rosado
-39 U Duskspine Cultivation @Sandara Tang
+39 M Glimmerpool Weaver @Donato Giancola
 40 U Duskwing Glider @Sandara Tang
 41 M Basri, Oketra's Faithful @Wilson Nugraha
 42 R Clightos, Mystic Peak @Anthony Avon
@@ -196,7 +196,8 @@ Type=Custom
 189 R Sarkhan's Rite @Jason Chan
 190 M Battlefield Pyromancer @Gauthier Redon
 191 M Sarkhan, Ascendant Dragonspeaker @Romain Kurdi
-# 192-200
+192 R Battle for Zendikar @Alessandro Calbini
+# 193-200
 201 M Nissa, Unbound Animist @Romain Kurdi
 202 U Nissa's Binding @Simon Marczyk
 203 U Crystalline Petroglyph @Anna Podedworna
@@ -234,15 +235,18 @@ Type=Custom
 235 R Harvesttide Combatants @Riz Yangpeiv
 236 R Archon of Autumn @Sandara Tang
 237 R Roar of the Wurmcoil @Joel Hustak
-# 238-250
+238 U Noxious Detonation @Romain Kurdi
+# 239-250
 251 R Waterlogged Archipelago @Anthony Avon
 252 R Contaminated Rivulet @Anthony Avon
 253 R Sanguinary Morass @Anthony Avon
 254 R Wildwood Knolls @Anthony Avon
 255 R Blustery Steppe @Anthony Avon
 256 R Stark Wetland @Anthony Avon
-# 257-270
-271 R Vexed Waterfront @Anthony Avon
+# 257-265
+266 R Lithis, Loyal Banehound @Sandara Tang
+# 267-271
+271 M Vitromancy @Evelyne Park
 272 R Vexed Mire @Anthony Avon
 273 R Vexed Fen @Anthony Avon
 # 274-278
@@ -288,3 +292,4 @@ Type=Custom
 321 U Manapierce Feather @Sandara Tang
 322 M Draco, Rath Enigma @Bastien Grivet
 323 R Lotus Grove @Alessandro Calbini
+324 R City of Opal @Bastien Grivet

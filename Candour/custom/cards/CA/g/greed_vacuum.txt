@@ -3,7 +3,9 @@ ManaCost:W U
 Types:Instant
 
 A:SP$ Charm | Choices$ DBCounter,DBExile
+
 SVar:DBCounter:DB$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell with mana value 3 or greater | ValidTgts$ Card.cmcGE3 | SpellDescription$ Counter target spell with mana value 3 or greater.
+
 SVar:DBExile:DB$ ChangeZone | ValidTgts$ Permanent.cmcGE3 | TgtPrompt$ Select target permanent with mana value 3 or greater | Origin$ Battlefield | Destination$ Exile | SpellDescription$ Exile target permanent with mana value 3 or greater.
 
 Oracle:Choose one —\n• Counter target spell with mana value 3 or greater.\n• Exile target permanent with mana value 3 or greater.

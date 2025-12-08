@@ -1,0 +1,10 @@
+Name:Unforgiving Nightmare
+ManaCost:1 B B B B
+Types:Sorcery
+
+A:SP$ ControlPlayer | ValidTgts$ Player | TgtPrompt$ Select target player | SubAbility$ DBDiscard | SpellDescription$ You control target player during that player's next turn. Discard your hand.
+SVar:DBDiscard:DB$ Discard | Mode$ Hand
+
+Oracle:You control target player during that player's next turn.\nDiscard your hand.
+
+AI:RemoveDeck:All

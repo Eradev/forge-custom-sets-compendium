@@ -1,0 +1,9 @@
+Name:Seething Return
+ManaCost:2 B B
+Types:Sorcery
+
+A:SP$ ChangeZone | ValidTgts$ Creature.YouOwn | TgtPrompt$ Select target creature in your graveyard | Origin$ Graveyard | Destination$ Battlefield | SpellDescription$ Return target creature card from your graveyard to the battlefield.
+
+K:Flashback:Sac<2/Creature>
+
+Oracle:Return target creature card from your graveyard to the battlefield.\nFlashback—Sacrifice two creatures. (You may cast this card from your graveyard for its flashback cost. Then exile it.)
