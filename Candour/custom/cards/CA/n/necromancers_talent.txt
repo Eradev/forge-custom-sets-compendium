@@ -6,8 +6,8 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.S
 SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ b_2_2_zombie | TokenTapped$ True | TokenOwner$ You
 
 K:Class:2:B:AddTrigger$ TrigSearchedLibrary
-SVar:TrigSearchedLibrary:Mode$ SearchedLibrary | ValidPlayer$ You | SearchOwnLibrary$ True | Execute$ TrigEntomb | TriggerZones$ Battlefield | TriggerDescription$ Whenever you search your library, search your library for a card, put that card into your graveyard, then shuffle. This ability triggers only once each turn.
-SVar:TrigEntomb:DB$ ChangeZone | Origin$ Library | Destination$ Graveyard | ChangeType$ Card | ChangeNum$ 1 | Mandatory$ True | ActivationLimit$ 1
+SVar:TrigSearchedLibrary:Mode$ SearchedLibrary | ValidPlayer$ You | SearchOwnLibrary$ True | Execute$ TrigEntomb | TriggerZones$ Battlefield | ActivationLimit$ 1 | TriggerDescription$ Whenever you search your library, search your library for a card, put that card into your graveyard, then shuffle. This ability triggers only once each turn.
+SVar:TrigEntomb:DB$ ChangeZone | Origin$ Library | Destination$ Graveyard | ChangeType$ Card | ChangeNum$ 1 | Mandatory$ True
 
 K:Class:3:3 B:AddTrigger$ TriggerClassLevel
 SVar:TriggerClassLevel:Mode$ ClassLevelGained | ClassLevel$ 3 | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigReanimate | Secondary$ True | TriggerDescription$ When this Class becomes level 3, put target creature card from a graveyard onto the battlefield under your control. You lose life equal to its mana value.
