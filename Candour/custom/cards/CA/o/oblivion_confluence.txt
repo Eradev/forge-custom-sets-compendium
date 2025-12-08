@@ -8,6 +8,6 @@ SVar:DBSacrifice:DB$ Sacrifice | SacValid$ Creature | Defined$ Player | SpellDes
 
 SVar:DBDiscard:DB$ Discard | Defined$ Player | NumCards$ 1 | Mode$ TgtChoose | SpellDescription$ Each player discards a card.
 
-SVar:DBChange:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | SelectPrompt$ Choose a creature card with mana value 3 or less | ChangeType$ Creature.YouOwn+cmcLE3 | SpellDescription$ Return a creature card with mana value 3 or less from your graveyard to the battlefield.
+SVar:DBChange:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | SelectPrompt$ Choose a creature card with mana value 3 or less | ChangeType$ Creature.YouOwn+cmcLE3 | Hidden$ True | SpellDescription$ Return a creature card with mana value 3 or less from your graveyard to the battlefield.
 
 Oracle:Choose three. You may choose the same mode more than once.\n• Each player sacrifices a creature.\n• Each player discards a card.\n• Return a creature card with mana value 3 or less from your graveyard to the battlefield.
