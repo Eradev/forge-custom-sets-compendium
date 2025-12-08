@@ -1,0 +1,41 @@
+Name:Kevin E. Levin, Adaptive Outlaw
+ManaCost:1 U B R
+Types:Legendary Creature Human Rogue
+PT:3/4
+
+K:Menace
+
+A:AB$ Pump | Cost$ 1 U B T | ValidTgts$ Creature | TgtPrompt$ Select target creature | RememberPumped$ True | PrecostDesc$ Absorption — | SpellDescription$ NICKNAME gains all abilities of target creature until end of turn.
+S:Mode$ Continuous | Affected$ Card.Self | EffectZone$ Battlefield | GainsAbilitiesOf$ Card.IsRemembered | GainsTriggerAbsOf$ Card.IsRemembered | GainsAbilitiesOfZones$ Battlefield
+T:Mode$ Phase | Phase$ End of Turn | Static$ True | Execute$ DBCleanup
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Equipment+YouOwn+namedThe Omnitrix+AttachedTo Card.Self | Execute$ TrigTransform | TriggerDescription$ At the beginning of your end step, if NICKNAME is equipped with the Omnitrix, exile NICKNAME then return him to the battlefield transformed under his owner's control.
+SVar:TrigTransform:DB$ ChangeZone | Defined$ Self | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | Transformed$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Menace\nAbsorption — {1}{U}{B}, {T}: Kevin gains all abilities of target creature until end of turn.\nAt the beginning of your end step, if Kevin is equipped with the Omnitrix, exile Kevin then return him to the battlefield transformed under his owner's control.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Ultimate Kevin, Corrupted Fury
+ManaCost:no cost
+Colors:black,red
+Types:Legendary Creature Alien Mutant
+PT:5/6
+
+K:Flying
+
+K:First Strike
+
+T:Mode$ ChangesZone | ValidCard$ Creature.OppCtrl | Origin$ Battlefield | Destination$ Graveyard | OptionalDecider$ You | Execute$ TrigExile | TriggerZones$ Battlefield | TriggerDescription$ Frenzied Absorption — Whenever a creature an opponent controls dies, you may exile it. If you do, Kevin gains all abilities of that card for as long as it remains exiled.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | Defined$ TriggeredNewCardLKICopy
+S:Mode$ Continuous | Affected$ Card.Self | GainsAbilitiesOf$ Card.ExiledWithSource | GainsTriggerAbsOf$ Card.ExiledWithSource | GainsAbilitiesOfZones$ Exile
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigDealDamage | TriggerZones$ Battlefield | TriggerDescription$ When NICKNAME attacks, he deals damage equal to his power to up to one target creature or planeswalker.
+SVar:TrigDealDamage:DB$ DealDamage | ValidTgts$ Creature,Planeswalker | TargetMin$ 0 | TargetMax$ 1 | NumDmg$ X | DamageSource$ Self
+SVar:X:Count$CardPower
+
+Oracle:Flying, first strike\nFrenzied Absorption — Whenever a creature an opponent controls dies, you may exile it. If you do, Kevin gains all abilities of that card for as long as it remains exiled.\nWhen Kevin attacks, he deals damage equal to his power to up to one target creature or planeswalker.
