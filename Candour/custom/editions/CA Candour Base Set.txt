@@ -24,7 +24,7 @@ Type=Custom
 17 M Argivian Exemplar @Marcos V. Monken
 18 R Ethereal Dissension @PINDURSKI
 19 R Sand-Strider Battalion @Gabriel Schmidt
-20 U Veil of Spring @Dominik Mayer
+20 R Reluctant Knight @Donato Giancola
 21 M High Artificer of Eos @Edgar Sánchez Hidalgo
 22 R Labyrinth Sentinel @Darren Tan
 23 M Chromatic Seraph @Asur Misoa
@@ -243,8 +243,10 @@ Type=Custom
 254 R Wildwood Knolls @Anthony Avon
 255 R Blustery Steppe @Anthony Avon
 256 R Stark Wetland @Anthony Avon
-# 257-270
-271 R Vexed Waterfront @Anthony Avon
+# 257-265
+266 R Lithis, Loyal Banehound @Sandara Tang
+# 267-271
+271 M Vitromancy @Evelyne Park
 272 R Vexed Mire @Anthony Avon
 273 R Vexed Fen @Anthony Avon
 # 274-278
