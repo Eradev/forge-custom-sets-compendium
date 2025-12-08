@@ -1,0 +1,17 @@
+Name:Max Tennyson, Grandpa and Mentor
+ManaCost:3 R W
+Types:Legendary Creature Human Warrior
+PT:4/3
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ At the beginning of combat on your turn, draw a card, then create a Clue, Food or Treasure.
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBTokenChoice
+SVar:DBTokenChoice:DB$ GenericChoice | Choices$ DBClue,DBFood,DBTreasure | Defined$ You | SpellDescription$ Choose a token to create
+SVar:DBClue:DB$ Investigate | SpellDescription$ Create a Clue.
+SVar:DBFood:DB$ Token | TokenScript$ c_a_food_sac | SpellDescription$ Create a Food.
+SVar:DBTreasure:DB$ Token | TokenScript$ c_a_treasure_sac | SpellDescription$ Create a Treasure.
+
+S:Mode$ Continuous | Affected$ Alien.YouCtrl | AddKeyword$ Ward:1 | AddPower$ 2 | AddToughness$ 2 | Condition$ Metalcraft
+
+Oracle:At the beginning of combat on your turn, draw a card, then create a Clue, Food or Treasure.\nMetalcraft — Aliens you control get +2/+2 and have ward {1} as long as you control three or more artifacts.
+
+SVar:PlayMain1:TRUE
