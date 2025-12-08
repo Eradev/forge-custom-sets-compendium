@@ -1,0 +1,16 @@
+Name:Grey Matter, Quantum Thinker
+ManaCost:U R
+Types:Legendary Creature Alien Frog
+PT:1/2
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ Taps | ValidCard$ Artifact.nonCreature+OppCtrl | Execute$ TrigGainControl | TriggerZones$ Battlefield | TriggerDescription$ When a noncreature artifact an opponent controls becomes tapped, you may pay {1}. If you do, until the end of your next turn, gain control of it. It becomes an artifact creature with base power and toughness equal to its mana value until the end of your next turn.
+SVar:TrigGainControl:AB$ GainControl | Cost$ 1 | Defined$ TriggeredCard | LoseControl$ UntilTheEndOfYourNextTurn | SubAbility$ DBAnimate
+SVar:DBAnimate:DB$ Animate | Defined$ TriggeredCard | Power$ X | Toughness$ X | Types$ Artifact,Creature | Duration$ UntilTheEndOfYourNextTurn | SubAbility$ DBCleanup
+SVar:X:TriggeredCard$CardManaCost
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWhen a noncreature artifact an opponent controls becomes tapped, you may pay {1}. If you do, until the end of your next turn, gain control of it. It becomes an artifact creature with base power and toughness equal to its mana value until the end of your next turn.
