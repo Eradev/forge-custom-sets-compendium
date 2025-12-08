@@ -1,0 +1,12 @@
+Name:Sonic Disk
+ManaCost:no cost
+Types:Artifact Creature Drone
+PT:2/2
+Colors:blue
+
+K:Flying
+
+A:AB$ GainLife | Cost$ Sac<1/CARDNAME/this creature> | LifeAmount$ 2 | SubAbility$ DBDraw | SpellDescription$ Gain 2 life and draw a card.
+SVar:DBDraw:DB$ Draw
+
+Oracle:Flying\nSacrifice this creature: Gain 2 life and draw a card.

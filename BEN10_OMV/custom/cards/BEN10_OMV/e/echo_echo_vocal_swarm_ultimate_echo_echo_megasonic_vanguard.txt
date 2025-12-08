@@ -1,0 +1,44 @@
+Name:Echo Echo, Vocal Swarm
+ManaCost:1 G W
+Types:Legendary Creature Alien Shapeshifter
+PT:2/2
+
+K:Myriad
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
+
+A:AB$ DealDamage | Cost$ T | ValidTgts$ Any | NumDmg$ 1 | SpellDescription$ NICKNAME deals 1 damage to any target.
+
+S:Mode$ Continuous | Affected$ Creature.token+YouCtrl+namedEcho Echo; Vocal Swarm | RemoveType$ Legendary | Description$ Soundclone — Tokens you control named CARDNAME aren't legendary and don't exile at the end of combat.
+
+S:Mode$ CantExile | ValidCard$ Card.token+namedEcho Echo; Vocal Swarm | ValidCause$ Triggered.YouCtrl | Phases$ EndCombat
+
+A:AB$ SetState | Cost$ 2 U B R | Defined$ Self | Mode$ Transform | SorcerySpeed$ True | PrecostDesc$ Goin' Ultimate — | SpellDescription$ Transform NICKNAME. Activate only as a sorcery.
+
+Oracle:Myriad, omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\n{T}: Echo Echo deals 1 damage to any target.\nSoundclone — Tokens you control named Echo Echo, Vocal Swarm aren't legendary and don't exile at the end of combat.\nGoin' Ultimate — {2}{U}{B}{R}: Transform Echo Echo. Activate only as a sorcery.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Ultimate Echo Echo, Megasonic Vanguard
+ManaCost:no cost
+Colors:W U B R G
+Types:Legendary Artifact Creature Alien Construct
+PT:4/6
+
+K:Flying
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 4 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 4 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 4
+
+T:Mode$ Transformed | ValidCard$ Card.Self | Execute$ DBExileAll | TriggerDescription$ When this creature transforms into NICKNAME, exile all creatures you control named Echo Echo, Vocal Swarm. Create a 2/2 blue Sonic Disk artifact creature token with flying and "Sacrifice this creature: Gain 2 life and draw a card." for each token exiled this way.
+SVar:DBExileAll:DB$ ChangeZoneAll | Origin$ Battlefield | Destination$ Exile | ChangeType$ Creature.token+namedEcho Echo; Vocal Swarm | RememberChanged$ True | SubAbility$ DBTokenCreate
+SVar:DBTokenCreate:DB$ Token | TokenScript$ u_2_2_a_sonic_disk | LockTokenScript$ True | TokenAmount$ X | SubAbility$ DBCleanup
+SVar:X:Remembered$Amount
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Flying, omnishuffle 4 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 4 life.)\nWhen this creature transforms into Ultimate Echo Echo, exile all creatures you control named Echo Echo, Vocal Swarm. Create a 2/2 blue Sonic Disk artifact creature token with flying and "Sacrifice this creature: Gain 2 life and draw a card." for each token exiled this way.
