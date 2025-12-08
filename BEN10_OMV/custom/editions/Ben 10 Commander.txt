@@ -144,6 +144,7 @@ Type=Custom
 
 [tokens]
 6 u_2_2_a_sonic_disk
+7 b_3_3_null_guardian_flying
 12 c_1_1_a_drone_flying
 
 [other]

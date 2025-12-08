@@ -1,0 +1,9 @@
+Name:Null Guardian
+ManaCost:no cost
+Types:Creature Alien Thrull
+PT:3/3
+Colors:black
+
+K:Flying
+
+Oracle:Flying
