@@ -1,0 +1,45 @@
+Name:Humungousaur, Savage Might
+ManaCost:3 R G W
+Types:Legendary Creature Alien Dinosaur
+PT:4/4
+
+K:Trample
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
+
+A:AB$ PutCounter | Cost$ X R G W | Defined$ Self | CounterType$ P1P1 | CounterNum$ X | SubAbility$ DBCounters | SpellDescription$ Put X +1/+1 counters on NICKNAME, then if its power is 10 or greater, put a vigilance and menace counter on it.
+SVar:X:Count$xPaid
+SVar:DBCounters:DB$ PutCounter | Defined$ Self | ConditionCheckSVar$ Pow | ConditionSVarCompare$ GE10 | CounterType$ Vigilance | CounterNum$ 1 | SubAbility$ DBMenace
+SVar:DBMenace:DB$ PutCounter | Defined$ Self | ConditionCheckSVar$ Pow | ConditionSVarCompare$ GE10 | CounterType$ Menace | CounterNum$ 1
+SVar:Pow:Count$CardPower
+
+A:AB$ SetState | Cost$ 3 U B | Defined$ Self | Mode$ Transform | SorcerySpeed$ True | PrecostDesc$ Goin' Ultimate! — | SpellDescription$ Transform NICKNAME, activate only as a sorcery.
+
+Oracle:Trample, omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\n{X}{R}{G}{W}: Put X +1/+1 counters on Humungousaur, then if its power is 10 or greater, put a vigilance and menace counter on it.\nGoin' Ultimate! — {3}{U}{B}: Transform Humungousaur, activate only as a sorcery.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Ultimate Humungousaur, Living Battletank
+ManaCost:no cost
+Colors:blue,black
+Types:Legendary Creature Alien Dinosaur
+PT:7/10
+
+K:Reach
+
+K:Trample
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 4 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 4 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 4
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigRepeat | TriggerDescription$ Missile Barrage — At the beginning of combat on your turn, NICKNAME deals damage to each opponent equal to the number of creatures they control.
+SVar:TrigRepeat:DB$ RepeatEach | RepeatPlayers$ Opponent | RepeatSubAbility$ DBDamageOpp
+SVar:DBDamageOpp:DB$ DealDamage | Defined$ Remembered | NumDmg$ Y | DamageSource$ Self
+SVar:Y:Count$Valid Creature.RememberedPlayerCtrl
+
+Oracle:Reach, trample, omnishuffle 4 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 4 life.)\nMissile Barrage — At the beginning of combat on your turn, Ultimate Humungousaur deals damage to each opponent equal to the number of creatures they control.
