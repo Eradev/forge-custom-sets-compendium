@@ -1,0 +1,11 @@
+Name:Xenon, Azmuth's Retreat
+ManaCost:no cost
+Types:Land Planet
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+A:AB$ Mana | Cost$ T | Produced$ G | SpellDescription$ Add {G}.
+K:Station:12
+S:Mode$ Continuous | Affected$ Card.Self+counters_GE12_CHARGE | AddAbility$ EvendoMana | Description$ STATION 12+ {1}, {G}, {T}: Draw a card for each Alien you control.
+SVar:EvendoMana:AB$ Draw | Cost$ 1 G T | NumCards$ X | SpellDescription$ Draw a card for each Alien you control.
+SVar:X:Count$Valid Alien.YouCtrl
+Oracle:This land enters tapped.\n{T}: Add {G}.\nStation (Tap another creature you control: Put charge counters equal to its power on this Planet. Station only as a sorcery.)\nSTATION 12+\n{1}, {G}, {T}: Draw a card for each Alien you control.
