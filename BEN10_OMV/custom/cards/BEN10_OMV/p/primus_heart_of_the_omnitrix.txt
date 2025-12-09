@@ -1,6 +1,6 @@
 Name:Primus, Heart of the Omnitrix
 ManaCost:no cost
-Types:Land Planet
+Types:Legendary Land Planet
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped unless you control a creature.
 SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Creature.YouCtrl | ConditionCompare$ EQ0
 A:AB$ Mana | Cost$ T | Produced$ Any | RestrictValid$ Spell.Alien,Activated.Alien,Activated,Activated.namedAbilityThe Omnitrix | SpellDescription$ Add one mana of any color. Spend this mana only to cast a Alien spell, activate abilites of Alien cards or the Omnitrix.

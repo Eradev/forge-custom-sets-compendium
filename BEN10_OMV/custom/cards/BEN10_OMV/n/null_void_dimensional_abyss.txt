@@ -1,6 +1,6 @@
 Name:Null Void, Dimensional Abyss
 ManaCost:no cost
-Types:Land Planet
+Types:Legendary Land Planet
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
 SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
 A:AB$ Mana | Cost$ T | Produced$ B | SpellDescription$ Add {B}.
