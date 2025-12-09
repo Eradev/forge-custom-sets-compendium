@@ -1,0 +1,45 @@
+Name:Spidermonkey, Silksaboteur
+ManaCost:U B
+Types:Legendary Creature Alien Monkey Spider
+PT:1/2
+
+K:Skulk
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigTapUntap | OptionalDecider$ You | TriggerDescription$ Whenever NICKNAME attacks, you may tap up to one target creature an opponent controls and untap up to one land or artifact you control.
+SVar:TrigTapUntap:DB$ Tap | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select up to one target creature an opponent controls | SubAbility$ DBUntap
+SVar:DBUntap:DB$ Untap | ValidTgts$ Land.YouCtrl,Artifact.YouCtrl | TgtPrompt$ Select up to one land or artifact you control | TargetMin$ 0 | TargetMax$ 1
+
+A:AB$ SetState | Cost$ 2 R G W | Defined$ Self | Mode$ Transform | SorcerySpeed$ True | PrecostDesc$ Goin' Ultimate! — | SpellDescription$ Transform NICKNAME, activate only as a sorcery.
+
+Oracle:Skulk, omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\nWhenever Spidermonkey attacks, you may tap up to one target creature an opponent controls and untap up to one land or artifact you control.\nGoin' Ultimate! — {2}{R}{G}{W}: Transform Spidermonkey, activate only as a sorcery.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Ultimate Spidermonkey, Arachno-Primal
+ManaCost:no cost
+Colors:red,green,white
+Types:Legendary Creature Alien Ape Spider
+PT:4/5
+
+K:Menace
+
+K:Reach
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 4 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 4 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 4
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigTapX | TriggerDescription$ Whenever NICKNAME attacks, tap up to X target creatures defending player controls, where X is the number of attacking creatures.
+SVar:TrigTapX:DB$ Tap | ValidTgts$ Creature | TargetsWithDefinedController$ TriggeredDefendingPlayer | TargetMin$ 0 | TargetMax$ X
+SVar:X:Count$Valid Creature.attacking
+
+T:Mode$ DamageDone | ValidSource$ Creature | ValidTarget$ Player.Opponent | CombatDamage$ True | OptionalDecider$ TriggeredSourceController | Execute$ TrigDraw | TriggerDescription$ Whenever a creature deals combat damage to one of your opponents, its controller may draw a card.
+SVar:TrigDraw:DB$ Draw | Defined$ TriggeredSourceController
+
+Oracle:Menace, reach, omnishuffle 4 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 4 life.)\nWhenever Ultimate Spidermonkey attacks, tap up to X target creatures defending player controls, where X is the number of attacking creatures.\nWhenever a creature deals combat damage to one of your opponents, its controller may draw a card.
