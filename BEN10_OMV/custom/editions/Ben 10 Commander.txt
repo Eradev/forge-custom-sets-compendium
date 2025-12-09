@@ -146,6 +146,7 @@ Type=Custom
 6 u_2_2_a_sonic_disk
 7 b_3_3_null_guardian_flying
 8 g_0_1_plant
+10 bg_3_3_dnalien
 11 c_a_clue_draw
 12 c_1_1_a_drone_flying
 13 c_a_food_sac
