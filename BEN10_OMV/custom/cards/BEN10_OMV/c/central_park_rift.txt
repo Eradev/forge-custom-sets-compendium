@@ -1,0 +1,39 @@
+Name:Central Park Rift
+ManaCost:2
+Types:Legendary Artifact
+
+S:Mode$ Continuous | Affected$ You | SetMaxHandSize$ Unlimited | Description$ You have no maximum hand size.
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+T:Mode$ SpellCast | ValidCard$ Card | Execute$ TrigCounter | TriggerZones$ Battlefield | TriggerDescription$ Whenever a player casts a spell, put a charge counter on CARDNAME. It deals 2 damage to that player. Then if CARDNAME has eight or more charge counters on it, exile it, then return it to the battlefield transformed under its owner's control.
+SVar:TrigCounter:DB$ PutCounter | Defined$ Self | CounterType$ CHARGE | CounterNum$ 1 | SubAbility$ DBDealDamage
+SVar:DBDealDamage:DB$ DealDamage | Defined$ TriggeredActivator | NumDmg$ 2 | SubAbility$ DBCheckTransform
+SVar:DBCheckTransform:DB$ Branch | BranchConditionSVar$ X | BranchConditionSVarCompare$ GE8 | TrueSubAbility$ DBExileTransform | FalseSubAbility$ DBCleanup
+SVar:X:Count$CardCounters.CHARGE
+SVar:DBExileTransform:DB$ ChangeZone | Defined$ Self | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | Transformed$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:You have no maximum hand size.\n{T}: Add {C}\nWhenever a player casts a spell, put a charge counter on Central Park Rift. It deals 2 damage to that player. Then if Central Park Rift has eight or more charge counters on it, exile it, then return it to the battlefield transformed under its owner's control.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Rex Salazar, Hero United
+ManaCost:no cost
+Colors:green,blue,red
+Types:Legendary Artifact Creature Human Construct
+PT:1/2
+
+K:Haste
+
+K:Modular:3
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ DBDoubleCounters | TriggerDescription$ Whenever NICKNAME deals combat damage to a player, double the number of +1/+1 counters on him.
+SVar:DBDoubleCounters:DB$ MultiplyCounter | Defined$ Self | CounterType$ P1P1 | Multiplier$ 2
+
+A:AB$ PutCounter | Cost$ 3 SubCounter<2/P1P1/NICKNAME> | Defined$ Self | CounterType$ Flying,Vigilance,Trample,First Strike,Hexproof,Indestructible | CounterTypePerDefined$ True | PrecostDesc$ Ninite Adaptation — | SpellDescription$ Put your choice of a flying, vigilance, trample, first strike, hexproof or indestructible counter on him.
+
+Oracle:Haste, modular 3\nWhenever Rex deals combat damage to a player, double the number of +1/+1 counters on him.\nNinite Adaptation — {3}, Remove two +1/+1 counters from Rex: Put your choice of a flying, vigilance, trample, first strike, hexproof or indestructible counter on him.
