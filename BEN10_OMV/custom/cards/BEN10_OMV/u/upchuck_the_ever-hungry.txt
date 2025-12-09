@@ -1,0 +1,16 @@
+Name:Upchuck, the Ever-hungry
+ManaCost:BG
+Types:Legendary Creature Alien Beast 
+PT:1/1
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ If CARDNAME would be put into a graveyard from anywhere, shuffle it into its owner's library instead. Its owner loses 1 life.
+SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Reveal$ True | Defined$ ReplacedCard | Shuffle$ True | SubAbility$ OmniDmg
+SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 1
+
+A:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+A:AB$ ChangeZone | Cost$ X T | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Card.cmcLEX | SubAbility$ DealDmg | TgtPrompt$ Exile target card from a graveyard with mana value X.
+SVar:DealDmg:DB$ DealDamage | ValidTgts$ Any | NumDmg$ X | SpellDescription$ CARDNAME deals X damage to any target.
+SVar:X:Count$xPaid
+
+Oracle:Omnishuffle 1\n{T}: Add one mana of any color.\n{X},{T}: Exile target card from a graveyard with mana value X. Upchuck deals X damage to any target.
