@@ -2,13 +2,8 @@ Name:Vreedle Salvage Rig
 ManaCost:3
 Types:Artifact
 
-T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ TrigPeek | TriggerZones$ Battlefield | TriggerDescription$ At the beginning of your upkeep, you may reveal the top card of your library. If it's a land card with a basic land type, put it into the battlefield tapped.
-
-SVar:TrigPeek:DB$ PeekAndReveal | PeekAmount$ 1 | RevealValid$ Land.hasABasicLandType | RevealOptional$ True | RememberRevealed$ True | SubAbility$ DBChangeZone
-
-SVar:DBChangeZone:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Land.hasABasicLandType | Tapped$ True | Defined$ Remembered | ConditionDefined$ Remembered | ConditionCompare$ GE1 | SubAbility$ DBCleanup
-
-SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ TrigPeek | TriggerZones$ Battlefield | OptionalDecider$ You | TriggerDescription$ At the beginning of your upkeep, you may reveal the top card of your library. If it's a land card with a basic land type, put it into the battlefield tapped.
+SVar:TrigPeek:DB$ Dig | DigNum$ 1 | Reveal$ True | ChangeNum$ All | ChangeValid$ Land.hasABasicLandType | DestinationZone$ Battlefield | Tapped$ True | DestinationZone2$ Library | LibraryPosition2$ 0
 
 A:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
 

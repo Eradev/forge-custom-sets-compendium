@@ -1,6 +1,9 @@
 Name:Bellwood, Hometown Battleground 
 ManaCost:no cost
 Types:Legendary Land Town
+
 A:AB$ Mana | Cost$ T | Produced$ R | SpellDescription$ Add {R}.
-A:AB$ DamageAll | Cost$ 1 R T | ValidCards$ Creature.ThisTurnEntered | NumDmg$ 1 | SpellDescription$ CARDNAME deals 1 damage to each creature that entered this turn.
-Oracle:{T}: Add {R}.\n{1}{R},{T}: Bellwood deals 1 damage to each creature that entered this turn.
+
+A:AB$ DamageAll | Cost$ 1 R T | ValidCards$ Creature.ThisTurnEntered | NumDmg$ 1 | SpellDescription$ NICKNAME deals 1 damage to each creature that entered this turn.
+
+Oracle:{T}: Add {R}.\n{1}{R}, {T}: Bellwood deals 1 damage to each creature that entered this turn.

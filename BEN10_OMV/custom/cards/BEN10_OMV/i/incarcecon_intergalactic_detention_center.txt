@@ -1,12 +1,15 @@
 Name:Incarcecon Intergalactic Detention Center
 ManaCost:no cost
 Types:Legendary Artifact Land Planet
+
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
 SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
-A:AB$ Mana | Cost$ T | Produced$ W | SpellDescription$ Add {W}.
-K:Station:12
-S:Mode$ Continuous | Affected$ Card.Self+counters_GE12_CHARGE | AddAbility$ DetainCreatures | Description$ STATION 12+ {W}, {T}: Detain each creature target opponent controls.
 
-SVar:DetainCreatures:AB$ PumpAll | Cost$ W T | KW$ HIDDEN CARDNAME can't attack or block. & HIDDEN CARDNAME's activated abilities can't be activated. | IsCurse$ True | Duration$ UntilYourNextTurn | ValidTgts$ Opponent | TgtPrompt$ Select target opponent | ValidCards$ Creature.ControlledBy TargetedOrController | SpellDescription$ Detain each creature target opponent controls.
+A:AB$ Mana | Cost$ T | Produced$ W | SpellDescription$ Add {W}.
+
+K:Station:12
+
+S:Mode$ Continuous | Affected$ Card.Self+counters_GE12_CHARGE | AddAbility$ DetainCreatures | Description$ STATION 12+ {W}, {T}: Detain each creature target opponent controls.
+SVar:DetainCreatures:AB$ PumpAll | Cost$ W T | KW$ HIDDEN CARDNAME can't attack or block. & HIDDEN CARDNAME's activated abilities can't be activated. | IsCurse$ True | Duration$ UntilYourNextTurn | ValidTgts$ Opponent | TgtPrompt$ Select target opponent | ValidCards$ Creature.ControlledBy Targeted | SpellDescription$ Detain each creature target opponent controls.
 
 Oracle:This land enters tapped.\n{T}: Add {W}.\nStation (Tap another creature you control: Put charge counters equal to its power on this Planet. Station only as a sorcery.)\nSTATION 12+\n{W}, {T}: Detain each creature target opponent controls.

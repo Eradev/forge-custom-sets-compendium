@@ -1,11 +1,16 @@
 Name:Primus, Heart of the Omnitrix
 ManaCost:no cost
 Types:Legendary Land Planet
+
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped unless you control a creature.
 SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Creature.YouCtrl | ConditionCompare$ EQ0
-A:AB$ Mana | Cost$ T | Produced$ Any | RestrictValid$ Spell.Alien,Activated.Alien,Activated,Activated.namedAbilityThe Omnitrix | SpellDescription$ Add one mana of any color. Spend this mana only to cast a Alien spell, activate abilites of Alien cards or the Omnitrix.
+
+A:AB$ Mana | Cost$ T | Produced$ Any | RestrictValid$ Spell.Alien,Activated.Alien,Activated.NamedAbilityOmniActivate | SpellDescription$ Add one mana of any color. Spend this mana only to cast a Alien spell, activate abilites of Alien cards or the Omnitrix.
+
 K:Station:12
+
 S:Mode$ Continuous | Affected$ Card.Self+counters_GE12_CHARGE | AddAbility$ EvendoMana | Description$ STATION 12+ {T}: Gain life equal to the creatures you control.
 SVar:EvendoMana:AB$ GainLife | Cost$ T | Defined$ You | LifeAmount$ X | SpellDescription$ Gain life equal to the creatures you control.
 SVar:X:Count$Valid Creature.YouCtrl
+
 Oracle:This land enters tapped unless you control a creature.\n{T}: Add one mana of any color. Spend this mana only to cast a Alien spell, activate abilites of Alien cards or the Omnitrix.\nStation (Tap another creature you control: Put charge counters equal to its power on this Planet. Station only as a sorcery.)\nSTATION 12+\n{T}: Gain life equal to the number of creatures you control.

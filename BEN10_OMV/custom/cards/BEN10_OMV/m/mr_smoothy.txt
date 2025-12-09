@@ -1,7 +1,10 @@
 Name:Mr. Smoothy
 ManaCost:no cost
 Types:Land
+
 A:AB$ Token | Cost$ T | TokenScript$ c_a_food_sac | SpellDescription$ Create a Food token.
+
 A:AB$ Mana | Cost$ T Sac<X/Food> | Produced$ Combo Any | Amount$ X | SpellDescription$ Add X mana in any combination of colors.
 SVar:X:Count$xPaid
+
 Oracle:{T}: Create a Food token.\n{T}, Sacrifice X Foods: Add X mana in any combination of colors.
