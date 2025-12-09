@@ -145,8 +145,11 @@ Type=Custom
 [tokens]
 6 u_2_2_a_sonic_disk
 7 b_3_3_null_guardian_flying
+11 c_a_clue_draw
 12 c_1_1_a_drone_flying
+13 c_a_food_sac
 14 proto-tool
+15 c_a_treasure_sac
 
 [other]
 9 emblem_master_control
