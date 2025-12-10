@@ -1,0 +1,20 @@
+Name:Snare-oh, Curse in Wrappings 
+ManaCost:2 B G U
+Types:Legendary Creature Alien Zombie
+PT:3/4
+
+K:Reach
+K:Ward:2
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Reveal$ True | Defined$ ReplacedCard | Shuffle$ True | SubAbility$ OmniDmg
+SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigMill | TriggerZones$ Battlefield | TriggerDescription$ Whenever NICKNAME attacks, you may pay {2}. If you do, target opponent mills three cards. Then exile up to one target creature from that player's graveyard. Create a token that's a copy of that card, except it's a 2/2 black Zombie.
+SVar:TrigMill:AB$ Mill | Cost$ 2 | ValidTgts$ Opponent | TgtPrompt$ Select target opponent | NumCards$ 3 | SubAbility$ ImmTrig
+SVar:ImmTrig:DB$ ImmediateTrigger | Static$ True | Execute$ ExileCreature
+SVar:ExileCreature:DB$ ChangeZone | ValidTgts$ Creature | Origin$ Graveyard | DefinedPlayer$ TargetedOwner | Chooser$ You | Destination$ Exile | TargetMin$ 0 | TargetMax$ 1 | RememberChanged$ True | TgtPrompt$ Select up to one target creature card | SubAbility$ DBCopy
+SVar:DBCopy:DB$ CopyPermanent | Defined$ Remembered | SetPower$ 2 | SetToughness$ 2 | SetColor$ Black | SetCreatureTypes$ Zombie | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Reach, ward {2}, omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\nWhenever Snare-oh attacks, you may pay {2}. If you do, target opponent mills three cards. Then exile up to one target creature from that player's graveyard. Create a token that's a copy of that card, except it's a 2/2 black Zombie.
