@@ -1,0 +1,16 @@
+Name:Whampire, Hunger Unleashed 
+ManaCost:2 B R
+Types:Legendary Creature Alien Vampire
+PT:2/3
+
+K:Flying
+K:Deathtouch
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Reveal$ True | Defined$ ReplacedCard | Shuffle$ True | SubAbility$ OmniDmg
+SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 2
+
+A:AB$ GainControl | Cost$ 1 B R PayLife<2> | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature opponent controls. | SubAbility$ Animate | LoseControl$ LeavesPlay,LoseControl | SpellDescription$ Gain control of target creature opponent controls for as long as you control NICKNAME. It becomes a Vampire in addition to its other types.
+SVar:Animate:DB$ Animate | Defined$ Targeted | Types$ Vampire | Duration$ Permanent
+
+Oracle:Reach, omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\nCorruptura - {1}{B}{R}, Pay 2 life: Gain control of target creature opponent controls for as long as you control Whampire. It becomes a Vampire in addition to its other types.
