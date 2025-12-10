@@ -1,0 +1,15 @@
+Name:Ben Tennyson, Aspiring Hero
+ManaCost:1 G U R
+Types:Legendary Creature Human Shapeshifter
+PT:1/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSearch | TriggerDescription$ When NICKNAME enters, search your library, graveyard, and/or exile for a card named The Omnitrix and put it onto the battlefield attached to Ben. If you search your library this way, shuffle.
+SVar:TrigSearch:DB$ ChangeZone | OriginAlternative$ Graveyard,Exile | Hidden$ True | Origin$ Library | Destination$ Battlefield | Reveal$ True | AttachAfter$ True | ChangeType$ Card.namedThe Omnitrix | AttachedTo$ Self | ChangeNum$ 1 | ShuffleNonMandatory$ True
+
+A:AB$ Investigate | Cost$ W B | SubAbility$ DBGainLife | PrecostDesc$ Improvised Plan — | SpellDescription$ Investigate. You gain 2 life.
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 2
+
+Oracle:When Ben Tennyson enters, search your library, graveyard and/or exile for a card named The Omnitrix and put it onto the battlefield attached to Ben. If you search your library this way, shuffle.\nImprovised Plan {-} {W}{B}: Investigate. You gain 2 life.
+
+DeckHas:Ability$Graveyard
+DeckNeeds:Name$The Omnitrix

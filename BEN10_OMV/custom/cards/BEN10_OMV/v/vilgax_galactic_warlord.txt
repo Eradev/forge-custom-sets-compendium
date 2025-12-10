@@ -1,0 +1,15 @@
+Name:Vilgax, Galactic Warlord
+ManaCost:4 BP RP
+Types:Legendary Artifact Creature Horror 
+PT:5/6
+K:Menace
+K:Deathtouch
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigToken | TriggerZones$ Battlefield | TriggerDescription$ Whenever NICKNAME attacks, create a 1/1 colorless Drone artifact creature token with flying. Then, destroy up to one target nonland permanent with mana value X or less, where X is the number of artifacts you control.
+SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ c_1_1_a_drone_flying | TokenOwner$ You | SubAbility$ ImmTrig
+SVar:ImmTrig:DB$ ImmediateTrigger | Static$ True | Execute$ DestroyTargetPermanent
+SVar:DestroyTargetPermanent:DB$ Destroy | ValidTgts$ Permanent.nonLand+cmcLEX | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Destroy up to one target nonland permanent with mana value X or less, where X is the number of artifacts you control.
+SVar:X:Count$Valid Artifact.YouCtrl
+
+Oracle:Menace, deathtouch\nWhen Vilgax attacks, create a 1/1 colorless Drone artifact creature token with flying. Then, destroy up to one target nonland permanent with mana value X or less, where X is the number of artifacts you control.
+

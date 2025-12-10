@@ -1,0 +1,16 @@
+Name:Heatblast, Walking Supernova 
+ManaCost:2 R R
+Types:Legendary Creature Alien Elemental
+PT:3/3
+S:Mode$ CantGainLife | ValidPlayer$ Player | Description$ Players can't gain life.
+
+T:Mode$ Phase | Phase$ Upkeep | TriggerZones$ Battlefield | Execute$ TrigBlaze | TriggerDescription$ At the beginning of each upkeep, put a blaze counter on NICKNAME.
+SVar:TrigBlaze:DB$ PutCounter | Defined$ Self | CounterType$ BLAZE | CounterNum$ 1 | SubAbility$ BlazeDmg
+SVar:BlazeDmg:DB$ DealDamage | ValidTgts$ Any | NumDmg$ X | SpellDescription$ NICKNAME deals X damage to any target.
+SVar:X:Count$CardCounters.BLAZE
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Reveal$ True | Defined$ ReplacedCard | Shuffle$ True | SubAbility$ OmniDmg
+SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 1 
+
+Oracle: Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nPlayers can't gain life\nPyrokinesis - At the beginning of each upkeep, put a blaze counter on Heatblast, then Heatblast deals X damage to any target, where X is the number of blaze counters on him.
