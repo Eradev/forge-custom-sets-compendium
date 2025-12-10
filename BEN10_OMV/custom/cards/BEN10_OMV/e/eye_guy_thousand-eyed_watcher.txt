@@ -1,0 +1,20 @@
+Name:Eye Guy, Thousand-Eyed Watcher
+ManaCost:1 U B
+Types:Legendary Creature Alien Horror 
+PT:1/2
+
+S:Mode$ Continuous | Affected$ Card.TopLibrary+YouCtrl | AffectedZone$ Library | MayLookAt$ You | Description$ You may look at the top card of your library any time.
+
+S:Mode$ Continuous | Affected$ Alien.TopLibrary+YouCtrl | AffectedZone$ Library | MayPlay$ True | Description$ You may cast Alien spells from the top of your library.
+
+T:Mode$ SpellCast | ValidCard$ Card.!wasCastFromYourHand | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Optic Blast — Whenever you cast a spell from anywhere other than your hand, NICKNAME deals 1 damage to each opponent.
+SVar:TrigDamage:DB$ DealDamage | Defined$ Player.Opponent | NumDmg$ 1
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Reveal$ True | Defined$ ReplacedCard | Shuffle$ True | SubAbility$ OmniDmg
+SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 1
+
+Oracle:Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nYou may look at the top card of your library any time.\nYou may cast Alien spells from the top of your library.\nOptic Blast — Whenever you cast a spell from anywhere other than your hand, NICKNAME deals 1 damage to each opponent.
+
+
+
