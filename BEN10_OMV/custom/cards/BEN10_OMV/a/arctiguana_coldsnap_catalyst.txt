@@ -1,0 +1,18 @@
+Name:Arctiguana, Coldsnap Catalyst
+ManaCost:2 U
+Types:Legendary Snow Creature Alien Lizard
+PT:2/3
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+S:Mode$ Continuous | Affected$ Land.YouCtrl | AddType$ Snow | Description$ Frozen Domain — Lands you control are snow and can tap for snow mana of any color they could normally produce.
+
+T:Mode$ SpellCast | ValidCard$ Permanent | ValidActivatingPlayer$ You | SnowSpentForCardsColor$ True | Execute$ ModifyAndDraw | TriggerZones$ Battlefield | TriggerDescription$ Whenever you cast a permanent spell using snow mana, it becomes snow. Then if you control three or more nonland snow permanents, draw a card.
+SVar:ModifyAndDraw:DB$ Animate | Defined$ TriggeredCardLKICopy | Types$ Snow | Duration$ Permanent | SubAbility$ ImmTrig
+SVar:ImmTrig:DB$ ImmediateTrigger | Execute$ DrawCond | Static$ True
+SVar:DrawCond:DB$ Draw | Defined$ You | ConditionCheckSVar$ Y | ConditionSVarCompare$ GE3
+SVar:Y:Count$Valid Permanent.Snow+nonLand+YouCtrl
+
+Oracle:Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nFrozen Domain — Lands you control are snow and can tap for snow mana of any color they could normally produce.\nWhenever you cast a permanent spell using snow mana, it becomes snow. Then if you control three or more nonland snow permanents, draw a card.

@@ -1,0 +1,16 @@
+Name:Spitter, Caustic Menace
+ManaCost:1 B G
+Types:Legendary Creature Alien Lizard
+PT:2/3
+
+K:Deathtouch
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ Whenever NICKNAME deals combat damage to a player, that player loses life equal to the number of card types among cards in their graveyard.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ TriggeredTarget | LifeAmount$ X
+SVar:X:Count$ValidGraveyard Card.OwnedBy TriggeredTarget$CardTypes
+
+Oracle:Deathtouch, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWhenever Spitter deals combat damage to a player, that player loses life equal to the number of card types among cards in their graveyard.

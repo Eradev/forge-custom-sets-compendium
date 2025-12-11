@@ -1,0 +1,20 @@
+Name:Buzzshock, Sonic Capacitor
+ManaCost:1 U R
+Types:Legendary Creature Alien Elemental
+PT:2/1
+
+K:Flying
+
+K:Haste
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigEnergy | TriggerDescription$ Whenever NICKNAME deals combat damage to a player, you get that many {E} (energy counters)
+SVar:TrigEnergy:DB$ PutCounter | Defined$ You | CounterType$ ENERGY | CounterNum$ X
+SVar:X:TriggerCount$DamageAmount
+
+S:Mode$ Continuous | Affected$ Card.YouCtrl+nonCreature | MayPlay$ True | MayPlayAltManaCost$ PayEnergy<ConvertedManaCost> | MayPlayDontGrantZonePermissions$ True | AffectedZone$ Hand,Graveyard,Exile,Library,Command | Description$ Living Battery — You may spend {E} as though it were mana of any color to cast noncreature spells.
+
+Oracle:Flying, haste, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWhenever Buzzshock deals combat damage to a player, you get that many {E} (energy counters)\nLiving Battery — You may spend {E} as though it were mana of any color to cast noncreature spells.

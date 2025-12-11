@@ -1,0 +1,21 @@
+Name:Waterhazard, Tidal Floodwalker
+ManaCost:2 U U
+Types:Legendary Creature Alien Crab Warrior
+PT:3/3
+
+K:Flash
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigFlood | TriggerDescription$ Whenever NICKNAME enters or attacks, put a flood counter on target noncommander permanent. It's an Island for as long as it has a flood counter on it.
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Secondary$ True | Execute$ TrigFlood | TriggerDescription$ Whenever NICKNAME enters or attacks, put a flood counter on target noncommander permanent. It's an Island for as long as it has a flood counter on it.
+SVar:TrigFlood:DB$ PutCounter | ValidTgts$ Permanent.!IsCommander | TgtPrompt$ Select target noncommander permanent | CounterType$ FLOOD | CounterNum$ 1 | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ Targeted | StaticAbilities$ FountainStatic | ForgetOnMoved$ Battlefield | ForgetCounter$ FLOOD | Duration$ Permanent
+SVar:FountainStatic:Mode$ Continuous | Affected$ Card.IsRemembered | AddType$ Land & Island | RemoveLandTypes$ True | RemoveCardTypes$ True | Description$ It's an Island for as long as it has a flood counter on it.
+
+T:Mode$ Taps | ValidCard$ Permanent.counters_GE1_FLOOD | Execute$ TrigMill | TriggerZones$ Battlefield | Static$ True | TriggerDescription$ Whenever a player taps a permanent with a flood counter on it, that player mills two cards.
+SVar:TrigMill:DB$ Mill | Defined$ TriggeredCardController | NumCards$ 2
+
+Oracle:Flash, omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\nWhenever Waterhazard enters or attacks, put a flood counter on target noncommander permanent. It's an Island for as long as it has a flood counter on it.\nWhenever a player taps a permanent with a flood counter on it, that player mills two cards.

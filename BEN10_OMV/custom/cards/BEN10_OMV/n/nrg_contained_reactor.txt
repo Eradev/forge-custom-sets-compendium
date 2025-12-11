@@ -1,0 +1,48 @@
+Name:NRG, Contained Reactor
+ManaCost:4 B B
+Types:Legendary Artifact Creature Alien Construct
+PT:4/6
+
+K:Menace
+
+K:Wither
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
+
+T:Mode$ Attacks | ValidCard$ Creature.OppCtrl | Attacked$ You,Planeswalker.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigRadiation | TriggerDescription$ When a creature an opponent controls attacks you or a planeswalker you control, that player gets a rad counter.
+SVar:TrigRadiation:DB$ Radiation | Defined$ TriggeredAttackingPlayer | Num$ 1
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | CheckSVar$ OpponentRadCount | SVarCompare$ GE4 | TriggerZones$ Battlefield | Execute$ TrigTransform | TriggerDescription$ At the beginning of your end step, if an opponent has four or more rad counters, transform NICKNAME.
+SVar:TrigTransform:DB$ SetState | Defined$ Self | Mode$ Transform
+
+SVar:OpponentRadCount:PlayerCountOpponents$HighestCounters.RAD
+
+Oracle:Menace, wither, omnishuffle 2\nWhen a creature an opponent controls attacks you or a planeswalker you control, that player gets a rad counter.\nAt the beginning of your end step, if an opponent has four or more rad counters, transform NRG.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:NRG, Meltdown Unleashed
+Types:Legendary Creature Alien Elemental
+PT:*/3
+Colors:red
+
+K:Flying
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
+
+S:Mode$ Continuous | CharacteristicDefining$ True | SetPower$ X | Description$ NICKNAME's power is equal to the number of rad counters your opponents have.
+SVar:X:PlayerCountOpponents$Counters.RAD
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigProliferate | TriggerDescription$ Whenever NICKNAME attacks, proliferate. Then you may exile NICKNAME, then return it to the battlefield tapped (front face up).
+SVar:TrigProliferate:DB$ Proliferate | SubAbility$ DBExileReturn
+SVar:DBExileReturn:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | Optional$ True | RememberChanged$ True | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | Tapped$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Flying, omnishuffle 2\nNRG's power is equal to the number of rad counters your opponents have.\nWhenever NRG attacks, proliferate. Then you may exile NRG, then return it to the battlefield tapped (front face up).

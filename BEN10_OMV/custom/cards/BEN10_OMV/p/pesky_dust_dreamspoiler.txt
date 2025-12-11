@@ -1,0 +1,17 @@
+Name:Pesky Dust, Dreamspoiler
+ManaCost:1 U B
+Types:Legendary Creature Alien Faerie
+PT:1/3
+
+K:Flying
+
+K:Ward:2
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigSkipCombat | TriggerDescription$ Whenever NICKNAME deals combat damage to a player, that player skips their next combat phase.
+SVar:TrigSkipCombat:DB$ SkipPhase | Defined$ TriggeredTarget | Phase$ BeginCombat
+
+Oracle:Flying, ward {2}, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWhenever Pesky Dust deals combat damage to a player, that player skips their next combat phase.

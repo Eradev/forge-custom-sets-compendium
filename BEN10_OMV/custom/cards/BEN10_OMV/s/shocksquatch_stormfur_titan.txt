@@ -1,0 +1,16 @@
+Name:Shocksquatch, Stormfur Titan
+ManaCost:2 G U R
+Types:Legendary Creature Alien Yeti
+PT:4/3
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ Phase | Phase$ Upkeep | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ At the beginning of each upkeep, put a charge counter on up to one target permanent.
+SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Permanent | TgtPrompt$ Select up to one target permanent | TargetMin$ 0 | TargetMax$ 1 | CounterType$ CHARGE | CounterNum$ 1
+
+T:Mode$ Taps | ValidCard$ Permanent.counters_GE1_CHARGE | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Bio-Electrokinesis — Whenever a permanent with a charge counter becomes tapped, NICKNAME deals 1 damage to that permanent's controller.
+SVar:TrigDamage:DB$ DealDamage | Defined$ TriggeredCardController | NumDmg$ 1
+
+Oracle:Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nAt the beginning of each upkeep, put a charge counter on up to one target premanent.\nBio-Electrokinesis — Whenever a permanent with a charge counter becomes tapped, Shocksquatch deals 1 damage to that permanent's controller.

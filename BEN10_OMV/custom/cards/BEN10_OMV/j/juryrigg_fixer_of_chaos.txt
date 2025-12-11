@@ -1,0 +1,16 @@
+Name:Juryrigg, Fixer of Chaos
+ManaCost:1 U R
+Types:Legendary Creature Alien Goblin Artificer
+PT:1/2
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 3 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 3 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 3
+
+S:Mode$ Continuous | Affected$ Card.nonCreature+YouCtrl+wasCastFromYourHand | AffectedZone$ Stack | AddKeyword$ Cascade | Description$ Noncreature spells you cast from your hand have cascade.
+
+T:Mode$ SpellCast | ValidCard$ Card.wasCastFromExile | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDealDamageAll | TriggerDescription$ Whenever you cast a spell from exile, NICKNAME deals damage equal to that spells mana value to each player.
+SVar:TrigDealDamageAll:DB$ DealDamage | Defined$ Player | NumDmg$ X
+SVar:X:TriggeredSpellAbility$CardManaCostLKI
+
+Oracle:Omnishuffle 3 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nNoncreature spells you cast from your hand have cascade.\nWhenever you cast a spell from exile, Juryrigg deals damage equal to that spells mana value to each player.

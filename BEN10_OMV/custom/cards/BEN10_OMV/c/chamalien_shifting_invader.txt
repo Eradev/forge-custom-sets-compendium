@@ -1,0 +1,15 @@
+Name:Chamalien, Shifting Invader
+ManaCost:1 U B
+Types:Legendary Creature Alien Lizard
+PT:1/2
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+A:AB$ Clone | Cost$ T | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | GainThisAbility$ True | AddStaticAbilities$ GetOmnishuffle | AddSVars$ GetOmnishuffle,Omnishuffle,DBOmniShuffle,DBLoseLife | SorcerySpeed$ True | PrecostDesc$ Camoflage — | SpellDescription$ NICKNAME becomes a copy of target creature an opponent controls, except it has omnishuffle 1 and this ability. Activate only as a sorcery.
+SVar:GetOmnishuffle:Mode$ Continuous | Affected$ Card.Self | AddReplacementEffect$ Omnishuffle
+
+SVar:Omnishuffle:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If CARDNAME would be put into a graveyard from anywhere, shuffle it into its owner's library instead. Its owner loses 1 life.)
+
+Oracle:Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nCamoflage — {T}: Chamalien becomes a copy of target creature an opponent controls, except it has omnishuffle 1 and this ability. Activate only as a sorcery.

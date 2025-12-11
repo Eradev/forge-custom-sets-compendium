@@ -1,0 +1,19 @@
+Name:Ampfibian, Voltaic Entity
+ManaCost:1 U R
+Types:Legendary Creature Alien Jellyfish
+PT:2/2
+
+K:Flash
+
+K:Flying
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDamageAll | TriggerDescription$ Whenever NICKNAME attacks, it deals 2 damage to each opponent.
+SVar:TrigDamageAll:DB$ DamageAll | NumDmg$ 2 | ValidPlayers$ Opponent
+
+Oracle:Flash, flying, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWhenever Ampfibian attacks, it deals 2 damage to each opponent.
+
+SVar:HasAttackEffect:TRUE

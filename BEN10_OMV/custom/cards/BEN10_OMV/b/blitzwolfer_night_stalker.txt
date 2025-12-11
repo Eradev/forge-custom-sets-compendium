@@ -1,0 +1,21 @@
+Name:Blitzwolfer, Night Stalker
+ManaCost:2 R G
+Types:Legendary Creature Alien Werewolf
+PT:4/3
+
+K:Trample
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigFight | TriggerDescription$ Whenever NICKNAME attacks, you may have it fight target creature defending player controls. If that creature dies this way, NICKNAME gains indestructible until end of turn.
+SVar:TrigFight:DB$ Fight | Defined$ Self | ValidTgts$ Creature.ControlledBy TriggeredDefendingPlayer | TgtPrompt$ Select target creature defending player controls | Optional$ True | SubAbility$ DBEffect | StackDescription$ fights target creature you don't control [{c:ThisTargetedCard}]. If that creature dies this way, NICKNAME gains indestructible until end of turn.
+SVar:DBEffect:DB$ Effect | Triggers$ TrigWin | RememberObjects$ ParentTarget | Duration$ UntilStateBasedActionChecked | SubAbility$ DBCleanup
+SVar:TrigWin:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Creature.IsRemembered | NoResolvingCheck$ True | Execute$ TrigPump | TriggerDescription$ If that creature dies this way, NICKNAME gains indestructible until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ EffectSource | KW$ Indestructible
+SVar:DBCleanup:DB$ Cleanup | ClearImprinted$ True
+
+Oracle:Trample, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWhenever Blitzwolfer attacks, you may have it fight target creature defending player controls. If that creature dies this way, Blitzwolfer gains indestructible until end of turn.
+
+SVar:HasAttackEffect:TRUE

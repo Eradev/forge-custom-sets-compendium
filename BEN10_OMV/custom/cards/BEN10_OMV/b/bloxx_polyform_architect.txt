@@ -1,0 +1,17 @@
+Name:Bloxx, Polyform Architect
+ManaCost:W U B R G
+Types:Legendary Creature Alien Construct Shapeshifter
+PT:4/4
+
+K:Reach
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
+
+A:AB$ Animate | Cost$ W U B | Defined$ Self | Power$ 0 | Toughness$ 12 | Keywords$ Hexproof & Indestructible | SpellDescription$ Wallform — NICKNAME has base power and toughness 0/12 and gains hexproof and indestructible until end of turn.
+
+A:AB$ Effect | Cost$ 3 R G | StaticAbilities$ Unblockable | SpellDescription$ Bridgeform — Creatures you control can't be blocked this turn.
+SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Creature.YouCtrl | Description$ Creatures you control can't be blocked this turn.
+
+Oracle:Reach, omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\n{W}{U}{B}: Wallform — Bloxx has base power and toughness 0/12 and gains hexproof and indestructible until end of turn.\n{3}{R}{G}: Bridgeform — Creatures you control can't be blocked this turn.
