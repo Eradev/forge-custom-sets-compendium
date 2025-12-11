@@ -7,8 +7,8 @@ R:Event$ Moved | Origin$ Hand,Library,Exile | Destination$ Graveyard | ValidCard
 SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ Hand,Library,Exile | Destination$ Library | Reveal$ True | Defined$ ReplacedCard | Shuffle$ True | SubAbility$ OmniDmg
 SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 1
 
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ DBShuffle | TriggerDescription$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
-SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ Graveyard | Destination$ Library | Reveal$ True | Defined$ Card.Self | Shuffle$ True | SubAbility$ OmniDmg
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Graveyard | TriggerZones$ Graveyard | ValidCard$ Card.Self | Execute$ DBShuffle | TriggerDescription$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBShuffle:DB$ ChangeZone | Origin$ Graveyard | Destination$ Library | Reveal$ True | Defined$ Self | Shuffle$ True | SubAbility$ OmniDmg
 SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 1
 
 S:Mode$ Continuous | CharacteristicDefining$ True | SetPower$ X | Description$ NICKNAME's power is equal to the number of creatures you control named CARDNAME.
@@ -17,7 +17,7 @@ SVar:X:Count$ValidBattlefield Creature.YouCtrl+namedDitto; Division Specialist
 A:AB$ CopyPermanent | Cost$ 1 U | Defined$ Self | NonLegendary$ True | SpellDescription$ Create a token that's a copy of Ditto, except it isn't legendary.
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigReturn | TriggerDescription$ When NICKNAME dies, return all creatures named CARDNAME to its owner's hand.
-SVar:TrigReturn:DB$ ChangeZoneAll | ChangeType$ Creature.YouCtrl+namedDitto; Division Specialist | Origin$ Battlefield Graveyard | Destination$ Hand
+SVar:TrigReturn:DB$ ChangeZoneAll | ChangeType$ Creature.YouCtrl+namedDitto; Division Specialist | Origin$ Battlefield | Destination$ Hand
 
 Oracle:Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nDitto's power is equal to the number of creatures you control named Ditto, Division Specialist.\n{1}{U}: Create a token that's a copy of Ditto, except it isn't legendary.\nWhen Ditto dies, return all creatures named Ditto, Division Specialist to its owner's hand.
 
