@@ -1,0 +1,20 @@
+Name:Gutrot, Fumes of Corruption
+ManaCost:2 B G
+Types:Legendary Creature Alien Mutant
+PT:3/4
+
+K:Deathtouch
+K:Reach
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
+
+T:Mode$ Taps | ValidCard$ Land.OppCtrl | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ Whenever a land an opponent controls becomes tapped, that player loses 1 life.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ TriggeredCardController | LifeAmount$ 1
+
+A:AB$ AnimateAll | Cost$ 1 B G T | ValidCards$ Creature.OppCtrl | RemoveAllAbilities$ True | IsCurse$ True | SpellDescription$ Creatures your opponents control lose all abilities until the end of turn.
+
+Oracle:Deathtouch, reach, omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\nWhenever a land an opponent controls becomes tapped, that player loses 1 life.\n{1}{B}{G}, {T}: Creatures your opponents control lose all abilities until the end of turn.
+
+
