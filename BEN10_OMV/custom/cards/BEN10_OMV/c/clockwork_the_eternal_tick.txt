@@ -15,5 +15,3 @@ SVar:STCantBeCast:Mode$ CantBeCast | ValidCard$ Card.ActivePlayerCtrl | Caster$ 
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
 Oracle:Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\n{2}, {T}: Choose up to one target nonland permanent. Each player may put a card from their hand onto the battlefield that shares a card type with that permanent. For each opponent who does, they can't cast spells during their next turn.
-
-# S:Mode$ CantBeCast | ValidCard$ Card | Condition$ PlayerTurn | Caster$ Opponent | Description$ Your opponents can't cast spells during your turn.
