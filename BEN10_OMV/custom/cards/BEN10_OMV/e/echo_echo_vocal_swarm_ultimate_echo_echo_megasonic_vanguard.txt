@@ -37,7 +37,7 @@ SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 4
 
 T:Mode$ Transformed | ValidCard$ Card.Self | Execute$ DBExileAll | TriggerDescription$ When this creature transforms into NICKNAME, exile all creatures you control named Echo Echo, Vocal Swarm. Create a 2/2 blue Sonic Disk artifact creature token with flying and "Sacrifice this creature: Gain 2 life and draw a card." for each token exiled this way.
 SVar:DBExileAll:DB$ ChangeZoneAll | Origin$ Battlefield | Destination$ Exile | ChangeType$ Creature.token+namedEcho Echo; Vocal Swarm | RememberChanged$ True | SubAbility$ DBTokenCreate
-SVar:DBTokenCreate:DB$ Token | TokenScript$ u_2_2_a_sonic_disk | LockTokenScript$ True | TokenAmount$ X | SubAbility$ DBCleanup
+SVar:DBTokenCreate:DB$ Token | TokenScript$ sonic_disk | LockTokenScript$ True | TokenAmount$ X | SubAbility$ DBCleanup
 SVar:X:Remembered$Amount
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
