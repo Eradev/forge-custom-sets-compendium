@@ -1,0 +1,40 @@
+Name:Cannonbolt, Wrecking Ball
+ManaCost:R G W
+Types:Legendary Creature Alien Armadillo
+PT:5/2
+
+K:Vigilance
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
+
+A:AB$ Pump | Cost$ T | Defined$ Self | AILogic$ SwitchPT | KW$ HIDDEN CARDNAME's power and toughness are switched | Duration$ UntilYourNextTurn | SpellDescription$ Switch NICKNAME's power and toughness until your next untap step.
+
+S:Mode$ BlockTapped | ValidCard$ Card.Self | Description$ Shell Power! — NICKNAME may block as though he were untapped.
+
+A:AB$ SetState | Cost$ 3 U B | Defined$ Self | Mode$ Transform | SorcerySpeed$ True | SpellDescription$ Transform NICKNAME. Activate only as a sorcery.
+
+Oracle:Vigilance, omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\n{T}: Switch Cannonbolt's power and toughness until your next untap step.\nShell Power! — Cannonbolt may block as though he were untapped.\nGoin' Ultimate — {3}{U}{B}: Transform Cannonbolt. Activate only as a sorcery.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Ultimate Cannonbolt, Spiked Annihilator
+ManaCost:no cost
+Types:Legendary Artifact Creature Alien Armadillo
+PT:7/4
+
+K:Vigilance
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 4 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 4 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 4
+
+A:AB$ Pump | Cost$ T | Defined$ Self | AILogic$ SwitchPT | KW$ HIDDEN CARDNAME's power and toughness are switched | Duration$ UntilYourNextTurn | SpellDescription$ Switch NICKNAME's power and toughness until your next untap step.
+
+S:Mode$ BlockTapped | ValidCard$ Card.Self | Description$ NICKNAME may block as though he were untapped.
+
+S:Mode$ Continuous | Affected$ Card.Self+tapped | AddKeyword$ Deathtouch & Hexproof | Description$ As long as NICKNAME is tapped, he has deathtouch and hexproof.
+
+Oracle:Vigilance, omnishuffle 4 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 4 life.)\n{T}: Switch Ultimate Cannonbolt's power and toughness until your next untap step.\nUltimate Cannonbolt may block as though he were untapped.\nAs long as Ultimate Cannonbolt is tapped, he has deathtouch and hexproof.

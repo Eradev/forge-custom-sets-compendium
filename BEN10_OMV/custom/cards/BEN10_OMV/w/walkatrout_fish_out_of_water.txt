@@ -1,0 +1,14 @@
+Name:Walkatrout, Fish Out of Water
+ManaCost:G U
+Types:Legendary Creature Alien Fish
+PT:1/2
+
+K:Hexproof
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | Description$ NICKNAME can't be blocked.
+
+Oracle:Hexproof, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWalkatrout can't be blocked.

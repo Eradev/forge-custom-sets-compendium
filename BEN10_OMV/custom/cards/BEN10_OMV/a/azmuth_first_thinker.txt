@@ -1,0 +1,22 @@
+Name:Azmuth, First Thinker
+ManaCost:G U
+Types:Legendary Creature Alien Frog Artificer
+PT:1/2
+
+K:Ward:2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Artifact.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigScry | TriggerDescription$ Whenever an artifact you control enters, scry 1.
+SVar:TrigScry:DB$ Scry | ScryNum$ 1
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | CheckSVar$ Y | SVarCompare$ GE10 | Execute$ TrigEmblem | TriggerZones$ Battlefield | TriggerDescription$ At the beginning of your upkeep, if you control ten or more aliens, you may pay {W}{U}{B}{R}{G}. If you do, you create an emblem named Master Control with "You may cast Alien spells as though they had flash.", "Activated abilities of, and granted by, the Omnitrix cost {3} less to activate." and "Experience counter requirements are ignored when you activate abilities that use them to determine which Alien you may cast."
+SVar:TrigEmblem:AB$ Effect | Cost$ W U B R G | Name$ Emblem - Master Control | Image$ emblem_master_control | Duration$ Permanent | AddSVar$ ExpIgnore | StaticAbilities$ STFlash,STReduceCost,STReduceOmni,STIgnoreExp
+SVar:STFlash:Mode$ CastWithFlash | ValidCard$ Card.Alien | ValidSA$ Spell | Caster$ You | Description$ You may cast Alien spells as though they had flash.
+SVar:STReduceCost:Mode$ ReduceCost | ValidCard$ Card.namedThe Omnitrix | Type$ Ability | Amount$ 3 | Description$ Activated abilities of The Omnitrix cost {3} less to activate.
+SVar:STReduceOmni:Mode$ ReduceCost | ValidCard$ Card | ValidSpell$ Activated.NamedAbilityOmniActivate | Activator$ You | Amount$ 3 | Description$ Activated abilities granted by The Omnitrix cost {3} less to activate.
+SVar:STIgnoreExp:Mode$ Continuous | Affected$ Card.namedThe Omnitrix | Description$ Experience counter requirements are ignored when you activate abilities that use them to determine which Alien you may cast.
+
+SVar:Y:Count$Valid Alien.YouCtrl
+
+Oracle:Ward {2}\nWhenever an artifact you control enters, scry 1.\nAt the beginning of your upkeep, if you control ten or more aliens, you may pay {W}{U}{B}{R}{G}. If you do, you create an emblem named Master Control with "You may cast Alien spells as though they had flash.", "Activated abilities of, and granted by, the Omnitrix cost {3} less to activate." and "Experience counter requirements are ignored when you activate abilities that use them to determine which Alien you may cast."
+
+# Errata - Emblem's oracle was adjusted to correct the intended effect

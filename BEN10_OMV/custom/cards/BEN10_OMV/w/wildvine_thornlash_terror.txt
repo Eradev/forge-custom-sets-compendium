@@ -1,0 +1,25 @@
+Name:Wildvine, Thornlash Terror
+ManaCost:1 R G
+Types:Legendary Creature Alien Plant
+PT:3/2
+
+K:Reach
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | IsPresent$ Card.Self+!attackedThisTurn | Execute$ TrigTransform | TriggerDescription$ At the beginning of your end step, if NICKNAME didn't attack this turn, it becomes a Forest land until your next turn. (It's not a creature.)
+SVar:TrigTransform:DB$ Animate | Defined$ Self | Types$ Land,Forest | RemoveCardTypes$ True | RemoveCreatureTypes$ True | Duration$ UntilYourNextTurn
+
+S:Mode$ Continuous | Affected$ Card.Self | AffectedZone$ Battlefield | AddTrigger$ BecomesLand | CheckSVar$ X | SVarCompare$ EQ0
+SVar:X:Count$Valid Land.Self+YouCtrl
+
+SVar:BecomesLand:Mode$ Always | IsPresent$ Card.Self+Land | PresentCompare$ EQ1 | Execute$ TrigExile | TriggerZones$ Battlefield | ActivationLimit$ 1 | TriggerDescription$ Whenever NICKNAME becomes a land, exile up to one target creature until NICKNAME becomes a creature again.
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DelTrig
+
+T:Mode$ Always | IsPresent$ Card.Self+Creature | PresentCompare$ EQ1 | IsPresent2$ Card.IsRemembered | PresentZone2$ Exile | Execute$ TrigReturn | TriggerZones$ Battlefield | ActivationLimit$ 1 | TriggerDescription$ Return exiled creature to the battlefield when NICKNAME becomes a creature again.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Exile | Destination$ Battlefield | Defined$ Remembered | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Reach, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nAt the beginning of your end step, if Wildvine didn't attack this turn, it becomes a Forest land until your next turn. (It's not a creature.)\nWhenever Wildvine becomes a land, exile up to one target creature until Wildvine becomes a creature again.

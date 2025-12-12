@@ -1,0 +1,41 @@
+Name:Wildmutt, Untamed Senses
+ManaCost:1 G W
+Types:Legendary Creature Alien Beast
+PT:2/3
+
+K:Trample
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | TriggerDescription$ When NICKNAME enters, destroy target artifact or enchantment.
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment.
+
+A:AB$ SetState | Cost$ 2 U B R | Defined$ Self | Mode$ Transform | SorcerySpeed$ True | PrecostDesc$ Goin' Ultimate! — | SpellDescription$ Transform NICKNAME, activate only as a sorcery.
+
+Oracle:Trample, omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\nWhen Wildmutt enters, destroy target artifact or enchantment.\nGoin' Ultimate! — {2}{U}{B}{R}: Transform Wildmutt, activate only as a sorcery.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Ultimate Wildmutt, Apex Predator
+ManaCost:no cost
+Colors:blue,black,red
+Types:Legendary Creature Alien Beast
+PT:4/7
+
+K:Reach
+
+K:Trample
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 4 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 4 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 4
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigLoseLife | TriggerDescription$ When Ultimate Wildmutt deals combat damage to a player, that player loses half their life, rounded up.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ TriggeredTarget | LifeAmount$ X
+SVar:X:TriggeredTarget$LifeTotal/HalfUp
+
+Oracle:Reach, trample, omnishuffle 4 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 4 life.)\nWhen Ultimate Wildmutt deals combat damage to a player, that player loses half their life, rounded up.

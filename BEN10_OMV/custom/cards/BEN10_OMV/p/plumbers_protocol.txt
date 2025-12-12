@@ -1,0 +1,39 @@
+Name:Plumber's Protocol
+ManaCost:2 G
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Battlefield | Tapped$ True | ChangeType$ Land.Basic | RememberChanged$ True | ChangeTypeDesc$ basic land | SubAbility$ DBUntap | SpellDescription$ Search your library for a land card with a basic land type and put it onto the battlefield tapped. Then if you control five or more different land types, untap that land.
+SVar:DBUntap:DB$ Untap | Defined$ Remembered | ConditionCheckSVar$ LandCount | ConditionSVarCompare$ GE5 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+# Unfotunately we don't have Count$Valid Land.YouCtrl$LandType like we do with CreatureType so this counts the different land types as Domain only covers the basic types.
+# If custom Land types exist they'll need added to this array.
+SVar:X:Count$Domain
+SVar:xCave:Count$Valid Cave.YouCtrl/LimitMax.1
+SVar:L1:SVar$X/Plus.xCave
+SVar:xDesert:Count$Valid Desert.YouCtrl/LimitMax.1
+SVar:L2:SVar$L1/Plus.xDesert
+SVar:xGate:Count$Valid Gate.YouCtrl/LimitMax.1
+SVar:L3:SVar$L2/Plus.xGate
+SVar:xLair:Count$Valid Lair.YouCtrl/LimitMax.1
+SVar:L4:SVar$L3/Plus.xLair
+SVar:xLocus:Count$Valid Locus.YouCtrl/LimitMax.1
+SVar:L5:SVar$L4/Plus.xLocus
+SVar:xMine:Count$Valid Mine.YouCtrl/LimitMax.1
+SVar:L6:SVar$L5/Plus.xMine
+SVar:xOmenpath:Count$Valid Omenpath.YouCtrl/LimitMax.1
+SVar:L7:SVar$L6/Plus.xOmenpath
+SVar:xPlanet:Count$Valid Planet.YouCtrl/LimitMax.1
+SVar:L8:SVar$L7/Plus.xPlanet
+SVar:xPowerplant:Count$Valid Power-Plant.YouCtrl/LimitMax.1
+SVar:L9:SVar$L8/Plus.xPowerplant
+SVar:xSphere:Count$Valid Sphere.YouCtrl/LimitMax.1
+SVar:L10:SVar$L9/Plus.xSphere
+SVar:xTower:Count$Valid Tower.YouCtrl/LimitMax.1
+SVar:L11:SVar$L10/Plus.xTower
+SVar:xTown:Count$Valid Town.YouCtrl/LimitMax.1
+SVar:L12:SVar$L11/Plus.xTown
+SVar:xUrzas:Count$Valid Urza's.YouCtrl/LimitMax.1
+SVar:LandCount:SVar$L12/Plus.xUrzas
+
+Oracle:Search your library for a land card with a basic land type and put it onto the battlefield tapped. Then if you control five or more different land types, untap that land.

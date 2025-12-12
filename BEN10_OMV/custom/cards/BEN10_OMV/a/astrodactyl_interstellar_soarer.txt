@@ -1,0 +1,17 @@
+Name:Astrodactyl, Interstellar Soarer
+ManaCost:3 W
+Types:Legendary Creature Alien Dinosaur
+PT:3/3
+
+K:Flying
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ GrantEffects | TriggerDescription$ At the beginning of your combat on your turn, creatures you control gain flying and "Whenever this creature attacks, you gain 1 life." until end of turn.
+SVar:GrantEffects:DB$ AnimateAll | ValidCards$ Creature.YouCtrl | Keywords$ Flying | Triggers$ LifeGainAttack
+SVar:LifeGainAttack:Mode$ Attacks | ValidCard$ Card.Self | Execute$ DBGainLife | TriggerDescription$ Whenever this creature attacks, you gain 1 life.
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 1
+
+Oracle:Flying, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nAt the beginning of your combat on your turn, creatures you control gain flying and "Whenever this creature attacks, you gain 1 life." until end of turn.

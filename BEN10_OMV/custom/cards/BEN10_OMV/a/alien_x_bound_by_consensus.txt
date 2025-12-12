@@ -1,0 +1,24 @@
+Name:Alien X, Bound by Consensus
+ManaCost:2 W U B
+Types:Legendary Creature Alien God
+PT:8/8
+
+K:Defender
+
+K:Flying
+
+K:Hexproof
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 5 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 5 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 5
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigVote | TriggerDescription$ Will of the Council — At the beginning of your upkeep, starting with you, each player votes for Bellicus or Serena. If Bellicus gets more votes, NICKNAME can attack this turn as though it didn't have defender. If Serena gets more votes or the vote is tied, gain 5 life.
+SVar:TrigVote:DB$ Vote | Defined$ Player | Choices$ DBBellicus,DBSerena | VoteTiedAbility$ DBSerena
+
+SVar:DBBellicus:DB$ Effect | Duration$ UntilEndOfTurn | StaticAbilities$ STCanAttack | SpellDescription$ Bellicus
+SVar:STCanAttack:Mode$ CanAttackDefender | ValidCard$ Card.EffectSource | Description$ NICKNAME can attack this turn as though it didn't have defender.
+
+SVar:DBSerena:DB$ GainLife | Defined$ You | LifeAmount$ 5 | SpellDescription$ Serena
+
+Oracle:Defender, flying, hexproof, omnishuffle 5 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 5 life.)\nWill of the Council — At the beginning of your upkeep, starting with you, each player votes for Bellicus or Serena. If Bellicus gets more votes, Alien X can attack this turn as though it didn't have defender. If Serena gets more votes or the vote is tied, gain 5 life.

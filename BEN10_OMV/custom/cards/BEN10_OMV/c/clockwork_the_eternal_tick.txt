@@ -1,0 +1,17 @@
+Name:Clockwork, The Eternal Tick
+ManaCost:3 G U
+Types:Legendary Artifact Creature Alien Construct
+PT:3/4
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
+
+A:AB$ ChooseCard | Cost$ 2 T | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Permanent.nonLand | TgtPrompt$ Choose up to one target nonland permanent | RememberTargets$ True | AILogic$ Always | SubAbility$ DBRepeatEach
+SVar:DBRepeatEach:DB$ RepeatEach | RepeatPlayers$ Player | RepeatSubAbility$ DBChangeZone | SubAbility$ DBCleanup
+SVar:DBChangeZone:DB$ ChangeZone | DefinedPlayer$ Remembered | Origin$ Hand | Destination$ Battlefield | ChangeType$ Card.sharesCardTypeWith Remembered | Optional$ True | RememberChanged$ True | SubAbility$ DBCantCast
+SVar:DBCantCast:DB$ Effect | StaticAbilities$ STCantBeCast | RememberObjects$ Opponent.IsRemembered | Duration$ UntilYourNextTurn
+SVar:STCantBeCast:Mode$ CantBeCast | ValidCard$ Card.ActivePlayerCtrl | Caster$ Player.IsRemembered | Description$ Target player can't cast spells during their next turn.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\n{2}, {T}: Choose up to one target nonland permanent. Each player may put a card from their hand onto the battlefield that shares a card type with that permanent. For each opponent who does, they can't cast spells during their next turn.

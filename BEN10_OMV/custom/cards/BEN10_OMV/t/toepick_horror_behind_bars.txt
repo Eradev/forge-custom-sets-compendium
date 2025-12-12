@@ -1,0 +1,22 @@
+Name:Toepick, Horror Behind Bars
+ManaCost:3 B B
+Types:Legendary Creature Alien Troll Horror
+PT:2/3
+
+K:Fear
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReveal | TriggerDescription$ Whenever NICKNAME enters or deals combat damage to a player, each opponent reveals their hand. You choose a nonland card from each of them. Those players discard those cards unless they pay life equal to the number of cards in their hand.
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigReveal | Secondary$ True | TriggerDescription$ Whenever NICKNAME enters or deals combat damage to a player, each opponent reveals their hand. You choose a nonland card from each of them. Those players discard those cards unless they pay life equal to the number of cards in their hand.
+SVar:TrigReveal:DB$ RepeatEach | RepeatPlayers$ Opponent | RepeatSubAbility$ DBReveal | SubAbility$ DBCleanup
+SVar:DBReveal:DB$ RevealHand | Defined$ Player.IsRemembered | RememberRevealed$ True | SubAbility$ DBChooseCard
+SVar:DBChooseCard:DB$ ChooseCard | ChoiceZone$ Hand | Choices$ Card.nonLand+IsRemembered | ChoiceTitle$ You choose a nonland card from each of them | Mandatory$ True | Amount$ 1 | SubAbility$ DBDiscardUnless
+SVar:DBDiscardUnless:DB$ Discard | DefinedCards$ ChosenCard | Defined$ Player.IsRemembered | Mode$ Defined | UnlessCost$ PayLife<X> | UnlessPayer$ Player.IsRemembered | UnlessAI$ Never
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+SVar:X:Count$ValidHand Card.RememberedPlayerCtrl
+
+Oracle:Fear, omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\nWhenever Toepick enters or deals combat damage to a player, each opponent reveals their hand. You choose a nonland card from each of them. Those players discard those cards unless they pay life equal to the number of cards in their hand.

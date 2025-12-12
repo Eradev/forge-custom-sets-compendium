@@ -1,0 +1,16 @@
+Name:Terraspin, Soothing Cyclone
+ManaCost:3 G W
+Types:Legendary Creature Alien Turtle
+PT:3/6
+
+K:Flying
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+R:Event$ DamageDone | ActiveZones$ Battlefield | ValidSource$ Card.OppCtrl,Emblem.OppCtrl | ValidTarget$ You | ReplaceWith$ PreventDmg | PreventionEffect$ True | PlayerTurn$ False | Description$ During each of your opponent's turns, if a source they control would deal damage to you, prevent all but 1 of that damage.
+SVar:PreventDmg:DB$ ReplaceDamage | Amount$ ShieldAmount
+SVar:ShieldAmount:ReplaceCount$DamageAmount/Minus.1
+
+Oracle:Flying, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nDuring each of your opponent's turns, if a source they control would deal damage to you, prevent all but 1 of that damage.

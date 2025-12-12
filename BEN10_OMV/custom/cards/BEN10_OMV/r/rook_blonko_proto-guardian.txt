@@ -1,0 +1,18 @@
+Name:Rook Blonko, Proto-Guardian
+ManaCost:1 W U
+Types:Legendary Creature Cat Soldier
+PT:2/3
+
+K:Vigilance
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ Whenever NICKNAME enters or attacks, create a colorless Equipment artifact token named Proto-Tool with "Equipped creature gets +1/+1" and equip {2}.
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigToken | TriggerZones$ Battlefield | Secondary$ True | TriggerDescription$ Whenever NICKNAME enters or attacks, create a colorless Equipment artifact token named Proto-Tool with "Equipped creature gets +1/+1" and equip {2}.
+SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ proto-tool | TokenOwner$ You |  LockTokenScript$ True
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+equipped | AddKeyword$ Hexproof | Description$ Equipped creatures you control have hexproof.
+
+T:Mode$ Attacks | ValidCard$ Creature.YouCtrl+equipped | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever an equipped creature you control attacks, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Vigilance\nWhenever Rook enters or attacks, create a colorless Equipment artifact token named Proto-Tool with "Equipped creature gets +1/+1" and equip {2}.\nEquipped creatures you control have hexproof.\nWhenever an equipped creature you control attacks, draw a card.

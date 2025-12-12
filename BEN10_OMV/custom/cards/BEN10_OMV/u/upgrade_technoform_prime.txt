@@ -1,0 +1,17 @@
+Name:Upgrade, Technoform Prime
+ManaCost:1 B G
+Types:Legendary Creature Alien Ooze
+PT:2/4
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+A:AB$ Pump | Cost$ X | Defined$ Self | NumAtt$ +X | NumDef$ +X | SubAbility$ DBClone | SpellDescription$ Until end of turn, NICKNAME becomes a copy of target noncreature, nonland permanent with mana value X, except it's a Vehicle artifact with base power and toughness 2/4. It gains +X/+X, and has NICKNAME's other abilities. It's a creature in addition to its other types.
+SVar:DBClone:DB$ Clone | ValidTgts$ Permanent.nonCreature+nonLand+cmcEQX | TgtPrompt$ Select target noncreature, nonland permanent with mana value X | CloneTarget$ Self | SetPower$ 2 | SetToughness$ 4 | AddTypes$ Vehicle & Artifact & Creature | AddStaticAbilities$ GetOmnishuffle | AddSVars$ GetOmnishuffle,Omnishuffle,DBOmniShuffle,DBLoseLife | Duration$ UntilEndOfTurn
+SVar:X:Count$xPaid
+
+SVar:GetOmnishuffle:Mode$ Continuous | Affected$ Card.Self | AddReplacementEffect$ Omnishuffle | AddStaticAbilities$ STBuff
+SVar:Omnishuffle:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+
+Omnishuffle 1\n{X}: Until end of turn, Upgrade becomes a copy of target noncreature, nonland permanent with mana value X, except it's a Vehicle artifact with base power and toughness 2/4. It gains +X/+X, and has Upgrade's other abilities. It's a creature in addition to its other types.

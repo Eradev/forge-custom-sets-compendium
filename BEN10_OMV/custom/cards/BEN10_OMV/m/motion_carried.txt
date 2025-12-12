@@ -1,0 +1,17 @@
+Name:Motion Carried!
+ManaCost:5 U U
+Types:Sorcery
+
+S:Mode$ AlternativeCost | ValidSA$ Spell | ValidCard$ Card.Self | ValidPlayer$ You | Cost$ 0 | EffectZone$ All | IsPresent$ Card.YouCtrl+namedAlien X; Bound by Consensus | Description$ If you control Alien X, you may cast this spell without paying its mana cost.
+
+A:SP$ Effect | Duration$ UntilEndOfTurn | StaticAbilities$ STArtifact,STBattle,STCreature,STEnchantment,STInstant,STPlaneswalker,STSorcery | SubAbility$ DBExileSelf | SpellDescription$ You may cast one spell of each card type from your hand without paying their mana costs this turn. Exile CARDNAME.
+SVar:STArtifact:Mode$ Continuous | MayPlay$ True | MayPlayWithoutManaCost$ True | MayPlayLimit$ 1 | Affected$ Card.Artifact+YouOwn | AffectedZone$ Hand
+SVar:STBattle:Mode$ Continuous | MayPlay$ True | MayPlayWithoutManaCost$ True | MayPlayLimit$ 1 | Affected$ Card.Battle+YouOwn | AffectedZone$ Hand
+SVar:STCreature:Mode$ Continuous | MayPlay$ True | MayPlayWithoutManaCost$ True | MayPlayLimit$ 1 | Affected$ Card.Creature+YouOwn | AffectedZone$ Hand
+SVar:STEnchantment:Mode$ Continuous | MayPlay$ True | MayPlayWithoutManaCost$ True | MayPlayLimit$ 1 | Affected$ Card.Enchantment+YouOwn | AffectedZone$ Hand
+SVar:STInstant:Mode$ Continuous | MayPlay$ True | MayPlayWithoutManaCost$ True | MayPlayLimit$ 1 | Affected$ Card.Instant+YouOwn | AffectedZone$ Hand
+SVar:STPlaneswalker:Mode$ Continuous | MayPlay$ True | MayPlayWithoutManaCost$ True | MayPlayLimit$ 1 | Affected$ Card.Planeswalker+YouOwn | AffectedZone$ Hand
+SVar:STSorcery:Mode$ Continuous | MayPlay$ True | MayPlayWithoutManaCost$ True | MayPlayLimit$ 1 | Affected$ Card.Sorcery+YouOwn | AffectedZone$ Hand
+SVar:DBExileSelf:DB$ ChangeZone | Origin$ Stack | Destination$ Exile
+
+Oracle:If you control Alien X, you may cast this spell without paying its mana cost.\nYou may cast one spell of each card type from your hand without paying their mana costs this turn. Exile Motion Carried! (Artifact, battle, creature, enchantment, instant, land, planeswalker and sorcery are card types.)

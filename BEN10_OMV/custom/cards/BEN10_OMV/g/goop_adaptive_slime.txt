@@ -1,0 +1,16 @@
+Name:Goop, Adaptive Slime
+ManaCost:G
+Types:Legendary Creature Alien Ooze
+PT:1/1
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Graveyard | ValidCard$ Creature.!token+OppOwn | TriggerZones$ Battlefield | Execute$ DBExile | TriggerDescription$ Whenever a creature card is put into an opponent's graveyard from anywhere, exile it instead and put a +1/+1 counter on NICKNAME.
+SVar:DBExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | Defined$ TriggeredCardLKICopy | SubAbility$ DBPutCounter
+SVar:DBPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
+
+A:AB$ Clone | Cost$ 2 SubCounter<2/P1P1> | Choices$ Creature.ExiledWithSource | ChoiceZone$ Exile | CloneTarget$ Self | SetPower$ 1 | SetToughness$ 1 | NewName$ Goop, Adaptive Slime | Duration$ UntilEndOfTurn | SpellDescription$ NICKNAME becomes a copy of a creature card exiled with it until the end of turn, except it has base power and toughness 1/1 and it's name is Goop, Adaptive Slime. | StackDescription$ SpellDescription
+
+Oracle:Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWhenever a creature card is put into an opponent's graveyard from anywhere, exile it instead and put a +1/+1 counter on Goop.\n{2}, Remove two +1/+1 counters from Goop: Goop becomes a copy of a creature card exiled with it until the end of turn, except it has base power and toughness 1/1 and it's name is Goop, Adaptive Slime.

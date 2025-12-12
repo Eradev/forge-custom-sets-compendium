@@ -1,0 +1,22 @@
+Name:Diamondhead, Gemblade Sentinel
+ManaCost:2 G G
+Types:Legendary Creature Alien Golem
+PT:1/1
+
+K:Indestructible
+
+K:Trample
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Landfall — Whenever a land you control enters, put a +1/+1 counter on NICKNAME.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
+
+A:AB$ MultiplyCounter | Cost$ 2 G G | Defined$ Self | CounterType$ P1P1 | SpellDescription$ Double the number of +1/+1 counters on NICKNAME.
+
+Oracle:Indestructible, trample, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nLandfall - Whenever a land you control enters, put a +1/+1 counter on Diamondhead.\n{2}{G}{G}: Double the number of +1/+1 counters on Diamondhead.
+
+SVar:PlayMain1:TRUE
+DeckHas:Ability$Counters

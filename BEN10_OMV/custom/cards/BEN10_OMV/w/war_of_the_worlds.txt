@@ -1,0 +1,21 @@
+Name:War of the Worlds
+ManaCost:2 G U R
+Types:Enchantment Saga
+
+K:Chapter:4:DBI,DBII,DBIII,DBIV
+
+SVar:DBI:DB$ GainLife | Defined$ You | LifeAmount$ X | SpellDescription$ You gain 3 life. If you have two or more opponents, intead you gain 3 life for each opponent.
+SVar:X:SVar$NumOpps/Times.3
+SVar:NumOpps:PlayerCountOpponents$Amount
+
+SVar:DBII:DB$ Token | TokenAmount$ 1 | TokenScript$ dnalien | TokenOwner$ Opponent | LockTokenScript$ True | SpellDescription$ Each opponent creates a 3/3 black and green DNAlien creature token.
+
+SVar:DBIII:DB$ Destroy | ValidTgts$ Creature,Planeswalker | TgtPrompt$ Select up to one target creature or planeswalker | TargetMin$ 0 | TargetMax$ 1 | SpellDescription$ Destroy up to one target creature or planeswalker.
+
+SVar:DBIV:DB$ Effect | Name$ Emblem - Master Control | Image$ emblem_master_control | Duration$ Permanent | StaticAbilities$ STFlash,STReduceCost,STReduceOmni,STIgnoreExp | SpellDescription$ You create an emblem named Master Control.
+SVar:STFlash:Mode$ CastWithFlash | ValidCard$ Card.Alien | ValidSA$ Spell | Caster$ You | Description$ You may cast Alien spells as though they had flash.
+SVar:STReduceCost:Mode$ ReduceCost | ValidCard$ Card.namedThe Omnitrix | Type$ Ability | Amount$ 3 | Description$ Activated abilities of The Omnitrix cost {3} less to activate.
+SVar:STReduceOmni:Mode$ ReduceCost | ValidCard$ Card | ValidSpell$ Activated.NamedAbilityOmniActivate | Activator$ You | Amount$ 3 | Description$ Activated abilities granted by The Omnitrix cost {3} less to activate.
+SVar:STIgnoreExp:Mode$ Continuous | Affected$ Card.namedThe Omnitrix | Description$ Experience counter requirements are ignored when you activate abilities that use them to determine which Alien you may cast.
+
+Oracle:(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI — You gain 3 life. If you have two or more opponents, intead you gain 3 life for each opponent.\nII — Each opponent creates a 3/3 black and green DNAlien creature token.\nIII — Destroy up to one target creature or planeswalker.\nIV — You create an emblem named Master Control.

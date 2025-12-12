@@ -1,0 +1,14 @@
+Name:Null Void Breach
+ManaCost:3 B R
+Types:Sorcery
+
+A:SP$ ChooseCard | Defined$ Player | Amount$ 1 | Choices$ Creature,Planeswalker | ControlledByPlayer$ Chooser | Mandatory$ True | SubAbility$ DBSacAll | SpellDescription$ Each player chooses a creature or planeswalker they control. Then sacrifices the rest. Then each player creates a 3/3 black Null Guardian with flying. Exile all graveyards.
+SVar:DBSacAll:DB$ SacrificeAll | ValidCards$ Creature.!ChosenCard | SubAbility$ DBTokenCreate
+SVar:DBTokenCreate:DB$ Token | TokenScript$ null_guardian | LockTokenScript$ True | TokenOwner$ Player | SubAbility$ DBExileAll
+SVar:DBExileAll:DB$ ChangeZoneAll | Origin$ Graveyard | Destination$ Exile | ChangeType$ Card
+
+Oracle:Each player chooses a creature or planeswalker they control. Then sacrifices the rest. Then each player creates a 3/3 black Null Guardian with flying. Exile all graveyards.
+
+AI:RemoveDeck:All
+SVar:NeedsToPlayVar:Z GE2
+SVar:Z:Count$Valid Creature.OppCtrl

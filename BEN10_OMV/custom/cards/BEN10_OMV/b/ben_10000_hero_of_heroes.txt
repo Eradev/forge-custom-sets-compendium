@@ -1,0 +1,21 @@
+Name:Ben 10,000, Hero of Heroes
+ManaCost:W U B R G
+Types:Legendary Creature Human Shapeshifter
+PT:3/4
+
+K:Vigilance
+
+K:Ward:2
+
+A:AB$ Phases | Cost$ 5 T | Defined$ Self | WontPhaseInNormal$ True | SubAbility$ DBSearchAndExile | PrecostDesc$ Biomnitrix — | SpellDescription$ NICKNAME phases out. Search your library for two Alien creature cards, exile them, then create a token that's a copy of one of them, except it has the power and toughness of the other. When that token leaves, Ben phases in, then shuffle the exiled cards into your library.
+SVar:DBSearchAndExile:DB$ ChangeZone | Origin$ Library | Destination$ Exile | ChangeType$ Creature.Alien | ChangeNum$ 2 | RememberChanged$ True | Shuffle$ True | SubAbility$ DBChooseCopySource
+SVar:DBChooseCopySource:DB$ ChooseCard | Defined$ You | Choices$ Card.IsRemembered | ChoiceZone$ Exile | ChoiceTitle$ Choose the Alien to copy, it has the power and toughness of the other. | RememberChosen$ True | SubAbility$ DBTokenCreation
+SVar:DBTokenCreation:DB$ CopyPermanent | Defined$ ChosenCard | SetPower$ Y | SetToughness$ Z | RememberTokens$ True | SubAbility$ DBSetDelayedTrigger
+SVar:Y:Count$ValidExile Card.ExiledWithSource+!ChosenCard$CardPower
+SVar:Z:Count$ValidExile Card.ExiledWithSource+!ChosenCard$CardToughness
+SVar:DBSetDelayedTrigger:DB$ DelayedTrigger | Mode$ ChangesZone | ValidCard$ Creature.token+IsRemembered | Origin$ Battlefield | Destination$ Any | Execute$ DBResolution | TriggerZones$ Battlefield | OneOff$ True | RememberObjects$ Self | TriggerDescription$ When that token leaves, NICKNAME phases in, then shuffle the exiled cards into your library.
+SVar:DBResolution:DB$ Phases | Defined$ Self | PhaseInOrOut$ True | SubAbility$ DBShuffle
+SVar:DBShuffle:DB$ ChangeZoneAll | Origin$ Exile | Destination$ Library | ChangeType$ Card.ExiledWithSource | Shuffle$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+
+Oracle:Vigilance, ward {2}\nBiomnitrix — {5}, {T}: Ben phases out. Search your library for two Alien creature cards, exile them, then create a token that's a copy of one of them, except it has the power and toughness of the other. When that token leaves, Ben phases in, then shuffle the exiled cards into your library.

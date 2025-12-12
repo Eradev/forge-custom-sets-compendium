@@ -1,0 +1,20 @@
+Name:Rath, Lord of Left Hooks
+ManaCost:3 R G
+Types:Legendary Creature Alien Cat Warrior
+PT:5/3
+
+K:First Strike
+
+K:Trample
+
+K:Haste
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
+
+S:Mode$ MustAttack | ValidCreature$ Card.Self | Description$ NICKNAME attacks each combat if able.
+
+A:AB$ Pump | Cost$ 1 R | Defined$ Self | KW$ Indestructible | Duration$ EOT | IsPresent$ Card.Self+attacking | SpellDescription$ NICKNAME gains indestructible until the end of turn. Activate only if NICKNAME is attacking.
+
+Oracle:First strike, trample, haste, omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\nRath attacks each combat if able.\n{1}{R}: Rath gains indestructible until the end of turn. Activate only if Rath is attacking.

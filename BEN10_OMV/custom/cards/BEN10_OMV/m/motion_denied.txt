@@ -1,0 +1,9 @@
+Name:Motion Denied!
+ManaCost:1 W U
+Types:Instant
+
+S:Mode$ AlternativeCost | ValidSA$ Spell | ValidCard$ Card.Self | ValidPlayer$ You | Cost$ 0 | EffectZone$ All | IsPresent$ Card.YouCtrl+namedAlien X; Bound by Consensus | Description$ If you control Alien X, you may cast this spell without paying its mana cost.
+
+A:SP$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | Destination$ Exile | SpellDescription$ Counter target spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.
+
+Oracle:If you control Alien X you may cast this spell without paying it's mana cost.\nCounter target spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.

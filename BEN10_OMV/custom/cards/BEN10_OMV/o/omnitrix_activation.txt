@@ -1,0 +1,13 @@
+Name:Omnitrix Activation
+ManaCost:1 W B
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Creature | TgtPrompt$ Select target creature to exile. | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ RememberController | SpellDescription$ Exile target creature. Its controller creates a token that's a copy of another target creature on the battlefield except it has haste. When the token leaves the battlefield, return the exiled creature to the battlefield under its owner's control.
+SVar:RememberController:DB$ Pump | Defined$ RememberedController | RememberObjects$ RememberedController | SubAbility$ DBCreateToken
+SVar:DBCreateToken:DB$ CopyPermanent | ValidTgts$ Creature.Other | TgtPrompt$ Select another target creature on the battlefield to copy. | Controller$ Player.IsRemembered | AddKeywords$ Haste | RememberTokens$ True | SubAbility$ DBDelayedTrigger
+
+SVar:DBDelayedTrigger:DB$ DelayedTrigger | Mode$ ChangesZone | ValidCard$ Card.token+IsRemembered | Origin$ Battlefield | Destination$ Any | Execute$ DBReturnExiled | TriggerDescription$ When the token leaves the battlefield, return the exiled creature to the battlefield under its owner's control.
+SVar:DBReturnExiled:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Exile target creature. Its controller creates a token that's a copy of another target creature on the battlefield except it has haste. When the token leaves the battlefield, return the exiled creature to the battlefield under its owner's control.

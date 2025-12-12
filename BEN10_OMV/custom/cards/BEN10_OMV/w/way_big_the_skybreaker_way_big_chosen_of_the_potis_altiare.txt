@@ -1,0 +1,49 @@
+Name:Way Big, The Skybreaker
+ManaCost:8 R W
+Types:Legendary Creature Alien Giant
+PT:7/10
+
+K:Vigilance
+
+K:Trample
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When NICKNAME enters, exile up to two target nonland permanents your opponents control.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Permanent.nonLand+OppCtrl | TgtPrompt$ Select up to two target nonland permanents your opponents control | TargetMin$ 0 | TargetMax$ 2
+
+A:AB$ SetState | Cost$ 2 B G U | Defined$ Self | Mode$ Transform | SorcerySpeed$ True | PrecostDesc$ Complete the Potis Altiare! — | SpellDescription$ Transform NICKNAME, activate only as a sorcery.
+
+Oracle:Vigilance, trample, omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\nWhen Way Big enters, exile up to two target nonland permanents your opponents control.\nComplete the Potis Altiare! — {2}{B}{G}{U}: Transform Way Big, activate only as a sorcery.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Way Big, Chosen of the Potis Altiare
+ManaCost:no cost
+Colors:black,green,blue
+Types:Legendary Creature Alien Giant
+PT:10/15
+
+K:Vigilance
+
+K:Trample
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 4 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 4 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 4
+
+S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Annihilator:X | Description$ NICKNAME has Annihilator X where X is the number of vortex counters on it.
+SVar:X:Count$CardCounters.VORTEX
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | Execute$ TrigPutCounter | TriggerDescription$ At the beginning of combat on your turn, put a vortex counter on NICKNAME.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ VORTEX | CounterNum$ 1
+
+A:AB$ DealDamage | Cost$ T | ValidTgts$ Player | NumDmg$ Y | SpellDescription$ NICKNAME deals damage to target player equal to the number of creatures they control.
+SVar:Y:Count$Valid Creature.TargetedPlayerCtrl
+
+Oracle:Vigilance, trample, omnishuffle 4 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 4 life.)\nWay Big has Annihilator X where X is the number of vortex counters on it.
+At the beginning of combat on your turn, put a vortex counter on Way Big.\n{T}: Way Big deals damage to target player equal to the number of creatures they control.

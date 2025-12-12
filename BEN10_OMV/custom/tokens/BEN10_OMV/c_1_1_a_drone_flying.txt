@@ -1,0 +1,8 @@
+Name:Drone Token
+ManaCost:no cost
+Types:Artifact Creature Drone
+PT:1/1
+
+K:Flying
+
+Oracle:Flying

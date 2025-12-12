@@ -1,0 +1,7 @@
+Name:DNAlien
+ManaCost:no cost
+Colors:black,green
+Types:Creature Alien
+PT:3/3
+
+Oracle:

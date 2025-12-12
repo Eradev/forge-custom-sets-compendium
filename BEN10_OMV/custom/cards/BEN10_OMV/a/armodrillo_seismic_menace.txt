@@ -1,0 +1,21 @@
+Name:Armodrillo, Seismic Menace
+ManaCost:3 R R
+Types:Legendary Creature Alien Armadillo
+PT:4/4
+
+K:Trample
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever a land enters, NICKNAME deals 2 damage to that land's controller.
+SVar:TrigDamage:DB$ DealDamage | Defined$ TriggeredCardController | NumDmg$ 2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigRepeat | TriggerDescription$ Whenever NICKNAME attacks, each player may sacrifice a land. That player searches their library for a land card, puts it onto the battlefield tapped, then shuffles.
+SVar:TrigRepeat:DB$ RepeatEach | RepeatPlayers$ Player | RepeatSubAbility$ DBRepeatAction
+SVar:DBRepeatAction:DB$ Sacrifice | Defined$ Remembered | SacValid$ Land | Optional$ True | RememberSacrificed$ True | SubAbility$ DBSearchRamp
+SVar:DBSearchRamp:DB$ ChangeZone | ConditionDefined$ Remembered | ConditionPresent$ Card | Origin$ Library | Destination$ Battlefield | ChangeType$ Land | ChangeNum$ 1 | Tapped$ True | Shuffle$ True | DefinedPlayer$ Remembered | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Trample, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWhenever a land enters, Armodrillo deals 2 damage to that land's controller.\nWhenever Armodrillo attacks, each player may sacrifice a land. That player searches their library for a land card, puts it onto the battlefield tapped, then shuffles.

@@ -1,0 +1,20 @@
+Name:Bullfrag, Incursean Interceptor
+ManaCost:3 R G
+Types:Legendary Creature Alien Frog Warrior
+PT:4/4
+
+K:Haste
+
+K:Trample
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBOmniShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigTap | TriggerDescription$ Whenever NICKNAME attacks, tap up to one target creature an opponent controls.
+SVar:TrigTap:DB$ Tap | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select up to one target creature an opponent controls.
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigBounce | TriggerDescription$ Whenever NICKNAME deals combat damage to a player, return up to one target tapped artifact or creature that player controls to its owner's hand.
+SVar:TrigBounce:DB$ ChangeZone | Origin$ Battlefield | Destination$ Hand | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Artifact.tapped+ControlledBy TriggeredTarget,Creature.tapped+ControlledBy TriggeredTarget | TgtPrompt$ Select up to one target tapped artifact or creature that player controls
+
+Oracle:Haste, trample, omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\nWhenever Bullfrag attacks, tap up to one target creature an opponent controls.\nWhenever Bullfrag deals combat damage to a player, return up to one target tapped artifact or creature that player controls to its owner's hand.
