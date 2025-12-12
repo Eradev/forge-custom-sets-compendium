@@ -8,7 +8,7 @@ SVar:DBI:DB$ GainLife | Defined$ You | LifeAmount$ X | SpellDescription$ You gai
 SVar:X:SVar$NumOpps/Times.3
 SVar:NumOpps:PlayerCountOpponents$Amount
 
-SVar:DBII:DB$ Token | TokenAmount$ 1 | TokenScript$ bg_3_3_dnalien | TokenOwner$ Opponent | LockTokenScript$ True | SpellDescription$ Each opponent creates a 3/3 black and green DNAlien creature token.
+SVar:DBII:DB$ Token | TokenAmount$ 1 | TokenScript$ dnalien | TokenOwner$ Opponent | LockTokenScript$ True | SpellDescription$ Each opponent creates a 3/3 black and green DNAlien creature token.
 
 SVar:DBIII:DB$ Destroy | ValidTgts$ Creature,Planeswalker | TgtPrompt$ Select up to one target creature or planeswalker | TargetMin$ 0 | TargetMax$ 1 | SpellDescription$ Destroy up to one target creature or planeswalker.
 
