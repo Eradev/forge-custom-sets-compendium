@@ -9,8 +9,8 @@ R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DB
 SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
 SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
 
-T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigExile | TriggerDescription$ Whenever NICKNAME deals combat damage to a player, that player exiles a card at random from their hand until NICKNAME leaves the battlefield, then NICKNAME explores.
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigExile | TriggerDescription$ Whenever NICKNAME deals combat damage to a player, that player exiles a card at random from their hand until he leaves the battlefield, then he explores.
 SVar:TrigExile:DB$ ChangeZone | Origin$ Hand | Destination$ Exile | DefinedPlayer$ TriggeredTarget | ChangeType$ Card | ChangeNum$ 1 | Mandatory$ True | AtRandom$ True | Duration$ UntilHostLeavesPlay | SubAbility$ DBExplore
 SVar:DBExplore:DB$ Explore
 
-Oracle:Flying, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWhenever Nanomech deals combat damage to a player, that player exiles a card at random from their hand until Nanomech leaves the battlefield, then Nanomech explores.
+Oracle:Flying, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWhenever Nanomech deals combat damage to a player, that player exiles a card at random from their hand until he leaves the battlefield, then he explores.
