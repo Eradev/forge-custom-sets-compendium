@@ -30,7 +30,7 @@ K:Flying
 
 K:First Strike
 
-T:Mode$ ChangesZone | ValidCard$ Creature.OppCtrl | Origin$ Battlefield | Destination$ Graveyard | OptionalDecider$ You | Execute$ TrigExile | TriggerZones$ Battlefield | TriggerDescription$ Frenzied Absorption — Whenever a creature an opponent controls dies, you may exile it. If you do, Kevin gains all abilities of that card for as long as it remains exiled.
+T:Mode$ ChangesZone | ValidCard$ Creature.OppCtrl | Origin$ Battlefield | Destination$ Graveyard | OptionalDecider$ You | Execute$ TrigExile | TriggerZones$ Battlefield | TriggerDescription$ Frenzied Absorption — Whenever a creature an opponent controls dies, you may exile it. If you do, NICKNAME gains all abilities of that card for as long as it remains exiled.
 SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | Defined$ TriggeredNewCardLKICopy
 S:Mode$ Continuous | Affected$ Card.Self | GainsAbilitiesOf$ Card.ExiledWithSource | GainsTriggerAbsOf$ Card.ExiledWithSource | GainsAbilitiesOfZones$ Exile
 
@@ -38,4 +38,4 @@ T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigDealDamage | TriggerZones$
 SVar:TrigDealDamage:DB$ DealDamage | ValidTgts$ Creature,Planeswalker | TargetMin$ 0 | TargetMax$ 1 | NumDmg$ X | DamageSource$ Self
 SVar:X:Count$CardPower
 
-Oracle:Flying, first strike\nFrenzied Absorption — Whenever a creature an opponent controls dies, you may exile it. If you do, Kevin gains all abilities of that card for as long as it remains exiled.\nWhen Kevin attacks, he deals damage equal to his power to up to one target creature or planeswalker.
+Oracle:Flying, first strike\nFrenzied Absorption — Whenever a creature an opponent controls dies, you may exile it. If you do, Ultimate Kevin gains all abilities of that card for as long as it remains exiled.\nWhen Ultimate Kevin attacks, he deals damage equal to his power to up to one target creature or planeswalker.
