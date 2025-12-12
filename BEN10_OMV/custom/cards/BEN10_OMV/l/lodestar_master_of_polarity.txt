@@ -1,0 +1,20 @@
+Name:Lodestar, Master of Polarity 
+ManaCost:5
+Types:Legendary Artifact Creature Alien Construct
+PT:2/5
+
+K:Flying
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Reveal$ True | Defined$ ReplacedCard | Shuffle$ True | SubAbility$ OmniDmg
+SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 2
+
+R:Event$ Moved | ValidCard$ Artifact.OppCtrl,Creature.OppCtrl | Destination$ Battlefield | ReplaceWith$ ETBTapped | ReplacementResult$ Updated | ActiveZones$ Battlefield | Description$ Artifacts and creatures your opponents control enter tapped.
+SVar:ETBTapped:DB$ Tap | ETB$ True | Defined$ ReplacedCard
+
+T:Mode$ Taps | ValidCard$ Artifact.OppCtrl,Creature.OppCtrl | Execute$ TrigUntap | TriggerZones$ Battlefield | TriggerDescription$ When an artifact or creature an opponent controls becomes tapped, you may untap target nonland permanent you control.
+SVar:TrigUntap:DB$ Untap | ValidTgts$ Permanent.nonLand+YouCtrl | TgtPrompt$ You may untap target nonland permanent you control | TargetMin$ 0 | TargetMax$ 1
+
+
+Oracle:Flying, omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\nArtifacts and creatures your opponents control enter tapped.\nWhen an artifact or creature an opponent controls becomes tapped, you may untap target nonland permanent you control.
+

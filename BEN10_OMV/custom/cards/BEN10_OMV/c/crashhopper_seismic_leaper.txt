@@ -1,0 +1,16 @@
+Name:Crashhopper, Seismic Leaper 
+ManaCost:2 G
+Types:Legendary Creature Alien Insect
+PT:3/2
+
+K:Reach
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Reveal$ True | Defined$ ReplacedCard | Shuffle$ True | SubAbility$ OmniDmg
+SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDamageAllFlyersAndOpponents | TriggerDescription$ When NICKNAME enters, it deals damage equal to its power to each creature with flying and each opponent.
+SVar:TrigDamageAllFlyersAndOpponents:DB$ DamageAll | ValidCards$ Creature.withFlying | ValidPlayers$ Opponent | NumDmg$ X
+SVar:X:Count$CardPower
+
+Oracle:Reach, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWhen Crashhopper enters, it deals damage equal to its power to each creature with flying and each opponent.

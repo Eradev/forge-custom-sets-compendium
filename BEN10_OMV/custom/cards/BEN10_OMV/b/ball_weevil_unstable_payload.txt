@@ -1,0 +1,23 @@
+Name:Ball Weevil, Unstable Payload
+ManaCost:R G
+Types:Legendary Creature Alien Insect
+PT:2/1
+
+R:Event$ Moved | Origin$ Hand,Library,Exile | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ Hand,Library,Exile | Destination$ Library | Reveal$ True | Defined$ ReplacedCard | Shuffle$ True | SubAbility$ OmniDmg
+SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Graveyard | TriggerZones$ Graveyard | ValidCard$ Card.Self | Execute$ DBShuffle | TriggerDescription$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBShuffle:DB$ ChangeZone | Origin$ Graveyard | Destination$ Library | Reveal$ True | Defined$ Self | Shuffle$ True | SubAbility$ OmniDmg
+SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ DamageDone | ValidSource$ Card.YouCtrl,Emblem.YouCtrl | ValidTarget$ Opponent | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever a source you control deals damage to an opponent, put a +1/+1 counter on NICKNAME.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigDamageAllCreatures | TriggerDescription$ When NICKNAME dies, return all creatures named CARDNAME to its owner's hand.
+SVar:TrigDamageAllCreatures:DB$ DamageAll | ValidCards$ Creature | NumDmg$ X
+SVar:X:Count$CardPower
+
+
+Oracle:Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWhenever a source you control deals damage to an opponent, put a +1/+1 counter on Ball Weevil.\nWhen Ball Weevil dies, it deals damage equal to its power to each creature.
+

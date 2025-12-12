@@ -1,0 +1,15 @@
+Name:Kickin' Hawk, Way of the Claw
+ManaCost:1 R W
+Types:Legendary Creature Alien Bird Warrior
+PT:2/2
+
+K:Prowess
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Reveal$ True | Defined$ ReplacedCard | Shuffle$ True | SubAbility$ OmniDmg
+SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ SpellCast | ValidCard$ Card.nonCreature | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever you cast a noncreature spell, NICKNAME gains your choice of double strike or menace until the end of turn.
+SVar:TrigPump:DB$ Pump | KWChoice$ Double Strike,Menace
+
+Oracle:Prowess, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\nWhenever you cast a noncreature spell, Kickin Hawk' gains your choice of double strike or menace until the end of turn.
