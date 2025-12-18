@@ -1,0 +1,20 @@
+Name:Ball Weevil, Unstable Payload
+ManaCost:R G
+Types:Legendary Creature Alien Insect
+PT:2/1
+
+R:Event$ Moved | Origin$ Hand,Library,Exile | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)
+SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ Hand,Library,Exile | Destination$ Library | Reveal$ True | Defined$ ReplacedCard | Shuffle$ True | SubAbility$ OmniDmg
+SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 1
+
+R:Event$ Moved | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle2 | Description$ When NICKNAME dies, it deals damage equal to its power to each creature.
+SVar:DBShuffle2:DB$ ChangeZone | Hidden$ True | Origin$ Battlefield | Destination$ Library | Reveal$ True | Defined$ ReplacedCard | Shuffle$ True | SubAbility$ OmniDmg2
+SVar:OmniDmg2:DB$ LoseLife | LifeAmount$ 1 | SubAbility$ ImmTrigDamage
+SVar:ImmTrigDamage:DB$ ImmediateTrigger | Execute$ TrigDamageAllCreatures | TriggerDescription$ When NICKNAME dies, it deals damage equal to its power to each creature.
+SVar:TrigDamageAllCreatures:DB$ DamageAll | ValidCards$ Creature | NumDmg$ X
+SVar:X:Count$CardPower
+
+T:Mode$ DamageDone | ValidSource$ Card.YouCtrl,Emblem.YouCtrl | ValidTarget$ Opponent | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever a source you control deals damage to an opponent, put a +1/+1 counter on NICKNAME.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
+
+Oracle:Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nWhenever a source you control deals damage to an opponent, put a +1/+1 counter on Ball Weevil.\nWhen Ball Weevil dies, it deals damage equal to its power to each creature.

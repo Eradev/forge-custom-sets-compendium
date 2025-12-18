@@ -1,0 +1,16 @@
+Name:Eatle, Scrap Cannon 
+ManaCost:4 R G
+Types:Legendary Creature Alien Beast
+PT:5/5
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Reveal$ True | Defined$ ReplacedCard | Shuffle$ True | SubAbility$ OmniDmg
+SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChange | OptionalDecider$ You | TriggerDescription$ Imprint - When NICKNAME enters, you may search your library for an artifact card, exile it, then shuffle.
+SVar:TrigChange:DB$ ChangeZone | Origin$ Library | Destination$ Exile | Imprint$ True | ChangeType$ Artifact | ChangeNum$ 1 | RememberChanged$ True | ShuffleNonMandatory$ True
+
+A:AB$ DealDamage | Cost$ T | ValidTgts$ Any | NumDmg$ X | SpellDescription$ NICKNAME deals damage equal to the exiled card's mana value.
+SVar:X:Imprinted$CardManaCost
+
+Oracle:Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\nImprint - When Eatle enters, you may search your library for an artifact card, exile it, then shuffle.\n{T}: Eatle deals damage equal to the exiled card's mana value.

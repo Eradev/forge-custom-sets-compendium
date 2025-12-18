@@ -1,0 +1,24 @@
+Name:Gravattack, Planetary Force
+ManaCost:3 W U
+Types:Legendary Land Creature Planet Alien 
+PT:3/4
+
+K:Defender
+K:Flying
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ Omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)
+SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Reveal$ True | Defined$ ReplacedCard | Shuffle$ True | SubAbility$ OmniDmg
+SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 2
+
+T:Mode$ NewGame | Execute$ DBEffect | Static$ True | TriggerDescription$ You can't play NICKNAME as a land.
+SVar:DBEffect:DB$ Effect | Name$   | Image$ hidden | StaticAbilities$ STCantBePlayed | EffectOwner$ You | Duration$ Permanent
+SVar:STCantBePlayed:Mode$ CantPlayLand | ValidCard$ Land.namedGravattack; Planetary Force
+
+A:SP$ PermanentCreature
+
+T:Mode$ Taps | ValidCard$ Creature.OppCtrl | Execute$ TrigDontUntap | TriggerZones$ Battlefield | TriggerDescription$ Whenever a creature an opponent controls becomes tapped, it doesn't untap during its controller untap step.
+SVar:TrigDontUntap:DB$ Pump | Defined$ TriggeredCardLKICopy | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent
+
+A:AB$ Mana | Cost$ T | Produced$ W U | SpellDescription$ Add {W}{U}
+
+Oracle:Defender, flying, omnishuffle 2 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 2 life.)\nYou can't play Gravattack as a land.\nWhenever a creature an opponent controls becomes tapped, it doesn't untap during its controller untap step.\n{T}: Add {W}{U}
