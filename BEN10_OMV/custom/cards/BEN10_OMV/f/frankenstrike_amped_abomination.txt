@@ -10,8 +10,8 @@ R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DB
 SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
 SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
 
-A:AB$ DealDamage | Cost$ U R | ValidTgts$ Any | TgtPrompt$ Select target | NumDmg$ X | ReplaceDyingDefined$ Targeted | SpellDescription$ NICKNAME deals X damage to any target, where X is the greatest power among creatures you control. If a permanent dealt damage this way would die, exile it instead.
+A:AB$ DealDamage | Cost$ U R | ValidTgts$ Any | TgtPrompt$ Select target | NumDmg$ X | ReplaceDyingDefined$ Targeted | SpellDescription$ NICKNAME deals X damage to any target, where X is the greatest mana value among creatures you control. If a permanent dealt damage this way would die, exile it instead.
 SVar:X:Count$Valid Creature.YouCtrl$GreatestCMC
 SVar:NeedsToPlayVar:X GE3
 
-Oracle:Menace, afflict 3, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nBio-electric Discharge - Frankenstrike deals X damage to any target, where X is the greatest power among creatures you control. If a permanent dealt damage this way would die, exile it instead.
+Oracle:Menace, afflict 3, omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nBio-electric Discharge - Frankenstrike deals X damage to any target, where X is the greatest mana value among creatures you control. If a permanent dealt damage this way would die, exile it instead.
