@@ -10,7 +10,11 @@ R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DB
 SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Reveal$ True | Defined$ ReplacedCard | Shuffle$ True | SubAbility$ OmniDmg
 SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 2
 
-S:Mode$ Continuous | Affected$ Card.Self | AffectedZone$ Hand | EffectZone$ Hand | RemoveType$ Land | Description$ You can't play NICKNAME as a land.
+T:Mode$ NewGame | Execute$ DBEffect | Static$ True | TriggerDescription$ You can't play NICKNAME as a land.
+SVar:DBEffect:DB$ Effect | Name$   | Image$ hidden | StaticAbilities$ STCantBePlayed | EffectOwner$ You | Duration$ Permanent
+SVar:STCantBePlayed:Mode$ CantPlayLand | ValidCard$ Land.namedGravattack; Planetary Force
+
+A:SP$ PermanentCreature
 
 T:Mode$ Taps | ValidCard$ Creature.OppCtrl | Execute$ TrigDontUntap | TriggerZones$ Battlefield | TriggerDescription$ Whenever a creature an opponent controls becomes tapped, it doesn't untap during its controller untap step.
 SVar:TrigDontUntap:DB$ Pump | Defined$ TriggeredCardLKICopy | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent
