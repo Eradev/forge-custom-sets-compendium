@@ -2,8 +2,8 @@ Name:Grudge Match
 ManaCost:1 R G
 Types:Instant
 
-A:SP$ Pump | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you control | AILogic$ Fight | SubAbility$ DBFight | RememberTargets$ True | SpellDescription$ Target creature you control fights target creature you don't control. If the creature you don't control didn't die this way, it phases out.
-SVar:DBFight:DB$ Fight | Defined$ ParentTarget | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you don't control | SubAbility$ DBImmTrig
+A:SP$ Pump | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you don't control | AILogic$ Fight | SubAbility$ DBFight | RememberTargets$ True | SpellDescription$ Target creature you control fights target creature you don't control. If the creature you don't control didn't die this way, it phases out.
+SVar:DBFight:DB$ Fight | Defined$ ParentTarget | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | SubAbility$ DBImmTrig
 SVar:DBImmTrig:DB$ ImmediateTrigger | Execute$ DBPhaseOutIfAlive | TriggerDescription$ If the creature you don't control didn't die this way, it phases out.
 SVar:DBPhaseOutIfAlive:DB$ Phases | Defined$ Remembered
 
