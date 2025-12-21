@@ -50,7 +50,7 @@ Type=Custom
 43 R Ravenous Shepherd @Sandara Tang
 44 M Ria Ivor, Corrupted Champion @Mike Jordana
 45 R Nullmancer @F3LC4T
-46 R Gilded Pouncer @Daniel Cotter
+46 R Moonfire Cavalry @Anato Finnstark
 47 R Angelic Wrath @Andreas Huang
 48 M Alabaster Equipoise @Evyn Fong
 49 M Thalia, Steadfast Cathar @Mark Henry Bustamante
@@ -74,7 +74,7 @@ Type=Custom
 67 R Paradoxical Ritual @Biagio D'Alessandro
 68 M Mizzium Micromancer @Kevin McKenna
 69 U Ancestral Ambition @Botos Vlad
-70 U Arctic Familiar @Frank Freire
+70 M Chronologist's Epiphany @Alex V Ngo
 71 R Harbinger of Equilibrium @Alessandro Calbini
 72 M Arcane Tutor @Simon Marczyk
 73 M Force of Tenacity @Mari Morgan
@@ -102,7 +102,7 @@ Type=Custom
 95 U Curious Peregrination @Edgar Sánchez Hidalgo
 96 U Precipitous Overturn @Bastien Grivet
 97 U Hieroglyphic Constrictor @Illarstration
-98 M Gitaxian Archangel @Thomas Ricci
+98 R Merfolk Sojourner @Yans Velazquez
 99 R Snapcast @Thomas Ricci
 100 R Moon Sage's Talent @Gauthier Redon
 101 M Force of Anguish @Dominik Mayer
@@ -145,7 +145,7 @@ Type=Custom
 138 M Necropolis Seed Engine @Dominik Mayer
 139 U Malevolent Tranquility @Dominik Mayer
 140 U Opalescent Effacement @Jeremy Carver
-141 R Bloodcrazed Brawler @Oleg Kapustin
+141 R Curse of Malfeasance @Kristina Gehrmann
 142 U Grave Trawler @Oleg Kapustin
 143 R Erudition Dissolution @Nick Moskvin
 144 R Oblivion Confluence @Timi Honkanen
@@ -236,21 +236,31 @@ Type=Custom
 236 R Archon of Autumn @Sandara Tang
 237 R Roar of the Wurmcoil @Joel Hustak
 238 U Noxious Detonation @Romain Kurdi
-# 239-250
+239 R Undergrowth Surge @Elvira Shakirova
+240 M Auroral Dragon @Alessandro Calbini
+241 R Seek Fae @Donato Giancola
+242 M Landlore Culmination @Harkalé Linaï
+243 R Rotform Harvester @Anato Finnstark
+244 R Autumn @Joel Hustak
+# 245-250
 251 R Waterlogged Archipelago @Anthony Avon
 252 R Contaminated Rivulet @Anthony Avon
 253 R Sanguinary Morass @Anthony Avon
 254 R Wildwood Knolls @Anthony Avon
 255 R Blustery Steppe @Anthony Avon
 256 R Stark Wetland @Anthony Avon
-# 257-265
+# 257-260
+261 R Balevi, Zephyr Tactician @Christina Kraus
+# 262-265
 266 R Lithis, Loyal Banehound @Sandara Tang
-# 267-271
+# 267-269
+270 R Chorb, Magnate of Corpulence @Mego Sinaga
 271 M Vitromancy @Evelyne Park
-272 R Vexed Mire @Anthony Avon
-273 R Vexed Fen @Anthony Avon
-# 274-278
-279 R Vexed Temple @Anthony Avon
+# 272
+273 U Cryptflare @Dominik Mayer
+# 274-275
+276 M Tymna, Polis Seamstress @Kristina Gehrmann
+# 277-279
 280 M Hakbal, Emergent Aqualogist @Luigi Manese
 281 R Greed Vacuum @Bear Frymire
 282 R Nightblade Ronin @Dmonik Mayer
@@ -268,7 +278,8 @@ Type=Custom
 294 U Burnwillow Blossoming @Bastien Grivet
 # 295
 296 U Candelabrum Vestige @Illarstration
-# 297-300
+# 297-299
+300 R Luxa Relic @Kristina Gehrmann
 301 R Bloodblitz Battle-Axe @Dominik Mayer
 302 M Mox Bismuth @Robert Maldonado
 303 R Vivacious Ridgeline @Sandara Tang
@@ -293,3 +304,5 @@ Type=Custom
 322 M Draco, Rath Enigma @Bastien Grivet
 323 R Lotus Grove @Alessandro Calbini
 324 R City of Opal @Bastien Grivet
+325 R Ethereal Lotus @Maria Holzleitner
+326 R Ulron, Cosmic Guide @Romain Kurdi
