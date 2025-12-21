@@ -1,0 +1,8 @@
+[metadata]
+Code=CA_C25
+Name=Candour Christmas 2025
+Date=2025-12-15
+Type=Custom
+
+[cards]
+M1 M Bauble Goblin @Alessandro Calbini
