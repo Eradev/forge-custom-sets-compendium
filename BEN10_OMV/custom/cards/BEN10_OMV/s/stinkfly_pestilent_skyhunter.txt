@@ -11,7 +11,7 @@ R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DB
 SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
 SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
 
-A:AB$ PutCounter | Cost$ T | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select up to one target creature you don't control | CounterType$ SLIME | CounterNum$ 1 | SpellDescription$ Put a slime counter on up to one target creature you don't control.
+A:AB$ PutCounter | Cost$ T | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select up to one target creature you don't control | CounterType$ SLIME | CounterNum$ 1 | IsCurse$ True | SpellDescription$ Put a slime counter on up to one target creature you don't control.
 
 S:Mode$ Continuous | Affected$ Creature.OppCtrl+counters_GE1_SLIME | AddStaticAbility$ Slime | AddSVars$ Slimed | Description$ Creatures your opponents control with a slime counter on them get -1/-1 for each creature they control with a slime counter on it.
 SVar:Slime:Mode$ Continuous | Affected$ Card.Self | AddPower$ -Slimed | AddToughness$ -Slimed
