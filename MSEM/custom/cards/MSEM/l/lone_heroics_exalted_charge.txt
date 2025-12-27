@@ -26,7 +26,7 @@ K:Enchant:Creature
 S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 2 | AddToughness$ 2 | Description$ Enchanted creature gets +2/+2.
 
 T:Mode$ Attacks | ValidCard$ Card.AttachedBy | Execute$ TrigToken | TriggerZones$ Battlefield | TriggerDescription$ Whenever enchanted creature attacks, create a 2/2 white Knight creature token that's tapped and attacking.
-SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ w_2_2_knight | TokenOwner$ You | TokenTapped$ True | TokenAttacking$ True
+SVar:TrigToken:DB$ Token | TokenScript$ w_2_2_knight | TokenTapped$ True | TokenAttacking$ True
 
 Oracle:Enchant creature\nEnchanted creature gets +2/+2.\nWhenever enchanted creature attacks, create a 2/2 white Knight creature token that's tapped and attacking.
 

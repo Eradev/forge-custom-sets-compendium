@@ -7,7 +7,7 @@ T:Mode$ SpellCast | ValidCard$ Card | TriggerZones$ Battlefield | Execute$ TrigP
 SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When NICKNAME leaves the battlefield, create a 2/2 green Wolf Beast creature token. Then distribute X +1/+1 counters among any number of target creatures you control, where X was the number of +1/+1 counters on NICKNAME as it left the battlefield.
-SVar:TrigToken:DB$ Token | TokenScript$ g_2_2_wolf_beast | TokenAmount$ 1 | TokenOwner$ You | SubAbility$ DBStore
+SVar:TrigToken:DB$ Token | TokenScript$ g_2_2_wolf_beast | SubAbility$ DBStore
 SVar:DBStore:DB$ StoreSVar | SVar$ X | Type$ CountSVar | Expression$ Y | SubAbility$ ImmTrig
 SVar:ImmTrig:DB$ ImmediateTrigger | Execute$ TrigCounterDist
 SVar:TrigCounterDist:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Choose any number of creatures you control to distribute counters to | CounterType$ P1P1 | CounterNum$ X | DividedAsYouChoose$ X | TargetMin$ 0 | TargetMax$ X

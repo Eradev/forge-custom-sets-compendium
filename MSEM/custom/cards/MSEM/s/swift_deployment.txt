@@ -2,7 +2,7 @@ Name:Swift Deployment
 ManaCost:1 RW RW RW
 Types:Instant
 
-A:SP$ Token | TokenAmount$ 2 | TokenScript$ r_1_1_soldier_haste | TokenOwner$ You | SubAbility$ DBPumpAll | SpellDescription$ Create two 1/1 red Soldier creature tokens with haste. Creatures you control get +1/+1 until end of turn.
+A:SP$ Token | TokenAmount$ 2 | TokenScript$ r_1_1_soldier_haste | SubAbility$ DBPumpAll | SpellDescription$ Create two 1/1 red Soldier creature tokens with haste. Creatures you control get +1/+1 until end of turn.
 SVar:DBPumpAll:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1
 
 Oracle:Create two 1/1 red Soldier creature tokens with haste.\nCreatures you control get +1/+1 until end of turn.

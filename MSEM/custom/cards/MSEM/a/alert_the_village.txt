@@ -2,7 +2,7 @@ Name:Alert the Village
 ManaCost:1 W
 Types:Instant
 
-A:SP$ Token | TokenAmount$ 2 | TokenScript$ w_1_1_human | TokenOwner$ You | SpellDescription$ Create two 1/1 white Human creature tokens.
+A:SP$ Token | TokenAmount$ 2 | TokenScript$ w_1_1_human | SpellDescription$ Create two 1/1 white Human creature tokens.
 
 Oracle:Create two 1/1 white Human creature tokens.
 

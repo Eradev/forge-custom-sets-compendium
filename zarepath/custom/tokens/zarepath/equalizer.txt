@@ -6,7 +6,7 @@ PT:3/3
 S:Mode$ CantBeCast | ValidCard$ Card | Caster$ Player | NumLimitEachTurn$ 1 | Description$ Each player can't cast more than one spell each turn.
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerController$ TriggeredCardController | TriggerDescription$ When this creature dies, each player draws a card.
-SVar:TrigDraw:DB$ Draw | Defined$ Player | NumCards$ 1 | SpellDescription$ Each player draws a card.
+SVar:TrigDraw:DB$ Draw | Defined$ Player | SpellDescription$ Each player draws a card.
 
 Oracle:Each player can't cast more than one spell each turn.\nWhen this creature dies, each player draws a card.
 

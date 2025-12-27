@@ -7,7 +7,7 @@ S:Mode$ Continuous | Affected$ Creature.Mutant+YouCtrl | AddPower$ 1 | AddToughn
 
 T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ MakeToken | TriggerDescription$ Whenever NICKNAME attacks or blocks, create a 1/2 black Mutant creature token.
 T:Mode$ Blocks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ MakeToken | Secondary$ True | TriggerDescription$ Whenever NICKNAME attacks or blocks, create a 1/2 black Mutant creature token.
-SVar:MakeToken:DB$ Token | TokenAmount$ 1 | TokenOwner$ You | TokenScript$ b_1_2_mutant
+SVar:MakeToken:DB$ Token | TokenScript$ b_1_2_mutant
 
 Oracle:Saljan and other Mutants you control get +1/+1 and have indestructible.\nWhenever Saljan attacks or blocks, create a 1/2 black Mutant creature token.
 

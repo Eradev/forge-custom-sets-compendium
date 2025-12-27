@@ -4,7 +4,7 @@ Types:Legendary Creature Human Jedi Rebel
 PT:3/3
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters, create a 1/1 white Rebel creature token.
-SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ w_1_1_rebel | TokenOwner$ You
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_rebel
 
 T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever CARDNAME attacks, put a +1/+1 counter on another target rebel creature you control.
 SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature.Rebel+YouCtrl+Other | TgtPrompt$ Select another target rebel creature you control | CounterType$ P1P1 | CounterNum$ 1

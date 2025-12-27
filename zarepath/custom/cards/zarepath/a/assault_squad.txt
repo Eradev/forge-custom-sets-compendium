@@ -4,7 +4,7 @@ Types:Creature Human Rebel
 PT:3/3
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, arm it. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to this creature.)
-SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | AttachedTo$ Self
+SVar:TrigToken:DB$ Token | TokenScript$ c_a_weapon_equipment | AttachedTo$ Self
 
 S:Mode$ Continuous | Affected$ Creature.YouCtrl+equipped | AddKeyword$ Haste | Description$ Equipped creatures you control have haste.
 

@@ -8,7 +8,7 @@ SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 1
 A:AB$ Mana | Cost$ 1 T Sac<1/CARDNAME/this artifact> | Produced$ Any | SpellDescription$ Add one mana of any color.
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this artifact is put into a graveyard from the battlefield, draw a card and you lose 1 life.
-SVar:TrigDraw:DB$ Draw | NumCards$ 1 | SubAbility$ DBLoseLife
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBLoseLife
 SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
 
 Oracle:When this artifact enters, it deals 1 damage to any target.\n{1}, {T}, Sacrifice this artifact: Add one mana of any color.\nWhen this artifact is put into a graveyard from the battlefield, draw a card and you lose 1 life.

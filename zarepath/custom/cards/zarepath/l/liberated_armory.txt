@@ -3,7 +3,7 @@ ManaCost:2 W
 Types:Enchantment
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.!token+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigArm | TriggerDescription$ Whenever a nontoken creature enters under your control, arm it. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.)
-SVar:TrigArm:DB$ Token | Defined$ TriggeredCardLKICopy | TokenAmount$ 1 | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | TrigAttach:DB$ Attach | AttachedTo$ TriggeredCard| ValidTgts$ Card.Self
+SVar:TrigArm:DB$ Token | Defined$ TriggeredCardLKICopy | TokenScript$ c_a_weapon_equipment | TrigAttach:DB$ Attach | AttachedTo$ TriggeredCard| ValidTgts$ Card.Self
 
 S:Mode$ ReduceCost | ValidCard$ Card | ValidSpell$ Activated.Equip | Activator$ You | Amount$ 1 | Description$ Equip costs you pay cost {1} less.
 

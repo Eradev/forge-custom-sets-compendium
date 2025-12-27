@@ -4,9 +4,9 @@ Types:Sorcery
 
 A:SP$ Charm | Choices$ DBTokenDeathtouch,DBTokenLifelink
 
-SVar:DBTokenDeathtouch:DB$ Token | TokenAmount$ 1 | TokenScript$ c_3_3_a_phyrexian_wurm_deathtouch | SpellDescription$ Create a 3/3 colorless Phyrexian Wurm artifact creature token with deathtouch.
+SVar:DBTokenDeathtouch:DB$ Token | TokenScript$ c_3_3_a_phyrexian_wurm_deathtouch | SpellDescription$ Create a 3/3 colorless Phyrexian Wurm artifact creature token with deathtouch.
 
-SVar:DBTokenLifelink:DB$ Token | TokenAmount$ 1 | TokenScript$ c_3_3_a_phyrexian_wurm_lifelink | SpellDescription$ Create a 3/3 colorless Phyrexian Wurm artifact creature token with lifelink.
+SVar:DBTokenLifelink:DB$ Token | TokenScript$ c_3_3_a_phyrexian_wurm_lifelink | SpellDescription$ Create a 3/3 colorless Phyrexian Wurm artifact creature token with lifelink.
 
 K:Entwine:3
 

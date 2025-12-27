@@ -5,7 +5,7 @@ Types:Legendary Artifact
 A:AB$ PutCounter | Cost$ T Exert<1/CARDNAME> | CounterType$ BOUNTY | CounterNum$ 1 | SubAbility$ DBMana | SpellDescription$ Put a bounty counter on NICKNAME. Add X mana in any combination of colors, draw X cards, and create an X/X green Elemental creature token, where X is the number of bounty counters on NICKNAME. (An exerted permanent won't untap during your next untap step.)
 SVar:DBMana:DB$ Mana | Produced$ Combo Any | Amount$ X | SubAbility$ DBDraw
 SVar:DBDraw:DB$ Draw | NumCards$ X | SubAbility$ DBToken
-SVar:DBToken:DB$ Token | TokenAmount$ 1 | TokenScript$ g_x_x_elemental | TokenPower$ X | TokenToughness$ X | TokenOwner$ You
+SVar:DBToken:DB$ Token | TokenScript$ g_x_x_elemental | TokenPower$ X | TokenToughness$ X
 SVar:X:Count$CardCounters.BOUNTY
 
 Oracle:{T}, Exert Amathrassil: Put a bounty counter on Amathrassil. Add X mana in any combination of colors, draw X cards, and create an X/X green Elemental creature token, where X is the number of bounty counters on Amathrassil. (An exerted permanent won't untap during your next untap step.)

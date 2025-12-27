@@ -4,6 +4,6 @@ Types:Artifact Creature Construct
 PT:3/3
 
 T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigDraw | TriggerDescription$ Whenever this creature deals combat damage to a player, draw a card.
-SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+SVar:TrigDraw:DB$ Draw
 
 Oracle:Whenever this creature deals combat damage to a player, draw a card.

@@ -2,7 +2,7 @@ Name:Starfall Impact
 ManaCost:2 R
 Types:Instant
 
-A:SP$ Token | TokenScript$ meteorite | TokenAmount$ 1 | TokenTapped$ True | TokenOwner$ You
+A:SP$ Token | TokenScript$ meteorite | TokenTapped$ True
 
 K:Flashback:4 R
 

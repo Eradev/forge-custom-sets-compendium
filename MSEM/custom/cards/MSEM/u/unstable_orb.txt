@@ -3,7 +3,7 @@ ManaCost:2
 Types:Artifact
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ FreeCard | TriggerDescription$ When this artifact enters, draw a card.
-SVar:FreeCard:DB$ Draw | Defined$ You | NumCards$ 1
+SVar:FreeCard:DB$ Draw
 
 A:AB$ DealDamage | Cost$ 3 T Sac<1/CARDNAME/this artifact> | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ 2 | SpellDescription$ It deal 2 damage to target creature.
 

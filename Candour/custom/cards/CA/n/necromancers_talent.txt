@@ -3,7 +3,7 @@ ManaCost:B
 Types:Enchantment Class
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Optional$ True | Execute$ TrigToken | TriggerDescription$ When this Class enters, create a tapped 2/2 black Zombie creature token.
-SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ b_2_2_zombie | TokenTapped$ True | TokenOwner$ You
+SVar:TrigToken:DB$ Token | TokenScript$ b_2_2_zombie | TokenTapped$ True
 
 K:Class:2:B:AddTrigger$ TrigSearchedLibrary
 SVar:TrigSearchedLibrary:Mode$ SearchedLibrary | ValidPlayer$ You | SearchOwnLibrary$ True | Execute$ TrigEntomb | TriggerZones$ Battlefield | ActivationLimit$ 1 | TriggerDescription$ Whenever you search your library, search your library for a card, put that card into your graveyard, then shuffle. This ability triggers only once each turn.

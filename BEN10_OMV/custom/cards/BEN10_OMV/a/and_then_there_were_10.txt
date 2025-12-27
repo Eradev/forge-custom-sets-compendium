@@ -7,15 +7,13 @@ K:Chapter:3:DBI,DBII,DBIII
 SVar:DBI:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Alien | ChangeNum$ 1 | Shuffle$ True | Reveal$ True | SpellDescription$ Search your library for an Alien card, reveal it, put it into your hand, then shuffle.
 
 SVar:DBII:DB$ RepeatEach | RepeatPlayers$ Opponent | RepeatSubAbility$ DBToken | SpellDescription$ Each opponent creates a 1/1 colorless Drone artifact creature token with flying.
-SVar:DBToken:DB$ Token | TokenAmount$ 1 | TokenScript$ c_1_1_a_drone_flying | TokenOwner$ Remembered
+SVar:DBToken:DB$ Token | TTokenScript$ c_1_1_a_drone_flying | TokenOwner$ Remembered
 
 SVar:DBIII:DB$ RepeatEach | RepeatPlayers$ Player.Opponent | RepeatSubAbility$ DBSacrifice | ChangeZoneTable$ True | SpellDescription$ Each opponent sacrifices a creature for each Alien you control. For each creature that died this way, its controller loses 1 life.
 SVar:DBSacrifice:DB$ Sacrifice | Amount$ X | SacValid$ Creature | Defined$ Remembered | RememberSacrificed$ True | SubAbility$ DBLoseLife
 SVar:DBLoseLife:DB$ LoseLife | Defined$ Remembered | LifeAmount$ Y | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
-
 SVar:Y:Count$RememberedSize/Minus.1
-
 SVar:X:Count$Valid Alien.YouCtrl
 
 Oracle:(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI — Search your library for an Alien card, reveal it, put it into your hand, then shuffle.\nII — Each opponent creates a 1/1 colorless Drone artifact creature token with flying.\nIII — Each opponent sacrifices a creature for each Alien you control. For each creature that died this way, its controller loses 1 life.

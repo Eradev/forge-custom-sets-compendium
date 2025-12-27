@@ -3,9 +3,9 @@ ManaCost:3
 Types:Artifact
 
 A:AB$ Pump | Cost$ 1 T PayLife<1> | ValidTgts$ Creature | TgtPrompt$ Select target creature | SubAbility$ DBToken | SpellDescription$ Arm target creature. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.) | StackDescription$ SpellDescription
-SVar:DBToken:DB$ Token | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | TokenAmount$ 1 | TrigAttach:DB$ Attach | AttachedTo$ Targeted
+SVar:DBToken:DB$ Token | TokenScript$ c_a_weapon_equipment | TrigAttach:DB$ Attach | AttachedTo$ Targeted
 
-A:AB$ Token | Cost$ 1 T Sac<1/Equipment> | TokenAmount$ 1 | TokenScript$ c_2_2_a_construct | TokenOwner$ You | StackDecscription$ SpellDescription | SpellDescription$ Create a 2/2 colorless Construct artifact creature token.
+A:AB$ Token | Cost$ 1 T Sac<1/Equipment> | TokenScript$ c_2_2_a_construct | StackDecscription$ SpellDescription | SpellDescription$ Create a 2/2 colorless Construct artifact creature token.
 
 A:AB$ GainLife | Cost$ 1 T Sac<1/Creature.Artifact/artifact creature> | LifeAmount$ 4 | SpellDescription$ You gain 4 life.
 

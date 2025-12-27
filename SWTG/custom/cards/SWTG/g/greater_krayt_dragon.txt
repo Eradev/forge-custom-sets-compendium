@@ -6,7 +6,7 @@ K:Trample
 K:Monstrosity:X:X X R G W
 
 T:Mode$ BecomeMonstrous | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ When Greater Krayt Dragon becomes monstrous, draw a card for each +1/+1 counter on creatures you control.
-SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ Y
+SVar:TrigDraw:DB$ Draw | NumCards$ Y
 SVar:X:Count$xPaid
 SVar:Y:Count$Valid Creature.YouCtrl$CardCounters.P1P1
 

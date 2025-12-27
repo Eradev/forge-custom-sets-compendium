@@ -4,7 +4,7 @@ Types:Creature Dryad
 PT:0/2
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 1/1 black and green Insect creature token.
-SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ bg_1_1_insect | TokenOwner$ You
+SVar:TrigToken:DB$ Token | TokenScript$ bg_1_1_insect
 
 T:Mode$ TokenCreated | ValidPlayer$ You | ValidToken$ Card.token+Creature+YouCtrl | Execute$ TrigProliferate | TriggerZones$ Battlefield | TriggerDescription$ Whenever you create a creature token, proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)
 SVar:TrigProliferate:DB$ Proliferate

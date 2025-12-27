@@ -2,6 +2,6 @@ Name:Rally the Volunteers
 ManaCost:2 R
 Types:Sorcery
 
-A:SP$ Token | TokenAmount$ 2 | TokenScript$ r_1_1_soldier_haste | TokenOwner$ You | SpellDescription$ Create two 1/1 red Soldier creature tokens with haste.
+A:SP$ Token | TokenAmount$ 2 | TokenScript$ r_1_1_soldier_haste | SpellDescription$ Create two 1/1 red Soldier creature tokens with haste.
 
 Oracle:Create two 1/1 red Soldier creature tokens with haste.
