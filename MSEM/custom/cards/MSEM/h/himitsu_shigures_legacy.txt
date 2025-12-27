@@ -1,0 +1,15 @@
+Name:Himitsu, Shigure's Legacy
+ManaCost:U U
+Types:Legendary Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | AddSVar$ AE | Description$ Equipped creature gets +2/+2.
+SVar:AE:SVar:HasAttackEffect:TRUE
+
+T:Mode$ Attacks | ValidCard$ Card.EquippedBy | Execute$ TrigDraw | TriggerDescription$ Whenever equipped creature attacks, draw a card. Noncreature spells you cast this turn can be cast as though they had flash.
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | StaticAbilities$ QuickSpell
+SVar:QuickSpell:Mode$ CastWithFlash | ValidCard$ Card.nonCreature | ValidSA$ Spell | Caster$ You | Description$ Noncreature spells you cast this turn can be cast as though they had flash.
+
+K:Equip:2
+
+Oracle:Equipped creature gets +2/+2.\nWhenever equipped creature attacks, draw a card. Noncreature spells you cast this turn can be cast as though they had flash.\nEquip {2}
