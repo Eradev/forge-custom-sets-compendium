@@ -1,0 +1,13 @@
+Name:Vitromancy
+ManaCost:3 W U
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this enchantment enters, exile target nonland permanent an opponent controls. Each player other than its controller creates a token that's a copy of it.
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Permanent.nonLand+OppCtrl | TgtPrompt$ Select target nonland permanent an opponent controls | Origin$ Battlefield | Destination$ Exile | RememberLKI$ True | SubAbility$ DBClone
+SVar:DBClone:DB$ CopyPermanent | Defined$ Remembered | Controller$ NonRememberedController | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+T:Mode$ ChangesZoneAll | ValidCards$ Permanent.token+YouCtrl | Destination$ Battlefield | TriggerZones$ Battlefield | ActivationLimit$ 1 | Execute$ TrigDraw | TriggerDescription$ Whenever one or more tokens you control enter, draw a card. This ability triggers only once each turn.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:When this enchantment enters, exile target nonland permanent an opponent controls. Each player other than its controller creates a token that's a copy of it.\nWhenever one or more tokens you control enter, draw a card. This ability triggers only once each turn.
