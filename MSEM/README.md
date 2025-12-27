@@ -52,6 +52,7 @@ The Land Bundle (L)
 Examples on how to implement custom keywords and mechanisms.
 
 * [Ascend](#ascend)
+* [Art of War](#art-of-war)
 * [Bleed](#bleed)
 * [Fabled](#fabled)
 * [Fleeting](#fleeting)
@@ -77,6 +78,23 @@ Implementation:
 ```text
 A:AB$ ChangeZone | Named$ Ascend | Cost$ 2 G | Origin$ Battlefield | Destination$ Exile | SorcerySpeed$ True | SubAbility$ AscendTransform | RememberChanged$ True | PrecostDesc Ascend— | SpellDescription$ ({2}{G}: Exile this creature, then return it to the battlefield transformed. Ascend only as a sorcery.)
 SVar:AscendTransform:DB$ ChangeZone | Defined$ Remembered | Origin$ All | Destination$ Battlefield | Transformed$ True | GainControl$ True
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Art of War
+
+Art of War is defined as:
+
+```text
+Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, [...].
+```
+
+Implementation:
+
+```text
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigToken | TriggerDescription$ Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, create a 1/1 colorless Samurai creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_samurai
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
