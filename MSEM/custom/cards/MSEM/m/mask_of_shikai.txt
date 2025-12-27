@@ -1,0 +1,10 @@
+Name:Mask of Shikai
+ManaCost:5
+Types:Artifact
+
+S:Mode$ Continuous | Affected$ You | AddKeyword$ Hexproof | Description$ You have hexproof.
+
+T:Mode$ DamageDone | ValidSource$ Creature | ValidTarget$ You,Planeswalker.YouCtrl | CombatDamage$ True | Execute$ TrigDealDamage | TriggerZones$ Battlefield | TriggerDescription$ Whenever a creature deals combat damage to you or a planeswalker you control, this artifact deals 1 damage to that creature.
+SVar:TrigDealDamage:DB$ DealDamage | Defined$ TriggeredSourceLKICopy | NumDmg$ 1
+
+Oracle:You have hexproof.\nWhenever a creature deals combat damage to you or a planeswalker you control, this artifact deals 1 damage to that creature.
