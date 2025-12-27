@@ -1,0 +1,14 @@
+Name:Chorb, Magnate of Corpulence
+ManaCost:4 GU GU
+Types:Legendary Creature Frog Noble
+PT:5/8
+
+K:Companion:Card.cmcGE2,Land:Your starting deck contains only cards with mana value 2 or greater and land cards.
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ BehemothPump | TriggerDescription$ When NICKNAME enters, creatures you control gain trample and get +X/+X until end of turn, where X is the number of creatures you control.
+SVar:BehemothPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | KW$ Trample | NumAtt$ +X | NumDef$ +X
+SVar:X:Count$Valid Creature.YouCtrl
+
+Oracle:Companion — Your starting deck contains only cards with mana value 2 or greater and land cards. (If this card is your chosen companion, you may put it into your hand from outside the game for {3} any time you could cast a sorcery.)\nWhen Chorb enters, creatures you control gain trample and get +X/+X until end of turn, where X is the number of creatures you control.
+
+SVar:PlayMain1:TRUE
