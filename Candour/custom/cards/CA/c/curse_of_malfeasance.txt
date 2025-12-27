@@ -1,0 +1,12 @@
+Name:Curse of Malfeasance
+ManaCost:B
+Types:Enchantment Aura Curse
+
+K:Enchant:Player
+
+T:Mode$ CommitCrime | ValidPlayer$ Player.EnchantedBy | TriggerZones$ Battlefield | Execute$ DBLoseLife | TriggerDescription$ Whenever enchanted player commits a crime, that player loses 3 life. (They commit a crime if they target an opponent, anything an opponent controls, and/or cards in an opponent's graveyard.)
+SVar:DBLoseLife:DB$ LoseLife | Defined$ Player.EnchantedBy | LifeAmount$ 3
+
+Oracle:Enchant player\nWhenever enchanted player commits a crime, that player loses 3 life. (They commit a crime if they target an opponent, anything an opponent controls, and/or cards in an opponent's graveyard.)
+
+SVar:AttachAILogic:Curse
