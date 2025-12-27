@@ -1,0 +1,9 @@
+Name:Sarkhan's Rite
+ManaCost:1 R
+Types:Instant
+
+A:SP$ Mana | Produced$ R | Amount$ 3 | AILogic$ ManaRitual | AINoRecursiveCheck$ True | SpellDescription$ Add {R}{R}{R}.
+
+K:Harmonize:3 R
+
+Oracle:Add {R}{R}{R}.\nHarmonize {3}{R} (You may cast this card from your graveyard for its harmonize cost. You may tap a creature you control to reduce that cost by {X}, where X is its power. Then exile this spell.)
