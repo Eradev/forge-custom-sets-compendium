@@ -1,0 +1,14 @@
+Name:Dreamcoil Despot
+ManaCost:U U U 
+Types:Creature Dragon
+PT:3/3
+
+K:Flying
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self+wasCastByYou | Destination$ Battlefield | Execute$ TrigShuffle | TriggerDescription$ When this creature enters, if you cast it, shuffle your hand and graveyard into your library, then draws seven cards.
+SVar:TrigShuffle:DB$ ChangeZoneAll | ChangeType$ Card.YouOwn | Origin$ Hand,Graveyard | Destination$ Library | Shuffle$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | NumCards$ 7
+
+K:Dash:3 U U
+
+Oracle:Flying\nWhen this creature enters, if you cast it, shuffle your hand and graveyard into your library, then draws seven cards.\nDash {3}{U}{U} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)
