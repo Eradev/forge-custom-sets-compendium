@@ -9,7 +9,7 @@ S:Mode$ Continuous | Affected$ Card.EnchantedBy | GainControl$ You | Description
 T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigRansom | TriggerDescription$ At the beginning of your upkeep, enchanted creature's owner may have you draw three cards. If they do, sacrifice this Aura.
 SVar:TrigRansom:DB$ GenericChoice | Defined$ EnchantedOwner | Choices$ DBDrawAndSac,DBNoAction | ChoiceTitle$ Have {p:you} draw three cards and sacrifice CARDNAME?
 
-SVar:DBDrawAndSac:DB$ Draw | Defined$ You | NumCards$ 3 | SubAbility$ DBSacrifice | SpellDescription$ Opponent draws three cards and sacrifices CARDNAME
+SVar:DBDrawAndSac:DB$ Draw | NumCards$ 3 | SubAbility$ DBSacrifice | SpellDescription$ Opponent draws three cards and sacrifices CARDNAME
 SVar:DBSacrifice:DB$ Sacrifice | Defined$ Self
 
 SVar:DBNoAction:DB$ Cleanup | SpellDescription$ Do nothing

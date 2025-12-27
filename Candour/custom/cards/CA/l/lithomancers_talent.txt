@@ -7,7 +7,7 @@ SVar:TrigChange:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeTyp
 
 K:Class:2:1 W:AddTrigger$ KorToken
 SVar:KorToken:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ At the beginning of your upkeep, create a 1/1 white Kor Artificer creature token.
-SVar:TrigToken:DB$ Token | TokenOwner$ You | TokenAmount$ 1 | TokenScript$ w_1_1_kor_artificer
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_kor_artificer
 
 K:Class:3:1 W:AddStaticAbility$ StaticInstantEquip & StaticFreeFirstEquip
 SVar:StaticInstantEquip:Mode$ CastWithFlash | ValidSA$ Activated.Equip | Caster$ You | Description$ You may activate equip abilities any time you could cast an instant.

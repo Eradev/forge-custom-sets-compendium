@@ -4,7 +4,7 @@ Types:Creature Human Wizard
 PT:0/1
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 2/2 colorless Spirit creature token.
-SVar:TrigToken:DB$ Token | TokenScript$ c_2_2_spirit | TokenAmount$ 1 | TokenOwner$ You
+SVar:TrigToken:DB$ Token | TokenScript$ c_2_2_spirit
 
 S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Creature.Colorless+YouCtrl | AddKeyword$ Vigilance | Description$ Colorless creatures you control have vigilance.
 

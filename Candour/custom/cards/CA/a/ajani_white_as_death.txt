@@ -8,7 +8,7 @@ A:AB$ PutCounter | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | CounterNum
 A:AB$ Pump | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | TgtPrompt$ Select target creature | KW$ Indestructible | Duration$ UntilYourNextTurn | SubAbility$ DBUntap | SpellDescription$ Until your next turn, target creature gains indestructible. Untap that creature.
 SVar:DBUntap:DB$ Untap | Defined$ Targeted
 
-A:AB$ Token | Planeswalker$ True | Cost$ SubCounter<2/LOYALTY> | Ultimate$ True | TokenScript$ w_2_2_cat | TokenAmount$ 1 | TokenOwner$ You | SpellDescription$ Create a 2/2 white Cat creature token.
+A:AB$ Token | Planeswalker$ True | Cost$ SubCounter<2/LOYALTY> | Ultimate$ True | TokenScript$ w_2_2_cat | SpellDescription$ Create a 2/2 white Cat creature token.
 
 Oracle:[+1]: Put a +1/+1 counter on up to one target creature.\n[0]: Until your next turn, target creature gains indestructible. Untap that creature.\n[-2]: Create a 2/2 white Cat creature token.
 

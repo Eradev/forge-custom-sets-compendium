@@ -36,7 +36,7 @@ SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Li
 SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 4
 
 T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ TrigToken | TriggerDescription$ At the beginning of your upkeep, create a 0/1 green Plant creature token.
-SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ g_0_1_plant
+SVar:TrigToken:DB$ Token | TokenScript$ g_0_1_plant
 
 S:Mode$ Continuous | Affected$ Plant.YouCtrl | AddPower$ Y | AddTrigger$ AttackDmgAbility | AddSVar$ TrigDealDamage | Description$ Plants you control get +1/+0 for each other Plant you control and have "Whenever this creature attacks, it deals 1 damage to any target."
 SVar:Y:Count$Valid Plant.YouCtrl+Other

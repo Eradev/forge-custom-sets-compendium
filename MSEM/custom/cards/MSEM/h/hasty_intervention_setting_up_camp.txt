@@ -27,7 +27,7 @@ Types:Enchantment Aura
 K:Enchant:Player.IsRemembered
 
 T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Player.EnchantedBy | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ At the beginning of enchanted player's upkeep, that player creates a 1/1 white Soldier creature token.
-SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ w_1_1_soldier | TokenOwner$ TriggeredPlayer
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_soldier | TokenOwner$ TriggeredPlayer
 
 T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Battlefield | Destination$ Any | Execute$ DBCleanup2 | Static$ True
 SVar:DBCleanup2:DB$ Cleanup | ClearRemembered$ True

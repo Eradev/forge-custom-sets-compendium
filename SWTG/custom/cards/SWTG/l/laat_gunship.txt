@@ -4,7 +4,7 @@ Types:Artifact Creature Starship
 PT:3/2
 
 T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ Whenever this creature attacks, create a 1/1 white Trooper creature token that is tapped and attacking.
-SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ w_1_1_trooper | TokenTapped$ True | TokenAttacking$ True | TokenOwner$ You
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_trooper | TokenTapped$ True | TokenAttacking$ True
 
 A:AB$ Pump | Cost$ W | SorcerySpeed$ True | KW$ Spaceflight | SpellDescription$ This creature gains spaceflight until end of turn. Activate only as a sorcery.
 S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.Self+withSpaceflight | AddStaticAbility$ BlockSpaceflight & BlockBySpaceflight

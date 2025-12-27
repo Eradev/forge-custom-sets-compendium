@@ -2,7 +2,7 @@ Name:Gifts of the Oshiruko
 ManaCost:2 U
 Types:Sorcery
 
-A:SP$ Token | TokenAmount$ 1 | TokenScript$ c_2_2_spirit | TokenOwner$ You | SubAbility$ DBDraw | SpellDescription$ Create a 2/2 colorless Spirit creature token. Draw a card.
+A:SP$ Token | TokenScript$ c_2_2_spirit | SubAbility$ DBDraw | SpellDescription$ Create a 2/2 colorless Spirit creature token. Draw a card.
 SVar:DBDraw:DB$ Draw
 
 Oracle:Create a 2/2 colorless Spirit creature token.\nDraw a card.

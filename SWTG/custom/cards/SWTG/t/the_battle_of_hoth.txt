@@ -2,7 +2,7 @@ Name:The Battle of Hoth
 ManaCost:X X W W W
 Types:Sorcery
 
-A:SP$ Token | TokenAmount$ X | TokenScript$ w_5_5_a_at-at_hatches_trooper | TokenOwner$ You | SpellDescription$ Create X 5/5 white artifact AT-AT creature tokens with "When this creature dies, create two 1/1 white Trooper creature tokens."
+A:SP$ Token | TokenAmount$ X | TokenScript$ w_5_5_a_at-at_hatches_trooper | SpellDescription$ Create X 5/5 white artifact AT-AT creature tokens with "When this creature dies, create two 1/1 white Trooper creature tokens."
 SVar:X:Count$xPaid
 
 Oracle:Create X 5/5 white artifact AT-AT creature tokens with "When this creature dies, create two 1/1 white Trooper creature tokens."

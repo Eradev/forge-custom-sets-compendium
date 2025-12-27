@@ -3,6 +3,6 @@ ManaCost:W
 Types:Instant
 
 A:SP$ ChangeZone | ValidTgts$ Creature,Planeswalker | TgtPrompt$ Select target creature or planeswalker | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBToken | SpellDescription$ Exile target creature or planeswalker. Its controller creates a tapped colorless land token named Everywhere that is every basic land type.
-SVar:DBToken:DB$ Token | TokenAmount$ 1 | TokenScript$ everywhere | LockTokenScript$ True | TokenTapped$ True | TokenOwner$ TargetedController
+SVar:DBToken:DB$ Token | TokenScript$ everywhere | LockTokenScript$ True | TokenTapped$ True | TokenOwner$ TargetedController
 
 Oracle:Exile target creature or planeswalker. Its controller creates a tapped colorless land token named Everywhere that is every basic land type.

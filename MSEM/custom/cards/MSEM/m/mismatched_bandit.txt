@@ -6,7 +6,7 @@ PT:2/1
 K:Menace
 
 T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | CheckSVar$ CardsThem | SVarCompare$ GTCardsYou | Execute$ TrigDraw | TriggerZones$ Battlefield | TriggerDescription$ At the beginning of your upkeep, if an opponent has more cards in hand than you, you draw a card and you lose 1 life.
-SVar:TrigDraw:DB$ Draw | NumCards$ 1 | SubAbility$ DBLoseLife
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBLoseLife
 SVar:DBLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1
 
 SVar:CardsThem:PlayerCountOpponents$HighestCardsInHand

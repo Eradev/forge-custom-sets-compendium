@@ -3,7 +3,7 @@ ManaCost:1 W W
 Types:Sorcery
 
 A:SP$ RepeatEach | RepeatSubAbility$ DBToken | RepeatCards$ Creature.YouCtrl | SubAbility$ DBPump | StackDescription$ SpellDescription | SpellDescription$ Arm each creature you control. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.) They gain vigilance until end of turn.
-SVar:DBToken:DB$ Token | TokenScript$ c_a_weapon_equipment | TokenOwner$ You | TokenAmount$ 1 | AttachedTo$ Remembered
+SVar:DBToken:DB$ Token | TokenScript$ c_a_weapon_equipment | AttachedTo$ Remembered
 SVar:DBPump:DB$ PumpAll | KW$ Vigilance | ValidCards$ Creature.YouCtrl
 SVar:NeedsToPlayVar:Z GE2
 SVar:Z:Count$Valid Creature.YouCtrl+inZoneBattlefield

@@ -4,7 +4,7 @@ Types:Sorcery
 
 S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ Z | EffectZone$ All | Description$ This spell costs {1} less to cast for each Mutant card in your graveyard.
 
-A:SP$ Token | Cost$ X G | TokenAmount$ 1 | TokenScript$ u_x_x_shark_mutant | TokenOwner$ You | TokenPower$ X | TokenToughness$ X | SpellDescription$ Create an X/X blue Shark Mutant creature token.
+A:SP$ Token | Cost$ X G | TokenScript$ u_x_x_shark_mutant | TokenPower$ X | TokenToughness$ X | SpellDescription$ Create an X/X blue Shark Mutant creature token.
 SVar:Y:Count$TypeInYourYard.Mutant
 SVar:Z:Count$Valid Mutant.YouCtrl/Plus.Y
 SVar:X:Count$xPaid

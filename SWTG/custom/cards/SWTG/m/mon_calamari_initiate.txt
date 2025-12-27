@@ -3,9 +3,9 @@ ManaCost:2 U U
 Types:Creature Calamari Jedi
 PT:3/2
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When CARDNAME enters, draw a card.
-SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this creature enters, draw a card.
+SVar:TrigDraw:DB$ Draw
 
 A:AB$ ChangeZone | Named$ Meditate | Cost$ 1 U | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
 
-Oracle:When Mon Calamari Initiate enters, draw a card.\nMeditate 1U (Return this creature to its owner's hand. Meditate only as a sorcery.)
+Oracle:When this creature enters, draw a card.\nMeditate 1U (Return this creature to its owner's hand. Meditate only as a sorcery.)

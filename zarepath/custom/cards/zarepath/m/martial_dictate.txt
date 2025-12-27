@@ -2,7 +2,7 @@ Name:Martial Dictate
 ManaCost:X W W
 Types:Sorcery
 
-A:SP$ Token | TokenAmount$ X | TokenScript$ w_1_1_soldier | TokenOwner$ You | SubAbility$ GainLife | SpellDescription$ Create X 1/1 white Soldier creature tokens. Gain X life.
+A:SP$ Token | TokenAmount$ X | TokenScript$ w_1_1_soldier | SubAbility$ GainLife | SpellDescription$ Create X 1/1 white Soldier creature tokens. Gain X life.
 SVar:GainLife:DB$ GainLife | LifeAmount$ X | SpellDescription$ You gain X life.
 SVar:X:Count$xPaid
 

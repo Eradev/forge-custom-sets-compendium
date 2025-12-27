@@ -4,7 +4,7 @@ Types:Artifact Equipment
 
 T:Mode$ ChangesZone | ValidCard$ Card.Self | Execute$ TrigToken | Origin$ Any | Destination$ Battlefield | IsPresent$ Samurai.YouCtrl | PresentCompare$ EQ0 | TriggerDescription$ When this Equipment enters or at the beginning of your upkeep, if you control no Samurai, create a 1/1 colorless Samurai creature token, then you may attach this Equipment to it.
 T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigToken | Secondary$ True | TriggerDescription$ When this Equipment enters or at the beginning of your upkeep, if you control no Samurai, create a 1/1 colorless Samurai creature token, then you may attach this Equipment to it.
-SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ c_1_1_samurai | TokenOwner$ You | RememberTokens$ True | SubAbility$ DBAttach
+SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_samurai | RememberTokens$ True | SubAbility$ DBAttach
 SVar:DBAttach:DB$ Attach | Defined$ Remembered | OptionalDecider$ You | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 

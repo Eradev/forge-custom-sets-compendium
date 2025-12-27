@@ -2,7 +2,7 @@ Name:Empty the Barracks
 ManaCost:X R R
 Types:Sorcery
 
-A:SP$ Token | TokenAmount$ X | TokenScript$ r_1_1_soldier_haste | TokenOwner$ You
+A:SP$ Token | TokenAmount$ X | TokenScript$ r_1_1_soldier_haste
 SVar:X:Count$xPaid
 
 Oracle:Create X 1/1 red Soldier creature tokens with haste.

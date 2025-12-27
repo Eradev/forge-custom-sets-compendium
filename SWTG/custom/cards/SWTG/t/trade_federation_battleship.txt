@@ -10,6 +10,6 @@ SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpacef
 
 S:Mode$ Continuous | Affected$ Creature.Droid+YouCtrl | AddPower$ 1 | AddToughness$ 1 | Description$ Droid creatures you control get +1/+1.
 
-A:AB$ Token | Cost$ T | TokenAmount$ 2 | TokenScript$ c_1_1_a_droid | TokenOwner$ You | SpellDescription$ Create two 1/1 colorless Droid artifact creature tokens.
+A:AB$ Token | Cost$ T | TokenAmount$ 2 | TokenScript$ c_1_1_a_droid | SpellDescription$ Create two 1/1 colorless Droid artifact creature tokens.
 
 Oracle:Spaceflight\nDroid creatures you control get +1/+1.\n{T}: Create two 1/1 colorless Droid artifact creature tokens.

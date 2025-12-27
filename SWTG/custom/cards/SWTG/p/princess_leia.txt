@@ -4,7 +4,7 @@ Types:Legendary Creature Human Rebel
 PT:2/2
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters, create three 1/1 white Rebel creature tokens.
-SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_rebel | TokenAmount$ 3 | TokenOwner$ You
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_rebel | TokenAmount$ 3
 
 S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ CARDNAME gets +1/+1 for each other Rebel creature you control.
 SVar:X:Count$Valid Creature.Rebel+Other+YouCtrl

@@ -4,7 +4,7 @@ Types:Legendary Planeswalker Fortress
 Loyalty:5
 
 T:Mode$ AttackersDeclaredOneTarget | ValidCard$ Creature | AttackedTarget$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever one or more creatures attack NICKNAME, create a tapped 2/3 black Mummy creature token.
-SVar:TrigToken:DB$ Token | TokenScript$ b_2_3_mummy | TokenTapped$ true | TokenOwner$ You
+SVar:TrigToken:DB$ Token | TokenScript$ b_2_3_mummy | TokenTapped$ true
 
 A:AB$ Effect | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Name$ Emblem — Menes, the Great Pyramid | Image$ emblem_menes_the_great_pyramid | Duration$ Permanent | StaticAbilities$ StaticPump | SpellDescription$ You get an emblem with "Black creatures you control get +1/+1."
 SVar:StaticPump:Mode$ Continuous | Affected$ Creature.YouCtrl+Black | AffectedZone$ Battlefield | AddPower$ 1 | AddToughness$ 1 | AffectedZone$ Battlefield | Description$ Black creatures you control get +1/+1.

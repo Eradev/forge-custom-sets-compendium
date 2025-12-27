@@ -5,7 +5,7 @@ PT:3/3
 
 T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ Whenever CARDNAME attacks or blocks, create a 2/2 white Cat creature token.
 T:Mode$ Blocks | ValidCard$ Card.Self | Execute$ TrigToken | Secondary$ True | TriggerDescription$ Whenever CARDNAME attacks or blocks, create a 2/2 white Cat creature token.
-SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenOwner$ You | TokenScript$ w_2_2_cat
+SVar:TrigToken:DB$ Token | TokenScript$ w_2_2_cat
 
 A:AB$ Fight | Cost$ 1 R R tapXType<1/Cat> | Defined$ Tapped | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you don't control | SpellDescription$ The tapped creature fights target creature you don't control.
 

@@ -2,6 +2,6 @@ Name:Ewok Ambush
 ManaCost:2 G
 Types:Instant
 
-A:SP$ Token | TokenAmount$ 2 | TokenScript$ g_1_1_ewok | TokenOwner$ You | PumpKeywords$ Haste | PumpDuration$ EOT | SpellDescription$ Create two 1/1 green Ewok creature tokens. They gain haste until end of turn.
+A:SP$ Token | TokenAmount$ 2 | TokenScript$ g_1_1_ewok | PumpKeywords$ Haste | PumpDuration$ EOT | SpellDescription$ Create two 1/1 green Ewok creature tokens. They gain haste until end of turn.
 
 Oracle:Create two 1/1 green Ewok creature tokens. They gain haste until end of turn.

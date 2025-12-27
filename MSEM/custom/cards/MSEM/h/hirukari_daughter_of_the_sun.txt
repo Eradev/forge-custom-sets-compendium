@@ -5,7 +5,7 @@ Loyalty:7
 
 K:Affinity:Planeswalker
 
-A:AB$ Token | Cost$ AddCounter<2/LOYALTY> | Planeswalker$ True | TokenAmount$ 1 | TokenScript$ c_2_2_spirit | TokenOwner$ You | SpellDescription$ Create a 2/2 colorless Spirit creature token.
+A:AB$ Token | Cost$ AddCounter<2/LOYALTY> | Planeswalker$ True | TokenScript$ c_2_2_spirit | SpellDescription$ Create a 2/2 colorless Spirit creature token.
 
 A:AB$ MultiplyCounter | Cost$ SubCounter<3/LOYALTY> | Planeswalker$ True | ValidTgts$ Permanent.Other | Multiplier$ 2 | SpellDescription$ Double the number of each kind of counter on another target permanent.
 

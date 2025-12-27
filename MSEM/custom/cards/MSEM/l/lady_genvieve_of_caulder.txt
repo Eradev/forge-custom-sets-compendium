@@ -7,7 +7,7 @@ S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 1 B R | 
 SVar:Bleed:Count$LifeOppsLostThisTurn
 
 T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ Player | CheckSVar$ Bleed | SVarCompare$ GE1 | Execute$ TrigDrawDiscard | TriggerZones$ Battlefield | TriggerDescription$ At the beginning of each end step, if an opponent lost life this turn, draw two cards, then discard a card at random.
-SVar:TrigDrawDiscard:DB$ Draw | Defined$ You | NumCards$ 2 | SubAbility$ DBDiscard
+SVar:TrigDrawDiscard:DB$ Draw | NumCards$ 2 | SubAbility$ DBDiscard
 SVar:DBDiscard:DB$ Discard | Defined$ You | NumCards$ 1 | Mode$ Random
 
 Oracle:Bleed {1}{B}{R} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)\nAt the beginning of each end step, if an opponent lost life this turn, draw two cards, then discard a card at random.

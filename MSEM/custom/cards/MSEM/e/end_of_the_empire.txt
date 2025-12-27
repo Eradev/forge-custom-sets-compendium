@@ -6,6 +6,6 @@ K:ETBReplacement:Other:DBNameCard
 SVar:DBNameCard:DB$ NameCard | ValidCards$ Card.Creature | Defined$ You | SpellDescription$ As this enchantment enters, choose a creature card name.
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouDontCtrl+NamedCard | TriggerZones$ Battlefield | Execute$ DBToken | TriggerDescription$ Whenever a creature you don't control with the chosen name dies, create a 4/4 colorless Demon Spirit creature token with menace.
-SVar:DBToken:DB$ Token | TokenAmount$ 1 | TokenScript$ c_4_4_demon_spirit_menace | TokenOwner$ You
+SVar:DBToken:DB$ Token | TokenScript$ c_4_4_demon_spirit_menace
 
 Oracle:As this enchantment enters, choose a creature card name.\nWhenever a creature you don't control with the chosen name dies, create a 4/4 colorless Demon Spirit creature token with menace.

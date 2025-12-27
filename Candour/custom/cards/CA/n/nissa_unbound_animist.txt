@@ -7,7 +7,7 @@ A:AB$ GenericChoice | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Choices
 SVar:DigLand:DB$ DigUntil | Valid$ Card.Land | ValidDescription$ land | FoundDestination$ Hand | RevealedDestination$ Library | RevealedLibraryPosition$ -1 | SpellDescription$ Land
 SVar:DigNonland:DB$ DigUntil | Valid$ Card.nonLand | ValidDescription$ nonland | FoundDestination$ Hand | RevealedDestination$ Library | RevealedLibraryPosition$ -1 | SpellDescription$ Nonland
 
-A:AB$ Token | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | TokenAmount$ 1 | TokenScript$ g_x_x_elemental | TokenPower$ X | TokenToughness$ X | TokenOwner$ You | SpellDescription$ Create an X/X green Elemental creature token, where X is NICKNAME's loyalty.
+A:AB$ Token | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | TokenScript$ g_x_x_elemental | TokenPower$ X | TokenToughness$ X | SpellDescription$ Create an X/X green Elemental creature token, where X is NICKNAME's loyalty.
 SVar:X:Count$CardCounters.LOYALTY
 
 A:AB$ ChangeZoneAll | Cost$ SubCounter<3/LOYALTY> | Planeswalker$ True | Ultimate$ True | ChangeType$ Land.YouOwn | Origin$ Graveyard | Destination$ Battlefield | SpellDescription$ Return all land cards from your graveyard to the battlefield.

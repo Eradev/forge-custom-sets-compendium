@@ -6,7 +6,7 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.S
 SVar:TrigInvestigate:DB$ Investigate
 
 T:Mode$ Sacrificed | ValidCard$ Clue.YouCtrl | Execute$ TrigDraw | TriggerZones$ Battlefield | OptionalDecider$ You | TriggerDescription$ Whenever you sacrifice a Clue, you may draw a card, then discard a card. (You make this choice before drawing a card from the Clue.)
-SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1 | SubAbility$ DBDiscard
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBDiscard
 SVar:DBDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 1
 
 Oracle:When this enchantment enters, investigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")\nWhenever you sacrifice a Clue, you may draw a card, then discard a card. (You make this choice before drawing a card from the Clue.)

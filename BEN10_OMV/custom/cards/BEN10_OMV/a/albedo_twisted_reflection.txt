@@ -15,6 +15,6 @@ SVar:STGoadApply:Mode$ Continuous | Affected$ Card.Self | Goad$ True
 SVar:DamTrig:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigDrain | TriggerDescription$ Whenever NICKNAME deals combat damage to a player, its controller loses 3 life and its owner draws a card.
 
 SVar:TrigDrain:DB$ LoseLife | Defined$ TriggeredSourceController | LifeAmount$ 3 | SubAbility$ DBOwnerDraw
-SVar:DBOwnerDraw:DB$ Draw | Defined$ TriggeredSourceOwner | NumCards$ 1
+SVar:DBOwnerDraw:DB$ Draw | Defined$ TriggeredSourceOwner
 
 Oracle:When Albedo enters, target opponent gains control of it.\nAt the beginning of your upkeep, Albedo becomes a copy of target Alien an opponent controls, except its name is Albedo, Twisted Reflection, it's legendary in addition to its other types, it's goaded, and it has this ability and "Whenever Albedo deals combat damage to a player, its controller loses 3 life and its owner draws a card."

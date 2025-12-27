@@ -4,7 +4,7 @@ Types:Artifact Creature Construct Advisor
 PT:3/1
 
 T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ X | SVarCompare$ GTY | Execute$ TrigDraw | TriggerDescription$ Superiority - At the beginning of your upkeep, if you have more life than an opponent, you draw a card and you lose 2 life.
-SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1 | SubAbility$ DBLoseLife
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBLoseLife
 SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
 SVar:X:Count$YourLifeTotal
 SVar:Y:PlayerCountOpponents$LowestLifeTotal

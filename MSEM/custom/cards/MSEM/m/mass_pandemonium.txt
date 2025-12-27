@@ -4,7 +4,7 @@ Types:Enchantment
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Permanent.YouCtrl | TriggerZones$ Battlefield | Execute$ DiscardThenDraw | TriggerDescription$ Whenever a permanent you control leaves the battlefield, discard a card, then draw a card.
 SVar:DiscardThenDraw:DB$ Discard | Defined$ You | NumCards$ 1 | Mode$ TgtChoose | SubAbility$ DrawCard
-SVar:DrawCard:DB$ Draw | NumCards$ 1
+SVar:DrawCard:DB$ Draw
 
 A:AB$ DealDamage | Cost$ 1 R Sac<1/Permanent> | ValidTgts$ Any | TgtPrompt$ Select any target | NumDmg$ 1 | SpellDescription$ This enchantment deals 1 damage to any target.
 

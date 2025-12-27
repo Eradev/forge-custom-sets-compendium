@@ -7,7 +7,7 @@ K:Deathtouch
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this creature enters, exile target player's graveyard. For each creature card exiled this way, create a 1/1 black Possum Skeleton creature token.
 SVar:TrigExile:DB$ ChangeZoneAll | ValidTgts$ Player | Origin$ Graveyard | Destination$ Exile | ChangeType$ Card | SubAbility$ DBToken | RememberChanged$ True
-SVar:DBToken:DB$ Token | TokenAmount$ X | TokenScript$ b_1_1_possum_skeleton | TokenOwner$ You | SubAbility$ DBCleanup
+SVar:DBToken:DB$ Token | TokenAmount$ X | TokenScript$ b_1_1_possum_skeleton | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:X:Remembered$Valid Creature
 

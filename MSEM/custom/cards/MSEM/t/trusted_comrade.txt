@@ -5,6 +5,6 @@ PT:2/3
 
 T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | IsPresent$ Creature.attacking+Other | PresentCompare$ GE1 | Execute$ TrigToken | TriggerDescription$ Whenever this creature and at least one other creature attack, create a 1/1 white Soldier creature token that's tapped and attacking.
 
-SVar:TrigToken:DB$ Token | TokenAmount$ 1 | TokenScript$ w_1_1_soldier | TokenOwner$ You | TokenTapped$ True | TokenAttacking$ True
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_soldier | TokenTapped$ True | TokenAttacking$ True
 
 Oracle:Whenever this creature and at least one other creature attack, create a 1/1 white Soldier creature token that's tapped and attacking.

@@ -4,7 +4,7 @@ Types:Legendary Creature Phyrexian Knight
 PT:5/5
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPlant | TriggerDescription$ When NICKNAME enters, create two 2/2 white Knight creature tokens.
-SVar:TrigPlant:DB$ Token | TokenScript$ w_2_2_knight | TokenAmount$ 2 | TokenOwner$ You
+SVar:TrigPlant:DB$ Token | TokenScript$ w_2_2_knight | TokenAmount$ 2
 
 T:Mode$ AttackersDeclared | AttackingPlayer$ You | Execute$ TrigPumpAll | TriggerZones$ Battlefield | TriggerDescription$ Whenever you attack, creatures you control get +2/+2 until end of turn.
 SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +2 | NumDef$ +2
