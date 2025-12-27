@@ -1,0 +1,15 @@
+Name:Forgetful Fish
+ManaCost:U
+Types:Creature Fish
+PT:2/1
+
+K:Landwalk:Island
+
+K:Hexproof
+
+T:Mode$ Always | TriggerZones$ Battlefield | IsPresent$ Island.YouCtrl | PresentCompare$ EQ0 | Execute$ TrigSac | TriggerDescription$ When you control no Islands, sacrifice this creature.
+SVar:TrigSac:DB$ Sacrifice
+
+Oracle:Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\nHexproof (This creature can't be the target of spells or abilities your opponents control.)\nWhen you control no Islands, sacrifice this creature.
+
+SVar:NeedsToPlay:Island.YouCtrl
