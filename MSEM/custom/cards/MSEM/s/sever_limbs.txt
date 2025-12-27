@@ -1,0 +1,9 @@
+Name:Sever Limbs
+ManaCost:3 B
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Creature | SubAbility$ DBMill | SpellDescription$ Destroy target creature. If an opponent lost life this turn, that creature's controller mills five cards.
+SVar:DBMill:DB$ Mill | NumCards$ 5 | Defined$ TargetedController | CheckSVar$ X | SVarCompare$ GE1
+SVar:X:Count$LifeOppsLostThisTurn
+
+Oracle:Destroy target creature. If an opponent lost life this turn, that creature's controller mills five cards.
