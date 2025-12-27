@@ -1,0 +1,17 @@
+Name:Battlefield Pyromancer
+ManaCost:2 R R
+Types:Creature Human Shaman
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDiscard | TriggerDescription$ When this creature enters, discard your hand, then draw four cards. For each nonland card discarded this way, create a 1/1 red Elemental creature token.
+SVar:TrigDiscard:DB$ Discard | Mode$ Hand | RememberDiscarded$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | NumCards$ 4 | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenAmount$ X | TokenScript$ r_1_1_elemental | TokenOwner$ You | SubAbility$ DBCleanup
+SVar:X:Remembered$Valid Card.nonLand
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl | AddKeyword$ Haste | Description$ Creatures you control have haste.
+
+Oracle:When this creature enters, discard your hand, then draw four cards. For each nonland card discarded this way, create a 1/1 red Elemental creature token.\nCreatures you control have haste.
+
+DeckHas:Ability$Token
