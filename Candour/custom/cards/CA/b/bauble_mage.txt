@@ -1,0 +1,9 @@
+Name:Bauble Mage
+ManaCost:U
+Types:Creature Human Artificer
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChange | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may search your library for an artifact card with mana value 0, reveal that card, reveal it, put it into your hand, then shuffle.
+SVar:TrigChange:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Artifact.cmcEQ0 | ChangeNum$ 1 | ShuffleNonMandatory$ True
+
+Oracle:When this creature enters, you may search your library for an artifact card with mana value 0, reveal that card, put it into your hand, then shuffle.
