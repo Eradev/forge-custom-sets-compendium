@@ -1,0 +1,21 @@
+Name:Emry, Inquisitive Lurker
+ManaCost:U
+Types:Legendary Creature Merfolk Wizard
+PT:0/2
+
+A:AB$ Draw | Cost$ 1 T | SpellDescription$ Draw a card, then discard a card. | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose
+
+T:Mode$ DiscardedAll | ValidPlayer$ You | ValidCard$ Card.Artifact | TriggerZones$ Battlefield | Execute$ TrigCharm | TriggerDescription$ Whenever you discard one or more artifact cards, ABILITY
+SVar:TrigCharm:DB$ Charm | Choices$ DBClue,DBTreasure,DBSword
+
+SVar:DBClue:DB$ Token | TokenScript$ c_a_clue_draw | SpellDescription$ Create a Clue token.
+
+SVar:DBTreasure:DB$ Token | TokenScript$ c_a_treasure_sac | SpellDescription$ Create a Treasure token.
+
+SVar:DBSword:DB$ Token | TokenScript$ sword | SpellDescription$ Create a colorless Equipment artifact token named Sword with "Equipped creature gets +1/+1" and equip {2}.
+
+Oracle:{1}, {T}: Draw a card, then discard a card.\nWhenever you discard one or more artifact cards, choose one—\n• Create a Clue token.\n• Create a Treasure token.\n• Create a colorless Equipment artifact token named Sword with "Equipped creature gets +1/+1" and equip {2}.
+
+DeckHas:Ability$Discard
+DeckHints:Type$Artifact
