@@ -1,0 +1,11 @@
+Name:Sarkhan, Ascendant Dragonspeaker
+ManaCost:1 R
+Types:Legendary Creature Human Shaman
+PT:2/2
+
+T:Mode$ SpellCast | ValidCard$ Card.nonDragon | ValidActivatingPlayer$ Player | TriggerZones$ Battlefield | Execute$ TrigDealDamage | TriggerDescription$ Whenever a player casts a non-Dragon spell, NICKNAME deals 2 damage to them.
+SVar:TrigDealDamage:DB$ DealDamage | Defined$ TriggeredActivator | NumDmg$ 2
+
+K:Dash:R
+
+Oracle:Whenever a player casts a non-Dragon spell, Sarkhan deals 2 damage to them.\nDash {R} (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)
