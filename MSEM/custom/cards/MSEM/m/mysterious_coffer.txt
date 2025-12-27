@@ -1,0 +1,8 @@
+Name:Mysterious Coffer
+ManaCost:2
+Types:Artifact
+
+A:AB$ ChangeZoneAll | Cost$ X Exile<1/CARDNAME/this artifact> | ChangeType$ Permanent.nonLand+cmcLEX | Origin$ Battlefield | Destination$ Hand | SpellDescription$ Return all nonland permanents with mana value X or less to their owners' hands.
+SVar:X:Count$xPaid
+
+Oracle:{X}, Exile this artifact: Return all nonland permanents with mana value X or less to their owner's hands.
