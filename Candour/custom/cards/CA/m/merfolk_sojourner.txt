@@ -1,0 +1,17 @@
+Name:Merfolk Sojourner
+ManaCost:1 U
+Types:Creature Merfolk Scout
+PT:1/1
+
+K:Backup:1:BackupAbility
+SVar:BackupAbility:DB$ Animate | Triggers$ TrigDamage | Abilities$ ABEffect
+SVar:TrigDamage:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player,Planeswalker | CombatDamage$ True | Execute$ TrigDraw | TriggerDescription$ Whenever this creature deals combat damage to a player or planeswalker, draw a card.
+SVar:ABEffect:AB$ Effect | Cost$ 1 | RememberObjects$ Self | ExileOnMoved$ Battlefield | StaticAbilities$ Unblockable | AILogic$ Pump | SpellDescription$ This creature can't be blocked this turn.
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player,Planeswalker | CombatDamage$ True | Execute$ TrigDraw | TriggerDescription$ Whenever this creature deals combat damage to a player or planeswalker, draw a card.
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+A:AB$ Effect | Cost$ 1 | RememberObjects$ Self | ExileOnMoved$ Battlefield | StaticAbilities$ Unblockable | AILogic$ Pump | SpellDescription$ This creature can't be blocked this turn.
+SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ This creature can't be blocked this turn.
+
+Oracle:Backup 1\nWhenever this creature deals combat damage to a player or planeswalker, draw a card.\n{1}: This creature can't be blocked this turn.
