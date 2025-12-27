@@ -1,0 +1,10 @@
+Name:Landlore Culmination
+ManaCost:G
+Types:Enchantment
+
+A:AB$ Mana | Cost$ Sac<1/Land> | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+Oracle:Sacrifice a land: Add one mana of any color.
+
+SVar:NonStackingEffect:True
+AI:RemoveDeck:All
