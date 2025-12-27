@@ -1,0 +1,9 @@
+Name:Disparage
+ManaCost:U U
+Types:Instant
+
+K:Buyback:PayLife<3> Discard<2/Card>
+
+A:SP$ Counter | TargetType$ Spell | ValidTgts$ Card | SpellDescription$ Counter target spell.
+
+Oracle:Buyback—Pay 3 life, Discard two cards. (You may pay 3 life and discard two cards in addition to any other costs as you cast this spell. If you do, put this card into your hand as it resolves.)\nCounter target spell.
