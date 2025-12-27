@@ -253,7 +253,9 @@ Type=Custom
 261 R Balevi, Zephyr Tactician @Christina Kraus
 # 262-265
 266 R Lithis, Loyal Banehound @Sandara Tang
-# 267-269
+# 267
+268 R Centerra, Regent of the Undercaverns @Joel Hustak
+# 269
 270 R Chorb, Magnate of Corpulence @Mego Sinaga
 271 M Vitromancy @Evelyne Park
 # 272
@@ -262,7 +264,7 @@ Type=Custom
 276 M Tymna, Polis Seamstress @Kristina Gehrmann
 # 277-279
 280 M Hakbal, Emergent Aqualogist @Luigi Manese
-281 R Greed Vacuum @Bear Frymire
+281 R Radiant Instrumentalist @Romain Kurdi
 282 R Nightblade Ronin @Dmonik Mayer
 283 R Candlelit Scourge @Noah Thatcher
 284 R Botanical Behemoth @Timi Honkanen
