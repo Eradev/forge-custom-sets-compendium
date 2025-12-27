@@ -1,0 +1,11 @@
+Name:Scions of Old Jidai
+ManaCost:1 W
+Types:Creature Human Samurai Knight
+PT:2/1
+
+A:AB$ GainLife | Cost$ Sac<1/CARDNAME/this creature> | ValidTgts$ Player | LifeAmount$ X | SpellDescription$ Target player gains life equal to the life that player has lost this turn.
+SVar:X:TargetedPlayer$LifeLostThisTurn
+
+Oracle:Sacrifice this creature: Target player gains life equal to the life that player has lost this turn.
+
+DeckHas:Ability$LifeGain|Sacrifice
