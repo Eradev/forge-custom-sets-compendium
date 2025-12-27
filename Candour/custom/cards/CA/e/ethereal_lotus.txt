@@ -1,0 +1,12 @@
+Name:Ethereal Lotus
+ManaCost:0
+Types:Artifact
+
+S:Mode$ CantBeCast | ValidCard$ Card.Self | EffectZone$ All | Caster$ Player.Active | CheckSVar$ X | SVarCompare$ LE3 | Description$ You can't cast CARDNAME during your first, second, or third turns of the game.
+SVar:X:Count$YourTurns
+
+A:AB$ Mana | Cost$ T Sac<1/CARDNAME/this artifact> | Produced$ Any | Amount$ 3 | AILogic$ BlackLotus | SpellDescription$ Add three mana of any one color.
+
+Oracle:You can't cast Ethereal Lotus during your first, second, or third turns of the game.\n{T}, Sacrifice this artifact: Add three mana of any one color.
+
+DeckHas:Ability$Sacrifice

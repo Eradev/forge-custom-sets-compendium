@@ -1,0 +1,11 @@
+Name:Aqueous Bauble
+ManaCost:U
+Types:Artifact Clue
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSurveil | TriggerDescription$ When this artifact enters or leaves the battlefield, surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigSurveil | Secondary$ True | TriggerDescription$ When this artifact enters or leaves the battlefield, surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)
+SVar:TrigSurveil:DB$ Surveil | Amount$ 2
+
+A:AB$ Draw | Cost$ 1 Sac<1/CARDNAME/this artifact> | SpellDescription$ Draw a card.
+
+Oracle:When this artifact enters or leaves the battlefield, surveil 2. (Look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)\n{1}, Sacrifice this artifact: Draw a card.

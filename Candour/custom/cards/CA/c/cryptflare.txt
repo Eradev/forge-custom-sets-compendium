@@ -1,0 +1,9 @@
+Name:Cryptflare
+ManaCost:BR
+Types:Instant
+
+K:Gravestorm
+
+A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ 1 | SpellDescription$ CARDNAME deals 1 damage to any target.
+
+Oracle:Gravestorm (When you cast this spell, copy it for each permanent put into a graveyard this turn. You may choose new targets for the copies.)\nCryptflare deals 1 damage to any target.

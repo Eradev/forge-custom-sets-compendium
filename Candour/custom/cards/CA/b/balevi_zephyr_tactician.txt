@@ -1,0 +1,16 @@
+Name:Balevi, Zephyr Tactician
+ManaCost:1 WU WU
+Types:Legendary Creature Bird Wizard
+PT:3/4
+
+K:Companion:Card.nonCreature:Your starting deck contains no creature cards.
+
+K:Flash
+
+R:Event$ Counter | ValidCard$ Card.Self | ValidSA$ Spell | Layer$ CantHappen | Description$ This spell can't be countered.
+
+K:Flying
+
+K:Hexproof
+
+Oracle:Companion — Your starting deck contains no creature cards. (If this card is your chosen companion, you may put it into your hand from outside the game for {3} any time you could cast a sorcery.)\nFlash\nThis spell can't be countered.\nFlying, hexproof

@@ -1,0 +1,13 @@
+Name:Astral Epiphany
+ManaCost:2 U
+Types:Instant
+
+A:SP$ Draw | NumCards$ 3 | SubAbility$ DBDiscard | SpellDescription$ Draw 3 cards, then discard 2 cards. Create a 1/1 white Spirit creature token with flying for each card type among cards discarded this way.
+SVar:DBDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 2 | RememberDiscarded$ True | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ w_1_1_spirit_flying | TokenAmount$ Y | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:Y:Remembered$CardTypes
+
+Oracle:Draw 3 cards, then discard 2 cards. Create a 1/1 white Spirit creature token with flying for each card type among cards discarded this way.
+
+DeckHas:Ability$Discard|Token & Type$Spirit

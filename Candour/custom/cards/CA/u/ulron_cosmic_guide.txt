@@ -1,0 +1,13 @@
+Name:Ulron, Cosmic Guide
+ManaCost:5
+Types:Legendary Creature Dragon
+PT:4/3
+
+K:Companion:Special:UniqueNames:Each nonland card in your starting deck has a different name.
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChange |TriggerDescription$ When NICKNAME enters, search your library for a card, put it into your hand, then shuffle.
+SVar:TrigChange:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Card | ChangeNum$ 1 | Mandatory$ True
+
+Oracle:Companion — Each nonland card in your starting deck has a different name. (If this card is your chosen companion, you may put it into your hand from outside the game for {3} any time you could cast a sorcery.)\nFlying\nWhen Ulron enters, search your library for a card, put it into your hand, then shuffle.

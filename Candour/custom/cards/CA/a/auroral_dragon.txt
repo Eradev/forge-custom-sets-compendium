@@ -1,0 +1,18 @@
+Name:Auroral Dragon
+ManaCost:3 G G
+Types:Creature Dragon
+PT:4/5
+
+K:Flash
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChangeZone | TriggerDescription$ When this creature enters or attacks, return target card from your graveyard to your hand.
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigChangeZone | Secondary$ True | TriggerDescription$ When this creature enters or attacks, return target card from your graveyard to your hand.
+SVar:TrigChangeZone:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Card.YouOwn | TgtPrompt$ Select target card in your graveyard
+
+A:AB$ Surveil | Cost$ U | Amount$ 3 | SpellDescription$ Surveil 3.
+
+Oracle:Flash\nFlying\nWhenever this creature enters or attacks, return target card from your graveyard to your hand.\n{U}: Surveil 3.
+
+SVar:HasAttackEffect:TRUE
