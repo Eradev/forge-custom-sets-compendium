@@ -1,0 +1,11 @@
+Name:Soulbreaker of Mautakesh
+ManaCost:1 B
+Types:Creature Snake Wizard
+PT:3/1
+
+K:Poisonous:3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSac | TriggerDescription$ When this creature enters, target poisoned player sacrifices a creature.
+SVar:TrigSac:DB$ Sacrifice | ValidTgts$ Player.IsPoisoned | SacValid$ Creature
+
+Oracle:Poisonous 3 (Whenever this creature deals combat damage to a player, that player gets three poison counters.)\nWhen this creature enters, target poisoned player sacrifices a creature.
