@@ -1,0 +1,11 @@
+Name:Student of the Coil
+ManaCost:G
+Types:Creature Human Snake Monk
+PT:1/2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ Whenever this creature attacks, target creature gains poisonous 1 until end of turn. (Whenever that creature deals combat damage to a player, that player gets a poison counter.)
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | KW$ Poisonous:1
+
+Oracle:Whenever this creature attacks, target creature gains poisonous 1 until end of turn. (Whenever that creature deals combat damage to a player, that player gets a poison counter.)
+
+SVar:HasAttackEffect:TRUE
