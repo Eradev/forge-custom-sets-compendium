@@ -1,0 +1,13 @@
+Name:Spellblade
+ManaCost:2
+Types:Artifact Equipment
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | OptionalDecider$ You | Execute$ TrigExile | TriggerDescription$ When this Equipment enters, you may exile an instant card with mana value 2 or less from your hand.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Hand | Destination$ Exile | ChangeType$ Instant.cmcLE2 | ChangeNum$ 1 | RememberChanged$ True
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.EquippedBy+dealtDamageToOppThisTurn | Execute$ TrigPlay | TriggerDescription$ At the beginning of your end step, if equipped creature dealt damage to an opponent this turn, you may copy the exiled card. If you do, you may cast the copy without paying its mana cost.
+SVar:TrigPlay:DB$ Play | Defined$ Remembered | ValidZone$ Exile | WithoutManaCost$ True | ValidSA$ Spell | Optional$ True | CopyCard$ True | OptionalDecider$ You
+
+K:Equip:2
+
+Oracle:When this Equipment enters, you may exile an instant card with mana value 2 or less from your hand.\nAt the beginning of your end step, if equipped creature dealt damage to an opponent this turn, you may copy the exiled card. If you do, you may cast the copy without paying its mana cost.\nEquip {2}
