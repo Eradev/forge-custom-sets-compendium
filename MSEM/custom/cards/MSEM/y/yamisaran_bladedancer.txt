@@ -3,8 +3,11 @@ ManaCost:2 R
 Types:Creature Human Samurai
 PT:3/2
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ DBSelectEquipment | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may attach target Equipment you control to target creature you control.
-SVar:DBSelectEquipment:DB$ Pump | ValidTgts$ Equipment.YouCtrl | TgtPrompt$ Select target equipment you control | SubAbility$ DBAttach | StackDescription$ None
-SVar:DBAttach:DB$ Attach | Object$ ParentTarget | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ DBSelectEquipment | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may attach an Equipment you control to target creature you control.
+SVar:DBSelectEquipment:DB$ ChooseCard | Choices$ Equipment.YouCtrl | RememberChosen$ True | SubAbility$ DBAttach
+SVar:DBAttach:DB$ Attach | Object$ ChosenCard | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control. | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
 
-Oracle:When this creature enters, you may attach target Equipment you control to target creature you control.
+Oracle:When this creature enters, you may attach an Equipment you control to target creature you control.
+
+DeckHints:Type$Equipment
