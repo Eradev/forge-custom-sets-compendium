@@ -1,0 +1,16 @@
+Name:Kasai, Asharo's Legacy
+ManaCost:R R
+Types:Legendary Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | AddSVar$ AE | Description$ Equipped creature gets +2/+2.
+SVar:AE:SVar:HasAttackEffect:TRUE
+
+T:Mode$ Attacks | ValidCard$ Card.AttachedBy | Execute$ TrigEffect | TriggerDescription$ Whenever equipped creature attacks, detain target creature. (Until your next turn, that creature can't attack or block and its activated abilities can't be activated.)
+SVar:TrigEffect:DB$ Effect | ReplacementEffects$ RExtraDamage
+SVar:RExtraDamage:Event$ DamageDone | ValidTarget$ Creature,Player,Planeswalker | ValidSource$ Instant+YouCtrl,Sorcery+YouCtrl | ReplaceWith$ DamageReplace | Description$ The next time an instant or sorcery source you control would deal damage to a creature, player, or planeswalker this turn, it deals that much damage plus 2 instead.
+SVar:DamageReplace:DB$ ReplaceEffect | VarName$ DamageAmount | VarValue$ ReplaceCount$DamageAmount/Plus.2 | SubAbility$ ExileEffect
+SVar:ExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+
+K:Equip:2
+
+Oracle:Equipped creature gets +2/+2.\nWhenever equipped creature attacks, the next time an instant or sorcery source you control would deal damage to a creature, player, or planeswalker this turn, it deals that much damage plus 2 instead.\nEquip {2}
