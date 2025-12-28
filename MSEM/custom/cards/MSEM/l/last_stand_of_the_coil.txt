@@ -1,0 +1,7 @@
+Name:Last Stand of the Coil
+ManaCost:2 G G
+Types:Sorcery
+
+A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1 | KW$ Trample & Poisonous:1 | SpellDescription$ Until end of turn, creatures you control get +1/+1 and gain trample and poisonous 1. (Whenever one of those creatures deals combat damage to a player, that player gets a poison counter.)
+
+Oracle:Until end of turn, creatures you control get +1/+1 and gain trample and poisonous 1. (Whenever one of those creatures deals combat damage to a player, that player gets a poison counter.)
