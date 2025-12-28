@@ -1,0 +1,9 @@
+Name:Kurayami Butcher
+ManaCost:1 B B
+Types:Creature Zombie Samurai
+PT:3/2
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigDestroy | OptionalDecider$ You | TriggerDescription$ Art of war — At the beginning of your end step, if this creature dealt damage to an opponent, you may destroy target creature that was dealt damage this turn.
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Creature.wasDealtDamageThisTurn | TgtPrompt$ Select target creature that was dealt damage this turn.
+
+Oracle:Art of war — At the beginning of your end step, if this creature dealt damage to an opponent, you may destroy target creature that was dealt damage this turn.
