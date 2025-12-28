@@ -1,0 +1,11 @@
+Name:Sunset Monastery
+ManaCost:no cost
+Types:Land
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this land enters, draw a card, then put a card from your hand on the bottom of your library.
+SVar:TrigDraw:DB$ Draw | SubAbility$ ChangeZoneDB
+SVar:ChangeZoneDB:DB$ ChangeZone | Origin$ Hand | Destination$ Library | LibraryPosition$ -1 | Mandatory$ True
+
+A:AB$ Mana | Cost$ T | Produced$ C | Amount$ 1 | SpellDescription$ Add {C}.
+
+Oracle:When this land enters, draw a card, then put a card from your hand on the bottom of your library.\n{T}: Add {C}.
