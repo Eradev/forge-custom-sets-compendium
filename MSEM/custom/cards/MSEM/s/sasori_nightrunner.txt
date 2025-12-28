@@ -1,0 +1,12 @@
+Name:Sasori Nightrunner
+ManaCost:2 B
+Types:Creature Human Soldier
+PT:0/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 2/2 colorless Spirit creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_2_2_spirit
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.Colorless+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ Whenever a colorless creature you control dies, each opponent loses 1 life.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ Opponent | LifeAmount$ 1
+
+Oracle:When this creature enters, create a 2/2 colorless Spirit creature token.\nWhenever a colorless creature you control dies, each opponent loses 1 life.
