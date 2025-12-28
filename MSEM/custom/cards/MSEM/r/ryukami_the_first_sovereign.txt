@@ -1,0 +1,12 @@
+Name:Ryukami, the First Sovereign
+ManaCost:W U B R G
+Types:Legendary Creature Dragon Spirit
+PT:5/5
+
+K:Flying
+
+S:Mode$ ReduceCost | ValidCard$ Legendary | Type$ Spell | Activator$ You | Amount$ 1 | Description$ Legendary spells you cast cost {1} less to cast.
+
+A:AB$ ChangeZone | Cost$ W U B R G | Origin$ Library | OriginAlternative$ Graveyard | Destination$ Hand | ChangeType$ Legendary | ChangeNum$ 1 | SpellDescription$ Search your library or graveyard for a legendary card, reveal that card, and put it into your hand. If you searched your library this way, shuffle.
+
+Oracle:Flying\nLegendary spells you cast cost {1} less to cast.\n{W}{U}{B}{R}{G}: Search your library or graveyard for a legendary card, reveal that card, and put it into your hand. If you searched your library this way, shuffle.
