@@ -1,0 +1,11 @@
+Name:Junan Venomtongue
+ManaCost:B R
+Types:Legendary Creature Human Advisor
+PT:1/3
+
+T:Mode$ Phase | Phase$ Upkeep | TriggerZones$ Battlefield | Execute$ TrigSac | TriggerDescription$ At the beginning of each player's upkeep, that player may sacrifice a creature. If that player doesn't, they discard a card.
+SVar:TrigSac:DB$ Sacrifice | SacValid$ Creature | Defined$ TriggeredPlayer | RememberSacrificed$ True | Optional$ True | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ TriggeredPlayer | Mode$ TgtChoose | NumCards$ 1 | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ0 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:At the beginning of each player's upkeep, that player may sacrifice a creature. If that player doesn't, they discard a card.
