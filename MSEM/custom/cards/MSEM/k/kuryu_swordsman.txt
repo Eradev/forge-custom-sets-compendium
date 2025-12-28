@@ -1,0 +1,9 @@
+Name:Kuryu Swordsman
+ManaCost:2 G
+Types:Creature Human Samurai
+PT:3/2
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigFight | TriggerDescription$ Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, you may have it fight target creature you don't control. (Each deals damage equal to its power to the other.)
+SVar:TrigFight:DB$ Fight | Defined$ Self | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Choose target creature you don't control
+
+Oracle:Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, you may have it fight target creature you don't control. (Each deals damage equal to its power to the other.)
