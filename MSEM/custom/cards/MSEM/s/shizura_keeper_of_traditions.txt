@@ -1,0 +1,12 @@
+Name:Shizura, Keeper of Traditions
+ManaCost:2 B B
+Types:Legendary Creature Human Wizard
+PT:2/2
+
+K:Partner:Kasoha, Keeper of Truths
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self,Creature.Legendary | Execute$ TrigDraw | TriggerDescription$ Whenever Shizura or another legendary creature dies, target player draws two cards and loses 2 life.
+SVar:TrigDraw:DB$ Draw | ValidTgts$ Player | NumCards$ 2 | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | Defined$ TargetedPlayer | LifeAmount$ 2
+
+Oracle:Partner with Kasoha, Keeper of Truths (When this creature enters, target player may put Kasoha into their hand from their library, then shuffle.)\nWhenever Shizura or another legendary creature dies, target player draws two cards and loses 2 life.
