@@ -1,0 +1,10 @@
+Name:Kamito Pathseeker
+ManaCost:R
+Types:Creature Human Monk Wizard
+PT:2/1
+
+S:Mode$ CantBlock | ValidCard$ Card.Self | Description$ This creature can't block.
+
+A:AB$ ChangeZone | Cost$ 3 R ExileFromGrave<1/CARDNAME/this card> | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Instant.YouCtrl,Sorcery.YouCtrl | SpellDescription$ Return target instant or sorcery card from your graveyard to your hand.
+
+Oracle:This creature can't block.\n{3}{R}, Exile this card from your graveyard: Return target instant or sorcery card from your graveyard to your hand.
