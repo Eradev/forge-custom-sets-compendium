@@ -1,0 +1,10 @@
+Name:Inscribed Histories
+ManaCost:1
+Types:Artifact Equipment
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | ActivatorThisTurnCast$ EQ1 | Execute$ TripUntap | TriggerZones$ Battlefield | TriggerDescription$ Whenever you cast your first instant or sorcery spell each turn, untap equipped creature.
+SVar:TrigUntap:DB$ Untap | Defined$ Equipped
+
+K:Equip:1
+
+Oracle:Whenever you cast your first instant or sorcery spell each turn, untap equipped creature.\nEquip {1}
