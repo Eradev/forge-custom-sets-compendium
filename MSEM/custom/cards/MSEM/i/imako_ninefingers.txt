@@ -8,7 +8,7 @@ SVar:TrigExile:DB$ Dig | ValidTgts$ Opponent | DigNum$ 3 | ChangeNum$ All | Dest
 
 S:Mode$ Continuous | Affected$ Card.ExiledWithSource | AffectedZone$ Exile | MayLookAt$ You | Description$ You may look at cards exiled with NICKNAME.
 
-A:AB$ SetState | Cost$ Sac<1/CARDNAME/NICKNAME> | Defined$ ExiledWithSource | Mode$ TurnFaceUp | SubAbility$ DBExile | SpellDescription$ Turn all cards exiled with it face up. Exile all cards with those names from your opponent's graveyards.
+A:AB$ SetState | Cost$ Sac<1/CARDNAME> | Defined$ ExiledWithSource | Mode$ TurnFaceUp | SubAbility$ DBExile | SpellDescription$ Turn all cards exiled with it face up. Exile all cards with those names from your opponent's graveyards.
 SVar:DBExile:DB$ ChangeZoneAll | ChangeType$ Card.YouDontOwn+sharesNameWith ExiledWithSource | Origin$ Graveyard | Destination$ Exile
 
 Oracle:Whenever Imako becomes tapped, exile the top three cards of target opponent's library face down.\nYou may look at cards exiled with Imako.\nSacrifice Imako: Turn all cards exiled with it face up. Exile all cards with those names from your opponent's graveyards.
