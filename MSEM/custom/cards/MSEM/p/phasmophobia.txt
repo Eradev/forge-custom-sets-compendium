@@ -2,7 +2,10 @@ Name:Phasmophobia
 ManaCost:1 W
 Types:Instant
 
-A:SP$ Tap | ValidTgts$ Creature | SubAbility$ DBFogStun | SpellDescription$ Tap target creature. Prevent all combat damage it would deal this turn. It doesn't untap during its controller's next untap step.
-SVar:DBFogStun:DB$ Pump | Defined$ Targeted | KW$ HIDDEN Prevent all combat damage that would be dealt by CARDNAME. & HIDDEN This card doesn't untap during your next untap step.
+A:SP$ Tap | ValidTgts$ Creature | SubAbility$ DBFog | SpellDescription$ Tap target creature. Prevent all combat damage it would deal this turn. It doesn't untap during its controller's next untap step.
+SVar:DBFog:DB$ Pump | Defined$ Targeted | KW$ Prevent all combat damage that would be dealt by CARDNAME. | SubAbility$ DBNoUntap
+SVar:DBNoUntap:DB$ Pump | Defined$ Targeted | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent
 
 Oracle:Tap target creature. Prevent all combat damage it would deal this turn. It doesn't untap during its controller's next untap step.
+
+AI:RemoveDeck:All
