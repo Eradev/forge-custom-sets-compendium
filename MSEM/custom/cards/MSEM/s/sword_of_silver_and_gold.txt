@@ -2,7 +2,7 @@ Name:Sword of Silver and Gold
 ManaCost:3
 Types:Artifact Equipment
 
-S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | AddKeyword$ K:Protection:Card.colorless:colorless:Card.CardUID_HostCardUID & K:Protection:Card.MultiColor:multicolored:Card.CardUID_HostCardUID | AddSVar$ MustBeBlocked | Description$ Equipped creature gets +2/+2 and has protection from colorless and from multicolored. This effect doesn't remove this Equipment. (It can't be targeted, dealt damage, enchanted, or equipped by anything colorless or multicolored.)
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | AddKeyword$ Protection:Card.colorless:colorless:Card.CardUID_HostCardUID & Protection:Card.MultiColor:multicolored:Card.CardUID_HostCardUID | AddSVar$ MustBeBlocked | Description$ Equipped creature gets +2/+2 and has protection from colorless and from multicolored. This effect doesn't remove this Equipment. (It can't be targeted, dealt damage, enchanted, or equipped by anything colorless or multicolored.)
 SVar:MustBeBlocked:SVar:MustBeBlocked:AttackingPlayerConservative
 
 T:Mode$ DamageDone | ValidSource$ Creature.EquippedBy | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigToken | TriggerZones$ Battlefield | TriggerDescription$ Whenever equipped creature deals combat damage to a player, you create a 2/2 colorless Spirit creature token and that player exiles the top three cards of their library.
