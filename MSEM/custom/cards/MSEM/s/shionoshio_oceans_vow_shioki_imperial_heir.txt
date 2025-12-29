@@ -1,0 +1,35 @@
+Name:Shionoshio, Ocean's Vow
+ManaCost:3
+Types:Legendary Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | AddKeyword$ Flying & Lifelink | Description$ Equipped creature gets +2/+2 and has flying and lifelink.
+
+T:Mode$ DamageDone | ValidSource$ Creature.AttachedBy | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigUnattach | TriggerZones$ Battlefield | TriggerDescription$ Whenever equipped creature deals combat damage to a player, unattach NICKNAME, then transform it.
+SVar:TrigUnattach:DB$ Unattach | Defined$ Self | SubAbility$ DBTransform
+SVar:DBTransform:DB$ SetState | Defined$ Self | Mode$ Transform
+
+K:Equip:W U
+
+Oracle:Equipped creature gets +2/+2 and has flying and lifelink.\nWhen equipped creature deals combat damage to a player, unattach Shionoshio, then transform it.\nEquip {W}{U}
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Shioki, Imperial Heir
+ManaCost:no cost
+Colors:white,blue
+Types:Legendary Creature Human Samurai
+PT:5/5
+
+K:Flying
+
+K:Lifelink
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ Whenever NICKNAME attacks, exile any number of other target nonland permanents you control, then return those cards to the battlefield under their owner's control.
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Permanent.YouCtrl+nonLand | TgtPrompt$ Exile any number of target nonland permanents you control | TargetMin$ 0 | TargetMax$ X | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ All | Destination$ Battlefield | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Count$Valid Permanent.YouCtrl+nonLand
+
+Oracle:Flying, lifelink\nWhenever Shioki attacks, exile any number of other target nonland permanents you control, then return those cards to the battlefield under their owner's control.
