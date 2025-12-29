@@ -7,3 +7,5 @@ SVar:DBDraw:DB$ Draw
 SVar:X:Count$ValidExile Card
 
 Oracle:Exile any number of target cards in exile. (They become new objects that have just been exiled.)\nDraw a card.
+
+AI:RemoveDeck:All
