@@ -1,0 +1,26 @@
+Name:Little Kibo
+ManaCost:W
+Types:Legendary Creature Cat
+PT:1/1
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigTransform | TriggerDescription$ Whenever CARDNAME attacks, you may pay {W}{W}. If you do, transform it.
+SVar:TrigTransform:AB$ SetState | Cost$ W W | Defined$ Self | Mode$ Transform
+
+Oracle:Whenever Little Kibo attacks, you may pay {W}{W}. If you do, transform it.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Kiboshi
+ManaCost:no cost
+Colors:white
+Types:Legendary Creature Cat
+PT:2/2
+
+K:Double strike
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+equipped | Execute$ TrigPutCounter | TriggerDescription$ At the beginning of your upkeep, if CARDNAME is equipped, put a +1/+1 counter on it.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1
+
+Oracle:Double strike\nAt the beginning of your upkeep, if Kiboshi is equipped, put a +1/+1 counter on it.At the beginning of your upkeep, put a +1/+1 counter on 
