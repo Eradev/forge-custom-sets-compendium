@@ -32,7 +32,10 @@ Video Horror System (VHS)             -  97% (83/86)
     * Snowfield Doppelganger
     * Wiretapper
 Kaleidoscope (KLC)                    -  100%
-Path of Shadows (PSA)                 -  46% (100/214)
+Path of Shadows (PSA)                 -  89% (187/209)
+ Missing cards:
+     * Every card with Inscribe, or referencing it.
+     * The Sacred Gate
 A Tourney at Whiterun (TWR)           -  100%
 Tides of War (TOW)                    -  28% (78/271)
 Pyramids of Atuum (POA)               -  98% (126/128)
