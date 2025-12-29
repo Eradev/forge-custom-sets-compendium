@@ -1,5 +1,5 @@
 Name:Chronicles of the Kitsune
-ManaCost:W
+ManaCost:1 W
 Types:Enchantment Gallery
 
 Text:(Choose only one work as a sorcery to add its ability.)
