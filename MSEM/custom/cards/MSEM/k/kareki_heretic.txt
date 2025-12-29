@@ -4,7 +4,6 @@ Types:Creature Human Wizard
 PT:1/1
 
 T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | Execute$ TrigPutCounter | TriggerZones$ Battlefield | TriggerDescription$ Whenever you cast an instant or sorcery spell, choose a counter on target permanent or player. You may put an additional counter of that kind on that permanent or player.
-SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Permanent,Player | TgtPrompt$ Select target player or permanent | CounterType$ ExistingCounter | CounterNum$ 1 | OptionalDecider$ You
-
+SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Permanent+HasCounters,Player.HasCounters | TgtPrompt$ Select target player or permanent | CounterType$ ExistingCounter | CounterNum$ 1 | OptionalDecider$ You
 
 Oracle:Whenever you cast an instant or sorcery spell, choose a counter on target permanent or player. You may put an additional counter of that kind on that permanent or player.
