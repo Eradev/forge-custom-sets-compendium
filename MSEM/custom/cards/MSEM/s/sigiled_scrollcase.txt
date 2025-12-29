@@ -2,8 +2,7 @@ Name:Sigiled Scrollcase
 ManaCost:1
 Types:Artifact Equipment
 
-S:Mode$ Continuous | IsPresent$ Card.Self+AttachedTo Creature.YouCtrl Affected$ You | SetMaxHandSize$ Unlimited | Description$ As long as this Equipment is attached to a creature you control, you have no maximum hand size.
-
+S:Mode$ Continuous | IsPresent$ Card.Self+AttachedTo Creature.YouCtrl | Affected$ You | SetMaxHandSize$ Unlimited | Description$ As long as this Equipment is attached to a creature you control, you have no maximum hand size.
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.EquippedBy | Execute$ TrigDraw | TriggerDescription$ Whenever equipped creature dies, draw a card.
 SVar:TrigDraw:DB$ Draw
 
