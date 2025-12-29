@@ -2,7 +2,7 @@ Name:Serene Form
 ManaCost:W
 Types:Instant
 
-A:SP$ Effect | ValidTgts$ Card | TargetType$ Spell,Permanent | TgtZone$ Battlefield,Stack | TgtPrompt$ Select target spell or permanent to prevent damage from | ReplacementEffects$ PreventDmg | Triggers$ TargetMoved | RememberObjects$ TargetedSource | SpellDescription$ Prevent all damage target spell or permanent would deal this turn. You gain life equal to the damage prevented this way.
+A:SP$ Effect | ValidTgts$ Card | TargetType$ Spell,Permanent | TgtZone$ Battlefield,Stack | TgtPrompt$ Select target spell or permanent to prevent damage from | ReplacementEffects$ PreventDmg | Triggers$ TargetMoved | RememberObjects$ Targeted | SpellDescription$ Prevent all damage target spell or permanent would deal this turn. You gain life equal to the damage prevented this way.
 SVar:PreventDmg:Event$ DamageDone | ValidSource$ Card.IsRemembered | ReplaceWith$ GainLifeYou | PreventionEffect$ True | Description$ Prevent all damage that would be dealt by targeted spell this turn. You gain life equal to the damage prevented this way.
 SVar:GainLifeYou:DB$ GainLife | LifeAmount$ X
 SVar:X:ReplaceCount$DamageAmount
@@ -10,3 +10,5 @@ SVar:TargetMoved:Mode$ ChangesZone | ValidCard$ Card.IsRemembered | ExcludedDest
 SVar:ExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
 
 Oracle:Prevent all damage target spell or permanent would deal this turn. You gain life equal to the damage prevented this way.
+
+AI:RemoveDeck:All
