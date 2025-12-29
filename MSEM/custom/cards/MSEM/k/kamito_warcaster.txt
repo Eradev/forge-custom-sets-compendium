@@ -7,8 +7,8 @@ K:Haste
 
 K:Prowess
 
-T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigTokenAttacking | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature attacks, you may pay {2}{R}. If you do, create a token that's a copy of another target creature you control and that's tapped and attacking. It's a colorless Spirit in addition to its other types. Exile that token at end of combat.
-SVar:TrigTokenAttacking:AB$ CopyPermanent | Cost$ 2 R | ValidTgts$ Creature.YouCtrl+other | AddTypes$ Spirit | SetColor$ Colorless | TokenTapped$ True | TokenAttacking$ True | AtEOT$ Sacrifice
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigTokenAttacking | TriggerDescription$ Whenever this creature attacks, you may pay {2}{R}. If you do, create a token that's a copy of another target creature you control and that's tapped and attacking. It's a colorless Spirit in addition to its other types. Exile that token at end of combat.
+SVar:TrigTokenAttacking:AB$ CopyPermanent | Cost$ 2 R | ValidTgts$ Creature.YouCtrl+Other | AddTypes$ Spirit | SetColor$ Colorless | TokenTapped$ True | TokenAttacking$ True | AtEOT$ Sacrifice
 
 Oracle:Haste, prowess\nWhenever this creature attacks, you may pay {2}{R}. If you do, create a token that's a copy of another target creature you control and that's tapped and attacking. It's a colorless Spirit in addition to its other types. Exile that token at end of combat.
 
