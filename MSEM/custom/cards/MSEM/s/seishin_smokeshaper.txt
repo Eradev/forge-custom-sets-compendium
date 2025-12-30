@@ -10,3 +10,4 @@ T:Mode$ SpellCast | ValidCard$ Card.nonCreature | ValidActivatingPlayer$ You | E
 SVar:TrigPump:DB$ PumpAll | ValidCards$ Creature.Colorless+YouCtrl | NumAtt$ +1 | NumDef$ +1
 
 Oracle:When this creature enters, create a 2/2 colorless Spirit creature token.\nWhenever you cast a noncreature spell, colorless creatures you control get +1/+1 until end of turn.
+SVar:PlayMain1:TRUE
