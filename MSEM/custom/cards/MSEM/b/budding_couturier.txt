@@ -1,0 +1,9 @@
+Name:Budding Couturier
+ManaCost:1 U
+Types:Creature Human Citizen
+PT:2/1
+
+T:Mode$ SpellCast | ValidActivatingPlayer$ You | ValidCard$ Card | Condition$ FromNamedAbilityShowcase | Execute$ TrigToken | TriggerDescription$ Whenever you cast a spell for its showcase cost, create a 2/2 blue Drake creature token with flying.
+SVar:TrigToken:DB$ Token | TokenScript$ u_2_2_drake_flying
+
+Oracle:Whenever you cast a spell for its showcase cost, create a 2/2 blue Drake creature token with flying.
