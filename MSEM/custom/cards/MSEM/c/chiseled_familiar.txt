@@ -1,0 +1,11 @@
+Name:Chiseled Familiar
+ManaCost:2 W
+Types:Artifact Creature Fox
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this creature enters, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+A:AB$ GainLife | Cost$ Sac<1/CARDNAME/this creature> | LifeAmount$ 2 | SpellDescription$ You gain 2 life.
+
+Oracle:When this creature enters, draw a card.\nSacrifice this creature: You gain 2 life.
