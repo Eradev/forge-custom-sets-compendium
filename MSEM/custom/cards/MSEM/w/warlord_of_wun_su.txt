@@ -1,0 +1,10 @@
+Name:Warlord of Wun Su
+ManaCost:4 R
+Types:Creature Monkey Warrior
+PT:5/5
+
+K:Trample
+
+K:CARDNAME can't block alone.
+
+Oracle:Trample\nThis creature can't block alone.
