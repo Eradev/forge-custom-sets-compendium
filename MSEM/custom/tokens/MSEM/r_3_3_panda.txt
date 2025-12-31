@@ -1,0 +1,6 @@
+Name:Panda Token
+ManaCost:no cost
+Colors:red
+Types:Creature Panda
+PT:3/3
+Oracle:

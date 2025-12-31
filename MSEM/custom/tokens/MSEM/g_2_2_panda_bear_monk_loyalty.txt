@@ -1,0 +1,12 @@
+Name:Panda Bear Monk Token
+ManaCost:no cost
+Colors:green
+Types:Creature Panda Bear Monk
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.Self | Execute$ TrigChoose | TriggerDescription$ This creature dies, put a loyalty counter on a Ji planeswalker you control.
+SVar:TrigChoose:DB$ ChooseCard | Choices$ Planeswalker.Ji+YouCtrl | RememberChosen$ True | SubAbility$ DBPutCounter
+SVar:DBPutCounter:DB$ PutCounter | Defined$ ChosenCard | CounterType$ LOYALTY | CounterNum$ 1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
+
+Oracle:This creature dies, put a loyalty counter on a Ji planeswalker you control.
