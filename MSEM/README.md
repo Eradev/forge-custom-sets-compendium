@@ -31,6 +31,7 @@ Video Horror System (VHS)             -  97% (83/86)
     * Maddened Preacher
     * Snowfield Doppelganger
     * Wiretapper
+Nangjiao In Bloom (NJB)               -  23% (70/297)
 Kaleidoscope (KLC)                    -  100%
 Path of Shadows (PSA)                 -  89% (187/209)
  Missing cards:
@@ -48,6 +49,7 @@ MSEM Champions (CHAMPIONS)
 MSEM Champions: Masterpiece (MPS_MSE)
 MSEM Secret Lair Drops (LAIR)
 The Land Bundle (L)
+From the Vault: Wayfarer's Shrine (SHRINE)
 ```
 
 ## Keywords and mechanisms implementation
@@ -66,6 +68,7 @@ Examples on how to implement custom keywords and mechanisms.
 * [Motivate](#motivate)
 * [Paranoia](#paranoia)
 * [Rerun](#rerun)
+* [Showcase](#showcase)
 * [Torment](#torment)
 
 ### Ascend
@@ -281,6 +284,31 @@ SVar:CastRerun:DB$ Play | Defined$ Remembered | WithoutManaCost$ True
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
+
+### Showcase
+
+Showcase is defined as:
+
+```text
+Showcase {2}{W}{W} (Then if you cast this for its showcase cost, create a 1/1 red Bard creature token that can't block and exile this. Whenever it attacks, you may cast a free copy of this.)
+```
+
+Implementation:
+
+Your main `A:SP$` link should have `SubAbility$ DBToken` to link with the Showcase part.
+
+```text
+S:Mode$ AlternativeCost | Named$ Showcase | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 W W | Description$ Showcase {2}{W}{W} (Then if you cast this for its showcase cost, create a 1/1 red Bard creature token that can't block and exile this. Whenever it attacks, you may cast a free copy of this.)
+SVar:DBToken:DB$ Token | ConditionCheckSVar$ AltCostPaid | TokenScript$ r_1_1_bard_cantblock | RememberTokens$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | ConditionCheckSVar$ AltCostPaid | RememberObjects$ Remembered | ImprintCards$ Self | Triggers$ TriggerShowcaseAttack,TriggerTokenMoved | Duration$ Permanent | SubAbility$ DBExile
+SVar:TriggerShowcaseAttack:Mode$ Attacks | ValidCard$ Card.IsRemembered | Execute$ PlayShowcase | TriggerDescription$ Whenever the showcased creature attacks, you may cast a copy of EFFECTSOURCE without paying its mana cost.
+SVar:PlayShowcase:DB$ Play | Defined$ Imprinted | WithoutManaCost$ True | CopyCard$ True | Optional$ True | OptionalDecider$ You 
+SVar:TriggerTokenMoved:Mode$ ChangesZone | ValidCard$ Card.IsRemembered | ExcludedDestinations$ Battlefield | Execute$ ExileEffect | Static$ True
+SVar:ExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+SVar:DBExile:DB$ ChangeZone | ConditionCheckSVar$ AltCostPaid | Defined$ Self | Origin$ Stack | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:AltCostPaid:Count$AltCost.1.0
+```
 
 ### Torment
 
