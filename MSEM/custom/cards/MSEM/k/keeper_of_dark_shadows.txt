@@ -1,0 +1,12 @@
+Name:Keeper of Dark Shadows
+ManaCost:3 B B
+Types:Creature Human Wizard
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self+!token | TriggerZones$ Battlefield | Execute$ TrigReveal | TriggerDescription$ When this creature enters, if it's not a token, target opponent reveals their hand. You may choose a creature card from it. Create a token that's a copy of that card, except it's a colorless Spirit.
+SVar:TrigReveal:DB$ RevealHand | ValidTgts$ Opponent | RememberRevealed$ True | SubAbility$ DBChoose
+SVar:DBChoose:DB$ ChooseCard | ChoiceZone$ Hand | Amount$ 1 | Choices$ Card.Creature+IsRemembered | ChoiceTitle$ You may choose a creature card | SubAbility$ DBCopy
+SVar:DBCopy:DB$ CopyPermanent | Defined$ ChosenCard | SetColor$ Colorless | AddType$ Spirit | RemoveSubTypes$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True | ClearRemembered$ True
+
+Oracle:When this creature enters, if it's not a token, target opponent reveals their hand. You may choose a creature card from it. Create a token that's a copy of that card, except it's a colorless Spirit.

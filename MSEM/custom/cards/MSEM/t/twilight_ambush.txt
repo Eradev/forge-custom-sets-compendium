@@ -1,0 +1,7 @@
+Name:Twilight Ambush
+ManaCost:1 B
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Creature.powerLE2,Creature.toughnessLE2 | TgtPrompt$ Select target creature with power or toughness 2 or less | SpellDescription$ Destroy target creature with power or toughness 2 or less.
+
+Oracle:Destroy target creature with power or toughness 2 or less.

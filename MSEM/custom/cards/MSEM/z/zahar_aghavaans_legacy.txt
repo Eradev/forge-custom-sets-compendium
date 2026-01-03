@@ -1,0 +1,13 @@
+Name:Zahar, Aghavaan's Legacy
+ManaCost:B G
+Types:Legendary Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | AddKeyword$ Poisonous:2 | AddSVar$ AE | Description$ Equipped creature gets +2/+2 and has poisonous 2. (Whenever that creature deals combat damage to a player, that player gets two poison counters. A player with ten or more poison counters loses the game.)
+SVar:AE:SVar:HasAttackEffect:TRUE
+
+T:Mode$ Attacks | ValidCard$ Card.EquippedBy | Execute$ TrigToken | TriggerDescription$ Whenever equipped creature attacks, create a 1/1 green Snake creature token with poisonous 1 that's tapped and attacking. Exile that token at end of combat.
+SVar:TrigToken:DB$ Token | TokenScript$ g_1_1_snake_poisonous | TokenTapped$ True | TokenAttacking$ True | AtEOT$ ExileCombat
+
+K:Equip:2
+
+Oracle:Equipped creature gets +2/+2 and has poisonous 2. (Whenever that creature deals combat damage to a player, that player gets two poison counters. A player with ten or more poison counters loses the game.)\nWhenever equipped creature attacks, create a 1/1 green Snake creature token with poisonous 1 that's tapped and attacking. Exile that token at end of combat.\nEquip {2}

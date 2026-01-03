@@ -1,0 +1,12 @@
+Name:Strident Retainer
+ManaCost:1 W W
+Types:Creature Human Soldier
+PT:*/*
+
+S:Mode$ Continuous | CharacteristicDefining$ True | SetPower$ X | SetToughness$ X | Description$ This creature's power and toughness are each equal to the number of creatures you control.
+SVar:X:Count$Valid Creature.YouCtrl
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigToken | TriggerDescription$ Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, create a 1/1 colorless Samurai creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_samurai
+
+Oracle:This creature's power and toughness are each equal to the number of creatures you control.\nArt of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, create a 1/1 colorless Samurai creature token.

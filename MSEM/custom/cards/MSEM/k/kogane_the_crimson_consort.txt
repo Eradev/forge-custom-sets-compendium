@@ -1,0 +1,11 @@
+Name:Kogane the Crimson Consort
+ManaCost:R W B
+Types:Legendary Creature Demon Advisor
+PT:2/2
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ X | Execute$ TrigDamage | TriggerDescription$ At the beginning of your end step, if an opponent lost life this turn, CARDNAME deals 2 damage to each opponent and you gain 2 life.
+SVar:TrigDamage:DB$ DealDamage | NumDmg$ 2 | Defined$ Opponent | SuBAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 2
+SVar:X:Count$LifeOppsLostThisTurn
+
+Oracle:At the beginning of your end step, if an opponent lost life this turn, Kogane the Crimson Consort deals 2 damage to each opponent and you gain 2 life.

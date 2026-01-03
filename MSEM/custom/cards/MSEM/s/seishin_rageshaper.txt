@@ -11,3 +11,4 @@ S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Creature.Colorless+YouC
 Oracle:When this creature enters, create a 2/2 colorless Spirit creature token.\nColorless creatures you control have haste.
 
 DeckHints:Color$Colorless & Type$Creature
+SVar:PlayMain1:TRUE

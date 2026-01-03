@@ -4,6 +4,6 @@ Types:Creature Human Rogue
 PT:2/2
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ DBDiscardToDraw | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may discard an artifact card. If you do, draw a card.
-SVar:DBDiscardToDraw:DB$ Draw | Defined$ You | UnlessCost$ Discard<1/Artifact> | UnlessPayer$ You | UnlessSwitched$ True | SpellDescription$ You may discard an artifact card. If you do, draw a card.
+SVar:DBDiscardToDraw:DB$ Draw | UnlessCost$ Discard<1/Artifact> | UnlessPayer$ You | UnlessSwitched$ True | SpellDescription$ You may discard an artifact card. If you do, draw a card.
 
 Oracle:When this creature enters, you may discard an artifact card. If you do, draw a card.

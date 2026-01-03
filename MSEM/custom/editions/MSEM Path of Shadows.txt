@@ -3,6 +3,7 @@ Code=MSEM_PSA
 Name=Path of Shadows
 Date=2017-10-01
 Type=Custom
+Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 
 [cards]
 1 R Faceless Animist @Luis Nuñez de Castro Torres

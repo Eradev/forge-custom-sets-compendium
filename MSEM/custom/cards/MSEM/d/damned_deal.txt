@@ -1,0 +1,13 @@
+Name:Damned Deal
+ManaCost:1 B
+Types:Enchantment
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Destination$ Battlefield | Execute$ TrigDraw | TriggerDescription$ When this enchantment enters, you draw a card and you lose 1 life.
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+A:AB$ Draw | Cost$ B Sac<1/CARDNAME/this enchantment> | SubAbility$ DBLoseLife | SpellDescription$ You draw a card and you lose 1 life.
+
+Oracle:When this enchantment enters, you draw a card and you lose 1 life.\n{B}, Sacrifice this enchantment: You draw a card and you lose 1 life.
+
+DeckHints:Ability$Sacrifice

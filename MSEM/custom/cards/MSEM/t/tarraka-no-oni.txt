@@ -1,0 +1,11 @@
+Name:Tarraka-no-Oni
+ManaCost:10 G G G
+Types:Legendary Creature Demon Turtle
+PT:20/20
+
+K:Indestructible
+
+R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DBShuffle | Description$ If CARDNAME would be put into a graveyard from anywhere, reveal them and shuffle it into its owner's library instead.
+SVar:DBShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True
+
+Oracle:Indestructible\nIf Tarraka-no-Oni would be put into a graveyard from anywhere, reveal them and shuffle it into its owner's library instead.

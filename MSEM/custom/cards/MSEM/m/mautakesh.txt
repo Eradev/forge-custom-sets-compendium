@@ -1,0 +1,12 @@
+Name:Mautakesh
+ManaCost:3 B G
+Types:Legendary Creature Snake Avatar
+PT:3/6
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl | RemoveKeyword$ Poisonous | CantHaveKeyword$ Poisonous | Description$ Creatures you control lose poisonous and can't have or gain poisonous
+
+R:Event$ DamageDone | ValidSource$ Snake.YouCtrl | ActiveZones$ Battlefield | ValidTarget$ Player | IsCombat$ True | PreventionEffect$ True | AlwaysReplace$ True | ReplaceWith$ DBPoison | Description$ Snakes you control deal damage to players in the form of poison counters.
+SVar:DBPoison:DB$ Poison | Defined$ ReplacedTarget | Num$ X
+SVar:X:ReplaceCount$DamageAmount
+
+Oracle:Creatures you control lose poisonous and can't have or gain poisonous.\nSnakes you control deal damage to players in the form of poison counters.

@@ -1,0 +1,10 @@
+Name:Scion of Scales
+ManaCost:1 G
+Types:Creature Snake Warrior
+PT:2/2
+
+K:Poisonous:2
+
+S:Mode$ CantBlockBy | ValidAttacker$ Snake.YouCtrl | ValidBlocker$ Creature.powerLE2 | Description$ Snakes you control can't be blocked by creatures with power 2 or less.
+
+Oracle:Poisonous 2 (Whenever this creature deals combat damage to a player, that player gets two poison counters.)\nSnakes you control can't be blocked by creatures with power 2 or less.

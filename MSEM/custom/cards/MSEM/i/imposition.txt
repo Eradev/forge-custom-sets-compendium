@@ -1,0 +1,9 @@
+Name:Imposition
+ManaCost:U
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Player | Origin$ Hand | Destination$ Library | LibraryPosition$ -1 | ChangeType$ Card.nonLand | ChangeNum$ 1 | Hidden$ True | RememberChanged$ True | Chooser$ You | Optional$ True | IsCurse$ True | SubAbility$ DBDraw | SpellDescription$ Look at target player's hand. You may choose a nonland card from it. If you do, that player reveals the chosen card, puts it on the bottom of their library, then draws a card.
+SVar:DBDraw:DB$ Draw | Defined$ Targeted | SubAbility$ DBCleanup | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ1
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Look at target player's hand. You may choose a nonland card from it. If you do, that player reveals the chosen card, puts it on the bottom of their library, then draws a card.

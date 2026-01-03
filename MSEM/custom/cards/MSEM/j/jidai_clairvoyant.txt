@@ -1,0 +1,12 @@
+Name:Jidai Clairvoyant
+ManaCost:2 U U
+Types:Creature Human Wizard
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 2/2 colorless Spirit creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_2_2_spirit
+
+T:Mode$ ChangesZone | TriggerZones$ Battlefield | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.Colorless+YouCtrl | OptionalDecider$ You | Execute$ TrigDraw | TriggerDescription$ Whenever a colorless creature you control enters, you may draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:When this creature enters, create a 2/2 colorless Spirit creature token.\nWhenever a colorless creature you control enters, you may draw a card.

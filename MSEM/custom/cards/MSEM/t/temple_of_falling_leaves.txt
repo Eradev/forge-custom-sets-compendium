@@ -1,0 +1,12 @@
+Name:Temple of Falling Leaves
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ C | Amount$ 1 | SpellDescription$ Add {C}.
+
+A:AB$ ManaReflected | Cost$ T | ColorOrType$ Color | Valid$ Defined.ValidGraveyard Creature.YouOwn | ReflectProperty$ Is | SpellDescription$ Add one mana of any color among cards in your graveyard.
+
+Oracle:This land enters tapped.\n{T}: Add {C}.\n{T}: Add one mana of any color among cards in your graveyard.

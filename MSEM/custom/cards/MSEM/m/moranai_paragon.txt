@@ -1,0 +1,13 @@
+Name:Moranai Paragon
+ManaCost:G
+Types:Creature Human Samurai
+PT:1/2
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigPutCounter | TriggerDescription$ At the beginning of your upkeep, you may put a reinforcement counter on this creature.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ REINFORCEMENT
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigChangeZone | OptionalDecider$ You | TriggerDescription$ Whenever this creature attacks, you may put a creature card with mana value equal to the number of reinforcement counters on it from your hand onto the battlefield.
+SVar:TrigChangeZone:DB$ ChangeZone | Origin$ Hand | Destination$ Battlefield | ChangeType$ Creature.cmcEQX+YouCtrl
+SVar:X:Count$CardCounters.REINFORCEMENT
+
+Oracle:At the beginning of your upkeep, you may put a reinforcement counter on this creature.\nWhenever this creature attacks, you may put a creature card with mana value equal to the number of reinforcement counters on it from your hand onto the battlefield.

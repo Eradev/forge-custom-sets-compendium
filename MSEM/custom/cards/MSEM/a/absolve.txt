@@ -1,0 +1,11 @@
+Name:Absolve
+ManaCost:W
+Types:Instant
+
+A:SP$ ChangeZone | Origin$ Exile | Destination$ Exile | ValidTgts$ Card | TgtPrompt$ Select any number of cards in exile | TargetMin$ 0 | TargetMax$ X | SubAbility$ DBDraw | SpellDescription$ Exile any number of target cards in exile. (They become new objects that have just been exiled.) Draw a card.
+SVar:DBDraw:DB$ Draw
+SVar:X:Count$ValidExile Card
+
+Oracle:Exile any number of target cards in exile. (They become new objects that have just been exiled.)\nDraw a card.
+
+AI:RemoveDeck:All

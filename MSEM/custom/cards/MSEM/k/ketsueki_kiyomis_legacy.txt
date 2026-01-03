@@ -1,0 +1,13 @@
+Name:Ketsueki, Kiyomi's Legacy
+ManaCost:B B
+Types:Legendary Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | AddSVar$ AE | Description$ Equipped creature gets +2/+2.
+SVar:AE:SVar:HasAttackEffect:TRUE
+
+T:Mode$ Attacks | ValidCard$ Card.AttachedBy | Execute$ TrigChangeZone | OptionalDecider$ You | TriggerDescription$ Whenever equipped creature attacks, you may return target creature card with mana value 2 or less from your graveyard to the battlefield.
+SVar:TrigChangeZone:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Card.Creature+cmcLE2+YouCtrl | TgtPrompt$ Select target creature card with mana value 2 or less 
+
+K:Equip:2
+
+Oracle:Equipped creature gets +2/+2.\nWhenever equipped creature attacks, you may return target creature card with mana value 2 or less from your graveyard to the battlefield.\nEquip {2}

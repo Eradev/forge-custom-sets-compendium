@@ -1,0 +1,10 @@
+Name:Kurayami Necromancer
+ManaCost:2 B B
+Types:Creature Human Wizard
+PT:3/2
+
+T:Mode$ ChangesZone | ValidCard$ Creature.Other+!token+YouCtrl | Origin$ Battlefield | Destination$ Graveyard | TriggerZones$ Battlefield | Execute$ TrigExile | OptionalDecider$ You | TriggerDescription$ Whenever another nontoken creature you control dies, you may exile it. If you do, create a 2/2 colorless Spirit creature token.
+SVar:TrigExile:DB$ ChangeZone | Defined$ TriggeredNewCardLKICopy | Origin$ Graveyard | Destination$ Exile | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ c_2_2_spirit
+
+Oracle:Whenever another nontoken creature you control dies, you may exile it. If you do, create a 2/2 colorless Spirit creature token.

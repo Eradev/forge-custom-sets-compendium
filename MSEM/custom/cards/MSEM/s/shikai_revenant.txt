@@ -1,0 +1,13 @@
+Name:Shikai Revenant
+ManaCost:B
+Types:Creature Zombie
+PT:2/1
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This creature enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | CheckSVar$ X | Execute$ TrigReturn | TriggerZones$ Graveyard | OptionalDecider$ You | TriggerDescription$ At the beginning of your end step, if an opponent lost life this turn, you may return this card from your graveyard to your hand.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | Defined$ Self
+SVar:X:Count$LifeOppsLostThisTurn
+
+Oracle:This creature enters tapped.\nAt the beginning of your end step, if an opponent lost life this turn, you may return this card from your graveyard to your hand.

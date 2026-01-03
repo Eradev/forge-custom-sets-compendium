@@ -1,0 +1,13 @@
+Name:Seishin Smokeshaper
+ManaCost:2 R
+Types:Creature Human Wizard
+PT:0/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 2/2 colorless Spirit creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_2_2_spirit
+
+T:Mode$ SpellCast | ValidCard$ Card.nonCreature | ValidActivatingPlayer$ You | Execute$ TrigPump | TriggerZones$ Battlefield | TriggerDescription$ Whenever you cast a noncreature spell, colorless creatures you control get +1/+1 until end of turn.
+SVar:TrigPump:DB$ PumpAll | ValidCards$ Creature.Colorless+YouCtrl | NumAtt$ +1 | NumDef$ +1
+
+Oracle:When this creature enters, create a 2/2 colorless Spirit creature token.\nWhenever you cast a noncreature spell, colorless creatures you control get +1/+1 until end of turn.
+SVar:PlayMain1:TRUE

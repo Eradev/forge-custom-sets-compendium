@@ -1,0 +1,14 @@
+Name:Kiri Yoroi
+ManaCost:4
+Types:Artifact Equipment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 2/2 colorless Spirit creature token and attach this Equipment to it
+SVar:TrigToken:DB$ Token | TokenScript$ c_2_2_spirit | RememberTokens$ True | SubAbility$ DBAttach
+SVar:DBAttach:DB$ Attach | Defined$ Remembered | Object$ Self | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+equipped | AddPower$ 1 | AddToughness$ 1 | Description$ Equipped creatures you control get +1/+1.
+
+K:Equip:2
+
+Oracle:When this Equipment enters, create a 2/2 colorless Spirit creature token and attach this Equipment to it.\nEquipped creatures you control get +1/+1.\nEquip {2}

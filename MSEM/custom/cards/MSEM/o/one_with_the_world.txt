@@ -1,0 +1,8 @@
+Name:One with the World
+ManaCost:G
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Land.Basic | ChangeTypeDesc$ basic land | SubAbility$ DBScry | SpellDescription$ Search your library for a basic land card, reveal it, put it into your hand, then shuffle. Scry 2.
+SVar:DBScry:DB$ Scry | ScryNum$ 2
+
+Oracle:Search your library for a basic land card, reveal it, put it into your hand, then shuffle. Scry 2.

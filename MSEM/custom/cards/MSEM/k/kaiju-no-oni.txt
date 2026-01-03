@@ -1,0 +1,9 @@
+Name:Kaiju-no-Oni
+ManaCost:5 U U
+Types:Creature Demon Leviathan
+PT:8/8
+
+T:Mode$ Attacks | ValidCard$ Creature | Attacked$ You,Planeswalker.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigChangeZone | TriggerDescription$ Whenever a creature attacks you or a planeswalker you control, put that creature on the bottom of its owner's library unless its controller pays {2}.
+SVar:TrigChangeZone:DB$ ChangeZone | Defined$ TriggeredAttacker | Origin$ Battlefield | Destination$ Library | LibraryPosition$ -1 | UnlessCost$ 2 | UnlessPayer$ TriggeredAttackerController
+
+Oracle:Whenever a creature attacks you or a planeswalker you control, put that creature on the bottom of its owner's library unless its controller pays {2}.

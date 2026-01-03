@@ -1,0 +1,8 @@
+Name:Stormwake
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Draw | SubAbility$ DBPlay | SpellDescription$ Draw a card. Then you may cast an instant spell with mana value 2 or less from your hand without paying its mana cost.
+SVar:DBPlay:DB$ Play | Valid$ Card.Instant+YouOwn | ValidSA$ Spell.cmcLE2 | ValidZone$ Hand | WithoutManaCost$ True | Amount$ 1 | Controller$ You | Optional$ True
+
+Oracle:Draw a card. Then you may cast an instant spell with mana value 2 or less from your hand without paying its mana cost.

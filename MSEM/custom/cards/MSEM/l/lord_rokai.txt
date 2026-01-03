@@ -1,0 +1,16 @@
+Name:Lord Rokai
+ManaCost:U
+Types:Legendary Creature Spirit Wizard
+PT:2/1
+
+K:Flying
+
+T:Mode$ BecomesTarget | ValidTarget$ Card.Self | ValidSource$ Spell | TriggerZones$ Battlefield | Execute$ TrigSac | TriggerDescription$ When CARDNAME becomes the target of a spell, sacrifice it.
+SVar:TrigSac:DB$ Sacrifice | ValidCard$ Card.Self
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Graveyard | OptionalDecider$ You | Execute$ TrigReturn | TriggerDescription$ Whenever you cast an instant or sorcery spell, you may pay {2}{U}. If you do, return CARDNAME from your graveyard to the battlefield.
+SVar:TrigReturn:AB$ ChangeZone | Cost$ 2 U | Defined$ Self | Origin$ Graveyard | Destination$ Battlefield
+
+Oracle:Flying\nWhen Lord Rokai becomes the target of a spell, sacrifice it.\nWhenever you cast an instant or sorcery spell, you may pay {2}{U}. If you do, return Lord Rokai from your graveyard to the battlefield.
+
+SVar:Targeting:Dies

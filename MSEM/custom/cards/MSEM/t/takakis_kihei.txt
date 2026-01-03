@@ -1,0 +1,11 @@
+Name:Takaki's Kihei
+ManaCost:1W
+Types:Creature Human Samurai Knight
+PT:2/2
+
+K:Lifelink
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigUntap | TriggerDescription$ Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, untap target creature you control.
+SVar:TrigUntap:DB$ Untap | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control.
+
+Oracle:Lifelink\nArt of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, untap target creature you control.

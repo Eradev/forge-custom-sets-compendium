@@ -1,0 +1,14 @@
+Name:Uguisu, Kenshiro's Legacy
+ManaCost:G G
+Types:Legendary Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | AddSVar$ AE | Description$ Equipped creature gets +2/+2.
+SVar:AE:SVar:HasAttackEffect:TRUE
+
+T:Mode$ Attacks | ValidCard$ Card.EquippedBy | Execute$ TrigEffect | TriggerDescription$ Whenever equipped creature attacks, creature spells you cast cost {2} less to cast this turn.
+SVar:TrigEffect:DB$ Effect | StaticAbilities$ SReduceCost
+SVar:SReduceCost:Mode$ ReduceCost | ValidCard$ Card.Creature | Type$ Spell | Activator$ You | Amount$ 2 | Description$ Creature spells you cast cost {2} less to cast this turn
+
+K:Equip:2
+
+Oracle:Equipped creature gets +2/+2.\nWhenever equipped creature attacks, creature spells you cast cost {2} less to cast this turn.\nEquip {2}

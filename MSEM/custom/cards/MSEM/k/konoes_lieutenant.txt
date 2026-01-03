@@ -1,0 +1,8 @@
+Name:Konoe's Lieutenant
+ManaCost:G
+Types:Creature Human Samurai
+PT:2/1
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Permanent.Legendary+OppCtrl | Description$ This creature gets +1/+1 as long as an opponent controls a legendary permanent.
+
+Oracle:This creature gets +1/+1 as long as an opponent controls a legendary permanent.

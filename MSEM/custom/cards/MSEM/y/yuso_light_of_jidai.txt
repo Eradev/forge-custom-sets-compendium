@@ -1,0 +1,11 @@
+Name:Yuso, Light of Jidai
+ManaCost:1 G W
+Types:Legendary Creature Human Samurai
+PT:3/2
+
+K:Vigilance
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigChange | TriggerDescription$ Art of war — At the beginning of your end step, if CARDNAME dealt damage to an opponent this turn, you may search your library for a creature card with mana value 2 or less, reveal it, put it into your hand, then shuffle.
+SVar:TrigChange:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Creature.cmcLE2 | ChangeNum$ 1 | ShuffleNonMandatory$ True
+
+Oracle:Vigilance\nArt of war — At the beginning of your end step, if Yuso, Light of Jidai dealt damage to an opponent this turn, you may search your library for a creature card with mana value 2 or less, reveal it, put it into your hand, then shuffle.

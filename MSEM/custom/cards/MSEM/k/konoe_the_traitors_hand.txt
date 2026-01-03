@@ -1,0 +1,8 @@
+Name:Konoe the Traitor's Hand
+ManaCost:2 G G
+Types:Legendary Creature Human Samurai
+PT:4/4
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl | AddKeyword$ Protection:Legendary:legendary | Description$ Creatures you control have protection from legendary. (Those creatures can't be blocked, targeted, dealt damage, or enchanted by anything legendary.)
+
+Oracle:Creatures you control have protection from legendary. (Those creatures can't be blocked, targeted, dealt damage, or enchanted by anything legendary.)

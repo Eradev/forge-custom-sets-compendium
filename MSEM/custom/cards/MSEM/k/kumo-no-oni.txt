@@ -1,0 +1,8 @@
+Name:Kumo-no-Oni
+ManaCost:1 G
+Types:Creature Demon Insect
+PT:2/1
+
+A:AB$ Fog | Cost$ Sac<1/CARDNAME/this creature> | SpellDescription$ Prevent all combat damage that would be dealt this turn.
+
+Oracle:Sacrifice this creature: Prevent all combat damage that would be dealt this turn.

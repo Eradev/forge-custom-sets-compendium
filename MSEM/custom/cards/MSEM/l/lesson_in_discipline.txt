@@ -1,0 +1,11 @@
+Name:Lesson in Discipline
+ManaCost:2 W
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ CantAttack,CantBlock | ValidCard$ Creature.EnchantedBy,Creature.sharesNameWith Valid Creature.EnchantedBy | Description$ Enchanted creature and all other creatures with the same name as that creature can't attack or block.
+
+Oracle:Enchant creature\nEnchanted creature and all other creatures with the same name as that creature can't attack or block.
+
+SVar:AttachAILogic:Curse

@@ -1,0 +1,11 @@
+Name:Mana Corruption
+ManaCost:U U
+Types:Instant
+
+A:SP$ Charm | Choices$ DBCounter,DBChangeTargets
+
+SVar:DBCounter:DB$ Counter | TargetType$ Spell | ValidTgts$ Card | TgtPrompt$ Select target spell | UnlessCost$ 2 | SpellDescription$ Counter target spell unless its controller pays {2}.
+
+SVar:DBChangeTargets:DB$ ChangeTargets | TargetType$ Spell.singleTarget | ValidTgts$ Card | TgtPrompt$ Select target spell with a single target | UnlessCost$ 2 | SpellDescription$ Change the target of target spell with a single target unless that spell's controller pays {2}.
+
+Oracle:Choose one —\n• Counter target spell unless its controller pays {2}.\n• Change the target of target spell with a single target unless that spell's controller pays {2}.

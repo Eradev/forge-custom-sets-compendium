@@ -1,0 +1,14 @@
+Name:Masahita, Bloodtongue
+ManaCost:1 R
+Types:Legendary Creature Human Wizard
+PT:3/1
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ TrigExile | TriggerDescription$ At the beginning of your upkeep, exile the top card of your library. You lose life equal to its mana value. You may play that card this turn.
+SVar:TrigExile:DB$ Dig | Defined$ You | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBDamage
+SVar:DBDamage:DB$ DealDamage | Defined$ You | NumDmg$ X | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | StaticAbilities$ STPlay | ForgetOnMoved$ Exile | RememberObjects$ Remembered | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | Affected$ Card.IsRemembered | MayPlay$ True | AffectedZone$ Exile | Description$ You may play this card until end of turn.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$CardManaCost
+
+Oracle:At the beginning of your upkeep, exile the top card of your library. Masahita deals damage to you equal to that card's mana value. Until end of turn, you may play that card.

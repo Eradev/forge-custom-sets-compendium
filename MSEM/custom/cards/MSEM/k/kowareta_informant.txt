@@ -1,0 +1,10 @@
+Name:Kowareta Informant
+ManaCost:1 U
+Types:Creature Human Rogue
+PT:2/1
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigDraw | TriggerDescription$ Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, draw a card, then discard a card.
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 1
+
+Oracle:Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, draw a card, then discard a card.

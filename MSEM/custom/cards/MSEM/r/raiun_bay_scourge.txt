@@ -1,0 +1,9 @@
+Name:Raiun Bay Scourge
+ManaCost:2 U U
+Types:Creature Human Pirate
+PT:3/2
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | TgtPrompt$ Select target artifact or enchantment | Execute$ TrigGainControl | TriggerDescription$ Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, gain control of target artifact or enchantment until it leaves the battlefield.
+SVar:TrigGainControl:DB$ GainControl | ValidTgts$ Artifact,Enchantment | LoseControl$ LeavesPlay
+
+Oracle:Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, gain control of target artifact or enchantment until it leaves the battlefield.

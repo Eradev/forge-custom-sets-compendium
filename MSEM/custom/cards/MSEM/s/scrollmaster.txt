@@ -1,0 +1,12 @@
+Name:Scrollmaster
+ManaCost:3 U
+Types:Creature Human Wizard
+PT:1/2
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Battlefield | Destination$ Graveyard | Execute$ TrigExile | TriggerDescription$ When this creature dies, you may exile it. If you do, search your library for an instant or sorcery card with mana value 4 or less and cast it without paying its mana cost. If you searched your library this way, shuffle.
+SVar:TrigExile:AB$ ChangeZone | Cost$ ExileAnyGrave<1/Card.TriggeredNewCard> | Origin$ Library | Destination$ Library | ChangeType$ Instant.YouOwn+cmcLE4,Sorcery.YouOwn+cmcLE4 | ChangeNum$ 1 | RememberChanged$ True | SubAbility$ CastFromLibrary
+SVar:CastFromLibrary:DB$ Play | ValidZone$ Library | ConditionCheckSVar$ X | Valid$ Card.IsRemembered | Controller$ You | WithoutManaCost$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$Amount
+
+Oracle:When this creature dies, you may exile it. If you do, search your library for an instant or sorcery card with mana value 4 or less and cast it without paying its mana cost. If you searched your library this way, shuffle.

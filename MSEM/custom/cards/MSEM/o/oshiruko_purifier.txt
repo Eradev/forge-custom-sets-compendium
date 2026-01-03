@@ -1,0 +1,14 @@
+Name:Oshiruko Purifier
+ManaCost:1 W W
+Types:Creature Human Cleric
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 2/2 colorless Spirit creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_2_2_spirit
+
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Creature.Colorless+YouCtrl | AddKeyword$ Lifelink | Description$ Colorless creatures you control have lifelink.
+
+Oracle:When this creature enters, create a 2/2 colorless Spirit creature token.\nColorless creatures you control have lifelink.
+
+DeckHints:Color$Colorless & Type$Creature
+SVar:PlayMain1:TRUE

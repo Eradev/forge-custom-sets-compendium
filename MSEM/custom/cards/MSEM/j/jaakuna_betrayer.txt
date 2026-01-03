@@ -1,0 +1,9 @@
+Name:Jaakuna Betrayer
+ManaCost:2 R
+Types:Creature Human Berserker
+PT:3/2
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigDiscard | TriggerDescription$ Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, you may discard a card. If you do, draw a card.
+SVar:TrigDiscard:AB$ Draw | Cost$ Discard<1/Card>
+
+Oracle:Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, you may discard a card. If you do, draw a card.

@@ -1,0 +1,12 @@
+Name:Kasoha, Keeper of Truths
+ManaCost:2 U U
+Types:Legendary Creature Human Wizard
+PT:2/2
+
+K:Partner:Shizura, Keeper of Traditions
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self,Creature.Legendary | Execute$ TrigScry | TriggerDescription$ Whenever Kasoha or another legendary creature enters, scry 3, then draw a card.
+SVar:TrigScry:DB$ Scry | ScryNum$ 3 | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw
+
+Oracle:Partner with Shizura, Keeper of Traditions (When this creature enters, target player may put Shizura into their hand from their library, then shuffle.)\nWhenever Kasoha or another legendary creature enters, scry 3, then draw a card.

@@ -1,0 +1,8 @@
+Name:Unleash the Dragon
+ManaCost:1 R
+Types:Sorcery
+
+A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ X | SpellDescription$ CARDNAME deals 1 damage to any target for each spell cast this turn.
+SVar:X:PlayerCountPropertyYou$SpellsCastThisTurn/Plus.PlayerCountOpponents$SpellsCastThisTurn
+
+Oracle:Unleash the Dragon deals 1 damage to any target for each spell cast this turn.
