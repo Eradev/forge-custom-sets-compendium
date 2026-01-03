@@ -1,0 +1,13 @@
+Name:Harbinger of Equilibrium
+ManaCost:2 U
+Types:Creature Merfolk Wizard
+PT:2/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChangeZone | TriggerDescription$ When this creature enters, return target creature an opponent controls to its owner's hand. That creature's owner can't cast spells with the same name as that creature for as long as this creature remains on the battlefield.
+SVar:TrigChangeZone:DB$ ChangeZone | ValidTgts$ Creature.OppCtrl | Origin$ Battlefield | Destination$ Hand | RememberLKI$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ RememberedLKI,RememberedOwner | StaticAbilities$ CantCast | Duration$ UntilHostLeavesPlay
+SVar:CantCast:Mode$ CantBeCast | ValidCard$ Card.nonLand+sharesNameWith RememberedLKI | Caster$ Player.IsRemembered | Description$ That creature's owner can't cast spells with the same name as that creature for as long as this creature remains on the battlefield.
+
+Oracle:When this creature enters, return target creature an opponent controls to its owner's hand. That creature's owner can't cast spells with the same name as that creature for as long as this creature remains on the battlefield.
+
+SVar:PlayMain1:TRUE

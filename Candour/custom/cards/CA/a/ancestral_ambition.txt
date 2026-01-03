@@ -1,0 +1,10 @@
+Name:Ancestral Ambition
+ManaCost:2 U U
+Types:Sorcery
+
+A:SP$ Draw | NumCards$ 4 | ValidTgts$ Player | SubAbility$ DBDiscard | SpellDescription$ Target player draws four cards, then discards three cards.
+SVar:DBDiscard:DB$ Discard | NumCards$ 3 | Mode$ TgtChoose | Defined$ Targeted
+
+K:Flashback:U
+
+Oracle:Target player draws four cards, then discards three cards.\nFlashback {U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)

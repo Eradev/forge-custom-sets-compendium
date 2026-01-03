@@ -1,0 +1,18 @@
+Name:Bauble Goblin
+ManaCost:0
+Colors:red
+Types:Creature Goblin
+PT:0/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCharm | TriggerDescription$ When this creature enters, ABILITY
+SVar:TrigCharm:DB$ Charm | Choices$ DBMishrasBauble,DBUrzasBauble,DBKarnsBauble
+
+SVar:DBMishrasBauble:DB$ CopyPermanent | DefinedName$ Mishra's Bauble | SpellDescription$ Create a Mishra's Bauble token.
+
+SVar:DBUrzasBauble:DB$ CopyPermanent | DefinedName$ Urza's Bauble | SpellDescription$ Create a Urza's Bauble token.
+
+SVar:DBKarnsBauble:DB$ CopyPermanent | DefinedName$ Karn's Bauble | SpellDescription$ Create a Karn's Bauble token.
+
+Oracle:When this creature enters, choose one —\n• Create a Mishra's Bauble token.\n• Create a Urza's Bauble token.\n• Create a Karn's Bauble token.
+
+DeckHas:Ability$Token

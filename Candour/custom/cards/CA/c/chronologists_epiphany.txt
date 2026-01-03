@@ -1,0 +1,7 @@
+Name:Chronologist's Epiphany
+ManaCost:U U U U
+Types:Sorcery
+
+A:SP$ AddTurn | NumTurns$ 1 | SpellDescription$ Take an extra turn after this one.
+
+Oracle:Take an extra turn after this one.

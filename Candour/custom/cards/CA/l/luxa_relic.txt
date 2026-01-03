@@ -1,0 +1,14 @@
+Name:Luxa Relic
+ManaCost:G U
+Types:Artifact
+
+A:AB$ PutCounter | Cost$ T | CounterType$ CHARGE | CounterNum$ 1 | SpellDescription$ Put a charge counter on this artifact.
+
+T:Mode$ Phase | Phase$ Main1 | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigRemove | TriggerDescription$ At the beginning of your first main phase, remove all charge counters from this artifact. If no counters were removed this way, draw a card. Otherwise, add {G}{U}.
+SVar:TrigRemove:DB$ RemoveCounter | CounterType$ CHARGE | CounterNum$ All | RememberRemoved$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ X | ConditionSVarCompare$ EQ0 | SubAbility$ DBGetMana
+SVar:DBGetMana:DB$ Mana | Produced$ G U | ConditionCheckSVar$ X | ConditionSVarCompare$ GE1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Count$RememberedSize
+
+Oracle:{T}: Put a charge counter on this artifact.\nAt the beginning of your first main phase, remove all charge counters from this artifact. If no counters were removed this way, draw a card. Otherwise, add {G}{U}.
