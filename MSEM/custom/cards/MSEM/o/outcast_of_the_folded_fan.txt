@@ -1,0 +1,10 @@
+Name:Outcast of the Folded Fan
+ManaCost:1 W
+Types:Creature Human
+PT:2/1
+
+A:AB$ Token | Cost$ ExileFromGrave<1/CARDNAME/this card> | TokenScript$ w_1_1_bird_flying | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create a 1/1 white Bird creature token with flying. Activate only as a sorcery.
+
+Oracle:{1}{W}, Exile this card from your graveyard: Create a 1/1 white Bird creature token with flying. Activate only as a sorcery.
+
+SVar:DiscardMe:1

@@ -1,0 +1,7 @@
+Name:Leave the Den
+ManaCost:3 W W
+Types:Sorcery
+
+A:SP$ Token | TokenAmount$ 3 | TokenScript$ rw_2_1_fox | SpellDescription$ Create three 2/1 red and white Fox creature tokens.
+
+Oracle:Create three 2/1 red and white Fox creature tokens.

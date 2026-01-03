@@ -1,0 +1,9 @@
+Name:Bonk
+ManaCost:3 R
+Types:Instant
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ 2 | EffectZone$ All | IsPresent$ Creature.YouCtrl+powerGE4 | Description$ This spell costs {2} less to cast if you control a creature with power 4 or greater.
+
+A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ 4 | SpellDescription$ CARDNAME deals 4 damage to any target.
+
+Oracle:This spell costs {2} less to cast if you control a creature with power 4 or greater.\nBonk deals 4 damage to any target.

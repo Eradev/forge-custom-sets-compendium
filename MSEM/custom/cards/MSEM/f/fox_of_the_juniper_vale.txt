@@ -1,0 +1,11 @@
+Name:Fox of the Juniper Vale
+ManaCost:2 R
+Types:Creature Fox
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+SVar:TrigToken:DB$ Token | TokenScript$ c_a_idol_sac
+
+Oracle:When this creature enters, create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+
+DeckHas:Ability$Token
