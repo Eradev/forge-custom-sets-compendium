@@ -1,0 +1,52 @@
+[metadata]
+Code=MSEM_SHRINE
+Name=From the Vault: Wayfarer's Shrine
+Date=2020-07-01
+Type=Custom
+
+[cards]
+1 S Wayfarer's Shrine @Alex Gadbois
+2 S Wayfarer's Shrine @Jude Smith
+3 S Wayfarer's Shrine @Alfven Ato
+4 S Wayfarer's Shrine @Alexander Minze Thümler
+5 S Wayfarer's Shrine @Taisa KislovarP)
+6 S Wayfarer's Shrine @Alexandr Pachin
+7 S Wayfarer's Shrine @su j Ahn
+8 S Wayfarer's Shrine @Grady Frederick
+9 S Wayfarer's Shrine @Salvatorre Yazzie
+10 S Wayfarer's Shrine @Maurice Diemeer
+11 S Wayfarer's Shrine @Patrik Pulkkinen
+12 S Wayfarer's Shrine @Magnus Schramm
+13 S Wayfarer's Shrine @Andrew Bosley
+14 S Wayfarer's Shrine @Rhiannon Remo
+15 S Wayfarer's Shrine @Margaux DOURY
+16 S Wayfarer's Shrine @Quentin de Warren
+17 S Wayfarer's Shrine @Enrico Tammekänd
+18 S Wayfarer's Shrine @Simon Cowell
+19 S Wayfarer's Shrine @Chris Box
+20 S Wayfarer's Shrine @Diego Cabrera
+21 S Wayfarer's Shrine @Anato Finnstark
+22 S Wayfarer's Shrine @Nele Diel
+23 S Wayfarer's Shrine @David Cofre
+24 S Wayfarer's Shrine @OurDesire
+25 S Wayfarer's Shrine @Denis Loebner
+26 S Wayfarer's Shrine @Thibauld Pourplanche
+27 S Wayfarer's Shrine @Szabo David
+28 S Wayfarer's Shrine @Zsolt Kuczora
+29 S Wayfarer's Shrine @Peter Kreitner
+30 S Wayfarer's Shrine @Ryan Teo
+31 S Wayfarer's Shrine @Jakub Grygier
+32 S Wayfarer's Shrine @Mark Erskine
+33 S Wayfarer's Shrine @Christina Kraus
+34 S Wayfarer's Shrine @TylerEdlinArt
+35 S Wayfarer's Shrine @akiyoku
+36 S Wayfarer's Shrine @Jeffrey Smith
+37 S Wayfarer's Shrine @Thomas van den Heuvel
+38 S Wayfarer's Shrine @Temarinde
+39 S Wayfarer's Shrine @Thomas Dambreville
+40 S Wayfarer's Shrine @George Johnstone
+41 S Wayfarer's Shrine @Thomas van den Heuvel
+42 S Wayfarer's Shrine @Anton Kurbatov
+43 S Wayfarer's Shrine @Yujin Choo
+44 S Wayfarer's Shrine @Sabrina Langenberger
+45 S Wayfarer's Shrine @Dana Geiger

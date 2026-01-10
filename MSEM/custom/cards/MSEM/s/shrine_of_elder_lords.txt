@@ -1,0 +1,15 @@
+Name:Shrine of Elder Lords
+ManaCost:no cost
+Types:Land
+
+T:Mode$ TokenCreated | ValidPlayer$ You | ValidToken$ Idol | Execute$ TrigPutCounter | TriggerDescription$ Whenever you create an Idol token, put a +1/+1 counter on this land.
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 1
+
+A:AB$ Mana | Cost$ T | Produced$ C | Amount$ 1 | SpellDescription$ Add {C}.
+
+A:AB$ PutCounter | Cost$ 3 | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBAnimate | SpellDescription$ Put a +1/+1 counter on this land, then you may have it become a 0/0 Elemental creature with vigilance until end of turn. It's still a land.
+SVar:DBAnimate:DB$ Animate | Defined$ Self | Power$ 0 | Toughness$ 0 | Keywords$ Vigilance | Types$ Creature,Elemental | Optional$ True
+
+Oracle:Whenever you create an Idol token, put a +1/+1 counter on this land.\n{T}: Add {C}.\n{3}: Put a +1/+1 counter on this land, then you may have it become a 0/0 Elemental creature with vigilance until end of turn. It's still a land.
+
+DeckHas:Ability$Counters

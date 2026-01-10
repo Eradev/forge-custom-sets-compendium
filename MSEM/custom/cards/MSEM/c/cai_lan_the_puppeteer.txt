@@ -1,0 +1,12 @@
+Name:Cai Lan, the Puppeteer
+ManaCost:1 W W
+Types:Legendary Creature Human Bard
+PT:2/3
+
+K:Vigilance
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When NICKNAME enters, exile target nonland permanent an opponent controls with mana value 2 or less. Its controller creates an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Permanent.nonLand+OppCtrl+cmcLE2 | TgtPrompt$ Select target target nonland permanent an opponent controls with mana value 2 or less | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ c_a_idol_sac | TokenOwner$ TargetedController
+
+Oracle:Vigilance\nWhen Cai Lan enters, exile target nonland permanent an opponent controls with mana value 2 or less. Its controller creates an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")

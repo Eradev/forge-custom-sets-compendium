@@ -1,0 +1,9 @@
+Name:Cultist Token
+ManaCost:no cost
+Colors:black
+Types:Creature Cultist
+PT:0/1
+
+A:AB$ Token | Cost$ 1 B B Sac<3/Cultist> | TokenScript$ b_5_5_demon | SpellDescription$ Create a 5/5 black Demon creature token.
+
+Oracle:{1}{B}{B}, Sacrifice three Cultists: Create a 5/5 black Demon creature token.

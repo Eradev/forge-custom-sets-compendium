@@ -1,0 +1,8 @@
+Name:Walk the Ancestral Path
+ManaCost:4 W
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Permanent.nonLand | RememberChanged$ True | TgtPrompt$ Select target nonland permanent | SubAbility$ DBToken | SpellDescription$ Exile target nonland permanent. Create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+SVar:DBToken:DB$ Token | TokenScript$ c_a_idol_sac
+
+Oracle:Exile target nonland permanent. Create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")

@@ -1,0 +1,8 @@
+Name:Ornate Legionnaire
+ManaCost:1 W
+Types:Creature Human Warrior
+PT:2/2
+
+A:AB$ Pump | Cost$ 2 W | Defined$ Self | KW$ First Strike | SpellDescription$ This creature gains first strike until end of turn.
+
+Oracle:{2}{W}: This creature gains first strike until end of turn.

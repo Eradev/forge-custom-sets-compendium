@@ -1,0 +1,10 @@
+Name:Roadside Performer
+ManaCost:W
+Types:Creature Human Bard
+PT:0/2
+
+A:AB$ Tap | Cost$ 2 T | ValidTgts$ Creature | SpellDescription$ Tap target creature.
+
+Oracle:{2}, {T}: Tap target creature.
+
+SVar:NonCombatPriority:1

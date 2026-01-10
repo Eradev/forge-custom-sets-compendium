@@ -1,0 +1,9 @@
+Name:Shimaru, the Unfading
+ManaCost:no cost
+Colors:green
+Types:Legendary Creature Wolf Spirit
+PT:4/4
+
+K:Trample
+
+Oracle:Trample

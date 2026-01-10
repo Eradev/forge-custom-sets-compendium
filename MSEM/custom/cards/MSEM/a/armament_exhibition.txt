@@ -1,0 +1,10 @@
+Name:Armament Exhibition
+ManaCost:W
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature.YouCtrl | NumAtt$ +2 | NumDef$ +2 | TgtPrompt$ Select target creature you control | SubAbility$ DBToken | SpellDescription$ Target creature you control gets +2/+2 until end of turn. If it's attacking, create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+SVar:DBToken:DB$ Token | TokenScript$ c_a_idol_sac | ConditionDefined$ Targeted | ConditionPresent$ Creature.attacking
+
+Oracle:Target creature you control gets +2/+2 until end of turn. If it's attacking, create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+
+DeckHas:Ability$Token

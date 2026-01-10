@@ -1,0 +1,352 @@
+[metadata]
+Code=MSEM_NJB
+Name=Nangjiao In Bloom
+Date=2022-10-01
+Type=Custom
+# Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
+
+[cards]
+1 U Adept Lieutenant @Chenbin Zheng
+2 C Aerie Aria @Arae Aryhra
+3 C Apogee Cranes @Pa Gao
+4 C Apostle of the Elders @Hou China
+5 C Armament Exhibition @Amelie Hutt
+6 R Cai Lan, the Puppeteer @Eldar Seydamet
+7 U Chamber of Penance @Noel Peang
+8 U Chiseled Familiar @fongshader
+9 R Chronicles of the Kitsune @Art of Neight
+10 R Diao of the Opal Infantry @Darren Tan
+11 C Festival Celebrants @Lee Wi
+12 U Fox of a Glistening Glen @Vawie-Art
+13 C Fox of a New Era @Noctualis
+14 U Fox of a Radiant Meadow @Vawie-Art
+15 C Fox of an Amber Dawn @kenket
+16 R Gao'Wu, Humble Sibyl @LIN .
+17 U Glorious Wingwright @3Q Studio
+18 R The Great War Ends @M MEIREN
+19 C Guzheng Instructor @Ma Ke
+20 M Heping, Grand Pacifist @Daria Rashev
+21 U Heping's Acolyte @Hazem Ameen
+22 R Kiri, Corporeal Conduit @Kaya Oldaker
+23 U Leave the Den @Sylvain Sarrailh
+24 M Lijing, the Great Partisan @Lhuin
+25 R Li's Moonblades @Truyen Tran
+26 C Lunar Flock @Miyazaki Yûzensai
+27 C Ornate Legionnaire @Amelie Hutt
+28 C Outcast of the Folded Fan @Nadia Kim
+29 C Pacifism @Da Congjun
+30 U The People's Anthem @Dong Jingchen
+31 U Pious Flutist @Wayne Chan
+32 U Red-Crowned Admiral @Wei Yu Han Yan
+33 C Roadside Performer @Yang Ningyuan
+34 C Russet Denmother @Greg Beecham
+35 U Seal the Gateway @Anato Finnstark
+36 C Sheersilk Robes @Asep Ariyanto
+37 C Sponsor of the Folded Fan @Derrick Song
+38 C Sword Dance @疾速 k
+39 C Tale of Tranquility @Da Congjun
+40 C Walk the Ancestral Path @Alexander Mokhov
+41 R Yujei, Zephyr Melodist @Ninth-art
+42 C Abandon the Past @Caffe Tylo
+43 U Aftermath of the Surge @Adam Paquette
+44 C Air of Vernal Tidings @Pan An
+45 C Ballad of the Forgotten @Qiao Shan
+46 U Bian Lian Opera @Hou China
+47 U Budding Couturier @Stephen Joto
+48 U Cerulean Sovereign @Simone Torcasio
+49 C Dare to Dream @月河图集集
+50 C Dewdrop Oracle @M B Y K
+51 R Elder Soothsayer Chian @Lei Min
+52 C Erratic Visionary @Zao Youxi
+53 C Festival Decorator @LIN .
+54 C Harmony of Blossoms @Ma Ke
+55 C Horizon Glider @Azany
+56 U Hydrolyze @Hu Mengyin
+57 M Ing'Wei, Azure Empress @JIU JI
+58 C Ing'Wei's Admonition @Yang Ningyuan
+59 R Juyu Offering Pool @Alexander Nanitchkov
+60 C Kaleidoscale Drake @Kevin Sidharta
+61 R Kan'Gi, High Tactician @Bason Chen
+62 C Lamplight Tender @Ronnie Wong
+63 U Lunar Shachuan @Joshua Cairos
+64 U Nonpareil of the Abyss @Takamatsu
+65 R Oshin, Reef Warden @鹿 野
+66 M Panya, Who Dares to Dream @Alex Willow
+67 R Papier-Mâché Marvel @nurikabenuri
+68 C Parasol Twirler @绿毛的乌龟
+69 U Pon's Apprentice @7thOrange
+70 C Prince Crab @Logan Feliciano
+71 C Read the Tides @Mi Lu
+72 U Reflecting Pool Drifter @WalkingMelons
+73 C Rest and Relaxation @Yang Ningyuan
+74 U Sage of the Jade Baton @Heng Tang
+75 C Scribe of the Sky Scrolls @hiliuyun
+76 R Shuilong Technique @Valleyhu
+77 U Stand in Opposition @Liu Yu
+78 R Sun Yun, Master of Man @nethvn
+79 U Trawl the Annals @Lei Kongsheng
+80 R Ushi Yun, the Curator @Cohesion-Eternal
+81 C Wealth of the Flood @Cristi-B
+82 C Yenzu Puppeteering @Zeen Chin
+83 C Arrogant Orator @LI HH
+84 U Bandit's Dagger @Valeriy Vegera
+85 C Bearer of Vile Incense @Chenbin Zheng
+86 R Birth of the Yaozu @Simon Fetscher
+87 R The Blood Sun Sets @Marta Danecka
+88 U Consign to Old Diyu @Song Nan Li
+89 U Demon of Hubris @Tomasz Kwiatkowski
+90 C Dirge of the Damned @Xiao Botong
+91 U Eaveshoppers @Yuanyuan Wang
+92 M Forbidden Shiangshi Arts @Elder Scrolls: Legends
+93 C Gilded Sell-Sword @Ronnie Wong
+94 C Grim Bounty @Heng Tang
+95 U Grotesque Defiler @Hua Lu
+96 R Ha'Eng, Profane Scribe @zhang bo
+97 R Kai'Jun, the Eradicator @Dr_BoYs
+98 R Kai'Long, the Call of the Dark @Verehin
+99 R Kai'Zhou, the Purifier @Nastya-Lehn
+100 M Lizhao, Last Breath of the Yenzu @Algido
+101 C Lizhao's Soulblade @Xiao Botong
+102 U Mercenary of the Folded Fan @Amber Ye
+103 C Nightblade Umbra @Dao Trong Le
+104 C Restless Oppressor @Ronnie Wong
+105 U Sable Evangelist @Heo yeyoung
+106 C Sanguine Muralist @VladMRK
+107 C Scar Tattooist @Cap Nhat
+108 C Scatter Memories as Ashes @Hou China
+109 C Serum Peddler @Justice Wong
+110 U Shifu of Xiangyin Temple @iamagri
+111 U Skirmish Scars @Nicholas Jiang
+112 U Soul Engulfer @Donggeon Son
+113 C Spear Flourish @Ma Ke
+114 C Theatre of Cruelty @Nele Diel
+115 C Traveler's Trial @Heng Tang
+116 C Tree of Tragedies @Jid-V
+117 C Trophy Collector @Ma Ke
+118 R Tzelin, Cabal Liturgist @Zeen Chin
+119 C Visit from Aunti @SEGA
+120 U Whispers of the Dead @huang power
+121 R Xie'e Amphitheatre @u kyoung An
+122 C Yenzu Disciple @Diego Cunha
+123 U Yenzu Melodrama @Kuri Huang
+124 R The Art of War @Koei Tecmo Games
+125 U Baptism by Fire @Alexander Mokhov
+126 U Bonk @FenghuaZhongg
+127 C Burning of Xiangyin Temple @Hou China
+128 C Ceremonial Jian @3Q Studio
+129 C Char Brewer @Sun Xu
+130 C Dazzling Duelist @Titan Forge Games
+131 U Draconic Cinderlance @Ben Lawrence
+132 R Dragon Emperor's Chariot @xiachunkun
+133 R Elder General Hatsuo @KOOka
+134 M Entropic Inferno @muju
+135 C Expedite @Ma Ke
+136 U Fervid Dragonheart @Feimo
+137 U Filigree Fan Dance @Chen Dong
+138 C Flame Juggler @Darren Tan
+139 U For the Court of the Queen @Da Congjun
+140 C Fox of the Juniper Vale @Pihguinolog
+141 C Fox of the River Run @Bonnie Marris
+142 U Frisky Denmates @Crista Forest
+143 M Hao'Tai, the Reverent @Cygames
+144 C Herald of the Dragon Army @Jun Lei
+145 C Jeering Kit @kenket
+146 R Jiu, Daughter of the Sun @pamansaz
+147 R Judgment of Hao'Tai @chevsy
+148 U Keen Redtail @Edward Aldrich
+149 C Kuoshu Martial Arts @知乎
+150 R Mieng of the Pyre Waltz @Sandara Tang
+151 R Nichang Yuyi @NIXEU
+152 C Ode to the Red Wind @Yu Qiong Yuan
+153 C One Last Dance @Jianyachi L
+154 U Pup of a Marigold Burrow @Vawie-Art
+155 U Rapacious Regent @kazashino
+156 U Scholar of the Staff @JamesinChina
+157 C Scorching Dragonfire @Shuxing Li
+158 C Scourge of the Sun @Nekoemonn
+159 C Slapdash Matrimony @Indah Siregar
+160 C Stroke of Fortune @M MEIREN
+161 R Tseng, the Shooting Star @Joshua Raphael
+162 C Violent Devotion @deaload
+163 U Vulpine Verse @Samuel King
+164 C Warlord of Wun Su @Robin Ruan
+165 C Adventurous Impulse @Diego Cunha
+166 C Bastion Ranger @Hua Lu
+167 C Called Shot @Hou China
+168 U Chaparral Hunter @Wenjun Lin
+169 R Chiu, Hand of the Pack @Alector Fencer
+170 C Chords of Conflict @Ley Bowen
+171 C Cohorts of the Grove @dtjun
+172 C Crooning Eulogist @Kelley McMorris
+173 R Da'Lang, Timberheart @Kipine
+174 C Descendant of Shimaru @Kipine
+175 C Edgeland Savant @Youxiandaxia
+176 C Exquisite Slash @Lu Xueqi
+177 U Forerunner of the Briar @Hou China
+178 M Foster the Future @M B Y K
+179 C Gashing Panther @Markella Stav
+180 C Harmonic Recruit @Junhuang Gao
+181 C Herbal Remedy @Jiuyou
+182 C Hero's Journey @Ya Iun
+183 R Heyu, Depthlurker @Xision Wu
+184 C Jadeplate Armor @Tommy Suhartono
+185 R Jindao, the World Eye @Robson Michel
+186 C Journeying Packmaster @Julien Gauthier
+187 U Lu'She Temple Customs @Jarold Sng
+188 C Mighty Xioshu @Istrandar
+189 C Mischievous Maolu @Yakun Wang
+190 U Pack Savagery @Dhaval Desai
+191 M Qiyan, Great Progenitor @Mike Sekowski
+192 U Rampaging Xiangshe @Maxa-art
+193 R Savage Convergence @Lukasz Jaskolski
+194 U Spawn of Qiyan @Turkiish
+195 U Spirited Florist @Hu Mengyin
+196 C Suitor of the Glade @Julie Dillon
+197 U Thriving Viper @Red Pencil Art
+198 R Till the Queen's Gardens @Rui Li
+199 U Timberland Hymn @iamagri
+200 U Vassal of the Wild @Caesty
+201 U Verdant Druid @linkense7en
+202 C Vinehorn Stag @Sarah Webb
+203 U Viridian Townships @Dan Zhao
+204 R Wildlife Sketches @Vicky Brago-Michelle
+205 R Xiejuan and Hao Lu @Sangsoo Jeong
+206 U Altar of Twisted Piety @Daena Key
+207 U Ascetic of the Folded Fan @Yintion J
+208 M Autumn Symphony @Sandara Tang
+209 R Bai of the Royal Gardens @不知有花
+210 U Blackblood Feaster @Yanmo Zhang
+211 U Celebrations of Ferocity @Lv Ming Gang
+212 R Cheng, Wild Tyrant @Laurent Renier
+213 R Cou Ling of the Lunar Den @Yujin Jung
+214 R Dance of Dragons @Shiyao Jiang
+215 R Emperor Dan Te Mogui @Moregames Studio
+216 U Fables of the Ill-Fated @Suiren_Arcelor
+217 R Fang Luo, the Astral Tide @Vera Velichko
+218 U Fox of a Brisk Autumn @Marie
+219 U Gemscale Drake @Svetlana Lazogreeva
+220 M Gui, the Brinebearer @Duong Ct
+221 M Hang Up Your Lanterns @Liza Tretyakova
+222 U Imperious Aristocrat @Jin Guangyao
+223 R Kai'Oro, Grave Betrayer @Bagoum
+224 U Kanghyae Forum @Heng Tang
+225 M Kiyoko of the Silver Mist @Zheng Wei Gu
+226 U Lady of the Nymphaeas @Win J
+227 R Lin, the Opportunist @Asep Ariyanto
+228a M Ma'Long, the Skystorm // Boxue, Imperial Ally @Claudya Schmidt & Alector Fencer
+229 U Memorial Plaza @Marie Magny
+230 U Mire Sculptor @Geng Kun
+231 R The Mythical Zhiwu @Phill-Art
+232 R Old Lord Xiusheng @Lucas Parolin
+233 R Oshu of the Bosk @Brooke Huval
+234 R Painting Dolls @Tea Me
+235 U Path of the Outsider @Wei Wangwei
+236 U Peacetime Murals @Caroline R. Young
+237 R Qulai, Orchard Shepherd @Nicole Altenhoff
+238 U The Royal Vignettes @Changan-moon
+239 R Ruchong Awakening @Kristian Nüsser
+240 M Seto San, Divine Heroine @Da Congjun
+241 U Seto's Private Collection @Antti Hakosaari
+242 R Shigurei, Vassal of the Depths @Bob Eggleton
+243 U Song of Wind and Fire @Shinotamar
+244 M Swiftblade Ren @Hou China
+245 U Those Lost to the Waves @Tomasz Alen Kopera
+246 M Wang Xi, Wishes on the Wind @Thomas Chamberlain
+247 M Wei Ji, Life's Rhythm @linxz2010
+248 U Wilderkin Zealot @Geng Kun
+249 R Wun Su, War's Muse @AZHI
+250 R Xihuo, the Onyx Flame @Wei Guan
+251 R Ya'Ling, the Rune-Drake @Ramza Ardyputra
+252 R Yenzu Blood Pact @小 乐
+253 U Yenzu Nightblade @Li Zi
+254 R Zihao, Song of the Glade @QQPaoPao
+255 M Zou Meili, Cruel Justice @Miranda Yi
+256 U Dignitary's Rickshaw @Shaun Gorea
+257 R Duan's Aeriform Ribbons @Dreamplay Games
+258 U Effigy of Ivory Fire @Chaoyuan Xu
+259 C Ornamental Longbow @Ibuki Satsuki
+260 C Processional Junk @Brenda van Vugt
+261 C Prophetic Prismite @Yury Solntsev
+262 R Xueyang San @changyang
+263 C Yenzu Ritual Vessel @Cygames, Inc.
+264 C Bloodfell Caves @Valinakova
+265 C Blossoming Sands @Edward Pustovoitov
+266 C Dismal Backwater @Lebonkers Studios
+267 U Festival Centrum @三叶草青青
+268 C Jungle Hollow @Lyno3ghe
+269 R The Orange Orchard @Dat Pham
+270 C Rugged Highlands @Hongqi Zhang
+271 C Scoured Barrens @Maxim Lingert
+272 R Shrine of Elder Lords @Lockheed
+273 C Swiftwater Cliffs @somatonic
+274 C Thornwood Falls @Ninjatic
+275 C Tranquil Cove @LIUWW
+276 C Warped Landscape @Michael Chang
+277 C Wind-Scarred Crag @ZP Zhang
+278 L Plains @Ito Yuhan
+279 L Plains @William Hays
+280 L Plains @Koho Shoda
+281 L Plains @Kawase Hasui
+282 L Island @Kobayashi Kiyochika
+283 L Island @Koukei Kojima
+284 L Island @Tsuchiya Koitsu
+285 L Island @Ando Hiroshige
+286 L Swamp @Koho Shoda
+287 L Swamp @Daisyart_lab
+288 L Swamp @Utagawa Hiroshige
+289 L Swamp @Koho Shoda
+290 L Mountain @Kawase Hasui
+291 L Mountain @Kawase Hasui
+292 L Mountain @Yoshida Hiroshi
+293 L Mountain @Kijiermono
+294 L Forest @Yoshida Hiroshi
+295 L Forest @Kawase Hasui
+296 L Forest @Kawase Hasui
+297 L Forest @Yoshida Hiroshi
+
+[tokens]
+1 c_1_1_spirit_flying @sasorainster
+2 w_1_1_bird_flying @Tou Tiao
+3 hu_li @Tun Walai
+4 w_1_1_warrior @Qingbilige H
+5 u_2_2_drake_flying @Asur-Misoa
+6 u_8_8_kraken @omer tunc
+7 b_0_1_cultist_sac @Damian Audino
+8 b_5_5_demon @VladMRK
+9 r_1_1_bard_cantblock @叁乔居 3QSTUDIO
+10 r_4_4_dragon_flying @Asur San
+11 r_3_3_panda @Tiago Kogi
+12 g_3_3_beast @Kei Acedera
+13 g_0_0_hydra @Sheppi-artHouse
+14 g_2_2_panda_bear_monk_loyalty @qiu
+15 g_0_1_plant @CD Projekt Red
+16 shimaru_the_unfading @Safiru
+17 g_0_0_wurm_grave @Jehan Choo
+18 rw_2_1_fox @Anton Weinberger
+19 c_a_idol_sac @Zeen Chin
+20 c_a_treasure_sac @Jeremy Chong
+
+[other]
+21 emblem_heping_grand_pacifist @Daria Rashev
+22 emblem_wei_ji_lifes_rhythm @linxz2010
+23 emblem_kiyoko_of_the_silver_mist @Zheng Wei Gu
+
+[ArtifactTypes]
+Idol:Idols
+
+[EnchantmentTypes]
+Gallery:Galleries
+
+[CreatureTypes]
+Cultist:Cultists
+Panda:Pandas
+
+[WalkerTypes]
+Boxue
+Heping
+Ing'Wei
+Ji
+Kiyoko
+Xiong Mao
+Seto
+Zou
