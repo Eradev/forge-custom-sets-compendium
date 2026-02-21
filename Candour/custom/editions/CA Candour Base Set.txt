@@ -273,7 +273,9 @@ Type=Custom
 294 U Burnwillow Blossoming @Bastien Grivet
 # 295
 296 U Candelabrum Vestige @Illarstration
-# 297-299
+# 297
+298 U Morass Primeval @Jeremy Carver
+# 299
 300 R Luxa Relic @Kristina Gehrmann
 301 R Bloodblitz Battle-Axe @Dominik Mayer
 302 M Mox Bismuth @Robert Maldonado
