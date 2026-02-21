@@ -1,0 +1,21 @@
+Name:Autumn
+ManaCost:4 G
+Types:Creature Elemental Incarnation
+PT:4/4
+
+K:Flying
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | IsPresent$ Card.StrictlySelf | PresentZone$ Graveyard | PresentPlayer$ You | TriggerZones$ Graveyard | OptionalDecider$ You | Execute$ TrigImmediateTrig | TriggerDescription$ At the beginning of your upkeep, if this creature is in your graveyard, you may pay {1}{W}. If you do, ABILITY
+SVar:TrigImmediateTrig:AB$ ImmediateTrigger | Cost$ 1 W | Execute$ TrigCharm | SpellDescription$ At the beginning of your upkeep, if this creature is in your graveyard, you may pay {1}{W}. If you do, choose one option.
+SVar:TrigCharm:DB$ Charm | Choices$ DBPump,DBDestroy,DBGainLife
+
+SVar:DBPump:DB$ PutCounter | ValidTgts$ Creature | CounterType$ P1P1 | CounterNum$ 2 |SpellDescription$ Put two +1/+1 counters on target creature.
+
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment | SpellDescription$ Destroy target artifact or enchantment.
+
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 4 | SpellDescription$ You gain 4 life.
+
+Oracle:Flying\nAt the beginning of your upkeep, if this creature is in your graveyard, you may pay {1}{W}. If you do, choose one —\n• Put two +1/+1 counters on target creature.\n• Destroy target artifact or enchantment.\n• You gain 4 life.
+
+SVar:DiscardMe:1
+DeckHas:Ability$LifeGain|Counters
