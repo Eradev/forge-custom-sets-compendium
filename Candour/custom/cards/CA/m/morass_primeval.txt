@@ -9,7 +9,7 @@ T:Mode$ DamageDoneOnce | ValidSource$ Creature.modified+YouCtrl | ValidTarget$ P
 SVar:TrigDraw:DB$ Draw | SubAbility$ DBLoseLife
 SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
 
-K:Adapt:2:1 B G
+A:AB$ PutCounter | Cost$ 1 B G | Adapt$ True | CounterNum$ 2
 
 Oracle:Menace\nWhenever one or more modified creatures you control deal combat damage to a player, draw a card and you lose 1 life.\n{1}{B}{G}: Adapt 2.
 
