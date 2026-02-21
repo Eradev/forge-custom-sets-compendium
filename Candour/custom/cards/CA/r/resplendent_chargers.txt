@@ -1,0 +1,19 @@
+Name:Resplendent Chargers
+ManaCost:X X R W
+Types:Creature Human Knight
+PT:2/2
+
+K:Trample
+
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create X 2/2 red Human Knight creature tokens with trample and haste. Until end of turn, whenever one or more creatures you control deal combat damage to a player, draw a card.
+SVar:TrigToken:DB$ Token | TokenAmount$ X | TokenScript$ r_2_2_human_knight_trample_haste | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | Duration$ EndOfTurn | Triggers$ TrigDrawCombatDamage
+SVar:TrigDrawCombatDamage:Mode$ DamageDoneOnce | CombatDamage$ True | ValidSource$ Creature.YouCtrl | TriggerZones$ Battlefield | ValidTarget$ Player | Execute$ TrigDraw | TriggerDescription$ Until end of turn, whenever one or more creatures you control deal combat damage to a player, draw a card.
+SVar:TrigDraw:DB$ Draw
+SVar:X:Count$xPaid
+
+Oracle:Trample, haste\nWhen this creature enters, create X 2/2 red Human Knight creature tokens with trample and haste. Until end of turn, whenever one or more creatures you control deal combat damage to a player, draw a card.
+
+SVar:PlayMain1:TRUE
