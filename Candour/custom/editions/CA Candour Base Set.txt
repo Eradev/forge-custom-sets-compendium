@@ -242,14 +242,7 @@ Type=Custom
 242 M Landlore Culmination @Harkalé Linaï
 243 R Rotform Harvester @Anato Finnstark
 244 R Autumn @Joel Hustak
-# 245-250
-251 R Waterlogged Archipelago @Anthony Avon
-252 R Contaminated Rivulet @Anthony Avon
-253 R Sanguinary Morass @Anthony Avon
-254 R Wildwood Knolls @Anthony Avon
-255 R Blustery Steppe @Anthony Avon
-256 R Stark Wetland @Anthony Avon
-# 257-260
+# 245-260
 261 R Balevi, Zephyr Tactician @Christina Kraus
 # 262-265
 266 R Lithis, Loyal Banehound @Sandara Tang
@@ -280,7 +273,9 @@ Type=Custom
 294 U Burnwillow Blossoming @Bastien Grivet
 # 295
 296 U Candelabrum Vestige @Illarstration
-# 297-299
+# 297
+298 U Morass Primeval @Jeremy Carver
+# 299
 300 R Luxa Relic @Kristina Gehrmann
 301 R Bloodblitz Battle-Axe @Dominik Mayer
 302 M Mox Bismuth @Robert Maldonado

@@ -1,0 +1,16 @@
+Name:Marrow Harvester
+ManaCost:B R
+Types:Creature Vampire
+PT:2/1
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a Blood token. (It's an artifact with "{1}, {T}, Discard a card, Sacrifice this artifact: Draw a card.")
+SVar:TrigToken:DB$ Token | TokenScript$ c_a_blood_draw
+
+A:AB$ DealDamage | Cost$ Sac<1/CARDNAME/this creature> | ValidTgts$ Creature,Planeswalker | NumDmg$ X | SpellDescription$ This creature deals X damage to target creature or planeswalker, where X is twice the number of Blood tokens you control.
+SVar:X:Count$Valid Blood.token+YouCtrl/Twice
+
+Oracle:Flying\nWhen this creature enters, create a Blood token. (It's an artifact with "{1}, {T}, Discard a card, Sacrifice this artifact: Draw a card.")\nSacrifice this creature: This creature deals X damage to target creature or planeswalker, where X is twice the number of Blood tokens you control.
+
+DeckHas:Ability$Token|Sacrifice & Type$Blood

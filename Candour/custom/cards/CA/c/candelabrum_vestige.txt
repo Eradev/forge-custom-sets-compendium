@@ -1,0 +1,15 @@
+Name:Candelabrum Vestige
+ManaCost:1 W B
+Types:Artifact Creature Scarecrow
+PT:*/*
+
+S:Mode$ Continuous | CharacteristicDefining$ True | SetPower$ Y | SetToughness$ Y | Description$ This creature's power and toughness are each equal to the number of nonland permanents you control.
+SVar:Y:Count$Valid Permanent.nonLand+YouCtrl
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Destination$ Battlefield | Execute$ TrigExile | TriggerDescription$ When this creature enters, exile target nonland permanent an opponent controls with mana value less than or equal to this creature's power.
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Permanent.nonLand+OppCtrl+cmcLEX | Origin$ Battlefield | Destination$ Exile | TgtPrompt$ Select target nonland permanent an opponent controls with mana value less than or equal to this creature's power.
+SVar:X:Count$CardPower
+
+Oracle:This creature's power and toughness are each equal to the number of nonland permanents you control.\nWhen this creature enters, exile target nonland permanent an opponent controls with mana value less than or equal to this creature's power.
+
+SVar:NoZeroToughnessAI:True

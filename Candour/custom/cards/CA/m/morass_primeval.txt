@@ -1,0 +1,16 @@
+Name:Morass Primeval
+ManaCost:B G
+Types:Creature Elemental
+PT:2/1
+
+K:Menace
+
+T:Mode$ DamageDoneOnce | ValidSource$ Creature.modified+YouCtrl | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigDraw | TriggerZones$ Battlefield | TriggerDescription$ Whenever one or more modified creatures you control deal combat damage to a player, draw a card and you lose 1 life.
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+A:AB$ PutCounter | Cost$ 1 B G | Adapt$ True | CounterNum$ 2
+
+Oracle:Menace\nWhenever one or more modified creatures you control deal combat damage to a player, draw a card and you lose 1 life.\n{1}{B}{G}: Adapt 2.
+
+DeckHints:Type$Aura|Equipment
