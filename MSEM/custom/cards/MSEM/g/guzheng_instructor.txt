@@ -1,0 +1,13 @@
+Name:Guzheng Instructor
+ManaCost:2 W
+Types:Creature Human Bard
+PT:2/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Artifact.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigGainLife | TriggerDescription$ Whenever an artifact enters or leaves the battlefield under your control, you gain 1 life.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Artifact.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigGainLife | Secondary$ True | TriggerDescription$ Whenever an artifact enters or leaves the battlefield under your control, you gain 1 life.
+SVar:TrigGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 1
+
+Oracle:Whenever an artifact enters or leaves the battlefield under your control, you gain 1 life.
+
+DeckHints:Type$Artifact
+DeckHas:Ability$LifeGain
