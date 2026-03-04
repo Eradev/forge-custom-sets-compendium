@@ -1,0 +1,9 @@
+Name:Yenzu Ritual Vessel
+ManaCost:1
+Types:Artifact
+
+A:AB$ DealDamage | Cost$ 4 T Sac<1/CARDNAME/this artifact> | ValidTgts$ Creature,Planeswalker | TgtPrompt$ Select target creature or planeswalker | NumDmg$ 4 | SpellDescription$ It deals 4 damage to target creature or planeswalker.
+
+Oracle:{4}, {T}, Sacrifice this artifact: It deals 4 damage to target creature or planeswalker.
+
+DeckHas:Ability$Sacrifice
