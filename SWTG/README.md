@@ -19,7 +19,7 @@ Rebels (SWTG_RBL)               - 100% (32/32)
 ### Manually
 
 * Drop the `custom` folder in `%appdata%\Forge`;
-* Drop the `pics` folder in `%appdata%\..\Local\Forge\cache`;
+* Drop the `pics` folder in `%localappdata%\Forge\cache`;
 
 ### Scripts (Powershell)
 
