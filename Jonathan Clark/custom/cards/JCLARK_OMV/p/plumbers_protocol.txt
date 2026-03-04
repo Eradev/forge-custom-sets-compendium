@@ -1,0 +1,10 @@
+Name:Plumber's Protocol
+ManaCost:2 G
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Battlefield | Tapped$ True | ChangeType$ Land.Basic | RememberChanged$ True | ChangeTypeDesc$ basic land | SubAbility$ DBUntap | SpellDescription$ Search your library for a land card with a basic land type and put it onto the battlefield tapped. Then if you control five or more different land types, untap that land.
+SVar:DBUntap:DB$ Untap | Defined$ Remembered | ConditionCheckSVar$ X | ConditionSVarCompare$ GE5 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Count$Valid Land.YouCtrl$LandType
+
+Oracle:Search your library for a land card with a basic land type and put it onto the battlefield tapped. Then if you control five or more different land types, untap that land.
