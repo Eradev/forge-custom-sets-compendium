@@ -1,0 +1,15 @@
+Name:Glorious Wingwright
+ManaCost:1 W
+Types:Creature Human Artificer
+PT:1/1
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Artifact.YouCtrl | TriggerZones$ Battlefield | ActivationLimit$ 1 | Execute$ TrigPutCounter | TriggerDescription$ Whenever an artifact you control enters, put a +1/+1 counter on this creature. This ability triggers only once each turn.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1
+
+Oracle:Flying\nWhenever an artifact you control enters, put a +1/+1 counter on this creature. This ability triggers only once each turn.
+
+SVar:BuffedBy:Artifact
+DeckHints:Type$Artifact
+DeckHas:Ability$Counters
