@@ -8,3 +8,5 @@ SVar:FreeCard:DB$ Draw
 A:AB$ DealDamage | Cost$ 3 T Sac<1/CARDNAME/this artifact> | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ 2 | SpellDescription$ It deal 2 damage to target creature.
 
 Oracle:When this artifact enters, draw a card.\n{3}, {T}, Sacrifice this artifact: It deals 2 damage to target creature.
+
+DeckHas:Ability$Sacrifice
