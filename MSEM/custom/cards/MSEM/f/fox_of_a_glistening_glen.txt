@@ -1,0 +1,12 @@
+Name:Fox of a Glistening Glen
+ManaCost:2 W
+Types:Creature Fox
+PT:3/2
+
+S:Mode$ Continuous | Affected$ Fox.Other+YouCtrl | AddPower$ 1 | AddToughness$ 1 | Description$ Other Fox you control get +1/+1.
+
+A:AB$ Pump | Cost$ 2 W | ValidTgts$ Fox+YouCtrl | TgtPrompt$ Select target Fox you control | KW$ Lifelink | SpellDescription$ Target Fox you control gains lifelink until end of turn.
+
+Oracle:Other Foxes you control get +1/+1.\n{2}{W}: Target Fox you control gains lifelink until end of turn.
+
+DeckHints:Type$Fox
