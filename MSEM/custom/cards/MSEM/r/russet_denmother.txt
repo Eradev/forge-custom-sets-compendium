@@ -1,0 +1,15 @@
+Name:Russet Denmother
+ManaCost:3 W
+Types:Creature Fox
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCharm | TriggerDescription$ When this creature enters, ABILITY
+SVar:TrigCharm:DB$ Charm | Choices$ DBDestroy,DBToken
+
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Enchantment | TgtPrompt$ Select target enchantment | SpellDescription$ Destroy target enchantment.
+
+SVar:DBToken:DB$ Token | TokenScript$ rw_2_1_fox | SpellDescription$ Create a 2/1 red and white Fox creature token.
+
+Oracle:When this creature enters, choose one —\n• Destroy target enchantment.\n• Create a 2/1 red and white Fox creature token.
+
+DeckHas:Ability$Token
