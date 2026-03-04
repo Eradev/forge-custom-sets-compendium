@@ -1,0 +1,11 @@
+Name:Festival Celebrants
+ManaCost:4 W W
+Types:Creature Human Actor
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPutCounterAll | TriggerDescription$ When this creature enters, put a +1/+1 counter on each creature you control.
+SVar:TrigPutCounterAll:DB$ PutCounterAll | ValidCards$ Creature.YouCtrl | CounterType$ P1P1
+
+Oracle:When this creature enters, put a +1/+1 counter on each creature you control.
+
+SVar:PlayMain1:TRUE
