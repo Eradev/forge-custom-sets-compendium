@@ -1,0 +1,17 @@
+Name:Kiri, Corporeal Conduit
+ManaCost:1 W
+Types:Legendary Creature Fox Spirit
+PT:1/4
+
+K:Lifelink
+
+T:Mode$ ChangesZoneAll | ValidCards$ Creature.Other+powerLE2+YouCtrl | Destination$ Battlefield | TriggerZones$ Battlefield | ActivationLimit$ 1 | Execute$ TrigBranch | TriggerDescription$ Whenever one or more other creatures with power 2 or less you control enter, you gain 1 life. If your life total is greater than your starting life total, draw a card instead. This ability triggers only once each turn.
+SVar:TrigBranch:DB$ Branch | BranchConditionSVar$ X | BranchConditionSVarCompare$ GTY | TrueSubAbility$ DBDraw | FalseSubAbility$ DBGainLife
+SVar:DBDraw:DB$ Draw
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 1
+SVar:X:Count$YourLifeTotal
+SVar:Y:Count$YourStartingLife
+
+Oracle:Lifelink\nWhenever one or more other creatures with power 2 or less you control enter, you gain 1 life. If your life total is greater than your starting life total, draw a card instead. This ability triggers only once each turn.
+
+DeckHas:Ability$LifeGain
