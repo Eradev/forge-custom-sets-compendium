@@ -1,0 +1,15 @@
+Name:Yenzu Puppeteering
+ManaCost:1 U
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ When this Aura enters, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+A:AB$ Untap | Cost$ 1 U | Defined$ Enchanted | SpellDescription$ Untap enchanted creature.
+
+Oracle:Enchant creature\nWhen this Aura enters, draw a card.\n{1}{U}: Untap enchanted creature.
+
+SVar:AttachAILogic:Pump
+SVar:NonStackingAttachEffect:True
