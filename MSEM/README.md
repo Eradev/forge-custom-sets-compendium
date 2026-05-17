@@ -31,10 +31,12 @@ Video Horror System (VHS)             -  97% (83/86)
     * Maddened Preacher
     * Snowfield Doppelganger
     * Wiretapper
-Nangjiao In Bloom (NJB)               -  23% (70/297)
+Nangjiao In Bloom (NJB)               -  30% (91/297)
+  Missing cards:
+    * Diao of the Opal Infantry
 Kaleidoscope (KLC)                    -  100%
 Path of Shadows (PSA)                 -  89% (187/209)
- Missing cards:
+  Missing cards:
      * Every card with Inscribe, or referencing it.
      * The Sacred Gate
 A Tourney at Whiterun (TWR)           -  100%
