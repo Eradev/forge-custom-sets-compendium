@@ -1,0 +1,11 @@
+Name:Kaleidoscale Drake
+ManaCost:3 U
+Types:Creature Drake
+PT:3/3
+
+K:Flying
+
+T:Mode$ Untaps | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigScry | TriggerDescription$ Inspired — Whenever this creature becomes untapped, scry 1.
+SVar:TrigScry:DB$ Scry
+
+Oracle:Flying\nInspired — Whenever this creature becomes untapped, scry 1.
