@@ -1,0 +1,20 @@
+Name:Ballad of the Forgotten
+ManaCost:U
+Types:Sorcery
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ +1 | SubAbility$ DBUnblockable | StackDescription$ {c:Targeted} gets +1/+0 and can't be blocked this turn. | SpellDescription$ Target creature gets +1/+0 and can't be blocked this turn.
+SVar:DBUnblockable:DB$ Effect | RememberObjects$ Targeted | ExileOnMoved$ Battlefield | StaticAbilities$ Unblockable | SubAbility$ DBToken
+SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ This creature can't be blocked this turn.
+
+S:Mode$ AlternativeCost | Named$ Showcase | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 U | Description$ Showcase {2}{U} (Then if you cast this for its showcase cost, create a 1/1 red Bard creature token that can't block and exile this. Whenever it attacks, you may cast a free copy of this.)
+SVar:DBToken:DB$ Token | ConditionCheckSVar$ AltCostPaid | TokenScript$ r_1_1_bard_cantblock | RememberTokens$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | ConditionCheckSVar$ AltCostPaid | RememberObjects$ Remembered | ImprintCards$ Self | Triggers$ TriggerShowcaseAttack,TriggerTokenMoved | Duration$ Permanent | SubAbility$ DBExile
+SVar:TriggerShowcaseAttack:Mode$ Attacks | ValidCard$ Card.IsRemembered | Execute$ PlayShowcase | TriggerDescription$ Whenever the showcased creature attacks, you may cast a copy of EFFECTSOURCE without paying its mana cost.
+SVar:PlayShowcase:DB$ Play | Defined$ Imprinted | WithoutManaCost$ True | CopyCard$ True | Optional$ True | OptionalDecider$ You 
+SVar:TriggerTokenMoved:Mode$ ChangesZone | ValidCard$ Card.IsRemembered | ExcludedDestinations$ Battlefield | Execute$ ExileEffect | Static$ True
+SVar:ExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+SVar:DBExile:DB$ ChangeZone | ConditionCheckSVar$ AltCostPaid | Defined$ Self | Origin$ Stack | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:AltCostPaid:Count$AltCost.1.0
+
+Oracle:Target creature gets +1/+0 and can't be blocked this turn.\nShowcase {2}{U} (Then if you cast this for its showcase cost, create a 1/1 red Bard creature token that can't block and exile this. Whenever it attacks, you may cast a free copy of this.)
