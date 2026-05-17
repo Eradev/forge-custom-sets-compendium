@@ -1,0 +1,9 @@
+Name:Festival Decorator
+ManaCost:2 U
+Types:Creature Human Bard
+PT:3/2
+
+T:Mode$ Untaps | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Inspired — Whenever this creature becomes untapped, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Inspired — Whenever this creature becomes untapped, draw a card.
