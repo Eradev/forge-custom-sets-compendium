@@ -1,0 +1,10 @@
+Name:Against the Waves
+ManaCost:U
+Types:Sorcery
+
+A:SP$ Mill | ValidTgts$ Player | NumCards$ X | SubAbility$ DBDraw | SpellDescription$ Target player mills X cards, where X is the number of cards named CARDNAME in your graveyard. Draw a card, then conjure three cards named CARDNAME and shuffle them into your main library.
+SVar:DBDraw:DB$ Draw | SubAbility$ DBConjure
+SVar:DBConjure:DB$ MakeCard | Conjure$ True | Name$ Against the Waves | Zone$ Library | Amount$ 3
+SVar:X:Count$ValidGraveyard Card.YouOwn+namedAgainst the Waves
+
+Oracle:Target player mills X cards, where X is the number of cards named Against the Waves in your graveyard. Draw a card, then conjure three cards named Against the Waves and shuffle them into your main library.
