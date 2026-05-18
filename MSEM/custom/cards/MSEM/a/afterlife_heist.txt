@@ -1,0 +1,9 @@
+Name:Afterlife Heist
+ManaCost:2 B
+Types:Instant
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Creature.YouOwn, Planeswalker.YouOwn | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature or planeswalker card from your graveyard | SubAbility$ DBDrain | SpellDescription$ Return up to one target creature or planeswalker card from your graveyard to your hand. Each opponent loses 3 life and you gain 3 life.
+SVar:DBDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 3 | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 3
+
+Oracle:Return up to one target creature or planeswalker card from your graveyard to your hand. Each opponent loses 3 life and you gain 3 life.
