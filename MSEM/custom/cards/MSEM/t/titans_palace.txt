@@ -1,0 +1,7 @@
+Name:Titan's Palace
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | Amount$ 2 | RestrictValid$ Spell.cmcGE5 | SpellDescription$ Add {C}{C}. Spend this mana only to cast spells with mana value 5 or greater.
+
+Oracle:{T}: Add {C}{C}. Spend this mana only to cast spells with mana value 5 or greater.
