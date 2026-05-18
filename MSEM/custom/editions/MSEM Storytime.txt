@@ -1,0 +1,116 @@
+[metadata]
+Code=MSEM_101
+Name=Storytime
+Date=2019-02-01
+Type=Custom
+
+[cards]
+1 M Azamir, Wayward Titan @Paolo Puggioni
+2 R Apotheosis @Finnian MacManus
+3 R Arbiter of the Scales @Charlotta Bävholm
+4 R Autumn's Farewell @Thander Lin
+5 R Brave the Issbarrens @Kekai Kotaki
+6 R Daring Skythief @Merilliza Chan
+7 R Final Reckoning @Kekai Kotaki
+8 R Golden Company Tactics @Billy Christian
+9 R Golden Company Valiant @Joo d r a w s
+10 M Happy Together @Jeffrey Smith
+11 R Herald of Heroes @Marco González
+12 R In Memoriam @Cosme (Aeflus) Lucero
+13 R Magdel, Caller of Souls @Mingchen Shen
+14 R Right to Rule @Zhengyi Wang
+15 R The Start of Something @Allen Morris
+16 M Storytime @St3to
+17 R Titan's Will @Peter Mohrbacher
+18 R Turela, Defiant Angel @Jason Nguyen
+19 R Wandering Souls @Anato Finnstark
+20 R Against the Waves @Paolo Puggioni
+21 R Antimagic Formula @Thomas Karlsson
+22 R Charting the Cosmos @Julie Dillon
+23 R Chronofracture @Chris Yang
+24 R Edge of the Water @Julie Dillon
+25 R Fish Out of Water @Tim Barton
+26 R Gorbes Index @Naveen Kumar
+27 R Legacy's Malediction @Benjamin Ee
+28 R Meadow's Melody @Cathleen McAllister
+29 R Oscanthor, Trader's Ruin @Bayard Wu
+30 R Outsmart @sandara
+31 R Start Anew @Thander Lin
+32 R Tempus Fugit @Yansy Chan
+33 R Terror of Palta Gorge @Paolo Giandoso
+34 R Tianyuren Skycharter @Julie Dillon
+35 R Tidal Spite @Jeff Brown
+36 R Unbound Academic @Istvan Straban
+37 R Vengeful Messenger @Jason Nguyen
+38 R Afterlife Heist @Thander Lin
+39 R Berbarus Unsealed @Raymond Swanland
+40 R Curse-Blood Morrigan @Mateusz Ozminski
+41 R Embrace Madness @Aurelien Rantet
+42 R Glymna Blackrune @Bogdan-MRK
+43 R Jara Champion @Henrique Lindner
+44 R Just Business @Meteorskies
+45 R The Lord of All Beyond @Patrick Reilly
+46 R Memento Mori @Eryk Szczygieł
+47 R Puppeteering @Astri Lohne
+48 R Rend the Mind @Marcel Mercado
+49 R Seventh Circle Cultist @namesjames
+50 R Sinister Heir @chen zhan
+51 R Ultim Nox @Jan Ditlev
+52 R Villainy @Jason Nguyen
+53 R Warden of the Dead @Raymond Swanland
+54 R Welcome Return @Viktor Titov
+55 R Words of Eternity @Borisut Chamnan
+56 R Academy Renegade @Jason Chan
+57 R Aquilifer Axelius @LASAHIDO
+58 R Bretala of Redsky @Mina Dupont Issalys
+59 R Calamitous Crash @Paolo Puggioni
+60 R Captain Mattias Ochre @KateMaxpaint
+61 R Dragoncalling @Bayard Wu
+62 R Epic Score @Billy Christian
+63 R Finale of Cinders @Zahid Raza Khan
+64 R Glorysinger @Mina Dupont Issalys
+65 R Jak, Daring Vanguard @Bayard Wu
+66 R Lady Ashtongue @Christian Lothrean
+67 R Meteor Fall @Fernanda Suarez
+68 R Overclock @InfiniteCreations
+69 R Overwhelming Armies @Daniel Valaisis
+70 R Regal Ignition @Kekai Kotaki
+71 R Takeda Taro @Anastasia Bulgakova
+72 R Unceasing Flames @bpsola
+73 R Warrior's Request @Bayard Wu
+74 R Apex's Oath @sandara
+75 R Arpechian Champion @Mihai Radu
+76 R Backwood Rangers @Bruno Biazotto
+77 R Caller of Hunger @Gökberk Kaya
+78 R Chratteri Restoration @Xavier Lozano Ribeiro
+79 R Chratteri Valiant @Dave Greco
+80 R Daisy, the Heart of Chasmek @Mansik Yang
+81 R Elder's Wisdom @RUPAM Γc
+82 R Great and Small @Kekai Kotaki
+83 R Greenwood Outrider @Daniel Valaisis
+84 R Hunter's Hideout @Grace Liu
+85 R Lost to the Ages @Pigsomedom *
+86 R Meadow Songstress @Michael MacRae
+87 R Mossy Companion @xu wang
+88 R Ol' Sycamore @Kekai Kotaki
+89 R Remnant of the Wild @Xavier Lozano Ribeiro
+90 R Rujan, the Great Pumpkin @Todd Ulrich
+91 R Spring Renewal @Julian Bauer
+92 M Emperor Tzhai @Andreia Ugrai
+93 R Academic's Claymore @Billy Christian
+94 R The Aether Lens @Rebecca Larst
+95 R The Knowledge Hub @Pavel Oliva
+96 R Voidlife Orbs @Alexandre Honoré
+97 R Crystal Garden @Anndr Pazyniuk
+98 R Leyline Alignment Field @cai wei
+99 R Mirrorgate @Ivan Laliashvili
+100 R Overloaded Aethergate @Harvey Bunda
+101 R Titan's Palace @Anu Patten
+
+[tokens]
+1 w_1_1_soldier @NathanParkArt
+2 w_1_1_spirit_flying @tasbo6
+7 g_3_3_beast @Jan Bintakies
+
+[other]
+9 reminder_warden_of_the_dead @Raymond Swanland
