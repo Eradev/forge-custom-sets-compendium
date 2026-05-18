@@ -10,4 +10,4 @@ SVar:DBDraw:DB$ Draw
 
 Oracle:This spell costs {1} less to cast for each storied permanent you control. (Enchantments and legendary permanents are storied.)\nCounter target spell.\nDraw a card.
 
-DeckNeeds:Type$Enchantment & Legendary
+DeckNeeds:Type$Enchantment|Legendary

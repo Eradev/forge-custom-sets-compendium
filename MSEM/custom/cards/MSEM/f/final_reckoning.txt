@@ -9,4 +9,4 @@ A:SP$ DestroyAll | ValidCards$ Permanent.nonLand+nonEnchantment+nonLegendary | S
 
 Oracle:This spell costs {1} less to cast for each storied permanent you control. (Enchantments and legendary permanents are storied.)\nDestroy all nonland, nonstoried permanents.
 
-DeckNeeds:Type$Enchantment & Legendary
+DeckNeeds:Type$Enchantment|Legendary
