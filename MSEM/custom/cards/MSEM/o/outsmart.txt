@@ -1,0 +1,11 @@
+Name:Outsmart
+ManaCost:U U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | ValidTgts$ Card | ConditionCheckSVar$ X | ConditionSVarCompare$ GTY | SpellDescription$ Counter target spell if you have more cards in hand than its controller.
+SVar:X:Count$ValidHand Card.YouOwn
+SVar:Y:TargetedController$CardsInHand
+
+Oracle:Counter target spell if you have more cards in hand than its controller.
+
+AI:RemoveDeck:All
