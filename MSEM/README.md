@@ -34,6 +34,7 @@ Video Horror System (VHS)             -  97% (83/86)
 Nangjiao In Bloom (NJB)               -  30% (91/297)
   Missing cards:
     * Diao of the Opal Infantry
+Storytime (101)                       -  10% (11/101)
 Kaleidoscope (KLC)                    -  100%
 Path of Shadows (PSA)                 -  89% (187/209)
   Missing cards:
