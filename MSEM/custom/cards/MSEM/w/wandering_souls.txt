@@ -1,0 +1,11 @@
+Name:Wandering Souls
+ManaCost:1 W W
+Types:Instant
+
+A:SP$ Token | TokenScript$ w_1_1_spirit_flying | TokenAmount$ X | TokenOwner$ You | SubAbility$ DBConjure | SpellDescription$ Create X 1/1 white Spirit creature tokens with flying, where X is two plus the number of cards named CARDNAME in your graveyard. Conjure three cards named CARDNAME and shuffle them into your main library.
+SVar:DBConjure:DB$ MakeCard | Conjure$ True | Name$ Wandering Souls | Zone$ Library | Amount$ 3
+SVar:X:Count$ValidGraveyard Card.YouOwn+namedWandering Souls/Plus.2
+
+Oracle:Create X 1/1 white Spirit creature tokens with flying, where X is two plus the number of cards named Wandering Souls in your graveyard. Conjure three cards named Wandering Souls and shuffle them into your main library.
+
+DeckHas:Ability$Token & Type$Spirit
