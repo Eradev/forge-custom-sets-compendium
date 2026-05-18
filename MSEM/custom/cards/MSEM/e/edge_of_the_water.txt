@@ -1,0 +1,14 @@
+Name:Edge of the Water
+ManaCost:2 U
+Types:Enchantment
+
+R:Event$ DrawCards | ActiveZones$ Battlefield | ValidPlayer$ You | ReplaceWith$ DrawPlusOne | Optional$ True | Description$ If you would draw one or more cards, instead you may draw that many cards plus one, then discard a card.
+SVar:DrawPlusOne:DB$ Draw | NumCards$ ReplaceCount$Number/Plus.1 | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose
+
+S:Mode$ ReduceCost | ValidCard$ Card.nonCreature | Type$ Spell | Activator$ You | Amount$ 1 | CheckSVar$ X | SVarCompare$ GE10 | Description$ As long as ten or more cards are in your graveyard, noncreature spells you cast cost {1} less to cast.
+SVar:X:Count$ValidGraveyard Card.YouOwn
+
+Oracle:If you would draw one or more cards, instead you may draw that many cards plus one, then discard a card.\nAs long as ten or more cards are in your graveyard, noncreature spells you cast cost {1} less to cast.
+
+DeckHas:Ability$Discard
