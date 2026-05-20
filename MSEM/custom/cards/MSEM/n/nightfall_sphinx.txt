@@ -1,0 +1,14 @@
+Name:Nightfall Sphinx
+ManaCost:3 W B
+Types:Enchantment Creature Sphinx
+PT:2/4
+
+K:Flying
+
+K:Lifelink
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self,Creature.Other+YouCtrl | Execute$ TrigDrain | TriggerDescription$ Whenever this creature or another creature you control enters, each opponent loses 1 life and you gain 1 life.
+SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 1 | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 1
+
+Oracle:Flying, lifelink\nWhenever this creature or another creature you control enters, each opponent loses 1 life and you gain 1 life.
