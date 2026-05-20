@@ -1,0 +1,10 @@
+Name:Outlander Patrol
+ManaCost:W
+Types:Creature Human Scout
+PT:1/1
+
+K:Vigilance
+
+K:Lifelink
+
+Oracle:Vigilance, lifelink
