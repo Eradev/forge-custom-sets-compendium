@@ -1,0 +1,9 @@
+Name:Sporecaster
+ManaCost:1 B
+Types:Creature Fungus Insect
+PT:1/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self,Insect.Other+YouCtrl | Execute$ TrigDrain | TriggerDescription$ Whenever this creature or another Insect you control enters, each opponent loses 1 life.
+SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 1
+
+Oracle:Whenever this creature or another Insect you control enters, each opponent loses 1 life.
