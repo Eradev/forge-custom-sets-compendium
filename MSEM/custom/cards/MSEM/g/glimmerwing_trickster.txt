@@ -1,0 +1,11 @@
+Name:Glimmerwing Trickster
+ManaCost:4 U
+Types:Creature Faerie
+PT:3/1
+
+K:Flying
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigScry | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature deals combat damage to a player, scry 2
+SVar:TrigScry:DB$ Scry | ScryNum$ 2
+
+Oracle:Flying\nWhenever this creature deals combat damage to a player, scry 2.
