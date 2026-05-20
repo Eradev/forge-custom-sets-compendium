@@ -1,0 +1,20 @@
+Name:Villains: The Musical
+ManaCost:2 B
+Types:Enchantment Saga
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl | Execute$ TrigDrain | TriggerDescription$ Whenever a creature you control enters, each opponent loses 1 life.
+SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 1
+
+K:Chapter:3:DBToken,DBToken,DBLoseLife
+
+SVar:DBToken:DB$ Token | TokenScript$ b_1_1_actor_lifelink | TokenOwner$ You | SpellDescription$ Create a 1/1 black Actor creature token with lifelink.
+
+SVar:DBLoseLife:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ X | SubAbility$ DBGainLife | SpellDescription$ Each opponent loses life equal to the number of tokens you control. You gain life equal to the life lost this way.
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ AFLifeLost
+SVar:AFLifeLost:Number$0
+# AFLifeLost will be set by LoseLife
+SVar:X:Count$Valid Permanent.token+YouCtrl
+
+Oracle:Whenever a creature you control enters, each opponent loses 1 life.\nI, II — Create a 1/1 black Actor creature token with lifelink.\nIII — Each opponent loses life equal to the number of tokens you control. You gain life equal to the life lost this way.
+
+DeckHas:Ability$Token & Type$Actor
