@@ -2,7 +2,7 @@ Name:Villains: The Musical
 ManaCost:2 B
 Types:Enchantment Saga
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl | Execute$ TrigDrain | TriggerDescription$ Whenever a creature you control enters, each opponent loses 1 life.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | ValidCard$ Creature.YouCtrl | Execute$ TrigDrain | TriggerDescription$ Whenever a creature you control enters, each opponent loses 1 life.
 SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 1
 
 K:Chapter:3:DBToken,DBToken,DBLoseLife
