@@ -1,0 +1,9 @@
+Name:Planeshift
+ManaCost:2 W
+Types:Instant
+
+A:SP$ CopyPermanent | TargetMin$ 0 | TargetMax$ 2 | ValidTgts$ Permanent.YouCtrl | TgtPrompt$ Select up to two permanents you control | RememberTokens$ True | SpellDescription$ Aetherize up to two target permanents you control. (To aetherize, create a token that's a copy of it, then exile that token.) | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Aetherize up to two target permanents you control. (To aetherize, create a token that's a copy of it, then exile that token.)
