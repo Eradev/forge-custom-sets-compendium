@@ -1,0 +1,14 @@
+Name:Dire Harpies of Odunos
+ManaCost:1 U B
+Types:Creature Harpy
+PT:2/3
+
+K:Flying
+
+K:Ward:PayLife<2>
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self,Creature.Other+withFlying+YouCtrl | Execute$ TrigDrain | TriggerDescription$ Whenever this creature or another creature with flying you control enters, each opponent loses 1 life and you gain 1 life.
+SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 1 | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 1
+
+Oracle:Flying\nWard—Pay 2 life. (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays 2 life.)\nWhenever this creature or another creature with flying you control enters, each opponent loses 1 life and you gain 1 life.
