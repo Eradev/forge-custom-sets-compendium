@@ -1,0 +1,13 @@
+Name:Inquisitive Student
+ManaCost:1 W
+Types:Creature Human Wizard
+PT:2/1
+
+K:Vigilance
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigInvestigate | TriggerDescription$ When this creature enters, investigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")
+SVar:TrigInvestigate:DB$ Investigate
+
+Oracle:Vigilance\nWhen this creature enters, investigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")
+
+DeckHas:Ability$Token|Sacrifice
