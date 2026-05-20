@@ -1,0 +1,10 @@
+Name:Lonesome Traveler
+ManaCost:W
+Types:Creature Human Warrior
+PT:2/1
+
+K:Mentor
+
+Oracle:Mentor (Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power.)
+
+DeckHas:Ability$Counters
