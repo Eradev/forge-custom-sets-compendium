@@ -1,0 +1,14 @@
+Name:Voldaren Sovereign
+ManaCost:B R
+Types:Creature Vampire Noble
+PT:2/2
+
+K:Lifelink
+
+S:Mode$ Continuous | Affected$ Creature.token+YouCtrl | AddPower$ 1 | Description$ Creature tokens you control get +1/+0.
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Token.YouCtrl | Execute$ TrigDrain | TriggerDescription$ Whenever a token you control enters, each opponent loses 1 life and you gain 1 life.
+SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 1 | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 1
+
+Oracle:Lifelink\nCreature tokens you control get +1/+0.\nWhenever a token you control enters, each opponent loses 1 life and you gain 1 life.
