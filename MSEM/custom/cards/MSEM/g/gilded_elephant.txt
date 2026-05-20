@@ -1,0 +1,10 @@
+Name:Gilded Elephant
+ManaCost:3 W
+Types:Creature Elephant
+PT:3/3
+
+K:Vigilance
+
+K:Lifelink
+
+Oracle:Vigilance, lifelink
