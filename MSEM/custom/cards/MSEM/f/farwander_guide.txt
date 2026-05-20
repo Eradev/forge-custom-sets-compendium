@@ -1,0 +1,12 @@
+Name:Farwander Guide
+ManaCost:W
+Types:Creature Human Scout
+PT:1/1
+
+A:AB$ CopyPermanent | Cost$ 1 W T | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | RememberTokens$ True | SpellDescription$ Aetherize target creature you control. (To aetherize, create a token that's a copy of it, then exile that token.) | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:{1}{W}, {T}: Aetherize target creature you control. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+DeckHas:Ability$Token
