@@ -1,0 +1,10 @@
+Name:Erebos's Whipslang
+ManaCost:1 B
+Types:Enchantment Creature Snake
+PT:1/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self,Enchantment.Other+YouCtrl | Execute$ TrigDrain | TriggerDescription$ Whenever this creature or another enchantment you control enters, each opponent loses 1 life and you gain 1 life.
+SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 1 | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 1
+
+Oracle:Whenever this creature or another enchantment you control enters, each opponent loses 1 life and you gain 1 life.
