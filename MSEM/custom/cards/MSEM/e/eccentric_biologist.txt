@@ -1,0 +1,13 @@
+Name:Eccentric Biologist
+ManaCost:2 G
+Types:Creature Human Advisor Citizen
+PT:2/4
+
+R:Event$ AddCounter | ActiveZones$ Battlefield | ValidCard$ Creature.YouCtrl+inZoneBattlefield | ValidCounterType$ P1P1 | ReplaceWith$ AddOneMoreCounters | CheckSVar$ Menagerie | SVarCompare$ GE5 | Description$ Menagerie — As long as there are five or more creature types among creatures you control, if one or more +1/+1 counters would be put on a creature you control, that many plus one +1/+1 counters are put on it instead.
+SVar:AddOneMoreCounters:DB$ ReplaceCounter | ValidCounterType$ P1P1 | ChooseCounter$ True | Amount$ X
+SVar:Menagerie:Count$Valid Creature.YouCtrl$CreatureType
+SVar:X:ReplaceCount$CounterNum/Plus.1
+
+Oracle:Menagerie — As long as there are five or more creature types among creatures you control, if one or more +1/+1 counters would be put on a creature you control, that many plus one +1/+1 counters are put on it instead.
+
+DeckHints:Ability$Counters
