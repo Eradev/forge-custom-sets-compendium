@@ -1,0 +1,13 @@
+Name:Villainy
+ManaCost:B B B
+Types:Enchantment
+
+T:Mode$ ChangesZoneAll | TriggerZones$ Battlefield | ValidCards$ Creature | Origin$ Battlefield | Destination$ Graveyard | ActivationLimit$ 1 | Execute$ TrigDraw | TriggerDescription$ Whenever one or more creatures die for the first time each turn, you draw a card and you lose 1 life.
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ SpellCast | ValidCard$ Card.Black+nonCreature | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDealDamage | TriggerDescription$ Whenever you cast a black noncreature spell, this enchantment deals 2 damage to any target and you gain 2 life.
+SVar:TrigDealDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 2 | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 2
+
+Oracle:Whenever one or more creatures die for the first time each turn, you draw a card and you lose 1 life.\nWhenever you cast a black noncreature spell, this enchantment deals 2 damage to any target and you gain 2 life.
