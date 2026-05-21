@@ -136,7 +136,7 @@ Booster=7 Common, 5 Uncommon, 2 RareMythic
 128 U Offworld Surveyors @madspartan013
 129 C Otherworldly Gifts @Khoa Viet
 130 R Phasmopillar @Mozchops
-131 R Planar Genesis @Hugh Pindur
+131 R Planar Genesis (MSEM) @Hugh Pindur ${"flavorName": "Planar Genesis"}
 132 U Relentless Pathcutter @Devin Platts
 133 U Rootbound Awakener @Taylor Christensen
 134 C Saddlesaur Guide @Joe Slucher
