@@ -1,0 +1,13 @@
+Name:Channeler of the Veil
+ManaCost:1 B
+Types:Creature Human Shaman
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 1/1 colorless Construct artifact creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_a_construct
+
+A:AB$ LoseLife | Cost$ Sac<1/Creature.Other/another creature> | ActivationLimit$ 1 | Defined$ Player.Opponent | LifeAmount$ 1 | SpellDescription$ Each opponent loses 1 life. Activate only once each turn.
+
+Oracle:When this creature enters, create a 1/1 colorless Construct artifact creature token.\nSacrifice another creature: Each opponent loses 1 life. Activate only once each turn.
+
+DeckHas:Ability$Sacrifice|Token & Type$Construct
