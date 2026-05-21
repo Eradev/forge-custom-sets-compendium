@@ -1,0 +1,11 @@
+Name:Astralhorn Familiar
+ManaCost:G G
+Types:Creature Elemental Unicorn
+PT:3/2
+
+K:Ward:ExileFromGrave<3/card>
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 2 | AddToughness$ 2 | CheckSVar$ Menagerie | SVarCompare$ GE5 | Description$ Menagerie — This creature gets +2/+2 as long as there are five or more creature types among creatures you control.
+SVar:Menagerie:Count$Valid Creature.YouCtrl$CreatureType
+
+Oracle:Ward—Exile three cards from your graveyard.\nMenagerie — This creature gets +2/+2 as long as there are five or more creature types among creatures you control.
