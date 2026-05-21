@@ -1,0 +1,299 @@
+[metadata]
+Code=MSEM_RVO
+Name=Riddles of Revio
+Date=2021-07-01
+Type=Custom
+Booster=7 Common, 5 Uncommon, 2 RareMythic
+
+[cards]
+1 R Admonish @Remi Roundtree
+2 C Calamity Apparition @Jim Ling
+3 R Dafiqi Falconer @Alexandra Khitrova
+4 M Destined Calamity @Sabrina Langenberger
+5 R End of Days_RVO @Jeffrey Smith
+6 U Faithful Priest @Ali Eser
+7 C Freeborn Healer @Peter Mohrbacher
+8 C Gilded Elephant @Torben Weit
+9 C Harmonic Charm @Aaron Miller
+10 R Herald of Suns @Nino Vecia
+11 U Hero's Command @Soufiane Idrassi
+12 R Imposing Sphinx @Alexandra Khitrova
+13 C Inquisitive Student @Taras Susak
+14 U Lonesome Traveler @Nicholas Baum
+15 C Lost and Alone @Jin Young Song
+16 U Maktali Archivist @Aleksander Karcz
+17 M Master of Ancient Ways @Yigit Danacioglu
+18 U Merciful Sphinx @Sam Carr
+19 U Moonlight Strix @Nele Diel
+20 C Outer Wall Guard @Sebastian Horoszko
+21 C Peacemaker Dove @Shelly M.
+22 C Puzzlemaster's Priest @V. Wei
+23 U Road to Alratha @Mikail Il
+24 C Roaming Spirit @Samuel Inkiläinen
+25 C Royal Falconer @Grazia Ferlito
+26 U Ruin Wanderer @Patrik Pulkkinen
+27 C Seeking Horizons @Eugene Korolev
+28 C Settle Down @Xistence Imaginations
+29 C Soul of the Sands @Vladimir Manyukhin
+30 C Spectral Wings @Elena Bespalova
+31 U Sphinx's Authority @Felipe Irnyo
+32 U Sphinx's Sight @Kaj Driesen
+33 R Tara's Confluence @Kuryliuk Darya
+34 C Trade Route Bandit @Mike Heath
+35 C Traveling Scholar @Halil Ura
+36 R Trial Recruitment @Ed Laag
+37 C Way of the Warrior @George Evangelista
+38 U Young Prophet @Chloe Villard
+39 C Allure of Alratha @Florian Herold
+40 U Alrathan Scholar @Asim A. Steckel
+41 C Ancestral Facsimile @Jackson Tjota
+42 U Azure Archaeologist @. Irnyo
+43 U Cold Shoulder @Stella Spente
+44 R Consult Ancient Knowledge @Matt Smudz
+45 M Cosmic Calamity @Ryan Lowe
+46 C Crest @빛 김
+47 C Daring Escapade @Jb Casacop
+48 R Decisive Arcanist @Felipe Montecinos
+49 C Deduce @Laura Sava
+50 C Disgruntled Student @Joshua Cairos
+51 U Dreammender Sphinx @Victor Fernández
+52 C Elusive Sage @Aleksandra Wojtas
+53 C Enroll @Alex Allen
+54 R Final Hour @Benjamin Davis
+55 U Ghostly Hounds @Tom Lopez
+56 C Lofty Denial @Manuel Castañón
+57 U Mage Studies @Lily Abdullina
+58 U Mage's Command @Clarissa Choi
+59 C Maktali Visionary @John Law
+60 M Naiala, the Informant @Anastasia Kustova
+61 C Naiala's Guide @Rafael Teruel
+62 C Negate_RVO @Ivan & Elena Melnikov
+63 C Outpost Merchant @Denis Kornev
+64 U Phantasmal Owl @Marion Bouzir
+65 R Roland, Philosopher King @Benjamin Goutte
+66 R Roland's Confluence @Benjamin Goutte
+67 C Scholar's Assistant @Sam Perin
+68 U Secrets of the Orrery @Wojciech Królik
+69 M Sethis, All-Seeing @Irina Nordsol Kuzmina
+70 U Silent Wayfarer @Jeffrey Read
+71 C Sphinx's Advice @Joel Chaim Holtzman
+72 C Spirits' Descent @Denis Kornev
+73 C Spiritual Charm @Kris Kolesnikova
+74 R Stargazing @Wenqing Yan
+75 R Swiftwing Sphinx @Maria Anisimova
+76 C Territorial Fangwurm @Beto Lima
+77 U Travel by Starlight @Shelly M.
+78 R Worn Study @Andreas Rocha
+79 U Approach the Dark Tomb @Sergey Vasnev
+80 U Blackhearted Sphinx @Bayard Wu
+81 U Dark Apprentice @Rogier van de Beek
+82 R Darna, Dark Overseer @Vukasin Ivkovic
+83 U Darna's Atrocity @Melissa Houpert
+84 R Darna's Confluence @Konstantin Porubov
+85 U Death Rites @Will Podpechan
+86 R Descend Upon the Tomb @Stas Yurev
+87 C Desert Marauder @Rostyslav Zagornov
+88 R Eternal Duneborn @Marco Liang
+89 M Eve, the Mastermind @Anna Podedworna
+90 R Eve's Scheme @Eric Lynx Lin
+91 R Eve's Spiritstalker @Raph Herrera Lomotan
+92 U Exhaust @Blaz Porenta
+93 C Ferocity of the Sands @Brian Valeza
+94 C Heinous Acts @Alessandro Paviolo
+95 R Herald of Shadow @Israel Holtzhausen
+96 C Leave for Dead @David Tilton
+97 M Master of Dark Arts @Gal Or
+98 C Painful Rites @Even Amundsen
+99 C Pious Relicseekers @Vladimir Manyukhin
+100 M Plague Calamity @JIAWEI FU
+101 U Prying Inquiry_RVO @Tiziana Federica Ruiu
+102 C Qalam Surveyor @Arturo Gutierrez
+103 C Qalami Barbarian @Filipe Pagliuso
+104 C Scavenging Sandwurm @Sandara Tang
+105 C Scholar of Necromancy @Greg Rutkowski
+106 C Screeching Duneborn @Maciej Laszkiewicz
+107 C Sinister Charm @Elvira Shatunova
+108 C Sink Beneath the Sands @Victor Garcia
+109 C Skelephant @Xavier Ribeiro
+110 U Spoiled Oracle @Khal-il Snani
+111 U Summoned Skeleton @Sebastien Hue
+112 C Telani Scammer @Tomasz Zarucki
+113 U Thief's Command @Evgeny Dvoretckiy
+114 C Trail of Bones @Sabin Boykinov
+115 C Turn Up @Boti Harko
+116 U Unnerving Assistant @Vanette Kosman
+117 C Vicious Stinger @Xabi Gazte
+118 C Aeren Hellfire @Simon Goinard
+119 M Alrathan Outcast @Raivis Draka
+120 C Archaeologist's Discovery @Ina Wong
+121 C Armed Vendor @Tomas Duchek
+122 M Bloodstained Calamity @Jayesh Thanekar
+123 C Calamity Scholar @Prince Mahlangu
+124 C Ciel's Cavalry @Amelie Hutt
+125 R Confront the Riddlemaster @Alexander Smith
+126 C Desert Surveyors @Dao Trong Le
+127 U Dismissive Pyromancer @Bram Sels
+128 C Drysand Mole @Dante Saunders
+129 R Dthan's Confluence @David Kegg
+130 U Dthan's Daggers @Lorena Pimenta
+131 U Fierce Raider @Bruno Henriques
+132 R Fiery Burst @Joshua Raphael
+133 U Flamecaller's Command @Sveta Kudakova
+134 C Grave Robbery @Eddie Bennun
+135 C Harsh Trek @Raphael Lacoste
+136 C Heat Blast @Phuoc Quan
+137 C Heavy Sandstorm @Timi Honkanen
+138 R Herald of Flame @Bayard Wu
+139 U Hero of Aer @Black Hood
+140 R Illuminated Firebird @Anton Chilikin
+141 U Inescapable Blaze @Dominik Mayer
+142 U Lone Freelancer @Stephane Lefort
+143 U Masked Lancer @Maciej Laszkiewicz
+144 C Merchant's Sidearm @Yisu Zhang
+145 C Nimble Sandstorm @Damien Mammoliti
+146 C Open the Tomb @David Alvarez
+147 U Protect the Treasure @Jake Murray
+148 C Prowling Beastmaster @Domen Kozelj
+149 C Reckless Dunerider @Dao Trong Le
+150 R Reytha's Discovery @Yuting Li
+151 C Sandstorm Charm @Martin Deschambault
+152 U Scorch_RVO @Anthony Avon
+153 U Searing Sandwurm @Filipe August
+154 C Sparkmage Prodigy @Alexander Chelyshev
+155 R Splitting Image @Attila Gallik
+156 C Cave Spider @Tomek Graczyk
+157 C Charging Brute @Simon Green
+158 R Colossal Greatwurm @mist XG
+159 C Daunt @Stephen Noble
+160 C Duel Amongst Dunes @Joseph Beelich
+161 C Dunetreader Tortoise @Jose Ochoa
+162 U From Far and Near @Chris Drake
+163 C Haggler's Hound @Jeffrey Read
+164 R Herald of Earth @Chauncy Felisz
+165 R Library Infiltrator @Gabriel Juarez
+166 C Living Sandstorm @David Szabo
+167 M Monstrous Calamity @Lee Fitzgerald
+168 C Nature Charm @Alexandr Elichev
+169 C Oasis Cattle @Nico Ching
+170 R Oasis' Grandeur @Miloš Radojkić
+171 C Oasiscrafting @Nhu Lam
+172 C Pilgrim's Packbeast @Claudya Schmidt
+173 C Regrow Anew @Alyssa Frei
+174 R Restoration Effort @Mélanie Geley
+175 M Ruinshell Crab @Benjamin Harris
+176 C Sand Scorpion @Alejandro García
+177 C Sand Twister @Ibrahem Swaid
+178 U Sandwurm's Command @Mong Cherng Lee
+179 U Sandwurm's Might @Vicky Bawangun
+180 U Seeker of Ruins @Eytan Zana
+181 U Shifting Sands @Alice Boudry
+182 U Spiny Lizard @Kaylee Gifford
+183 C Stegosaurhouse @Julien Gauthier
+184 U Surging Wurm @Marc Simonetti
+185 C Titanic Hardshell @Thomas Chamberlain-Keen
+186 C Tomb Robber's Grit @Robin Lhebrard
+187 U Trained Reptile @Anderson Virino
+188 U Tribal Guard @Tiago Sousa
+189 U Unlikely Growth @Kasia Zielińska
+190 C Warrior of Far-Off Sands @Faraz Shanyar
+191 U Winged Stinger @Xabi Gazte
+192 R Ylda, the Wild Soul @Ryan Van Dongen
+193 R Ylda's Confluence @Silas Owen
+194 U Alrathan Vizier @Jinho Bae
+195 U Calamity Harbinger @Alyssa McCarthy
+196 M Ciel, the Raider King_RVO @India-Lee Crews
+197 R Dthan, Who Bloodies the Sands @Alexandr Elichev
+198 R The Duneborn Host @Deniz Ündan
+199 R Elise, Maktali Prodigy @Hoàng Lap (Solan)
+200 R Enraged Fangwurm @Jannis Mayr
+201 U Guide of Heroes @Alex Konstad
+202 R Harbinger of Falling Skies @Damian Żukowski
+203 U Honorable Mentor @Raph Herrera Lomotan
+204 U Horizon Prophet @Alexandre Honoré
+205 U Nightfall Sphinx @Alexandra Khitrova
+206 U Relentless Sphinx @Jose Brand
+207 R Reytha, the Sandstorm @Pablo Murinelly
+208 R Riddle-Eater @Yasen Stoilov
+209 R Search the Archives @Vyach Milinchuk
+210 U Seer of Clear Skies @Necipcan Karakus
+211 U Sphinx of Insight @John Tedrick
+212 R Sphinx's Grandeur @Alexandre Hassan
+213 R Sunless Sky @Lorenzo Lanfranconi
+214 M Tara, Duneblessed @Dennis Fröhlich
+215 U Tormentor of Graves @Filip Illu
+216 U Ageless Wanderer @Alexander Nanitchkov
+217 U Ancient Tablet @Nele Diel
+218 C Bandit's Blade @Stephen Mabee
+219 U Bloodstained Altar @Erica Lee
+220 C Darna's Grimoire @Miklós Ligeti
+221 U Giant's Remains @Stephane Lefort
+222 R Guardian of Mysteries @Misha Ignatov
+223 R Kilani, Awakened Colossus @Nuare Studio
+224 U Living Library @Kathryn Ault Noble
+225 R Love Letters @Helena Nikulina
+226 R Maktali, the Great Library @Klaudia Bezak
+227 U Marauder's Broadsword @Veli Nyström
+228 U Merchant's Outpost @Anton Bogdanov
+229 R Mindwave Rod @Marta Nael
+230 C Mystic Khopesh @Alexander Yakovlev
+231 M Observer of Aeons @Ben Redekop
+232 M Palaisun, Maktali's Opus @Emilio Grasso
+233 U Pillar of Training @Markus "Braxxy" Brackelmann
+234 C Prism Protector @Veli Nyström
+235 C Remnant of Lost Times @Markus Neidel
+236 R Restored Automaton @Hugo Fredoueil
+237 U Riddlemaster's Bane @Johanna Rupprecht
+238 C Ruin Guardian @Nino Is
+239 C Ruins' Reward @Connor Fischer
+240 C Sandstone Construct @Brody B
+241 R Smashing Brute @Javier Charro
+242 C Sunken Grave @Vincent MacTiernan
+243 C Wayfarer's Amulet @Benedict Odom
+244 R Alratha, Pearl of the Sand Sea @William Perera
+245 U Collapsing Ridges @Daniel Romanovsky
+246 R Conto Sika, Ruined Glory @Joseph Biwald
+247 C Desert's Hearth @Tyler Smith
+248 U Ecological Refuge @Helen Ilnytska
+249 U Path of Fire @David Frasheski
+250 U Swaying Sands @Harkalé Linaï
+251 U Verdant Oasis @Andrew Horton
+252 L Plains_RVO @Lionel Dorviler
+253 L Island_RVO @Adrian Virlan
+254 L Swamp_RVO @Martin Deschambault
+255 L Mountain_RVO @Lorenzo Lanfranconi
+256 L Forest_RVO @Bruno Gentile
+257 S Collected Malice @Alexandr Elichev
+258 S Spirit of the Mountains @Calder Moore
+259 S Tara's Lament @Shaun Jonas
+260 S Ancient Tome @Lily Morran
+261 S Secrets of the Tower @Alyn Spiller
+262 S Spirit of the Sands @Ibrahem Swaid
+263 S Dark Behemoth @Svetlin Velinov
+265 S Wall of Sand @Sviatoslav Gerasimchuk
+266 S Huntsman's Guile @Gaétan Weltzer
+267 S Stormcalling @Ellyett Wee (Laura J. Weiner)
+268 S The Sun Rises @Francois Coutu
+269 S Desert Bloom @Haroon Ehsan
+270 S Into the Scorpion Den @Andrew Maleski
+271 S Sandswim Titan @Artur Sadlos
+1337 S Voidbringer @Melissa Houpert
+
+[tokens]
+1 w_1_1_bird_flying @Olya Sh
+2 w_1_1_human_lifelink @Roman Kuteynikov
+3 w_1_1_soldier @Benjamin Harris
+4 w_1_1_soldier_first_strike @Dao Trong Le
+5 u_1_1_wizard_prowess @Markus Stadlober
+6 b_4_4_a_skeleton_giant @Pablo Dominguez
+7 b_2_2_zombie @Miłek Jakubiec
+8 g_2_2_lizard @Alexander Nanitchkov
+9 g_8_0_scorpion_trample @b i m a
+10 g_3_3_wurm @Aaron Miller
+11 rw_1_1_e_sand_lifelink_haste @Mike Ackerman
+12 c_a_clue_draw @Panjoool
+
+[other]
+13 emblem_ciel @India-Lee Crews
+14 emblem_eve @Anna Podedworna
+15 emblem_naiala @Anastasia Kustova
+16 emblem_tara @Denis Fröhlich
