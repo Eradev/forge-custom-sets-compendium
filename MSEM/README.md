@@ -159,7 +159,7 @@ Deception {2}{U} ({2}{U}, Return an unblocked attacker you control to hand: Put 
 Implementation:
 
 ```text
-A:AB$ ChangeZone | Cost$ 2 U Return<1/Creature.attacking+unblocked/unblocked attacker> | PrecostDesc$ Deception | CostDesc$ 2 U | ActivationZone$ Hand | Origin$ Hand | Destination$ Battlefield | Defined$ Self | SpellDescription$ ({2}{U}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)
+A:AB$ ChangeZone | Cost$ 2 U Return<1/Creature.attacking+unblocked/unblocked attacker> | PrecostDesc$ Deception | CostDesc$ 2 U | ActivationZone$ Hand | Origin$ Hand | Destination$ Battlefield | Defined$ Self | Tapped$ True | Attacking$ True | SpellDescription$ ({2}{U}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
