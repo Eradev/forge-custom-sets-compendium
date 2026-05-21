@@ -31,17 +31,19 @@ Video Horror System (VHS)             -  97% (83/86)
     * Maddened Preacher
     * Snowfield Doppelganger
     * Wiretapper
-Nangjiao In Bloom (NJB)               -  30% (91/297)
+Nangjiao In Bloom (NJB)               -  31% (94/297)
   Missing cards:
     * Diao of the Opal Infantry
-Storytime (101)                       -  11% (12/101)
+Riddles of Revio (RVO)                -   5% (14/272)
+Worlds Away (WAY)                     -   3% (9/262)
+Storytime (101)                       -  13% (14/101)
 Kaleidoscope (KLC)                    -  100%
 Path of Shadows (PSA)                 -  89% (187/209)
   Missing cards:
      * Every card with Inscribe, or referencing it.
      * The Sacred Gate
 A Tourney at Whiterun (TWR)           -  100%
-Tides of War (TOW)                    -  28% (78/271)
+Tides of War (TOW)                    -  29% (80/271)
 Pyramids of Atuum (POA)               -  98% (126/128)
   Missing cards:
     * Righteous Priestess
@@ -59,20 +61,41 @@ From the Vault: Wayfarer's Shrine (SHRINE)
 
 Examples on how to implement custom keywords and mechanisms.
 
+* [Aetherize](#aetherize)
 * [Ascend](#ascend)
 * [Art of War](#art-of-war)
 * [Bleed](#bleed)
+* [Deception](#deception)
 * [Fabled](#fabled)
 * [Fleeting](#fleeting)
 * [Horrific](#horrific)
 * [Infiltrate](#infiltrate)
 * [Kindle](#kindle)
+* [Menagerie](#menagerie)
 * [Mirage](#mirage)
 * [Motivate](#motivate)
 * [Paranoia](#paranoia)
 * [Rerun](#rerun)
 * [Showcase](#showcase)
 * [Torment](#torment)
+
+### Aetherize
+
+Aetherize is defined as:
+
+```text
+To aetherize, create a token that's a copy of it, then exile that token.
+```
+
+Implementation:
+
+```text
+A:AB$ CopyPermanent | Cost$ 3 U Sac<1/CARDNAME/this creature> | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | RememberTokens$ True | SpellDescription$ Aetherize target creature you control. (To aetherize, create a token that's a copy of it, then exile that token.) | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
 
 ### Ascend
 
@@ -121,6 +144,22 @@ Implementation:
 ```text
 S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 R | CheckSVar$ X | SVarCompare$ GE1 | Description$ Bleed {2}{R} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
 SVar:X:Count$LifeOppsLostThisTurn
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Deception
+
+Deception is defined as:
+
+```text
+Deception {2}{U} ({2}{U}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)
+```
+
+Implementation:
+
+```text
+A:AB$ ChangeZone | Cost$ 2 U Return<1/Creature.attacking+unblocked/unblocked attacker> | PrecostDesc$ Deception | CostDesc$ 2 U | ActivationZone$ Hand | Origin$ Hand | Destination$ Battlefield | Defined$ Self | SpellDescription$ ({2}{U}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
@@ -229,6 +268,22 @@ S:Mode$ Continuous | Affected$ Card.Self | MayPlay$ True | MayPlayAltManaCost$ 1
 T:Mode$ SpellCast | ValidCard$ Card.Self | ValidSA$ Spell.MayPlaySource | Static$ True | Execute$ MirageCleanup
 SVar:MirageCleanup:DB$ DelayedTrigger | Mode$ Phase | Phase$ Cleanup | RememberObjects$ Self | TriggerDescription$ At the beginning of the next cleanup step, sacrifice it. | Execute$ TrigSacrifice
 SVar:TrigSacrifice:DB$ SacrificeAll | Defined$ DelayTriggerRememberedLKI
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Menagerie
+
+Menagerie is defined as:
+
+```text
+Menagerie — As long as there are five or more creature types among creatures you control, [...]
+```
+
+To check if Menagerie is active, you can check this var if it is greater or equal than 5:
+
+```text
+SVar:Menagerie:Count$Valid Creature.YouCtrl$CreatureType
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
