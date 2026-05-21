@@ -1,0 +1,308 @@
+[metadata]
+Code=MSEM_WAY
+Name=Worlds Away
+Date=2019-11-01
+Type=Custom
+Booster=7 Common, 5 Uncommon, 2 RareMythic
+
+[cards]
+1 R Transdimensional Visitor @Aldo Katayanagi
+2 U Aethercrafting @exellero
+3 C Cloudshaper Pilgrim @exellero
+4 R Cyone, Expedition Captain @Brandon Liao
+5 U Farwander Guide @anirudh singh
+6 U Fearless Realmwalker @Dao Le
+7 R Grand Expeditions @Yun Huai Huang
+8 C Honored Spellthreader @Paolo Puggioni
+9 U Journey to the Zhedina @3 LY
+10 U Journey's End @Kerim Akyuz
+11 R Lure of Adventure @Dao Le
+12 U Opulent Proprietor @Nognumnoy
+13 C Outlander Patrol @Dao Le
+14 R Phantom Threader @Irina Nordsol
+15 C Planeshift @Sam Keiser
+16 R Prismatic Champion @Kudos Productions
+17 M Scion of Storms @Castle Age
+18 U Silkweaver Matron @Fahmi Fauzi
+19 R Soulblade @Nino Vecia
+20 C Spellweaver Aureate @exellero
+21 U Survival Experience @Tiago Sousa
+22 C Telarine Ascendant @Gerald Parel & Co.
+23 C Telarine Runecarver @William Gist & Monika Palosz
+24 C Temporal Rift @Jiunn Kuos
+25 U Threadspinner @exellero
+26 R Timestream Sentinel @FreShPAiNt
+27 C Zhedina Confiscator @Polar Engine
+28 U Zhedina Envoys @Aurelien Rantet
+29 C Zhedina Provisioner @Alexandru Negoita
+30 R Across the Threshold @exellero
+31 U Aethermancer's Familiar @Ekaterina Kazartseva
+32 C Benthic Thaumaturge @Ekaterina Burmak
+33 C Brinechum @Grace Liu
+34 R By the Sea @Brian Yuen
+35 U Contested Discovery @Anton Fadeev
+36 C Crest Skimmer @Gael Giudicelli
+37 R Excursion Contingent @Nastasiya Elchaninova
+38 U Fathom Diver @exellero
+39 C Filch @Hugh Pindur
+40 C Glimmer @Nolan Nasser
+41 R Isolated @exellero
+42 U Journey to the Syzygy Spire @3 LY
+43 C Pathshaper Mage @Jan Van Eden
+44 U Portal Fracture @Gustavo Arteaga
+45 R Prodigious Telemancer @Benjamin Giletti
+46 C Quandary Seer @exellero
+47 U Research Experience @Tiago Sousa
+48 C Roguish Instincts @exellero
+49 R Saddled Scuttleback @Jinho Bae
+50 M Scion of Torrents @Raphael Lubke
+51 U Shifting Spaces @Yanchong Lim
+52 C Shiftscale Drake @Milica Celikovic
+53 R Sphinx of Supremacy @Edgar Sanchez Hidalgo
+54 U Stormtide Renegade @Vablo
+55 U Syzygy Navigator @Kekai Kotaki
+56 C Transnaturalist @Biagio D'Alessandro
+57 U Worlds Away @Dominik Mayer
+58 U Aether Corsair @William O'Connor
+59 R Alethea, Syzygy Captain @Devon Cady-Lee
+60 U Beneath the Zhedina @Jilian Young
+61 U Blackrift Dryad @India-Lee Crews
+62 C Cave Diving @Pan Yunfeng
+63 U Fenhauler Gang @India-Lee Crews
+64 C Forgotten Remains @Blaz Porenta
+65 C Gloam Gullet @Hai Hoang
+66 C Gyreon Pickpocket @Artur Mosca
+67 C Gyreon Smuggling @Biagio D'Alessandro
+68 U Harrowing Experience @Tiago Sousa
+69 U Marrow Raptor @Roberto Gomes
+70 U Planar Eulogist @Yohann Schepacz
+71 U Portal Inhibitor @Silvia Meiliani
+72 C Quickmire @Lane Brown
+73 C Razorshell Marauder @Shal Franchini Moraes
+74 U Rift Splicing @Aldo Katanayagi
+75 R Ruin Delver @Etienne Hebinger
+76 M Scion of Desolation @John Tedrick
+77 R Seeker of Lost Secrets @Iqnatius Budi
+78 C Shambling Morass @Alexander Nanitchkov
+79 R Spoils of the Undermarket @Ksenia Mamaeva
+80 C Telarine Riftcrosser @Gerald Parel & Co.
+81 C Thievery @Dominic Barrios
+82 R Umberlure Angler @Anastasia Shestak
+83 R Undermarket Guildmaster @Matt DeMino
+84 U Undermarket Hawker @Alexander Kozachenko
+85 R Zhargetan Reclaimer @CHA WAK
+86 U Amber Reserves @Dasom Hyun
+87 U Archaeological Experience @Tiago Sousa
+88 C Ardent Explorers @Kekai Kotaki
+89 R Champion of Scales @William O'Connor
+90 U Crater Burst @Jay Wong
+91 C Crossing the Rifts @Hugo Puzzuoli
+92 C Exhilarating Journey @Mia Nguyen
+93 C Hot Streak @Andrew Doris
+94 U Hunter of Incantations @Jeff Chen
+95 U Incense Stoker @Shuhao Jiang
+96 R Interplanar Raid @Javier Charro
+97 C Jadycian Empath @Tony Yin
+98 U Journey to the Otherworlds @Paul Canavan
+99 C Kilnfire @Orjan Ruttenborg
+100 U Krismite Purveyor @Aurelien Rantet
+101 R Master of Imports @Pierre Demet
+102 R Possibility Engine @Federico Musetti
+103 U Pyroclastic Maw @Fernanders Sam
+104 C Riftbreaker Mage @Petros Stefanidis
+105 R Riftkeeper Entity @Irina Nordsol
+106 R Rogg, Chaos Treader @Felipe Pagliuso
+107 C Rubble Seer @Billy Christian
+108 M Scion of Calamities @Gal Or
+109 U Shardstorm Elemental @Damien Mammoliti
+110 U Spitfireling @Jeremy Carver
+111 C Thermal Surger @Juan Arrabal
+112 C Voidflare @Wei Wang
+113 R Voliv Ritualist @Nur Iman
+114 R Ageless Weaver @Jakub Rebelka
+115 C Akkrixian Assailants @Shuhao Jiang
+116 C Arbor Protector @Heroes of Camelot
+117 R Crossworld Wanderer @Alisher Mirzoev
+118 U Distant Worlds @ZQ2
+119 U Entropic Harvest @Mariana Ennes
+120 C Far-Realm Guardian @India-Lee Crews
+121 C Feral Ornithax @Cze Peku
+122 U Fungal Swathe @Chris Knight
+123 C Guided by the Weave @Mingchen Shen
+124 U Heartwalker @Alexandru Negoita
+125 U Hunting Experience @Ngan Pham
+126 R Majesty of Nature @Ha 03epe
+127 R Microzoologist @Wilson Lin
+128 U Offworld Surveyors @madspartan013
+129 C Otherworldly Gifts @Khoa Viet
+130 R Phasmopillar @Mozchops
+131 R Planar Genesis @Hugh Pindur
+132 U Relentless Pathcutter @Devin Platts
+133 U Rootbound Awakener @Taylor Christensen
+134 C Saddlesaur Guide @Joe Slucher
+135 M Scion of Flourishing @Iosif Chezan
+136 R Seeds of New Life @Miha Brumec
+137 C Sowing Spring @Yuri Shepherd
+138 U Untethered Disciple @Sam Vankan
+139 U Verdant Renewal @Katarzyna Zielinska
+140 C Wayfinding @Alexandru Negoita
+141 C Worldshaper Adept @exellero
+142 U Aether Road Caravan @Erikas Perl
+143 C Akkrixian Ambassador @John Nugroho
+144 U Basalt Ritualist @Alexandru Negoita
+145 R Blossoming Inspiration @India-Lee Crews
+146 C Caldera Crawlers @Faeria
+147 R Caronas, Eon Wanderer @Xiaochen Fu
+148 M Chronosphere Sovereign @Nino Vecia
+149 C Cryptic Sentinel @Alexandru Negoita
+150 C Customs Lookout @Angga Dwipayana
+151 R Destabilizing the Rifts @Mikail Il
+152 M Dreadfire Tyrant @Tatii Lange
+153 U Epoch Warden @Marcel Mercado
+154 R Gyr, Awoken World @Mauro Belfiore
+155 U Highwild Survivalist @Eilene Cherie
+156 R Iknan, the Last Gildmane @Virgile Boulais
+157 U Into the Unknown @Sylvain Sarrailh
+158 U Journeying Giftbearer @Aurore Folny
+159 M Mabil Fardancer @Hellstern
+160 U Mausoleum Suffragan @Gore Shiring
+161 M Maw of a Thousand Worlds @Vladimir Matyukhin
+162 U Notorious Smuggler @Drock Nicotine
+163 U Othersea Submersible @Yao Chen
+164 C Reborn from the Ashes @ZUDartS Lee
+165 R Rhyolithic Hellkite @Detkef
+166 U Rootwarper @Stoneblade Entertainment
+167 M Salim and Certo @Muhamad Faizal Fikri
+168 M Silksoul Celestial @Ramses Melendez
+169 U Spellclad Auranaught @LiXin Yin
+170 R Stormtide Sovereign @Beto Lima
+171 U Sunchaser Mantas @Faeria
+172 U Syzygy Privateer @William O'Connor
+173 C Undermarket Favors @Benjamin Goutte
+174 R Vedlinn Ross @Grzegorz Przybys
+175 R Vivid Mirage @Mateusz Majewski
+176 U Volcanic Terror @Andrew Mar
+177 C Voliv Skyhunter @Kremena Chipilova
+178 C Wasteland Ravagers @Ryomaninja
+179 M Whisper in the Rift @RAY 84
+180 R Xoqal, World Eater @Xavier Lozzano
+181 C Zephyr Gliders @Keiran Yanner
+182 U Zhedina Coastguard @Alexandru Negoita
+183 C Zhedina Valiant @Kudos Productions
+184 U Aether Crosser @Ben Zweifel
+185 U Arboreal Runes @Tim Kaminski
+186 R Chamber of Reflections @Sebastien Flores
+187 M Dimensional Reshaper @Fraklin Chan
+188 M Ethereal Stone @Tim Guo
+189 U Expedition Post @Albert Urmanov
+190 R Intrepid @Min Nguen
+191 C Krismite Shard @Alexandra Roslik
+192 R Mutalithic Golem @Markus Lenz
+193 U Possibility Scope @Catarina Pulli
+194 R Rippling Curtain @Chris Cold
+195 C Soaring Biome @Denis Kornev
+196 C Telarine Skychaser @Red LR
+197 R Transposition Portal @Alejandro Burdisio
+198 R Zhedina Bazaar @Andrew Bosley
+199 C Zhedina Servitor @Sangyeob Park
+200 C Aether Gateway @N2 Art
+201 U Morphic Verge @Kamila Szutenberg
+202 C Otherworldly Forest @Anthony Brault
+203 C Otherworldly Island @Anthony Brault
+204 C Otherworldly Mountain @Anthony Brault
+205 C Otherworldly Plains @Anthony Brault
+206 C Otherworldly Swamp @Anthony Brault
+207 R Zhedina Exchange @Deiv Calviz
+208 L Plains_WAY @Olexii Shuhurov
+209 L Island_WAY @Avant Choi
+210 L Swamp_WAY @Jing Chun
+211 L Mountain_WAY @Moritz Lacusteanu
+212 L Forest_WAY @Tristan Faure
+213 S Abandoned Monument @Andrew Bosley
+214 S Autumn Canopy @Logan Feliciano
+215 S Blossoming Expanse @Tristan Faure
+216 S Brine Fleet Bay @Yuriy Svalov
+217 S Cloudsteel Summit @Kevin Mark Bonein
+218 S Cursed Wastes @Thomas Stoop
+219 S Dreamscape @Benjamin Jan
+220 S Dustchoked Outpost @ZP Zhang
+221 S Endless Trove @Maxim Timofeev
+222 S Eternal Reactor @Nagy Norbert
+223 S Explorer's Ascent @Ismail Inceoglu
+224 S Fractured Reach @Valeria Kolevatova
+225 S Gathering Beacon @Weston T Jones
+226 S Ghostspore Mire @Igor Khomenko
+227 S Gilded Gulch @Aaron Florento
+228 S Glacial Shelf @Eduard Kolokolov
+229 S Grove of Embers @Andreas Rocha
+230 S Heart of Zhedina @Yasu
+231 S Idravir, the Last City @Cristian Zamfir
+232 S Krismite Vault @Thomas Stoop
+233 S Lotus Lake @Steven Belledin
+234 S Molten Falls @Dasom Hyun
+235 S Monument of Queens @Anato Finnstark
+236 S Nereba, Sandchoked Archives @Thomas Stoop
+237 S Paracosm @Ned Rogers
+238 S Polyp Pools @Theo Prins
+239 S Precursor Sanctum @Alexandr Leskinen
+240 S Promethean Grotto @Maxim Timofeev
+241 S Rainsculpted Gorge @Nolan Nasser
+242 S Razione Racecourse @Jesus Conde
+243 S Shadowcleft Hideout @Chuy de Leon
+244 S Shiftscape Canyon @Thomas du Crest
+245 S Shiftscape Cascade @Thomas du Crest
+246 S Shiftscape Crag @Thomas du Crest
+247 S Shiftscape Grove @Thomas du Crest
+248 S Shiftscape Morass @Thomas du Crest
+249 S Shuddering Node @Mark Ersine
+250 S Skylight Fortress @Florian Herold
+251 S Smuggler's Den @Sergey Vasnev
+252 S Soaring Rainforest @Lee B
+253 S Starlight Beacon @Alyn Spiller
+254 S Steamlit Peaks @Alexandr Pachin
+255 S Tears of Tizuma @Petros Stefanidis
+256 S Timeless Shrine @Nele Diel
+257 S Tomb of Shifting Sands @Thomas Stoop
+258 S Untethered Spire @Julius Granada
+259 S Voliv Edgelands @hw 6523
+260 S Woven Network @Petros Stefanidis
+261 S Zhedina Outskirts @Gabriel Yeganyan
+262 S Zhelid, Planar Academy @Anton Fadeev
+
+[tokens]
+1 w_2_2_elemental_flying @Arthur Gimaldinov
+2 relics_gift @Benjamin Giletti
+3 spectral_whispers @Irina Nordsol
+4 spinning_silk @Alex Pushkarev
+5 sunward @India Lee Crews
+6 u_1_1_otter_draw @Johanna Tarkela
+7 r_4_4_dragon_flying_haste @Thiago Almeida
+8 r_1_1_elemental_prowess_haste @Yasen Stoilov
+9 r_1_1_goblin_haste @Caio Monteiro
+10 g_3_3_elemental @Wyndagger
+11 enmity @Ice Cream Brutus
+12 hefty_load @Melvin Chan
+13 vivification @Addison Rankin
+14 wild_bounty @India Lee Crews
+15 years_of_experience @Jakub Rebelka
+16 pale_shroud @Kim Sokol
+17 salim @Muhamad Faizal Fikri
+18 all_1_1_scout @Daniel Dos Santos
+19 wild_boon @Gods Unchained
+20 winds_of_chance @Hou China
+21 mox_krismite @Elder Scrolls Legends
+22 fading_rift @Mark Erskine
+23 far-off_lands @Denis Kornev
+25 forest_island @eWKn
+26 forest_plains @Isaac Hilyard
+28 island_mountain @ZQ
+29 island_swamp @Alyn Spiller
+31 mountain_forest @Stephane Wootha Richard
+32 mountain_plains @Anton Fadeev
+34 plains_island @Anton Fadeev
+35 plains_swamp @Alexandru Negoita
+37 swamp_forest @Alyn Spiller
+38 swamp_mountain @D1eslx
+
+[other]
+39 emblem_salim_certo @Rudy Siswanto
