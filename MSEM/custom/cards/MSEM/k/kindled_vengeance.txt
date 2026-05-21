@@ -1,0 +1,12 @@
+Name:Kindled Vengeance
+ManaCost:5 R G
+Types:Enchantment
+
+T:Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.Self+wasCastByYou | Execute$ TrigToken | TriggerZones$ Battlefield | TriggerDescription$ When this enchantment enters, if you cast it, create seven 1/1 green Elf creature tokens.
+SVar:TrigToken:DB$ Token | TokenScript$ g_1_1_elf | TokenAmount$ 7
+
+T:Mode$ AttackersDeclared | AttackingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDealsDamage | TriggerDescription$ Whenever you attack, this enchantment deals damage equal to the number of attacking creatures to target creature or planeswalker an opponent controls.
+SVar:TrigDealsDamage:DB$ DealDamage | ValidTgts$ Creature.OppCtrl,Planeswalker.OppCtrl | NumDmg$ X | TgtPrompt$ Select target creature or planeswalker an opponent controls.
+SVar:X:Count$Valid Creature.attacking
+
+Oracle: When this enchantment enters, if you cast it, create seven 1/1 green Elf creature tokens.\nWhenever you attack, this enchantment deals damage equal to the number of attacking creatures to target creature or planeswalker an opponent controls.
