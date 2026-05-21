@@ -1,0 +1,11 @@
+Name:Kindle the Cursed
+ManaCost:2 BR
+Types:Instant
+
+A:SP$ DealDamage | Cost$ 2 BR Sac<1/Creature> | ValidTgts$ Creature | NumDmg$ 3 | DamageMap$ True | SubAbility$ DBDamage | SpellDescription$ CARDNAME deals 3 damage to target creature and 3 damage to that creature's controller.
+SVar:DBDamage:DB$ DealDamage | Defined$ TargetedController | NumDmg$ 3 | SubAbility$ DBDamageResolve
+SVar:DBDamageResolve:DB$ DamageResolve
+
+Oracle:As an additional cost to cast this spell, sacrifice a creature.\nKindle the Cursed deals 3 damage to target creature and 3 damage to that creature's controller.
+
+SVar:AIPreference:SacCost$Creature
