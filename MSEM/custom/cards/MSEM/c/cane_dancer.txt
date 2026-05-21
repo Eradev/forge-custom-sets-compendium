@@ -1,0 +1,11 @@
+Name:Cane Dancer
+ManaCost:1 U
+Types:Creature Human Monk
+PT:1/2
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPlay | TriggerDescription$ SpellDescription$ When this creature enters, you may cast target blue instant or sorcery card with mana value 2 from your graveyard without paying its mana cost. If that spell would be put into your graveyard, exile it instead.
+SVar:TrigPlay:DB$ Play | ValidTgts$ Instant.YouCtrl+Blue+cmcEQ2,Sorcery.YouCtrl+Blue+cmcEQ2 | TgtZone$ Graveyard | WithoutManaCost$ True | Optional$ True | TgtPrompt$ Select target blue instant or sorcery card with mana value 2 | AILogic$ ReplaySpell | ValidSA$ Spell | ExileOnMoved$ Graveyard | ReplaceGraveyard$ Exile
+
+Oracle:Flash\nWhen this creature enters, you may cast target blue instant or sorcery card with mana value 2 from your graveyard without paying its mana cost. If that spell would be put into your graveyard, exile it instead.
