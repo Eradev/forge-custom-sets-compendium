@@ -1,0 +1,9 @@
+Name:Mentorb
+ManaCost:2
+Types:Artifact
+
+S:Mode$ ReduceCost | ValidCard$ Card | ValidSpell$ Activated.YouCtrl | Activator$ You | Amount$ 1 | UpTo$ True | MinMana$ 1 | Description$ Activated abilities you control cost up to {1} less to activate. This effect can't reduce the amount of mana an ability costs to activate to less than one mana.
+
+Oracle:Activated abilities you control cost up to {1} less to activate. This effect can't reduce the amount of mana an ability costs to activate to less than one mana.
+
+AI:RemoveDeck:Random
