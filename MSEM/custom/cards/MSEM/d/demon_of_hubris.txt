@@ -1,0 +1,15 @@
+Name:Demon of Hubris
+ManaCost:4 B B
+Types:Creature Demon
+PT:6/6
+
+A:AB$ Draw | Cost$ 1 B Sac<1/Creature.Other/another creature> | SubAbility$ DBToken | SpellDescription$ Draw a card and create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+SVar:DBToken:DB$ Token | TokenScript$ c_a_idol_sac
+
+A:AB$ ChangeZone | Cost$ 2 B Sac<3/Idol> | Origin$ Graveyard | Destination$ Battlefield | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Return this creature from your graveyard to the battlefield. Activate only as a sorcery.
+
+Oracle:{1}{B}, Sacrifice another creature: Draw a card and create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")\n{2}{B}, Sacrifice three Idols: Return this creature from your graveyard to the battlefield. Activate only as a sorcery.
+
+SVar:DiscardMe:2
+DeckHints:Type$Idol
+DeckHas:Ability$Token|Sacrifice|Counters|Graveyard & Type$Idol|Artifact
