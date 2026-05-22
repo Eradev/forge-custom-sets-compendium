@@ -1,0 +1,12 @@
+Name:Hill of Souls
+ManaCost:no cost
+Types:Land
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever a creature you control dies, put a soul counter on this land.
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ SOUL
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Cost$ T SubCounter<1/SOUL> | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+Oracle:Whenever a creature you control dies, put a soul counter on this land.\n{T}: Add {C}.\n{T}, Remove a soul counter from this land: Add one mana of any color.
