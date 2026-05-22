@@ -161,6 +161,15 @@ Type=Custom
 156 S Curse of Doubt @jiuri
 157 S Hunter's Mark (MSEM) @Scott Uminga ${"flavorName": "Hunter's Mark"}
 158 S Skirsdag Edict @dusk ming
+159 M Nightmare Riders @Tervola
+160 M Journey Beyond @mnstrcndy, Wesley Lin, AlectorFencer 
+161 M Ragavan, Most Wanted @Hiroshi Yugen
+162 M Nebula of Empty Gold @明ノ宮 飛鳥
+163 M Infectious Ego @Leon Grand
+164 M Unquenched Greed @MikuroAkuma
+165 M Swarming Midden @flandore
+166 M Verdant Sanctuary @すてる子
+167 M Lose Your Mind @海源
 
 [tokens]
 0 g_1_1_saproling @AndrewMcIntosh
