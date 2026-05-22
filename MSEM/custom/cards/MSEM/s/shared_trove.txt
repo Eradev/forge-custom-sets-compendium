@@ -1,0 +1,7 @@
+Name:Shared Trove
+ManaCost:3
+Types:Artifact
+
+A:AB$ Draw | Cost$ T | Defined$ Player | SpellDescription$ Each player draws a card.
+
+Oracle:{T}: Each player draws a card.
