@@ -1,0 +1,9 @@
+Name:Moonshadow Abyss
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Cost$ T ExileFromGrave<2/Card> | Produced$ Combo U B | SpellDescription$ Add {U} or {B}.
+
+Oracle:{T}: Add {C}.\n{T}, Exile two cards from your graveyard: Add {U} or {B}.
