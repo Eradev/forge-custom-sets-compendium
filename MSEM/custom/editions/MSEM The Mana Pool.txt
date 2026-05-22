@@ -1,0 +1,114 @@
+[metadata]
+Code=MSEM_L2
+Name=The Mana Pool
+Date=2018-08-08
+Type=Custom
+
+[cards]
+0 C Wastes @Lee B
+1 R Ocean Monastery @Alexey Shugurov
+2 R Floodwater Depths @Erin Lin
+3 R Shardstone Rift @choi keun hoon
+4 R Timber Range @JunYeong Shin
+5 R Amber Hills @Dimitar Marinski
+6 R Barren Desolation @Chenzy Chen
+7 R Magmatic Torrent @Devin Gao
+8 R Grim Bastion @Anthony Avon
+9 R Sunlit Highland @Vitaly Zhdanov
+10 R Mysterious Cataract @Samuel Michlap
+21 R Pool of Light @Andreas Rocha
+22 R Flooded Morass @Vladis Fender
+23 R Lavatorn Fields @Yeonji Rhee
+24 R Flourishing Crevasse @Alex Kintner
+25 R Heart of the Glade @Peter Rossa
+26 R Gloomcover Steppe @Eric Basiletti
+27 R Frostfire Geysers @Dominique Van Velsen
+28 R Fungal Mire @James Combridge
+29 R Spiraling Canyon @Kamila Szutenberg
+30 R Lush Oasis @Samuel Pereira
+31 R Port Town @Lucas Staniec
+32 R Choked Estuary @Devin Gao
+33 R Foreboding Ruins @Amit Naik
+34 R Game Trail @Cliff Childs
+35 R Fortified Village @Veli Nyström
+36 R Legacy Foundations @Wei Guan
+37 R Horizon of Origins @Alexey Shugurov
+38 R Deserted Trail @Clint Cearley
+39 R Imperial Barracks @Jack Eaves
+40 R Flourishing Waterways @Luca Pisanu
+41 R Spires of Telenia @inetgrafx
+42 R Moonshadow Abyss @Nele Diel
+43 R Academy Wastes @Everlite
+44 R Gryla Canyon @Sergey Demidov
+45 R Priest's Altar @Gao Zhingping
+46 R Deathwind Expanse @Takumer Homma
+47 R Stormcaster's Tower @Oscar Perez
+48 R Grove of Reversal @PAvellKiD
+49 R Tirenan Market @Zhla2chen
+50 R Quintok Station @Adam Kuczek
+51 R Angeltouched Crag @Nin Jackson
+52 R Angeltouched Marsh @John Thacker
+53 R Angeltouched Cavern @Young Kim
+54 R Angeltouched Saltflat @Joon Ahn
+55 R Angeltouched Garden @Won Jun Tae
+56 U Bustling Docks @Roberto Gatto
+57 U Interlocked Waterways @Ismail Inceoglu
+58 U Shadowed Slums @Dongjun Lu
+59 U Derelict Amphitheatre @Casandre Bolan
+60 U Isolated Cloister @Rémy A. S. Diaz
+61 R Mosecf, the Sunseeker's Path @Liu Kang
+62 R Sea Of Skies Beyond @Jacob Duncan
+63 R Cradle of Corruption @Nele Diel
+64 R Ralora, Unforgiving Depths @Goran Bukvic
+65 R Elrayin, the Manaroot @Finnian MacManus
+71 U Collapsing Ground @Sviatoslav Gerasimchuk
+72 C Command Tower @Michal Kus
+73 C Crumbling Vestige @Konstantinos Skenteridis
+74 R Derelict Town @Deiv Calviz
+75 R Desert Temple @Alexey Shugurov
+76 R Halls of Renown @Thomas Salonga
+77 R The High Prairies @ZUDartS Lee
+78 U Hill of Souls @Tore Wesolowski
+79 U Shrine of the Six Pillars @Grady Frederick
+80 R Shrouded Sanctuary @Sebastien Hue
+81 U Temple of Brilliance @ZUDartS Lee
+82 R Channeling Stone @Huang Qin
+91 R Ahl's Study @Alexander Dudar
+92 M Citadel of Denial @Chris Ostrowski
+93 M Kellythross' Workshop @Donato Giancola
+94 R Whiterun Harbor @Cristian Chihaia
+96 C Adaptive Terrains @Flint Chen
+97 R Ancient Ossuary @Erin Arik
+100 R Wayfarer's Shrine @Aurélie Bouquet
+101 R Clutch of the Coil @Rajdeep Choudhury
+102 R Edge of the World @Christian Benavides
+103 U Forgotten Haunt @Dave Jones
+104 U Heavenly Temple @Sam Keiser
+106 R Memorial of the Fallen @Tore Wesolowski
+107 R Midnight Keep @Ryan Groskamp
+108 U Perilous Passage @Alexey Shugurov
+109 M Planar Alignment @Fay D. S.
+112 U Ripping Wilds @Zoupe
+113 U Shikai's Redoubt @Chris Ostrowski
+114 R Sunrise Orchard @Sylvain Sarrailh
+115 M Whiterun Gates @Jon Dunham
+116 U Jade Temple @Dimitar Marinski
+117 R Chamber of Splendor @Paperblue
+118 C Dragonfly Shrine @Don Tang
+119 R Palace of Reflections @Jay Wong
+120 U Shengin Heartland @Anh Tran
+146 R Bygone Guardian @Kisoo Lee
+147 R Aerie's Pillar @Prathamesh More
+148 R Forgotten Pit @Roman Tishenin
+149 R Rousing Rubble @Simone Mandl
+150 R Lumbering Hillock @Brian Valeza
+151 R Sedate Tundra @Dual Brush
+152 R Murmuring Falls @David Chumilla Liccioli
+153 R Crumbling Precipice @Liam Wang
+154 R Rampant Summit @inshoo1
+155 R Resplendent Substratum @badger922 he
+156 R Arctic Mine @Sandro Rybak
+157 R Crystal Cavern @Allen Song
+158 R Nomad's Township @Imad Awan
+159 R Forgotten Steppe @Xavier Ward
+160 R Shifting Glade @Balasz Ketyi
