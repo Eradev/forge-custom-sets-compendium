@@ -1,0 +1,14 @@
+Name:Naiad of the Glen
+ManaCost:1 G
+Types:Creature Dryad
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+SVar:TrigToken:DB$ Token | TokenScript$ c_a_idol_sac
+
+S:Mode$ Continuous | Affected$ Card.Self+counters_GE1_P1P1 | AddKeyword$ Trample | Description$ This creature has trample as long as it has a +1/+1 counter on it.
+
+Oracle:When this creature enters, create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")\nThis creature has trample as long as it has a +1/+1 counter on it.
+
+DeckHints:Ability$Counters
+DeckHas:Ability$Token|Sacrifice|Counters & Type$Idol|Artifact
