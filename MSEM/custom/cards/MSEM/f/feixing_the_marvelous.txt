@@ -1,0 +1,13 @@
+Name:Fei'Xing the Marvelous
+ManaCost:2 G U
+Types:Legendary Creature Drake
+PT:3/3
+
+K:Flying
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ At the beginning of your upkeep, create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+SVar:TrigToken:DB$ Token | TokenScript$ c_a_idol_sac
+
+Oracle:Flying\nAt the beginning of your upkeep, create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+
+DeckHas:Ability$Token|Sacrifice|Counters & Type$Idol|Artifact
