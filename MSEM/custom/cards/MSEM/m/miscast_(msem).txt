@@ -1,0 +1,7 @@
+Name:Miscast (MSEM)
+ManaCost:2 U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | ValidTgts$ Card | SpellDescription$ Counter target spell.
+
+Oracle:Counter target spell.
