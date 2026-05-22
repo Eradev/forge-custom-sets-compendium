@@ -7,4 +7,4 @@ A:AB$ Token | Cost$ 2 Sac<1/Creature.Other> | TokenScript$ c_a_idol_sac | SpellD
 
 Oracle:{2}, Sacrifice another creature: Create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
 
-DeckHas:Ability$Token|Sacrifice & Type$Idol|Artfiact
+DeckHas:Ability$Token|Sacrifice|Counters & Type$Idol|Artfiact

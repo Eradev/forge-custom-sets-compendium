@@ -12,4 +12,4 @@ Oracle:When this creature enters, create an Idol token. (It's an artifact with "
 
 SVar:PlayMain1:TRUE
 DeckHints:Ability$Counters
-DeckHas:Ability$Token
+DeckHas:Ability$Token|Sacrifice|Counters & Type$Idol|Artifact
