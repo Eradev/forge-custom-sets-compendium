@@ -1,0 +1,9 @@
+Name:Shrouded Sanctuary
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T PayLife<1> | Produced$ C | RestrictValid$ Spell.Instant,Spell.Sorcery | SpellDescription$ Add one mana of any color. Spend this mana only to cast an instant or sorcery spell.
+
+Oracle:{T}, Pay 1 life: Add one mana of any color. Spend this mana only to cast an instant or sorcery spell.
+
+DeckNeeds:Type$Instant|Sorcery
