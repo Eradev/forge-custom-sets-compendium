@@ -1,0 +1,9 @@
+Name:Whispering Halls
+ManaCost:1
+Types:Artifact
+
+S:Mode$ Continuous | Affected$ Creature | AddHiddenKeyword$ CARDNAME can't attack alone. & CARDNAME can't block alone. | Description$ Creatures can't attack or block alone.
+
+Oracle:Creatures can't attack or block alone.
+
+SVar:NonStackingEffect:True
