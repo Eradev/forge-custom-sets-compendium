@@ -1,0 +1,8 @@
+Name:Flourishing Crevasse
+ManaCost:no cost
+Types:Land Mountain Forest
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you control a basic Mountain or a basic Forest.
+SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Land.Mountain+Basic+YouCtrl,Land.Forest+Basic+YouCtrl | ConditionCompare$ LT1
+
+Oracle:({T}: Add {R} or {G}.)\nThis land tapped unless you control a basic Mountain or a basic Forest.
