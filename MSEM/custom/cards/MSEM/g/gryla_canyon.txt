@@ -1,0 +1,9 @@
+Name:Gryla Canyon
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Cost$ T ExileFromGrave<2/Card> | Produced$ Combo R G | SpellDescription$ Add {R} or {G}.
+
+Oracle:{T}: Add {C}.\n{T}, Exile two cards from your graveyard: Add {R} or {G}.
