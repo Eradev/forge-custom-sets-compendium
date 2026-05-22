@@ -2,7 +2,7 @@ Name:Memorial of the Fallen
 ManaCost:no cost
 Types:Land
 
-A:AB$ Mana | Cost$ T | Produced$ C | Amount$ 1 | SpellDescription$ Add {C}.
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
 
 A:AB$ ChangeZoneAll | Cost$ T Exile<1/CARDNAME/this land> | ChangeType$ Card.YouOwn | Origin$ Graveyard | Destination$ Library | Shuffle$ True | SpellDescription$ Shuffle your graveyard into your library.
 

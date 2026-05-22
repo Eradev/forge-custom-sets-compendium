@@ -4,7 +4,7 @@ Types:Land
 
 A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
 
-A:AB$ Mana | Cost$ T | Produced$ Any | Amount$ 1 | RestrictValid$ Spell.Trooper | SpellDescription$ Add one mana of any color. Spend this mana only to cast a Trooper spell.
+A:AB$ Mana | Cost$ T | Produced$ Any | RestrictValid$ Spell.Trooper | SpellDescription$ Add one mana of any color. Spend this mana only to cast a Trooper spell.
 
 A:AB$ Token | Cost$ 5 T | TokenScript$ w_1_1_trooper | SpellDescription$ Create a 1/1 white Trooper creature token.
 

@@ -4,6 +4,6 @@ Types:Creature Human Wizard
 PT:1/1
 
 S:Mode$ Continuous | Affected$ Creature.Colorless+YouCtrl | AddAbility$ DBMana | Description$ Colorless creatures you control have "{T}: Add {C}."
-SVar:DBMana:AB$ Mana | Cost$ T | Produced$ C | Amount$ 1 | SpellDescription$ Add {C}.
+SVar:DBMana:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
 
 Oracle:Colorless creatures you control have "{T}: Add {C}."

@@ -2,7 +2,7 @@ Name:House of Forgotten Whispers
 ManaCost:no cost
 Types:Land
 
-A:AB$ Mana | Cost$ T | Produced$ C | Amount$ 1 | SpellDescription$ Add {C}.
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
 
 A:AB$ Draw | Cost$ 1 T Sac<1/CARDNAME/this land> | SpellDescription$ Draw a card.
 

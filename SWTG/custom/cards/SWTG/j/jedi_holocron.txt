@@ -4,7 +4,7 @@ Types:Artifact
 
 A:AB$ PutCounter | Cost$ T | CounterType$ CHARGE | CounterNum$ 1 | SpellDescription$ Put a charge counter on CARDNAME.
 
-A:AB$ Mana | Cost$ T SubCounter<1/CHARGE> | Produced$ Combo G W U | Amount$ 1 | SpellDescription$ Add {G}, {W}, or {U}.
+A:AB$ Mana | Cost$ T SubCounter<1/CHARGE> | Produced$ Combo G W U | SpellDescription$ Add {G}, {W}, or {U}.
 
 A:AB$ Charm | Cost$ T SubCounter<2/CHARGE> | Choices$ ManaGW,ManaWU | CharmNum$ 1 | SpellDescription$ Add {G}{W} or {W}{U}.
 SVar:ManaGW:DB$ Mana | Produced$ G W | SpellDescription$ Add {G}{W}
