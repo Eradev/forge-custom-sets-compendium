@@ -1,0 +1,14 @@
+Name:The High Prairies
+ManaCost:no cost
+Types:Legendary Land
+
+K:Vanishing:5
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+Oracle:Vanishing 5 (This permanent enters with five time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nThe High Prairies enters tapped.\n{T}: Add one mana of any color.
+
+DeckHints:Ability$Proliferate
