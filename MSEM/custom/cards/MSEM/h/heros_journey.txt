@@ -1,0 +1,10 @@
+Name:Hero's Journey
+ManaCost:2 G
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Land.Basic | ChangeTypeDesc$ basic land | SubAbility$ DBToken | SpellDescription$ Search your library for a basic land card and put it onto the battlefield, then shuffle. Create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+SVar:DBToken:DB$ Token | TokenScript$ c_a_idol_sac
+
+Oracle:Search your library for a basic land card and put it onto the battlefield, then shuffle. Create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+
+DeckHas:Ability$Token|Sacrifice|Counters & Type$Idol|Artifact
