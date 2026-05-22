@@ -1,0 +1,9 @@
+Name:Titan Snare
+ManaCost:2
+Types:Artifact
+
+S:Mode$ CantBeCast | ValidCard$ Card.cmcGE5 | Description$ Spells with mana value 5 or greater can't be cast.
+
+Oracle:Spells with mana value 5 or greater can't be cast.
+
+SVar:NonStackingEffect:True
