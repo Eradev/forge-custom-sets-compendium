@@ -31,19 +31,19 @@ Video Horror System (VHS)             -  97% (83/86)
     * Maddened Preacher
     * Snowfield Doppelganger
     * Wiretapper
-Nangjiao In Bloom (NJB)               -  31% (94/297)
+Nangjiao In Bloom (NJB)               -  35% (106/297)
   Missing cards:
     * Diao of the Opal Infantry
 Riddles of Revio (RVO)                -   5% (14/272)
 Worlds Away (WAY)                     -   3% (9/262)
-Storytime (101)                       -  13% (14/101)
+Storytime (101)                       -  14% (15/101)
 Kaleidoscope (KLC)                    -  100%
 Path of Shadows (PSA)                 -  89% (187/209)
   Missing cards:
      * Every card with Inscribe, or referencing it.
      * The Sacred Gate
 A Tourney at Whiterun (TWR)           -  100%
-Tides of War (TOW)                    -  29% (80/271)
+Tides of War (TOW)                    -  29% (79/271)
 Pyramids of Atuum (POA)               -  98% (126/128)
   Missing cards:
     * Righteous Priestess
@@ -149,6 +149,8 @@ SVar:X:Count$LifeOppsLostThisTurn
 [Jump to top](#keywords-and-mechanisms-implementation)
 
 ### Deception
+
+> It's the equivalent to Ninjutsu.
 
 Deception is defined as:
 
