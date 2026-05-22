@@ -1,0 +1,8 @@
+Name:Heart of the Glade
+ManaCost:no cost
+Types:Land Forest Plains
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land tapped unless you control a basic Forest or a basic Plains.
+SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Land.Forest+Basic+YouCtrl,Land.Plains+Basic+YouCtrl | ConditionCompare$ LT1
+
+Oracle:({T}: Add {R} or {G}.)\nThis land tapped unless you control a basic Forest or a basic Plains.
