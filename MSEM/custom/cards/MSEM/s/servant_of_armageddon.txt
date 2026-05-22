@@ -1,0 +1,11 @@
+Name:Servant of Armageddon
+ManaCost:4
+Types:Artifact Creature Construct
+PT:0/1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigDestroyAll | TriggerDescription$ When this creature dies, destroy all creatures.
+SVar:TrigDestroyAll:DB$ DestroyAll | ValidCards$ Creature
+
+Oracle:When this creature dies, destroy all creatures.
+
+AI:RemoveDeck:All
