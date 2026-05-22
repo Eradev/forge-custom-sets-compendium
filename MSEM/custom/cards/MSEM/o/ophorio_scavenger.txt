@@ -1,0 +1,14 @@
+Name:Ophorio Scavenger
+ManaCost:1 G
+Types:Creature Elf Rogue
+PT:1/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+SVar:TrigToken:DB$ Token | TokenScript$ c_a_idol_sac
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | Condition$ Metalcraft | Description$ This creature gets +1/+1 as long as you control three or more artifacts.
+
+Oracle:When this creature enters, create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")\nThis creature gets +1/+1 as long as you control three or more artifacts.
+
+SVar:BuffedBy:Artifact
+DeckHas:Ability$Token|Sacrifice|Counters & Type$Idol|Artifact
