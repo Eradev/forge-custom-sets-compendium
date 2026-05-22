@@ -1,0 +1,11 @@
+Name:Statuary Forge
+ManaCost:3
+Types:Artifact
+
+A:AB$ Mana | Cost$ T | Produced$ C | Amount$ 1 | SpellDescription$ Add {C}.
+
+A:AB$ Token | Cost$ 3 T | TokenScript$ c_a_idol_sac | SpellDescription$ Create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+
+Oracle:{T}: Add {C}\n{3}, {T}: Create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+
+DeckHas:Ability$Token|Sacrifice|Counters & Type$Idol|Artifact
