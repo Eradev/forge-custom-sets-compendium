@@ -1,0 +1,10 @@
+Name:Scatter Memories as Ashes
+ManaCost:2 B
+Types:Sorcery
+
+A:SP$ Discard | ValidTgts$ Player | Mode$ RevealYouChoose | DiscardValid$ Card.nonLand | NumCards$ 1 | SubAbility$ DBToken | SpellDescription$ Target player reveals their hand. You choose a nonland card from it. That player discards that card. Create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+SVar:DBToken:DB$ Token | TokenScript$ c_a_idol_sac
+
+Oracle:Target player reveals their hand. You choose a nonland card from it. That player discards that card. Create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+
+DeckHas:Ability$Token|Sacrifice|Counters & Type$Idol|Artifact
