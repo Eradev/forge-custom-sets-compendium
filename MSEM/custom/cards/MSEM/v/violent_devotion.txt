@@ -1,0 +1,10 @@
+Name:Violent Devotion
+ManaCost:1 R
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Artifact.!token | SubAbility$ DBToken | TgtPrompt$ Select target nontoken artifact or enchantment an opponent controls | StackDescription$ Destroy {c:Targeted}. | SpellDescription$ Destroy target nontoken artifact. Create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+SVar:DBToken:DB$ Token | TokenScript$ c_a_idol_sac
+
+Oracle:Destroy target nontoken artifact. Create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+
+DeckHas:Ability$Token|Sacrifice|Counters & Type$Idol|Artifact
