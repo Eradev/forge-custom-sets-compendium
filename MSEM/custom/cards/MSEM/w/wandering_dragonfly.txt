@@ -1,0 +1,11 @@
+Name:Wandering Dragonfly
+ManaCost:3 U
+Types:Creature Insect
+PT:2/3
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self,Creature.Other+YouCtrl | Execute$ TrigLoot | TriggerDescription$ Whenever this creature or another creature you control enters, you may draw a card. If you do, discard a card.
+SVar:TrigLoot:AB$ Discard | Defined$ You | Mode$ TgtChoose | Cost$ Draw<1/You>
+
+Oracle:Flying\nWhenever this creature or another creature you control enters, you may draw a card. If you do, discard a card.
