@@ -8,5 +8,5 @@ SVar:TrigToken:DB$ Token | TokenScript$ c_2_2_spirit
 
 Oracle:When this creature dies, create a 2/2 colorless Spirit creature token.
 
-DeckHas:Ability$Token
 SVar:SacMe:2
+DeckHas:Ability$Token & Type$Spirit & Color$Colorless

@@ -7,4 +7,4 @@ S:Mode$ Continuous | Affected$ Creature.Legendary+YouCtrl | AddKeyword$ Hexproof
 
 Oracle:Legendary creatures you control have hexproof.
 
-DeckNeeds:Type$Legendary & Type$Creature
+DeckNeeds:Type$Legendary

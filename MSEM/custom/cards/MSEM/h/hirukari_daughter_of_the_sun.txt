@@ -14,4 +14,5 @@ SVar:DBIgnoreLegend:Mode$ IgnoreLegendRule | ValidCard$ Creature.YouCtrl,Planesw
 
 Oracle:Affinity for planeswalkers (This spell costs {1} less to cast for each planeswalker you control.)\n[+2]: Create a 2/2 colorless Spirit creature token.\n[-3]: Double the number of each kind of counter on another target permanent.\n[-9]: You get an emblem with "The 'legend rule' doesn't apply to creatures and planeswalkers you control."
 
-DeckHints:Ability$Counters|Token
+DeckHints:Ability$Counters|Planeswalker
+DeckHas:Ability$Token & Type$Spirit & Color$Colorless

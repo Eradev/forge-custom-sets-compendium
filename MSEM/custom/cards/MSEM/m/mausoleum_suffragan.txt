@@ -10,3 +10,6 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Artifa
 SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 1
 
 Oracle:When this creature enters, create a white and black Aura enchantment token named Pale Shroud attached to target creature. The token has enchant creature and "Enchanted creature gets +1/+1 and has lifelink."\nWhenever an artifact or enchantment you control enters, each opponent loses 1 life.
+
+DeckHints:Type$Artifact|Enchantment
+DeckHas:Ability$Token

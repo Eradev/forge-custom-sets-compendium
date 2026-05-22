@@ -10,3 +10,5 @@ SVar:RerunDelayTrig:DB$ DelayedTrigger | Mode$ ChangesZone | ValidCard$ Creature
 SVar:CastRerun:DB$ Play | Defined$ Remembered | WithoutManaCost$ True
 
 Oracle:Create an 8/8 blue Kraken creature token with hexproof.\nRerun (If you cast this from your hand, exile it as it resolves. Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.)
+
+DeckHas:Ability$Token & Type$Kraken

@@ -11,3 +11,5 @@ SVar:TrigToken:DB$ Token | TokenScript$ g_1_1_snake_poisonous | TokenTapped$ Tru
 K:Equip:2
 
 Oracle:Equipped creature gets +2/+2 and has poisonous 2. (Whenever that creature deals combat damage to a player, that player gets two poison counters. A player with ten or more poison counters loses the game.)\nWhenever equipped creature attacks, create a 1/1 green Snake creature token with poisonous 1 that's tapped and attacking. Exile that token at end of combat.\nEquip {2}
+
+DeckHas:Ability$Token & Type$Snake

@@ -9,3 +9,5 @@ T:Mode$ BecomeRenowned | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield
 SVar:TrigToken:DB$ Token | TokenScript$ r_1_1_soldier_haste
 
 Oracle:Renown 1 (When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned.)\nWhenever a creature you control becomes renowned, create a 1/1 red Soldier creature token with haste.
+
+DeckHas:Ability$Token & Type$Soldier

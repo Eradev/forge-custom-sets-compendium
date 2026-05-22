@@ -13,4 +13,4 @@ K:Equip:2
 
 Oracle:Equipped creature gets +2/+2 and has protection from colorless and from multicolored. This effect doesn't remove this Equipment. (It can't be targeted, dealt damage, enchanted, or equipped by anything colorless or multicolored.)\nWhenever equipped creature deals combat damage to a player, you create a 2/2 colorless Spirit creature token and that player exiles the top three cards of their library.\nEquip {2}
 
-DeckHas:Ability$Token
+DeckHas:Ability$Token & Type$Spirit & Color$Colorless

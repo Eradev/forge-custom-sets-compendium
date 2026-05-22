@@ -7,3 +7,5 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.S
 SVar:TrigToken:DB$ Token | TokenAmount$ 2 | TokenScript$ rg_2_2_elk
 
 Oracle:When this creature enters, create two 2/2 red and green Elk creature tokens.
+
+DeckHas:Ability$Token

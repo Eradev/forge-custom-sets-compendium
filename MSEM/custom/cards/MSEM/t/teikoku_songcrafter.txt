@@ -11,4 +11,5 @@ SVar:TrigPutCounter:DB$ PutCounter | Defined$ TriggeredCardLKICopy | CounterType
 
 Oracle:When this creature enters, create a 2/2 colorless Spirit creature token.\nWhenever a colorless creature you control enters, put a +1/+1 counter on it.
 
-DeckHints:Color$Colorless & Type$Creature
+DeckHints:Color$Colorless
+DeckHas:Ability$Token & Type$Spirit & Color$Colorless

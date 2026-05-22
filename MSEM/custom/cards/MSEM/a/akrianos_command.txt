@@ -14,3 +14,5 @@ SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature | TgtPrompt$ Select tar
 SVar:DBUntap:DB$ Untap | Defined$ Targeted
 
 Oracle:Choose two —\n• Target player creates two 1/1 white Soldier creature tokens.\n• Exile target attacking creature.\n• Creatures target player controls gain indestructible until end of turn.\n• Put a +1/+1 counter on target creature and untap it.
+
+DeckHas:Ability$Token & Type$Soldier

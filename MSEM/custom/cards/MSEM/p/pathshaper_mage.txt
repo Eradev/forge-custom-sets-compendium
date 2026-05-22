@@ -12,5 +12,5 @@ SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
 Oracle:Whenever you create one or more tokens, scry 1.\n{3}{U}, Sacrifice this creature: Aetherize target creature you control. (To aetherize, create a token that's a copy of it, then exile that token.)
 
-DeckHas:Ability$Token
 DeckNeeds:Ability$Token
+DeckHas:Ability$Token

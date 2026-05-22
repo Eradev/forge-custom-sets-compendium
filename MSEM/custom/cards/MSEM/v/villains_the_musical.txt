@@ -17,4 +17,5 @@ SVar:X:Count$Valid Permanent.token+YouCtrl
 
 Oracle:Whenever a creature you control enters, each opponent loses 1 life.\nI, II — Create a 1/1 black Actor creature token with lifelink.\nIII — Each opponent loses life equal to the number of tokens you control. You gain life equal to the life lost this way.
 
+DeckHints:Ability$Token
 DeckHas:Ability$Token & Type$Actor

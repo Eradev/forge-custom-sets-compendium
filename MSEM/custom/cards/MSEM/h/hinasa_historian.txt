@@ -11,4 +11,5 @@ SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 1
 
 Oracle:When this creature enters, create a 2/2 colorless Spirit creature token.\nWhenever a colorless creature you control enters, you gain 1 life.
 
-DeckHints:Color$Colorless & Type$Creature
+DeckHints:Color$Colorless
+DeckHas:Ability$Token & Type$Spirit & Color$Colorless

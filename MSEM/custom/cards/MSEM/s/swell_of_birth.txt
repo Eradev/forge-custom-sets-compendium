@@ -7,3 +7,5 @@ SVar:DBCharge:DB$ PutCounter | CounterType$ Charge | CounterNum$ 1 | SubAbility$
 SVar:DBToken:DB$ Token | TokenScript$ c_1_1_elemental | TokenAmount$ Count$CardCounters.CHARGE
 
 Oracle:At the beginning of your upkeep, put a charge counter on this enchantment, then create a 1/1 colorless Elemental creature token for each charge counter on it.
+
+DeckHas:Ability$Token & Type$Elemental & Color$Colorless

@@ -13,3 +13,5 @@ Oracle:Whenever High-Priestess Nebti attacks or blocks, create a 2/2 white Cat c
 
 SVar:HasAttackEffect:TRUE
 SVar:HasBlockEffect:TRUE
+DeckHints:Type$Cat
+DeckHas:Ability$Token & Type$Cat

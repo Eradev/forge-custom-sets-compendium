@@ -8,3 +8,5 @@ SVar:TrigExile:DB$ ChangeZone | Defined$ TriggeredNewCardLKICopy | Origin$ Grave
 SVar:DBToken:DB$ Token | TokenScript$ c_2_2_spirit
 
 Oracle:Whenever another nontoken creature you control dies, you may exile it. If you do, create a 2/2 colorless Spirit creature token.
+
+DeckHas:Ability$Token & Type$Spirit & Color$Colorless

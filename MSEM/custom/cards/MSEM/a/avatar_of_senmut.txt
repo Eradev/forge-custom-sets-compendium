@@ -10,5 +10,6 @@ SVar:X:Count$Valid Island.YouCtrl
 
 Oracle:Crocodile creatures you control get +1/+1.\nThis creature and Crocodile creatures you control can't be blocked as long as you control four or more Islands.
 
-DeckHints:Type$Crocodile
 SVar:BuffedBy:Island
+DeckHints:Type$Crocodile
+DeckHas:Type$Crocodile

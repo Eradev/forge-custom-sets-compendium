@@ -7,3 +7,5 @@ A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ 3 | SpellDescription$ CARDNAME deals
 A:AB$ Token | Cost$ 2 R ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | TokenScript$ r_1_1_elemental | TokenAmount$ 2 | Tapped$ True | SpellDescription$ Create two tapped 1/1 red Elemental creature token.
 
 Oracle:Roggar's Frenzy deals 3 damage to any target.\n{2}{R}, Exile this card from your graveyard: Create two tapped 1/1 red Elemental creature token.
+
+DeckHas:Ability$Token & Type$Elemental

@@ -10,3 +10,6 @@ T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ 
 SVar:TrigLoseLife:DB$ LoseLife | Defined$ Opponent | LifeAmount$ 1
 
 Oracle:When this creature enters, create a 2/2 colorless Spirit creature token.\nWhenever a colorless creature you control dies, each opponent loses 1 life.
+
+DeckHints:Color$Colorless
+DeckHas:Ability$Token & Type$Spirit & Color$Colorless

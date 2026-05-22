@@ -12,3 +12,5 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Graveyard | ValidCard$ Card.Sel
 SVar:TrigShuffle:DB$ ChangeZone | Origin$ Graveyard | Destination$ Library | Shuffle$ True | Defined$ TriggeredCardLKICopy
 
 Oracle:This creature can't be blocked by creatures with flying.\nWhen this creature enters, create two 6/6 red Wurm creature tokens with "This creature can't be blocked by creatures with flying."\nWhen this creature is put into a graveyard from anywhere, shuffle it into its owner's library.
+
+DeckHas:Ability$Token

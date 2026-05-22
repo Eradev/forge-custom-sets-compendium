@@ -6,3 +6,5 @@ A:SP$ Token | TokenAmount$ X | TokenScript$ r_1_1_soldier_haste
 SVar:X:Count$xPaid
 
 Oracle:Create X 1/1 red Soldier creature tokens with haste.
+
+DeckHas:Ability$Token & Type$Soldier

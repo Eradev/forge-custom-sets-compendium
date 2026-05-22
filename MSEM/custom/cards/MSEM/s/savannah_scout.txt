@@ -11,3 +11,6 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.S
 SVar:TrigToken:DB$ Token | TokenScript$ w_2_2_cat
 
 Oracle:Vigilance\nCat creatures you control have vigilance.\nWhen this creature enters, create a 2/2 white Cat creature token.
+
+DeckHints:Type$Cat
+DeckHas:Ability$Token & Type$Cat

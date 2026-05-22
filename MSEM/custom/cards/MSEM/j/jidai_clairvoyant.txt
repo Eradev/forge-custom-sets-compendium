@@ -10,3 +10,6 @@ T:Mode$ ChangesZone | TriggerZones$ Battlefield | Origin$ Any | Destination$ Bat
 SVar:TrigDraw:DB$ Draw
 
 Oracle:When this creature enters, create a 2/2 colorless Spirit creature token.\nWhenever a colorless creature you control enters, you may draw a card.
+
+DeckHints:Color$Colorless
+DeckHas:Ability$Token & Type$Spirit & Color$Colorless

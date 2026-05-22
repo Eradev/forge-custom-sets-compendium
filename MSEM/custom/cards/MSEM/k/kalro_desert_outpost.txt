@@ -12,3 +12,5 @@ A:AB$ Destroy | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ La
 SVar:DBToken:DB$ Token | TokenScript$ desert_msem | LockTokenScript$ true | TokenOwner$ TargetedController
 
 Oracle:Whenever a creature attacks Kalro, it deals 1 damage to that creature.\n[+1]: Create a 1/1 red and white Sand Warrior creature token.\n[-2]: Destroy target nonbasic land. Its controller creates a colorless Desert land token with "{T}: Add {C}."
+
+DeckHas:Ability$Token & Type$Sand|Warrior

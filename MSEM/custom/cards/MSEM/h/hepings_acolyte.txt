@@ -9,4 +9,4 @@ SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_spirit_flying
 Oracle:Whenever a nontoken creature you control dies, create a 1/1 colorless Spirit creature token with flying.
 
 SVar:PlayMain1:TRUE
-DeckHas:Ability$Token
+DeckHas:Ability$Token & Type$Spirit

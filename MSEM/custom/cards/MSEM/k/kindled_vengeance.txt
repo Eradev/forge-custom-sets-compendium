@@ -10,3 +10,5 @@ SVar:TrigDealsDamage:DB$ DealDamage | ValidTgts$ Creature.OppCtrl,Planeswalker.O
 SVar:X:Count$Valid Creature.attacking
 
 Oracle: When this enchantment enters, if you cast it, create seven 1/1 green Elf creature tokens.\nWhenever you attack, this enchantment deals damage equal to the number of attacking creatures to target creature or planeswalker an opponent controls.
+
+DeckHas:Ability$Token & Type$Elf

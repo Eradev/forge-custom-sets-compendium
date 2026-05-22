@@ -35,3 +35,5 @@ SVar:DBCleanup2:DB$ Cleanup | ClearRemembered$ True
 Oracle:Enchant player\nAt the beginning of enchanted player's upkeep, that player creates a 1/1 white Soldier creature token.
 
 SVar:AttachAILogic:Pump
+
+DeckHas:Ability$Token & Type$Soldier

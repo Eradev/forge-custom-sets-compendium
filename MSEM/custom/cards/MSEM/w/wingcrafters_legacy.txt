@@ -8,3 +8,5 @@ T:Mode$ DamageDone | ValidSource$ Creature.EquippedBy | ValidTarget$ Player | Co
 SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_a_thopter_flying
 
 Oracle:Whenever equipped creature deals combat damage to a player, create a 1/1 colorless Thopter artifact creature token with flying.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)
+
+DeckHas:Ability$Token & Type$Thopter|Artifact

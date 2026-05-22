@@ -9,3 +9,5 @@ SVar:DBToken:DB$ Token | TokenScript$ g_x_x_elemental | TokenPower$ X | TokenTou
 SVar:X:Count$CardCounters.BOUNTY
 
 Oracle:{T}, Exert Amathrassil: Put a bounty counter on Amathrassil. Add X mana in any combination of colors, draw X cards, and create an X/X green Elemental creature token, where X is the number of bounty counters on Amathrassil. (An exerted permanent won't untap during your next untap step.)
+
+DeckHas:Ability$Token & Type$Elemental

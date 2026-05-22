@@ -13,3 +13,5 @@ S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 1 | AddToughness$
 K:Equip:1
 
 Oracle:When this Equipment enters or at the beginning of your upkeep, if you control no Samurai, create a 1/1 colorless Samurai creature token, then you may attach this Equipment to it.\nEquipped creature gets +1/+1.\nEquip {1}
+
+DeckHas:Ability$Token & Type$Samurai & Color$Colorless

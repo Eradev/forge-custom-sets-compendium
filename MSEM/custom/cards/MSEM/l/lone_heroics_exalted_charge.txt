@@ -32,3 +32,4 @@ Oracle:Enchant creature\nEnchanted creature gets +2/+2.\nWhenever enchanted crea
 
 SVar:HasAttackEffect:TRUE
 SVar:AttachAILogic:Pump
+DeckHas:Ability$Token & Type$Knight

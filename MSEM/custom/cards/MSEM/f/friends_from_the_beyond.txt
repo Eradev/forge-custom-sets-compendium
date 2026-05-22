@@ -6,3 +6,5 @@ T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefiel
 SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_spirit_flying
 
 Oracle:At the beginning of your end step, if you own a card in exile, create a 1/1 white Spirit creature token with flying.
+
+DeckHas:Ability$Token & Type$Spirit

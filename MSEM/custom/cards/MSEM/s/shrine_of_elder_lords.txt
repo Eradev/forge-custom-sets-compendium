@@ -12,4 +12,4 @@ SVar:DBAnimate:DB$ Animate | Defined$ Self | Power$ 0 | Toughness$ 0 | Keywords$
 
 Oracle:Whenever you create an Idol token, put a +1/+1 counter on this land.\n{T}: Add {C}.\n{3}: Put a +1/+1 counter on this land, then you may have it become a 0/0 Elemental creature with vigilance until end of turn. It's still a land.
 
-DeckHas:Ability$Counters
+DeckHints:Type$Idol

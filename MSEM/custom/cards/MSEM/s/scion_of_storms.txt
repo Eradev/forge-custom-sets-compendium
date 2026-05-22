@@ -14,3 +14,5 @@ SVar:DBExileToken:DB$ ChangeZone | Defined$ Remembered | Origin$ Battlefield | D
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
 Oracle:Vigilance\nWhen this creature enters, create a 2/2 white Elemental creature token with flying.\nWhenever a Plains you control enters, you may aetherize this creature. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+DeckHas:Ability$Token & Type$Elemental

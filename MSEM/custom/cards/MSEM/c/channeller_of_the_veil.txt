@@ -10,4 +10,4 @@ A:AB$ LoseLife | Cost$ Sac<1/Creature.Other/another creature> | ActivationLimit$
 
 Oracle:When this creature enters, create a 1/1 colorless Construct artifact creature token.\nSacrifice another creature: Each opponent loses 1 life. Activate only once each turn.
 
-DeckHas:Ability$Sacrifice|Token & Type$Construct
+DeckHas:Ability$Sacrifice|Token & Type$Construct|Artfiact

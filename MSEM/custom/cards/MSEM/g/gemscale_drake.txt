@@ -15,4 +15,5 @@ SVar:X:Count$Valid Artifact.YouCtrl
 
 Oracle:Flying\nWhen this creature enters, create a Treasure token.\nWhenever this creature deals combat damage to a player, scry 1. If you control three or more artifacts, draw a card instead.
 
-DeckHas:Ability$Token
+DeckHints:Type$Artifact
+DeckHas:Ability$Token|Sacrifice & Type$Treasure|Artifact

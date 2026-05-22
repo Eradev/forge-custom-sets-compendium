@@ -6,5 +6,5 @@ S:Mode$ Continuous | Affected$ Creature.Colorless+Other+YouCtrl | AddPower$ 1 | 
 
 Oracle:Colorless creatures you control get +1/+1.
 
-DeckNeeds:Color$Colorless & Type$Creature
 SVar:PlayMain1:TRUE
+DeckNeeds:Color$Colorless & Type$Creature

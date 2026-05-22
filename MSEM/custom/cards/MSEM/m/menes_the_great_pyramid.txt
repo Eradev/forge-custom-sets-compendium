@@ -14,3 +14,5 @@ SVar:DBCopy:DB$ CopyPermanent | Defined$ Remembered | Controller$ You | SetColor
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
 Oracle:Whenever one or more creatures attack Menes, create a tapped 2/3 black Mummy creature token.\n[+1]: You get an emblem with "Black creatures you control get +1/+1."\n[-3]: Exile target creature card from a graveyard. Create a tapped token that's a copy of it except it's a black Mummy.
+
+DeckHas:Ability$Token & Type$Mummy
