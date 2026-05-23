@@ -1,0 +1,9 @@
+Name:Avatar Token
+ManaCost:no cost
+Colors:white
+Types:Creature Avatar
+PT:*/*
+
+K:Indestructible
+
+Oracle:Indestructible

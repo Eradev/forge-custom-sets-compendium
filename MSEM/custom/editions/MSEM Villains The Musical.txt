@@ -1,0 +1,357 @@
+[metadata]
+Code=MSEM_VTM
+Name=Villains: The Musical
+Date=2019-02-01
+Type=Custom
+# Booster=7 Common, 5 Uncommon, 2 RareMythic
+
+[cards]
+1 U Adoration @len-yan
+2 C Amateur Auteur @Abdulrahman Noureldin
+3 C Awestruck @Milena Leonova
+4 R Buttress Formation @BillCreative
+5 U Changing Room @Hideyoshi
+6 C Crowd Favorite @Jungshan
+7 C Defying Gravity @Juliano Yi
+8 C Distracting Performer @Gabriel Rubio
+9 M Divinity @Ursula Dorado
+10 U Encore @Aurore Folny
+11 C Evigial Winds @Darya kikiMORA
+12 C Evigian Crusher @Florian de Gesincourt
+13a C Evigian Noble @Bogna Gawronska & bleedingheartstudios
+14 C Gilded Hawk @MichelVerdu
+15 C Golden Touch @Tirael
+16 U Growing Pains @Ysvyri
+17 U Her Ascension @Anastasia Sudakova
+18a U Leaping Dancer @jubjubjedi & Dallas Williams
+19a R Performer of Enlightenment @keiii & Jason Nguyen
+20 R Priestess of Simplicity @Fangogogo
+21 R Protective Patron @Robot Del Espacio
+22 C Rallying Guardian @Jeremy Chong
+23 C Rehearse @Alexia Ashford
+24 R Return to Form @Alex Chow
+25a C Reversal Medic @Dopaprime & Efflam Mercier
+26 C Saia's Price @Genesis Laurel
+27 U Sartha's Studies @Julie Dillon
+28 R Shushing Usher @Tatiana Vetrova
+29 C Street Busker @ninanai
+30 U Talent Scout @Sventine
+31 C Theater Guard @Julian Wicik
+32 R Tome of Loss @Lucas Durham
+33 C Unmoving Usher @thatnickid
+34 U Voices Overwhelming @luciole
+35 C Aerial Watch @Valtesaar
+36 R Amulet of Loyalties @naiide
+37a U Aspiring Recluse @Luka Arh & Richard Luong
+38 R Augmented Spawn @Andrew Mar
+39 U Babbling Experiment @Nathan Rosario
+40 U Brilliance Overbearing @len-yan
+41 C Cadalon Outfitter @Marya Yartseva
+42 C Control Discourse @Gislaine Avila
+43 C Coral Hunter @Oana Dascalu
+44 U Cursory Glance @Johnny Morrow
+45 C Evigian Titan @Jon Neimeister
+46 C Exit, Pursued by a Bear @KarlaDiazC
+47 R Flawless Heist @Ascary Lazos
+48 R Gentleman Thief @Jake W Bullock
+49 C Grafted Experiment @TatarskiSkandal
+50 C Lost in Smoke @Michael Wakeley
+51 C Mei's Understudy @Astri Lohne
+52a C Merfolk Vandal @Marzena Nereida Piwowar & Stephen Garrett Rusk
+53 C Miscast (MSEM) @Yanmo Zhang ${"flavorName": "Miscast"}
+54 C Moonlit Charmer @Kremena Chipilova
+55a R Performer of Brilliance @Denis Opalenyk & Bobby Strain
+56 U Pilfered Process @Robot Del Espacio
+57 C Posthumous Informant @Marya Yartseva
+58 U Questionable Methods @Luka Arh
+59 U Queue Bouncer @ThanatornYantaporn
+60 R Rewriting Loyalties @Klaus Pillon
+61 U Saia's Protege @Ross Tran
+62 C Send Away @Felipe Escobar
+63 R Shoreline Temptress @Kat Aa S
+64 C Stage Fright @REYKAT
+65 R Unraveling @Bramasta Aji
+66 U Vile Infiltrator @José Luis
+67 C Vivian's Vanguard @ThanatornYantaporn
+68 C Wheat from Chaff @marlitza
+69 C Alley Hunter @TD Danza
+70 C Arisen Troops @Ben Zweifel
+71 C Backalley Cutpurse @Giby Joseph
+72 U Backalley Silencer @Carl Van Laguun
+73 U Blood Artist @Johannes Voß
+74 U Blood Overruling @Besar13
+75 C Bloodline Zealot @Jessica Pelletier
+76 C Break a Leg @Mushk Rizvi
+77 R Compulsive Accuser @martinacecilia
+78 U Corpsing @Antonio José Manzanedo
+79 U Cut Short (MSEM) @Kim Sokol ${"flavorName": "Cut Short"}
+80 C Dying Breath @Levente
+81 R Eldritch Egg @cobaltplasma
+82 C Exeunt @Hugh Pindur
+83 C First Blood @Chris Malidore
+84 C Forsaken Bloodletter @Joel Lagerwall
+85 C Loose Ends @Sergey Zabelin
+86 C Lost Memories @Le Vuong
+87 U Mei's Collector @David Romero
+88 U Night on Flayed Mountain @Diana Franco
+89a R Performer of Ambition @Patrycja Wójcik & Toru-meow
+90 C Poisoned Wine @Irina Nordsol Kuzmina
+91a C Slave Child @NanFe & Jackstone Tjota
+92 C Slums Thug @Tom Edwards
+93 C Street Stalker @TanatornYantaporn
+94 R Troupe Smuggler @Esteban Wuen
+95 C Truth Extractor @Dominik Mayer
+96 R Turned Watcher @Craig Soulsby
+97 U Undercity Diplomat @Grafit Studio
+98 R Underworld Informant @Calvin Lye
+99 M Upstage @Abe Taraky
+100a U Urchin Defector @Vetrova & Dominik Mayer
+101 C Vampiric Hunger @Valeriy Vegera
+102 R Villains: The Musical @Toru-meow
+103 R Audition @Ania Bulavina
+104 R Awestone @Ellie Yong
+105 C Backstage Banter @Sam Hogg
+106 C Bit Player @Bogna Gawronska
+107 C Blind Tunneler @Katarzyna Buczylko
+108 C Bounty Crusher @newye
+109 U Cadalon Chemist @GuzBoroda
+110 C Cadalon Experimenter @Nalak-Bel
+111 C Crack Open the Cache @miumiuchuu
+112 C Diasune Immolator @Rogier van de Beek
+113 C Diasune Tracker @India-Lee Crews
+114 C Flameblade @BramLeegwater
+115 R Flight of the Phoenix @Evolana
+116 C Furor of the Bitten @apertus
+117 C Grieved Outburst @Ducos Guillaume
+118 U Harms Dealer @ThanatornYantaporn
+119 R Hats Off @MissingMonuments
+120 C Impatient Busker @Jackson Tjota
+121 R Life's Work @Jake Murray
+122 C Oracle of Flames @aditya777
+123a U Passionate Painter @VeiArts & Tatiana Vetrova
+124a R Performer of Desire @thehiddensapphire & CristianAC
+125 U Power Overflowing @CristianAC
+126 R Reprising Bard @woo chul
+127 C Scathing Review @Brandon Ellis
+128 U Slay Them in the Aisles @Diana Franco Campos
+129 U Soliloquy @Andre Filipe
+130 U Storm Servant @zix72
+131 C Thunderous Applause @Eneada
+132 U Tyrant's Reckoning @Kastraz
+133 C Unwilling Accomplice @Jimmy Jing Xia
+134 U War's Sorrow @Deiv Calviz
+135a C Wild Pyromancer @Jason Nguyen & Anato Finnstark
+136 C Acorn Assault @Zachary D. Coe
+137 R Atlas of Worlds @Lucas Durham
+138 U Bessie's Brood @Joel Hustak
+139 C Bessie's Crusher @Andrew Olson
+140 U Canopy Scout @sketchingdays
+141 C Diasune Irregular @sketchingdays
+142 U Diasune Warleader @Andrew Mar
+143a C Elven Guard @Eldar Minibaev & David Sondered
+144 C Epic Confrontation @Clément Galtier
+145 C Into the Woods @Florian de Gesincourt
+146 R Komurk Harvester @Chris Cold
+147 C Komurk Raid @Hideyoshi
+148 C Lively Prop @sans-art
+149 U Malign Growth @Grafit Studio
+150a R Performer of Growth @Jessica Oyenhart & Rudy Siswanto
+151 U Realms Overturning @oTukiMi
+152 R Realmstitching @Kieran Slate
+153 U Rei's Awakening @Zeker Toons
+154 C Rei's Ranger @Katie Langofrd
+155 C Rei's Watch @Leesha Hannigan
+156 R Restoration @katorius
+157 C Rootshambler @Brent Hollowell
+158 U Ruststep Centipede @Ducos Guillaume
+159 C Scenery Chewing @Eryk Szczygieł
+160 C Scramble the Scouts @EthicallyChallenged
+161 C Scuripi Blessing @Virzoeve
+162 C Scuripi Collector @Álvaro Calvo Escudero
+163 R Scuripi Lookout @Jerome Jacinto
+164 C Scuripi Reserve @Jackson Nguyen
+165a U Shifty Squirrel @Marek-Bilinski & John Pault Cavara
+166 U Skitterthorns @Sharaiza
+167 R Taken for Granite @Lucas Parolin
+168 C Wayfaring Realmstitcher @Grace Liu
+169 U Backstage Manager @sketchingdays
+170 U Backstage Tinkers @Adrien Amilhat
+171 M Bahum, the Warden @Arb Paninken
+172 M Bessie, the Muscle @Meng-ru Chiang
+173 U Bloodied Outcast @Márton Gyula Kiss
+174 U Cadalon Inspector @Zachary D. Coe
+175 R Chi Lee of the Underworld @Jon Lee
+176 M Cornrose, the Mighty @delowar
+177 R Curtain Call @Edouard Noisette
+178 R Ediam, the Inside Man @DashShepard
+179 U Evigian Sculptor @Egor Moiseiev
+180 M Heddwyn, the Law @Beaver-Skin
+181 R Kiku, the Gadgeteer @cyanineblu
+182 U Lantern Tender @sketchingdays
+183 U Linebreaker Wurm @Alex Konstad
+184 M Lucien, the Grifter @Young-June Choi
+185 R Masoh, Hitana's Monster @Grafit Studio
+186 M Mei, the Infiltrator @Raveneau Pierre
+187 R Qililia, the Saboteur @Ellie Yong
+188 R Quinn, the Performer @Yngvar Asplund
+189 U Ravage Relics @VAHAMAHA
+190 U Rei's Reinforcements @hungrybird
+191 M Saia, the Mastermind @Ishutani
+192 U Scuripi Shaman @Maria Zueva
+193 R Set the Stage @Andrew Guan
+194 M Sevid, the Lookout @Aleksei Vinogradov
+195 U Soulless Backstabber @Márton Gyula Kiss
+196 U Squid Pro Quo @Jelle Steenhuisen
+197 U Timid Thunderhorn @David Haire
+198 U Tower Prowler @Arman Akopian
+199 U Undercity Vendor @colonel-strawberry
+200 M Vivian, the Detective @Amionna
+201 M Zegarra, the Rival @Darnell Robinson
+202 U Clock of Seasons @Francesca Baerald
+203 R Coffers of Kovach @Nuro-Art
+204 U Crystal Cauldron @Irina Nordsol Kuzmina
+205 C Dragonfire Blade (MSEM) @Alberto Tavira ${"flavorName": "Dragonfire Blade"}
+206 C Duelist's Choice @Lucas Durham
+207 C Ghost Light @Lucas Durham
+208 C Gilded Cipher @Ihor Reshetnikov
+209 U Golden Helm @bantish
+210 R Grab Bag @Alex Stone
+211 U Invisibility Cloak @Hélène Alonso
+212 U Joyous Chromatelk @Jeremy Carver
+213 C Living Script @Gaudi Buendia
+214 U Mirrored Mask @Sarafiel
+215 C Multipurpose Mannequin @Julie Dillon
+216 M Platinum Colossus @Adam Emtyl
+217 C Prismatic Panes @AquaSixio
+218 C Prophetic Prism @Diana Rahfoth
+219 R Skybreaker Hook @Jeremy Carver
+220 U Soul Gate @Cody Madder
+221 C Stage Dressing @Melissa Ng
+222 M Sword of Truth and Lies @Sandro Rybak
+223 U Theater Mask @Andrew Theophilopoulos
+224 C Uncovered Idol @AJ Nazzaro
+225 U Vault Sentinel @Engy Jeong
+226 R Ascendant's Gate @sungsu jun
+227 R Backstage Rooms @NikitaBolyakov
+228 C Evolving Wilds @Andreas Rocha
+229 R Heist Headquarters @NikitaBolyakov
+230 R Hidden Hollow @Can Basdogan
+231 R Legitimate Establishment @Tommy Chandra
+232a C Ruined Theater @Ania Bulavina & Rudolf Herstek
+233 U Ruptured Citadel @Uncle Stone
+234 U Ruptured Expanse @John Lewenhagen
+235 U Ruptured Falls @Jean Guillet
+236 U Ruptured Flats @Ishutani
+237 U Ruptured Grotto @Clément Galtier
+238 U Ruptured Grove @Klaus Pillon
+239 U Ruptured Meadow @Eduardo Pallares
+240 U Ruptured Morass @Piotr Dura
+241 U Ruptured Square @Uncle Stone
+242 U Ruptured Trail @Piotr Dura
+243 R Seedy Bar @Florent Llamas
+244 R Talent Pool @DarnisArt
+245 L Plains @Xavier Collette
+246 L Island @Anthony Avon
+247 L Swamp @Ihor Reshetnikov
+248 L Mountain @Eru-Maamandil
+249 L Forest @Christian Benavides
+250 S Ayshea Tome @Gailee
+251 S Chromatic Lantern @Ayub Shaikh
+252 S Chronovore Clock @Ihor Reshetnikov
+253 S Crux Pinnacle @Chris Cold
+254 S The Dominomicon @JillianJohnstone
+255 S Drop of Envy @Sam White
+256 S Elsewhere Mirror @Lucas Torquato
+257 S Encrypted Monument @Rafael Castorena
+258 S Enlightened Sigil @Alexander Nanitchkov
+259 S Eternity Pendant @MichaelSyrigos
+260 S Gilded Lotus @Jeremy Carver
+261 S Glistening Chalice @Mihai Radu
+262 S Goblet of Unhallowed Blood @Ted Kruzsely
+263 S Isochron Wand @fuuryoku
+264 S Lightless Hedron @Tibor Bedats
+265 S Lodestone Golem @Samarskiy
+266 S Mentorb @Finnian MacManus
+267 S Mindlock Field @DarnisArt
+268 S Mnemonic Curator @Markus Neidel
+269 S Pristine Frame @SandroRyback
+270 S Ring of Souls @Lucas Durham
+271 S Seer's Sphere @Bob Eggleton
+272 S Servant of Armageddon @Diana Franco Campos
+273 S Seven-Year Step @naiiade
+274 S Shared Trove @Bruno Balixa
+275 S Shining Crusader @Joel DuQue
+276 S Skeleton Keyring @Lucas Durham
+277 S Sorcerous Spyglass @Grace Liu
+278 S Spectral Skycruiser @Yu Cheng Hong
+279 S Starforge Armor @Joel Hustak
+280 S Steamquiver Strix @Andreas Nor
+281 S Stormcannon Gauntlet @Alecyl
+282 S The Stranger's Play @Andrew Ferez
+283 S Sundial of the Infinite @Chromamancer
+284 S Sword of Redemption @WarNick
+285 S Time Cube @Eddie Del Rio
+286 S Titan Snare @LeeJJ
+287 S Trap Door @Ryan Barger
+288 S Treasury Keyper @Daniel Pollok
+289 S Walking Armory @Jason Nguyen
+290 S Warlord's Mantle @wacalac
+291 S Warrior's Bane @Sean Pearson
+292 S Whispering Halls @DanielComDesign
+293a S Wistful Automaton @Julie Dillon
+294 S Worldslayer @Cyril Labranche
+295 S Tome of Loss @Minomi9
+296 S Amulet of Loyalties @Johnny Morrow
+297 S Eldritch Egg @Asanee Srikijvilaikul
+298 S Awestone @rzanchetin
+299 S Atlas of Worlds @Francesca Baerald
+300 S Blood Artist @Johannes Voß
+301 S Plains @Francis Goeltner
+302 S Island @Natasha Antonie
+303 S Swamp @Reicheran
+304 S Mountain @Shadoweddancer
+305 S Forest @Christophe Steam
+306 S Bessie, the Muscle @Zane Reichert
+
+[tokens]
+1 w_x_x_avatar_indestructible @Yigit Koroglu
+2 w_1_1_bird_flying @LieSetiawan
+3 u_1_1_fish @psyAlera
+4 u_x_x_horror @Felipe Perez
+5 u_1_1_merfolk @ Lamin Martin
+6 u_3_3_squid @Eldar Zakirov
+7 b_1_1_actor_lifelink @Dallas Williams
+8 b_4_4_demon_regrowth @Morriperkele
+9 b_2_2_spirit @legendary-memory
+10 r_3_3_phoenix_flying_haste_pump @Marvin Büte
+11 r_3_3_wurm @Ubermonster
+12 g_2_2_bear_actor @GaudiBuendia
+13 g_1_1_scout @LieSetiawan
+14 c_a_clue_draw @Tiana Maros
+
+[other]
+15 forest @Christian Benavides
+16 emblem_bahum_the_warden @Arb Paninken
+17 emblem_bessie_the_muscle @Meng-ru Chiang
+19 emblem_sevid_the_lookout @Aleksei Vinogradov
+20 emblem_vivian_the_detective @Amionna
+21 emblem_zegarra_the_rival @Darnell Robinson
+
+[ArtifactTypes]
+Idol:Idols
+Ship:Ships
+
+[CreatureTypes]
+Actor:Actors
+
+[WalkerTypes]
+Bahum
+Bessie
+Cornrose
+Heddwyn
+Lucien
+Mei
+Saia
+Sevid
+Vivian
+Zegarra

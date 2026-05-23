@@ -1,0 +1,13 @@
+Name:Phoenix Token
+ManaCost:no cost
+Colors:red
+Types:Creature Phoenix
+PT:3/3
+
+K:Flying
+
+K:Haste
+
+A:AB$ Pump | Cost$ R | NumAtt$ +1 | SpellDescription$ This token gets +1/+0 until end of turn.
+
+Oracle:Flying, haste\n{R}: This token gets +1/+0 until end of turn.

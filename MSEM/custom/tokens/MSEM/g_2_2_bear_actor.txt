@@ -1,0 +1,6 @@
+Name:Bear Actor Token
+ManaCost:no cost
+Colors:green
+Types:Creature Bear Actor
+PT:2/2
+Oracle:
