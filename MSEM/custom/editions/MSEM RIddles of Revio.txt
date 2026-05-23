@@ -3,14 +3,14 @@ Code=MSEM_RVO
 Name=Riddles of Revio
 Date=2021-07-01
 Type=Custom
-Booster=7 Common, 5 Uncommon, 2 RareMythic
+# Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 
 [cards]
 1 R Admonish @Remi Roundtree
 2 C Calamity Apparition @Jim Ling
 3 R Dafiqi Falconer @Alexandra Khitrova
 4 M Destined Calamity @Sabrina Langenberger
-5 R End of Days_RVO @Jeffrey Smith
+5 R End of Days @Jeffrey Smith
 6 U Faithful Priest @Ali Eser
 7 C Freeborn Healer @Peter Mohrbacher
 8 C Gilded Elephant @Torben Weit
@@ -67,7 +67,7 @@ Booster=7 Common, 5 Uncommon, 2 RareMythic
 59 C Maktali Visionary @John Law
 60 M Naiala, the Informant @Anastasia Kustova
 61 C Naiala's Guide @Rafael Teruel
-62 C Negate_RVO @Ivan & Elena Melnikov
+62 C Negate @Ivan & Elena Melnikov
 63 C Outpost Merchant @Denis Kornev
 64 U Phantasmal Owl @Marion Bouzir
 65 R Roland, Philosopher King @Benjamin Goutte
@@ -106,7 +106,7 @@ Booster=7 Common, 5 Uncommon, 2 RareMythic
 98 C Painful Rites @Even Amundsen
 99 C Pious Relicseekers @Vladimir Manyukhin
 100 M Plague Calamity @JIAWEI FU
-101 U Prying Inquiry_RVO @Tiziana Federica Ruiu
+101 U Prying Inquiry @Tiziana Federica Ruiu
 102 C Qalam Surveyor @Arturo Gutierrez
 103 C Qalami Barbarian @Filipe Pagliuso
 104 C Scavenging Sandwurm @Sandara Tang
@@ -157,7 +157,7 @@ Booster=7 Common, 5 Uncommon, 2 RareMythic
 149 C Reckless Dunerider @Dao Trong Le
 150 R Reytha's Discovery @Yuting Li
 151 C Sandstorm Charm @Martin Deschambault
-152 U Scorch_RVO @Anthony Avon
+152 U Scorch @Anthony Avon
 153 U Searing Sandwurm @Filipe August
 154 C Sparkmage Prodigy @Alexander Chelyshev
 155 R Splitting Image @Attila Gallik
@@ -201,7 +201,7 @@ Booster=7 Common, 5 Uncommon, 2 RareMythic
 193 R Ylda's Confluence @Silas Owen
 194 U Alrathan Vizier @Jinho Bae
 195 U Calamity Harbinger @Alyssa McCarthy
-196 M Ciel, the Raider King_RVO @India-Lee Crews
+196 M Ciel, the Raider King @India-Lee Crews
 197 R Dthan, Who Bloodies the Sands @Alexandr Elichev
 198 R The Duneborn Host @Deniz Ündan
 199 R Elise, Maktali Prodigy @Hoàng Lap (Solan)
@@ -257,11 +257,11 @@ Booster=7 Common, 5 Uncommon, 2 RareMythic
 249 U Path of Fire @David Frasheski
 250 U Swaying Sands @Harkalé Linaï
 251 U Verdant Oasis @Andrew Horton
-252 L Plains_RVO @Lionel Dorviler
-253 L Island_RVO @Adrian Virlan
-254 L Swamp_RVO @Martin Deschambault
-255 L Mountain_RVO @Lorenzo Lanfranconi
-256 L Forest_RVO @Bruno Gentile
+252 L Plains @Lionel Dorviler
+253 L Island @Adrian Virlan
+254 L Swamp @Martin Deschambault
+255 L Mountain @Lorenzo Lanfranconi
+256 L Forest @Bruno Gentile
 257 S Collected Malice @Alexandr Elichev
 258 S Spirit of the Mountains @Calder Moore
 259 S Tara's Lament @Shaun Jonas
@@ -293,7 +293,7 @@ Booster=7 Common, 5 Uncommon, 2 RareMythic
 12 c_a_clue_draw @Panjoool
 
 [other]
-13 emblem_ciel @India-Lee Crews
-14 emblem_eve @Anna Podedworna
-15 emblem_naiala @Anastasia Kustova
-16 emblem_tara @Denis Fröhlich
+13 emblem_ciel_the_raider_king @India-Lee Crews
+14 emblem_eve_the_mastermind @Anna Podedworna
+15 emblem_naiala_the_informant @Anastasia Kustova
+16 emblem_tara_duneblessed @Denis Fröhlich

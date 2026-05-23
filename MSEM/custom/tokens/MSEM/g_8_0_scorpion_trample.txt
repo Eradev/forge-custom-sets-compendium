@@ -1,0 +1,9 @@
+Name:Scorpion Token
+ManaCost:no cost
+Colors:green
+Types:Creature Scorpion
+PT:8/0
+
+K:Trample
+
+Oracle:Trample
