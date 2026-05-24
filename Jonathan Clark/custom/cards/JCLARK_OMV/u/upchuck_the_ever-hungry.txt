@@ -1,4 +1,4 @@
-Name:Upchuck, the Ever-hungry
+Name:Upchuck, the Ever-Hungry
 ManaCost:BG
 Types:Legendary Creature Alien Beast 
 PT:1/1
