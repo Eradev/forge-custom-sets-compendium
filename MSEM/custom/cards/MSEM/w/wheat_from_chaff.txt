@@ -8,4 +8,4 @@ SVar:DBInvestigate:DB$ Investigate
 
 Oracle:Draw two cards, then discard two cards. Investigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")
 
-DeckHas:Ability$Token|Sacrifice & Type$Clue|Artifact
+DeckHas:Ability$Investigate|Token|Sacrifice & Type$Artifact|Clue

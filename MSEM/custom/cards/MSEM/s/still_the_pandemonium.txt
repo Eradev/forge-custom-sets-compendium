@@ -6,3 +6,5 @@ A:SP$ Counter | ValidTgts$ Spell.nonCreature | TgtPrompt$ Select target noncreat
 SVar:DBInvestigate:DB$ Investigate
 
 Oracle:Counter target noncreature spell. Investigate. (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")
+
+DeckHas:Ability$Investigate|Token|Sacrifice & Type$Artifact|Clue

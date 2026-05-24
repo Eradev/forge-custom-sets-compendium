@@ -7,3 +7,5 @@ T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage
 SVar:TrigInvestigate:DB$ Investigate
 
 Oracle:Whenever this creature deals combat damage to a player, investigate. (Create a Colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")
+
+DeckHas:Ability$Investigate|Token|Sacrifice & Type$Artifact|Clue

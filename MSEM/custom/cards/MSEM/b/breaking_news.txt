@@ -8,3 +8,5 @@ SVar:TrigInvestigate:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Pl
 SVar:DBInvestigate:DB$ Investigate
 
 Oracle:Until end of turn, target creature gets +2/+2 and gains trample and "Whenever this creature deals combat damage to a player, investigate." (Create a colorless Clue artifact token with "{2}, Sacrifice this artifact: Draw a card.")
+
+DeckHas:Ability$Investigate|Token|Sacrifice & Type$Artifact|Clue
