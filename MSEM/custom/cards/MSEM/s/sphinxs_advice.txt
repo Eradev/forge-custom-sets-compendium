@@ -1,0 +1,14 @@
+Name:Sphinx's Advice
+ManaCost:U
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this enchantment enters, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddKeyword$ Flying | Description$ Enchanted creature has flying.
+
+Oracle:Enchant creature\nEnchanted creature has flying.
+
+SVar:AttachAILogic:Pump
