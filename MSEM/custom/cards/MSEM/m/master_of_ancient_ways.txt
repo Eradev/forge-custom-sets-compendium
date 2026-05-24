@@ -1,0 +1,13 @@
+Name:Master of Ancient Ways
+ManaCost:1 W W
+Types:Creature Human Warrior
+PT:3/2
+
+K:Mentor
+
+T:Mode$ Mentored | ValidSource$ Card.Self | Execute$ TrigPump | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature mentors a creature, that creature gains double strike until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredCardLKICopy | KW$ Double Strike
+
+Oracle:Mentor (Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power.)\nWhenever this creature mentors a creature, that creature gains double strike until end of turn.
+
+DeckHas:Ability$Counters
