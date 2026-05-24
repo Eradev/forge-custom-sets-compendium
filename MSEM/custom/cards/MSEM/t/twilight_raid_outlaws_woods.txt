@@ -7,7 +7,7 @@ K:Fabled
 S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 B | Description$ Fabled {2}{B} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that player.)
 
 A:SP$ LoseLife | ValidTgts$ Player | RememberTargets$ True | LifeAmount$ 1 | SubAbility$ DBScry | SpellDescription$ Target player loses 1 life. Scry 1.
-SVar:DBScry:DB$ Scry | ScryNum$ 1 | SubAbility$ ConditionalTransform
+SVar:DBScry:DB$ Scry | SubAbility$ ConditionalTransform
 SVar:ConditionalTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1 | SubAbility$ DBCleanup1
 SVar:DBCleanup1:DB$ Cleanup | ClearRemembered$ True | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ EQ0
 

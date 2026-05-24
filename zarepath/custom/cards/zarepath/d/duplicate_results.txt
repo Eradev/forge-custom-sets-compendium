@@ -2,7 +2,7 @@ Name:Duplicate Results
 ManaCost:2 U R
 Types:Sorcery
 
-A:SP$ Scry | Cost$ 2 U R | ScryNum$ 1 | SubAbility$ DBDig | StackDescription$ SpellDescription | SpellDescription$ Scry 1, then upload the top card of your library. If it's an instant or sorcery card, you may cast a copy of that spell without paying its mana cost. If it's a permanent card, create a token that's a copy of that permanent. That token gains haste. Exile it at the beginning of the next end step. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
+A:SP$ Scry | Cost$ 2 U R | SubAbility$ DBDig | StackDescription$ SpellDescription | SpellDescription$ Scry 1, then upload the top card of your library. If it's an instant or sorcery card, you may cast a copy of that spell without paying its mana cost. If it's a permanent card, create a token that's a copy of that permanent. That token gains haste. Exile it at the beginning of the next end step. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
 SVar:DBDig:DB$ Dig | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | WithCountersType$ UPLOAD | RememberChanged$ True | SubAbility$ DBAnimate | StackDescription$ None | SpellDescription$ Upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
 SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Abilities$ ABRemoveUpload | sVars$ DBDownload | Duration$ Permanent | SubAbility$ MarkUpload | StackDescription$ None
 SVar:MarkUpload:DB$ PutCounter | Defined$ Remembered | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBPlay

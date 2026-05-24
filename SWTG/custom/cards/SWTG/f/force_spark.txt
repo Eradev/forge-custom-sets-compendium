@@ -3,6 +3,6 @@ ManaCost:R
 Types:Instant
 
 A:SP$ DealDamage | NumDmg$ 1 | ValidTgts$ Any | TgtPrompt$ Select any target | SubAbility$ DBScry | SpellDescription$ Force Spark deals 1 damage to any target. Scry 1.
-SVar:DBScry:DB$ Scry | ScryNum$ 1
+SVar:DBScry:DB$ Scry
 
 Oracle:Force Spark deals 1 damage to any target. Scry 1.

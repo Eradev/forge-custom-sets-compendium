@@ -6,7 +6,7 @@ PT:3/3
 A:AB$ ChangeZone | Cost$ 2 U Return<1/Creature.attacking+unblocked/unblocked attacker> | PrecostDesc$ Deception | CostDesc$ 2 U | ActivationZone$ Hand | Origin$ Hand | Destination$ Battlefield | Defined$ Self | Tapped$ True | Attacking$ True | SpellDescription$ ({2}{U}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)
 
 T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigScry | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature deals combat damage to a player, scry 1, then draw a card.
-SVar:TrigScry:DB$ Scry | ScryNum$ 1 | SubAbility$ DBDraw
+SVar:TrigScry:DB$ Scry | SubAbility$ DBDraw
 SVar:DBDraw:DB$ Draw
 
 Oracle:Deception {2}{U} ({2}{U}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)\nWhenever this creature deals combat damage to a player, scry 1, then draw a card.

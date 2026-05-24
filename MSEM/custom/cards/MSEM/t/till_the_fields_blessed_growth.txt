@@ -8,7 +8,7 @@ S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 3 G G | 
 SVar:AltCostPaid:Count$AltCost.1.0
 
 A:SP$ Untap | ValidTgts$ Land | AILogic$ PoolExtraMana | SubAbility$ DBScry | SpellDescription$ Untap target land.
-SVar:DBScry:DB$ Scry | ScryNum$ 1 | SubAbility$ ConditionalTransform
+SVar:DBScry:DB$ Scry | SubAbility$ ConditionalTransform
 SVar:ConditionalTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | AttachedTo$ Targeted | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1
 
 Oracle:Untap target land. Scry 1.\nFabled {3}{G}{G} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that land.)

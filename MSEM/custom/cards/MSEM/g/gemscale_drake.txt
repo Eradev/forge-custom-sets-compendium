@@ -9,7 +9,7 @@ T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefi
 SVar:DBToken:DB$ Token | TokenScript$ c_a_treasure_sac
 
 T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigScry | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature deals combat damage to a player, scry 1. If you control three or more artifacts, draw a card instead.
-SVar:TrigScry:DB$ Scry | ScryNum$ 1 | ConditionCheckSVar$ X | ConditionSVarCompare$ LT3 | SubAbility$ DBDraw
+SVar:TrigScry:DB$ Scry | ConditionCheckSVar$ X | ConditionSVarCompare$ LT3 | SubAbility$ DBDraw
 SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ X | ConditionSVarCompare$ GE3
 SVar:X:Count$Valid Artifact.YouCtrl
 

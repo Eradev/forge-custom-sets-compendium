@@ -6,7 +6,7 @@ PT:1/2
 K:Ward:2
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Artifact.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigScry | TriggerDescription$ Whenever an artifact you control enters, scry 1.
-SVar:TrigScry:DB$ Scry | ScryNum$ 1
+SVar:TrigScry:DB$ Scry
 
 T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | CheckSVar$ Y | SVarCompare$ GE10 | Execute$ TrigEmblem | TriggerZones$ Battlefield | TriggerDescription$ At the beginning of your upkeep, if you control ten or more aliens, you may pay {W}{U}{B}{R}{G}. If you do, you create an emblem named Master Control with "You may cast Alien spells as though they had flash.", "Activated abilities of, and granted by, the Omnitrix cost {3} less to activate." and "Experience counter requirements are ignored when you activate abilities that use them to determine which Alien you may cast."
 SVar:TrigEmblem:AB$ Effect | Cost$ W U B R G | Name$ Emblem - Master Control | Image$ emblem_master_control | Duration$ Permanent | AddSVar$ ExpIgnore | StaticAbilities$ STFlash,STReduceCost,STReduceOmni,STIgnoreExp
