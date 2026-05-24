@@ -1,0 +1,10 @@
+Name:Scholar's Assistant
+ManaCost:U
+Types:Creature Bird
+PT:1/1
+
+K:Flying
+
+A:AB$ Draw | Cost$ 1 U Sac<1/CARDNAME/this creature> | SpellDescription$ Draw a card.
+
+Oracle:Flying\n{1}{u}, Sacrifice this creature: Draw a card.
