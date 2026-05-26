@@ -3,8 +3,10 @@ ManaCost:2 U U
 Types:Legendary Creature Human
 PT:1/1
 
-S:Mode$ Continuous | Affected$ Card | AddType$ Kindred & Illusion | AffectedZone$ All | Description$ All cards that aren't on the battlefield, spells, and permanents are Illusion kindreds in addition to their other types.
+K:Protection:Illusion
 
-Oracle:All cards that aren't on the battlefield, spells, and permanents are Illusion kindreds in addition to their other types.
+S:Mode$ Continuous | Affected$ Card.!inZoneBattlefield | AddType$ Kindred & Illusion | AffectedZone$ All | Description$ All cards that aren't on the battlefield, spells, and permanents are Illusion kindreds in addition to their other types.
+
+Oracle:Protection from Illusions\nAll cards that aren't on the battlefield, spells, and permanents are Illusion kindreds in addition to their other types.
 
 SVar:NonStackingEffect:True
