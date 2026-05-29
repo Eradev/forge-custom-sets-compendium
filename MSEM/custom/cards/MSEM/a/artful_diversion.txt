@@ -1,0 +1,9 @@
+Name:Artful Diversion
+ManaCost:3 U
+Types:Instant
+
+A:SP$ ChangeZone | TargetMin$ 0 | TargetMax$ 2 | ValidTgts$ Permanent.YouCtrl | Origin$ Battlefield | Destination$ Exile | TgtPrompt$ Select up to two target permanents you control | RememberTargets$ True | SubAbility$ DBReturn | SpellDescription$ Exile up to two target permanents you control, then return those cards to the battlefield under your control.
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ All | Destination$ Battlefield | GainControl$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Exile up to two target permanents you control, then return those cards to the battlefield under your control.
