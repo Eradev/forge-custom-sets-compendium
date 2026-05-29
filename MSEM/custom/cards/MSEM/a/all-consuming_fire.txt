@@ -1,0 +1,10 @@
+Name:All-Consuming Fire
+ManaCost:4 R R
+Types:Sorcery
+
+A:SP$ Effect | ReplacementEffects$ DeathRep | SubAbility$ DBDamageAll | SpellDescription$ If a creature would die this turn, exile it instead. All-Consuming Fire deals 4 damage to each creature.
+SVar:DeathRep:Event$ Moved | ValidLKI$ Creature | Origin$ Battlefield | Destination$ Graveyard | ReplaceWith$ Exile | Description$ If a creature would die this turn, exile it instead.
+SVar:Exile:DB$ ChangeZone | Defined$ ReplacedCard | Origin$ Battlefield | Destination$ Exile
+SVar:DBDamageAll:DB$ DamageAll | NumDmg$ 4 | ValidCards$ Creature
+
+Oracle:If a creature would die this turn, exile it instead.\nAll-Consuming Fire deals 4 damage to each creature.
