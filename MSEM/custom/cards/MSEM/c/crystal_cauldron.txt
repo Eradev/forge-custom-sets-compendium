@@ -1,0 +1,12 @@
+Name:Crystal Cauldron
+ManaCost:1
+Types:Artifact
+
+T:Mode$ Sacrificed | ValidCard$ Permanent | ValidPlayer$ You | Execute$ TrigScry | TriggerZones$ Battlefield | TriggerDescription$ Whenever you sacrifice a permanent, scry 1.
+SVar:TrigScry:DB$ Scry
+
+A:AB$ GainLife | Cost$ 1 Sac<1/Permanent.nonLand/nonland permanent> | LifeAmount$ 1 | SpellDescription$ You gain 1 life.
+
+Oracle:Whenever you sacrifice a permanent, scry 1.\n{1}, Sacrifice a nonland permanent: You gain 1 life.
+
+DeckHas:Ability$Sacrifice
