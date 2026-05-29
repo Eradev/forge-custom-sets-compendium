@@ -4,7 +4,7 @@ Types:Creature Human Aurashaper Cleric
 PT:1/1
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a white and black Aura enchantment token named Pale Shroud attached to target creature. The token has enchant creature and "Enchanted creature gets +1/+1 and has lifelink."
-SVar:TrigToken:DB$ Token | TokenScript$ pale_shroud | TokenOwner$ You | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature
+SVar:TrigToken:DB$ Token | TokenScript$ pale_shroud | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Artifact.YouCtrl,Enchantment.YouCtrl | Execute$ TrigDrain | TriggerDescription$ Whenever an artifact or enchantment you control enters, each opponent loses 1 life.
 SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 1
