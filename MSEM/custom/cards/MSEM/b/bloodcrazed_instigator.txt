@@ -1,0 +1,11 @@
+Name:Bloodcrazed Instigator
+ManaCost:1 R
+Types:Creature Human Rebel Soldier
+PT:2/1
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever this creature attacks, target Rebel creature you control gains first strike until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.Rebel+YouCtrl | TgtPrompt$ Select target Rebel creature you control | KW$ First Strike
+
+Oracle:Whenever this creature attacks, target Rebel creature you control gains first strike until end of turn.
+
+SVar:HasAttackEffect:TRUE
