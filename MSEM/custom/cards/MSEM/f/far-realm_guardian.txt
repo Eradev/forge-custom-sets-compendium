@@ -1,0 +1,11 @@
+Name:Far-Realm Guardian
+ManaCost:1 G
+Types:Creature Elf Aurashaper Warrior
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a green Aura enchantment token named Wild Bounty attached to target creature. The token has enchant creature and "Enchanted creature gets +1/+1 and has ward {2}."
+SVar:TrigToken:DB$ Token | TokenScript$ wild_bounty | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature
+
+Oracle:When this creature enters, create a green Aura enchantment token named Wild Bounty attached to target creature. The token has enchant creature and "Enchanted creature gets +1/+1 and has ward {2}."
+
+DeckHas:Ability$Token
