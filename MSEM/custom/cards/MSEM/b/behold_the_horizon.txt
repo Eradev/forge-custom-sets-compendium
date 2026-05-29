@@ -1,0 +1,15 @@
+Name:Behold the Horizon
+ManaCost:1 G
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Vigilance | Description$ Enchanted creature gets +1/+1 and has vigilance.
+
+A:AB$ ChangeZone | Cost$ 2 G | Origin$ Graveyard | Destination$ Hand | ActivationZone$ Graveyard | SpellDescription$ Return this card from your graveyard to your hand.
+
+Oracle:Enchant creature\nEnchanted creature gets +1/+1 and has vigilance.\{2}{G}: Return this card from your graveyard to your hand.
+
+SVar:DiscardMe:1
+SVar:SacMe:3
+SVar:AttachAILogic:Pump
