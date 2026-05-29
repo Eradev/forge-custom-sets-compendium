@@ -1,0 +1,16 @@
+Name:Synergistic Curiosity
+ManaCost:2 R
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this Aura enters, create a 2/2 blue Rogue creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ u_2_2_rogue
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 1 | AddToughness$ 1 | Description$ Enchanted creature gets +1/+1 and can't be blocked by creatures with flying.
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.EnchantedBy | ValidBlocker$ Creature.withFlying | Secondary$ True | Description$ Enchanted creature can't be blocked by creatures with flying.
+
+Oracle:Enchant creature\nWhen this Aura enters, create a 2/2 blue Rogue creature token.\nEnchanted creature gets +1/+1 and can't be blocked by creatures with flying.
+
+SVar:AttachAILogic:Pump
+Deckhas:Ability$Token & Type$Rogue
