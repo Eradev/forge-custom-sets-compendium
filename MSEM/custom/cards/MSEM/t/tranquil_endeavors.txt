@@ -10,4 +10,6 @@ A:AB$ ChangeZone | Cost$ 2 W | Origin$ Graveyard | Destination$ Hand | Activatio
 
 Oracle:Enchant creature\nEnchanted creature gets +2/+2 and has vigilance.\n{2}{W}: Return this card from your graveyard to your hand.
 
-SVar:DiscardMe:2
+SVar:DiscardMe:1
+SVar:SacMe:3
+SVar:AttachAILogic:Pump
