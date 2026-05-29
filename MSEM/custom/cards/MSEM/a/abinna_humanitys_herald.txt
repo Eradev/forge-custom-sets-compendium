@@ -1,0 +1,13 @@
+Name:Abinna, Humanity's Herald
+ManaCost:G G
+Types:Legendary Creature Human Cleric
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Creature.token+YouCtrl | AddKeyword$ Hexproof | Description$ Creature tokens you control have hexproof.
+
+A:AB$ PutCounter | Cost$ 3 G | CounterNum$ 1 | CounterType$ P1P1 | ValidTgts$ Creature.token | TgtPrompt$ Select target creature token | SpellDescription$ Put a +1/+1 counter on target creature token.
+
+Oracle:Creature tokens you control have hexproof.\n{3}{G}: Put a +1/+1 counter on target creature token.
+
+DeckHints:Ability$Token
+DeckHas:Ability$Counters
