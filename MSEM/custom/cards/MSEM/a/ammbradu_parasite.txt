@@ -1,0 +1,13 @@
+Name:Ammbradu Parasite
+ManaCost:2 B
+Types:Creature Phyrexian Insect Horror
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Forest.YouCtrl | Description$ This creature gets +1/+1 as long as you control a Forest.
+
+A:AB$ Pump | Cost$ 4 G | ValidTgts$ Creature | KW$ HIDDEN CARDNAME must be blocked if able. | AILogic$ Pump | SpellDescription$ Target creature must be blocked this turn if able.
+
+Oracle:This creature gets +1/+1 as long as you control a Forest.\n{4}{G}: Target creature must be blocked this turn if able.
+
+SVar:BuffedBy:Forest
+AI:RemoveDeck:All
