@@ -1,0 +1,14 @@
+Name:Blessing of Plenty
+ManaCost:2 G
+Types:Enchantment Aura
+
+K:Enchant:Land
+
+S:Mode$ Continuous | Affected$ Card.EnchantedBy | AddAbility$ AnyManaTap | AddTrigger$ TrigUpkeepUntap | Description$ Enchanted land has "{T}: Add one mana of any color." and "At the beginning of each upkeep, untap this land."
+SVar:AnyManaTap:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
+SVar:TrigUpkeepUntap:Mode$ Phase | Phase$ Upkeep | TriggerZones$ Battlefield | Execute$ UntapEnchanted | TriggerDescription$ At the beginning of each upkeep, untap this land.
+SVar:UntapEnchanted:DB$ Untap | Defined$ Self
+
+Oracle:Enchant land (Target a land as you cast this. This card enters attached to that land.)\nEnchanted land has "{T}: Add one mana of any color." and "At the beginning of each upkeep, untap this land."
+
+SVar:AttachAILogic:Pump
