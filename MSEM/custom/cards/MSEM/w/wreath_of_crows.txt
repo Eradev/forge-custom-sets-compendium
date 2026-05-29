@@ -2,7 +2,7 @@ Name:Wreath of Crows
 ManaCost:1 U
 Types:Enchantment Aura
 
-K:Enchant:Creature
+K:Enchant:Creature.YouCtrl:creature you control
 
 S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Hexproof | AddAbility$ TapMill | Description$ Enchanted creature gets +1/+1 and has hexproof and "{T}: Target player mills two cards."
 SVar:TapMill:AB$ Mill | Cost$ T | NumCards$ 2 | ValidTgts$ Player | TgtPrompt$ Select target player | SpellDescription$ Target player mills two cards.
@@ -10,7 +10,7 @@ SVar:TapMill:AB$ Mill | Cost$ T | NumCards$ 2 | ValidTgts$ Player | TgtPrompt$ S
 T:Mode$ LandPlayed | ValidCard$ Land.YouCtrl | Execute$ TrigUntap | TriggerZones$ Battlefield | TriggerDescription$ Whenever you play a land, untap enchanted creature.
 SVar:TrigUntap:DB$ Untap | Defined$ Creature.EnchantedBy
 
-Oracle:Enchant creature\nEnchanted creature gets +1/+1 and has hexproof and "{T}: Target player mills two cards."\nWhenever you play a land, untap enchanted creature.
+Oracle:Enchant creature you control\nEnchanted creature gets +1/+1 and has hexproof and "{T}: Target player mills two cards."\nWhenever you play a land, untap enchanted creature.
 
 SVar:AttachAILogic:Pump
 DeckHas:Ability$Mill
