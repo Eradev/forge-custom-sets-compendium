@@ -11,3 +11,6 @@ SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | Defined
 SVar:X:Count$LifeOppsLostThisTurn
 
 Oracle:This creature enters tapped.\nAt the beginning of your end step, if an opponent lost life this turn, you may return this card from your graveyard to your hand.
+
+SVar:DiscardMe:5
+SVar:SacMe:3
