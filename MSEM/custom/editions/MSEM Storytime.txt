@@ -3,6 +3,7 @@ Code=MSEM_101
 Name=Storytime
 Date=2019-02-01
 Type=Custom
+# Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 
 [cards]
 1 M Azamir, Wayward Titan @Paolo Puggioni

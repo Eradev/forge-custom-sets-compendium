@@ -4,7 +4,7 @@ Name=Video Horror System
 Date=2023-02-01
 Type=Custom
 BoosterSlots=Rare,RareSpecial
-Booster=3 Rare, 1 RareSpecial
+Booster=9 Rare, 1 RareSpecial
 
 [Rare]
 Base=Rare:fromSheet("MSEM_VHS cards")
