@@ -1,0 +1,15 @@
+Name:Rampaging Tremorwurm
+ManaCost:5 G G
+Types:Creature Wurm
+PT:7/0
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMotivate | OptionalDecider$ You | TriggerDescription$ Motivate 7 (When this creature enters, you may motivate target creature with less power than this by putting seven +1/+1 counters on it.)
+SVar:X:Count$CardPower
+SVar:TrigMotivate:DB$ PutCounter | Named$ Motivate | CounterType$ P1P1 | CounterNum$ 7 | ValidTgts$ Creature.powerLTX | TgtPrompt$ Select target creature
+
+Oracle:Flash\nMotivate 7 (When this creature enters, you may motivate target creature with less power than this by putting seven +1/+1 counters on it.)
+
+SVar:NeedsToPlay:Creature.YouCtrl+powerLT7
+DeckHas:Ability$Counters|Motivate
