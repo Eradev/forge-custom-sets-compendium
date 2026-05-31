@@ -1,0 +1,13 @@
+Name:Imposing Bulkvine
+ManaCost:4 G G
+Types:Creature Elemental
+PT:4/5
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMotivate | OptionalDecider$ You | TriggerDescription$ Motivate 2 (When this creature enters, you may motivate target creature with less power than this by putting two +1/+1 counters on it.)
+SVar:X:Count$CardPower
+SVar:TrigMotivate:DB$ PutCounter | Named$ Motivate | CounterType$ P1P1 | CounterNum$ 2 | ValidTgts$ Creature.powerLTX | TgtPrompt$ Select target creature
+
+Oracle:Motivate 2 (When this creature enters, you may motivate target creature with less power than this by putting two +1/+1 counters on it.)
+
+SVar:PlayMain1:TRUE
+DeckHas:Ability$Counters|Motivate
