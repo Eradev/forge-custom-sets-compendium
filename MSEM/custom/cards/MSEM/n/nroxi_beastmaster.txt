@@ -1,0 +1,17 @@
+Name:Nroxi Beastmaster
+ManaCost:4 G
+Types:Creature Elf Druid
+PT:4/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMotivate | OptionalDecider$ You | TriggerDescription$ Motivate 1 (When this creature enters, you may motivate target creature with less power than this by putting a +1/+1 counter on it.)
+SVar:X:Count$CardPower
+SVar:TrigMotivate:DB$ PutCounter | Named$ Motivate | CounterType$ P1P1 | CounterNum$ 1 | ValidTgts$ Creature.powerLTX | TgtPrompt$ Select target creature | RememberCards$ True
+
+T:Mode$ AbilityResolves | ValidSource$ Card.Self | ValidSpellAbility$ Triggered.NamedAbilityMotivate | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ When this creature motivates a creature, that creature gains trample until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Remembered | KW$ Trample | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Motivate 1 (When this creature enters, you may motivate target creature with less power than this by putting a +1/+1 counter on it.)\nWhen this creature motivates a creature, that creature gains trample until end of turn.
+
+SVar:PlayMain1:TRUE
+DeckHas:Ability$Counters|Motivate
