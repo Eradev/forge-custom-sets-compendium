@@ -43,7 +43,7 @@ Path of Shadows (PSA)                 -  89% (187/209)
      * Every card with Inscribe, or referencing it.
      * The Sacred Gate
 A Tourney at Whiterun (TWR)           -  100%
-Tides of War (TOW)                    -  32% (89/271)
+Tides of War (TOW)                    -  36% (98/271)
 Pyramids of Atuum (POA)               -  98% (126/128)
   Missing cards:
     * Righteous Priestess
