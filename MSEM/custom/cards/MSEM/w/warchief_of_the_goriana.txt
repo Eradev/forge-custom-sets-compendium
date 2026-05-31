@@ -1,0 +1,16 @@
+Name:Warchief of the Goriana
+ManaCost:6 G
+Types:Creature Ox Warrior
+PT:5/5
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMotivate | OptionalDecider$ You | TriggerDescription$ Motivate 3 (When this creature enters, you may motivate target creature with less power than this by putting three +1/+1 counters on it.)
+SVar:X:Count$CardPower
+SVar:TrigMotivate:DB$ PutCounter | Named$ Motivate | CounterType$ P1P1 | CounterNum$ 3 | ValidTgts$ Creature.powerLTX | TgtPrompt$ Select target creature
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | Execute$ TrigPump | TriggerZones$ Battlefield | OptionalDecider$ You | TriggerDescription$ At the beginning of combat on your turn, you may have target creature you control gain vigilance until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | KW$ Vigilance
+
+Oracle:Motivate 3 (When this creature enters, you may motivate target creature with less power than this by putting three +1/+1 counters on it.)\nAt the beginning of combat on your turn, you may have target creature you control gain vigilance until end of turn.
+
+SVar:PlayMain1:TRUE
+DeckHas:Ability$Counters|Motivate
