@@ -1,0 +1,16 @@
+Name:Goriana Naturalist
+ManaCost:5 G
+Types:Creature Ox Shaman
+PT:4/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMotivate | OptionalDecider$ You | TriggerDescription$ Motivate 2 (When this creature enters, you may motivate target creature with less power than this by putting two +1/+1 counters on it.)
+SVar:X:Count$CardPower
+SVar:TrigMotivate:DB$ PutCounter | Named$ Motivate | CounterType$ P1P1 | CounterNum$ 2 | ValidTgts$ Creature.powerLTX | TgtPrompt$ Select target creature
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+counters_GE1_P1P1 | AddKeyword$ Trample | Description$ Each creature you control with a +1/+1 counter on it has trample.
+
+Oracle:Motivate 2 (When this creature enters, you may motivate target creature with less power than this by putting two +1/+1 counters on it.)\nEach creature you control with a +1/+1 counter on it has trample.
+
+SVar:PlayMain1:TRUE
+DeckHas:Ability$Counters|Motivate
+DeckHints:Ability$Counters
