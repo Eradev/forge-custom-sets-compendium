@@ -34,8 +34,8 @@ Video Horror System (VHS)             -  97% (83/86)
 Nangjiao In Bloom (NJB)               -  35% (106/297)
   Missing cards:
     * Diao of the Opal Infantry
-Riddles of Revio (RVO)                -   5% (14/272)
-Worlds Away (WAY)                     -   3% (9/262)
+Riddles of Revio (RVO)                -  11% (30/272)
+Worlds Away (WAY)                     -   3% (11/262)
 Storytime (101)                       -  14% (15/101)
 Kaleidoscope (KLC)                    -  100%
 Path of Shadows (PSA)                 -  89% (187/209)
@@ -43,7 +43,7 @@ Path of Shadows (PSA)                 -  89% (187/209)
      * Every card with Inscribe, or referencing it.
      * The Sacred Gate
 A Tourney at Whiterun (TWR)           -  100%
-Tides of War (TOW)                    -  29% (79/271)
+Tides of War (TOW)                    -  32% (89/271)
 Pyramids of Atuum (POA)               -  98% (126/128)
   Missing cards:
     * Righteous Priestess
@@ -301,10 +301,9 @@ When this creature enters, you may motivate target creature with less power than
 Implementation:
 
 ```text
-K:Motivate:2
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPutCounter | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may motivate target creature with less power than this by putting two +1/+1 counters on it.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMotivate | OptionalDecider$ You | TriggerDescription$ Motivate 2 (When this creature enters, you may motivate target creature with less power than this by putting two +1/+1 counters on it.)
 SVar:X:Count$CardPower
-SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 2 | ValidTgts$ Creature.powerLTX | TgtPrompt$ Select target creature
+SVar:TrigMotivate:DB$ PutCounter | Named$ Motivate | CounterType$ P1P1 | CounterNum$ 2 | ValidTgts$ Creature.powerLTX | TgtPrompt$ Select target creature
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
