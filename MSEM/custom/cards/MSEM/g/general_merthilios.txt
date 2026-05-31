@@ -1,0 +1,17 @@
+Name:General Merthilios
+ManaCost:4 R R
+Types:Legendary Creature Human Knight
+PT:4/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMotivate | OptionalDecider$ You | TriggerDescription$ Motivate 3 (When this creature enters, you may motivate target creature with less power than this by putting three +1/+1 counters on it.)
+SVar:X:Count$CardPower
+SVar:TrigMotivate:DB$ PutCounter | Named$ Motivate | CounterType$ P1P1 | CounterNum$ 3 | ValidTgts$ Creature.powerLTX | TgtPrompt$ Select target creature | RememberCards$ True
+
+T:Mode$ AbilityResolves | ValidSource$ Card.Self | ValidSpellAbility$ Triggered.NamedAbilityMotivate | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ When CARDNAME motivates a creature, that creature gains first strike, trample, and haste until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Remembered | KW$ First Strike & Trample & Haste | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Motivate 3 (When this creature enters, you may motivate target creature with less power than this by putting three +1/+1 counters on it.)\nWhen General Merthilios motivates a creature, that creature gains first strike, trample, and haste until end of turn.
+
+SVar:PlayMain1:TRUE
+DeckHas:Ability$Counters|Motivate
