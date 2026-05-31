@@ -5,9 +5,15 @@ PT:1/1
 
 K:Trample
 
-R:Event$ AddCounter | ActiveZones$ Battlefield | ValidCard$ Creature.YouCtrl+inZoneBattlefield+Other | ValidCounterType$ P1P1 | ReplaceWith$ AddOneMoreCounters | ActivationLimit$ 1 | Description$ Once each turn, if one or more +1/+1 counters would be put on another creature you control, that many plus one +1/+1 counters are put on it instead.
-SVar:AddOneMoreCounters:DB$ ReplaceCounter | ValidCounterType$ P1P1 | ChooseCounter$ True | Amount$ X
+S:Mode$ Continuous | Affected$ Card.Self | AddReplacementEffect$ ReplaceCounterOnce | CheckSVar$ EffectDisabled | SVarCompare$ EQ0 | Description$  Once each turn, if one or more +1/+1 counters would be put on a creature you control, that many plus one +1/+1 counters are put on it instead.
+SVar:ReplaceCounterOnce:Event$ AddCounter | ActiveZones$ Battlefield | ValidCard$ Creature.YouCtrl+inZoneBattlefield | ValidCounterType$ P1P1 | ReplaceWith$ AddOneMoreCounters
+SVar:AddOneMoreCounters:DB$ ReplaceCounter | ValidCounterType$ P1P1 | ChooseCounter$ True | Amount$ X | SubAbility$ DisableEffect
+SVar:DisableEffect:DB$ StoreSVar | SVar$ EffectDisabled | Type$ Number | Expression$ 1
 SVar:X:ReplaceCount$CounterNum/Plus.1
+SVar:EffectDisabled:0
+
+T:Mode$ Phase | Phase$ Upkeep | TriggerZones$ Battlefield | PresentZone$ Command | Execute$ EnableEffect | Static$ True
+SVar:EnableEffect:DB$ StoreSVar | SVar$ EffectDisabled | Type$ Number | Expression$ 0
 
 Oracle:Trample\nOnce each turn, if one or more +1/+1 counters would be put on a creature you control, that many plus one +1/+1 counters are put on it instead.
 
