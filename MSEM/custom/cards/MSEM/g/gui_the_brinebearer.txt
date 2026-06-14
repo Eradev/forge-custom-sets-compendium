@@ -1,0 +1,32 @@
+Name:Gui, the Brinebearer
+ManaCost:1 G U
+Types:Legendary Creature Turtle Beast
+PT:5/6
+
+#-------------------
+# Golden Age trigger
+#-------------------
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Secondary$ True | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+T:Mode$ AttackersDeclared | AttackingPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Secondary$ True | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+T:Mode$ AbilityCast | ValidActivatingPlayer$ You | ValidSA$ SpellAbility.!ManaAbility | TriggerZones$ Battlefield | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Secondary$ True | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+
+SVar:EnterGoldenAge:DB$ Effect | Name$ Golden Age | StaticAbilities$ GoldenAgeDesc | Duration$ Permanent | Unique$ True
+SVar:GoldenAgeDesc:Mode$ Continuous | Description$ You are in a renaissance.
+
+SVar:GoldenAgeSpell:Count$ThisTurnCast_Card.Instant+YouCtrl,Card.Sorcery+YouCtrl/LimitMax.1
+SVar:GoldenAgeAbility:Count$ThisTurnActivated_Activated.!ManaAbility+YouCtrl/LimitMax.1
+SVar:GoldenAgeAttack:Count$AttackersDeclared/LimitMax.1
+SVar:GoldenCheck1:SVar$GoldenAgeSpell/Plus.GoldenAgeAbility
+SVar:GoldenCheckFinal:SVar$GoldenCheck1/Plus.GoldenAgeAttack
+#-------------------
+
+S:Mode$ CantAttack,CantBlock | ValidCard$ Card.Self | CheckSVar$ IsRenaissance | SVarCompare$ EQ0 | Description$ NICKNAME can't attack or block unless you're in a renaissance.
+SVar:IsRenaissance:Count$ValidCommand Effect.YouCtrl+namedGolden Age/LimitMax.1
+
+A:AB$ Dig | Cost$ T | Reveal$ True | DigNum$ 1 | ChangeValid$ Land | DestinationZone$ Battlefield | Shuffle$ False | RememberRevealed$ True | RevealedDestination$ Library | RevealedLibraryPosition$ 0 | SubAbility$ DBMill | StackDescription$ SpellDescription | SpellDescription$ Reveal the top card of your library. If it's a land card, put it onto the battlefield. Otherwise, put it back on top or into your graveyard and you gain 3 life.
+SVar:DBMill:DB$ ChangeZone | ConditionDefined$ Remembered | ConditionPresent$ Card.nonLand | Defined$ Remembered | Origin$ Library | Destination$ Graveyard | Optional$ True | OptionalDecider$ You | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | ConditionDefined$ Remembered | ConditionPresent$ Card.nonLand | LifeAmount$ 3 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True 
+
+Oracle:Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)\nGui can't attack or block unless you're in a renaissance.\n{T}: Reveal the top card of your library. If it's a land card, put it onto the battlefield. Otherwise, put it back on top or into your graveyard and you gain 3 life.
