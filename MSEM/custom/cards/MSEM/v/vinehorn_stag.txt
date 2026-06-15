@@ -1,0 +1,10 @@
+Name:Vinehorn Stag
+ManaCost:2 G
+Types:Creature Elk
+PT:3/2
+
+S:Mode$ MinMaxBlocker | ValidCard$ Card.Self+counters_GE1_P1P1 | Max$ 1 | Description$ As long as this creature has a +1/+1 counter on it, it can't be blocked by more than one creature.
+
+Oracle:As long as this creature has a +1/+1 counter on it, it can't be blocked by more than one creature.
+
+DeckHints:Ability$Counters
