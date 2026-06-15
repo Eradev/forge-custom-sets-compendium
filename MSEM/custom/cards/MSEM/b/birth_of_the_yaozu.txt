@@ -1,0 +1,29 @@
+Name:Birth of the Yaozu
+ManaCost:3 B B
+Types:Sorcery
+
+#-------------------
+# Golden Age trigger
+#-------------------
+T:Mode$ SpellCast | ValidCard$ Card.Self | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+
+SVar:EnterGoldenAge:DB$ Effect | Name$ Golden Age | StaticAbilities$ GoldenAgeDesc | Duration$ Permanent | Unique$ True
+SVar:GoldenAgeDesc:Mode$ Continuous | Description$ You are in a renaissance.
+
+SVar:GoldenAgeSpell:Count$ThisTurnCast_Card.Instant+YouCtrl,Card.Sorcery+YouCtrl/LimitMax.1
+SVar:GoldenAgeAbility:Count$ThisTurnActivated_Activated.!ManaAbility+YouCtrl/LimitMax.1
+SVar:GoldenAgeAttack:Count$AttackersDeclared/LimitMax.1
+SVar:GoldenCheck1:SVar$GoldenAgeSpell/Plus.GoldenAgeAbility
+SVar:GoldenCheckFinal:SVar$GoldenCheck1/Plus.GoldenAgeAttack
+#-------------------
+
+A:SP$ Branch | TgtZone$ Graveyard | ValidTgts$ Creature.YouOwn+inZoneGraveyard | TgtPrompt$ Choose target creature card in your graveyard | BranchConditionSVar$ X | BranchConditionSVarCompare$ EQ1 | TrueSubAbility$ DBChangeZoneEntered | FalseSubAbility$ DBChangeZone | RememberTargets$ True | SpellDescription$ Return target creature card from your graveyard to the battlefield. If it was put there from the battlefield this turn, create a token that's a copy of it. If you're in a renaissance, create a token that's a copy of it.
+SVar:X:Targeted$Valid Card.ThisTurnEnteredFrom_Battlefield
+SVar:DBChangeZoneEntered:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | Defined$ Remembered | SubAbility$ DBCopyEntered
+SVar:DBChangeZone:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | Defined$ Remembered | SubAbility$ DBCopyRenaissance
+SVar:DBCopyEntered:DB$ CopyPermanent | Defined$ Remembered | Controller$ You | SubAbility$ DBCopyRenaissance
+SVar:DBCopyRenaissance:DB$ CopyPermanent | Defined$ Remembered | Controller$ You | ConditionCheckSVar$ IsRenaissance | ConditionSVarCompare$ EQ1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:IsRenaissance:Count$ValidCommand Effect.YouCtrl+namedGolden Age/LimitMax.1
+
+Oracle:Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)\nReturn target creature card from your graveyard to the battlefield. If it was put there from the battlefield this turn, create a token that's a copy of it. If you're in a renaissance, create a token that's a copy of it.
