@@ -10,4 +10,5 @@ SVar:RepChangeZone:AB$ ChangeZone | Cost$ Sac<2/Land> Mill<2> | Origin$ Graveyar
 Oracle:Create a 0/0 green Wurm creature token with "This creature gets +1/+1 for each permanent card in your graveyard."\nIf you would draw a card, you may instead sacrifice two lands and mill two cards. If you do, return this card from your graveyard to your hand.
 
 DeckHas:Ability$Token & Type$Wurm
+SVar:NeedsToPlay:Permanent.inZoneGraveyard+YouCtrl
 AI:RemoveDeck:All
