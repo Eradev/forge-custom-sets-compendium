@@ -1,0 +1,11 @@
+Name:Vassal of the Wild
+ManaCost:G
+Types:Creature Human Druid
+PT:1/1
+
+A:AB$ Mana | Cost$ T | Produced$ G | RestrictValid$ Spell.Creature,Activated.Creature | SpellDescription$ Add {G}. Spend this mana only to cast a creature spell or activate an ability of a creature.
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPump | IsPresent$ Creature.YouCtrl+powerGE4 | TriggerDescription$ At the beginning of combat on your turn, if you control a creature with power 4 or greater, this creature gets +2/+1 and gains vigilance until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +2 | NumDef$ +1 | KW$ Vigilance
+
+Oracle:{T}: Add {G}. Spend this mana only to cast a creature spell or activate an ability of a creature.\nAt the beginning of combat on your turn, if you control a creature with power 4 or greater, this creature gets +2/+1 and gains vigilance until end of turn.
