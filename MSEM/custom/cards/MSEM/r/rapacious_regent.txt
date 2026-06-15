@@ -1,0 +1,14 @@
+Name:Rapacious Regent
+ManaCost:3 R R
+Types:Creature Dragon
+PT:3/3
+
+K:Flying
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigSac | TriggerDescription$ When this creature enters, you may sacrifice another creature or artifact. If you do, it deals 3 damage to any target.
+SVar:TrigSac:AB$ ImmediateTrigger | Cost$ Sac<1/Creature.Other;Artifact.Other/another creature or artifact> | Execute$ TrigDealDamage | TriggerDescription$ When this creature enters, you may sacrifice another creature or artifact. If you do, it deals 3 damage to any target.
+SVar:TrigDealDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 3
+
+Oracle:Flying\nWhen this creature enters, you may sacrifice another creature or artifact. If you do, it deals 3 damage to any target.
+
+DeckHas:Ability$Sacrifice
