@@ -1,0 +1,15 @@
+Name:Rest and Relaxation
+ManaCost:1 U
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+R:Event$ Untap | ActiveZones$ Battlefield | ValidCard$ Creature.EnchantedBy | ValidStepTurnToController$ You | Layer$ CantHappen | Description$ Enchanted creature doesn't untap during its controller's untap step.
+
+A:AB$ Tap | Cost$ 1 U | Defined$ Enchanted | SpellDescription$ Tap enchanted creature.
+
+Oracle:Enchant creature\nEnchanted creature doesn't untap during its controller's untap step.\n{1}{U}: Tap enchanted creature.
+
+SVar:NonStackingAttachEffect:True
+SVar:AttachAILogic:Curse
+AI:RemoveDeck:All
