@@ -31,7 +31,7 @@ Video Horror System (VHS)             -  97% (83/86)
     * Maddened Preacher
     * Snowfield Doppelganger
     * Wiretapper
-Nangjiao In Bloom (NJB)               -  38% (115/297)
+Nangjiao In Bloom (NJB)               -  42% (126/297)
   Missing cards:
     * Diao of the Opal Infantry
 Riddles of Revio (RVO)                -  83% (226/272)
