@@ -1,0 +1,12 @@
+Name:Wealth of the Flood
+ManaCost:5 U U
+Types:Sorcery
+
+A:SP$ Token | TokenScript$ u_8_8_kraken | SpellDescription$ Create an 8/8 blue Kraken creature token.
+
+A:AB$ Token | Cost$ 2 U Discard<1/CARDNAME> | TokenScript$ c_a_treasure_sac | SubAbility$ DBScry | SpellDescription$ Create a Treasure token. Scry 2.
+SVar:DBScry:DB$ Scry | ScryNum$ 2
+
+Oracle:Create an 8/8 blue Kraken creature token.\n{2}{U}, Discard Wealth of the Flood: Create a Treasure token. Scry 2.
+
+DeckHas:Ability$Sacrifice|Token & Type$Kraken|Treasure|Artifact
