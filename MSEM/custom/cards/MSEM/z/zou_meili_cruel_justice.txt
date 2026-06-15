@@ -1,0 +1,17 @@
+Name:Zou Meili, Cruel Justice
+ManaCost:2 W B
+Types:Legendary Planeswalker Zou
+
+A:AB$ Discard | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Defined$ Player.Opponent | Mode$ TgtChoose | RememberDiscarded$ True | SubAbility$ DBChangeZone | SpellDescription$ Each opponent discards a card. If a land card is discarded this way, create a 1/1 colorless Spirit creature token with flying.
+SVar:DBToken:DB$ Token | TokenScript$ c_1_1_spirit_flying | ConditionDefined$ Remembered | ConditionPresent$ Land | ConditionCompare$ GE1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+
+A:AB$ PumpAll | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1 | SubAbility$ DBPumpAll | SpellDescription$ Until end of turn, creatures you control get +1/+1 and creatures your opponents control get -1/-1.
+SVar:DBPumpAll:DB$ PumpAll | ValidCards$ Creature.OppCtrl | NumAtt$ -1 | NumDef$ -1
+
+A:AB$ ChooseCard | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | Defined$ Player.Opponent | Choices$ Permanent | ChooseEach$ Artifact & Battle & Creature & Enchantment & Land & Planeswalker | ControlledByPlayer$ Chooser | Reveal$ True | SubAbility$ SacAllOthers | SpellDescription$ Each opponent chooses up to one permanent they control of each permanent type, then sacrifices the rest.
+SVar:SacAllOthers:DB$ SacrificeAll | ValidCards$ Permanent.nonChosenCard+OppCtrl | SubAbility$ DBCleanup
+
+Oracle:[+1]: Each opponent discards a card. If a land card is discarded this way, create a 1/1 colorless Spirit creature token with flying.\n[-2]: Until end of turn, creatures you control get +1/+1 and creatures your opponents control get -1/-1.\n[-6]: Each opponent chooses up to one permanent they control of each permanent type, then sacrifices the rest.
+
+DeckHas:Ability$Token|Discard|Sacrifice & Type$Spirit
