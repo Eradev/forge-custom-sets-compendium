@@ -1,0 +1,14 @@
+Name:Wilderkin Zealot
+ManaCost:R G
+Types:Creature Human Druid
+PT:2/2
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPutCounter | IsPresent$ Creature.YouCtrl+powerGE4 | TriggerDescription$ At the beginning of combat on your turn, if you control a creature with power 4 or greater, put a +1/+1 counter on this creature.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
+
+A:AB$ Pump | Cost$ R G | ValidTgts$ Creature | KW$ Trample | SpellDescription$ Target creature gains trample until end of turn.
+
+Oracle:At the beginning of combat on your turn, if you control a creature with power 4 or greater, put a +1/+1 counter on this creature.\n{R}{G}: Target creature gains trample until end of turn.
+
+SVar:PlayMain1:TRUE
+DeckHas:Ability$Counters
