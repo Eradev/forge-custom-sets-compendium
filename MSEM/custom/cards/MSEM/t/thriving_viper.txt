@@ -5,8 +5,8 @@ PT:1/1
 
 K:Trample
 
-S:Mode$ Continuous | Affected$ Card.Self | AddReplacementEffect$ ReplaceCounterOnce | CheckSVar$ EffectDisabled | SVarCompare$ EQ0 | Description$  Once each turn, if one or more +1/+1 counters would be put on a creature you control, that many plus one +1/+1 counters are put on it instead.
-SVar:ReplaceCounterOnce:Event$ AddCounter | ActiveZones$ Battlefield | ValidCard$ Creature.YouCtrl+inZoneBattlefield | ValidCounterType$ P1P1 | ReplaceWith$ AddOneMoreCounters
+S:Mode$ Continuous | Affected$ Card.Self | AddReplacementEffect$ ReplaceCounterOnce | CheckSVar$ EffectDisabled | SVarCompare$ EQ0 | Description$ Once each turn, if one or more +1/+1 counters would be put on a creature you control, that many plus one +1/+1 counters are put on it instead.
+SVar:ReplaceCounterOnce:Event$ AddCounter | ActiveZones$ Battlefield | ValidCard$ Creature.YouCtrl+inZoneBattlefield | ValidCounterType$ P1P1 | ReplaceWith$ AddOneMoreCounters | Secondary$ True | Description$ Once each turn, if one or more +1/+1 counters would be put on a creature you control, that many plus one +1/+1 counters are put on it instead.
 SVar:AddOneMoreCounters:DB$ ReplaceCounter | ValidCounterType$ P1P1 | ChooseCounter$ True | Amount$ X | SubAbility$ DisableEffect
 SVar:DisableEffect:DB$ StoreSVar | SVar$ EffectDisabled | Type$ Number | Expression$ 1
 SVar:X:ReplaceCount$CounterNum/Plus.1
