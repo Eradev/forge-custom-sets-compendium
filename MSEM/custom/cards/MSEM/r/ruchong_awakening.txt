@@ -1,0 +1,13 @@
+Name:Ruchong Awakening
+ManaCost:1 B G
+Types:Sorcery
+
+A:SP$ Token | TokenScript$ g_0_0_wurm_grave | SpellDescription$ Create a 0/0 green Wurm creature token with "This creature gets +1/+1 for each permanent card in your graveyard."
+
+R:Event$ Draw | ValidPlayer$ You | ActiveZones$ Graveyard | ReplaceWith$ RepChangeZone | Optional$ True | OptionalDecider$ You | Description$ If you would draw a card, you may instead sacrifice two lands and mill two cards. If you do, return this card from your graveyard to your hand.
+SVar:RepChangeZone:AB$ ChangeZone | Cost$ Sac<2/Land> Mill<2> | Origin$ Graveyard | Destination$ Hand
+
+Oracle:Create a 0/0 green Wurm creature token with "This creature gets +1/+1 for each permanent card in your graveyard."\nIf you would draw a card, you may instead sacrifice two lands and mill two cards. If you do, return this card from your graveyard to your hand.
+
+DeckHas:Ability$Token & Type$Wurm
+AI:RemoveDeck:All
