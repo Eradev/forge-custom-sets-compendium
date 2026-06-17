@@ -297,3 +297,18 @@ Type=Custom
 14 emblem_eve_the_mastermind @Anna Podedworna
 15 emblem_naiala_the_informant @Anastasia Kustova
 16 emblem_tara_duneblessed @Denis Fröhlich
+
+[SpellTypes]
+Riddle
+
+[EnchantmentTypes]
+Riddle
+
+[ArtifactTypes]
+Riddle
+
+[WalkerTypes]
+Ciel
+Eve
+Naiala
+Tara
