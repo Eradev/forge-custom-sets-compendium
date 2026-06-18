@@ -1,6 +1,7 @@
 Name:Zou Meili, Cruel Justice
 ManaCost:2 W B
 Types:Legendary Planeswalker Zou
+Loyalty:3
 
 A:AB$ Discard | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Defined$ Player.Opponent | Mode$ TgtChoose | RememberDiscarded$ True | SubAbility$ DBChangeZone | SpellDescription$ Each opponent discards a card. If a land card is discarded this way, create a 1/1 colorless Spirit creature token with flying.
 SVar:DBToken:DB$ Token | TokenScript$ c_1_1_spirit_flying | ConditionDefined$ Remembered | ConditionPresent$ Land | ConditionCompare$ GE1 | SubAbility$ DBCleanup
