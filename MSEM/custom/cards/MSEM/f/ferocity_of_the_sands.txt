@@ -1,0 +1,9 @@
+Name:Ferocity of the Sands
+ManaCost:1 B
+Types:Instant
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ 1 | ValidTarget$ Creature.attacking | EffectZone$ All | Description$ This spell costs {1} less to cast if it targets an attacking creature.
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ +2 | KW$ Indestructible | SpellDescription$ Target creature gets +2/+0 and gains indestructible until end of turn.
+
+Oracle:This spell costs {1} less to cast if it targets an attacking creature.\nTarget creature gets +2/+0 and gains indestructible until end of turn.
