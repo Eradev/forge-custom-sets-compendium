@@ -1,0 +1,16 @@
+Name:Alrathan Vizier
+ManaCost:3 U R
+Types:Enchantment Creature Sphinx
+PT:4/3
+
+K:Flying
+
+K:Prowess
+
+T:Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Artifact.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigLoot | TriggerDescription$ Whenever an artifact you control enters, you may draw a card. If you do, discard a card.
+SVar:TrigLoot:AB$ Discard | Cost$ Draw<1/You> | Defined$ You | Mode$ TgtChoose
+
+Oracle:Flying, prowess\nWhenever an artifact you control enters, you may draw a card. If you do, discard a card.
+
+DeckHas:Ability$Discard
+DeckHints:Type$Artifact
