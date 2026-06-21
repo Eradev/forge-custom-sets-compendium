@@ -1,0 +1,16 @@
+Name:Library Infiltrator
+ManaCost:3 G
+Types:Creature Human Rogue
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigEffect | TriggerDescription$ When this creature enters, target creature can't be blocked by creatures with lesser power this turn.
+SVar:TrigEffect:DB$ Effect | ValidTgts$ Creature | TgtPrompt$ Select target creature | RememberObjects$ Targeted | StaticAbilities$ STCantBlockBy
+SVar:STCantBlockBy:Mode$ CantBlockBy | ValidAttacker$ Creature.IsRemembered | ValidBlocker$ Creature.powerLTZ | Description$ This creature can't be blocked by creatures with lesser power this turn.
+SVar:Z:Remembered$CardPower
+
+T:Mode$ DamageDoneOnce | CombatDamage$ True | ValidSource$ Creature.YouCtrl | TriggerZones$ Battlefield | ValidTarget$ Player,Planeswalker | Execute$ TrigDraw | TriggerDescription$ Whenever one or more creatures you control deal combat damage to a player or planeswalker, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:When this creature enters, target creature can't be blocked by creatures with lesser power this turn.\nWhenever one or more creatures you control deal combat damage to a player or planeswalker, draw a card.
+
+SVar:PlayMain1:TRUE
