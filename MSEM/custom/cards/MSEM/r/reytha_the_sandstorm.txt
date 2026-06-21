@@ -1,0 +1,11 @@
+Name:Reytha, the Sandstorm
+ManaCost:1 R W
+Types:Legendary Creature Human Wizard
+PT:3/3
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever you cast an instant or sorcery spell, create a 1/1 red and white Sand enchantment creature token with lifelink and haste.
+SVar:TrigToken:DB$ Token | TokenScript$ rw_1_1_e_sand_lifelink_haste
+
+Oracle:Whenever you cast an instant or sorcery spell, create a 1/1 red and white Sand enchantment creature token with lifelink and haste.
+
+DeckHas:Ability$Token & Type$Sand
