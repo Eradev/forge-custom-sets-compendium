@@ -1,0 +1,12 @@
+Name:Desert Marauder
+ManaCost:3 B
+Types:Creature Human Warrior
+PT:3/2
+
+K:Mentor
+
+A:AB$ PutCounter | Cost$ 2 Sac<1/Creature> | Defined$ Self | CounterType$ P1P1 | SpellDescription$ Put a +1/+1 counter on this creature.
+
+Oracle:Mentor (Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power.)\n{2}, Sacrifice a creature: Put a +1/+1 counter on this creature.
+
+DeckHas:Ability$Counters|Sacrifice
