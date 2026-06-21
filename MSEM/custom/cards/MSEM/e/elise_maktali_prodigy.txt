@@ -1,0 +1,16 @@
+Name:Elise, Maktali Prodigy
+ManaCost:U R
+Types:Legendary Creature Human Artificer
+PT:2/2
+
+A:AB$ DealDamage | Cost$ 1 R T Sac<1/Artifact> | ValidTgts$ Any | NumDmg$ 2 | SpellDescription$ NICKNAME deals 2 damage to any target.
+
+A:AB$ ChangeZone | Cost$ 1 U T Sac<1/Artifact> | ValidTgts$ Permanent.nonLand | TgtZone$ Battlefield | Origin$ Battlefield | Destination$ Hand | SpellDescription$ Return target nonland permanent to its owner's hand.
+
+A:AB$ Discard | Cost$ 3 U R T Sac<3/Artifact> | Mode$ Hand | SubAbility$ DBDraw | SpellDescription$ Discard your hand, then draw seven cards.
+SVar:DBDraw:DB$ Draw | NumCards$ 7
+
+Oracle:{1}{R}, {T}, Sacrifice an artifact: Elise deals 2 damage to any target.\n{1}{U}, {T}, Sacrifice an artifact: Return target nonland permanent to its owner's hand.\n{3}{U}{R}, {T}, Sacrifice three artifacts: Discard your hand, then draw seven cards.
+
+DeckHas:Ability$Sacrifice
+DeckHints:Type$Artifact
