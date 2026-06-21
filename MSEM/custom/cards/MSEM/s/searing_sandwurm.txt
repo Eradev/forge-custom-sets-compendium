@@ -1,0 +1,12 @@
+Name:Searing Sandwurm
+ManaCost:3 R R
+Types:Creature Wurm
+PT:4/4
+
+K:Menace
+
+T:Mode$ DamageDoneOnce | ValidTarget$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever CARDNAME is dealt damage, it deals that much damage to target player or planeswalker.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Player,Planeswalker | NumDmg$ X
+SVar:X:TriggerCount$DamageAmount
+
+Oracle:Menace\nWhenever this creature is dealt damage, it deals that much damage to target player or planeswalker.
