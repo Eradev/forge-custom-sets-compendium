@@ -1,0 +1,15 @@
+Name:Dafiqi Falconer
+ManaCost:2 W
+Types:Creature Human Warrior
+PT:3/2
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +X/+X, where X is the amount of life you've gained this turn.
+SVar:X:Count$LifeYouGainedThisTurn
+
+S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Flying | CheckSVar$ LifeTotal | SVarCompare$ GTY | Description$ As long as your life total is greater than your starting life total, this creature has flying.
+SVar:LifeTotal:Count$YourLifeTotal
+SVar:Y:Count$YourStartingLife
+
+Oracle:This creature gets +X/+X, where X is the amount of life you've gained this turn.\nAs long as your life total is greater than your starting life total, this creature has flying.
+
+DeckHints:Ability$LifeGain
