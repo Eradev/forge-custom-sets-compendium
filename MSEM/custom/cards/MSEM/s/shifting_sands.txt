@@ -1,0 +1,9 @@
+Name:Shifting Sands
+ManaCost:2 G
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Battlefield | Tapped$ True | ChangeType$ Land.Desert,Land.Basic | ChangeTypeDesc$ Desert or land with a basic land type | ChangeNum$ 1 | SpellDescription$ Search your library for a Desert card or a land card with a basic land type and put it onto the battlefield tapped, then shuffle.
+
+Oracle:Search your library for a Desert card or a land card with a basic land type and put it onto the battlefield tapped, then shuffle.
+
+DeckHints:Type$Desert
