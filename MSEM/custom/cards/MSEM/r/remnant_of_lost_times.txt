@@ -1,0 +1,11 @@
+Name:Remnant of Lost Times
+ManaCost:3
+Types:Artifact Creature Clue Construct
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigScry | TriggerDescription$ When this creature enters, scry 1.
+SVar:TrigScry:DB$ Scry | ScryNum$ 1
+
+A:AB$ Draw | Cost$ 2 Sac<1/CARDNAME/this creature> | SpellDescription$ Draw a card.
+
+Oracle:When this creature enters, scry 1.\n{2}, Sacrifice this creature: Draw a card.
