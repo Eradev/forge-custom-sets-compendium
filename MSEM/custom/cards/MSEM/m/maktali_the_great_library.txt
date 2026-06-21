@@ -1,0 +1,14 @@
+Name:Maktali, the Great Library
+ManaCost:3
+Types:Legendary Artifact
+
+A:AB$ Draw | Cost$ T Discard<1/Card> | SpellDescription$ Draw a card.
+
+A:AB$ Scry | Cost$ 1 T Discard<1/Card> | ScryNum$ 2 | SubAbility$ DBDraw | SpellDescription$ Scry 2, then draw a card.
+SVar:DBDraw:DB$ Draw
+
+A:AB$ ChangeZone | Cost$ 4 T Discard<1/Card> | Origin$ Library | Destination$ Hand | ChangeType$ Card | ChangeNum$ 1 | SpellDescription$ Search your library for a card, put it into your hand, then shuffle.
+
+Oracle:{T}, Discard a card: Draw a card.\n{1}, {T}, Discard a card: Scry 2, then draw a card.\n{4}, {T}, Discard a card: Search your library for a card, put it into your hand, then shuffle.
+
+DeckHas:Ability$Discard
