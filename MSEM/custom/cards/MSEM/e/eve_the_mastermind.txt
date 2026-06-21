@@ -1,0 +1,17 @@
+Name:Eve, the Mastermind
+ManaCost:B B
+Types:Legendary Planeswalker Eve
+Loyalty:2
+
+A:AB$ PumpAll | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | ValidCards$ Creature.YouCtrl | KW$ Deathtouch | SpellDescription$ Creatures you control gain deathtouch until end of turn.
+
+A:AB$ RepeatEach | Cost$ SubCounter<1/LOYALTY> | Planeswalker$ True | RepeatPlayers$ Player | RepeatSubAbility$ DBTorment | SpellDescription$ Each player loses 3 life unless they discard a card or sacrifice a creature.
+SVar:DBTorment:DB$ GenericChoice | Defined$ Remembered | Choices$ PayDiscard,PaySac | FallbackAbility$ LoseLifeFallback | AILogic$ PayUnlessCost
+SVar:PayDiscard:DB$ LoseLife | Defined$ Remembered | LifeAmount$ 3 | UnlessCost$ Discard<1/Card> | UnlessPayer$ Remembered | SpellDescription$ You lose 3 life unless you discard a card.
+SVar:PaySac:DB$ LoseLife | Defined$ Remembered | LifeAmount$ 3 | UnlessCost$ Sac<1/Creature> | UnlessPayer$ Remembered | SpellDescription$ You lose 3 life unless you sacrifice a creature.
+SVar:LoseLifeFallback:DB$ LoseLife | Defined$ Remembered | LifeAmount$ 3
+
+A:AB$ Effect | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Eve, the Mastermind | Image$ emblem_eve_the_mastermind | StaticAbilities$ STEve | Stackable$ False | Duration$ Permanent | AILogic$ Always | SpellDescription$ You get an emblem with "You may play permanent cards from your opponent's graveyards, and you may spend mana as though it was mana of any color to do so."
+SVar:STEve:Mode$ Continuous | Affected$ Card.Permanent+OppOwn | MayPlay$ True | MayPlayIgnoreColor$ True | AffectedZone$ Graveyard | Description$ You may play permanent cards from your opponents' graveyards, and you may spend mana as though it were mana of any color to do so.
+
+Oracle:[+1]: Creatures you control gain deathtouch until end of turn.\n[-1]: Each player loses 3 life unless they discard a card or sacrifice a creature.\n[-6]: You get an emblem with "You may play permanent cards from your opponent's graveyards, and you may spend mana as though it was mana of any color to do so."
