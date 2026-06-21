@@ -1,0 +1,9 @@
+Name:Pillar of Training
+ManaCost:2
+Types:Artifact
+
+A:AB$ PutCounter | Cost$ 2 T | CounterType$ P1P1 | ValidTgts$ Creature | SorcerySpeed$ True | SpellDescription$ Put a +1/+1 counter on target creature. Activate only as a sorcery.
+
+Oracle:{2}, {T}: Put a +1/+1 counter on target creature. Activate only as a sorcery.
+
+DeckHas:Ability$Counters
