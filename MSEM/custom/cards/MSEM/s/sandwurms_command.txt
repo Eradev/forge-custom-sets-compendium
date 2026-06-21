@@ -1,0 +1,18 @@
+Name:Sandwurm's Command
+ManaCost:4 G G
+Types:Instant
+
+A:SP$ Charm | CharmNum$ 2 | Choices$ DBToken,DBCounters,DBReturn,DBDestroy
+
+SVar:DBToken:DB$ Token | ValidTgts$ Player | TokenScript$ g_3_3_wurm | TokenOwner$ ThisTargetedPlayer | SpellDescription$ Target player creates a 3/3 green Wurm creature token.
+
+SVar:DBCounters:DB$ PutCounter | ValidTgts$ Player | TgtPrompt$ Select target player | SubAbility$ DBPutCounters | SpellDescription$ Target player puts three +1/+1 counters on a creature they control.
+SVar:DBPutCounters:DB$ PutCounter | ValidTgts$ Creature.TargetedPlayerCtrl | TgtPrompt$ Select target creature that player controls | CounterType$ P1P1 | CounterNum$ 3
+
+SVar:DBReturn:DB$ ChangeZone | ValidTgts$ Permanent.YouOwn | Origin$ Graveyard | Destination$ Hand | TgtPrompt$ Select target permanent card in your graveyard | SpellDescription$ Return target permanent card from your graveyard to your hand.
+
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Creature.withFlying | SpellDescription$ Destroy target creature with flying.
+
+Oracle:Choose two —\n• Target player creates a 3/3 green Wurm creature token.\n• Target player puts three +1/+1 counters on a creature they control.\n• Return target permanent card from your graveyard to your hand.\n• Destroy target creature with flying.
+
+DeckHas:Ability$Token|Counters & Type$Wurm
