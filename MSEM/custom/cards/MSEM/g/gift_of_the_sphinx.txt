@@ -3,10 +3,12 @@ ManaCost:4 U
 Types:Enchantment
 
 T:Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | OpponentTurn$ True | Execute$ TrigPutCounter | TriggerDescription$ Whenever you cast a spell during an opponent's turn, put a charge counter on this enchantment.
-SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ CHARGE | CounterNum$ 1
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ CHARGE
 
 T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ At the beginning of your upkeep, draw a card for each charge counter on this enchantment.
 SVar:TrigDraw:DB$ Draw | NumCards$ X
 SVar:X:Count$CardCounters.CHARGE
 
 Oracle:Whenever you cast a spell during an opponent's turn, put a charge counter on this enchantment.\nAt the beginning of your upkeep, draw a card for each charge counter on this enchantment.
+
+DeckHas:Ability$Counters

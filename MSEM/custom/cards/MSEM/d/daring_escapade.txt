@@ -6,9 +6,11 @@ A:SP$ ChangeZone | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Exil
 SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | Tapped$ True | SubAbility$ DBCharm
 SVar:DBCharm:DB$ Charm | Choices$ DBPutCounter,DBPutStun
 
-SVar:DBPutCounter:DB$ PutCounter | Defined$ Remembered | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBCleanup | SpellDescription$ Put a +1/+1 counter on it.
+SVar:DBPutCounter:DB$ PutCounter | Defined$ Remembered | CounterType$ P1P1 | SubAbility$ DBCleanup | SpellDescription$ Put a +1/+1 counter on it.
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
-SVar:DBPutStun:DB$ PutCounter | Defined$ Remembered | CounterType$ Stun | CounterNum$ 1 | SubAbility$ DBCleanup | SpellDescription$ Put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)
+SVar:DBPutStun:DB$ PutCounter | Defined$ Remembered | CounterType$ Stun | SubAbility$ DBCleanup | SpellDescription$ Put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)
 
 Oracle:Exile target creature, return it to the battlefield tapped under its owner's control, then choose one —\n• Put a +1/+1 counter on it.\n• Put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)
+
+DeckHas:Ability$Counters

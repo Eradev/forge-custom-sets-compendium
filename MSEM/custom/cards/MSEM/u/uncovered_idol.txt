@@ -5,7 +5,7 @@ Types:Artifact Idol
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigScry | TriggerDescription$ When this artifact enters, scry 1.
 SVar:TrigScry:DB$ Scry
 
-A:AB$ PutCounter |Cost$ Cost$ T Sac<1/CARDNAME/this artifact> | ValidTgts$ Creature | CounterType$ P1P1 | CounterNum$ 1 | SorcerySpeed$ True | SpellDescription$ Put a +1/+1 counter on target creature. Activate only as a sorcery.
+A:AB$ PutCounter |Cost$ Cost$ T Sac<1/CARDNAME/this artifact> | ValidTgts$ Creature | CounterType$ P1P1 | SorcerySpeed$ True | SpellDescription$ Put a +1/+1 counter on target creature. Activate only as a sorcery.
 
 Oracle:When this artifact enters, scry 1.\n{T}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.
 

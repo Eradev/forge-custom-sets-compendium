@@ -4,7 +4,7 @@ Types:Sorcery
 
 A:SP$ Charm | Choices$ DBCounterFight,DBToken,DBMillGain | CharmNum$ 3 | CanRepeatModes$ True
 
-SVar:DBCounterFight:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature you control | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBFight | SpellDescription$ Put a +1/+1 counter on up to one target creature you control, then you may have it fight target creature you don't control.
+SVar:DBCounterFight:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature you control | CounterType$ P1P1 | SubAbility$ DBFight | SpellDescription$ Put a +1/+1 counter on up to one target creature you control, then you may have it fight target creature you don't control.
 SVar:DBFight:DB$ Fight | Defined$ ParentTarget | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you don't control | Optional$ True | ConditionDefined$ ParentTarget | ConditionPresent$ Card 
 
 SVar:DBToken:DB$ Token | ValidTgts$ Player | TokenScript$ g_2_2_lizard | TokenOwner$ ThisTargetedPlayer | SpellDescription$ Target player creates a 2/2 green Lizard creature token.

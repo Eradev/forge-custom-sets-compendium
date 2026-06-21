@@ -2,7 +2,7 @@ Name:Abinna's Consecration
 ManaCost:3 G
 Types:Instant
 
-A:SP$ PutCounter | CounterNum$ 1 | CounterType$ P1P1 | ValidTgts$ Creature | TgtPrompt$ Select target creature token | SubAbility$ Prevention | SpellDescription$ Put a +1/+1 counter on target creature. Prevent all combat damage other creatures would deal this turn.
+A:SP$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature | TgtPrompt$ Select target creature token | SubAbility$ Prevention | SpellDescription$ Put a +1/+1 counter on target creature. Prevent all combat damage other creatures would deal this turn.
 SVar:Prevention:DB$ Effect | RememberObjects$ Targeted | ReplacementEffects$ RPrevent | SpellDescription$ Prevent all combat damage other creatures would deal this turn.
 SVar:RPrevent:Event$ DamageDone | Prevent$ True | IsCombat$ True | ValidSource$ Card.!IsRemembered | Description$ Prevent all combat damage other creatures would deal this turn.
 

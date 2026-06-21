@@ -6,8 +6,9 @@ PT:2/1
 K:Flying
 
 T:Mode$ Attacks | ValidCard$ Creature.Self | Execute$ TrigCounters | TriggerDescription$ Whenever NICKNAME attacks, put a +1/+1 counter on each other attacking creature you control.
-SVar:TrigCounters:DB$ PutCounterAll | CounterType$ P1P1 | ValidCards$ Creature.attacking+Other | CounterNum$ 1
+SVar:TrigCounters:DB$ PutCounterAll | CounterType$ P1P1 | ValidCards$ Creature.attacking+Other
 
 Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever Lord Jared attacks, put a +1/+1 counter on each other attacking creature you control.
 
 SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Counters

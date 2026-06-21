@@ -4,11 +4,11 @@ Types:Legendary Creature Human Druid
 PT:3/1
 
 T:Mode$ TokenCreatedOnce | ValidToken$ Permanent.YouOwn | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever you create one or more tokens, put a +1/+1 counter on target creature you control.
-SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | ValidTgtDesc$ creature you control | CounterType$ P1P1 | CounterNum$ 1
+SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | ValidTgtDesc$ creature you control | CounterType$ P1P1
 
 A:AB$ Token | Cost$ 2 G W | TokenScript$ g_0_1_plant | SpellDescription$ Create a 0/1 green Plant creature token.
 
 Oracle:Whenever you create one or more tokens, put a +1/+1 counter on target creature you control.\n{2}{G}{W}: Create a 0/1 green Plant creature token.
 
-DeckHints:Ability$Token
 DeckHas:Ability$Token|Counters & Type$Plant
+DeckHints:Ability$Token

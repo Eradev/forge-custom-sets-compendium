@@ -4,8 +4,10 @@ ManaCost:5
 Types:Artifact
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPutCounter | TriggerDescription$ When this artifact enters, put a +1/+1 counter on target creature you control.
-SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature | CounterType$ P1P1 | CounterNum$ 1
+SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature | CounterType$ P1P1
 
 A:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
 
 Oracle:When this artifact enters, put a +1/+1 counter on target creature you control.\n{T}: Add one mana of any color.
+
+DeckHas:Ability$Counters

@@ -5,7 +5,7 @@ PT:3/1
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMotivate | OptionalDecider$ You | TriggerDescription$ Motivate 1 (When this creature enters, you may motivate target creature with less power than this by putting a +1/+1 counter on it.)
 SVar:X:Count$CardPower
-SVar:TrigMotivate:DB$ PutCounter | Named$ Motivate | CounterType$ P1P1 | CounterNum$ 1 | ValidTgts$ Creature.powerLTX | TgtPrompt$ Select target creature
+SVar:TrigMotivate:DB$ PutCounter | Named$ Motivate | CounterType$ P1P1 | ValidTgts$ Creature.powerLTX | TgtPrompt$ Select target creature
 
 Oracle:Motivate 1 (When this creature enters, you may motivate target creature with less power than this by putting a +1/+1 counter on it.)
 

@@ -7,9 +7,9 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.S
 SVar:TrigToken:DB$ Token | TokenScript$ c_2_2_spirit
 
 T:Mode$ ChangesZone | TriggerZones$ Battlefield | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.Colorless+YouCtrl | Execute$ TrigPutCounter | TriggerDescription$ Whenever a colorless creature you control enters, put a +1/+1 counter on it.
-SVar:TrigPutCounter:DB$ PutCounter | Defined$ TriggeredCardLKICopy | CounterType$ P1P1 | CounterNum$ 1
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ TriggeredCardLKICopy | CounterType$ P1P1
 
 Oracle:When this creature enters, create a 2/2 colorless Spirit creature token.\nWhenever a colorless creature you control enters, put a +1/+1 counter on it.
 
 DeckHints:Color$Colorless
-DeckHas:Ability$Token & Type$Spirit & Color$Colorless
+DeckHas:Ability$Token|Counters & Type$Spirit & Color$Colorless
