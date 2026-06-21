@@ -1,0 +1,18 @@
+Name:Mage's Command
+ManaCost:U U
+Types:Instant
+
+A:SP$ Charm | CharmNum$ 2 | Choices$ DBToken,DBDrawDiscard,DBTap,DBHexproof
+
+SVar:DBToken:DB$ Token | ValidTgts$ Player | TgtPrompt$ Select target player | TokenOwner$ ThisTargetedPlayer | TokenScript$ u_1_1_wizard_prowess | SpellDescription$ Target player creates a 1/1 blue Wizard creature token with prowess.
+
+SVar:DBDrawDiscard:DB$ Draw | NumCards$ 2 | ValidTgts$ Player | SubAbility$ DBDiscard | SpellDescription$ Target player draws two cards, then discards two cards.
+SVar:DBDiscard:DB$ Discard | Defined$ Targeted | NumCards$ 2 | Mode$ TgtChoose
+
+SVar:DBTap:DB$ Tap | TgtPrompt$ Select up to two target creatures | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 2 | SpellDescription$ Tap up to two target creatures.
+
+SVar:DBHexproof:DB$ Pump | ValidTgts$ Creature,Player | TgtPrompt$ Select target creature or player | KW$ Hexproof | SpellDescription$ Target creature or player gains hexproof until end of turn.
+
+Oracle:Choose two —\n• Target player creates a 1/1 blue Wizard creature token with prowess.\n• Target player draws two cards, then discards two cards.\n• Tap up to two target creatures.\n• Target creature or player gains hexproof until end of turn.
+
+DeckHas:Ability$Token & Type$Wizard
