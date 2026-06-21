@@ -1,0 +1,14 @@
+Name:Dunetreader Tortoise
+ManaCost:4 G
+Types:Creature Turtle
+PT:4/4
+
+K:Vigilance
+
+K:Ward:2
+
+A:AB$ PutCounter | Cost$ 1 G T | Defined$ Self | CounterType$ P1P1 | SorcerySpeed$ True | SpellDescription$ Put a +1/+1 counter on this creature. Activate only as a sorcery.
+
+Oracle:Vigilance, ward {2}\n{1}{G}, {T}: Put a +1/+1 counter on this creature. Activate only as a sorcery.
+
+DeckHas:Ability$Counters
