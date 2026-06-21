@@ -1,0 +1,12 @@
+Name:Cave Spider
+ManaCost:2 G
+Types:Creature Spider
+PT:3/3
+
+K:Vigilance
+
+K:Reach
+
+T:Mode$ AttackerBlocked | ValidCard$ Creature.withFlying | ValidBlocker$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever this creature blocks a creature with flying, it gets +2/+0 until end of turn.
+
+Oracle:Vigilance, reach\nWhenever this creature blocks a creature with flying, it gets +2/+0 until end of turn.
