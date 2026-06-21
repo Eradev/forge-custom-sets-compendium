@@ -1,0 +1,14 @@
+Name:Azure Archaeologist
+ManaCost:2 U
+Types:Creature Human Artificer
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigInvestigate | TriggerDescription$ When this creature enters, investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")
+SVar:TrigInvestigate:DB$ Investigate
+
+A:AB$ Draw | Cost$ 2 T Sac<1/Clue> | NumCards$ 2 | SubAbility$ DBDiscard | SpellDescription$ Draw two cards, then discard a card.
+SVar:DBDiscard:DB$ Discard | Defined$ You | NumCards$ 1 | Mode$ TgtChoose
+
+Oracle:When this creature enters, investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")\n{2}, {T}, Sacrifice a Clue: Draw two cards, then discard a card.
+
+DeckHas:Ability$Investigate|Token|Sacrifice & Type$Artifact|Clue
