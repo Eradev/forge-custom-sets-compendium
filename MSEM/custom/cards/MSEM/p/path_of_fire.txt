@@ -1,0 +1,11 @@
+Name:Path of Fire
+ManaCost:no cost
+Types:Land Desert
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Cost$ T PayLife<1> | Produced$ R | SpellDescription$ Add {R}.
+
+A:AB$ DealDamage | Cost$ 4 R T Sac<1/CARDNAME/this land> | ValidTgts$ Player,Planeswalker | NumDmg$ 3 | Activation$ Sorcery | SpellDescription$ It deals 3 damage to target player or planeswalker. Activate only as a sorcery.
+
+Oracle:{T}: Add {C}.\n{T}, Pay 1 life: Add {R}.\n{4}{R}, {T}, Sacrifice this land: It deals 3 damage to target player or planeswalker. Activate only as a sorcery.
