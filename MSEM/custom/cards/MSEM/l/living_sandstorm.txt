@@ -1,0 +1,21 @@
+Name:Living Sandstorm
+ManaCost:3 G
+Types:Enchantment Creature Sand Wolf
+PT:3/3
+
+K:ETBReplacement:Other:SandChoice
+SVar:SandChoice:DB$ GenericChoice | Choices$ Predator,Prey | Defined$ You | SetChosenMode$ True | ShowChoice$ ExceptSelf | SpellDescription$ As CARDNAME enters, choose predator or prey.
+SVar:Predator:DB$ Pump | SpellDescription$ Predator
+SVar:Prey:DB$ Pump | SpellDescription$ Prey
+
+S:Mode$ Continuous | Affected$ Card.Self+ChosenModePredator | AddTrigger$ PredatorAttack | Description$ • Predator — Whenever this creature attacks, it gets +1/+1 until end of turn.
+SVar:PredatorAttack:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever this creature attacks, it gets +1/+1 until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +1 | NumDef$ +1
+
+S:Mode$ Continuous | Affected$ Card.Self+ChosenModePrey | AddTrigger$ PreyAttack | Description$ • Prey — Whenever this creature attacks, scry 2.
+SVar:PreyAttack:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigScry | TriggerDescription$ Whenever this creature attacks, scry 2.
+SVar:TrigScry:DB$ Scry | ScryNum$ 2
+
+Oracle:As this creature enters, choose predator or prey.\n• Predator — Whenever this creature attacks, it gets +1/+1 until end of turn.\n• Prey — Whenever this creature attacks, scry 2.
+
+SVar:HasAttackEffect:True
