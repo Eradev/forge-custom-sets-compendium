@@ -1,0 +1,8 @@
+Name:Sandstone Construct
+ManaCost:3
+Types:Artifact Creature Construct
+PT:2/2
+
+K:Hexproof
+
+Oracle:Hexproof
