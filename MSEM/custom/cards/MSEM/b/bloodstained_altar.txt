@@ -1,0 +1,12 @@
+Name:Bloodstained Altar
+ManaCost:2
+Types:Artifact
+
+A:AB$ Draw | Cost$ 2 T Sac<1/Creature> | SubAbility$ DBLoseLife | SpellDescription$ You draw a card and you lose 2 life.
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
+
+A:AB$ GainLife | Cost$ 1 T ExileFromGrave<1/Creature> | LifeAmount$ 2 | SpellDescription$ You gain 2 life.
+
+Oracle:{2}, {T}, Sacrifice a creature: You draw a card and you lose 2 life.\n{1}, {T}, Exile a creature card from your graveyard: You gain 2 life.
+
+DeckHas:Ability$Sacrifice|GainLife
