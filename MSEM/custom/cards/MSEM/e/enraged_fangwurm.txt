@@ -1,0 +1,14 @@
+Name:Enraged Fangwurm
+ManaCost:2 R G
+Types:Creature Snake
+PT:4/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigMana | TriggerDescription$ Whenever a land you control enters, add one mana of any color.
+SVar:TrigMana:DB$ Mana | Produced$ Any
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever this creature attacks, you may sacrifice a land. If you do, it deals 2 damage to target player or planeswalker.
+SVar:TrigDamage:AB$ DealDamage | Cost$ Sac<1/Land> | ValidTgts$ Player,Planeswalker | TgtPrompt$ Select target player or planeswalker | NumDmg$ 2
+
+Oracle:Whenever a land you control enters, add one mana of any color.\nWhenever this creature attacks, you may sacrifice a land. If you do, it deals 2 damage to target player or planeswalker.
+
+DeckHas:Ability$Sacrifice
