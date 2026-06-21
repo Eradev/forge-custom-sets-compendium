@@ -1,0 +1,21 @@
+Name:Protect the Treasure
+ManaCost:2 R
+Types:Enchantment
+
+K:ETBReplacement:Other:TreasureChoice
+SVar:TreasureChoice:DB$ GenericChoice | Choices$ Offense,Defense | Defined$ You | SetChosenMode$ True | ShowChoice$ ExceptSelf | SpellDescription$ As this enchantment enters, choose offense or defense.
+SVar:Offense:DB$ Pump | SpellDescription$ Offense
+SVar:Defense:DB$ Pump | SpellDescription$ Defense
+
+S:Mode$ Continuous | Affected$ Card.Self+ChosenModeOffense | AddTrigger$ OffenseTrig | Description$ Offense — Whenever an artifact you control enters for the first time each turn, this enchantment deals 2 damage to each opponent.
+SVar:OffenseTrig:Mode$ ChangesZone | ValidCard$ Artifact.YouCtrl | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | FirstTime$ True | Execute$ TrigDamage | Secondary$ True | TriggerDescription$ Whenever an artifact you control enters for the first time each turn, this enchantment deals 2 damage to each opponent.
+SVar:TrigDamage:DB$ DamageAll | ValidPlayers$ Player.Opponent | NumDmg$ 2
+
+S:Mode$ Continuous | Affected$ Card.Self+ChosenModeDefense | AddTrigger$ DefenseTrig | Description$ Defense — Whenever an artifact you control enters for the first time each turn, add {R}{R}.
+SVar:DefenseTrig:Mode$ ChangesZone | ValidCard$ Artifact.YouCtrl | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | FirstTime$ True | Execute$ TrigMana | Secondary$ True | TriggerDescription$ Whenever an artifact you control enters for the first time each turn, Add {R}{R}.
+SVar:TrigMana:DB$ Mana | Produced$ R | Amount$ 2
+
+Oracle:As this enchantment enters, choose offense or defense.\n• Offense — Whenever an artifact you control enters for the first time each turn, this enchantment deals 2 damage to each opponent.\n• Defense — Whenever an artifact you control enters for the first time each turn, add {R}{R}.
+
+SVar:PlayMainTurn1:TRUE
+DeckHints:Type$Artifact
