@@ -1,0 +1,16 @@
+Name:Heavy Sandstorm
+ManaCost:2 R
+Types:Sorcery
+
+A:SP$ Charm | Choices$ DBTokens,DBDestroy | CharmNum$ 1
+
+SVar:DBTokens:DB$ Token | TokenScript$ w_1_1_soldier | TokenAmount$ 2 | RememberTokens$ True | SubAbility$ DBPump | SpellDescription$ Create two 1/1 white Soldier creature tokens. They gain haste until end of turn.
+SVar:DBPump:DB$ Pump | Defined$ Remembered | KW$ Haste | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Land.nonBasic | TgtPrompt$ Select target nonbasic land | SpellDescription$ Destroy target nonbasic land.
+
+Oracle:Choose one —\n• Create two 1/1 white Soldier creature tokens. They gain haste until end of turn.\n• Destroy target nonbasic land.
+
+SVar:PlayMainTurn1:TRUE
+DeckHas:Ability$Token & Type$Soldier
