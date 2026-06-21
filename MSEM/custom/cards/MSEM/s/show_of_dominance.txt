@@ -1,0 +1,15 @@
+Name:Show of Dominance
+ManaCost:1 G
+Types:Sorcery
+
+A:SP$ Pump | ValidTgts$ Creature.YouCtrl | AILogic$ PowerDmg | TgtPrompt$ Select target creature you control | RememberTargets$ True | SubAbility$ SoulsDamage | SpellDescription$ Target creature you control deals damage equal to its power to target creature you don't control. For each point of excess damage dealt this way, put a +1/+1 counter on the creature you control.
+SVar:SoulsDamage:DB$ DealDamage | ValidTgts$ Creature.YouDontCtrl | AILogic$ PowerDmg | TgtPrompt$ Select target creature you don't control | NumDmg$ X | DamageSource$ Remembered | ExcessSVar$ Excess | SubAbility$ DBPutCounter
+SVar:DBPutCounter:DB$ PutCounter | Defined$ Remembered | CounterType$ P1P1 | CounterNum$ Excess | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:ParentTargeted$CardPower
+# Excess will get overwritten by excess damage
+SVar:Excess:Number$0
+
+Oracle:Target creature you control deals damage equal to its power to target creature you don't control. For each point of excess damage dealt this way, put a +1/+1 counter on the creature you control.
+
+DeckHas:Ability$Counters
