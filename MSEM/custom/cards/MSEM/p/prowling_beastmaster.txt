@@ -1,0 +1,12 @@
+Name:Prowling Beastmaster
+ManaCost:2 R
+Types:Creature Human Warrior
+PT:3/2
+
+K:Mentor
+
+A:AB$ DealDamage | Cost$ 2 R Sac<1/CARDNAME/this creature> | ValidTgts$ Player,Planeswalker | NumDmg$ 2 | SpellDescription$ It deals 2 damage to target player or planeswalker.
+
+Oracle:Mentor (Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power.)\n{2}{R}, Sacrifice this creature: It deals 2 damage to target player or planeswalker.
+
+DeckHas:Ability$Counters
