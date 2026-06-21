@@ -10,4 +10,4 @@ SVar:ChooseColor:DB$ ChooseColor | Defined$ You | SpellDescription$ As this land
 
 A:AB$ Mana | Cost$ T | Produced$ Chosen | SpellDescription$ Add one mana of the chosen color.
 
-Oracle:This land enters the battlefield tapped unless you control a basic land.\nAs this land enters, choose a color.\n{T}: Add one mana of the chosen color.
+Oracle:This land enters tapped unless you control a basic land.\nAs this land enters, choose a color.\n{T}: Add one mana of the chosen color.
