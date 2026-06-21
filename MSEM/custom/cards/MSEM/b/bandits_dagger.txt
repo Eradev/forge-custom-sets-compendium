@@ -1,0 +1,14 @@
+Name:Bandit's Dagger
+ManaCost:B
+Types:Artifact Equipment
+
+T:Mode$ Attacks | ValidCard$ Card.EquippedBy | Execute$ TripPump | TriggerDescription$ Whenever equipped creature attacks, it gains deathtouch until end of turn.
+SVar:TripPump:DB$ Pump | Defined$ TriggeredAttackerLKICopy | KW$ Deathtouch
+
+A:AB$ Discard | Cost$ Sac<1/CARDNAME/this Equipment> | ValidTgts$ Player.wasDealtDamageThisTurnBy Card.EquippedBy | TgtPrompt$ Select target player dealt damage by equipped creature this turn | Mode$ RevealYouChoose | DiscardValid$ Card.nonLand | NumCards$ 1 | SpellDescription$ Target player dealt damage by equipped creature this turn reveals their hand. You choose a nonland card from it. That player discards that card.
+
+K:Equip:2
+
+Oracle:Whenever equipped creature attacks, it gains deathtouch until end of turn.\nSacrifice this Equipment: Target player dealt damage by equipped creature this turn reveals their hand. You choose a nonland card from it. That player discards that card.\nEquip {2}
+
+DeckHas:Ability$Sacrifice|Discard
