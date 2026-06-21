@@ -1,0 +1,15 @@
+Name:Blackhearted Sphinx
+ManaCost:4 B B
+Types:Enchantment Creature Sphinx
+PT:3/5
+
+K:Flying
+
+K:Lifelink
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ Whenever this creature attacks, you may pay 3 life. If you do, draw a card.
+SVar:TrigDraw:AB$ Draw | Cost$ PayLife<3>
+
+Oracle:Flying, lifelink\nWhenever his creature attacks, you may pay 3 life. If you do, draw a card.
+
+SVar:HasAttackEffect:TRUE
