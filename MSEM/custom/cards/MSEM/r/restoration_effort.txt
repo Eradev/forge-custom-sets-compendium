@@ -1,0 +1,12 @@
+Name:Restoration Effort
+ManaCost:1 G
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this enchantment enters, draw a card.
+SVar:TrigDraw:DB$ Draw | NumCards$ 1
+
+A:AB$ GainLife | Cost$ Sac<1/CARDNAME/this enchantment> | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | LifeAmount$ Targeted$CardPower | SpellDescription$ Gain life equal to target creature you control's power.
+
+Oracle:When this enchantment enters, draw a card.\nSacrifice this enchantment: Gain life equal to target creature you control's power.
+
+DeckHas:Ability$LifeGain|Sacrifice
