@@ -1,0 +1,13 @@
+Name:Living Library
+ManaCost:3
+Types:Artifact Creature Horror Construct
+PT:2/2
+
+K:Haste
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigLoot | TriggerDescription$ Whenever this creature attacks, you may draw a card. If you do, discard a card.
+SVar:TrigLoot:AB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 1 | Cost$ Draw<1/You>
+
+Oracle:Haste\nWhenever this creature attacks, you may draw a card. If you do, discard a card.
+
+DeckHas:Ability$Discard
