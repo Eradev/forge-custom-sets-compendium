@@ -1,0 +1,12 @@
+Name:Daunt
+ManaCost:2 G
+Types:Enchantment Aura
+
+K:Flash
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 2 | AddToughness$ 2 | Description$ Enchanted creature gets +2/+2 and can't be blocked by creatures with power 2 or less.
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.EnchantedBy | ValidBlocker$ Creature.powerLE2 | Secondary$ True | Description$ Enchanted creature gets +2/+2 and can't be blocked by creatures with power 2 or less.
+
+Oracle:Flash\nEnchant creature\nEnchanted creature gets +2/+2 and can't be blocked by creatures with power 2 or less.
