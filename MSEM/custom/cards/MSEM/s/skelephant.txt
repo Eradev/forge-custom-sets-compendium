@@ -1,0 +1,14 @@
+Name:Skelephant
+ManaCost:3 B
+Types:Creature Elephant Skeleton
+PT:4/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may mill three cards.
+SVar:TrigMill:DB$ Mill | NumCards$ 3 | Defined$ You
+
+T:Mode$ Drawn | ValidCard$ Card.YouCtrl | Number$ 2 | TriggerZones$ Battlefield | Execute$ TrigChangeZone | TriggerDescription$ Foresight — Whenever you draw your second card each turn, you may put target creature card from your graveyard on top of your library.
+SVar:TrigChangeZone:DB$ ChangeZone | Origin$ Graveyard | Destination$ Library | LibraryPosition$ 0 | ValidTgts$ Creature.YouOwn | TgtPrompt$ Select target creature card in your graveyard
+
+Oracle:When this creature enters, you may mill three cards.\nForesight — Whenever you draw your second card each turn, you may put target creature card from your graveyard on top of your library.
+
+DeckHas:Ability$Graveyard
