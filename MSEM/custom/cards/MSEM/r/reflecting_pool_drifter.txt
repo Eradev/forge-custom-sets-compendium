@@ -1,0 +1,12 @@
+Name:Reflecting Pool Drifter
+ManaCost:1 U
+Types:Creature Drake
+PT:1/3
+
+K:Flying
+
+A:AB$ Pump | Cost$ 2 U | ValidTgts$ Creature | KW$ HIDDEN CARDNAME's power and toughness are switched | SpellDescription$ Switch target creature's power and toughness until end of turn.
+
+Oracle:Flying\n{2}{U}: Switch target creature's power and toughness until end of turn.
+
+AI:RemoveDeck:All
