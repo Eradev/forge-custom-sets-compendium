@@ -1,0 +1,15 @@
+Name:Horizon Prophet
+ManaCost:2 G U
+Types:Enchantment Creature Sphinx
+PT:2/3
+
+K:Flying
+
+K:Vigilance
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Creature.YouCtrl+dealtDamageToOppThisTurn | Execute$ TrigPutCounter | TriggerDescription$ At the beginning of your end step, if a creature you control dealt combat damage to an opponent this turn, put a +1/+1 counter on this creature.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1
+
+Oracle:Flying, vigilance\nAt the beginning of your end step, if a creature you control dealt combat damage to an opponent this turn, put a +1/+1 counter on this creature.
+
+DeckHas:Ability$Counters
