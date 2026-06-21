@@ -1,0 +1,9 @@
+Name:Riddlemaster's Bane
+ManaCost:2
+Types:Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | AddKeyword$ Reach & Protection:Creature.Enchantment:enchantment creatures | Description$ Equipped creature gets +2/+2 and has reach and protection from enchantment creatures. (It can't be blocked, targeted, or dealt damage by enchantment creatures.)
+
+K:Equip:3
+
+Oracle:Equipped creature gets +2/+2 and has reach and protection from enchantment creatures. (It can't be blocked, targeted, or dealt damage by enchantment creatures.)\nEquip {3}
