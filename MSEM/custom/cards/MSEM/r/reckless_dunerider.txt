@@ -1,0 +1,14 @@
+Name:Reckless Dunerider
+ManaCost:R
+Types:Creature Human Warrior
+PT:1/1
+
+K:Haste
+
+T:Mode$ Attacks | ValidCard$ Card.Self | IsPresent$ Card.Self+enchanted,Card.Self+equipped | TriggerZones$ Battlefield | Execute$ TrigLoot | TriggerDescription$ Whenever this creature attacks, if it's enchanted or equipped, you may draw a card. If you do, discard a card.
+SVar:TrigLoot:AB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 1 | Cost$ Draw<1/You>
+
+Oracle:Haste\nWhenever this creature attacks, if it's enchanted or equipped, you may draw a card. If you do, discard a card.
+
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Discard
