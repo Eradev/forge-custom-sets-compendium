@@ -1,0 +1,13 @@
+Name:Pilgrim's Packbeast
+ManaCost:2 G
+Types:Creature Beast
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDig | TriggerDescription$ When this creature enters, reveal the top five cards of your library. You may put an enchantment or land card from among them on top. If you do, draw a card. Put the rest on the bottom in any order.
+SVar:TrigDig:DB$ Dig | DigNum$ 5 | Reveal$ True | ChangeNum$ 1 | Optional$ True | ChangeValid$ Enchantment,Land | DestinationZone$ Library | LibraryPosition$ 0 | RememberChanged$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ GE1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When this creature enters, reveal the top five cards of your library. You may put an enchantment or land card from among them on top. If you do, draw a card. Put the rest on the bottom in any order.
+
+DeckHints:Type$Enchantment|Land
