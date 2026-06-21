@@ -1,0 +1,12 @@
+Name:Qalami Barbarian
+ManaCost:2 B
+Types:Creature Human Warrior
+PT:3/2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever this creature attacks, you may discard a card. If you do, it gets +1/+2 and gains menace until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +1 | NumDef$ +2 | KW$ Menace | UnlessCost$ Discard<1/Card> | UnlessPayer$ You | UnlessSwitched$ True
+
+Oracle:Whenever this creature attacks, you may discard a card. If you do, it gets +1/+2 and gains menace until end of turn.
+
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Discard
