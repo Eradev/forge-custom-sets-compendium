@@ -1,0 +1,11 @@
+Name:Royal Falconer
+ManaCost:2 W
+Types:Creature Human Soldier
+PT:3/2
+
+K:Ward:2
+
+T:Mode$ Drawn | ValidCard$ Card.YouCtrl | Number$ 2 | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Foresight — Whenever you draw your second card each turn, this creature gains flying until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | KW$ Flying
+
+Oracle:Ward {2}\nForesight — Whenever you draw your second card each turn, this creature gains flying until end of turn.
