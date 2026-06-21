@@ -1,0 +1,15 @@
+Name:Blackblood Feaster
+ManaCost:4 B R
+Types:Creature Demon
+PT:3/3
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigSac | TriggerDescription$ When this creature enters, you may have each player sacrifice a creature.
+SVar:TrigSac:DB$ Sacrifice | Defined$ Player | SacValid$ Creature
+
+A:AB$ Pump | Cost$ PayLife<2> | Defined$ Self | NumAtt$ +2 | NumDef$ +2 | ActivationLimit$ 1 | SpellDescription$ This creature gets +2/+2 until end of turn. Activate only once each turn.
+
+Oracle:Flying\nWhen this creature enters, you may have each player sacrifice a creature.\nPay 2 life: This creature gets +2/+2 until end of turn. Activate only once each turn.
+
+DeckHas:Ability$Sacrifice
