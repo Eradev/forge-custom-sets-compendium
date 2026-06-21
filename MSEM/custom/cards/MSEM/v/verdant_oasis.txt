@@ -1,0 +1,11 @@
+Name:Verdant Oasis
+ManaCost:no cost
+Types:Land Desert
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Cost$ T PayLife<1> | Produced$ U | SpellDescription$ Add {U}.
+
+A:AB$ Draw | Cost$ 4 U T Sac<1/CARDNAME/this land> | NumCards$ 2 | Activation$ Sorcery | SpellDescription$ Draw two cards. Activate only as a sorcery.
+
+Oracle:{T}: Add {C}.\n{T}, Pay 1 life: Add {U}.\n{4}{U}, {T}, Sacrifice this land: Draw two cards. Activate only as a sorcery.
