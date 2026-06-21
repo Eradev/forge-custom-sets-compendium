@@ -1,0 +1,11 @@
+Name:Haggler's Hound
+ManaCost:1 G
+Types:Creature Dog
+PT:2/2
+
+T:Mode$ Drawn | ValidCard$ Card.YouCtrl | Number$ 2 | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Foresight — Whenever you draw your second card each turn, this creature gets +1/+1 and can't be blocked by creatures with power 2 or less until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +1 | NumDef$ +1 | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ Self | ExileOnMoved$ Battlefield | StaticAbilities$ CantBlockBySmall | Duration$ EndOfTurn
+SVar:CantBlockBySmall:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | ValidBlocker$ Creature.powerLE2 | Description$ This creature can't be blocked by creatures with power 2 or less this turn.
+
+Oracle:Foresight — Whenever you draw your second card each turn, this creature gets +1/+1 and can't be blocked by creatures with power 2 or less until end of turn.
