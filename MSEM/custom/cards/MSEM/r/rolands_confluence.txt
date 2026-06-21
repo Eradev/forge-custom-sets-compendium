@@ -1,0 +1,19 @@
+Name:Roland's Confluence
+ManaCost:2 U U
+Types:Instant
+
+A:SP$ Charm | Choices$ DBBounce,DBScryDraw,DBMustAttack | CharmNum$ 3 | CanRepeatModes$ True
+
+SVar:DBBounce:DB$ ChangeZone | ValidTgts$ Creature.cmcLE2 | TgtPrompt$ Select target creature with mana value 2 or less | Origin$ Battlefield | Destination$ Hand | SpellDescription$ Return target creature with mana value 2 or less to its owner's hand.
+
+SVar:DBScryDraw:DB$ Scry | SubAbility$ DBDraw | SpellDescription$ Scry 1, then draw a card, then discard a card.
+SVar:DBDraw:DB$ Draw | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 1
+
+SVar:DBMustAttack:DB$ Pump | ValidTgts$ Creature | NumAtt$ -2 | IsCurse$ True | SubAbility$ DBEffect | SpellDescription$ Target creature gets -2/-0 until end of turn and attacks this turn if able.
+SVar:DBEffect:DB$ Effect | Defined$ Targeted | StaticAbilities$ MustAttack | ExileOnMoved$ Battlefield
+SVar:MustAttack:Mode$ MustAttack | ValidCreature$ Card.EffectSource | Description$ This creature attacks this turn if able.
+
+Oracle:Choose three. You may choose the same mode more than once.\n• Return target creature with mana value 2 or less to its owner's hand.\n• Scry 1, then draw a card, then discard a card.\n• Target creature gets -2/-0 until end of turn and attacks this turn if able.
+
+DeckHas:Ability$Discard
