@@ -2,7 +2,7 @@ Name:Love Letters
 ManaCost:X
 Types:Artifact
 
-K:etbCounter:STAMP:X
+K:etbCounter:STAMP:X:no Condition:This artifact enters with X stamp counters on it.
 SVar:X:Count$xPaid
 
 T:Mode$ DamageDealtOnce | CombatDamage$ True | ValidSource$ Creature.YouCtrl | ValidTarget$ Player | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever one or more creatures you control deal combat damage to a player, you may remove a stamp counter from this artifact. If you do, draw a card.

@@ -5,7 +5,7 @@ PT:0/0
 
 K:Trample
 
-K:etbCounter:P1P1:5
+K:etbCounter:P1P1:5:no Condition:This creature enters with five +1/+1 counters on it.
 
 T:Mode$ Drawn | ValidCard$ Card | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever a player draws a card, put a +1/+1 counter on this creature.
 SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1
