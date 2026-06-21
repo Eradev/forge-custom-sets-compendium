@@ -1,0 +1,15 @@
+Name:Tribal Guard
+ManaCost:3 G
+Types:Creature Human Warrior
+PT:4/3
+
+K:Trample
+
+K:Mentor
+
+T:Mode$ Mentored | ValidSource$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever this creature mentors a creature, that creature gains trample until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredTargetLKICopy | KW$ Trample
+
+Oracle:Trample\nMentor (Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power.)\nWhenever this creature mentors a creature, that creature gains trample until end of turn.
+
+DeckHas:Ability$Counters
