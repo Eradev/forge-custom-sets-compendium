@@ -1,0 +1,19 @@
+Name:Ancestral Facsimile
+ManaCost:5 U
+Types:Enchantment Creature Illusion Snake
+PT:5/5
+
+K:ETBReplacement:Other:FacsimileChoice
+SVar:FacsimileChoice:DB$ GenericChoice | Choices$ Reality,Illusion | Defined$ You | SetChosenMode$ True | ShowChoice$ ExceptSelf | SpellDescription$ As this creature enters, choose reality or illusion.
+SVar:Reality:DB$ Pump | SpellDescription$ Reality
+SVar:Illusion:DB$ Pump | SpellDescription$ Illusion
+
+S:Mode$ Continuous | Affected$ Card.Self+ChosenModeReality | AddTrigger$ RealityTrigger | Description$ Reality — Foresight — Whenever you draw your second card each turn, tap target creature.
+SVar:RealityTrigger:Mode$ Drawn | ValidCard$ Card.YouCtrl | Number$ 2 | TriggerZones$ Battlefield | Execute$ TrigTap | TriggerDescription$ Whenever you draw your second card each turn, tap target creature.
+SVar:TrigTap:DB$ Tap | ValidTgts$ Creature | TgtPrompt$ Select target creature
+
+S:Mode$ Continuous | Affected$ Card.Self+ChosenModeIllusion | AddTrigger$ IllusionTrigger | Description$ Illusion — Foresight — Whenever you draw your second card each turn, scry 2.
+SVar:IllusionTrigger:Mode$ Drawn | ValidCard$ Card.YouCtrl | Number$ 2 | TriggerZones$ Battlefield | Execute$ TrigScry | TriggerDescription$ Whenever you draw your second card each turn, scry 2.
+SVar:TrigScry:DB$ Scry | ScryNum$ 2
+
+Oracle:As this creature enters, choose reality or illusion.\n• Reality — Foresight — Whenever you draw your second card each turn, tap target creature.\n• Illusion — Foresight — Whenever you draw your second card each turn, scry 2.
