@@ -1,0 +1,10 @@
+Name:Dispute
+ManaCost:2 G
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature.YouCtrl | AILogic$ PowerDmg | TgtPrompt$ Select target creature you control | SubAbility$ SoulsDamage | SpellDescription$ Target creature you control deals damage equal to its power to target creature you don't control. Create a Treasure token. (It's an artifact with "{T}, Sacrifice this artifact: Add one mana of any color.")
+SVar:SoulsDamage:DB$ DealDamage | ValidTgts$ Creature.YouDontCtrl | AILogic$ PowerDmg | TgtPrompt$ Select target creature you don't control | NumDmg$ X | DamageSource$ ParentTarget | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ c_a_treasure_sac
+SVar:X:ParentTargeted$CardPower
+
+Oracle:Target creature you control deals damage equal to its power to target creature you don't control. Create a Treasure token. (It's an artifact with "{T}, Sacrifice this artifact: Add one mana of any color.")
