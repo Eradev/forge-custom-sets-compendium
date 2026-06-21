@@ -1,0 +1,15 @@
+Name:Dthan's Daggers
+ManaCost:2 R
+Types:Artifact Equipment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigAttach | TriggerDescription$ When this Equipment enters, you may attach it to target creature you control.
+SVar:TrigAttach:DB$ Attach | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | Optional$ True
+
+T:Mode$ Attacks | ValidCard$ Card.EquippedBy | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever equipped creature attacks, it gets +3/+0 and gains first strike until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredAttackerLKICopy | NumAtt$ +3 | KW$ First Strike
+
+K:Equip:3 R
+
+Oracle:When this Equipment enters, you may attach it to target creature you control.\nWhenever equipped creature attacks, it gets +3/+0 and gains first strike until end of turn.\nEquip {3}{R}
+
+DeckHas:Ability$Equipment
