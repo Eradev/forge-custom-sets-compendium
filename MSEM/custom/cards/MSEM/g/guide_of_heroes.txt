@@ -1,0 +1,14 @@
+Name:Guide of Heroes
+ManaCost:2 R G
+Types:Enchantment Creature Sphinx
+PT:3/3
+
+K:Flying
+
+S:Mode$ Continuous | Affected$ Card.Self | IsPresent$ Creature.equipped+YouCtrl | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ First Strike | Description$ As long as you control an equipped creature, this creature gets +1/+1 and has first strike.
+
+S:Mode$ Continuous | Affected$ Card.Self | IsPresent$ Creature.enchanted+YouCtrl | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Vigilance | Description$ As long as you control an enchanted creature, this creature gets +1/+1 and has vigilance.
+
+Oracle:Flying\nAs long as you control an equipped creature, this creature gets +1/+1 and has first strike.\nAs long as you control an enchanted creature, this creature gets +1/+1 and has vigilance.
+
+DeckHints:Type$Aura|Equipment
