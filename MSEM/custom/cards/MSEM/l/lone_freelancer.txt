@@ -1,0 +1,10 @@
+Name:Lone Freelancer
+ManaCost:1 R
+Types:Creature Human Warrior
+PT:2/2
+
+T:Mode$ AttackerBlocked | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever this creature becomes blocked, it deals damage equal to its power to defending player.
+SVar:TrigDamage:DB$ DealDamage | Defined$ TriggeredDefendingPlayer | NumDmg$ X
+SVar:X:Count$CardPower
+
+Oracle:Whenever this creature becomes blocked, it deals damage equal to its power to defending player.
