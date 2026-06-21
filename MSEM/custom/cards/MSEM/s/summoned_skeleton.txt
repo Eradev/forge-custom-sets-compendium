@@ -1,0 +1,10 @@
+Name:Summoned Skeleton
+ManaCost:B
+Types:Creature Skeleton
+PT:1/2
+
+A:AB$ Draw | Cost$ PayLife<2> Sac<1/Clue> | SpellDescription$ Draw a card.
+
+Oracle:Pay 2 life, Sacrifice a Clue: Draw a card.
+
+DeckHints:Type$Clue
