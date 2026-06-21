@@ -1,0 +1,18 @@
+Name:Flamecaller's Command
+ManaCost:1 R R
+Types:Sorcery
+
+A:SP$ Charm | CharmNum$ 2 | Choices$ DBExile,DBMana,DBPump,DBDamage
+
+SVar:DBExile:DB$ Dig | Defined$ You | DigNum$ 2 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Exile the top two cards of your library. You may play them until the end of your next turn.
+SVar:DBEffect:DB$ Effect | RememberObjects$ RememberedCard | StaticAbilities$ STPlay | SubAbility$ DBCleanup | ForgetOnMoved$ Exile | Duration$ UntilTheEndOfYourNextTurn
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ Until the end of your next turn, you may play those cards.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:DBMana:DB$ Mana | Produced$ R | Amount$ 2 | SpellDescription$ Add {R}{R}.
+
+SVar:DBPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | SpellDescription$ Creatures you control get +1/+0 until end of turn.
+
+SVar:DBDamage:DB$ DamageAll | NumDmg$ 1 | ValidCards$ Creature.YouDontCtrl | SpellDescription$ CARDNAME deals 1 damage to each creature you don't control.
+
+Oracle:Choose two —\n• Exile the top two cards of your library. You may play them until the end of your next turn.\n• Add {R}{R}.\n• Creatures you control get +1/+0 until end of turn.\n• Flamecaller's Command deals 1 damage to each creature you don't control.
