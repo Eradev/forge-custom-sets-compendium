@@ -1,0 +1,10 @@
+Name:Leave for Dead
+ManaCost:3 B B
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Creature,Planeswalker | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBGainLife | SpellDescription$ Exile target creature or planeswalker. You gain 4 life.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 4
+
+Oracle:Exile target creature or planeswalker. You gain 4 life.
+
+DeckHas:Ability$LifeGain
