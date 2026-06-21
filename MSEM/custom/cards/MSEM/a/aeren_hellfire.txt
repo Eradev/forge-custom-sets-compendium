@@ -1,0 +1,8 @@
+Name:Aeren Hellfire
+ManaCost:4 R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ 4 | SubAbility$ DBLoot | SpellDescription$ CARDNAME deals 4 damage to any target. You may draw a card. If you do, discard a card.
+SVar:DBLoot:DB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 1 | UnlessCost$ Draw<1/You> | UnlessPayer$ You | UnlessSwitched$ True
+
+Oracle:Aeren Hellfire deals 4 damage to any target.\nYou may draw a card. If you do, discard a card.
