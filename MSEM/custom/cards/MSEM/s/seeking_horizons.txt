@@ -1,0 +1,14 @@
+Name:Seeking Horizons
+ManaCost:1 W
+Types:Enchantment Aura
+
+K:Enchant:Creature:creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 2 | AddToughness$ 2 | Description$ Enchanted creature gets +2/+2.
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self+YouOwn | Origin$ Battlefield,Hand,Exile,Command,Stack | Destination$ Graveyard | Execute$ TrigInvestigate | TriggerDescription$ When this Aura is put into your graveyard from anywhere other than your library, investigate.
+SVar:TrigInvestigate:DB$ Investigate
+
+Oracle:Enchant creature\nEnchanted creature gets +2/+2.\nWhen this Aura is put into your graveyard from anywhere other than your library, investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")
+
+DeckHas:Ability$Investigate|Token & Type$Clue
