@@ -1,0 +1,13 @@
+Name:Ecological Refuge
+ManaCost:no cost
+Types:Land Desert
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Cost$ T PayLife<1> | Produced$ G | SpellDescription$ Add {G}.
+
+A:AB$ Token | Cost$ 6 G T Sac<1/CARDNAME/this land> | TokenScript$ g_3_3_wurm | TokenAmount$ 2 | SorcerySpeed$ True | SpellDescription$ Create two 3/3 green Wurm creature tokens. Activate only as a sorcery.
+
+Oracle:{T}: Add {C}.\n{T}, Pay 1 life: Add {G}.\n{6}{G}, {T}, Sacrifice this land: Create two 3/3 green Wurm creature tokens. Activate only as a sorcery.
+
+DeckHas:Ability$Token & Type$Wurm
