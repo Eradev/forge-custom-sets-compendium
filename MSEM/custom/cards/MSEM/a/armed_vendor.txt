@@ -1,0 +1,12 @@
+Name:Armed Vendor
+ManaCost:1 R
+Types:Creature Human Merchant
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Card.Self+enchanted,Card.Self+equipped | AddPower$ 1 | AddKeyword$ Menace | Description$ As long as this creature is enchanted or equipped, it gets +1/+0 and has menace.
+
+Oracle:As long as this creature is enchanted or equipped, it gets +1/+0 and has menace.
+
+SVar:EnchantMe:Once
+SVar:EquipMe:Once
+DeckHints:Type$Aura|Equipment
