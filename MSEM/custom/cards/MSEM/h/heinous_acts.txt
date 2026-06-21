@@ -1,0 +1,13 @@
+Name:Heinous Acts
+ManaCost:2 B
+Types:Sorcery
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ X | EffectZone$ All | Relative$ True | Description$ This spell costs {2} less to cast if you sacrificed a Clue this turn.
+SVar:ClueCheck:PlayerCountPropertyYou$SacrificedThisTurn Clue
+SVar:X:Count$Compare ClueCheck GE1.2.0
+
+A:SP$ Discard | ValidTgts$ Player | NumCards$ 2 | Mode$ TgtChoose | SpellDescription$ Target player discards two cards.
+
+Oracle:This spell costs {2} less to cast if you sacrificed a Clue this turn.\nTarget player discards two cards.
+
+DeckHints:Type$Clue
