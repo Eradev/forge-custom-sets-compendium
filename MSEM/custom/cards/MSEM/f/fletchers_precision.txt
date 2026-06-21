@@ -1,0 +1,10 @@
+Name:Fletcher's Precision
+ManaCost:1 G
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature.YouCtrl | AILogic$ PowerDmg | TgtPrompt$ Select target creature you control | SubAbility$ SoulsDamage | SpellDescription$ Target creature you control deals damage equal to its power to target creature you don't control. Scry 1.
+SVar:SoulsDamage:DB$ DealDamage | ValidTgts$ Creature.YouDontCtrl | AILogic$ PowerDmg | TgtPrompt$ Select target creature you don't control | NumDmg$ X | DamageSource$ ParentTarget | SubAbility$ DBScry
+SVar:DBScry:DB$ Scry
+SVar:X:ParentTargeted$CardPower
+
+Oracle:Target creature you control deals damage equal to its power to target creature you don't control. Scry 1.
