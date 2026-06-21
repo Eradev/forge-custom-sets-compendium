@@ -1,0 +1,13 @@
+Name:Turn Up
+ManaCost:2 B
+Types:Instant
+
+A:SP$ Charm | CharmNum$ 1 | Choices$ DBToHand,DBToBattlefield
+
+SVar:DBToHand:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Creature.YouOwn | TgtPrompt$ Select target creature card in your graveyard | SpellDescription$ Return target creature card from your graveyard to your hand.
+
+SVar:DBToBattlefield:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature.YouOwn | TgtPrompt$ Select target creature card in your graveyard | UnlessCost$ Pay$ 4 | UnlessPayer$ You | UnlessSwitched$ True | SpellDescription$ Pay {4}. If you do, return target creature card from your graveyard to the battlefield.
+
+Oracle:Choose one —\n• Return target creature card from your graveyard to your hand.\n• Pay {4}. If you do, return target creature card from your graveyard to the battlefield.
+
+DeckHas:Ability$Graveyard
