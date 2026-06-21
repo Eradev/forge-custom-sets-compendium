@@ -1,0 +1,13 @@
+Name:Moonlight Strix
+ManaCost:1 W
+Types:Creature Bird
+PT:1/1
+
+K:Flying
+
+T:Mode$ ChangesZone | ValidCard$ Creature.Other+YouCtrl+withFlying | Origin$ Any | Destination$ Battlefield | Execute$ TrigPutCounter | TriggerZones$ Battlefield | TriggerDescription$ Whenever another creature with flying you control enters, put a +1/+1 counter on this creature.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1
+
+Oracle:Flying\nWhenever another creature with flying you control enters, put a +1/+1 counter on this creature.
+
+DeckHas:Ability$Counters
