@@ -1,0 +1,11 @@
+Name:Descend Upon the Tomb
+ManaCost:5 B
+Types:Instant
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ Count$YouDrewThisTurn | EffectZone$ All | Description$ This spell costs {1} less to cast for each card you've drawn this turn.
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | TargetMin$ 0 | TargetMax$ 2 | MaxTotalTargetCMC$ 5 | ValidTgts$ Creature.YouOwn | TgtPrompt$ Select up to two target creature cards with total mana value 5 or less in your graveyard | SpellDescription$ Return up to two target creatures with total mana value 5 or less from your graveyard to the battlefield.
+
+Oracle:This spell costs {1} less to cast for each card you've drawn this turn.\nReturn up to two target creatures with total mana value 5 or less from your graveyard to the battlefield.
+
+DeckHas:Ability$Graveyard
