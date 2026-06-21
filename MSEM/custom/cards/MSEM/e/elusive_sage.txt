@@ -1,0 +1,10 @@
+Name:Elusive Sage
+ManaCost:1 U
+Types:Creature Human Wizard
+PT:2/1
+
+T:Mode$ Drawn | ValidCard$ Card.YouCtrl | Number$ 2 | TriggerZones$ Battlefield | Execute$ TrigUnblockable | TriggerDescription$ Foresight — Whenever you draw your second card each turn, this creature can't be blocked this turn.
+SVar:TrigUnblockable:DB$ Effect | RememberObjects$ Self | ExileOnMoved$ Battlefield | StaticAbilities$ Unblockable
+SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ EFFECTSOURCE can't be blocked this turn.
+
+Oracle:Foresight — Whenever you draw your second card each turn, this creature can't be blocked this turn.
