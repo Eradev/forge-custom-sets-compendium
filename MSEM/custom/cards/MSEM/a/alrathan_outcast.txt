@@ -1,0 +1,18 @@
+Name:Alrathan Outcast
+ManaCost:1 R R
+Types:Creature Human Warrior
+PT:1/2
+
+K:Double Strike
+
+T:Mode$ SpellCast | ValidActivatingPlayer$ Opponent | TargetsValid$ You,Spell.YouCtrl,Permanent.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDealDamage | TriggerDescription$ Whenever an opponent casts a spell that targets you or a spell or permanent you control, this creature deals damage equal to twice its power to that player.
+SVar:TrigDealDamage:DB$ DealDamage | Defined$ TriggeredPlayer | NumDmg$ Y
+SVar:Y:Count$CardPower/Twice
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +1/+1 for each Aura and Equipment you control.
+SVar:X:Count$Valid Aura.YouCtrl,Equipment.YouCtrl
+
+Oracle:Double strike\nWhenever an opponent casts a spell that targets you or a spell or permanent you control, this creature deals damage equal to twice its power to that player.\nThis creature gets +1/+1 for each Aura and Equipment you control.
+
+SVar:BuffedBy:Aura,Equipment
+DeckHints:Type$Aura|Equipment
