@@ -1,0 +1,10 @@
+Name:Charging Brute
+ManaCost:2 G G
+Types:Creature Dinosaur
+PT:4/4
+
+K:Trample
+
+A:AB$ Pump | Cost$ 1 G ExileFromGrave<1/Card> | ValidTgts$ Creature | KW$ Trample | SpellDescription$ Target creature gains trample until end of turn.
+
+Oracle:Trample\n{1}{G}, Exile a card from your graveyard: Target creature gains trample until end of turn.
