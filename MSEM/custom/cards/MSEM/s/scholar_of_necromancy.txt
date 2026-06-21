@@ -1,0 +1,13 @@
+Name:Scholar of Necromancy
+ManaCost:1 B
+Types:Creature Human Warlock
+PT:2/2
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ Morbid | Execute$ TrigInvestigate | TriggerDescription$ When this creature enters, if a creature died this turn, investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")
+SVar:TrigInvestigate:DB$ Investigate
+
+Oracle:Flash\nWhen this creature enters, if a creature died this turn, investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")
+
+DeckHas:Ability$Investigate|Token & Type$Clue
