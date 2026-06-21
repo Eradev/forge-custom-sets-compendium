@@ -1,0 +1,11 @@
+Name:Regrow Anew
+ManaCost:1 G
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Permanent.YouOwn | TgtPrompt$ Select target permanent card in your graveyard | RememberChanged$ True | SubAbility$ DBToken | SpellDescription$ Return target permanent card from your graveyard to your hand. If it's an enchantment card, create a 2/2 black Zombie creature token.
+SVar:DBToken:DB$ Token | TokenScript$ b_2_2_zombie | ConditionDefined$ Remembered | ConditionPresent$ Card.Enchantment | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Return target permanent card from your graveyard to your hand. If it's an enchantment card, create a 2/2 black Zombie creature token.
+
+DeckHas:Ability$Token & Type$Zombie
