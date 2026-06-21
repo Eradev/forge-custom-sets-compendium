@@ -1,0 +1,8 @@
+Name:Open the Tomb
+ManaCost:1 R
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Artifact | SubAbility$ DBScry | SpellDescription$ Destroy target artifact. Scry 1.
+SVar:DBScry:DB$ Scry
+
+Oracle:Destroy target artifact. Scry 1.
