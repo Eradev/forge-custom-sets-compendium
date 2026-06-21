@@ -1,0 +1,14 @@
+Name:Eternal Duneborn
+ManaCost:B
+Types:Creature Zombie
+PT:2/1
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This creature enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+T:Mode$ Drawn | ValidCard$ Card.YouCtrl | Number$ 2 | TriggerZones$ Graveyard | Execute$ TrigReturn | TriggerDescription$ Foresight — Whenever you draw your second card each turn, return this card from your graveyard to your hand.
+SVar:TrigReturn:DB$ ChangeZone | Defined$ Self | Origin$ Graveyard | Destination$ Hand
+
+Oracle:This creature enters tapped.\nForesight — Whenever you draw your second card each turn, return this card from your graveyard to your hand.
+
+DeckHas:Ability$Graveyard
