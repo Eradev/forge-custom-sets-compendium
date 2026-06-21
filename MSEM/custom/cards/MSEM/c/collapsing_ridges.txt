@@ -1,0 +1,11 @@
+Name:Collapsing Ridges
+ManaCost:no cost
+Types:Land Desert
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Cost$ T PayLife<1> | Produced$ B | SpellDescription$ Add {B}.
+
+A:AB$ ChangeZone | Cost$ 5 B B T Sac<1/CARDNAME/this land> | Origin$ Graveyard | Destination$ Battlefield | GainControl$ True | ValidTgts$ Creature | TgtPrompt$ Select target creature card in a graveyard | SorcerySpeed$ True | SpellDescription$ Return target creature card from a graveyard to the battlefield under your control. Activate only as a sorcery.
+
+Oracle:{T}: Add {C}.\n{T}, Pay 1 life: Add {B}.\n{5}{B}, {T}, Sacrifice this land: Return target creature card from a graveyard to the battlefield under your control. Activate only as a sorcery.
