@@ -1,0 +1,12 @@
+Name:Ancient Tablet
+ManaCost:1
+Types:Artifact Clue
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigScry | TriggerDescription$ When this artifact enters, scry 2.
+SVar:TrigScry:DB$ Scry | ScryNum$ 2
+
+A:AB$ ChangeZone | Cost$ 2 Sac<1/CARDNAME/this artifact> | Origin$ Graveyard | Destination$ Library | TargetMin$ 0 | TargetMax$ X | Shuffle$ True | TgtPrompt$ Choose any number of target cards from your graveyard | ValidTgts$ Card.YouCtrl | SubAbility$ DBDraw | SpellDescription$ You may shuffle any number of target cards from your graveyard into your library. Draw a card.
+SVar:DBDraw:DB$ Draw
+SVar:X:Count$ValidGraveyard Card.YouOwn
+
+Oracle:When this artifact enters, scry 2.\n{2}, Sacrifice this artifact: You may shuffle any number of target cards from your graveyard into your library. Draw a card.
