@@ -1,0 +1,10 @@
+Name:Winged Stinger
+ManaCost:G
+Types:Creature Insect
+PT:0/1
+
+K:Flying
+
+A:AB$ Mana | Cost$ T ExileFromGrave<2/Card> | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+Oracle:Flying\n{T}, Exile two cards from your graveyard: Add one mana of any color.
