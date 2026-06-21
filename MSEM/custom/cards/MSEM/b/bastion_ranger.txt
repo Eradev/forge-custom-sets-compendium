@@ -1,0 +1,10 @@
+Name:Bastion Ranger
+ManaCost:3 G
+Types:Creature Human Archer
+PT:2/4
+
+K:Ward:2
+
+A:AB$ Pump | Cost$ 1 G | Defined$ Self | KW$ Reach & Deathtouch | SpellDescription$ This creature gains reach and deathtouch until end of turn.
+
+Oracle:Ward {2} (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays {2}.)\n{1}{G}: This creature gains reach and deathtouch until end of turn.
