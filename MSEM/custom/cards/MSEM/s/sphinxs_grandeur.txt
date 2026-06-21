@@ -1,0 +1,13 @@
+Name:Sphinx's Grandeur
+ManaCost:4 W
+Types:Legendary Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self,Enchantment.Other+YouCtrl | Execute$ TrigToken | TriggerDescription$ Whenever CARDNAME or another enchantment you control enters, create a 1/1 white Soldier creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_soldier
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl | AddPower$ 1 | AddToughness$ 1 | Description$ Creatures you control get +1/+1.
+
+Oracle:Whenever Sphinx's Grandeur or another enchantment you control enters, create a 1/1 white Soldier creature token.\nCreatures you control get +1/+1.
+
+DeckHas:Ability$Token & Type$Soldier
+DeckHints:Type$Enchantment
