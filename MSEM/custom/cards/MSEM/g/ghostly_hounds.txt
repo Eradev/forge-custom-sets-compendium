@@ -1,0 +1,14 @@
+Name:Ghostly Hounds
+ManaCost:2 U U
+Types:Enchantment Creature Dog Spirit
+PT:3/3
+
+K:Mentor
+
+T:Mode$ Mentored | ValidSource$ Card.Self | Execute$ TrigUnblockable | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature mentors a creature, that creature can't be blocked this turn.
+SVar:TrigUnblockable:DB$ Effect | RememberObjects$ TriggeredCardLKICopy | ExileOnMoved$ Battlefield | StaticAbilities$ Unblockable | SpellDescription$ That creature can't be blocked this turn.
+SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ This creature can't be blocked this turn.
+
+Oracle:Mentor (Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power.)\nWhenever this creature mentors a creature, that creature can't be blocked this turn.
+
+DeckHas:Ability$Counters
