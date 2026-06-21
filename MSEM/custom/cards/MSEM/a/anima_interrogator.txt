@@ -1,0 +1,11 @@
+Name:Anima Interrogator
+ManaCost:2 B
+Types:Creature Human Wizard
+PT:2/3
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigReveal | TriggerDescription$ Whenever this creature attacks, defending player reveals a card at random from their hand.
+SVar:TrigReveal:DB$ Reveal | Defined$ TriggeredDefendingPlayer | Random$ True
+
+Oracle:Whenever this creature attacks, defending player reveals a card at random from their hand.
+
+HasAttackEffect:True
