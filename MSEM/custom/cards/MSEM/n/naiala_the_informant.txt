@@ -1,0 +1,17 @@
+Name:Naiala, the Informant
+ManaCost:4 U
+Types:Legendary Planeswalker Naiala
+Loyalty:4
+
+A:AB$ DelayedTrigger | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | AILogic$ SpellCopy | Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ You | ThisTurn$ True | Execute$ TrigCopy | SpellDescription$ Copy the next spell you cast this turn. You may choose new targets for the copy.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | AILogic$ Always | Amount$ 1 | MayChooseTarget$ True
+
+A:AB$ PeekAndReveal | Cost$ SubCounter<3/LOYALTY> | Planeswalker$ True | PeekAmount$ 5 | NoPeek$ True | RememberRevealed$ True | SubAbility$ DBTwoPiles | SpellDescription$ Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.
+SVar:DBTwoPiles:DB$ TwoPiles | Defined$ You | DefinedCards$ Remembered | Separator$ Opponent | ChosenPile$ DBHand | UnchosenPile$ DBGrave
+SVar:DBHand:DB$ ChangeZone | Defined$ Remembered | Origin$ Library | Destination$ Hand
+SVar:DBGrave:DB$ ChangeZone | Defined$ Remembered | Origin$ Library | Destination$ Graveyard
+
+A:AB$ Effect | Cost$ SubCounter<8/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Naiala, the Informant | Image$ emblem_naiala_the_informant | StaticAbilities$ STNaiala | Stackable$ False | Duration$ Permanent | AILogic$ Always | SpellDescription$ You get an emblem with "You may cast spells without paying their mana costs."
+SVar:STNaiala:Mode$ Continuous | Affected$ Card.nonLand+YouOwn | MayPlay$ True | MayPlayWithoutManaCost$ True | AffectedZone$ Hand | Description$ You may cast spells without paying their mana costs.
+
+Oracle:[+1]: Copy the next spell you cast this turn. You may choose new targets for the copy.\n[-3]: Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.\n[-8]: You get an emblem with "You may cast spells without paying their mana costs."
