@@ -1,0 +1,14 @@
+Name:Admonish
+ManaCost:1 W
+Types:Instant
+
+A:SP$ Charm | Choices$ DBDestroyArtifact,DBDestroyEnchant,DBTapStun
+
+SVar:DBDestroyArtifact:DB$ Destroy | ValidTgts$ Artifact | SpellDescription$ Destroy target artifact.
+
+SVar:DBDestroyEnchant:DB$ Destroy | ValidTgts$ Enchantment | SpellDescription$ Destroy target enchantment.
+
+SVar:DBTapStun:DB$ Tap | ValidTgts$ Creature | SubAbility$ DBPutStun | SpellDescription$ Tap target creature and put two stun counters on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)
+SVar:DBPutStun:DB$ PutCounter | Defined$ Targeted | CounterType$ Stun | CounterNum$ 2
+
+Oracle:Choose one —\n• Destroy target artifact.\n• Destroy target enchantment.\n• Tap target creature and put two stun counters on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)
