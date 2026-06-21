@@ -1,0 +1,15 @@
+Name:Sandstorm Charm
+ManaCost:1 R
+Types:Instant
+
+A:SP$ Charm | CharmNum$ 1 | Choices$ DBPump,DBDamage,DBScryDraw
+
+SVar:DBPump:DB$ Pump | ValidTgts$ Creature | NumAtt$ +4 | SpellDescription$ Target creature gets +4/+0 until end of turn.
+
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 1 | SubAbility$ DBCantBlock | SpellDescription$ CARDNAME deals 1 damage to target creature. It can't block this turn.
+SVar:DBCantBlock:DB$ Pump | Defined$ Targeted.Creature | KW$ HIDDEN CARDNAME can't block. | IsCurse$ True
+
+SVar:DBScryDraw:DB$ Scry | SubAbility$ DBDraw | SpellDescription$ Scry 1, then draw a card.
+SVar:DBDraw:DB$ Draw
+
+Oracle:Choose one —\n• Target creature gets +4/+0 until end of turn.\n• Sandstorm Charm deals 1 damage to target creature. It can't block this turn.\n• Scry 1, then draw a card.
