@@ -1,0 +1,11 @@
+Name:Oasiscrafting
+ManaCost:1 G
+Types:Instant
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Land.Basic+YouCtrl,Land.Desert+YouCtrl | ChangeTypeDesc$ basic land or Desert | SubAbility$ DBInvestigate | SpellDescription$ Search your library for a basic land card or Desert card, reveal it, put it into your hand, then shuffle. Investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")
+SVar:DBInvestigate:DB$ Investigate
+
+Oracle:Search your library for a basic land card or Desert card, reveal it, put it into your hand, then shuffle.\nInvestigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")
+
+DeckHas:Ability$Investigate|Token & Type$Clue
+DeckHints:Type$Desert
