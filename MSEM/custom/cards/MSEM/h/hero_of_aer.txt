@@ -1,0 +1,11 @@
+Name:Hero of Aer
+ManaCost:R
+Types:Creature Human Warrior
+PT:0/1
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever this creature attacks, it gets +2/+1 until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +2 | NumDef$ +1
+
+Oracle:Whenever this creature attacks, it gets +2/+1 until end of turn.
+
+SVar:HasAttackEffect:True
