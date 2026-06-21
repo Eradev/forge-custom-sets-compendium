@@ -1,0 +1,15 @@
+Name:Kilani, Awakened Colossus
+ManaCost:5
+Types:Legendary Artifact Creature Construct
+PT:1/5
+
+K:Trample
+
+A:AB$ Draw | Cost$ T | NumCards$ 1 | SubAbility$ DBPutCounter | SpellDescription$ Draw a card. Put a charge counter on NICKNAME.
+SVar:DBPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ CHARGE
+
+A:AB$ Pump | Cost$ SubCounter<1/CHARGE> | Defined$ Self | NumAtt$ Double | SpellDescription$ Double his power until end of turn.
+
+Oracle:Trample\n{T}: Draw a card. Put a charge counter on Kilani.\nRemove a charge counter from Kilani: Double his power until end of turn.
+
+DeckHas:Ability$Counters
