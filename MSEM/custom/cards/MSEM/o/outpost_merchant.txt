@@ -1,0 +1,14 @@
+Name:Outpost Merchant
+ManaCost:2 U
+Types:Creature Human Merchant
+PT:2/2
+
+K:Prowess
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ X | SVarCompare$ GE2 | Execute$ TrigToken | TriggerDescription$ Foresight — When this creature enters, if you've drawn two or more cards this turn, create two 1/1 white Bird creature tokens with flying.
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_bird_flying | TokenAmount$ 2
+SVar:X:Count$YouDrewThisTurn
+
+Oracle:Prowess\nForesight — When this creature enters, if you've drawn two or more cards this turn, create two 1/1 white Bird creature tokens with flying.
+
+DeckHas:Ability$Token & Type$Bird
