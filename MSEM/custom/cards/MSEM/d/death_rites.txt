@@ -1,0 +1,9 @@
+Name:Death Rites
+ManaCost:3 B B
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Creature.YouOwn | TgtPrompt$ Select target creature card in your graveyard | Origin$ Graveyard | Destination$ Battlefield | PlayerTurn$ True | ActivationPhases$ Upkeep->Main1,Main2->End of Turn | SpellDescription$ Cast this spell only during your turn. Return target creature card from your graveyard to the battlefield. If it's your combat phase, that creature enters tapped and attacking.
+
+A:SP$ ChangeZone | ValidTgts$ Creature.YouOwn | TgtPrompt$ Select target creature card in your graveyard | Origin$ Graveyard | Destination$ Battlefield | PlayerTurn$ True | ActivationPhases$ BeginCombat->EndCombat | Tapped$ True | Attacking$ True | Secondary$ True | SpellDescription$ Cast this spell only during your turn. Return target creature card from your graveyard to the battlefield. If it's your combat phase, that creature enters tapped and attacking.
+
+Oracle:Cast this spell only during your turn.\nReturn target creature card from your graveyard to the battlefield. If it's your combat phase, that creature enters tapped and attacking.
