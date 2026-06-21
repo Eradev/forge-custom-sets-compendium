@@ -1,0 +1,13 @@
+Name:Love Letters
+ManaCost:X
+Types:Artifact
+
+K:etbCounter:STAMP:X
+SVar:X:Count$xPaid
+
+T:Mode$ DamageDealtOnce | CombatDamage$ True | ValidSource$ Creature.YouCtrl | ValidTarget$ Player | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever one or more creatures you control deal combat damage to a player, you may remove a stamp counter from this artifact. If you do, draw a card.
+SVar:TrigDraw:AB$ Draw | Cost$ SubCounter<1/STAMP> | NumCards$ 1 | Optional$ True
+
+Oracle:This artifact enters with X stamp counters on it.\nWhenever one or more creatures you control deal combat damage to a player, you may remove a stamp counter from this artifact. If you do, draw a card.
+
+DeckHas:Ability$Counters
