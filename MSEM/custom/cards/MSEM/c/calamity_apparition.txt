@@ -1,0 +1,22 @@
+Name:Calamity Apparition
+ManaCost:2 W
+Types:Enchantment Creature Sand Spirit
+PT:3/2
+
+K:ETBReplacement:Other:ApparitionChoice
+SVar:ApparitionChoice:DB$ GenericChoice | Choices$ Fade,Linger | Defined$ You | SetChosenMode$ True | AILogic$ Fade | ShowChoice$ ExceptSelf | SpellDescription$ As this creature enters, choose fade or linger.
+SVar:Fade:DB$ Pump | SpellDescription$ Fade
+SVar:Linger:DB$ Pump | SpellDescription$ Linger
+
+S:Mode$ Continuous | Affected$ Card.Self+ChosenModeFade | AddTrigger$ FadeDeathTrigger | Description$ Fade — When this creature dies, you gain 2 life and scry 2.
+SVar:FadeDeathTrigger:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigFadeDeath | TriggerDescription$ When this creature dies, you gain 2 life and scry 2.
+SVar:TrigFadeDeath:DB$ GainLife | LifeAmount$ 2 | SubAbility$ DBScry
+SVar:DBScry:DB$ Scry | ScryNum$ 2
+
+S:Mode$ Continuous | Affected$ Card.Self+ChosenModeLinger | AddTrigger$ LingerDeathTrigger | Description$ Linger — When this creature dies, put a +1/+1 counter on target creature you control.
+SVar:LingerDeathTrigger:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigLingerDeath | TriggerDescription$ When this creature dies, put a +1/+1 counter on target creature you control.
+SVar:TrigLingerDeath:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | CounterType$ P1P1
+
+Oracle:As this creature enters, choose fade or linger.\nWhen this creature dies,\n• Fade — You gain 2 life and scry 2.\n• Linger — Put a +1/+1 counter on target creature you control.
+
+DeckHas:Ability$Counters|GainLife
