@@ -1,0 +1,12 @@
+Name:Enroll
+ManaCost:1 U
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | SetPower$ 1 | SetToughness$ 1 | SetColor$ Blue | RemoveAllAbilities$ True | AddType$ Creature & Wizard | RemoveCardTypes$ True | RemoveCreatureTypes$ True | Description$ Enchanted creature loses all abilities and is a blue Wizard creature with base power and toughness 1/1.
+
+Oracle:Enchant creature\nEnchanted creature loses all abilities and is a blue Wizard creature with base power and toughness 1/1.
+
+SVar:NonStackingAttachEffect:True
+SVar:AttachAILogic:Curse
