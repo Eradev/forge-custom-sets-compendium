@@ -1,0 +1,15 @@
+Name:Spoiled Oracle
+ManaCost:3 B
+Types:Creature Human Cleric
+PT:3/3
+
+K:Lifelink
+
+K:Mentor
+
+T:Mode$ Mentored | ValidSource$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever this creature mentors a creature, that creature gains lifelink until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredTargetLKICopy | KW$ Lifelink
+
+Oracle:Lifelink\nMentor (Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power.)\nWhenever this creature mentors a creature, that creature gains lifelink until end of turn.
+
+DeckHas:Ability$Counters
