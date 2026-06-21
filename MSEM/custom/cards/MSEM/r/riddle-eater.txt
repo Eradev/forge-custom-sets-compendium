@@ -1,0 +1,16 @@
+Name:Riddle-Eater
+ManaCost:U B
+Types:Enchantment Creature Sand Wurm
+PT:2/2
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigUpkeep | TriggerDescription$ At the beginning of your upkeep, you lose 1 life and choose one —
+SVar:TrigUpkeep:DB$ LoseLife | LifeAmount$ 1 | SubAbility$ TrigChoice
+SVar:TrigChoice:DB$ Charm | CharmNum$ 1 | Choices$ DBInvestigate,DBSacDraw
+
+SVar:DBInvestigate:DB$ Investigate | SpellDescription$ Investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")
+
+SVar:DBSacDraw:AB$ Draw | Cost$ Sac<1/Artifact> | SpellDescription$ You may sacrifice an artifact. If you do, draw a card.
+
+Oracle:At the beginning of your upkeep, you lose 1 life and choose one —\n• Investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")\n• You may sacrifice an artifact. If you do, draw a card.
+
+DeckHas:Ability$Investigate|Token|Sacrifice & Type$Clue
