@@ -1,0 +1,14 @@
+Name:Darna, Dark Overseer
+ManaCost:3 B B B
+Types:Legendary Creature Human Warlock
+PT:4/4
+
+K:Menace
+
+A:AB$ Investigate | Cost$ PayLife<2> | PrecostDesc$ Pay 2 life: | SpellDescription$ Investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")
+
+A:AB$ Pump | Cost$ Sac<1/Permanent> | Defined$ Self | NumAtt$ +1 | NumDef$ +1 | SpellDescription$ NICKNAME gets +1/+1 until end of turn.
+
+Oracle:Menace\nPay 2 life: Investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")\nSacrifice a permanent: Darna gets +1/+1 until end of turn.
+
+DeckHas:Ability$Investigate|Token|Sacrifice & Type$Clue
