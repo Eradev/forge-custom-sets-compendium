@@ -1,0 +1,11 @@
+Name:Ageless Wanderer
+ManaCost:1
+Types:Artifact Creature Construct
+PT:1/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | Execute$ TrigLandfall | TriggerDescription$ Whenever a land you control enters, untap this creature.
+SVar:TrigLandfall:DB$ Untap | Defined$ Self
+
+A:AB$ Mana | Cost$ 1 T | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+Oracle:Whenever a land you control enters, untap this creature.\n{1}, {T}: Add one mana of any color.
