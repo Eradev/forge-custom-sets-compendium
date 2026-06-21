@@ -1,0 +1,12 @@
+Name:Conto Sika, Ruined Glory
+ManaCost:no cost
+Types:Land Desert
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Draw | Cost$ T Sac<1/Clue> | NumCards$ 1 | SpellDescription$ Draw a card.
+
+Oracle:{T}: Add {C}.\n{T}, Sacrifice a Clue: Draw a card.
+
+DeckHas:Ability$Sacrifice
+DeckHints:Type$Clue
