@@ -1,0 +1,21 @@
+Name:Nimble Sandstorm
+ManaCost:3 R
+Types:Enchantment Creature Sand Elemental
+PT:2/3
+
+K:ETBReplacement:Other:NimbleChoice
+SVar:NimbleChoice:DB$ GenericChoice | Choices$ Speed,Power | Defined$ You | SetChosenMode$ True | ShowChoice$ ExceptSelf | SpellDescription$ As this creature enters, choose speed or power.
+SVar:Speed:DB$ Pump | SpellDescription$ Speed
+SVar:Power:DB$ Pump | SpellDescription$ Power
+
+S:Mode$ Continuous | Affected$ Card.Self+ChosenModeSpeed | AddTrigger$ SpeedCombat | Description$ • Speed — At the beginning of combat on your turn, target creature gains haste until end of turn.
+SVar:SpeedCombat:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigHaste | TriggerDescription$ At the beginning of combat on your turn, target creature gains haste until end of turn.
+SVar:TrigHaste:DB$ Pump | ValidTgts$ Creature | KW$ Haste
+
+S:Mode$ Continuous | Affected$ Card.Self+ChosenModePower | AddTrigger$ PowerCombat | Description$ • Power — At the beginning of combat on your turn, target creature gets +2/+0 until end of turn.
+SVar:PowerCombat:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ At the beginning of combat on your turn, target creature gets +2/+0 until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | NumAtt$ +2
+
+Oracle:As this creature enters, choose speed or power.\n• Speed — At the beginning of combat on your turn, target creature gains haste until end of turn.\n• Power — At the beginning of combat on your turn, target creature gets +2/+0 until end of turn.
+
+SVar:PlayMainTurn1:TRUE
