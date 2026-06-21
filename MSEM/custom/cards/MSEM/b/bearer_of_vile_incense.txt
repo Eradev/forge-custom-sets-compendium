@@ -1,0 +1,11 @@
+Name:Bearer of Vile Incense
+ManaCost:4 B B
+Types:Creature Demon
+PT:6/6
+
+T:Mode$ Untaps | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Inspired — Whenever this creature becomes untapped, create a 0/1 black Cultist creature token with "{1}{B}{B}, Sacrifice three Cultists: Create a 5/5 black Demon creature token."
+SVar:TrigToken:DB$ Token | TokenScript$ b_0_1_cultist_sac
+
+Oracle:Inspired — Whenever this creature becomes untapped, create a 0/1 black Cultist creature token with "{1}{B}{B}, Sacrifice three Cultists: Create a 5/5 black Demon creature token."
+
+DeckHas:Ability$Token|Sacrifice & Type$Cultist
