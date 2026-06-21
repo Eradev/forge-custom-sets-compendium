@@ -1,0 +1,15 @@
+Name:Masked Lancer
+ManaCost:2 R
+Types:Creature Human Warrior
+PT:3/1
+
+K:Mentor
+
+S:Mode$ Continuous | Affected$ Card.Self+attacking | AddKeyword$ First Strike | Description$ This creature has first strike as long as it's attacking.
+
+T:Mode$ Mentored | ValidSource$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever this creature mentors a creature, that creature gains first strike until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredTargetLKICopy | KW$ First Strike
+
+Oracle:Mentor (Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power.)\nThis creature has first strike as long as it's attacking.\nWhenever this creature mentors a creature, that creature gains first strike until end of turn.
+
+DeckHas:Ability$Counters
