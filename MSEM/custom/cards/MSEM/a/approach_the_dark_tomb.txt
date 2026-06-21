@@ -1,0 +1,17 @@
+Name:Approach the Dark Tomb
+ManaCost:3 B
+Types:Enchantment
+
+K:ETBReplacement:Other:SiegeChoice
+SVar:SiegeChoice:DB$ GenericChoice | Choices$ Life,Death | Defined$ You | SetChosenMode$ True | AILogic$ Life | ShowChoice$ ExceptSelf | SpellDescription$ As this enchantment enters, choose life or death.
+SVar:Life:DB$ Pump | SpellDescription$ Life
+SVar:Death:DB$ Pump | SpellDescription$ Death
+
+S:Mode$ Continuous | Affected$ Card.Self+ChosenModeLife | AddTrigger$ LifeTrigger | Description$ Life — Whenever you cast a creature spell, you may pay 1 life. If you do, draw a card.
+SVar:LifeTrigger:Mode$ SpellCast | ValidCard$ Creature | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever you cast a creature spell, you may pay 1 life. If you do, draw a card.
+SVar:TrigDraw:DB$ Draw | Cost$ PayLife<1> | NumCards$ 1
+
+S:Mode$ Continuous | Affected$ Card.Self+ChosenModeDeath | AddTrigger$ DeathTrigger | Description$ Death — Whenever a creature you control dies, you may pay 1 life. If you do, draw a card.
+SVar:DeathTrigger:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever a creature you control dies, you may pay 1 life. If you do, draw a card.
+
+Oracle:As this enchantment enters, choose life or death.\n• Life — Whenever you cast a creature spell, you may pay 1 life. If you do, draw a card.\n• Death — Whenever a creature you control dies, you may pay 1 life. If you do, draw a card.
