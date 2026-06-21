@@ -1,0 +1,19 @@
+Name:Imposing Sphinx
+ManaCost:4 W W
+Types:Enchantment Creature Sphinx
+PT:5/5
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this creature enters, exile target nonland permanent an opponent controls until it leaves the battlefield.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Permanent.nonLand+OppCtrl | TgtPrompt$ Select target nonland permanent an opponent controls | Duration$ UntilHostLeavesPlay
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ X | Execute$ TrigBlink | TriggerDescription$ At the beginning of your end step, if you gained life this turn, you may exile this creature, then return it to the battlefield under your control.
+SVar:TrigBlink:AB$ ChangeZone | Cost$ 0 | Defined$ Self | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | Optional$ True | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ All | Destination$ Battlefield | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Count$LifeYouGainedThisTurn
+
+Oracle:Flying\nWhen this creature enters, exile target nonland permanent an opponent controls until it leaves the battlefield.\nAt the beginning of your end step, if you gained life this turn, you may exile this creature, then return it to the battlefield under your control.
+
+DeckHas:Ability$LifeGain
