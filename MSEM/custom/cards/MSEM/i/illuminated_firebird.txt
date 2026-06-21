@@ -1,0 +1,15 @@
+Name:Illuminated Firebird
+ManaCost:2 R
+Types:Creature Phoenix
+PT:2/1
+
+K:Flying
+
+S:Mode$ CantBlock | ValidCard$ Card.Self | Description$ This creature can't block.
+
+T:Mode$ Drawn | ValidCard$ Card.YouCtrl | Number$ 2 | TriggerZones$ Graveyard | Execute$ TrigReturn | TriggerDescription$ Foresight — Whenever you draw your second card each turn, return this card from your graveyard to the battlefield.
+SVar:TrigReturn:DB$ ChangeZone | Defined$ Self | Origin$ Graveyard | Destination$ Battlefield
+
+Oracle:Flying\nThis creature can't block.\nForesight — Whenever you draw your second card each turn, return this card from your graveyard to the battlefield.
+
+DeckHas:Ability$Graveyard
