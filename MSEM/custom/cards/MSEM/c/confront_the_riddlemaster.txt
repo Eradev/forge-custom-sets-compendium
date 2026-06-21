@@ -1,0 +1,13 @@
+Name:Confront the Riddlemaster
+ManaCost:4 R
+Types:Instant
+
+T:Mode$ Countered | ValidCause$ SpellAbility.OppCtrl | ValidCard$ Card.wasCastByYou | ValidSA$ Spell | Execute$ TrigConfront | IsPresent$ Mountain.YouCtrl | TriggerDescription$ As a spell you control is countered by a spell or ability an opponent controls while you control a Mountain, you may reveal CARDNAME from your hand. When you do, cast it without paying its mana cost.
+SVar:TrigConfront:DB$ ImmediateTrigger | Execute$ TrigPlay | UnlessCost$ Reveal<1/CARDNAME> | UnlessPayer$ You | UnlessSwitched$ True
+SVar:TrigPlay:DB$ Play | Defined$ Self | ValidZone$ Hand | ValidSA$ Spell | WithoutManaCost$ True
+
+R:Event$ Counter | ValidCard$ Card.Self | ValidSA$ Spell | Layer$ CantHappen | Description$ This spell can't be countered.
+
+A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ 4 | SpellDescription$ CARDNAME deals 4 damage to any target.
+
+Oracle:As a spell you control is countered by a spell or ability an opponent controls while you control a Mountain, you may reveal Confront the Riddlemaster from your hand. When you do, cast it without paying its mana cost.\nThis spell can't be countered.\nConfront the Riddlemaster deals 4 damage to any target.
