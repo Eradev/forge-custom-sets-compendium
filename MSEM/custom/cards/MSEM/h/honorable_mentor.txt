@@ -1,0 +1,15 @@
+Name:Honorable Mentor
+ManaCost:2 R W
+Types:Enchantment Creature Sphinx
+PT:3/2
+
+K:Flying
+
+K:Mentor
+
+T:Mode$ Mentored | ValidSource$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever this creature mentors a creature, both creatures gain first strike until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredTargetLKICopy & Self | KW$ First Strike
+
+Oracle:Flying\nMentor (Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power.)\nWhenever this creature mentors a creature, both creatures gain first strike until end of turn.
+
+DeckHas:Ability$Counters
