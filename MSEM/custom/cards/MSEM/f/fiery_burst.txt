@@ -1,0 +1,9 @@
+Name:Fiery Burst
+ManaCost:3 R
+Types:Instant
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ Count$YouDrewThisTurn | EffectZone$ All | Description$ This spell costs {1} less to cast for each card you've drawn this turn.
+
+A:SP$ DealDamage | ValidTgts$ Any | TgtPrompt$ Select any target to distribute damage to | NumDmg$ 3 | TargetMin$ 0 | TargetMax$ 3 | DividedAsYouChoose$ 3 | SpellDescription$ CARDNAME deals 3 damage divided as you choose among any number of targets.
+
+Oracle:This spell costs {1} less to cast for each card you've drawn this turn.\nFiery Burst deals 3 damage divided as you choose among any number of targets.
