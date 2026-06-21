@@ -1,0 +1,17 @@
+Name:Colossal Greatwurm
+ManaCost:5 G G
+Types:Creature Wurm
+PT:0/0
+
+K:Trample
+
+K:etbCounter:P1P1:5
+
+T:Mode$ Drawn | ValidCard$ Card | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever a player draws a card, put a +1/+1 counter on this creature.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
+
+A:AB$ Token | Cost$ SubCounter<3/P1P1> | TokenScript$ g_3_3_wurm | TokenOwner$ You | SpellDescription$ Create a 3/3 green Wurm creature token.
+
+Oracle:Trample\nThis creature enters with five +1/+1 counters on it.\nWhenever a player draws a card, put a +1/+1 counter on this creature.\nRemove three +1/+1 counters from this creature: Create a 3/3 green Wurm creature token.
+
+DeckHas:Ability$Counters|Token
