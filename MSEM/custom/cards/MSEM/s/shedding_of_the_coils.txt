@@ -1,0 +1,12 @@
+Name:Shedding of the Coils
+ManaCost:B G
+Types:Sorcery
+
+A:SP$ Pump | ValidTgts$ Creature.YouCtrl | AILogic$ PowerDmg | TgtPrompt$ Select target creature you control | SubAbility$ SoulsDamage | SpellDescription$ Target creature you control deals damage equal to its power to target creature you don't control.
+SVar:SoulsDamage:DB$ DealDamage | ValidTgts$ Creature.YouDontCtrl | AILogic$ PowerDmg | TgtPrompt$ Select target creature you don't control | NumDmg$ X | DamageSource$ ParentTarget
+SVar:X:ParentTargeted$CardPower
+
+T:Mode$ DamageDone | ValidSource$ Creature.withDeathtouch+YouCtrl | ValidTarget$ Opponent | TriggerZones$ Graveyard | Execute$ TrigChangeZone | TriggerDescription$ Whenever a creature you control with deathtouch deals damage to an opponent, you may sacrifice that creature. If you do, return this card from your graveyard to your hand.
+SVar:TrigChangeZone:AB$ ChangeZone | Cost$ Sac<1/Card.TriggeredSource/that creature> | Defined$ Self | Origin$ Graveyard | Destination$ Hand
+
+Oracle:Target creature you control deals damage equal to its power to target creature you don't control.\nWhenever a creature you control with deathtouch deals damage to an opponent, you may sacrifice that creature. If you do, return this card from your graveyard to your hand.
