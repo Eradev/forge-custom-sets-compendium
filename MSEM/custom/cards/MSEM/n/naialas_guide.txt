@@ -1,0 +1,14 @@
+Name:Naiala's Guide
+ManaCost:4 U
+Types:Enchantment Creature Bird
+PT:3/3
+
+K:Flying
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigLoot | TriggerDescription$ Whenever this creature deals combat damage to a player, draw a card, then discard a card.
+SVar:TrigLoot:DB$ Draw | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 1
+
+Oracle:Flying\nWhenever this creature deals combat damage to a player, draw a card, then discard a card.
+
+DeckHas:Ability$Discard
