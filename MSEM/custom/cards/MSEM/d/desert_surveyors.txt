@@ -1,0 +1,13 @@
+Name:Desert Surveyors
+ManaCost:4 R
+Types:Creature Human Scout
+PT:3/5
+
+K:Prowess
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigLoot | TriggerDescription$ At the beginning of combat on each of your turns, you may draw a card. If you do, discard a card.
+SVar:TrigLoot:AB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 1 | Cost$ Draw<1/You>
+
+Oracle:Prowess\nAt the beginning of combat on each of your turns, you may draw a card. If you do, discard a card.
+
+DeckHas:Ability$Discard
