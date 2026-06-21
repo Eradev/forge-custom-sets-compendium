@@ -1,0 +1,12 @@
+Name:Phantasmal Owl
+ManaCost:U
+Types:Enchantment Creature Bird
+PT:1/1
+
+K:Flying
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever this creature attacks, it gets +1/+1 until end of turn for each other creature you control with flying.
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +X | NumDef$ +X
+SVar:X:Count$Valid Creature.Other+YouCtrl+withFlying
+
+Oracle:Flying\nWhenever this creature attacks, it gets +1/+1 until end of turn for each other creature you control with flying.
