@@ -1,0 +1,11 @@
+Name:Grave Robbery
+ManaCost:1 R
+Types:Instant
+
+A:SP$ Draw | NumCards$ 2 | SubAbility$ TrigDiscard | SpellDescription$ Draw two cards, then discard two cards. Investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")
+SVar:TrigDiscard:DB$ Discard | Defined$ You | NumCards$ 2 | Mode$ TgtChoose | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ c_a_clue_sac
+
+Oracle:Draw two cards, then discard two cards.\nInvestigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")
+
+DeckHas:Ability$Investigate|Token|Sacrifice & Type$Artifact|Clue
