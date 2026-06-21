@@ -1,0 +1,15 @@
+Name:Eve's Scheme
+ManaCost:2 B
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ At the beginning of your upkeep, draw a card and reveal it. You lose life equal to that card's mana value unless you control an Eve planeswalker.
+SVar:TrigDraw:DB$ Draw | NumCards$ 1 | RememberDrawn$ True | SubAbility$ DBReveal
+SVar:DBReveal:DB$ Reveal | Defined$ You | RevealDefined$ Remembered | SubAbility$ DBMaybeLose
+SVar:DBMaybeLose:DB$ LoseLife | LifeAmount$ X | ConditionCheckSVar$ HasEve | ConditionSVarCompare$ EQ0 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$CardManaCost
+SVar:HasEve:Count$Valid Planeswalker.Eve+YouCtrl
+
+Oracle:At the beginning of your upkeep, draw a card and reveal it. You lose life equal to that card's mana value unless you control an Eve planeswalker.
+
+DeckHints:Type$Eve
