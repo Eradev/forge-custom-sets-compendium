@@ -1,0 +1,16 @@
+Name:Darna's Atrocity
+ManaCost:7 B
+Types:Creature Zombie Warlock
+PT:5/3
+
+K:Menace
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDrawMill | TriggerDescription$ When this creature enters, you may pay 2 life. If you do, you draw two cards and mill two cards.
+SVar:TrigDrawMill:DB$ Draw | NumCards$ 2 | UnlessCost$ PayLife<2> | UnlessPayer$ You | UnlessSwitched$ True | SubAbility$ DBMill
+SVar:DBMill:DB$ Mill | NumCards$ 2
+
+A:AB$ Pump | Cost$ B ExileFromGrave<1/Card> | Defined$ Self | NumAtt$ +1 | NumDef$ +1 | SpellDescription$ This creature gets +1/+1 until end of turn.
+
+Oracle:Menace\nWhen this creature enters, you may pay 2 life. If you do, you draw two cards and mill two cards.\n{B}, Exile a card from your graveyard: This creature gets +1/+1 until end of turn.
+
+DeckHas:Ability$Graveyard|Mill
