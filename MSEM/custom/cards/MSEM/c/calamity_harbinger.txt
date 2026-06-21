@@ -1,0 +1,11 @@
+Name:Calamity Harbinger
+ManaCost:2 B B R R
+Types:Enchantment Creature Sphinx
+PT:4/3
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDealDamage | TriggerDescription$ When this creature enters, it deals 4 damage to up to one target creature or planeswalker.
+SVar:TrigDealDamage:DB$ DealDamage | ValidTgts$ Creature,Planeswalker | ValidTgtDesc$ creature or planeswalker | TargetMin$ 0 | TargetMax$ 1 | NumDmg$ 4
+
+Oracle:Flying\nWhen this creature enters, it deals 4 damage to up to one target creature or planeswalker.
