@@ -1,0 +1,11 @@
+Name:Master of Dark Arts
+ManaCost:2 B B
+Types:Creature Human Warlock
+PT:3/3
+
+K:Menace
+
+T:Mode$ Drawn | ValidCard$ Card.YouCtrl | Number$ 2 | TriggerZones$ Battlefield | Execute$ TrigSearch | TriggerDescription$ Foresight — Whenever you draw your second card each turn, search your library for a card, put it into your hand, then shuffle.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Card | ChangeNum$ 1
+
+Oracle:Menace\nForesight — Whenever you draw your second card each turn, search your library for a card, put it into your hand, then shuffle.
