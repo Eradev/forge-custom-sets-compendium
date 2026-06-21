@@ -1,0 +1,10 @@
+Name:Induced Violence
+ManaCost:2 G
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature.YouCtrl | AILogic$ PowerDmg | TgtPrompt$ Select target creature you control | SubAbility$ SoulsDamage | SpellDescription$ Target creature you control deals damage equal to its power to target creature you don't control. Create a Vial token. (It's an artifact with "{1}, Sacrifice this and another permanent: Draw a card. Activate only during your turn.")
+SVar:SoulsDamage:DB$ DealDamage | ValidTgts$ Creature.YouDontCtrl | AILogic$ PowerDmg | TgtPrompt$ Select target creature you don't control | NumDmg$ X | DamageSource$ ParentTarget | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ c_a_vial_sac
+SVar:X:ParentTargeted$CardPower
+
+Oracle:Target creature you control deals damage equal to its power to target creature you don't control.\nCreate a Vial token. (It's an artifact with "{1}, Sacrifice this and another permanent: Draw a card. Activate only during your turn.")

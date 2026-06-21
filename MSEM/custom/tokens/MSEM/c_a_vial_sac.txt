@@ -1,0 +1,8 @@
+Name:Vial Token
+ManaCost:no cost
+Colors:colorless
+Types:Artifact Vial
+
+A:AB$ Draw |Cost$ 1 Sac<1/CARDNAME/this> Sac<1/Permanent+Other/another permanent> | PlayerTurn$ True | SpellDescription$ Draw a card. Activate only during your turn.
+
+Oracle:{1}, Sacrifice this and another permanent: Draw a card. Activate only during your turn.
