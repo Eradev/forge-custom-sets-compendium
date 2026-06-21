@@ -1,0 +1,12 @@
+Name:Darna's Grimoire
+ManaCost:1
+Types:Artifact Clue
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDiscardDraw | TriggerDescription$ When this artifact enters, you may discard a card. If you do, draw a card.
+SVar:TrigDiscardDraw:DB$ Draw | UnlessCost$ Discard<1/Card> | UnlessPayer$ You | UnlessSwitched$ True
+
+A:AB$ Draw | Cost$ 2 Sac<1/CARDNAME/this artifact> | SpellDescription$ Draw a card.
+
+Oracle:When this artifact enters, you may discard a card. If you do, draw a card.\n{2}, Sacrifice this artifact: Draw a card.
+
+DeckHas:Ability$Sacrifice|Discard
