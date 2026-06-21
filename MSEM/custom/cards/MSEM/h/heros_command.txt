@@ -1,0 +1,17 @@
+Name:Hero's Command
+ManaCost:2 W W
+Types:Instant
+
+A:SP$ Charm | CharmNum$ 2 | Choices$ DBTokens,DBPumpAll,DBGainLife,DBIndestructible
+
+SVar:DBTokens:DB$ Token | TokenScript$ w_1_1_soldier | TokenAmount$ 2 | SpellDescription$ Create two 1/1 white Soldier creature tokens.
+
+SVar:DBPumpAll:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1 | SpellDescription$ Creatures you control get +1/+1 until end of turn.
+
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 5 | SpellDescription$ You gain 5 life.
+
+SVar:DBIndestructible:DB$ Pump | ValidTgts$ Creature | KW$ Indestructible | SpellDescription$ Choose a creature. It gains indestructible until end of turn.
+
+Oracle:Choose two —\n• Create two 1/1 white Soldier creature tokens.\n• Creatures you control get +1/+1 until end of turn.\n• You gain 5 life.\n• Choose a creature. It gains indestructible until end of turn.
+
+DeckHas:Ability$Token|LifeGain & Type$Soldier
