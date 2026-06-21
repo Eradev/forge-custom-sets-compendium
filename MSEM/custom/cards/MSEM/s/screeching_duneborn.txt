@@ -1,0 +1,11 @@
+Name:Screeching Duneborn
+ManaCost:1 B
+Types:Creature Zombie
+PT:2/1
+
+A:AB$ Draw | Cost$ 3 B ExileFromGrave<1/CARDNAME/this card> | SubAbility$ DBGainLife | ActivationZone$ Graveyard | SpellDescription$ You gain 1 life and draw a card.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 1
+
+Oracle:{3}{B}, Exile this card from your graveyard: You gain 1 life and draw a card.
+
+DeckHas:Ability$LifeGain|Graveyard
