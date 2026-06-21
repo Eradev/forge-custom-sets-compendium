@@ -1,0 +1,12 @@
+Name:Stegosaurhouse
+ManaCost:6 G G
+Types:Creature Dinosaur
+PT:8/7
+
+K:Hexproof
+
+K:Cycling:3
+
+Oracle:Hexproof\nCycling {3} ({3}, Discard this card: Draw a card.)
+
+DeckHints:Ability$Cycling
