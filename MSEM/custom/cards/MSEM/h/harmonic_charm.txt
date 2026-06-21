@@ -1,0 +1,15 @@
+Name:Harmonic Charm
+ManaCost:1 W
+Types:Instant
+
+A:SP$ Charm | Choices$ DBPump,DBTapStun,DBScryDraw | CharmNum$ 1
+
+SVar:DBPump:DB$ Pump | ValidTgts$ Creature | NumAtt$ +1 | KW$ Indestructible | SpellDescription$ Target creature gets +1/+0 and gains indestructible until end of turn.
+
+SVar:DBTapStun:DB$ Tap | ValidTgts$ Creature | SubAbility$ DBStun | SpellDescription$ Tap target creature. Put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)
+SVar:DBStun:DB$ PutCounter | Defined$ Targeted | CounterType$ Stun
+
+SVar:DBScryDraw:DB$ Scry | SubAbility$ DBDraw | SpellDescription$ Scry 1, then draw a card.
+SVar:DBDraw:DB$ Draw
+
+Oracle:Choose one —\n• Target creature gets +1/+0 and gains indestructible until end of turn.\n• Tap target creature. Put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)\n• Scry 1, then draw a card.
