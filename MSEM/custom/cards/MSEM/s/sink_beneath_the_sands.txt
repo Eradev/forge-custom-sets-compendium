@@ -1,0 +1,16 @@
+Name:Sink Beneath the Sands
+ManaCost:3 B
+Types:Enchantment Aura
+
+K:Enchant:Creature:creature
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDrain | TriggerDescription$ When this Aura enters, target player loses 2 life and you gain 2 life.
+SVar:TrigDrain:DB$ LoseLife | ValidTgts$ Player | LifeAmount$ 2 | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 2
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ -4 | AddToughness$ -4 | Description$ Enchanted creature gets -4/-4.
+
+Oracle:Enchant creature\nWhen this Aura enters, target player loses 2 life and you gain 2 life.\nEnchanted creature gets -4/-4.
+
+SVar:AttachAILogic:Curse
+DeckHas:Ability$LifeGain
