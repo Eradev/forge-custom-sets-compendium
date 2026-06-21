@@ -1,0 +1,15 @@
+Name:Nature Charm
+ManaCost:1 G
+Types:Instant
+
+A:SP$ Charm | Choices$ DBPump,DBMustBlock,DBScryDraw | CharmNum$ 1
+
+SVar:DBPump:DB$ Pump | ValidTgts$ Creature | NumAtt$ +3 | NumDef$ +3 | SpellDescription$ Target creature gets +3/+3 until end of turn.
+
+SVar:DBMustBlock:DB$ Effect | ValidTgts$ Creature | RememberObjects$ Targeted | StaticAbilities$ MustBlock | ExileOnMoved$ Battlefield | SpellDescription$ Target creature blocks this turn if able.
+SVar:MustBlock:Mode$ MustBlock | ValidCreature$ Card.IsRemembered | Description$ This creature blocks this turn if able.
+
+SVar:DBScryDraw:DB$ Scry | ScryNum$ 1 | SubAbility$ DBDraw | SpellDescription$ Scry 1, then draw a card.
+SVar:DBDraw:DB$ Draw
+
+Oracle:Choose one —\n• Target creature gets +3/+3 until end of turn.\n• Target creature blocks this turn if able.\n• Scry 1, then draw a card.
