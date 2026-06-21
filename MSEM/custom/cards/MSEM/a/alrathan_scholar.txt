@@ -1,0 +1,11 @@
+Name:Alrathan Scholar
+ManaCost:1 U
+Types:Creature Human Wizard
+PT:2/1
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player,Planeswalker | CombatDamage$ True | Execute$ TrigDraw | TriggerDescription$ Whenever this creature deals combat damage to a player or planeswalker, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+A:AB$ Pump | Cost$ 2 U | ValidTgts$ Creature | KW$ Flying | SpellDescription$ Target creature gains flying until end of turn.
+
+Oracle:Whenever this creature deals combat damage to a player or planeswalker, draw a card.\n{2}{U}: Target creature gains flying until end of turn.
