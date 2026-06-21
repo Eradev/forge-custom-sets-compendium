@@ -1,0 +1,20 @@
+Name:Ciel, the Raider King
+ManaCost:1 B R G
+Types:Legendary Planeswalker Ciel
+Loyalty:3
+
+A:AB$ GenericChoice | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Choices$ DBSacToDraw,DBDiscardToDraw | SpellDescription$ You may sacrifice a permanent or discard a card. If you do, draw two cards.
+SVar:DBSacToDraw:DB$ Draw | NumCards$ 2 | UnlessCost$ Sac<1/Permanent> | UnlessPayer$ You | UnlessSwitched$ True | SpellDescription$ Sacrifice a permanent.
+SVar:DBDiscardToDraw:DB$ Draw | NumCards$ 2 | UnlessCost$ Discard<1/Card> | UnlessPayer$ You | UnlessSwitched$ True | SpellDescription$ Discard a card.
+
+A:AB$ GenericChoice | Cost$ SubCounter<1/LOYALTY> | Planeswalker$ True | Choices$ DBSacToDestroy,DBDiscardToDestroy | SpellDescription$ You may sacrifice a permanent or discard a card. If you do, destroy target nonland permanent.
+SVar:DBSacToDestroy:DB$ Destroy | ValidTgts$ Permanent.nonLand | UnlessCost$ Sac<1/Permanent> | UnlessPayer$ You | UnlessSwitched$ True | SpellDescription$ Sacrifice a permanent.
+SVar:DBDiscardToDestroy:DB$ Destroy | ValidTgts$ Permanent.nonLand | UnlessCost$ Discard<1/Card> | UnlessPayer$ You | UnlessSwitched$ True | SpellDescription$ Discard a card.
+
+A:AB$ ChangeZoneAll | Cost$ SubCounter<5/LOYALTY> | Planeswalker$ True | Ultimate$ True | ChangeType$ Card.YouCtrl | Origin$ Hand | Destination$ Graveyard | RememberChanged$ True | SubAbility$ DBChangeZoneAll | SpellDescription$ Exchange your hand and graveyard.
+SVar:DBChangeZoneAll:DB$ ChangeZoneAll | ChangeType$ Card.YouCtrl+!IsRemembered | Origin$ Graveyard | Destination$ Hand | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:[+1]: You may sacrifice a permanent or discard a card. If you do, draw two cards.\n[-1]: You may sacrifice a permanent or discard a card. If you do, destroy target nonland permanent.\n[-5]: Exchange your hand and graveyard.
+
+DeckHas:Ability$Discard|Sacrifice
