@@ -1,0 +1,14 @@
+Name:Oasis' Grandeur
+ManaCost:3 G
+Types:Instant
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ X | EffectZone$ All | Description$ This spell costs {1} less to cast for each card you've drawn this turn.
+SVar:X:Count$YouDrewThisTurn
+
+A:SP$ ChangeZone | Origin$ Sideboard | Destination$ Hand | ChangeType$ Land.YouOwn | ChangeTypeDesc$ land card they own | ChangeNum$ 1 | Reveal$ True | Hidden$ True | Optional$ True | OptionalDecider$ You | RememberChanged$ True | SubAbility$ DBToBF | SpellDescription$ You may reveal a land card from outside the game and put it into your hand. If it's basic or a Desert, put it into the battlefield instead.
+SVar:DBToBF:DB$ ChangeZone | Origin$ Hand | Destination$ Battlefield | Defined$ Remembered | ChangeType$ Land.Basic,Desert | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:This spell costs {1} less to cast for each card you've drawn this turn.\nYou may reveal a land card from outside the game and put it into your hand. If it's basic or a Desert, put it into the battlefield instead.
+
+AI:RemoveDeck:Random
