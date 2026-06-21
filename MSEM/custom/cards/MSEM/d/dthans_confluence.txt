@@ -1,0 +1,17 @@
+Name:Dthan's Confluence
+ManaCost:2 R R
+Types:Sorcery
+
+A:SP$ Charm | Choices$ DBTokens,DBDamage,DBPump | CharmNum$ 3 | CanRepeatModes$ True
+
+SVar:DBTokens:DB$ Token | ValidTgts$ Player | TokenScript$ w_1_1_soldier | TokenAmount$ 2 | TokenOwner$ ThisTargetedPlayer | RememberTokens$ True | SubAbility$ DBPumpTokens | SpellDescription$ Target player creates two 1/1 white Soldier creature tokens. They gain haste until end of turn. Exile them at the beginning of the next end step.
+SVar:DBPumpTokens:DB$ Pump | Defined$ Remembered | KW$ Haste | AtEOT$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Creature,Planeswalker | ValidTgtDesc$ creature or planeswalker | NumDmg$ 2 | SpellDescription$ CARDNAME deals 2 damage to target creature or planeswalker.
+
+SVar:DBPump:DB$ Pump | ValidTgts$ Creature | KW$ Double Strike | SpellDescription$ Target creature gains double strike until end of turn.
+
+Oracle:Choose three. You may choose the same mode more than once.\n• Target player creates two 1/1 white Soldier creature tokens. They gain haste until end of turn. Exile them at the beginning of the next end step.\n• Dthan's Confluence deals 2 damage to target creature or planeswalker.\n• Target creature gains double strike until end of turn.
+
+DeckHas:Ability$Token & Type$Soldier
