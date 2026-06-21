@@ -1,0 +1,11 @@
+Name:Prying Inquiry
+ManaCost:1 B
+Types:Sorcery
+
+A:SP$ Discard | ValidTgts$ Player | Mode$ RevealYouChoose | DiscardValid$ Card.nonLand | SubAbility$ DBLoseLife | SpellDescription$ Target player reveals their hand. You choose a nonland card from it. That player discards that card. You lose 1 life. Investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")
+SVar:DBLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1 | SubAbility$ DBInvestigate
+SVar:DBInvestigate:DB$ Investigate
+
+Oracle:Target player reveals their hand. You choose a nonland card from it. That player discards that card. You lose 1 life.\nInvestigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")
+
+DeckHas:Ability$Investigate|Token & Type$Clue
