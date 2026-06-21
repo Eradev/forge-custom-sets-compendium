@@ -1,0 +1,11 @@
+Name:Ylda, the Wild Soul
+ManaCost:G
+Types:Legendary Creature Shapeshifter
+PT:1/2
+
+K:Vigilance
+
+A:AB$ Clone | Cost$ X G T | ValidTgts$ Creature.YouCtrl+cmcEQX | TgtPrompt$ Select target creature you control with mana value X | SorcerySpeed$ True | GainThisAbility$ True | AddKeywords$ Vigilance | SpellDescription$ NICKNAME becomes a copy of target creature you control with mana value X, except she has this ability and vigilance. Activate only as a sorcery.
+SVar:X:Count$xPaid
+
+Oracle:Vigilance\n{X}{G}, {T}: Ylda becomes a copy of target creature you control with mana value X, except she has this ability and vigilance. Activate only as a sorcery.
