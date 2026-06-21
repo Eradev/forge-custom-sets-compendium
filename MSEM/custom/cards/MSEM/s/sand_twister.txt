@@ -1,0 +1,13 @@
+Name:Sand Twister
+ManaCost:2 G
+Types:Instant
+
+A:SP$ Charm | CharmNum$ 1 | Choices$ DBArtifact,DBEnchantment,DBFlying
+
+SVar:DBArtifact:DB$ Destroy | ValidTgts$ Artifact | SpellDescription$ Destroy target artifact.
+
+SVar:DBEnchantment:DB$ Destroy | ValidTgts$ Enchantment | SpellDescription$ Destroy target enchantment.
+
+SVar:DBFlying:DB$ Destroy | ValidTgts$ Creature.withFlying | SpellDescription$ Destroy target creature with flying.
+
+Oracle:Choose one —\n• Destroy target artifact.\n• Destroy target enchantment.\n• Destroy target creature with flying.
