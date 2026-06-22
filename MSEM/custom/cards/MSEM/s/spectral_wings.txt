@@ -1,0 +1,11 @@
+Name:Spectral Wings
+ManaCost:W
+Types:Instant
+
+A:SP$ Charm | CharmNum$ 1 | Choices$ DBFlyingPump,DBIndestructible
+
+SVar:DBFlyingPump:DB$ Pump | ValidTgts$ Creature | NumAtt$ +1 | NumDef$ +1 | KW$ Flying | SpellDescription$ Target creature gets +1/+1 and gains flying until end of turn.
+
+SVar:DBIndestructible:DB$ Pump | ValidTgts$ Creature.withFlying | NumAtt$ +2 | NumDef$ +2 | KW$ Indestructible | SpellDescription$ Target creature gets +2/+2 and gains indestructible until end of turn if it has flying.
+
+Oracle:Choose one —\n• Target creature gets +1/+1 and gains flying until end of turn.\n• Target creature gets +2/+2 and gains indestructible until end of turn if it has flying.
