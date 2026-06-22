@@ -1,0 +1,16 @@
+Name:Soul of the Sands
+ManaCost:4 W
+Types:Enchantment Creature Sand Elemental
+PT:4/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCharm | TriggerDescription$ When this creature enters, ABILITY
+
+SVar:TrigCharm:DB$ Charm | Choices$ DBGainLife,DBDraw
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 4 | SpellDescription$ You gain 4 life.
+
+SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ X | SpellDescription$ If you gained life this turn, draw a card.
+SVar:X:Count$LifeYouGainedThisTurn
+
+Oracle:When this creature enters, choose one —\n• You gain 4 life.\n• If you gained life this turn, draw a card.
+
+DeckHints:Ability$LifeGain
