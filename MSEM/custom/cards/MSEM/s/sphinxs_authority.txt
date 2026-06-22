@@ -1,0 +1,15 @@
+Name:Sphinx's Authority
+ManaCost:1 W W
+Types:Enchantment
+
+S:Mode$ CantDraw | ValidPlayer$ Player.Opponent | DrawLimit$ 1 | Description$ Each opponent can't draw more than one card each turn.
+
+K:Cycling:W
+
+T:Mode$ Cycled | ValidCard$ Card.Self | Execute$ TrigGainLife | TriggerDescription$ When you cycle this enchantment, you gain 1 life.
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 1
+
+Oracle:Each opponent can't draw more than one card each turn.\nCycling {W} ({W}, Discard this card: Draw a card.)\nWhen you cycle this enchantment, you gain 1 life.
+
+SVar:NonStackingEffect:True
+DeckHas:Ability$LifeGain|Discard|Cycling
