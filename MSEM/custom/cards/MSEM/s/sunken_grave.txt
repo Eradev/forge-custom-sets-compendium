@@ -1,0 +1,12 @@
+Name:Sunken Grave
+ManaCost:2
+Types:Artifact
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this artifact enters, create a tapped 2/2 black Zombie creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ b_2_2_zombie | TokenTapped$ True
+
+A:AB$ Token | Cost$ 5 T Sac<1/CARDNAME/this artifact> | TokenScript$ b_2_2_zombie | TokenTapped$ True | SpellDescription$ Create a tapped 2/2 black Zombie creature token.
+
+Oracle:When this artifact enters, create a tapped 2/2 black Zombie creature token.\n{5}, {T}, Sacrifice this artifact: Create a tapped 2/2 black Zombie creature token.
+
+DeckHas:Ability$Token & Type$Zombie
