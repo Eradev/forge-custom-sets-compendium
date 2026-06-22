@@ -1,0 +1,15 @@
+Name:Sphinx of Insight
+ManaCost:2 G W
+Types:Enchantment Creature Sphinx
+PT:3/5
+
+K:Flying
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ X | SVarCompare$ GE3 | Execute$ TrigToken | TriggerDescription$ At the beginning of your upkeep, if you control three or more enchantments, create a 1/1 white Soldier creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_soldier | TokenOwner$ You
+SVar:X:Count$Valid Enchantment.YouCtrl
+
+Oracle:Flying\nAt the beginning of your upkeep, if you control three or more enchantments, create a 1/1 white Soldier creature token.
+
+DeckHas:Ability$Token & Type$Soldier
+DeckHints:Type$Enchantment
