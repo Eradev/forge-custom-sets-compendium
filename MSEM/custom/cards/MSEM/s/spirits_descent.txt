@@ -1,0 +1,12 @@
+Name:Spirits' Descent
+ManaCost:2 U
+Types:Sorcery
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ 2 | EffectZone$ All | IsPresent$ Creature.YouCtrl+withFlying | Description$ This spell costs {2} less to cast if you control a creature with flying.
+
+A:SP$ Tap | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 2 | TgtPrompt$ Select up to two target creatures | SubAbility$ DBStun | SpellDescription$ Tap up to two target creatures. Put a stun counter on each of them.
+SVar:DBStun:DB$ PutCounter | Defined$ Targeted | CounterType$ Stun
+
+Oracle:This spell costs {2} less to cast if you control a creature with flying.\nTap up to two target creatures. Put a stun counter on each of them. (If a permanent with a stun counter would become untapped, remove one from it instead.)
+
+DeckHas:Ability$Counters
