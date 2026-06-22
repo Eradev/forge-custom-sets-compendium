@@ -1,0 +1,13 @@
+Name:Swaying Sands
+ManaCost:no cost
+Types:Land Desert
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Cost$ T PayLife<1> | Produced$ W | SpellDescription$ Add {W}.
+
+A:AB$ Token | Cost$ 5 W T Sac<1/CARDNAME/this land> | TokenScript$ w_1_1_bird_flying | TokenAmount$ 3 | Activation$ Sorcery | SpellDescription$ Create three 1/1 white Bird creature tokens with flying. Activate only as a sorcery.
+
+Oracle:{T}: Add {C}.\n{T}, Pay 1 life: Add {W}.\n{5}{W}, {T}, Sacrifice this land: Create three 1/1 white Bird creature tokens with flying. Activate only as a sorcery.
+
+DeckHas:Ability$Token & Type$Bird
