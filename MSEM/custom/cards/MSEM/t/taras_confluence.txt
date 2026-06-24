@@ -1,0 +1,18 @@
+Name:Tara's Confluence
+ManaCost:1 W W
+Types:Instant
+
+A:SP$ Charm | CharmNum$ 3 | CanRepeatModes$ True | Choices$ DBTap,DBBlink,DBPump
+
+SVar:DBTap:DB$ Tap | ValidTgts$ Permanent.nonLand | SubAbility$ DBNoUntap | SpellDescription$ Tap target nonland permanent. It doesn't untap during its controller's next untap step.
+SVar:DBNoUntap:DB$ Pump | Defined$ Targeted | KW$ HIDDEN This card doesn't untap during its controller's next untap step.
+
+SVar:DBBlink:DB$ ChangeZone | ValidTgts$ Creature.YouCtrl | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn | SpellDescription$ Exile target creature you control, then return it to the battlefield under your control.
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:DBPump:DB$ Pump | ValidTgts$ Creature | NumAtt$ +1 | KW$ Lifelink & First Strike | SpellDescription$ Target creature gets +1/+0 and gains lifelink and first strike until end of turn.
+
+Oracle:Choose three. You may choose the same mode more than once.\n• Tap target nonland permanent. It doesn't untap during its controller's next untap step.\n• Exile target creature you control, then return it to the battlefield under your control.\n• Target creature gets +1/+0 and gains lifelink and first strike until end of turn.
+
+DeckHas:Ability$LifeGain
