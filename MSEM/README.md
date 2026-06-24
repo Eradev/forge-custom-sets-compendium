@@ -34,7 +34,15 @@ Video Horror System (VHS)             -  97% (83/86)
 Nangjiao In Bloom (NJB)               -  35% (106/297)
   Missing cards:
     * Diao of the Opal Infantry
-Riddles of Revio (RVO)                -  11% (30/272)
+Riddles of Revio (RVO)                -  83% (226/272)
+  Missing cards:
+    * Every card that references the supertype Riddle.
+    * Every card that references modal spells. (Cryptic, etc.)
+    * Every card that references "reselect modes".
+    * Every card that has Align X.
+    * Ancient Tome
+    * Dthan, Who Bloodies the Sands
+    * Reytha's Discovery
 Worlds Away (WAY)                     -   3% (11/262)
 Storytime (101)                       -  14% (15/101)
 Kaleidoscope (KLC)                    -  100%
@@ -68,6 +76,8 @@ Examples on how to implement custom keywords and mechanisms.
 * [Deception](#deception)
 * [Fabled](#fabled)
 * [Fleeting](#fleeting)
+* [Foresight](#foresight)
+* [Golden Age](#golden-age)
 * [Horrific](#horrific)
 * [Infiltrate](#infiltrate)
 * [Kindle](#kindle)
@@ -202,6 +212,60 @@ S:Mode$ Continuous | Affected$ Card.Self | MayPlay$ True | MayPlayAltManaCost$ U
 T:Mode$ SpellCast | ValidCard$ Card.Self | ValidSA$ Spell.MayPlaySource | Static$ True | Execute$  FleetingEndStep
 SVar:FleetingEndStep:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | RememberObjects$ Self | TriggerDescription$ At the beginning of the next end step, sacrifice it. | Execute$ TrigSacrifice
 SVar:TrigSacrifice:DB$ SacrificeAll | Defined$ DelayTriggerRememberedLKI
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Foresight
+
+Foresight is defined as:
+
+```text
+Foresight — Whenever you draw your second card each turn, [something]
+```
+
+Implementation:
+
+```text
+T:Mode$ Drawn | ValidCard$ Card.YouCtrl | Number$ 2 | TriggerZones$ Battlefield | Execute$ SomeTrigger | TriggerDescription$ Foresight —
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Golden Age
+
+Golden Age is defined as:
+
+```text
+Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+```
+
+To trigger Golden Age:
+
+```text
+#-------------------
+# Golden Age trigger
+#-------------------
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Secondary$ True | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+T:Mode$ AttackersDeclared | AttackingPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Secondary$ True | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+T:Mode$ AbilityCast | ValidActivatingPlayer$ You | ValidSA$ SpellAbility.!ManaAbility | TriggerZones$ Battlefield | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Secondary$ True | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+
+SVar:EnterGoldenAge:DB$ Effect | Name$ Golden Age | StaticAbilities$ GoldenAgeDesc | Duration$ Permanent | Unique$ True
+SVar:GoldenAgeDesc:Mode$ Continuous | Description$ You are in a renaissance.
+
+SVar:GoldenAgeSpell:Count$ThisTurnCast_Card.Instant+YouCtrl,Card.Sorcery+YouCtrl/LimitMax.1
+SVar:GoldenAgeAbility:Count$ThisTurnActivated_Activated.!ManaAbility+YouCtrl/LimitMax.1
+SVar:GoldenAgeAttack:Count$AttackersDeclared/LimitMax.1
+SVar:GoldenCheck1:SVar$GoldenAgeSpell/Plus.GoldenAgeAbility
+SVar:GoldenCheckFinal:SVar$GoldenCheck1/Plus.GoldenAgeAttack
+#-------------------
+```
+
+To check if you're in a renaissance, you can check this var if it is equal to 1:
+
+```text
+SVar:IsRenaissance:Count$ValidCommand Effect.YouCtrl+namedGolden Age/LimitMax.1
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
