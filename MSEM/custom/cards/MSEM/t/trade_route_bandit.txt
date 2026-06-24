@@ -1,0 +1,11 @@
+Name:Trade Route Bandit
+ManaCost:1 W
+Types:Creature Human Rogue
+PT:2/1
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may have each player draw two cards.
+SVar:TrigDraw:DB$ Draw | Defined$ Player | NumCards$ 2
+
+Oracle:Flash\nWhenthis creature enters, you may have each player draw two cards.
