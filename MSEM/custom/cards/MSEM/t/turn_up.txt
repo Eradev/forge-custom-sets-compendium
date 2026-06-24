@@ -1,5 +1,5 @@
 Name:Turn Up
-ManaCost:2 B
+ManaCost:B
 Types:Instant
 
 A:SP$ Charm | CharmNum$ 1 | Choices$ DBToHand,DBToBattlefield
