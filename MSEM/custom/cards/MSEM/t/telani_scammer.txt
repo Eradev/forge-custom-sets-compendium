@@ -1,0 +1,13 @@
+Name:Telani Scammer
+ManaCost:2 B
+Types:Creature Human Merchant
+PT:2/2
+
+K:Menace
+
+T:Mode$ Drawn | ValidCard$ Card.YouCtrl | Number$ 2 | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Foresight — Whenever you draw your second card each turn, put a +1/+1 counter on this creature.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1
+
+Oracle:Menace\nForesight — Whenever you draw your second card each turn, put a +1/+1 counter on this creature.
+
+DeckHas:Ability$Counters
