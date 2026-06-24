@@ -1,5 +1,5 @@
 Name:Unlikely Growth
-ManaCost:2 G
+ManaCost:1 G
 Types:Enchantment
 
 K:ETBReplacement:Other:GrowthChoice
