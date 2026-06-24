@@ -3,7 +3,9 @@ ManaCost:2 U
 Types:Creature Human Wizard
 PT:2/3
 
+K:Vigilance
+
 T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigScry | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature deals combat damage to a player, scry 2.
 SVar:TrigScry:DB$ Scry | ScryNum$ 2
 
-Oracle:Whenever this creature deals combat damage to a player, scry 2.
+Oracle:Vigilance/nWhenever this creature deals combat damage to a player, scry 2.
