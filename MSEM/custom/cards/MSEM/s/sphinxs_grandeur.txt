@@ -1,5 +1,5 @@
 Name:Sphinx's Grandeur
-ManaCost:4 W
+ManaCost:2 G W
 Types:Legendary Enchantment
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self,Enchantment.Other+YouCtrl | Execute$ TrigToken | TriggerDescription$ Whenever CARDNAME or another enchantment you control enters, create a 1/1 white Soldier creature token.
