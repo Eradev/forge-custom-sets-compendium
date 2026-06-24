@@ -1,0 +1,13 @@
+Name:Surging Wurm
+ManaCost:4 G G
+Types:Creature Wurm
+PT:6/5
+
+S:Mode$ AssignCombatDamageAsUnblocked | ValidCard$ Card.Self | Optional$ True | Description$ You may have this creature assign its combat damage as though it weren't blocked.
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 2 | AddToughness$ 2 | CheckSVar$ X | SVarCompare$ GE7 | Description$ This creature gets +2/+2 as long as seven or more cards are in your graveyard.
+SVar:X:Count$ValidGraveyard Card.YouOwn
+
+Oracle:You may have this creature assign its combat damage as though it weren't blocked.\nThis creature gets +2/+2 as long as seven or more cards are in your graveyard.
+
+DeckHas:Ability$Graveyard
