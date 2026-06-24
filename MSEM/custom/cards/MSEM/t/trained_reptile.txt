@@ -1,0 +1,14 @@
+Name:Trained Reptile
+ManaCost:4 G
+Types:Creature Lizard
+PT:4/4
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +1/+1 for each enchantment you control.
+SVar:X:Count$Valid Enchantment.YouCtrl
+
+S:Mode$ CantBlockBy | ValidAttacker$ Card.Self | ValidBlocker$ Creature.powerLE2 | Description$ This creature can't be blocked by creatures with power 2 or less.
+
+Oracle:This creature gets +1/+1 for each enchantment you control.\nThis creature can't be blocked by creatures with power 2 or less.
+
+SVar:BuffedBy:Enchantment
+DeckHints:Type$Enchantment
