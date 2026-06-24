@@ -1,0 +1,12 @@
+Name:Trail of Bones
+ManaCost:B
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigMill | OptionalDecider$ You | TriggerDescription$ At the beginning of your end step, you may mill a card.
+SVar:TrigMill:DB$ Mill | NumCards$ 1 | Defined$ You
+
+A:AB$ LoseLife | Cost$ 3 B ExileFromGrave<2/Card> | ValidTgts$ Player | LifeAmount$ 2 | SpellDescription$ Target player loses 2 life.
+
+Oracle:At the beginning of your end step, you may mill a card.\n{3}{B}, Exile two cards from your graveyard: Target player loses 2 life.
+
+DeckHas:Ability$Graveyard
