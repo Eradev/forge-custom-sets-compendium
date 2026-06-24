@@ -1,0 +1,12 @@
+Name:Trial Recruitment
+ManaCost:3 W
+Types:Instant
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ X | EffectZone$ All | Description$ This spell costs {1} less to cast for each card you've drawn this turn.
+SVar:X:Count$YouDrewThisTurn
+
+A:SP$ Token | TokenScript$ w_1_1_soldier | TokenAmount$ 3 | SpellDescription$ Create three 1/1 white Soldier creature tokens.
+
+Oracle:This spell costs {1} less to cast for each card you've drawn this turn.\nCreate three 1/1 white Soldier creature tokens.
+
+DeckHas:Ability$Token & Type$Soldier
