@@ -1,0 +1,13 @@
+Name:Swiftwing Sphinx
+ManaCost:3 U
+Types:Enchantment Creature Sphinx
+PT:3/3
+
+K:Flying
+
+T:Mode$ DamageDone | ValidSource$ Card.Self,Creature.withFlying+Other+YouCtrl | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever this creature or another creature with flying deals combat damage to an opponent, put a +1/+1 counter on that creature.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ TriggeredSourceLKICopy | CounterType$ P1P1
+
+Oracle:Flying\nWhenever this creature or another creature with flying deals combat damage to an opponent, put a +1/+1 counter on that creature.
+
+DeckHas:Ability$Counters
