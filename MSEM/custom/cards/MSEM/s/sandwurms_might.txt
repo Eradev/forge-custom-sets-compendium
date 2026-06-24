@@ -1,5 +1,5 @@
 Name:Sandwurm's Might
-ManaCost:3 G
+ManaCost:2 G G
 Types:Enchantment
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigFight | TriggerDescription$ When this enchantment enters, you may have target creature you control fight target creature you don't control.
