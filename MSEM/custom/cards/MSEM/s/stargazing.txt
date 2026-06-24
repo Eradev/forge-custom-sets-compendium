@@ -1,0 +1,13 @@
+Name:Stargazing
+ManaCost:U
+Types:Legendary Enchantment
+
+T:Mode$ Drawn | ValidCard$ Card.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ Whenever you draw a card, put a dream counter on CARDNAME.
+SVar:TrigCounter:DB$ PutCounter | Defined$ Self | CounterType$ DREAM
+
+A:AB$ ChangeZoneAll | Cost$ SubCounter<7/DREAM> Exile<1/CARDNAME/it> | Origin$ Hand,Graveyard | ChangeType$ Card.YouOwn | Destination$ Library | Shuffle$ True | SubAbility$ DBDraw | SpellDescription$ Shuffle your hand and graveyard into your library, then draw seven cards.
+SVar:DBDraw:DB$ Draw | NumCards$ 7
+
+Oracle:Whenever you draw a card, put a dream counter on Stargazing.\nRemove seven dream counters from Stargazing and exile it: Shuffle your hand and graveyard into your library, then draw seven cards.
+
+DeckHas:Ability$Counters
