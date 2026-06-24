@@ -1,0 +1,20 @@
+Name:Herald of Flame
+ManaCost:3 R R
+Types:Enchantment Creature Dragon Sphinx
+PT:4/4
+
+K:Flying
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigGainControl | TriggerDescription$ Whenever this creature attacks, gain control of target permanent until end of combat. If it's a creature, you may have it become tapped and attacking.
+SVar:TrigGainControl:DB$ GainControl | ValidTgts$ Permanent | TgtPrompt$ Select target permanent | LoseControl$ EndOfCombat | RememberControlled$ True | SubAbility$ DBMaybeTapAttack
+SVar:DBMaybeTapAttack:DB$ ImmediateTrigger | Execute$ TrigTapAttack | OptionalDecider$ You | ConditionDefined$ Remembered | ConditionPresent$ Creature | RememberObjects$ Remembered | SubAbility$ DBCleanup
+SVar:TrigTapAttack:DB$ Tap | Defined$ DelayTriggerRemembered | SubAbility$ DBSetAttacking
+SVar:DBSetAttacking:DB$ ChangeCombatants | Defined$ DelayTriggerRemembered | Attacking$ DefendingPlayer & Valid Planeswalker.ControlledBy DefendingPlayer
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+T:Mode$ AttackerBlocked | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever a creature you control becomes blocked, thiscreature deals 3 damage to the player or planeswalker that creature is attacking.
+SVar:TrigDamage:DB$ DealDamage | Defined$ TriggeredDefender.Opponent & Valid Planeswalker.TriggeredDefender | NumDmg$ 3
+
+Oracle:Flying\nWhenever this creature attacks, gain control of target permanent until end of combat. If it's a creature, you may have it become tapped and attacking.\nWhenever a creature you control becomes blocked, Herald of Flame deals 3 damage to the player or planeswalker that creature is attacking.
+
+SVar:HasAttackEffect:TRUE
