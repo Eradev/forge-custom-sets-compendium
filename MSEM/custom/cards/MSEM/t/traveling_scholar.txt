@@ -1,0 +1,14 @@
+Name:Traveling Scholar
+ManaCost:1 W
+Types:Creature Human Wizard
+PT:2/2
+
+K:Mentor
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ X | SVarCompare$ GE3 | Execute$ TrigPump | TriggerDescription$ At the beginning of combat on your turn, if you control three or more creatures, this creature gets +1/+0 until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +1
+SVar:X:Count$Valid Creature.YouCtrl
+
+Oracle:Mentor (Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power.)\nAt the beginning of combat on your turn, if you control three or more creatures, this creature gets +1/+0 until end of turn.
+
+DeckHas:Ability$Counters
