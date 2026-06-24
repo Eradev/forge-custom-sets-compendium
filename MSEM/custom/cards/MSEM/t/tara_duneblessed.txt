@@ -1,0 +1,22 @@
+Name:Tara, Duneblessed
+ManaCost:2 W U
+Types:Legendary Planeswalker Tara
+Loyalty:3
+
+T:Mode$ Drawn | ValidCard$ Card.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever you draw a card, put a loyalty counter on NICKNAME.
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ LOYALTY
+
+A:AB$ Token | Cost$ SubCounter<1/LOYALTY> | Planeswalker$ True | TokenScript$ w_1_1_soldier | SubAbility$ DBInvestigate | SpellDescription$ Create a 1/1 white Soldier creature token. Investigate.
+SVar:DBInvestigate:DB$ Investigate
+
+A:AB$ Pump | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Artifact,Creature | TgtPrompt$ Select target artifact or creature | SubAbility$ DBExile | SpellDescription$ If target artifact or creature is tapped, exile it. Otherwise, tap it and put a stun counter on it.
+SVar:DBExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | Defined$ Targeted | ConditionDefined$ Targeted | ConditionPresent$ Card.tapped | SubAbility$ DBTapStun
+SVar:DBTapStun:DB$ Tap | Defined$ Targeted | ConditionDefined$ Targeted | ConditionPresent$ Card.untapped | SubAbility$ DBStun
+SVar:DBStun:DB$ PutCounter | Defined$ Targeted | CounterType$ Stun | ConditionDefined$ Targeted | ConditionPresent$ Card.untapped
+
+A:AB$ ChooseCard | Cost$ SubCounter<10/LOYALTY> | Planeswalker$ True | Ultimate$ True | Defined$ You | Amount$ 1 | Optional$ True | Choices$ Creature | AILogic$ Duneblast | SubAbility$ DBDestroyAll | SpellDescription$ Choose up to one creature. Destroy the rest.
+SVar:DBDestroyAll:DB$ DestroyAll | ValidCards$ Creature.nonChosenCard
+
+Oracle:Whenever you draw a card, put a loyalty counter on Tara.\n[-1]: Create a 1/1 white Soldier creature token. Investigate.\n[-2]: If target artifact or creature is tapped, exile it. Otherwise, tap it and put a stun counter on it.\n[-10]: Choose up to one creature. Destroy the rest.
+
+DeckHas:Ability$Token|Investigate|Counters & Type$Soldier|Clue
