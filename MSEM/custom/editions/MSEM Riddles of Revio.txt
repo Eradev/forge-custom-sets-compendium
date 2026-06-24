@@ -298,6 +298,9 @@ Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 15 emblem_naiala_the_informant @Anastasia Kustova
 16 emblem_tara_duneblessed @Denis Fröhlich
 
+[CreatureTypes]
+Merchant:Merchants
+
 [WalkerTypes]
 Ciel
 Eve
