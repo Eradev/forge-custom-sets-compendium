@@ -7,4 +7,4 @@ K:Flying
 
 A:AB$ Draw | Cost$ 1 U Sac<1/CARDNAME/this creature> | SpellDescription$ Draw a card.
 
-Oracle:Flying\n{1}{u}, Sacrifice this creature: Draw a card.
+Oracle:Flying\n{1}{U}, Sacrifice this creature: Draw a card.
