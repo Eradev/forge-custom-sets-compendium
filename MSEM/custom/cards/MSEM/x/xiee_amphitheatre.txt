@@ -1,0 +1,31 @@
+Name:Xie'e Amphitheatre
+ManaCost:1 B B
+Types:Enchantment Gallery
+
+Text:(Choose only one work as a sorcery to add its ability.)
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigChangeZone | TriggerDescription$ When this Gallery enters, search your library for a card and exile it face down, then shuffle. You may cast that card on any turn you sacrificed a permanent.
+SVar:TrigChangeZone:DB$ ChangeZone | Origin$ Library | Destination$ Exile | ExileFaceDown$ True | ChangeType$ Card | ChangeNum$ 1 | Mandatory$ True | RememberChanged$ True | SubAbility$ DBMayPlay
+SVar:DBMayPlay:DB$ Effect | RememberObjects$ RememberedCard | StaticAbilities$ STPlay | SubAbility$ DBCleanup | ForgetOnMoved$ Exile | Duration$ Permanent
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | CheckSVar$ SacThisTurn | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ You may cast that card on any turn you sacrificed a permanent.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:SacThisTurn:PlayerCountPropertyYou$SacrificedThisTurn Permanent
+
+A:AB$ Pump | PrecostDesc$ Intro: Together — | Cost$ B | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteIntro | SpellDescription$ At the beginning of your upkeep, you lose 1 life and create a 0/1 black Cultist creature token with "{1}{B}{B}, Sacrifice three Cultists: Create a 5/5 black Demon creature token."
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+NotedForIntro | Execute$ TrigLoseLife | TriggerDescription$ Intro: Together — At the beginning of your upkeep, you lose 1 life and create a 0/1 black Cultist creature token with "{1}{B}{B}, Sacrifice three Cultists: Create a 5/5 black Demon creature token."
+SVar:TrigLoseLife:DB$ LoseLife | LifeAmount$ 1 | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ b_0_1_cultist_sac
+
+A:AB$ Pump | PrecostDesc$ Finale: Alone — | Cost$ 2 B | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteFinale | SpellDescription$ Whenever a Demon you control enters, each opponent loses life equal to its power and you gain that much life.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Demon.YouCtrl | TriggerZones$ Battlefield | IsPresent$ Card.Self+NotedForFinale | Execute$ TrigLoseLifeDemon | TriggerDescription$ Finale: Alone — Whenever a Demon you control enters, each opponent loses life equal to its power and you gain that much life.
+SVar:TrigLoseLifeDemon:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ X | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ X
+SVar:X:TriggeredCard$CardPower
+
+SVar:DBNoteIntro:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ Intro
+SVar:DBNoteFinale:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ Finale
+
+Oracle:(Choose only one work as a sorcery to add its ability.)\nWhen this Gallery enters, search your library for a card and exile it face down, then shuffle. You may cast that card on any turn you sacrificed a permanent.\nIntro: Together—{B}: At the beginning of your upkeep, you lose 1 life and create a 0/1 black Cultist creature token with "{1}{B}{B}, Sacrifice three Cultists: Create a 5/5 black Demon creature token."\nFinale: Alone—{2}{B}: Whenever a Demon you control enters, each opponent loses life equal to its power and you gain that much life.
+
+DeckHints:Ability$Sacrifice & Type$Demon
+DeckHas:Ability$Token & Type$Cultist
