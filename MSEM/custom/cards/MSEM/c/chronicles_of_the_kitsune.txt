@@ -11,7 +11,7 @@ A:AB$ Pump | PrecostDesc$ Act I: Ascent — | Cost$ 2 W W | SorcerySpeed$ True |
 S:Mode$ Continuous | IsPresent$ Card.Self+NotedForAscent | Affected$ Creature.token+YouCtrl | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Flying | Description$ Act I:Ascent — Creature tokens you control get +1/+1 and have flying.
 
 A:AB$ Pump | PrecostDesc$ Act II: Descent — | Cost$ 3 W W | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteDescent | SpellDescription$ At the beginning of your end step, if you control no creatures, create Hu Li, a legendary 4/4 white Fox Spirit creature token with flying and lifelink.
-T:Mode$ Phase | Phase$ End of Turn | IsPresent$ Card.Self+NotedForDescent | IsPresent2$ Creature.YouCtrl | ValidPlayer$ You | TriggerZones$ Battlefield | PresentCompare$ EQ0 | Execute$ TrigHuLi | TriggerDescription$ Act II:Descent — At the beginning of your end step, if you control no creatures, create Hu Li, a legendary 4/4 white Fox Spirit creature token with flying and lifelink.
+T:Mode$ Phase | Phase$ End of Turn | IsPresent$ Creature.YouCtrl | PresentCompare$ EQ0 | IsPresent2$ Card.Self+NotedForDescent | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigHuLi | TriggerDescription$ Act II:Descent — At the beginning of your end step, if you control no creatures, create Hu Li, a legendary 4/4 white Fox Spirit creature token with flying and lifelink.
 SVar:TrigHuLi:DB$ Token | TokenScript$ hu_li | LockTokenScript$ True
 
 SVar:DBNoteAscent:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ Ascent
