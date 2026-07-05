@@ -1,0 +1,25 @@
+Name:Wildlife Sketches
+ManaCost:G
+Types:Enchantment Gallery
+
+Text:(Choose only one work as a sorcery to add its ability.)
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDig | TriggerDescription$ When this Gallery enters, reveal the top five cards of your library. Put a creature card from among them into your hand and the rest on the bottom in any order.
+SVar:TrigDig:DB$ Dig | DigNum$ 5 | ChangeNum$ 1 | ChangeValid$ Creature | NoReveal$ True | DestinationZone$ Hand | DestinationZone2$ Library | LibraryPosition2$ -1
+
+A:AB$ Pump | PrecostDesc$ Carnation Petals — | Cost$ 1 G | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteCarnationPetals | SpellDescription$ You may cast creature spells as though they had flash.
+S:Mode$ CastWithFlash | ValidCard$ Creature | ValidSA$ Spell | Caster$ You | IsPresent$ Card.Self+NotedForCarnationPetals | Description$ Carnation Petals — You may cast creature spells as though they had flash.
+
+A:AB$ Pump | PrecostDesc$ Pecking Order — | Cost$ 3 G | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNotePeckingOrder | SpellDescription$ At the beginning of your upkeep, you may sacrifice a creature. If you do, search your library for a creature card with mana value equal to 1 plus the sacrificed creature's mana value, put it onto the battlefield, then shuffle.
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+NotedForPeckingOrder | Execute$ TrigSac | TriggerDescription$ Pecking Order — At the beginning of your upkeep, you may sacrifice a creature. If you do, search your library for a creature card with mana value equal to 1 plus the sacrificed creature's mana value, put it onto the battlefield, then shuffle.
+SVar:TrigSac:DB$ Sacrifice | Optional$ True | SacValid$ Creature | RememberSacrificed$ True | SubAbility$ DBChangeZone
+SVar:DBChangeZone:DB$ ChangeZone | ConditionDefined$ Remembered | ConditionPresent$ Card | Origin$ Library | Destination$ Battlefield | ChangeType$ Creature.cmcEQX | ChangeTypeDesc$ creature card with mana value equal to 1 plus the sacrificed creature's mana value | ChangeNum$ 1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$CardManaCost/Plus.1
+
+SVar:DBNoteCarnationPetals:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ CarnationPetals
+SVar:DBNotePeckingOrder:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ PeckingOrder
+
+Oracle:(Choose only one work as a sorcery to add its ability.)\nWhen this Gallery enters, reveal the top five cards of your library. Put a creature card from among them into your hand and the rest on the bottom in any order.\nCarnation Petals—{1}{G}: You may cast creature spells as though they had flash.\nPecking Order—{3}{G}: At the beginning of your upkeep, you may sacrifice a creature. If you do, search your library for a creature card with mana value equal to 1 plus the sacrificed creature's mana value, put it onto the battlefield, then shuffle.
+
+DeckHas:Ability$Sacrifice
