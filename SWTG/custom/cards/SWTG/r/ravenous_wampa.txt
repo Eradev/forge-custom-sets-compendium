@@ -3,8 +3,11 @@ ManaCost:2 RW RW
 Types:Creature Beast
 PT:4/4
 
-A:AB$ PutCounter | Cost$ 2 G Sac<1/Creature.Other> | ConditionPresent$ Card.Self+!IsMonstrous | Monstrosity$ True | CounterNum$ 2 | CounterType$ P1P1 | RememberSacrificed$ True | SubAbility$ DBGainLife | SpellDescription$ Monstrosity 2. (If this creature isn't monstrous, put two +1/+1 counters on it and it becomes monstrous.) When Ravenous Wampa becomes monstrous, you gain life equal to the sacrificed creature's toughness.
-SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ SacToughness
-SVar:SacToughness:Sacrificed$CardToughness
+A:AB$ PutCounter | Cost$ 2 G Sac<1/Creature.Other/another creature> | Monstrosity$ 2 | RememberSacrificed$ True | SubAbility$ DBGainLife | SpellDescription$ Monstrosity 2. When CARDNAME becomes monstrous, you gain life equal to the sacrificed creature's toughness.
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ X
+
+SVar:X:Sacrificed$CardToughness
 
 Oracle:{2}{G}, Sacrifice another creature: Monstrosity 2. (If this creature isn't monstrous, put two +1/+1 counters on it and it becomes monstrous.)\nWhen Ravenous Wampa becomes monstrous, you gain life equal to the sacrificed creature's toughness.
+
+DeckHas:Ability$Counters|Sacrifice|LifeGain
