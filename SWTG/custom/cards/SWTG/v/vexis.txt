@@ -5,7 +5,7 @@ PT:4/4
 
 K:Trample
 
-K:Monstrosity:2:W
+A:AB$ PutCounter | Cost$ W | Monstrosity$ 2
 
 T:Mode$ CounterAddedOnce | ValidCard$ Card.Self | TriggerZones$ Battlefield | CounterType$ P1P1 | Execute$ TrigPump | TriggerDescription$ Whenever a +1/+1 counter is put on this creature, it gains vigilance until end of turn.
 SVar:TrigPump:DB$ Pump | Defined$ Self | KW$ Vigilance
