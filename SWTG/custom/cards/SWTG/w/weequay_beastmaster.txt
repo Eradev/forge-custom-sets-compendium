@@ -3,7 +3,7 @@ ManaCost:1 R
 Types:Creature Weequay Shaman
 PT:2/1
 
-S:Mode$ ReduceCost | ValidSA$ Activated.Monstrous | Activator$ You | Type$ Ability | Amount$ 1 | Condition$ PlayerTurn | Description$ Monstrosity abilities you activate cost {1} less to activate.
+S:Mode$ ReduceCost | ValidCard$ Card | ValidSpell$ Activated.Monstrosity | Activator$ You | Amount$ 1 | Description$ Monstrosity abilities you activate cost {1} less to activate.
 
 T:Mode$ BecomeMonstrous | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigExtraCounter | TriggerDescription$ Whenever a creature you control becomes monstrous, put an additional +1/+1 counter on that creature.
 SVar:TrigExtraCounter:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 1 | Defined$ TriggeredCard
