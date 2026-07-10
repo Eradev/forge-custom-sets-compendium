@@ -5,9 +5,11 @@ PT:7/7
 
 K:Trample
 
-K:Monstrosity:3:3 R G G W
+A:AB$ PutCounter | Cost$ 3 R G G W | Monstrosity$ 3
 
-S:Mode$ Continuous | Affected$ Card.Self+IsMonstrous | AddStaticAbility$ Monstrous | Description$ As long as Bull Rancor is monstrous, creatures you control have menace.
-SVar:Monstrous:Mode$ Continuous | Affected$ Creature.YouCtrl | AddKeyword$ Menace | Description$ As long as Bull Rancor is monstrous, creatures you control have menace.
+S:Mode$ Continuous | Affected$ Card.Self+IsMonstrous | AddStaticAbility$ Monstrous | Description$ As long as this creature is monstrous, creatures you control have menace.
+SVar:Monstrous:Mode$ Continuous | Affected$ Creature.YouCtrl | AddKeyword$ Menace | Description$ Creatures you control have menace.
 
 Oracle:Trample\n{3}{R}{G}{G}{W}: Monstrosity 3. (If this creature isn't monstrous, put three +1/+1 counters on it and it becomes monstrous.)\nAs long as Bull Rancor is monstrous, creatures you control have menace.
+
+DeckHas:Ability$Counters
