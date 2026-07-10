@@ -3,6 +3,8 @@ ManaCost:1 W
 Types:Creature Beast
 PT:2/2
 
-K:Monstrosity:3:4 W
+A:AB$ PutCounter | Cost$ 4 W | Monstrosity$ 3
 
 Oracle:{4}{W}: Monstrosity 3
+
+DeckHas:Ability$Counters
