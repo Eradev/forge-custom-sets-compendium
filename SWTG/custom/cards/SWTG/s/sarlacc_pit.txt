@@ -7,8 +7,11 @@ K:Defender
 
 K:Hexproof
 
-K:Monstrosity:1:R G Sac<1/Land>
+A:AB$ PutCounter | Cost$ R G Sac<1/Land/land> | Monstrosity$ 1
 
-S:Mode$ Continuous | Affected$ Card.Self+IsMonstrous | AddKeyword$ First Strike & Deathtouch | RemoveKeyword$ Hexproof | Description$ As long as CARDNAME is monstrous, it has first strike and deathtouch and loses hexproof.
+T:Mode$ BecomeMonstrous | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigAnimate | TriggerDescription$ When CARDNAME becomes monstrous, it loses hexproof and gains first strike and deathtouch.
+SVar:TrigAnimate:DB$ Animate | Defined$ Self | Keywords$ First Strike & Deathtouch | RemoveKeywords$ Hexproof | Duration$ Permanent
 
 Oracle:Defender, hexproof\n{R}{G}, Sacrifice a land: Monstrosity 1. (If this creature isn't monstrous, put a +1/+1 counter on it and it becomes monstrous.)\nWhen Sarlacc Pit becomes monstrous, it loses hexproof and gains first strike and deathtouch.
+
+DeckHas:Ability$Counters|Sacrifice
