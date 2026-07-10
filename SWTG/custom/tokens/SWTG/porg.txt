@@ -3,6 +3,6 @@ Colors:Green
 Types:Creature Bird
 PT:0/1
 
-K:Monstrosity:1:G
+A:AB$ PutCounter | Cost$ G | Monstrosity$ 1
 
 Oracle:{G}: Monstrosity 1.
