@@ -1,0 +1,9 @@
+Name:Tomb of Shifting Sands
+ManaCost:no cost
+Types:Land Desert
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Clone | Cost$ 1 | ValidTgts$ Land | TgtZone$ Graveyard | TgtPrompt$ Select target land card in a graveyard | GainThisAbility$ True | AddTypes$ Desert | SpellDescription$ This land becomes a copy of target land card in any graveyard, except it has this ability and it's a Desert in addition to its other types. (This effect lasts indefinitely.)
+
+Oracle:{T}: Add {C}.\n{1}: This land becomes a copy of target land card in any graveyard, except it has this ability and it's a Desert in addition to its other types. (This effect lasts indefinitely.)

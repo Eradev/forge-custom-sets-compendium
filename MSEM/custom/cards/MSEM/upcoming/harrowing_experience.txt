@@ -1,0 +1,13 @@
+Name:Harrowing Experience
+ManaCost:2 B
+Types:Instant
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigCopy | TriggerDescription$ Wanderlust — When you cast this spell, you may copy it if you control four or more differently named lands. You may choose new targets for the copy.
+
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | Optional$ True | MayChooseTarget$ True | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4
+
+A:SP$ Pump | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you don't control | NumAtt$ -3 | NumDef$ -3 | IsCurse$ True | SpellDescription$ Target creature you don't control gets -3/-3 until end of turn.
+
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:Wanderlust — When you cast this spell, you may copy it if you control four or more differently named lands. You may choose new targets for the copy.\nTarget creature you don't control gets -3/-3 until end of turn.

@@ -1,0 +1,9 @@
+Name:Fungal Swathe
+ManaCost:1 G
+Types:Instant
+
+A:SP$ DestroyAll | ValidCards$ Artifact.cmcLE1,Enchantment.cmcLE1 | SubAbility$ DBDraw | SpellDescription$ Destroy all artifacts and enchantments with mana value 1 or less. Draw a card.
+
+SVar:DBDraw:DB$ Draw
+
+Oracle:Destroy all artifacts and enchantments with mana value 1 or less.\nDraw a card.

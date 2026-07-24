@@ -1,0 +1,5 @@
+Name:Plains Swamp Token
+ManaCost:no cost
+Colors:colorless
+Types:Land Plains Swamp
+Oracle:({T}: Add {W} or {B}.)

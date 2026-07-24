@@ -1,0 +1,15 @@
+Name:Syzygy Navigator
+ManaCost:1 U
+Types:Creature Human Pirate
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this creature enters, exile target nonland card from an opponent's graveyard. Copy it. You may cast the copy. (You still pay its costs, including color. Copies of permanents enter as tokens.)
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Card.nonLand+OppOwn | TgtPrompt$ Select target nonland card in an opponent's graveyard | Origin$ Graveyard | Destination$ Exile | RememberChanged$ True | SubAbility$ DBPlay
+SVar:DBPlay:DB$ Play | Defined$ Remembered | ValidSA$ Spell | Optional$ True | CopyCard$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+T:Mode$ SpellCast | ValidCard$ Card.!wasCastFromYourHand | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDrawDiscard | TriggerDescription$ Whenever you cast a spell from anywhere other than your hand, draw a card, then discard a card.
+SVar:TrigDrawDiscard:DB$ Draw | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ You | NumCards$ 1 | Mode$ TgtChoose
+
+Oracle:When this creature enters, exile target nonland card from an opponent's graveyard. Copy it. You may cast the copy. (You still pay its costs, including color. Copies of permanents enter as tokens.)\nWhenever you cast a spell from anywhere other than your hand, draw a card, then discard a card.

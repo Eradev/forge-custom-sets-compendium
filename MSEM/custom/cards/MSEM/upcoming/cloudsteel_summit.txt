@@ -1,0 +1,10 @@
+Name:Cloudsteel Summit
+ManaCost:no cost
+Types:Land Mountain Plains
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ 1 T | Produced$ Combo R W | Amount$ 2 | SpellDescription$ Add {R}{R} or {W}{W}.
+
+Oracle:({T}: Add {R} or {W}.)\nThis land enters tapped.\n{1}, {T}: Add {R}{R} or {W}{W}.

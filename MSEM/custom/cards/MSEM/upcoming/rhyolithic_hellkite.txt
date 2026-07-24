@@ -1,0 +1,18 @@
+Name:Rhyolithic Hellkite
+ManaCost:3 B R
+Types:Creature Dragon
+PT:3/3
+
+K:Flying
+
+K:Haste
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigChoice | TriggerZones$ Battlefield | TriggerDescription$ Whenever CARDNAME attacks, you may sacrifice a land or exile a land card from your graveyard. If you do, put a +1/+1 counter on CARDNAME.
+SVar:TrigChoice:DB$ GenericChoice | Choices$ DBSacToCounter,DBExileToCounter
+SVar:DBSacToCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | UnlessCost$ Sac<1/Land> | UnlessPayer$ You | UnlessSwitched$ True
+SVar:DBExileToCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | UnlessCost$ ExileFromGrave<1/Land> | UnlessPayer$ You | UnlessSwitched$ True
+
+Oracle:Flying, haste\nWhenever this creature attacks, you may sacrifice a land or exile a land card from your graveyard. If you do, put a +1/+1 counter on Rhyolithic Hellkite.
+
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Sacrifice|Counters

@@ -1,0 +1,9 @@
+Name:Forgotten Remains
+ManaCost:B
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Creature.YouOwn,Land.YouOwn | TgtPrompt$ Select target creature or land card in your graveyard | SpellDescription$ Return target creature or land card from your graveyard to your hand.
+
+Oracle:Return target creature or land card from your graveyard to your hand.
+
+DeckHas:Ability$Graveyard

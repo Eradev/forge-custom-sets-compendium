@@ -1,0 +1,10 @@
+Name:Steamlit Peaks
+ManaCost:no cost
+Types:Land Island Mountain
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ 1 T | Produced$ Combo U R | Amount$ 2 | SpellDescription$ Add {U}{U} or {R}{R}.
+
+Oracle:({T}: Add {U} or {R}.)\nThis land enters tapped.\n{1}, {T}: Add {U}{U} or {R}{R}.

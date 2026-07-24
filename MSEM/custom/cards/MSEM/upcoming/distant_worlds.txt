@@ -1,0 +1,9 @@
+Name:Distant Worlds
+ManaCost:3 G
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Land.Basic | ChangeNum$ 2 | SubAbility$ DBPlay | SpellDescription$ Search your library for up to two basic land cards, reveal them, put them into your hand, then shuffle. You may put up to two land cards from your hand onto the battlefield tapped.
+
+SVar:DBPlay:DB$ ChangeZone | Origin$ Hand | Destination$ Battlefield | ChangeType$ Land | ChangeNum$ 2 | Tapped$ True | Optional$ True
+
+Oracle:Search your library for up to two basic land cards, reveal them, put them into your hand, then shuffle.\nYou may put up to two land cards from your hand onto the battlefield tapped.

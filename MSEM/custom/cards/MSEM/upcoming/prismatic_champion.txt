@@ -1,0 +1,13 @@
+Name:Prismatic Champion
+ManaCost:3 W
+Types:Creature Human Aurashaper Soldier
+PT:3/1
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters, create a white Aura enchantment token named Sunward attached to target creature. The token has enchant creature and "Enchanted creature has protection from creatures."
+SVar:TrigToken:DB$ Token | TokenScript$ sunward | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature
+
+DeckHas:Ability$Token
+
+Oracle:Flash\nWhen Prismatic Champion enters, create a white Aura enchantment token named Sunward attached to target creature. The token has enchant creature and "Enchanted creature has protection from creatures."

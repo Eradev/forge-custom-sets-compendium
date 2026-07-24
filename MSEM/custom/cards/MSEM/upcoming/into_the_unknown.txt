@@ -1,0 +1,14 @@
+Name:Into the Unknown
+ManaCost:2 R G
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this enchantment enters, create two 1/1 Scout creature tokens that are all colors.
+SVar:TrigToken:DB$ Token | TokenScript$ all_1_1_scout | TokenAmount$ 2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ Whenever a land you control enters, if it doesn't have the same name as another land you control, put a +1/+1 counter on each creature you control.
+SVar:TrigCounter:DB$ PutCounterAll | ValidCards$ Creature.YouCtrl | CounterType$ P1P1 | CounterNum$ 1 | ConditionCheckSVar$ Y
+SVar:Y:TriggeredCard$Valid Card.doesNotShareNameWith OtherYourBattlefield
+
+Oracle:When this enchantment enters, create two 1/1 Scout creature tokens that are all colors.\nWhenever a land you control enters, if it doesn't have the same name as another land you control, put a +1/+1 counter on each creature you control.
+
+DeckHas:Ability$Token & Type$Scout

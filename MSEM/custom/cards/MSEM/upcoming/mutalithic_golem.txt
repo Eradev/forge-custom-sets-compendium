@@ -1,0 +1,9 @@
+Name:Mutalithic Golem
+ManaCost:3
+Types:Artifact Creature Golem Shapeshifter
+PT:3/3
+
+K:ETBReplacement:Copy:DBCopy:Optional
+SVar:DBCopy:DB$ Clone | Choices$ Land.Other | AddTypes$ Artifact | SpellDescription$ You may have this creature enter as a copy of any land on the battlefield, except it's an artifact in addition to its other types.
+
+Oracle:You may have this creature enter as a copy of any land on the battlefield, except it's an artifact in addition to its other types.

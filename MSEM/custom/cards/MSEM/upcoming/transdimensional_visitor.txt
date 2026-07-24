@@ -1,0 +1,8 @@
+Name:Transdimensional Visitor
+ManaCost:2
+Types:Creature Weird
+PT:2/2
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ ExileFromHand<1/Land> | Description$ You may exile a land card from your hand rather than pay this spell's mana cost.
+
+Oracle:You may exile a land card from your hand rather than pay this spell's mana cost.

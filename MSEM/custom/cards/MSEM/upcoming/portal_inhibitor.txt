@@ -1,0 +1,14 @@
+Name:Portal Inhibitor
+ManaCost:1 B
+Types:Creature Human Rogue Wizard
+PT:2/1
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ Whenever this creature attacks, exile target nonland card from defending player's graveyard. Copy it. You may cast the copy. (You still pay its costs, including color. Copies of permanents enter as tokens.)
+SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Card.nonLand+ControlledBy TriggeredDefendingPlayer | TgtPrompt$ Select target nonland card from defending player's graveyard | RememberChanged$ True | SubAbility$ DBPlay
+SVar:DBPlay:DB$ Play | Defined$ Remembered | CopyCard$ True | Optional$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Whenever this creature attacks, exile target nonland card from defending player's graveyard. Copy it. You may cast the copy. (You still pay its costs, including color. Copies of permanents enter as tokens.)
+
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Graveyard

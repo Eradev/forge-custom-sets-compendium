@@ -1,0 +1,12 @@
+Name:Zhedina Provisioner
+ManaCost:3 W
+Types:Creature Human Citizen
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigBuff | TriggerDescription$ When this creature enters, creatures you control get +1/+1 until end of turn. You gain 2 life.
+SVar:TrigBuff:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1 | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 2
+
+Oracle:When this creature enters, creatures you control get +1/+1 until end of turn. You gain 2 life.
+
+SVar:PlayMain1:TRUE

@@ -1,0 +1,10 @@
+Name:Sunward
+ManaCost:no cost
+Colors:white
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddKeyword$ Protection:Creature | Description$ Enchanted creature has protection from creatures.
+
+Oracle:Enchant creature\nEnchanted creature has protection from creatures.

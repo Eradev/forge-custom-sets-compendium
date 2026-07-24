@@ -1,0 +1,14 @@
+Name:Krismite Shard
+ManaCost:0
+Types:Artifact
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This artifact enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ CopyPermanent | Cost$ 1 T Sac<1/CARDNAME/this artifact> | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | RememberTokens$ True | SubAbility$ DBExileToken | SpellDescription$ Aetherize target creature you control. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:This artifact enters tapped.\n{1}, {T}, Sacrifice this artifact: Aetherize target creature you control. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+DeckHas:Ability$Token|Sacrifice|Aetherize

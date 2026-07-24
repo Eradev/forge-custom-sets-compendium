@@ -1,0 +1,8 @@
+Name:Journey's End
+ManaCost:1 W
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Creature,Planeswalker | Origin$ Battlefield | Destination$ Library | LibraryPosition$ -1 | SubAbility$ DBScry | SpellDescription$ Put target creature or planeswalker on the bottom of its owner's library. Its controller may scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)
+SVar:DBScry:DB$ Scry | Defined$ TargetedController | Optional$ True
+
+Oracle:Put target creature or planeswalker on the bottom of its owner's library. Its controller may scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)

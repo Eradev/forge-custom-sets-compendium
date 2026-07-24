@@ -1,0 +1,10 @@
+Name:Molten Falls
+ManaCost:no cost
+Types:Land Swamp Mountain
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ 1 T | Produced$ Combo B R | Amount$ 2 | SpellDescription$ Add {B}{B} or {R}{R}.
+
+Oracle:({T}: Add {B} or {R}.)\nThis land enters tapped.\n{1}, {T}: Add {B}{B} or {R}{R}.

@@ -1,0 +1,13 @@
+Name:Telarine Runecarver
+ManaCost:1 W
+Types:Creature Human Aurashaper
+PT:1/1
+
+K:Lifelink
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a white Aura enchantment token named Relic's Gift attached to target creature. The token has enchant creature and "Enchanted creature gets +1/+1."
+SVar:TrigToken:DB$ Token | TokenScript$ relics_gift | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature
+
+Oracle:Lifelink\nWhen this creature enters, create a white Aura enchantment token named Relic's Gift attached to target creature. The token has enchant creature and "Enchanted creature gets +1/+1."
+
+DeckHas:Ability$Token & Type$Aura

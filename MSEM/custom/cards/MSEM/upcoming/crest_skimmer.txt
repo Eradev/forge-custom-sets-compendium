@@ -1,0 +1,12 @@
+Name:Crest Skimmer
+ManaCost:4 U
+Types:Creature Fish
+PT:3/3
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ Wanderlust — When this creature enters, if you control four or more differently named lands, draw a card.
+SVar:TrigDraw:DB$ Draw | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:Flying\nWanderlust — When this creature enters, if you control four or more differently named lands, draw a card.

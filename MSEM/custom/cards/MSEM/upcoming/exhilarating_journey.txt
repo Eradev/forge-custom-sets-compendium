@@ -1,0 +1,14 @@
+Name:Exhilarating Journey
+ManaCost:3 R
+Types:Sorcery
+
+A:SP$ GainControl | ValidTgts$ Creature | LoseControl$ EOT | Untap$ True | AddKWs$ Haste | SubAbility$ DBAnimate | SpellDescription$ Gain control of target creature until end of turn. Untap that creature. Until end of turn, it gains haste and "Whenever this creature deals combat damage to a player, aetherize it." (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:DBAnimate:DB$ Animate | Defined$ ParentTarget | Triggers$ DamageTrig
+SVar:DamageTrig:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | Execute$ TrigAetherize | CombatDamage$ True | TriggerDescription$ Whenever this creature deals combat damage to a player, aetherize it. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:TrigAetherize:DB$ CopyPermanent | Defined$ Self | RememberTokens$ True | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Gain control of target creature until end of turn. Untap that creature. Until end of turn, it gains haste and "Whenever this creature deals combat damage to a player, aetherize it." (To aetherize, create a token that's a copy of it, then exile that token.)
+
+DeckHas:Ability$Token|Aetherize

@@ -1,0 +1,10 @@
+Name:Incense Stoker
+ManaCost:2 R
+Types:Creature Goblin Wizard
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReturn | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may return target instant or sorcery card with mana value less than or equal to the number of differently named lands you control from your graveyard to your hand.
+SVar:TrigReturn:DB$ ChangeZone | ValidTgts$ Instant.YouOwn+cmcLEX,Sorcery.YouOwn+cmcLEX | TgtPrompt$ Select target instant or sorcery card with mana value less than or equal to the number of differently named lands you control in your graveyard | Origin$ Graveyard | Destination$ Hand
+SVar:X:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:When this creature enters, you may return target instant or sorcery card with mana value less than or equal to the number of differently named lands you control from your graveyard to your hand.

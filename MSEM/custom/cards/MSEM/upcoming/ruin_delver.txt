@@ -1,0 +1,17 @@
+Name:Ruin Delver
+ManaCost:1 B
+Types:Creature Human Scout
+PT:2/1
+
+K:Menace
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigChoice | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature attacks, you may sacrifice a land or exile a land card from your graveyard. If you do, you draw a card and you lose 1 life.
+SVar:TrigChoice:DB$ GenericChoice | Choices$ DBSacToDraw,DBExileToDraw
+SVar:DBSacToDraw:DB$ Draw | UnlessCost$ Sac<1/Land> | UnlessPayer$ You | UnlessSwitched$ True | SubAbility$ DBLoseLife
+SVar:DBExileToDraw:DB$ Draw | UnlessCost$ ExileFromGrave<1/Land> | UnlessPayer$ You | UnlessSwitched$ True | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+Oracle:Menace\nWhenever this creature attacks, you may sacrifice a land or exile a land card from your graveyard. If you do, you draw a card and you lose 1 life.
+
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Sacrifice

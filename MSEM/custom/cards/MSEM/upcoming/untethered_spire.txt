@@ -1,0 +1,9 @@
+Name:Untethered Spire
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ ChangeZone | Cost$ T Sac<1/CARDNAME/this land> | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Land.YouOwn+ThisTurnEnteredFrom_Battlefield | TgtPrompt$ Select target land card in your graveyard that was put there from the battlefield this turn | SpellDescription$ Choose target land card in your graveyard that was put there from the battlefield this turn. Return that card to your hand.
+
+Oracle:{T}: Add {C}.\n{T}, Sacrifice this land: Choose target land card in your graveyard that was put there from the battlefield this turn. Return that card to your hand.

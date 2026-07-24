@@ -1,0 +1,14 @@
+Name:Telarine Riftcrosser
+ManaCost:1 B
+Types:Creature Human Scout
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 1/1 Scout creature token that's all colors.
+SVar:TrigToken:DB$ Token | TokenScript$ all_1_1_scout
+
+S:Mode$ Continuous | Affected$ Creature.token+YouCtrl | AddKeyword$ Menace | Description$ Creature tokens you control have menace.
+
+Oracle:When this creature enters, create a 1/1 Scout creature token that's all colors.\nCreature tokens you control have menace.
+
+SVar:PlayMain1:TRUE
+DeckHas:Ability$Token

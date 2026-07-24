@@ -1,0 +1,12 @@
+Name:Survival Experience
+ManaCost:1 W
+Types:Instant
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigCopy | TriggerDescription$ Wanderlust — When you cast this spell, you may copy it if you control four or more differently named lands. You may choose new targets for the copy.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | Optional$ True | MayChooseTarget$ True | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4
+
+A:SP$ Untap | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | SubAbility$ DBPump | SpellDescription$ Untap target creature you control. It gets +1/+1 and gains hexproof and indestructible until end of turn.
+SVar:DBPump:DB$ Pump | Defined$ Targeted | NumAtt$ +1 | NumDef$ +1 | KW$ Hexproof & Indestructible
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:Wanderlust — When you cast this spell, you may copy it if you control four or more differently named lands. You may choose new targets for the copy.\nUntap target creature you control. It gets +1/+1 and gains hexproof and indestructible until end of turn.

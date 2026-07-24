@@ -1,0 +1,17 @@
+Name:Whisper in the Rift
+ManaCost:4 B G U
+Types:Creature Demon
+PT:7/7
+
+K:Flying
+
+K:Trample
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ When this creature enters, target player mills half their library, rounded down.
+SVar:TrigMill:DB$ Mill | ValidTgts$ Player | NumCards$ X
+SVar:X:Count$ValidLibrary Card.TargetedPlayerOwn/HalfDown
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigCast | TriggerDescription$ When this creature dies, you may cast up to two instant, sorcery, and/or creature cards from among opponent's graveyards without paying their mana cost.
+SVar:TrigCast:DB$ Play | ValidTgts$ Instant.OppOwn,Sorcery.OppOwn,Creature.OppOwn | TgtZone$ Graveyard | TgtPrompt$ Select up to two target instant, sorcery, and/or creature cards from among opponents' graveyards | TargetMin$ 0 | TargetMax$ 2 | Amount$ All | ValidSA$ Spell | WithoutManaCost$ True | Optional$ True
+
+Oracle:Flying, trample\nWhen this creature enters, target player mills half their library, rounded down.\nWhen this creature dies, you may cast up to two instant, sorcery, and/or creature cards from among opponent's graveyards without paying their mana cost.

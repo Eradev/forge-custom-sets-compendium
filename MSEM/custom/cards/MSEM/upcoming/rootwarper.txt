@@ -1,0 +1,11 @@
+Name:Rootwarper
+ManaCost:B G
+Types:Creature Treefolk Shaman
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSacSearch | TriggerDescription$ When this creature enters, you may sacrifice a land. If you do, search your library for a land card, put that card onto the battlefield tapped, then shuffle.
+SVar:TrigSacSearch:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | Tapped$ True | ChangeType$ Land | ChangeNum$ 1 | UnlessCost$ Sac<1/Land> | UnlessPayer$ You | UnlessSwitched$ True
+
+Oracle:When this creature enters, you may sacrifice a land. If you do, search your library for a land card, put that card onto the battlefield tapped, then shuffle.
+
+DeckHas:Ability$Sacrifice

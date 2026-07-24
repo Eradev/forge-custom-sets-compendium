@@ -1,0 +1,11 @@
+Name:Phasmopillar
+ManaCost:2 G
+Types:Creature Insect Mutant
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSearch | TriggerDescription$ When this creature enters, search your library for a creature card with mana value 5 or greater, reveal it, put it into your hand, then shuffle. If a creature card with mana value 9 or greater was revealed this way, put two +1/+1 counters on it.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Creature.cmcGE5 | ChangeNum$ 1 | RememberChanged$ True | SubAbility$ DBPutCounter
+SVar:DBPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 2 | ConditionDefined$ Remembered | ConditionPresent$ Creature.cmcGE9 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When this creature enters, search your library for a creature card with mana value 5 or greater, reveal it, put it into your hand, then shuffle. If a creature card with mana value 9 or greater was revealed this way, put two +1/+1 counters on it.

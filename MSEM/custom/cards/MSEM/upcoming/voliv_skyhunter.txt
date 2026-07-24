@@ -1,0 +1,11 @@
+Name:Voliv Skyhunter
+ManaCost:2 R G
+Types:Creature Human Nomad
+PT:3/4
+
+K:Reach
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 2 | AddKeyword$ First Strike | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4 | Description$ Wanderlust — This creature gets +2/+0 and has first strike as long as you control four or more differently named lands.
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:Reach\nWanderlust — This creature enters gets +2/+0 and has first strike as long as you control four or more differently named lands.

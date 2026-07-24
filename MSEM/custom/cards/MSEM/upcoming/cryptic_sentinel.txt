@@ -1,0 +1,16 @@
+Name:Cryptic Sentinel
+ManaCost:3 G W
+Types:Artifact Creature Construct
+PT:4/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigAttach | TriggerDescription$ When CARDNAME enters, attach any number of target Auras you control to CARDNAME.
+
+SVar:TrigAttach:DB$ Attach | ValidTgts$ Aura.YouCtrl | TargetMin$ 0 | TargetMax$ MaxAuras | Object$ Targeted | Defined$ Self
+
+SVar:MaxAuras:Count$Valid Aura.YouCtrl
+
+A:AB$ Tap | Cost$ G W Sac<1/Aura> | Defined$ Self | SubAbility$ DBPump | SpellDescription$ Tap CARDNAME. It gains indestructible until end of turn.
+
+SVar:DBPump:DB$ Pump | Defined$ Self | KW$ Indestructible
+
+Oracle:When Cryptic Sentinel enters, attach any number of target Auras you control to Cryptic Sentinel.\n{G}{W}, Sacrifice an Aura: Tap Cryptic Sentinel. It gains indestructible until end of turn.

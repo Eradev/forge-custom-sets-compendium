@@ -1,0 +1,13 @@
+Name:Rift Splicing
+ManaCost:B
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ -2 | NumDef$ -2 | IsCurse$ True | SpellDescription$ Target creature gets -2/-2 until end of turn.
+
+A:AB$ CopyPermanent | Cost$ 3 B ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | TgtZone$ Graveyard | ValidTgts$ Creature.cmcLE3 | TgtPrompt$ Select target creature card with mana value 3 or less in a graveyard | RememberTokens$ True | SorcerySpeed$ True | SubAbility$ DBExileToken | SpellDescription$ Aetherize target creature card with mana value 3 or less in a graveyard. Activate only as a sorcery. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Target creature gets -2/-2 until end of turn.\n{3}{B}, Exile this card from your graveyard: Aetherize target creature card with mana value 3 or less in a graveyard. Activate only as a sorcery. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+DeckHas:Ability$Token|Aetherize

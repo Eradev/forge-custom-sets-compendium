@@ -1,0 +1,14 @@
+Name:Aether Gateway
+ManaCost:no cost
+Types:Land
+
+A:AB$ GenericChoice | Cost$ T Sac<1/CARDNAME/this land> | Choices$ DBPlains,DBIsland,DBSwamp,DBMountain,DBForest | SpellDescription$ Create a tapped Plains token, Island token, Swamp token, Mountain token, or Forest token.
+SVar:DBPlains:DB$ MakeCard | Name$ Plains | TokenCard$ True | Zone$ Battlefield | Tapped$ True | SpellDescription$ Create a tapped Plains token.
+SVar:DBIsland:DB$ MakeCard | Name$ Island | TokenCard$ True | Zone$ Battlefield | Tapped$ True | SpellDescription$ Create a tapped Island token.
+SVar:DBSwamp:DB$ MakeCard | Name$ Swamp | TokenCard$ True | Zone$ Battlefield | Tapped$ True | SpellDescription$ Create a tapped Swamp token.
+SVar:DBMountain:DB$ MakeCard | Name$ Mountain | TokenCard$ True | Zone$ Battlefield | Tapped$ True | SpellDescription$ Create a tapped Mountain token.
+SVar:DBForest:DB$ MakeCard | Name$ Forest | TokenCard$ True | Zone$ Battlefield | Tapped$ True | SpellDescription$ Create a tapped Forest token.
+
+Oracle:{T}, Sacrifice this land: Create a tapped Plains token, Island token, Swamp token, Mountain token, or Forest token.
+
+DeckHas:Ability$Token|Sacrifice

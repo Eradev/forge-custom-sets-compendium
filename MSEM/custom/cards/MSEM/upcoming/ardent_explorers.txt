@@ -1,0 +1,14 @@
+Name:Ardent Explorers
+ManaCost:2 R
+Types:Creature Human Scout
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ Wanderlust — When this creature enters, if you control four or more differently named lands, create a 1/1 Scout creature token that's all colors. That token gains haste until end of turn.
+SVar:TrigToken:DB$ Token | TokenScript$ all_1_1_scout | RememberTokens$ True | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4 | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | Defined$ Remembered | KW$ Haste | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:Wanderlust — When this creature enters, if you control four or more differently named lands, create a 1/1 Scout creature token that's all colors. That token gains haste until end of turn.
+
+DeckHas:Ability$Token

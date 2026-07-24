@@ -1,0 +1,18 @@
+Name:Silksoul Celestial
+ManaCost:4 W B G
+Types:Creature Angel
+PT:7/7
+
+K:Flying
+
+K:Vigilance
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSearch | TriggerDescription$ When this creature enters, search your library for an enchantment or Aurashaper card, reveal it, put it into your hand, then shuffle.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Enchantment,Aurashaper | ChangeNum$ 1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigPut | OptionalDecider$ You | TriggerDescription$ When this creature dies, you may put an enchantment or Aurashaper card from your hand or graveyard onto the battlefield.
+SVar:TrigPut:DB$ ChangeZone | Origin$ Hand | OriginAlternative$ Graveyard | Destination$ Battlefield | ChangeType$ Enchantment.YouOwn,Aurashaper.YouOwn | ChangeNum$ 1 | Optional$ True
+
+Oracle:Flying, vigilance\nWhen this creature enters, search your library for an enchantment or Aurashaper card, reveal it, put it into your hand, then shuffle.\nWhen this creature dies, you may put an enchantment or Aurashaper card from your hand or graveyard onto the battlefield.
+
+DeckHints:Type$Enchantment|Aurashaper

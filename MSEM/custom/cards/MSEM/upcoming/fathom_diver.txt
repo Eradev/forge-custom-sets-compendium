@@ -1,0 +1,10 @@
+Name:Fathom Diver
+ManaCost:1 U
+Types:Creature Merfolk Wizard
+PT:1/3
+
+A:AB$ Draw | Cost$ T | NumCards$ 1 | CheckSVar$ X | SpellDescription$ Draw a card. Activate only if you created a token this turn.
+
+SVar:X:Count$ThisTurnEntered_Battlefield_Card.tokenCreated+YouCtrl
+
+Oracle:{T}: Draw a card. Activate only if you created a token this turn.

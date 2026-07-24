@@ -1,0 +1,15 @@
+Name:Pathshaper Mage
+ManaCost:2 U
+Types:Creature Human Wizard
+PT:3/2
+
+T:Mode$ TokenCreatedOnce | TriggerZones$ Battlefield | Execute$ TrigScry | TriggerDescription$ Whenever you create one or more tokens, scry 1.
+SVar:TrigScry:DB$ Scry
+
+A:AB$ CopyPermanent | Cost$ 3 U Sac<1/CARDNAME/this creature> | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | RememberTokens$ True | SorcerySpeed$ True | SubAbility$ DBExileToken | SpellDescription$ Aetherize target creature you control. Activate only as a sorcery. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Whenever you create one or more tokens, scry 1.\n{3}{U}, Sacrifice this creature: Aetherize target creature you control. Activate only as a sorcery. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+DeckHas:Ability$Token|Aetherize

@@ -1,0 +1,13 @@
+Name:Starlight Beacon
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ CopyPermanent | Cost$ 3 T | ValidTgts$ Permanent.YouCtrl | TgtPrompt$ Select target permanent you control | SorcerySpeed$ True | RememberTokens$ True | SubAbility$ DBExileToken | SpellDescription$ Aetherize target permanent you control. Activate only as a sorcery. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:{T}: Add {C}.\n{3}, {T}: Aetherize target permanent you control. Activate only as a sorcery. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+DeckHas:Ability$Token|Aetherize

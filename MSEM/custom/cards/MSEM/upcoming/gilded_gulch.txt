@@ -1,0 +1,16 @@
+Name:Gilded Gulch
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Cost$ T Sac<1/CARDNAME/this land> | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+T:Mode$ Discarded | ValidCard$ Card.Self | Execute$ TrigImmediateTrig | TriggerDescription$ When you discard this card, you may pay {1}. If you do, create a tapped colorless land token named Fading Rift with "{T}, Sacrifice this land: Add one mana of any color."
+SVar:TrigImmediateTrig:AB$ ImmediateTrigger | Cost$ 1 | Execute$ TrigToken | TriggerDescription$ If you do, create a tapped colorless land token named Fading Rift with "{T}, Sacrifice this land: Add one mana of any color."
+SVar:TrigToken:DB$ Token | TokenScript$ fading_rift | TokenTapped$ True
+
+Oracle:{T}: Add {C}.\n{T}, Sacrifice this land: Add one mana of any color.\nWhen you discard this card, you may pay {1}. If you do, create a tapped colorless land token named Fading Rift with "{T}, Sacrifice this land: Add one mana of any color."
+
+SVar:DiscardMe:1
+DeckHas:Ability$Token

@@ -1,0 +1,12 @@
+Name:Stormtide Sovereign
+ManaCost:U B
+Types:Creature Merfolk Wizard
+PT:2/2
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigPayLife | TriggerDescription$ At the beginning of your upkeep, you may pay 2 life. If you do, exile the top card of target opponent's library. If a nonland card is exiled this way, copy it. You may cast the copy. (You still pay its costs, including color. Copies of permanents enter as tokens.)
+SVar:TrigPayLife:DB$ LoseLife | LifeAmount$ 2 | SubAbility$ TrigExile
+SVar:TrigExile:DB$ Dig | ValidTgts$ Opponent | TgtPrompt$ Select target opponent | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBPlay
+SVar:DBPlay:DB$ Play | Defined$ Remembered | ValidSA$ Spell | Optional$ True | CopyCard$ True | ConditionDefined$ Remembered | ConditionPresent$ Card.nonLand | ConditionCompare$ GE1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:At the beginning of your upkeep, you may pay 2 life. If you do, exile the top card of target opponent's library. If a nonland card is exiled this way, copy it. You may cast the copy. (You still pay its costs, including color. Copies of permanents enter as tokens.)

@@ -1,0 +1,10 @@
+Name:Transnaturalist
+ManaCost:1 U
+Types:Creature Human Wizard
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigBounce | TriggerDescription$ Wanderlust — When this creature enters, if you control four or more differently named lands, you may return target creature to its owner's hand.
+SVar:TrigBounce:DB$ ChangeZone | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Hand | OptionalDecider$ You | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:Wanderlust — When this creature enters, if you control four or more differently named lands, you may return target creature to its owner's hand.

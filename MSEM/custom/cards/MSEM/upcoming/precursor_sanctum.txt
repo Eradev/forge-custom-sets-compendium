@@ -1,0 +1,18 @@
+Name:Precursor Sanctum
+ManaCost:no cost
+Types:Legendary Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDig | TriggerDescription$ When it does, look at the top three cards of your library, exile one face down, then put the rest on the bottom of your library in any order.
+SVar:TrigDig:DB$ Dig | DigNum$ 3 | ChangeNum$ 1 | DestinationZone$ Exile | ExileFaceDown$ True | WithMayLook$ True | RememberChanged$ True | DestinationZone2$ Library | LibraryPosition2$ -1 | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ Remembered | StaticAbilities$ STPlay | Duration$ Permanent | ForgetOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ You may play the exiled card.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Play | Cost$ 4 T | Valid$ Card.ExiledWithSource | ValidZone$ Exile | WithoutManaCost$ True | SorcerySpeed$ True | Optional$ True | SpellDescription$ You may play the exiled card without paying its mana cost. Activate only as a sorcery.
+
+Oracle:Precursor Sanctum enters tapped. When it does, look at the top three cards of your library, exile one face down, then put the rest on the bottom of your library in any order.\n{T}: Add {C}.\n{4}, {T}: You may play the exiled card without paying its mana cost. Activate only as a sorcery.

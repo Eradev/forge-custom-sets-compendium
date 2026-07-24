@@ -1,0 +1,9 @@
+Name:Fractured Reach
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Cost$ T PayLife<1> | Produced$ Any | OpponentTurn$ True | SpellDescription$ Add one mana of any color. Activate only during an opponent's turn.
+
+Oracle:{T}: Add {C}.\n{T}, Pay 1 life: Add one mana of any color. Activate only during an opponent's turn.

@@ -1,0 +1,9 @@
+Name:Saddled Scuttleback
+ManaCost:2 U
+Types:Creature Crab
+PT:3/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSearch | TriggerDescription$ When this creature enters, you may search your library for a Crab, Fish, Jellyfish, Kraken, Leviathan, Merfolk, Nautilus, Octopus, Otter, Oyster, Pirate, Seal, Serpent, Shark, Shrimp, Sponge, Squid, Starfish, Trilobite, Turtle, Whale, or Island card, reveal it, put it into your hand, then shuffle.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Crab,Fish,Jellyfish,Kraken,Leviathan,Merfolk,Nautilus,Octopus,Otter,Oyster,Pirate,Seal,Serpent,Shark,Shrimp,Sponge,Squid,Starfish,Trilobite,Turtle,Whale,Island | ChangeNum$ 1 | Optional$ True
+
+Oracle:When this creature enters, you may search your library for a Crab, Fish, Jellyfish, Kraken, Leviathan, Merfolk, Nautilus, Octopus, Otter, Oyster, Pirate, Seal, Serpent, Shark, Shrimp, Sponge, Squid, Starfish, Trilobite, Turtle, Whale, or Island card, reveal it, put it into your hand, then shuffle.

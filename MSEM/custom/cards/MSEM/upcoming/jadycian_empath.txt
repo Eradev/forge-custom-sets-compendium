@@ -1,0 +1,12 @@
+Name:Jadycian Empath
+ManaCost:R
+Types:Creature Elemental Shaman
+PT:1/1
+
+S:Mode$ Continuous | Affected$ Card.Self | CharacteristicDefining$ True | AddType$ Land | AffectedZone$ Battlefield,Graveyard | Description$ As long as this creature is on the battlefield or in your graveyard, it's a land in addition to its other types.
+
+A:AB$ Mana | Cost$ Sac<1/CARDNAME/this creature> | Produced$ Any | Amount$ 1 | SpellDescription$ Add one mana of any color.
+
+Oracle:As long as this creature is on the battlefield or in your graveyard, it's a land in addition to its other types.\nSacrifice this creature: Add one mana of any color.
+
+DeckHas:Ability$Sacrifice

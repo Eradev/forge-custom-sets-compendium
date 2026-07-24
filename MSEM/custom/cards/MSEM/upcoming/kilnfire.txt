@@ -1,0 +1,13 @@
+Name:Kilnfire
+ManaCost:1 R
+Types:Instant
+
+A:SP$ Charm | Choices$ DBDamage,DBDestroy | CharmNum$ 1 | SpellDescription$ Choose one —
+
+SVar:DBDamage:DB$ Pump | ValidTgts$ Player | TgtPrompt$ Select target player | SubAbility$ DBDamageAll | SpellDescription$ CARDNAME deals 1 damage to each creature and planeswalker target player controls.
+SVar:DBDamageAll:DB$ DamageAll | NumDmg$ 1 | ValidCards$ Creature.TargetedPlayerCtrl,Planeswalker.TargetedPlayerCtrl | SubAbility$ DBDamageResolve
+SVar:DBDamageResolve:DB$ DamageResolve
+
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Artifact | SpellDescription$ Destroy target artifact.
+
+Oracle:Choose one —\n• Kilnfire deals 1 damage to each creature and planeswalker target player controls.\n• Destroy target artifact.

@@ -1,0 +1,12 @@
+Name:Sunchaser Mantas
+ManaCost:1 W U
+Types:Creature Fish
+PT:2/3
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChooseColor | TriggerDescription$ When this creature enters, choose a color. Look at the top four cards of your library. You may reveal a card of the chosen color from among them and put it into your hand. Put the rest on the bottom of your library in a random order.
+SVar:TrigChooseColor:DB$ ChooseColor | Defined$ You | AILogic$ MostProminentInComputerDeck | SubAbility$ TrigDig
+SVar:TrigDig:DB$ Dig | DigNum$ 4 | ChangeNum$ 1 | Optional$ True | ChangeValid$ Card.ChosenColor | Reveal$ True | RestRandomOrder$ True
+
+Oracle:Flying\nWhen this creature enters, choose a color. Look at the top four cards of your library. You may reveal a card of the chosen color from among them and put it into your hand. Put the rest on the bottom of your library in a random order.

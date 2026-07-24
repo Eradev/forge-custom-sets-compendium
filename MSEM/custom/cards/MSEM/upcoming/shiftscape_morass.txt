@@ -1,0 +1,15 @@
+Name:Shiftscape Morass
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ ChangeZone | Cost$ T Exile<1/CARDNAME> | Origin$ Battlefield | Destination$ Exile | ActivationPhases$ Upkeep | PlayerTurn$ True | SubAbility$ DBChoose | SpellDescription$ Choose a basic land type other than Swamp. Create a colorless land token that's a Swamp and the chosen basic land type. Activate only during your upkeep.
+SVar:DBChoose:DB$ ChooseType | Defined$ You | Type$ Basic Land | InvalidTypes$ Swamp | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ mountain_forest | RememberTokens$ True | SubAbility$ DBAnimate
+SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Types$ Swamp & ChosenType | RemoveLandTypes$ True | Duration$ Permanent | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:{T}: Add {C}.\n{T}, Exile Shiftscape Morass: Choose a basic land type other than Swamp. Create a colorless land token that's a Swamp and the chosen basic land type. Activate only during your upkeep.
+
+DeckHas:Ability$Token

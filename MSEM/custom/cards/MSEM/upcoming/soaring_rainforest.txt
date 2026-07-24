@@ -1,0 +1,10 @@
+Name:Soaring Rainforest
+ManaCost:no cost
+Types:Land Forest Island
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ 1 T | Produced$ Combo G U | Amount$ 2 | SpellDescription$ Add {G}{G} or {U}{U}.
+
+Oracle:({T}: Add {G} or {U}.)\nThis land enters tapped.\n{1}, {T}: Add {G}{G} or {U}{U}.

@@ -1,0 +1,20 @@
+Name:Champion of Scales
+ManaCost:R R
+Types:Creature Human Soldier
+PT:2/2
+
+K:First Strike
+
+K:Haste
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigWander | TriggerDescription$ Wanderlust — At the beginning of combat on each of your turns, if you control four or more differently named lands, you may pay {1}{R}. If you do, create a 4/4 red Dragon creature token with flying and haste. Exile that token at end of combat.
+SVar:TrigWander:AB$ Token | Cost$ 1 R | TokenScript$ r_4_4_dragon_flying | RememberTokens$ True | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4 | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | Defined$ Remembered | KW$ Haste | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4 | SubAbility$ DelTrig
+SVar:DelTrig:DB$ DelayedTrigger | Mode$ Phase | Phase$ EndCombat | Execute$ TrigExile | RememberObjects$ Remembered | TriggerDescription$ Exile that token at end of combat. | SubAbility$ DBCleanup | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4
+SVar:TrigExile:DB$ ChangeZone | Defined$ DelayTriggerRememberedLKI | Origin$ Battlefield | Destination$ Exile
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:First strike, haste\nWanderlust — At the beginning of combat on each of your turns, if you control four or more differently named lands, you may pay {1}{R}. If you do, create a 4/4 red Dragon creature token with flying and haste. Exile that token at end of combat.
+
+DeckHas:Ability$Token & Type$Dragon

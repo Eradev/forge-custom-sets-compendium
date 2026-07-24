@@ -1,0 +1,13 @@
+Name:Shifting Spaces
+ManaCost:1 U
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Permanent.nonLand | TgtPrompt$ Select target nonland permanent | Origin$ Battlefield | Destination$ Hand | SubAbility$ DBAetherize | SpellDescription$ Wanderlust — Return target nonland permanent to its owner's hand. If you control four or more differently named lands, you may aetherize that permanent. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:DBAetherize:DB$ CopyPermanent | Defined$ Targeted | Optional$ True | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4 | RememberTokens$ True | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:Wanderlust — Return target nonland permanent to its owner's hand. If you control four or more differently named lands, you may aetherize that permanent. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+DeckHas:Ability$Token|Aetherize

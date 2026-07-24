@@ -1,0 +1,11 @@
+Name:Hunting Experience
+ManaCost:2 G G
+Types:Sorcery
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigCopy | TriggerDescription$ Wanderlust — When you cast this spell, you may copy it if you control four or more differently named lands. You may choose new targets for the copy.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | Optional$ True | MayChooseTarget$ True | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Creature,Land | ChangeNum$ 1 | SpellDescription$ Search your library for a creature or land card, reveal it, put it into your hand, then shuffle.
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:Wanderlust — When you cast this spell, you may copy it if you control four or more differently named lands. You may choose new targets for the copy.\nSearch your library for a creature or land card, reveal it, put it into your hand, then shuffle.

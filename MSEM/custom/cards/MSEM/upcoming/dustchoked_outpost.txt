@@ -1,0 +1,19 @@
+Name:Dustchoked Outpost
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this land enters, create a 1/1 Scout creature token that's all colors. It gains haste until end of turn. Sacrifice it at the beginning of the next end step.
+SVar:TrigToken:DB$ Token | TokenScript$ all_1_1_scout | RememberTokens$ True | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | Defined$ Remembered | KW$ Haste | SubAbility$ DelTrig
+SVar:DelTrig:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | Execute$ TrigSac | RememberObjects$ Remembered | TriggerDescription$ Sacrifice it at the beginning of the next end step. | SubAbility$ DBCleanup
+SVar:TrigSac:DB$ Sacrifice | Defined$ DelayTriggerRememberedLKI
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+A:AB$ Mana | Cost$ T | Produced$ R | SpellDescription$ Add {R}.
+
+Oracle:This land enters tapped.\nWhen this land enters, create a 1/1 Scout creature token that's all colors. It gains haste until end of turn. Sacrifice it at the beginning of the next end step.\n{T}: Add {R}.
+
+DeckHas:Ability$Token & Type$Scout

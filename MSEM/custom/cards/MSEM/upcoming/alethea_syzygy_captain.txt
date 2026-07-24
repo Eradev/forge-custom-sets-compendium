@@ -1,0 +1,14 @@
+Name:Alethea, Syzygy Captain
+ManaCost:2 B
+Types:Legendary Creature Human Pirate
+PT:3/2
+
+K:Menace
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPrize | TriggerDescription$ At the beginning of your upkeep, put a prize counter on target permanent you don't control.
+SVar:TrigPrize:DB$ PutCounter | ValidTgts$ Permanent.!YouCtrl | TgtPrompt$ Select target permanent you don't control | CounterType$ PRIZE | CounterNum$ 1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Permanent.counters_GE1_PRIZE | Execute$ TrigReturn | TriggerDescription$ Whenever a permanent with a prize counter on it is put into a graveyard from the battlefield, return it to the battlefield under your control.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | Defined$ TriggeredCardLKICopy | GainControl$ True
+
+Oracle:Menace\nAt the beginning of your upkeep, put a prize counter on target permanent you don't control.\nWhenever a permanent with a prize counter on it is put into a graveyard from the battlefield, return it to the battlefield under your control.

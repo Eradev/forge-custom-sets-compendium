@@ -1,0 +1,10 @@
+Name:Arboreal Runes
+ManaCost:3
+Types:Artifact
+
+S:Mode$ Continuous | Affected$ Card.Self | AddType$ Land & Forest | Description$ As long as this artifact is on the battlefield or in your graveyard, it's a Forest land in addition to its other types.
+S:Mode$ Continuous | Affected$ Card.Self | EffectZone$ Graveyard | AffectedZone$ Graveyard | AddType$ Land & Forest | Secondary$ True | Description$ As long as this artifact is on the battlefield or in your graveyard, it's a Forest land in addition to its other types.
+
+A:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+Oracle:As long as this artifact is on the battlefield or in your graveyard, it's a Forest land in addition to its other types.\n{T}: Add one mana of any color.

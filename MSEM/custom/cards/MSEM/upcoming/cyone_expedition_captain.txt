@@ -1,0 +1,18 @@
+Name:Cyone, Expedition Captain
+ManaCost:1 W W
+Types:Legendary Creature Human Soldier
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When NICKNAME enters, create a 1/1 Scout creature token that's all colors, then choose flying, first strike, or lifelink. Creature tokens you control gain the chosen ability until end of turn.
+SVar:TrigToken:DB$ Token | TokenScript$ all_1_1_scout | SubAbility$ TrigChoice
+SVar:TrigChoice:DB$ PumpAll | ValidCards$ Creature.token+YouCtrl | KWChoice$ Flying,First Strike,Lifelink
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigAetherize | TriggerDescription$ Whenever NICKANME attacks, aetherize it. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:TrigAetherize:DB$ CopyPermanent | Defined$ Self | RememberTokens$ True | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When Cyone enters, create a 1/1 Scout creature token that's all colors, then choose flying, first strike, or lifelink. Creature tokens you control gain the chosen ability until end of turn.\nWhenever Cyone attacks, aetherize it. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Token|Aetherize & Type$Scout

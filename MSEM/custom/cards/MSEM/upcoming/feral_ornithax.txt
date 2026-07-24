@@ -1,0 +1,10 @@
+Name:Feral Ornithax
+ManaCost:G
+Types:Creature Bird Beast
+PT:1/2
+
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 2 | AddToughness$ 2 | AddKeyword$ Trample | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4 | Description$ Wanderlust — Feral Ornithax gets +2/+2 and has trample as long as you control four or more differently named lands.
+
+Oracle:Wanderlust — Feral Ornithax gets +2/+2 and has trample as long as you control four or more differently named lands.

@@ -1,0 +1,9 @@
+Name:Benthic Thaumaturge
+ManaCost:U
+Types:Creature Merfolk Shaman
+PT:1/1
+
+A:AB$ Effect | Cost$ T | ValidTgts$ Land | TgtPrompt$ Select target land | StaticAbilities$ LandMorph | RememberObjects$ Targeted | SpellDescription$ Until end of turn, target land is every basic land type in addition to its other types and its name becomes Morphic Sea.
+SVar:LandMorph:Mode$ Continuous | Affected$ Card.IsRemembered | AddType$ AllBasicLandType | SetName$ Morphic Sea | Description$ Until end of turn, this land is every basic land type in addition to its other types and its name becomes Morphic Sea.
+
+Oracle:{T}: Until end of turn, target land is every basic land type in addition to its other types and its name becomes Morphic Sea.

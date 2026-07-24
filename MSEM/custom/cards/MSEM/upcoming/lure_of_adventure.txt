@@ -1,0 +1,12 @@
+Name:Lure of Adventure
+ManaCost:2 W W
+Types:Enchantment
+
+T:Mode$ SpellCast | ValidActivatingPlayer$ You | Execute$ TrigToken | TriggerDescription$ Whenever you cast a spell, for each of that spell's colors, create a 1/1 Scout creature token that's all colors.
+
+SVar:TrigToken:DB$ Token | TokenScript$ all_1_1_scout | TokenAmount$ X
+SVar:X:TriggeredCard$CardNumColors
+
+Oracle:Whenever you cast a spell, for each of that spell's colors, create a 1/1 Scout creature token that's all colors.
+
+DeckHas:Ability$Token

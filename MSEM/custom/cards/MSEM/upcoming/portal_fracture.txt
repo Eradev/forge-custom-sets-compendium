@@ -1,0 +1,12 @@
+Name:Portal Fracture
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | ValidTgts$ Card | RememberTargets$ True | SubAbility$ DBCounter | SpellDescription$ Counter target spell unless its controller pays {2}. Wanderlust — If that spell has mana value 2 or less and you control four or more differently named lands, counter that spell.
+SVar:DBCounter:DB$ Counter | Defined$ Remembered | UnlessCost$ 2 | UnlessSwitched$ True | ConditionCheckSVar$ WanderCounter | ConditionSVarCompare$ EQ0 | SubAbility$ DBHardCounter
+SVar:DBHardCounter:DB$ Counter | Defined$ Remembered | ConditionCheckSVar$ WanderCounter | ConditionSVarCompare$ GE1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:WanderCounter:Count$CompareAnd GE4 WanderLands TargetedCMCLE2.1.0
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:Counter target spell unless its controller pays {2}.\nWanderlust — If that spell has mana value 2 or less and you control four or more differently named lands, counter that spell.

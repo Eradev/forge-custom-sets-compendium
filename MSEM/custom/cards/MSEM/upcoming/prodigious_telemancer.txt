@@ -1,0 +1,17 @@
+Name:Prodigious Telemancer
+ManaCost:3 U
+Types:Creature Human Wizard
+PT:1/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigLoot | TriggerDescription$ When this creature enters, you may draw a card, then discard a card.
+SVar:TrigLoot:DB$ Draw | NumCards$ 1 | Optional$ True | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 1
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | Execute$ TrigAetherize | TriggerZones$ Battlefield | TriggerDescription$ Whenever you cast an instant or sorcery spell, you may aetherize target creature you control. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:TrigAetherize:DB$ CopyPermanent | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | Optional$ True | RememberTokens$ True | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When this creature enters, you may draw a card, then discard a card.\nWhenever you cast an instant or sorcery spell, you may aetherize target creature you control. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+DeckHas:Ability$Token|Aetherize

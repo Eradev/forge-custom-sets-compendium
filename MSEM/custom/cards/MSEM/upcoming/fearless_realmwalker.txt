@@ -1,0 +1,20 @@
+Name:Fearless Realmwalker
+ManaCost:2 W
+Types:Creature Human Scout
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPutCounter | TriggerDescription$ When this creature enters, put a +1/+1 counter on each of up to two target creatures.
+
+SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature | TgtPrompt$ Select up to two target creatures | CounterType$ P1P1 | CounterNum$ 1 | TargetMin$ 0 | TargetMax$ 2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigAetherize | TriggerDescription$ Whenever this creature attacks, you may pay {2}{W}. If you do, aetherize it. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+SVar:TrigAetherize:DB$ CopyPermanent | Defined$ Self | Cost$ 2 W | Optional$ True | RememberTokens$ True | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Whenthis cretaure enters, put a +1/+1 counter on each of up to two target creatures.\nWhenever this creature attacks, you may pay {2}{W}. If you do, aetherize it. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+SVar:PlayMain1:TRUE
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Token|Counters|Aetherize

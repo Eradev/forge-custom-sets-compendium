@@ -1,0 +1,18 @@
+Name:Caronas, Eon Wanderer
+ManaCost:1 W U
+Types:Legendary Creature Human Wizard
+PT:3/3
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigEnter | TriggerDescription$ When NICKNAME enters, you gain 2 life and draw two cards if he isn't on the battlefield.
+SVar:TrigEnter:DB$ GainLife | LifeAmount$ 2 | SubAbility$ DBDraw | ConditionDefined$ TriggeredCard | ConditionPresent$ Card.inZoneBattlefield | ConditionCompare$ EQ0
+SVar:DBDraw:DB$ Draw | NumCards$ 2 | ConditionDefined$ TriggeredCard | ConditionPresent$ Card.inZoneBattlefield | ConditionCompare$ EQ0
+
+A:AB$ CopyPermanent | Cost$ 2 W U Discard<2/Card> | Defined$ Self | RememberTokens$ True | SpellDescription$ Aetherize NICKNAME. (To aetherize, create a token that's a copy of it, then exile that token.) | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Flash\nWhen Caronas enters, you gain 2 life and draw two cards if he isn't on the battlefield.\n{2}{W}{U}, Discard two cards: Aetherize Caronas. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+DeckHas:Ability$Token|Aetherize

@@ -1,0 +1,12 @@
+Name:Reborn from the Ashes
+ManaCost:1 R G
+Types:Sorcery
+
+A:SP$ Dig | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | Defined$ You | SubAbility$ DBExileGy | SpellDescription$ Exile the top card of your library and up to one target permanent card from your graveyard. You may play cards exiled this way until the end of your next turn.
+SVar:DBExileGy:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Permanent.YouOwn | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target permanent card in your graveyard | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | StaticAbilities$ STPlay | ExileOnMoved$ Stack | Duration$ UntilTheEndOfYourNextTurn | RememberObjects$ ExiledWithEffectSource | SubAbility$ DBLand
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.ExiledWithEffectSource | AffectedZone$ Exile | Description$ You may play cards exiled this way until the end of your next turn.
+SVar:DBLand:DB$ Effect | StaticAbilities$ Exploration | Duration$ UntilEndOfTurn
+SVar:Exploration:Mode$ Continuous | Affected$ You | AdjustLandPlays$ 1 | Description$ You may play an additional land this turn.
+
+Oracle:Exile the top card of your library and up to one target permanent card from your graveyard. You may play cards exiled this way until the end of your next turn.\nYou may play an additional land this turn.

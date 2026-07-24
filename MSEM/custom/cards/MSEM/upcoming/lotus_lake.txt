@@ -1,0 +1,13 @@
+Name:Lotus Lake
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Cost$ T | Produced$ Any | PrecostDesc$ Landfall — | CheckSVar$ X | SVarCompare$ GE1 | SpellDescription$ Add one mana of any color. Activate only if a land you control entered this turn.
+SVar:X:Count$ThisTurnEntered_Battlefield_Land.YouCtrl
+
+Oracle:This land enters tapped.\n{T}: Add {C}.\nLandfall — {T}: Add one mana of any color. Activate only if a land you control entered this turn.

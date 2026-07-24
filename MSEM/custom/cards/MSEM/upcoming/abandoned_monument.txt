@@ -1,0 +1,9 @@
+Name:Abandoned Monument
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ Any | SubAbility$ DBMaybeStayTapped | SpellDescription$ Add one mana of any color. If you control another nonbasic land, this land doesn't untap at the beginning of your next untap step.
+SVar:DBMaybeStayTapped:DB$ Effect | ConditionPresent$ Land.nonBasic+YouCtrl+Other | ConditionCompare$ GE1 | ReplacementEffects$ DontUntap | RememberObjects$ Self | ExileOnMoved$ Battlefield | Duration$ UntilTheEndOfYourNextUntap
+SVar:DontUntap:Event$ Untap | ValidCard$ Card.IsRemembered | ValidStepTurnToController$ Player.Activator | Layer$ CantHappen | Description$ EFFECTSOURCE doesn't untap during your next untap step.
+
+Oracle:{T}: Add one mana of any color. If you control another nonbasic land, this land doesn't untap at the beginning of your next untap step.

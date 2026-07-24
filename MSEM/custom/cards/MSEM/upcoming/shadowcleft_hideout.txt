@@ -1,0 +1,12 @@
+Name:Shadowcleft Hideout
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ B | SpellDescription$ Add {B}.
+
+A:AB$ Draw | Cost$ T PayLife<2> Sac<1/CARDNAME/this land> | SpellDescription$ Draw a card.
+
+Oracle:This land enters tapped.\n{T}: Add {B}.\n{T}, Pay 2 life, Sacrifice this land: Draw a card.

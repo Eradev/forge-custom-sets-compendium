@@ -1,0 +1,13 @@
+Name:Gyreon Smuggling
+ManaCost:1 B
+Types:Sorcery
+
+A:SP$ ChangeZone | TargetMin$ 0 | TargetMax$ 1 | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Card.nonLand+OppOwn | TgtPrompt$ Select up to one target nonland card in an opponent's graveyard | RememberChanged$ True | SubAbility$ DBPlay | SpellDescription$ Exile up to one target nonland card from an opponent's graveyard. Copy it. You may cast the copy. (You still pay its costs, including color. Copies of permanents enter as tokens.) Draw a card.
+
+SVar:DBPlay:DB$ Play | Defined$ Remembered | ValidSA$ Spell | Optional$ True | CopyCard$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Exile up to one target nonland card from an opponent's graveyard. Copy it. You may cast the copy. (You still pay its costs, including color. Copies of permanents enter as tokens.)\nDraw a card.
+
+DeckHas:Ability$Graveyard

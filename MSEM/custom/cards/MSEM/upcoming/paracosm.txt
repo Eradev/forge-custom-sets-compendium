@@ -1,0 +1,10 @@
+Name:Paracosm
+ManaCost:no cost
+Types:Land
+
+T:Mode$ DamageDone | ValidTarget$ You | TriggerZones$ Battlefield | Execute$ TrigSac | TriggerDescription$ When you're dealt damage, sacrifice this land.
+SVar:TrigSac:DB$ Sacrifice | SacValid$ Card.Self
+
+A:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+Oracle:When you're dealt damage, sacrifice this land.\n{T}: Add one mana of any color.

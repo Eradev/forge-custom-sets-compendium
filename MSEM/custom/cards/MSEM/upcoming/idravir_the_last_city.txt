@@ -1,0 +1,9 @@
+Name:Idravir, the Last City
+ManaCost:no cost
+Types:Legendary Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Animate | Cost$ 2 | Defined$ Self | Power$ 2 | Toughness$ 2 | Types$ Creature | Keywords$ Undying | SpellDescription$ NICKNAME becomes a 2/2 creature with undying in addition to its other types until end of turn. (When that creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)
+
+Oracle:{T}: Add {C}.\n{2}: Idravir becomes a 2/2 creature with undying in addition to its other types until end of turn. (When that creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)

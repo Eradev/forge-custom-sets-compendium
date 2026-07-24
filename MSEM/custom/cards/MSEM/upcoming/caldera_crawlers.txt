@@ -1,0 +1,18 @@
+Name:Caldera Crawlers
+ManaCost:B R
+Types:Creature Elemental Salamander
+PT:2/2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigChoice | TriggerZones$ Battlefield | TriggerDescription$ Whenever CARDNAME attacks, you may sacrifice a land or exile a land card from your graveyard. If you do, target creature gets +1/+1 and gains menace until end of turn.
+
+SVar:TrigChoice:DB$ GenericChoice | Choices$ DBSacToPump,DBExileToPump
+
+SVar:DBSacToPump:DB$ Pump | UnlessCost$ Sac<1/Land> | UnlessPayer$ You | UnlessSwitched$ True | ValidTgts$ Creature | NumAtt$ +1 | NumDef$ +1 | KW$ Menace
+
+SVar:DBExileToPump:DB$ Pump | UnlessCost$ ExileFromGrave<1/Land> | UnlessPayer$ You | UnlessSwitched$ True | ValidTgts$ Creature | NumAtt$ +1 | NumDef$ +1 | KW$ Menace
+
+SVar:HasAttackEffect:TRUE
+
+DeckHas:Ability$Sacrifice|Graveyard
+
+Oracle:Whenever Caldera Crawlers attacks, you may sacrifice a land or exile a land card from your graveyard. If you do, target creature gets +1/+1 and gains menace until end of turn.

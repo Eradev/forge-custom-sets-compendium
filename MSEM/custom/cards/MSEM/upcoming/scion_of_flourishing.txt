@@ -1,0 +1,20 @@
+Name:Scion of Flourishing
+ManaCost:3 G G
+Types:Creature Elemental Avatar
+PT:5/5
+
+K:Trample
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounters | TriggerDescription$ When this creature enters, put a +1/+1 counter on each other creature you control. Those creatures gain trample until end of turn.
+SVar:TrigCounters:DB$ PutCounterAll | ValidCards$ Creature.YouCtrl+Other | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBPump
+SVar:DBPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl+Other | KW$ Trample
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Forest.YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigAetherize | TriggerDescription$ Whenever a Forest you control enters, you may aetherize this creature. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:TrigAetherize:DB$ CopyPermanent | Defined$ Self | RememberTokens$ True | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Trample\nWhen this creature enters, put a +1/+1 counter on each other creature you control. Those creatures gain trample until end of turn.\nWhenever a Forest you control enters, you may aetherize this creature. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+SVar:PlayMain1:TRUE
+DeckHas:Ability$Token|Aetherize

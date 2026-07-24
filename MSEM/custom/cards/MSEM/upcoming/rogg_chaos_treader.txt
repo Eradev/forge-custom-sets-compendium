@@ -1,0 +1,13 @@
+Name:Rogg, Chaos Treader
+ManaCost:1 R R
+Types:Legendary Creature Goblin Warrior
+PT:3/3
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigChoice | TriggerDescription$ At the beginning of combat on each of your turns, you may sacrifice a land or exile a land card from your graveyard. If you do, create two 1/1 red Goblin creature tokens with haste. Exile those tokens at the beginning of the next end step.
+SVar:TrigChoice:DB$ GenericChoice | Choices$ DBSacToTokens,DBExileToTokens
+SVar:DBSacToTokens:DB$ Token | TokenScript$ r_1_1_goblin | TokenAmount$ 2 | PumpKeywords$ Haste | AtEOT$ Exile | UnlessCost$ Sac<1/Land> | UnlessPayer$ You | UnlessSwitched$ True
+SVar:DBExileToTokens:DB$ Token | TokenScript$ r_1_1_goblin | TokenAmount$ 2 | PumpKeywords$ Haste | AtEOT$ Exile | UnlessCost$ ExileFromGrave<1/Land> | UnlessPayer$ You | UnlessSwitched$ True
+
+Oracle:At the beginning of combat on each of your turns, you may sacrifice a land or exile a land card from your graveyard. If you do, create two 1/1 red Goblin creature tokens with haste. Exile those tokens at the beginning of the next end step.
+
+DeckHas:Ability$Token|Sacrifice

@@ -1,0 +1,14 @@
+Name:Threadspinner
+ManaCost:3 W
+Types:Creature Spirit Wizard
+PT:2/2
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigUntap | TriggerDescription$ When this creature enters, untap each enchanted permanent you control. Enchanted creatures you control get +1/+1 until end of turn.
+SVar:TrigUntap:DB$ UntapAll | ValidCards$ Permanent.enchanted+YouCtrl | SubAbility$ DBPump
+SVar:DBPump:DB$ PumpAll | ValidCards$ Creature.enchanted+YouCtrl | NumAtt$ +1 | NumDef$ +1
+
+Oracle:Flash\nWhen this creature enters, untap each enchanted permanent you control. Enchanted creatures you control get +1/+1 until end of turn.
+
+DeckHints:Type$Aura

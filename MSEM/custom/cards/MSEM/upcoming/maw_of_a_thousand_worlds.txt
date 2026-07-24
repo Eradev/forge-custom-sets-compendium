@@ -1,0 +1,19 @@
+Name:Maw of a Thousand Worlds
+ManaCost:4 G U R
+Types:Creature Hydra
+PT:7/7
+
+K:Trample
+
+K:Hexproof
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDistribute | TriggerDescription$ When this creature enters, distribute X +1/+1 counters among creatures you control, where X is the number of differently named lands you control.
+SVar:TrigDistribute:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select any number of creatures you control to distribute counters to | CounterType$ P1P1 | CounterNum$ X | TargetMin$ 0 | TargetMax$ X | DividedAsYouChoose$ X
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigRemove | OptionalDecider$ You | TriggerDescription$ When this creature dies, you may remove any number of counters from among permanents you control. For each counter removed this way, draw a card.
+SVar:TrigRemove:DB$ RemoveCounter | ValidTgts$ Permanent.YouCtrl+counters_GE1 | TgtPrompt$ Select permanents you control to remove counters from | CounterType$ Any | CounterNum$ Any | UpTo$ True | RememberAmount$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | NumCards$ Y
+SVar:Y:Count$RememberedAmount
+SVar:X:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:Trample, hexproof\nWhen this creature enters, distribute X +1/+1 counters among creatures you control, where X is the number of differently named lands you control.\nWhen this creature dies, you may remove any number of counters from among permanents you control. For each counter removed this way, draw a card.

@@ -1,0 +1,14 @@
+Name:Telarine Skychaser
+ManaCost:4
+Types:Artifact Vehicle
+
+K:Flying
+
+T:Mode$ Exiled | Origin$ Battlefield | ValidCard$ Permanent.token+YouCtrl | ValidCause$ SpellAbility.NamedAbilityAetherize | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigAnimate | TriggerDescription$ Whenever you aetherize, you may have this Vehicle become an artifact creature until end of turn.
+SVar:TrigAnimate:DB$ Animate | Defined$ Self | Types$ Artifact,Creature | Duration$ UntilEndOfTurn
+
+K:Crew:3
+
+Oracle:Flying\nWhenever you aetherize, you may have this Vehicle become an artifact creature until end of turn.\nCrew 3 (Tap any number of creatures you control with total power 3 or more: This Vehicle becomes an artifact creature until end of turn.)
+
+DeckNeeds:Ability$Aetherize

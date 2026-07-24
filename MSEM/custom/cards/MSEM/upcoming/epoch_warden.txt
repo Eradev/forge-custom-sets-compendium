@@ -1,0 +1,18 @@
+Name:Epoch Warden
+ManaCost:1 R W
+Types:Creature Angel Soldier
+PT:2/2
+
+K:Flying
+
+K:Haste
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigAetherize | TriggerDescription$ Whenever this creature attacks, you may aetherize another target attacking creature you control. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:TrigAetherize:DB$ CopyPermanent | ValidTgts$ Creature.YouCtrl+attacking+Other | TgtPrompt$ Select another target attacking creature you control | Optional$ True | RememberTokens$ True | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Flying, haste\nWhenever this creature attacks, you may aetherize another target attacking creature you control. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Token|Aetherize

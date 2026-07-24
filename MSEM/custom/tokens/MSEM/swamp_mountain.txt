@@ -1,0 +1,5 @@
+Name:Swamp Mountain Token
+ManaCost:no cost
+Colors:colorless
+Types:Land Swamp Mountain
+Oracle:({T}: Add {B} or {R}.)

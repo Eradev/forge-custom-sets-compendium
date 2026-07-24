@@ -1,0 +1,8 @@
+Name:Gloam Gullet
+ManaCost:2 B
+Types:Creature Frog Fungus
+PT:3/2
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Menace | IsPresent$ Land.YouOwn | PresentZone$ Graveyard,Exile | Description$ This creature gets +1/+1 and has menace as long as you own a land card in exile or in your graveyard.
+
+Oracle:This creature gets +1/+1 and has menace as long as you own a land card in exile or in your graveyard.

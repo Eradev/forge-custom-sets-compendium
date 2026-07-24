@@ -1,0 +1,12 @@
+Name:Explorer's Ascent
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ W | SpellDescription$ Add {W}.
+
+A:AB$ Pump | Cost$ T | ValidTgts$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1 | SpellDescription$ Target creature you control gets +1/+1 until end of turn.
+
+Oracle:This land enters tapped.\n{T}: Add {W}.\n{T}: Target creature you control gets +1/+1 until end of turn.

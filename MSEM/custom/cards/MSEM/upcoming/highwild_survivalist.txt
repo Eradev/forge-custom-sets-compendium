@@ -1,0 +1,13 @@
+Name:Highwild Survivalist
+ManaCost:R G
+Types:Creature Human Shaman
+PT:3/2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigMana | TriggerDescription$ Wanderlust — Whenever this creature attacks, add {R} or {G}. If you control four or more differently named lands, add {R}{G} instead. Until end of turn, you don't lose mana added this way as steps and phases end.
+SVar:TrigMana:DB$ Mana | Amount$ ManaAmt | Produced$ Combo R G | PersistentMana$ True
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+SVar:ManaAmt:Count$Compare WanderLands GE4.2.1
+
+Oracle:Wanderlust — Whenever this creature attacks, add {R} or {G}. If you control four or more differently named lands, add {R}{G} instead. Until end of turn, you don't lose mana added this way as steps and phases end.
+
+SVar:HasAttackEffect:TRUE

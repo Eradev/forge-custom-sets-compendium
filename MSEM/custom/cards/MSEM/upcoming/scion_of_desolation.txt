@@ -1,0 +1,18 @@
+Name:Scion of Desolation
+ManaCost:3 B B
+Types:Creature Elemental Avatar
+PT:5/5
+
+K:Deathtouch
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReanimate | TriggerDescription$ When this creature enters, put target creature card with mana value 3 or less from a graveyard onto the battlefield under your control.
+SVar:TrigReanimate:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | GainControl$ True | ValidTgts$ Creature.cmcLE3 | TgtPrompt$ Select target creature card with mana value 3 or less in a graveyard
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Swamp.YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigAetherize | TriggerDescription$ Whenever a Swamp you control enters, you may aetherize this creature. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:TrigAetherize:DB$ CopyPermanent | Defined$ Self | RememberTokens$ True | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Deathtouch\nWhen this creature enters, put target creature card with mana value 3 or less from a graveyard onto the battlefield under your control.\nWhenever a Swamp you control enters, you may aetherize this creature. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+DeckHas:Ability$Token|Graveyard|Aetherize

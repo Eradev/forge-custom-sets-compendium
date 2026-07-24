@@ -1,0 +1,11 @@
+Name:Dimensional Reshaper
+ManaCost:3
+Types:Legendary Artifact
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Pump | Cost$ T | ValidTgts$ Permanent.Other+YouCtrl | ValidTgtsDesc$ other permanent you control | TargetMin$ 2 | TargetMax$ 2 | TargetsWithSameCardType$ True | SubAbility$ DBClone | SpellDescription$ Each of two other target permanents you control that share a card type become a copy of the other until end of turn.
+SVar:DBClone:DB$ Clone | ValidTgts$ Permanent.Other+YouCtrl | ValidTgtsDesc$ second permanent you control | TargetUnique$ True | CloneTarget$ ParentTarget | Duration$ UntilEndOfTurn
+
+Oracle:Dimensional Reshaper enters tapped.\n{T}: Each of two other target permanents you control that share a card type become a copy of the other until end of turn.

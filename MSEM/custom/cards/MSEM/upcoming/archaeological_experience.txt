@@ -1,0 +1,15 @@
+Name:Archaeological Experience
+ManaCost:1 R
+Types:Sorcery
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigCopy | TriggerDescription$ Wanderlust — When you cast this spell, you may copy it if you control four or more differently named lands.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | Optional$ True | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+A:SP$ Dig | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Exile the top card of your library. Until the end of your next turn, you may play that card. Create a 1/1 Scout creature token that's all colors.
+SVar:DBEffect:DB$ Effect | RememberObjects$ RememberedCard | Duration$ UntilTheEndOfYourNextTurn | StaticAbilities$ STMayPlay | SubAbility$ DBToken | ForgetOnMoved$ Exile
+SVar:STMayPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ Until the end of your next turn, you may play that card.
+SVar:DBToken:DB$ Token | TokenScript$ all_1_1_scout | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Wanderlust — When you cast this spell, you may copy it if you control four or more differently named lands.\nExile the top card of your library. Until the end of your next turn, you may play that card. Create a 1/1 Scout creature token that's all colors.

@@ -1,0 +1,5 @@
+Name:Mountain Plains Token
+ManaCost:no cost
+Colors:colorless
+Types:Land Mountain Plains
+Oracle:({T}: Add {R} or {W}.)

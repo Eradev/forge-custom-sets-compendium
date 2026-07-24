@@ -1,0 +1,17 @@
+Name:Journey to the Otherworlds
+ManaCost:1 R
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigETB | TriggerDescription$ When this enchantment enters, draw a card, then choose a creature card name.
+SVar:TrigETB:DB$ Draw | SubAbility$ DBNameCard
+SVar:DBNameCard:DB$ NameCard | Defined$ You | ValidCards$ Card.Creature | ValidDescription$ creature card
+
+T:Mode$ Attacks | ValidCard$ Creature.YouCtrl+sharesNameWith ChosenCard | Execute$ TrigAetherize | TriggerDescription$ Whenever a creature you control with the chosen name attacks, you may aetherize it. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:TrigAetherize:DB$ CopyPermanent | Defined$ TriggeredAttackerLKICopy | Optional$ True | RememberTokens$ True | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When this enchantment enters, draw a card, then choose a creature card name.\nWhenever a creature you control with the chosen name attacks, you may aetherize it. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+SVar:PlayMain1:TRUE
+DeckHas:Ability$Token|Aetherize

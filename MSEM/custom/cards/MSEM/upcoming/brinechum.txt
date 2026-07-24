@@ -1,0 +1,11 @@
+Name:Brinechum
+ManaCost:2 U
+Types:Creature Fish Elemental
+PT:3/2
+
+T:Mode$ Drawn | ValidCard$ Card.YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigMill | TriggerDescription$ Whenever you draw a card, you may have target player mill two cards.
+SVar:TrigMill:DB$ Mill | NumCards$ 2 | ValidTgts$ Player | TgtPrompt$ Select target player
+
+DeckHas:Ability$Mill
+
+Oracle:Whenever you draw a card, you may have target player mill two cards.

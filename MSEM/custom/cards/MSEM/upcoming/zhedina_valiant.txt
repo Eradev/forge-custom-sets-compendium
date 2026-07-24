@@ -1,0 +1,11 @@
+Name:Zhedina Valiant
+ManaCost:W U
+Types:Creature Human Aurashaper
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a white and blue Aura enchantment token named Winds of Chance attached to target creature. The token has enchant creature and "Enchanted creature gets +1/+0 and has flying and lifelink."
+SVar:TrigToken:DB$ Token | TokenScript$ winds_of_chance | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature
+
+Oracle:When this creature enters, create a white and blue Aura enchantment token named Winds of Chance attached to target creature. The token has enchant creature and "Enchanted creature gets +1/+0 and has flying and lifelink."
+
+DeckHas:Ability$Token & Type$Enchantment
