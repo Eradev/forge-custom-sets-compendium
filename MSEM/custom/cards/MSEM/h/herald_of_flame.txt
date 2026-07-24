@@ -12,8 +12,8 @@ SVar:TrigTapAttack:DB$ Tap | Defined$ DelayTriggerRemembered | SubAbility$ DBSet
 SVar:DBSetAttacking:DB$ ChangeCombatants | Defined$ DelayTriggerRemembered | Attacking$ DefendingPlayer & Valid Planeswalker.ControlledBy DefendingPlayer
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
-T:Mode$ AttackerBlocked | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever a creature you control becomes blocked, thiscreature deals 3 damage to the player or planeswalker that creature is attacking.
-SVar:TrigDamage:DB$ DealDamage | Defined$ TriggeredDefender.Opponent & Valid Planeswalker.TriggeredDefender | NumDmg$ 3
+T:Mode$ AttackerBlocked | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever a creature you control becomes blocked, this creature deals 3 damage to the player or planeswalker that creature is attacking.
+SVar:TrigDamage:DB$ DealDamage | Defined$ TriggeredDefendingPlayer & Valid Planeswalker.TriggeredDefender | NumDmg$ 3
 
 Oracle:Flying\nWhenever this creature attacks, gain control of target permanent until end of combat. If it's a creature, you may have it become tapped and attacking.\nWhenever a creature you control becomes blocked, Herald of Flame deals 3 damage to the player or planeswalker that creature is attacking.
 
