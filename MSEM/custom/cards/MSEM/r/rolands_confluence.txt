@@ -8,7 +8,7 @@ SVar:DBBounce:DB$ ChangeZone | ValidTgts$ Creature.cmcLE2 | TgtPrompt$ Select ta
 
 SVar:DBScryDraw:DB$ Scry | SubAbility$ DBDraw | SpellDescription$ Scry 1, then draw a card, then discard a card.
 SVar:DBDraw:DB$ Draw | SubAbility$ DBDiscard
-SVar:DBDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 1
+SVar:DBDiscard:DB$ Discard | Mode$ TgtChoose
 
 SVar:DBMustAttack:DB$ Pump | ValidTgts$ Creature | NumAtt$ -2 | IsCurse$ True | SubAbility$ DBEffect | SpellDescription$ Target creature gets -2/-0 until end of turn and attacks this turn if able.
 SVar:DBEffect:DB$ Effect | Defined$ Targeted | StaticAbilities$ MustAttack | ExileOnMoved$ Battlefield

@@ -4,7 +4,7 @@ Types:Creature Human Rogue
 PT:1/1
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDiscard | TriggerDescription$ When this creature enters, target opponent discards a card. If a land card was discarded this way, draw a card.
-SVar:TrigDiscard:DB$ Discard | ValidTgts$ Opponent | Mode$ TgtChoose | NumCards$ 1 | RememberDiscarded$ True | SubAbility$ DBDraw
+SVar:TrigDiscard:DB$ Discard | ValidTgts$ Opponent | Mode$ TgtChoose | RememberDiscarded$ True | SubAbility$ DBDraw
 SVar:DBDraw:DB$ Draw | ConditionDefined$ Remembered | ConditionPresent$ Land | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 

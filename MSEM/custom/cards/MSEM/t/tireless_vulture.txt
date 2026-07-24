@@ -7,7 +7,7 @@ K:Flying
 
 K:Tribute:2
 SVar:TrigNotTribute:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 3 | SubAbility$ DBGainLife | SpellDescription$ When this creature enters, if tribute wasn't paid, each opponent loses 3 life. You gain life equal to the life lost this way.
-SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ AFLifeLost | StackDescription$ You gain life equal to the life lost this way.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ AFLifeLost | StackDescription$ You gain life equal to the life lost this way.
 # AFLifeLost will be set by LoseLife
 SVar:AFLifeLost:Number$0
 
