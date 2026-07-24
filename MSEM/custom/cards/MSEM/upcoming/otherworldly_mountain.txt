@@ -2,7 +2,6 @@ Name:Otherworldly Mountain
 ManaCost:no cost
 Types:Land Mountain
 
-
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ Wanderlust — This land enters tapped unless you control four or more other differently named lands.
 SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ LT4
 SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames

@@ -2,11 +2,10 @@ Name:Endless Trove
 ManaCost:no cost
 Types:Land
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self+!token | Execute$ TrigCopy | TriggerDescription$ When CARDNAME enters, if it's not a token, each opponent may create a token that's a copy of it.
-
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self+!token | Execute$ TrigCopy | TriggerDescription$ When this land enters, if it's not a token, each opponent may create a token that's a copy of it.
 SVar:TrigCopy:DB$ RepeatEach | RepeatSubAbility$ DBOppCopy | RepeatPlayers$ Opponent | RepeatOptionalForEachPlayer$ True | RepeatOptionalMessage$ Do you want to create a token that's a copy of CARDNAME?
 SVar:DBOppCopy:DB$ CopyPermanent | Defined$ TriggeredCardLKICopy | Controller$ Player.IsRemembered
 
 A:AB$ Mana | Cost$ T | Produced$ Any | Amount$ 1 | SpellDescription$ Add one mana of any color.
 
-Oracle:When Endless Trove enters, if it's not a token, each opponent may create a token that's a copy of it.\n{T}: Add one mana of any color.
+Oracle:When this land enters, if it's not a token, each opponent may create a token that's a copy of it.\n{T}: Add one mana of any color.

@@ -3,10 +3,8 @@ ManaCost:2 U
 Types:Creature Human Wizard
 PT:3/2
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ When CARDNAME enters, target player mills three cards. You shuffle up to three cards from your graveyard into your library.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ When this creature enters, target player mills three cards. You shuffle up to three cards from your graveyard into your library.
 SVar:TrigMill:DB$ Mill | ValidTgts$ Player | NumCards$ 3 | SubAbility$ DBShuffle
 SVar:DBShuffle:DB$ ChangeZone | Origin$ Graveyard | Destination$ Library | Defined$ You | ChangeType$ Card.YouOwn | ChangeNum$ 3 | Hidden$ True | Shuffle$ True
 
-DeckHas:Ability$Graveyard
-
-Oracle:When Quandary Seer enters, target player mills three cards. You shuffle up to three cards from your graveyard into your library.
+Oracle:When this creature enters, target player mills three cards. You shuffle up to three cards from your graveyard into your library.

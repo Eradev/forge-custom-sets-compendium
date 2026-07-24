@@ -2,14 +2,13 @@ Name:Expedition Post
 ManaCost:2
 Types:Artifact
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters, create a 1/1 Scout creature token that's all colors.
-
-SVar:TrigToken:DB$ Token | TokenScript$ all_1_1_scout | TokenOwner$ You
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this artifact enters, create a 1/1 Scout creature token that's all colors.
+SVar:TrigToken:DB$ Token | TokenScript$ all_1_1_scout
 
 S:Mode$ Continuous | Affected$ Creature.token+YouCtrl | AddAllCreatureTypes$ True | Description$ Creature tokens you control are every creature type.
 
-A:AB$ Token | Cost$ 4 T | TokenScript$ all_1_1_scout | TokenOwner$ You | SpellDescription$ Create a 1/1 Scout creature token that's all colors.
+A:AB$ Token | Cost$ 4 T | TokenScript$ all_1_1_scout | SpellDescription$ Create a 1/1 Scout creature token that's all colors.
 
-Oracle:When Expedition Post enters, create a 1/1 Scout creature token that's all colors.\nCreature tokens you control are every creature type.\n{4}, {T}: Create a 1/1 Scout creature token that's all colors.
+Oracle:When this artifact enters, create a 1/1 Scout creature token that's all colors.\nCreature tokens you control are every creature type.\n{4}, {T}: Create a 1/1 Scout creature token that's all colors.
 
-DeckHas:Ability$Token
+DeckHas:Ability$Token & Type$Scout

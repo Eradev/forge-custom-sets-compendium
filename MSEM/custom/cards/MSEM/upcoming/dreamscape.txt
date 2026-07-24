@@ -2,16 +2,14 @@ Name:Dreamscape
 ManaCost:no cost
 Types:Enchantment Land
 
-R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped with two charge counters on it.
-
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped with two charge counters on it.
 SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True | SubAbility$ DBAddCounter
-
 SVar:DBAddCounter:DB$ PutCounter | ETB$ True | Defined$ Self | CounterType$ CHARGE | CounterNum$ 2
 
 A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
 
 A:AB$ Mana | Cost$ T SubCounter<1/CHARGE> | Produced$ Any | SpellDescription$ Add one mana of any color.
 
-DeckHas:Ability$Counters
+Oracle:This land enters tapped with two charge counters on it.\n{T}: Add {C}.\n{T}, Remove a charge counter from this land: Add one mana of any color.
 
-Oracle:Dreamscape enters tapped with two charge counters on it.\n{T}: Add {C}.\n{T}, Remove a charge counter from Dreamscape: Add one mana of any color.
+DeckHas:Ability$Counters

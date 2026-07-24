@@ -13,7 +13,6 @@ SVar:DBToken8:DB$ Token | TokenScript$ swamp_mountain | TokenTapped$ True | SubA
 SVar:DBToken9:DB$ Token | TokenScript$ swamp_forest | TokenTapped$ True | SubAbility$ DBToken10
 SVar:DBToken10:DB$ Token | TokenScript$ mountain_forest | TokenTapped$ True
 
-
 Oracle:For each pair of basic land types, create a tapped colorless land token of those types. (The basic land types are Plains, Island, Swamp, Mountain, and Forest.)
 
 DeckHas:Ability$Token

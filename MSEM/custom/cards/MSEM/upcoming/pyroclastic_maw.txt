@@ -3,8 +3,8 @@ ManaCost:4 R R
 Types:Creature Elemental Wurm
 PT:4/4
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | TriggerDescription$ When CARDNAME enters, destroy target land. If that land was nonbasic, CARDNAME gains haste until end of turn.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | TriggerDescription$ When this creature enters, destroy target land. If that land was nonbasic, it gains haste until end of turn.
 SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Land | SubAbility$ DBPump
 SVar:DBPump:DB$ Pump | Defined$ Self | KW$ Haste | ConditionDefined$ Targeted | ConditionPresent$ Land.nonBasic
 
-Oracle:When Pyroclastic Maw enters, destroy target land. If that land was nonbasic, Pyroclastic Maw gains haste until end of turn.
+Oracle:When this creature enters, destroy target land. If that land was nonbasic, it gains haste until end of turn.

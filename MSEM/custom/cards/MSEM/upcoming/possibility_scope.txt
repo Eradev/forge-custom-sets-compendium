@@ -2,9 +2,9 @@ Name:Possibility Scope
 ManaCost:2
 Types:Artifact
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSearch | TriggerDescription$ When CARDNAME enters, search your library for a land card, exile it, then shuffle.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSearch | TriggerDescription$ When this artifact enters, search your library for a land card, exile it, then shuffle.
 SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Exile | ChangeType$ Land | ChangeNum$ 1
 
-A:AB$ Clone | Cost$ T | ValidTgts$ Land.YouCtrl | TgtPrompt$ Select target land you control | Choices$ Land.ExiledWithSource | ChoiceZone$ Exile | Duration$ UntilEndOfTurn | SpellDescription$ Target land you control becomes a copy of a land card exiled with CARDNAME until end of turn.
+A:AB$ Clone | Cost$ T | ValidTgts$ Land.YouCtrl | TgtPrompt$ Select target land you control | Choices$ Land.ExiledWithSource | ChoiceZone$ Exile | Duration$ UntilEndOfTurn | SpellDescription$ Target land you control becomes a copy of a land card exiled with this artifact until end of turn.
 
-Oracle:When Possibility Scope enters, search your library for a land card, exile it, then shuffle.\n{T}: Target land you control becomes a copy of a land card exiled with Possibility Scope until end of turn.
+Oracle:When this artifact enters, search your library for a land card, exile it, then shuffle.\n{T}: Target land you control becomes a copy of a land card exiled with this artifact until end of turn.

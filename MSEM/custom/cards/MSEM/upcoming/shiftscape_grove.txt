@@ -4,12 +4,12 @@ Types:Land
 
 A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
 
-A:AB$ ChangeZone | Cost$ T Exile<1/CARDNAME> | Origin$ Battlefield | Destination$ Exile | ActivationPhases$ Upkeep | PlayerTurn$ True | SubAbility$ DBChoose | SpellDescription$ Choose a basic land type other than Forest. Create a colorless land token that's a Forest and the chosen basic land type. Activate only during your upkeep.
-SVar:DBChoose:DB$ ChooseType | Defined$ You | Type$ Basic Land | InvalidTypes$ Forest | SubAbility$ DBToken
-SVar:DBToken:DB$ Token | TokenScript$ mountain_forest | RememberTokens$ True | SubAbility$ DBAnimate
-SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Types$ Forest & ChosenType | RemoveLandTypes$ True | Duration$ Permanent | SubAbility$ DBCleanup
-SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+A:AB$ GenericChoice | Cost$ T Exile<1/CARDNAME/this land> | ActivationPhases$ Upkeep | PlayerTurn$ True | Choices$ DBPlains,DBIsland,DBSwamp,DBMountain | SpellDescription$ Choose a basic land type other than Forest. Create a colorless land token that's a Forest and the chosen basic land type. Activate only during your upkeep.
+SVar:DBPlains:DB$ Token | TokenScript$ plains_forest | SpellDescription$ Plains
+SVar:DBIsland:DB$ Token | TokenScript$ island_forest | SpellDescription$ Island
+SVar:DBSwamp:DB$ Token | TokenScript$ swamp_forest | SpellDescription$ Swamp
+SVar:DBMountain:DB$ Token | TokenScript$ mountain_forest | SpellDescription$ Mountain
 
-Oracle:{T}: Add {C}.\n{T}, Exile Shiftscape Grove: Choose a basic land type other than Forest. Create a colorless land token that's a Forest and the chosen basic land type. Activate only during your upkeep.
+Oracle:{T}: Add {C}.\n{T}, Exile this land: Choose a basic land type other than Forest. Create a colorless land token that's a Forest and the chosen basic land type. Activate only during your upkeep.
 
 DeckHas:Ability$Token

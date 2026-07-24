@@ -5,8 +5,7 @@ PT:0/0
 
 K:Hexproof
 
-S:Mode$ Continuous | CharacteristicDefining$ True | SetPower$ X | SetToughness$ X | Description$ CARDNAME gets +1/+1 for each differently named land you control.
-
+S:Mode$ Continuous | CharacteristicDefining$ True | SetPower$ X | SetToughness$ X | Description$ This creature gets +1/+1 for each differently named land you control.
 SVar:X:Count$Valid Land.YouCtrl$DifferentCardNames
 
-Oracle:Hexproof\nCrossworld Wanderer gets +1/+1 for each differently named land you control.
+Oracle:Hexproof\nThis creature gets +1/+1 for each differently named land you control.
