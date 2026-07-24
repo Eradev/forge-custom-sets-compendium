@@ -10,7 +10,7 @@ K:Chapter:3:DBToken,DBToken,DBLoseLife
 SVar:DBToken:DB$ Token | TokenScript$ b_1_1_actor_lifelink | TokenOwner$ You | SpellDescription$ Create a 1/1 black Actor creature token with lifelink.
 
 SVar:DBLoseLife:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ X | SubAbility$ DBGainLife | SpellDescription$ Each opponent loses life equal to the number of tokens you control. You gain life equal to the life lost this way.
-SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ AFLifeLost
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ AFLifeLost
 SVar:AFLifeLost:Number$0
 # AFLifeLost will be set by LoseLife
 SVar:X:Count$Valid Permanent.token+YouCtrl

@@ -6,7 +6,7 @@ A:SP$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Land
 SVar:DBPutCounter:DB$ PutCounter | CounterType$ VENOM | Defined$ Remembered | SubAbility$ DBAnimate
 SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Triggers$ ManaTap | Duration$ Permanent | SubAbility$ DBCleanup
 SVar:ManaTap:Mode$ TapsForMana | ValidCard$ Card.Self | Execute$ TrigLoseLife | Static$ True | TriggerDescription$ Whenever this land is tapped for mana, you lose 1 life.
-SVar:TrigLoseLife:DB$ LoseLife | LifeAmount$ 1 | Defined$ You
+SVar:TrigLoseLife:DB$ LoseLife | LifeAmount$ 1
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
 Oracle:Search your library for a land card and put that card onto the battlefield tapped with a venom counter on it. It gains "Whenever this land is tapped for mana, you lose 1 life." Then shuffle.

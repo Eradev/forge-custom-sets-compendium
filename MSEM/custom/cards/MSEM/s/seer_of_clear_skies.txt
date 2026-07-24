@@ -10,4 +10,4 @@ SVar:TrigPump:DB$ Pump | Defined$ TriggeredAttackerLKICopy | NumAtt$ +1 | NumDef
 
 Oracle:Flying\nWhenever this creature or another creature you control with flying attacks, that creature gets +1/+1 until end of turn.
 
-SVar:HasAttackEffect:True
+SVar:HasAttackEffect:TRUE
