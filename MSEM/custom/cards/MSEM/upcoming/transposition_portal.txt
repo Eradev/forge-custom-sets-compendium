@@ -1,0 +1,18 @@
+Name:Transposition Portal
+ManaCost:4
+Types:Artifact
+
+T:Mode$ Drawn | ValidCard$ Creature.cmcLE3+YouOwn | OptionalDecider$ You | Static$ True | ForReveal$ True | Execute$ DBReveal | TriggerZones$ Battlefield | TriggerDescription$ You may reveal creature cards with mana value 3 or less as you draw them. Once each turn, when you reveal a card this way, you may aetherize it. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:DBReveal:DB$ Reveal | Defined$ You | RevealDefined$ TriggeredCard | RememberRevealed$ True | SubAbility$ DBAetherizeTrigger
+SVar:DBAetherizeTrigger:DB$ ImmediateTrigger | ConditionDefined$ Self | ConditionPresent$ Card.!NotedForAetherized | OptionalDecider$ You | RememberObjects$ RememberedCard | SubAbility$ DBCleanup | Execute$ DBAetherize | TriggerDescription$ Once each turn, when you reveal a card this way, you may aetherize it.
+SVar:DBAetherize:DB$ CopyPermanent | Defined$ DelayTriggerRemembered | RememberTokens$ True | SubAbility$ DBNote
+SVar:DBNote:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ Aetherized | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+T:Mode$ Phase | Phase$ Cleanup | TriggerZones$ Battlefield | Execute$ DBClearNote | Static$ True
+SVar:DBClearNote:DB$ Pump | Defined$ Player | ClearNotedCardsFor$ Aetherized
+
+Oracle:You may reveal creature cards with mana value 3 or less as you draw them. Once each turn, when you reveal a card this way, you may aetherize it. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+DeckHas:Ability$Token|Aetherize
