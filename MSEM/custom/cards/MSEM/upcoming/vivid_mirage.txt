@@ -1,0 +1,10 @@
+Name:Vivid Mirage
+ManaCost:1 R G
+Types:Sorcery
+
+A:SP$ CopyPermanent | ValidTgts$ Creature.YouCtrl,Land.YouCtrl | TgtPrompt$ Select target creature or land you control | AddKeywords$ Haste | AtEOT$ Exile | SubAbility$ DBCopyLand | SpellDescription$ Create a token that's a copy of target creature or land you control, except it has haste and "At the beginning of the end step, exile this permanent." If a land you control was targeted this way, create two of those tokens instead.
+SVar:DBCopyLand:DB$ CopyPermanent | Defined$ Targeted | AddKeywords$ Haste | AtEOT$ Exile | ConditionDefined$ Targeted | ConditionPresent$ Land | ConditionCompare$ EQ1
+
+Oracle:Create a token that's a copy of target creature or land you control, except it has haste and "At the beginning of the end step, exile this permanent." If a land you control was targeted this way, create two of those tokens instead.
+
+DeckHas:Ability$Token
