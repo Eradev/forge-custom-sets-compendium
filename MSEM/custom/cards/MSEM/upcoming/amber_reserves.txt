@@ -1,0 +1,23 @@
+Name:Amber Reserves
+ManaCost:2 R
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigChoice | TriggerDescription$ At the beginning of your upkeep, choose two different basic land types. Create a colorless land token that's the chosen types.
+SVar:TrigChoice:DB$ GenericChoice | Choices$ DBPI,DBPS,DBPM,DBPF,DBIS,DBIM,DBIF,DBSM,DBSF,DBMF
+SVar:DBPI:DB$ Token | TokenScript$ plains_island | SpellDescription$ Plains and Island
+SVar:DBPS:DB$ Token | TokenScript$ plains_swamp | SpellDescription$ Plains and Swamp
+SVar:DBPM:DB$ Token | TokenScript$ plains_mountain | SpellDescription$ Plains and Mountain
+SVar:DBPF:DB$ Token | TokenScript$ plains_forest | SpellDescription$ Plains and Forest
+SVar:DBIS:DB$ Token | TokenScript$ island_swamp | SpellDescription$ Island and Swamp
+SVar:DBIM:DB$ Token | TokenScript$ island_mountain | SpellDescription$ Island and Mountain
+SVar:DBIF:DB$ Token | TokenScript$ island_forest | SpellDescription$ Island and Forest
+SVar:DBSM:DB$ Token | TokenScript$ swamp_mountain | SpellDescription$ Swamp and Mountain
+SVar:DBSF:DB$ Token | TokenScript$ swamp_forest | SpellDescription$ Swamp and Forest
+SVar:DBMF:DB$ Token | TokenScript$ mountain_forest | SpellDescription$ Mountain and Forest
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigSac | TriggerDescription$ At the beginning of your end step, sacrifice a land.
+SVar:TrigSac:DB$ Sacrifice | SacValid$ Land
+
+Oracle:At the beginning of your upkeep, choose two different basic land types. Create a colorless land token that's the chosen types.\nAt the beginning of your end step, sacrifice a land.
+
+DeckHas:Ability$Token
