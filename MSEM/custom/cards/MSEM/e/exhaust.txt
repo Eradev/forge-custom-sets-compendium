@@ -1,0 +1,8 @@
+Name:Exhaust
+ManaCost:B B
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ -X | NumDef$ -X | IsCurse$ True | SpellDescription$ Target creature gets -X/-X until end of turn, where X is its base toughness.
+SVar:X:Targeted$CardBaseToughness
+
+Oracle:Target creature gets -X/-X until end of turn, where X is its base toughness.
