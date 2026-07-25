@@ -1,0 +1,12 @@
+Name:Mawdryk's Elite
+ManaCost:4 B
+Types:Creature Elf Soldier
+PT:4/3
+
+K:Menace
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Landfall — Whenever a land you control enters, this creature gets +1/+0 and gains deathtouch until end of turn.
+
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +1 | KW$ Deathtouch
+
+Oracle:Menace\nLandfall — Whenever a land you control enters, this creature gets +1/+0 and gains deathtouch until end of turn.

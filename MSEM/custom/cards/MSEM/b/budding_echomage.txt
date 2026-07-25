@@ -1,0 +1,8 @@
+Name:Budding Echomage
+ManaCost:1 U
+Types:Creature Human Wizard
+PT:2/1
+
+A:AB$ CopySpellAbility | Cost$ 3 U T | ValidTgts$ Instant.YouCtrl,Sorcery.YouCtrl | TargetType$ Spell | MayChooseTarget$ True | SpellDescription$ Copy target instant or sorcery spell you control. You may choose new targets for the copy.
+
+Oracle:{3}{U}, {T}: Copy target instant or sorcery spell you control. You may choose new targets for the copy.

@@ -1,0 +1,13 @@
+Name:Curse of the Deadlands
+ManaCost:3 U
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ TrigMill | TriggerZones$ Battlefield | TriggerDescription$ At the beginning of your upkeep, mill a card.
+SVar:TrigMill:DB$ Mill | Defined$ You | NumCards$ 1
+
+T:Mode$ ChangesZone | Origin$ Library | Destination$ Graveyard | ValidCard$ Creature.YouOwn | OptionalDecider$ You | Execute$ TrigToken | TriggerZones$ Battlefield | TriggerDescription$ Whenever a creature card is put into your graveyard from your library, you may exile it. If you do, create a 2/2 black Zombie creature token.
+SVar:TrigToken:AB$ Token | Cost$ ExileAnyGrave<1/Card.TriggeredCard> | TokenScript$ b_2_2_zombie | TokenOwner$ You
+
+Oracle:At the beginning of your upkeep, mill a card.\nWhenever a creature card is put into your graveyard from your library, you may exile it. If you do, create a 2/2 black Zombie creature token.
+
+DeckHas:Ability$Mill|Token

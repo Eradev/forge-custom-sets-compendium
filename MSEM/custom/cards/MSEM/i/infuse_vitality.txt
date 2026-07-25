@@ -1,0 +1,7 @@
+Name:Infuse Vitality
+ManaCost:1 G
+Types:Instant
+
+A:SP$ Animate | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | Power$ 5 | Toughness$ 5 | Keywords$ Trample | Duration$ UntilEndOfTurn | SpellDescription$ Target creature you control has base power and toughness 5/5 and gains trample until end of turn.
+
+Oracle:Target creature you control has base power and toughness 5/5 and gains trample until end of turn.

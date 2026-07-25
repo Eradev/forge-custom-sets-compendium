@@ -1,0 +1,12 @@
+Name:Tharyen's Vanguard
+ManaCost:5 B
+Types:Creature Vampire
+PT:3/3
+
+K:Flying
+
+S:Mode$ Continuous | Affected$ Creature.Vampire+Other+YouCtrl | AddPower$ 1 | AddKeyword$ Menace | Description$ Other Vampire creatures you control get +1/+0 and have menace.
+
+Oracle:Flying\nOther Vampire creatures you control get +1/+0 and have menace.
+
+DeckHints:Type$Vampire

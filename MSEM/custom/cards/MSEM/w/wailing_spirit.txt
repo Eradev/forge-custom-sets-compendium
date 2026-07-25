@@ -1,0 +1,11 @@
+Name:Wailing Spirit
+ManaCost:1 W
+Types:Creature Spirit Cleric
+PT:2/1
+K:Flying
+
+A:AB$ Pump | Cost$ 2 W | ValidTgts$ Creature.Spirit | TgtPrompt$ Select target Spirit creature | NumAtt$ 0 | NumDef$ 1 | SpellDescription$ Target Spirit creature gets +0/+1 until end of turn.
+
+Oracle:Flying\n{2}{W}: Target Spirit creature gets +0/+1 until end of turn.
+
+DeckNeeds:Type$Spirit

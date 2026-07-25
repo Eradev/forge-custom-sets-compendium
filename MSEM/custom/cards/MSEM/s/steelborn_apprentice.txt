@@ -1,0 +1,10 @@
+Name:Steelborn Apprentice
+ManaCost:W
+Types:Creature Human Barbarian Warrior
+PT:1/1
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Equipment.YouCtrl | PresentCompare$ GE1 | Description$ This creature gets +1/+1 as long as you control an Equipment.
+
+Oracle:This creature gets +1/+1 as long as you control an Equipment.
+
+DeckNeeds:Type$Equipment

@@ -1,0 +1,14 @@
+Name:Mawdryk, Endrison Warden
+ManaCost:3 B G
+Types:Legendary Creature Elf Soldier
+PT:4/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.Elf+YouCtrl+!token | TriggerZones$ Battlefield | Execute$ TrigElf | TriggerDescription$ Whenever NICKNAME or another nontoken Elf creature you control enters, create a 1/1 green Elf Druid creature token.
+
+SVar:TrigElf:DB$ Token | TokenScript$ g_1_1_elf_druid | TokenAmount$ 1 | TokenOwner$ You
+
+A:AB$ Destroy | Cost$ B G Sac<2/Elf> | ValidTgts$ Creature.nonElf | TgtPrompt$ Select target non-Elf creature | SpellDescription$ Destroy target non-Elf creature.
+
+Oracle:Whenever Mawdryk or another nontoken Elf creature you control enters, create a 1/1 green Elf Druid creature token.\n{B}{G}, Sacrifice two Elves: Destroy target non-Elf creature.
+
+DeckHints:Type$Elf

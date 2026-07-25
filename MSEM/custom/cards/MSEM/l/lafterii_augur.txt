@@ -1,0 +1,10 @@
+Name:Lafterii Augur
+ManaCost:1 U
+Types:Creature Human Wizard
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReveal | TriggerDescription$ When this creature enters, reveal the top card of your library. If it's an instant or sorcery card, put it into your hand. Otherwise, put it into your graveyard.
+
+SVar:TrigReveal:DB$ Dig | DigNum$ 1 | Reveal$ True | ChangeNum$ All | ChangeValid$ Instant,Sorcery | DestinationZone$ Hand | DestinationZone2$ Graveyard
+
+Oracle:When this creature enters, reveal the top card of your library. If it's an instant or sorcery card, put it into your hand. Otherwise, put it into your graveyard.

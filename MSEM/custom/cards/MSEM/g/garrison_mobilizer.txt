@@ -1,0 +1,10 @@
+Name:Garrison Mobilizer
+ManaCost:3 G W
+Types:Creature Human Soldier
+PT:3/5
+
+T:Mode$ Attacks | ValidCard$ Creature.powerLTtoughness | TriggerZones$ Battlefield | Execute$ TrigUntap | TriggerDescription$ Whenever a creature attacks, if its toughness is greater than its power, untap it.
+
+SVar:TrigUntap:DB$ Untap | Defined$ TriggeredAttackerLKICopy
+
+Oracle:Whenever a creature attacks, if its toughness is greater than its power, untap it.

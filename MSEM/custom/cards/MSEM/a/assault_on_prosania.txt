@@ -1,0 +1,9 @@
+Name:Assault on Prosania
+ManaCost:W W
+Types:Instant
+
+A:SP$ Sacrifice | ValidTgts$ Player | TgtPrompt$ Select target player | SacValid$ Creature.attacking | Amount$ X | SpellDescription$ Target player sacrifices an attacking creature. Bulwark — That player sacrifices two attacking creatures instead if you control a creature with toughness 4 or greater.
+SVar:X:Count$Compare Y GE1.2.1
+SVar:Y:Count$Valid Creature.YouCtrl+toughnessGE4
+
+Oracle:Target player sacrifices an attacking creature.\nBulwark — That player sacrifices two attacking creatures instead if you control a creature with toughness 4 or greater.

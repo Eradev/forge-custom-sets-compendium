@@ -1,0 +1,13 @@
+Name:Magus of Memories
+ManaCost:4 U R
+Types:Creature Human Wizard
+PT:4/5
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ Spells | SVarCompare$ GE5 | Execute$ TrigReturn | TriggerDescription$ At the beginning of your upkeep, if five or more instant and/or sorcery cards are in your graveyard, return an instant or sorcery card at random from your graveyard to your hand.
+
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ChangeType$ Instant.YouOwn,Sorcery.YouOwn | ChangeNum$ 1 | Hidden$ True | Mandatory$ True | AtRandom$ True
+SVar:Spells:Count$ValidGraveyard Instant.YouOwn,Sorcery.YouOwn
+
+Oracle:At the beginning of your upkeep, if five or more instant and/or sorcery cards are in your graveyard, return target instant or sorcery card at random from your graveyard to your hand.
+
+DeckHas:Ability$Graveyard

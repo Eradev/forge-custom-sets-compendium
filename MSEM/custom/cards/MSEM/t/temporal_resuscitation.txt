@@ -1,0 +1,12 @@
+Name:Temporal Resuscitation
+ManaCost:2 B
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature | TgtPrompt$ Select target creature card from a graveyard | GainControl$ True | RememberChanged$ True | SubAbility$ DBTime | SpellDescription$ Put target creature card from a graveyard onto the battlefield under your control. If it doesn't have vanishing, put three time counters on it and it gains vanishing.
+SVar:DBTime:DB$ PutCounter | Defined$ Remembered | CounterType$ TIME | CounterNum$ 3 | ConditionDefined$ Remembered | ConditionPresent$ Card.withVanishing | ConditionCompare$ EQ0 | SubAbility$ DBVanishing
+SVar:DBVanishing:DB$ Pump | Defined$ Remembered | KW$ Vanishing | Duration$ Permanent | ConditionDefined$ Remembered | ConditionPresent$ Card.withVanishing | ConditionCompare$ EQ0 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Put target creature card from a graveyard onto the battlefield under your control. If it doesn't have vanishing, put three time counters on it and it gains vanishing. (At the beginning of your upkeep, remove a time counter from that permanent. When the last is removed, sacrifice it.)
+
+DeckHas:Ability$Graveyard|Counters

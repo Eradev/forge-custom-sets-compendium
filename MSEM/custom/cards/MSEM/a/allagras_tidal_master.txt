@@ -1,0 +1,17 @@
+Name:Allagras, Tidal Master
+ManaCost:3 U U
+Types:Legendary Planeswalker Allagras
+Loyalty:4
+
+A:AB$ Token | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | TokenScript$ u_1_1_merfolk_looting | SpellDescription$ Create a 1/1 blue Merfolk creature token with "When this token dies, draw a card, then discard a card."
+
+A:AB$ Pump | Cost$ SubCounter<1/LOYALTY> | Planeswalker$ True | NumAtt$ -2 | NumDef$ +0 | IsCurse$ True | ValidTgts$ Creature | Duration$ UntilYourNextUpkeep | SubAbility$ DBDelTrig | SpellDescription$ Target creature gets -2/-0 until your next upkeep and attacks during its controller's next turn if able.
+SVar:DBDelTrig:DB$ DelayedTrigger | Mode$ Phase | Phase$ Upkeep-> | ValidPlayer$ Player.controlsCard.IsTriggerRemembered | UpcomingTurn$ True | RememberObjects$ Targeted | Execute$ TrigMustAttack | Static$ True | TriggerDescription$ That creature attacks during its controller's next turn if able.
+SVar:TrigMustAttack:DB$ Effect | RememberObjects$ DelayTriggerRemembered | StaticAbilities$ MustAttack
+SVar:MustAttack:Mode$ MustAttack | ValidCreature$ Creature.IsRemembered | Description$ This creature attacks during its controller's next turn if able.
+
+A:AB$ Effect | Cost$ SubCounter<7/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Allagras, Tidal Master | Image$ emblem_allagras_tidal_master | StaticAbilities$ STDebuff,STMustAttack | Duration$ Permanent | SpellDescription$ You get an emblem with "Creatures your opponents control get -4/-0 and attack each combat if able."
+SVar:STDebuff:Mode$ Continuous | Affected$ Creature.OppCtrl | AddPower$ -4 | Description$ Creatures your opponents control get -4/-0
+SVar:STMustAttack:Mode$ MustAttack | ValidCreature$ Creature.OppCtrl | Description$ Creatures your opponents control attack each combat if able.
+
+Oracle:[+1]: Create a 1/1 blue Merfolk creature token with "When this token dies, draw a card, then discard a card."\n[-1]: Target creature gets -2/-0 until your next upkeep and attacks during its controller's next turn if able.\n[-7]: You get an emblem with "Creatures your opponents control get -4/-0 and attack each combat if able."

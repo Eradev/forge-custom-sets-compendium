@@ -1,0 +1,18 @@
+Name:Tharyen, Lord of Subturgia
+ManaCost:5 B B
+Types:Legendary Creature Vampire Warrior
+PT:5/4
+
+K:Flying
+K:Lifelink
+
+T:Mode$ LifeGained | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ Whenever you gain life, each opponent loses 1 life.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ Opponent | LifeAmount$ 1
+
+A:AB$ Token | Cost$ 4 B B | TokenScript$ b_1_1_vampire_lifelink | TokenAmount$ X | TokenOwner$ You | SpellDescription$ Create a 1/1 black Vampire creature token with lifelink for each nontoken creature that died this turn.
+
+SVar:X:Count$ThisTurnEntered_Graveyard_from_Battlefield_Creature.!token
+
+Oracle:Flying, lifelink\nWhenever you gain life, each opponent loses 1 life.\n{4}{B}{B}: Create a 1/1 black Vampire creature token with lifelink for each nontoken creature that died this turn.
+
+DeckHas:Ability$LifeGain|Token

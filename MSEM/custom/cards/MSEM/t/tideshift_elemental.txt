@@ -1,0 +1,10 @@
+Name:Tideshift Elemental
+ManaCost:2 U U
+Types:Creature Elemental Wizard
+PT:2/2
+
+K:Vanishing:4
+
+A:AB$ TapOrUntap | Cost$ SubCounter<1/TIME> | ValidTgts$ Creature | TgtPrompt$ Select target creature | Optional$ True | SpellDescription$ You may tap or untap target creature.
+
+Oracle:Vanishing 4 (This creature enters with four time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nRemove a time counter from this creature: You may tap or untap target creature.

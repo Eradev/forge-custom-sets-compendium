@@ -1,0 +1,7 @@
+Name:Stay on Edge     
+ManaCost:1 W
+Types:Sorcery
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ +1 | KW$ Double Strike | SpellDescription$ Target creature gets +1/+0 and gains double strike until end of turn.
+
+Oracle:Target creature gets +1/+0 and gains double strike until end of turn.

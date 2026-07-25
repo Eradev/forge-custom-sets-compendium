@@ -1,0 +1,12 @@
+Name:Counteroffense
+ManaCost:1 G
+Types:Enchantment Aura
+
+K:Enchant:Creature
+SVar:AttachAILogic:Pump
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddToughness$ 1 | Description$ Enchanted creature gets +0/+1.
+
+S:Mode$ CombatDamageToughness | ValidCard$ Creature.EnchantedBy | Description$ Enchanted creature deals combat damage equal to its toughness rather than its power.
+
+Oracle:Enchant creature\nEnchanted creature gets +0/+1.\nEnchanted creature deals combat damage equal to its toughness rather than its power.

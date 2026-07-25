@@ -1,0 +1,8 @@
+Name:Stronghold Recruit
+ManaCost:2 G
+Types:Creature Human Soldier
+PT:3/3
+
+A:AB$ Pump | Cost$ 2 G | Defined$ Self | NumAtt$ +2 | NumDef$ +2 | Duration$ UntilEndOfTurn | ActivationLimit$ 1 | IsPresent$ Creature.YouCtrl+toughnessGE4 | PresentCompare$ GE1 | SpellDescription$ Bulwark — This creature gets +2/+2 until end of turn. Activate only once each turn and only if you control a creature with toughness 4 or greater.
+
+Oracle:Bulwark — {2}{G}: This creature gets +2/+2 until end of turn. Activate only once each turn and only if you control a creature with toughness 4 or greater.

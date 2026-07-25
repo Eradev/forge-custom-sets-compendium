@@ -1,0 +1,8 @@
+Name:Drow Bloodmage
+ManaCost:4 B
+Types:Creature Elf Druid
+PT:3/4
+
+A:AB$ ChangeZone | Cost$ T Sac<1/Creature;Land/creature or land> | Origin$ Library | Destination$ Hand | ChangeType$ Swamp | ChangeNum$ 1 | Reveal$ True | Shuffle$ True | SpellDescription$ Search your library for a Swamp card, reveal it, put it into your hand, then shuffle.
+
+Oracle:{T}, Sacrifice a creature or land: Search your library for a Swamp card, reveal it, put it into your hand, then shuffle.

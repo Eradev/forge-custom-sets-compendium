@@ -1,0 +1,16 @@
+Name:Koth, One True Hero
+ManaCost:2 R R
+Types:Legendary Planeswalker Koth
+Loyalty:4
+
+A:AB$ ChangeZone | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Origin$ Library | Destination$ Hand | ChangeType$ Mountain | ChangeNum$ 1 | Reveal$ True | Shuffle$ True | SpellDescription$ Search your library for a Mountain card, reveal it, put it into your hand, then shuffle.
+
+A:AB$ DealDamage | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ X | DamageSource$ Self | SpellDescription$ NICKNAME deals damage to target creature equal to the number of Mountains you control.
+
+A:AB$ Token | Cost$ SubCounter<7/LOYALTY> | Ultimate$ True | Planeswalker$ True | TokenScript$ r_3_1_elemental_trample_haste | TokenAmount$ X | TokenOwner$ You | SpellDescription$ Create X 3/1 red Elemental creature tokens with trample and haste, where X is the number of Mountains you control.
+
+SVar:X:Count$Valid Mountain.YouCtrl
+
+Oracle:+1: Search your library for a Mountain card, reveal it, put it into your hand, then shuffle.\n-2: Koth deals damage to target creature equal to the number of Mountains you control.\n-7: Create X 3/1 red Elemental creature tokens with trample and haste, where X is the number of Mountains you control.
+
+DeckHas:Ability$Token

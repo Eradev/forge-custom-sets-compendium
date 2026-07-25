@@ -1,0 +1,10 @@
+Name:Continental Collapse
+ManaCost:4 R
+Types:Sorcery
+
+A:SP$ Destroy | ValidTgts$ Land | TgtPrompt$ Select target land | RememberDestroyed$ True | SubAbility$ DBDamage | SpellDescription$ Destroy target land. CARDNAME deals 2 damage to that land's controller.
+
+SVar:DBDamage:DB$ DealDamage | Defined$ RememberedController | NumDmg$ 2 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Destroy target land. Continental Collapse deals 2 damage to that land's controller.

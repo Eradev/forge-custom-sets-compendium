@@ -1,0 +1,10 @@
+Name:Mawdryk's Accusation
+ManaCost:4 B
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Creature.nonElf | TgtPrompt$ Select target non-Elf creature | RememberDestroyed$ True | SubAbility$ DBLoseLife | SpellDescription$ Destroy target non-Elf creature. Its controller loses 1 life for each Elf you control.
+
+SVar:DBLoseLife:DB$ LoseLife | Defined$ RememberedController | LifeAmount$ X
+SVar:X:Count$Valid Elf.YouCtrl
+
+Oracle:Destroy target non-Elf creature. Its controller loses 1 life for each Elf you control.

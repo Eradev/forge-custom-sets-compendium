@@ -1,0 +1,14 @@
+Name:Ill-Fated Profit
+ManaCost:2 B
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ You | SetMaxHandSize$ Unlimited | Description$ You have no maximum hand size.
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ At the beginning of your upkeep, draw a card.
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ At the beginning of your end step, you lose 1 life for each card in your hand.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ X
+SVar:X:Count$CardsInYourHand
+
+Oracle:You have no maximum hand size.\nAt the beginning of your upkeep, draw a card.\nAt the beginning of your end step, you lose 1 life for each card in your hand.

@@ -1,0 +1,13 @@
+Name:Majestic Garrison
+ManaCost:3 W
+Types:Creature Wall
+PT:0/6
+
+K:Flash
+
+K:Defender
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigIndestructible | TriggerDescription$ When this creature enters, another target creature you control gains indestructible until end of turn.
+SVar:TrigIndestructible:DB$ Pump | ValidTgts$ Creature.Other+YouCtrl | TgtPrompt$ Select another target creature you control | KW$ Indestructible
+
+Oracle:Flash\nDefender\nWhen this creature enters, another target creature you control gains indestructible until end of turn.

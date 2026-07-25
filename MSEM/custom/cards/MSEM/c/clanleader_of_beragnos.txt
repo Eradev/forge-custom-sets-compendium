@@ -1,0 +1,10 @@
+Name:Clanleader of Beragnos
+ManaCost:R R
+Types:Creature Goblin
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Creature.Goblin+Other+YouCtrl | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Haste | IsPresent$ Equipment.AttachedTo Card.Self | PresentCompare$ GE1 | Description$ Armed — Other Goblin creatures you control get +1/+1 and have haste as long as this creature is equipped.
+
+Oracle:Armed — Other Goblin creatures you control get +1/+1 and have haste as long as this creature is equipped.
+
+DeckHints:Type$Goblin

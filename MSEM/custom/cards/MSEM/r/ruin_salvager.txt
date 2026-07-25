@@ -1,0 +1,10 @@
+Name:Ruin Salvager
+ManaCost:6
+Types:Artifact Creature Construct
+PT:4/4
+
+A:AB$ ChangeZone | Cost$ 4 Sac<1/CARDNAME/this creature> | TgtZone$ Graveyard | ValidTgts$ Card.YouOwn | TgtPrompt$ Select target card in your graveyard | Origin$ Graveyard | Destination$ Hand | SpellDescription$ Return target card from your graveyard to your hand.
+
+Oracle:{4}, Sacrifice this creature: Return target card from your graveyard to your hand.
+
+DeckHas:Ability$Graveyard

@@ -1,0 +1,11 @@
+Name:Doomed Fate     
+ManaCost:1 W
+Types:Enchantment
+
+K:Vanishing:4
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self+counters_EQ0_TIME | Origin$ Battlefield | Destination$ Any | Execute$ DBDestroy | TriggerDescription$ When this enchantment leaves the battlefield, if it had no time counters on it, destroy all nonland permanents.
+
+SVar:DBDestroy:DB$ DestroyAll | ValidCards$ Permanent.nonLand | SpellDescription$ Destroy all nonland permanents.
+
+Oracle:Vanishing 4 (This permanent enters with four time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen this enchantment leaves the battlefield, if it had no time counters on it, destroy all nonland permanents.

@@ -1,0 +1,11 @@
+Name:Atemporal Blade
+ManaCost:4
+Types:Artifact Equipment
+
+K:Vanishing:4
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 3 | AddToughness$ 3 | Description$ Equipped creature gets +3/+3.
+
+K:Equip:2
+
+Oracle:Vanishing 4 (This permanent enters with four time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nEquipped creature gets +3/+3.\nEquip {2}

@@ -1,0 +1,5 @@
+Name:Voice of the Wild
+ManaCost:2 G
+Types:Creature Wolf
+PT:2/4
+Oracle:

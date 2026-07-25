@@ -1,0 +1,10 @@
+Name:Bloodrite Fiend
+ManaCost:5 B
+Types:Creature Vampire
+PT:4/2
+
+K:Flying
+
+A:AB$ Regenerate | Cost$ 1 Sac<1/Creature.Other/another creature> | ValidTgts$ Creature.Vampire | TgtPrompt$ Select target Vampire | SpellDescription$ Regenerate target Vampire.
+
+Oracle:Flying\n{1}, Sacrifice another creature: Regenerate target Vampire.

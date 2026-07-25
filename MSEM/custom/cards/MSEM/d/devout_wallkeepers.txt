@@ -1,0 +1,5 @@
+Name:Devout Wallkeepers
+ManaCost:4 W
+Types:Creature Human Soldier
+PT:3/5
+Oracle:

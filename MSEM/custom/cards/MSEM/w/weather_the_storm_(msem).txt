@@ -1,0 +1,7 @@
+Name:Weather the Storm (MSEM)
+ManaCost:3 U
+Types:Instant
+
+A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | NumDef$ +2 | KW$ Hexproof | SpellDescription$ Creatures you control get +0/+2 and gain hexproof until end of turn.
+
+Oracle:Creatures you control get +0/+2 and gain hexproof until end of turn.

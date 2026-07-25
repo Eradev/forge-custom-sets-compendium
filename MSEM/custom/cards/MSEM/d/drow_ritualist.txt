@@ -1,0 +1,11 @@
+Name:Drow Ritualist
+ManaCost:4 B
+Types:Creature Elf Druid
+PT:3/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDrain | TriggerDescription$ Landfall — Whenever a land you control enters, target player loses 1 life and you gain 1 life.
+
+SVar:TrigDrain:DB$ LoseLife | ValidTgts$ Player | LifeAmount$ 1 | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 1
+
+Oracle:Landfall — Whenever a land you control enters, target player loses 1 life and you gain 1 life.

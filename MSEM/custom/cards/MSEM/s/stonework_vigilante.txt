@@ -1,0 +1,5 @@
+Name:Stonework Vigilante
+ManaCost:5
+Types:Artifact Creature Golem
+PT:3/4
+Oracle:

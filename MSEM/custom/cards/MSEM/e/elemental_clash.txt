@@ -1,0 +1,12 @@
+Name:Elemental Clash
+ManaCost:6 U R
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Exile | TargetMin$ 0 | TargetMax$ 3 | ValidTgts$ Instant.YouOwn,Sorcery.YouOwn | TgtPrompt$ Select up to three instant and/or sorcery cards from your graveyard | RememberChanged$ True | SubAbility$ DBCopyCast | SpellDescription$ Exile up to three instant or sorcery cards from your graveyard. You may cast a copy of each card exiled this way without paying its mana cost.
+
+SVar:DBCopyCast:DB$ Play | Valid$ Card.IsRemembered | ValidZone$ Exile | Controller$ You | CopyCard$ True | WithoutManaCost$ True | ValidSA$ Spell | Optional$ True | Amount$ All | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Exile up to three instant or sorcery cards from your graveyard. You may cast a copy of each card exiled this way without paying its mana cost.
+
+DeckHints:Ability$Graveyard

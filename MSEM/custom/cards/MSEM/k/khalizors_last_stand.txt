@@ -1,0 +1,11 @@
+Name:Khalizors' Last Stand
+ManaCost:5 R R
+Types:Sorcery
+
+A:SP$ GainControl | ValidTgts$ Creature | TgtPrompt$ Select target creature | LoseControl$ EOT | ActivationPhases$ Main2 | PlayerTurn$ True | SubAbility$ DBUntap | SpellDescription$ Cast this spell only during your postcombat main phase. Gain control of target creature until end of turn. Untap all creatures you control. They gain haste until end of turn. After this phase, there is an additional combat phase followed by an additional main phase.
+
+SVar:DBUntap:DB$ UntapAll | ValidCards$ Creature.YouCtrl | SubAbility$ DBHaste
+SVar:DBHaste:DB$ PumpAll | ValidCards$ Creature.YouCtrl | KW$ Haste | Duration$ UntilEndOfTurn | SubAbility$ DBAddCombat
+SVar:DBAddCombat:DB$ AddPhase | ExtraPhase$ Combat | FollowedBy$ Main2
+
+Oracle:Cast this spell only during your postcombat main phase.\nGain control of target creature until end of turn. Untap all creatures you control. They gain haste until end of turn. After this phase, there is an additional combat phase followed by an additional main phase.

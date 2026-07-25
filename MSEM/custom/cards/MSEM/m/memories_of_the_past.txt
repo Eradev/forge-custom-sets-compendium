@@ -1,0 +1,9 @@
+Name:Memories of the Past
+ManaCost:5 U
+Types:Sorcery
+
+A:SP$ Draw | NumCards$ X | SpellDescription$ Draw a card for each instant and sorcery card in your graveyard.
+
+SVar:X:Count$ValidGraveyard Instant.YouOwn,Sorcery.YouOwn
+
+Oracle:Draw a card for each instant and sorcery card in your graveyard.

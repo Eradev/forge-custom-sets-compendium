@@ -1,0 +1,9 @@
+Name:Sigil of Destruction
+ManaCost:3
+Types:Artifact
+
+A:AB$ Mana | Cost$ T | Produced$ Combo B R | SpellDescription$ Add {B} or {R}.
+
+A:AB$ Mana | Cost$ T Sac<1/CARDNAME/this artifact> | Produced$ B R | SpellDescription$ Add {B}{R}.
+
+Oracle:{T}: Add {B} or {R}.\n{T}, Sacrifice this artifact: Add {B}{R}.

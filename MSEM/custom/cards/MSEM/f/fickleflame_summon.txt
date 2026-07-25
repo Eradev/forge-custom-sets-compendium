@@ -1,0 +1,15 @@
+Name:Fickleflame Summon
+ManaCost:2 R
+Types:Creature Elemental Wizard
+PT:2/2
+
+K:Vanishing:3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this creature enters or leaves the battlefield, draw a card, then discard a card.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this creature enters or leaves the battlefield, draw a card, then discard a card.
+
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1 | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ You | NumCards$ 1 | Mode$ YouChoose
+
+Oracle:Vanishing 3 (This creature enters with three time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen this creature enters or leaves the battlefield, draw a card, then discard a card.

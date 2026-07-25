@@ -1,0 +1,13 @@
+Name:Unstable Footing (MSEM)
+ManaCost:no cost
+Types:Land
+
+K:Vanishing:2
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self+counters_EQ0_TIME | Origin$ Battlefield | Destination$ Graveyard | Execute$ TrigSearch | TriggerDescription$ When this land is put into your graveyard from the battlefield, if it had no time counters on it, search your library for a basic land card, put it onto the battlefield, then shuffle.
+
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Land.Basic | ChangeTypeDesc$ basic land card | ChangeNum$ 1
+
+Oracle:Vanishing 2 (This permanent enters with two time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\n{T}: Add {C}.\nWhen this land is put into your graveyard from the battlefield, if it had no time counters on it, search your library for a basic land card, put it onto the battlefield, then shuffle.

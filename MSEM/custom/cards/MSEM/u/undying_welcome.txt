@@ -1,0 +1,11 @@
+Name:Undying Welcome
+ManaCost:1 B
+Types:Instant
+
+A:SP$ Token | TokenScript$ b_2_2_zombie | TokenAmount$ 1 | TokenOwner$ You | SubAbility$ DBSacrifice | SpellDescription$ Create a 2/2 black Zombie creature token, then sacrifice a creature.
+
+SVar:DBSacrifice:DB$ Sacrifice | SacValid$ Creature.YouCtrl | Amount$ 1
+
+Oracle:Create a 2/2 black Zombie creature token, then sacrifice a creature.
+
+DeckHas:Ability$Token

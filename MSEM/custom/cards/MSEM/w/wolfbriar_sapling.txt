@@ -1,0 +1,11 @@
+Name:Wolfbriar Sapling
+ManaCost:3 G G
+Types:Creature Elemental
+PT:5/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigWolf | TriggerDescription$ When this creature enters, if you control seven or more lands, create a 2/2 green Wolf creature token.
+
+SVar:TrigWolf:DB$ Token | TokenScript$ g_2_2_wolf | TokenAmount$ 1 | TokenOwner$ You | ConditionCheckSVar$ Lands | ConditionSVarCompare$ GE7
+SVar:Lands:Count$Valid Land.YouCtrl
+
+Oracle:When this creature enters, if you control seven or more lands, create a 2/2 green Wolf creature token.

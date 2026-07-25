@@ -1,0 +1,10 @@
+Name:Grace of Gendra
+ManaCost:3 G
+Types:Creature Dryad
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Creature.Dryad+YouCtrl+Other | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Hexproof | Description$ Other Dryad creatures you control get +1/+1 and have hexproof.
+
+Oracle:Other Dryad creatures you control get +1/+1 and have hexproof.
+
+DeckHints:Type$Dryad

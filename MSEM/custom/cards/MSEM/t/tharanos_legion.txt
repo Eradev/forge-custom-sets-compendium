@@ -1,0 +1,11 @@
+Name:Tharanos' Legion
+ManaCost:5 G G
+Types:Creature Human Soldier
+PT:4/6
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ Bulwark — When this creature enters, draw a card for each creature you control with toughness 4 or greater.
+
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ X
+SVar:X:Count$Valid Creature.YouCtrl+toughnessGE4
+
+Oracle:Bulwark — When this creature enters, draw a card for each creature you control with toughness 4 or greater.

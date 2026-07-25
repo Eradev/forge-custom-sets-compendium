@@ -1,0 +1,9 @@
+Name:Beragnian Intimidator
+ManaCost:5 R
+Types:Creature Human Barbarian Warrior
+PT:5/4
+
+T:Mode$ Attacks | ValidCard$ Card.Self | IsPresent$ Card.Self+equipped | Execute$ TrigCanNotBlock | TriggerDescription$ Armed — Whenever this creature attacks, if it's equipped, target creature can't block this turn.
+SVar:TrigCanNotBlock:DB$ Pump | ValidTgts$ Creature | KW$ HIDDEN CARDNAME can't block. | IsCurse$ True | SpellDescription$ Target creature can't block this turn.
+
+Oracle:Armed — Whenever this creature attacks, if it's equipped, target creature can't block this turn.

@@ -1,0 +1,10 @@
+Name:Hordedriver Enthusiast
+ManaCost:3 R
+Types:Creature Human Barbarian Warrior
+PT:3/3
+
+T:Mode$ Attacks | ValidCard$ Card.Self | IsPresent$ Card.Self+equipped | PresentCompare$ GE1 | Execute$ TrigPump | TriggerDescription$ Armed — Whenever this creature attacks, if it's equipped, creatures you control get +1/+0 and gain trample until end of turn.
+
+SVar:TrigPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | KW$ Trample | Duration$ UntilEndOfTurn
+
+Oracle:Armed — Whenever this creature attacks, if it's equipped, creatures you control get +1/+0 and gain trample until end of turn.

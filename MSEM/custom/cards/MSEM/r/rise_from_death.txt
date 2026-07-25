@@ -1,0 +1,23 @@
+Name:Rise from Death
+ManaCost:3 U B
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExileLibrary | TriggerDescription$ When this enchantment enters, exile all cards from your library.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigShuffleGraveyard | TriggerDescription$ When this enchantment is no longer on the battlefield, shuffle your graveyard into your library.
+
+SVar:TrigExileLibrary:DB$ ChangeZoneAll | ChangeType$ Card.YouOwn | Origin$ Library | Destination$ Exile
+SVar:TrigShuffleGraveyard:DB$ ChangeZoneAll | ChangeType$ Card.YouOwn | Origin$ Graveyard | Destination$ Library | Shuffle$ True
+
+R:Event$ Draw | ActiveZones$ Battlefield | ValidPlayer$ You | ReplaceWith$ CheckLoseCondition | Description$ If you would draw a card, instead return a card from your graveyard to your hand. If you can't, you lose the game.
+SVar:CheckLoseCondition:DB$ LosesGame | Defined$ You | ConditionCheckSVar$ CardsInGraveyard | ConditionSVarCompare$ EQ0 | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Hidden$ True | Mandatory$ True | ChangeType$ Card.YouOwn | ChangeNum$ 1 | Origin$ Graveyard | Destination$ Hand
+SVar:CardsInGraveyard:Count$ValidGraveyard Card.YouOwn
+
+R:Event$ Moved | ActiveZones$ Battlefield | Destination$ Graveyard | ValidCard$ Card.!token+YouOwn | ReplaceWith$ DBExile | Description$ If a card would be put into your graveyard from anywhere, exile it instead.
+SVar:DBExile:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Exile | Defined$ ReplacedCard
+
+Oracle:When this enchantment enters, exile all cards from your library. When this enchantment is no longer on the battlefield, shuffle your graveyard into your library.\nIf you would draw a card, instead return a card from your graveyard to your hand. If you can't, you lose the game.\nIf a card would be put into your graveyard from anywhere, exile it instead.
+
+SVar:NonStackingEffect:True
+AI:RemoveDeck:Random
+DeckHas:Ability$Graveyard

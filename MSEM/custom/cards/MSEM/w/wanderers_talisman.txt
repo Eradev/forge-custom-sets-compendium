@@ -1,0 +1,13 @@
+Name:Wanderer's Talisman
+ManaCost:3
+Types:Artifact
+
+A:AB$ ChangeZone | Cost$ 3 T Sac<1/CARDNAME/this artifact> | Origin$ Library | Destination$ Library | ChangeType$ Land.Basic | ChangeTypeDesc$ basic land card | ChangeNum$ 2 | RememberChanged$ True | Reveal$ True | Shuffle$ False | SubAbility$ DBBattlefield | SpellDescription$ Search your library for up to two basic land cards, reveal those cards, and put one onto the battlefield tapped and the other into your hand, then shuffle.
+
+SVar:DBBattlefield:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Land.IsRemembered | ChangeNum$ 1 | Mandatory$ True | NoLooking$ True | Tapped$ True | Shuffle$ False | SubAbility$ DBHand
+
+SVar:DBHand:DB$ ChangeZoneAll | Origin$ Library | Destination$ Hand | ChangeType$ Land.IsRemembered | Shuffle$ True | SubAbility$ DBCleanup
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:{3}, {T}, Sacrifice this artifact: Search your library for up to two basic land cards, reveal those cards, and put one onto the battlefield tapped and the other into your hand, then shuffle.

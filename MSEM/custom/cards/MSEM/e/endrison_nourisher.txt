@@ -1,0 +1,10 @@
+Name:Endrison Nourisher
+ManaCost:2 B G
+Types:Creature Elf Druid
+PT:3/3
+
+S:Mode$ Continuous | Affected$ Land.YouCtrl | MayPlay$ True | AffectedZone$ Graveyard | Description$ You may play lands from your graveyard.
+
+A:AB$ ChangeZone | Cost$ B G Sac<3/Land> | Defined$ Self | Origin$ Graveyard | Destination$ Hand | ActivationZone$ Graveyard | SpellDescription$ Return this card from your graveyard to your hand.
+
+Oracle:You may play lands from your graveyard.\n{B}{G}, Sacrifice three lands: Return this card from your graveyard to your hand.

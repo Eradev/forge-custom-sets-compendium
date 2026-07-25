@@ -1,0 +1,13 @@
+Name:Vestige of Evil
+ManaCost:1 U B
+Types:Creature Zombie
+PT:2/3
+
+A:AB$ Animate | Cost$ 1 U B ExileFromGrave<1/Creature/creature card> | Defined$ Self | Power$ X | Toughness$ Y | Duration$ UntilEndOfTurn | SpellDescription$ This creature has base power and toughness equal to the exiled creature's power and toughness until end of turn.
+
+SVar:X:Exiled$CardPower
+SVar:Y:Exiled$CardToughness
+
+Oracle:{1}{U}{B}, Exile a creature card from your graveyard: This creature has base power and toughness equal to the exiled creature's power and toughness until end of turn.
+
+DeckHas:Ability$Graveyard

@@ -1,0 +1,11 @@
+Name:Merfolk Visionary
+ManaCost:3 U
+Types:Creature Merfolk
+PT:2/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.Merfolk+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigScry | TriggerDescription$ Whenever this creature or another Merfolk creature you control enters, scry 2.
+SVar:TrigScry:DB$ Scry | ScryNum$ 2
+
+Oracle:Whenever this creature or another Merfolk creature you control enters, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)
+
+DeckHints:Type$Merfolk

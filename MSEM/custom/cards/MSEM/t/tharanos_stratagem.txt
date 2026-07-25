@@ -1,0 +1,12 @@
+Name:Tharanos' Stratagem
+ManaCost:1 G
+Types:Instant
+
+A:SP$ Branch | BranchConditionSVar$ X | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBEffect | FalseSubAbility$ DBPump | SpellDescription$ Bulwark — If you control a creature with toughness 4 or greater, each creature you control assigns combat damage equal to its toughness rather than its power this turn. Creatures you control get +0/+2 until end of turn.
+
+SVar:DBEffect:DB$ Effect | StaticAbilities$ CombatDamageToughness | Duration$ UntilEndOfTurn | SubAbility$ DBPump
+SVar:DBPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +0 | NumDef$ +2 | Duration$ UntilEndOfTurn
+SVar:CombatDamageToughness:Mode$ CombatDamageToughness | ValidCard$ Creature.YouCtrl | Description$ Each creature you control assigns combat damage equal to its toughness rather than its power.
+SVar:X:Count$Valid Creature.YouCtrl+toughnessGE4
+
+Oracle:Bulwark — If you control a creature with toughness 4 or greater, each creature you control assigns combat damage equal to its toughness rather than its power this turn.\nCreatures you control get +0/+2 until end of turn.

@@ -1,0 +1,15 @@
+Name:Graveborn Usurper
+ManaCost:3 U B
+Types:Creature Zombie Shapeshifter
+PT:0/0
+
+K:ETBReplacement:Copy:DBCopy:Optional
+
+A:AB$ Clone | Cost$ 2 U B ExileAnyGrave<1/Creature/creature card> | Defined$ Exiled | GainThisAbility$ True | SpellDescription$ This creature becomes a copy of the exiled card, except it has this ability.
+
+SVar:DBCopy:DB$ Clone | Choices$ Creature.Other | ChoiceZone$ Graveyard | AddAbilities$ CopyAbility | SpellDescription$ You may have this creature enter as a copy of any creature card in a graveyard, except it has “{2}{U}{B}, Exile a creature card from a graveyard: This creature becomes a copy of the exiled card, except it has this ability.”
+SVar:CopyAbility:AB$ Clone | Cost$ 2 U B ExileAnyGrave<1/Creature/creature card> | Defined$ Exiled | GainThisAbility$ True | SpellDescription$ This creature becomes a copy of the exiled card, except it has this ability.
+
+Oracle:You may have this creature enter as a copy of any creature card in a graveyard, except it has “{2}{U}{B}, Exile a creature card from a graveyard: This creature becomes a copy of the exiled card, except it has this ability.”
+
+DeckHints:Ability$Graveyard

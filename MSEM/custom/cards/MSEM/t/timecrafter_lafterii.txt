@@ -1,0 +1,12 @@
+Name:Timecrafter Lafterii
+ManaCost:4 R
+Types:Creature Human Wizard
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigTime | TriggerDescription$ When this creature enters, choose target permanent with one or more time counters on it, then put two time counters on it or remove two time counters from it.
+
+SVar:TrigTime:DB$ AddOrRemoveCounter | ValidTgts$ Permanent.counters_GE1_TIME | TgtPrompt$ Select target permanent with one or more time counters on it | CounterType$ TIME | CounterNum$ 2
+
+Oracle:When this creature enters, choose target permanent with one or more time counters on it, then put two time counters on it or remove two time counters from it.
+
+DeckHas:Ability$Counters

@@ -1,0 +1,9 @@
+Name:Rallios' Demise
+ManaCost:3 W
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Creature.attacking,Creature.blocking | TgtPrompt$ Select target attacking or blocking creature | SpellDescription$ Destroy target attacking or blocking creature.
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ 1 | EffectZone$ All | IsPresent$ Creature.YouCtrl+toughnessGE4 | Description$ Bulwark — This spell costs {1} less to cast if you control a creature with toughness 4 or greater.
+
+Oracle:Destroy target attacking or blocking creature.\nBulwark — This spell costs {1} less to cast if you control a creature with toughness 4 or greater.

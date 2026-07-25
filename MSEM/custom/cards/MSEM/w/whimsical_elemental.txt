@@ -1,0 +1,13 @@
+Name:Whimsical Elemental
+ManaCost:3 U R
+Types:Creature Elemental Wizard
+PT:2/3
+
+K:Flying
+K:Prowess
+
+A:AB$ Pump | Cost$ U R ExileFromGrave<1/Instant;Sorcery/instant or sorcery card> | Defined$ Self | NumAtt$ +1 | NumDef$ +1 | Duration$ UntilEndOfTurn | SpellDescription$ This creature gets +1/+1 until end of turn.
+
+Oracle:Flying, prowess\n{U}{R}, Exile an instant or sorcery card from your graveyard: This creature gets +1/+1 until end of turn.
+
+DeckHas:Ability$Graveyard

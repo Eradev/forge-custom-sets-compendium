@@ -1,0 +1,13 @@
+Name:Waning Behemoth
+ManaCost:1 G G
+Types:Creature Elemental Giant
+PT:6/6
+
+K:Vanishing:1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounters | TriggerDescription$ When this creature enters, you may pay {X}. If you do, put X time counters on it.
+
+SVar:TrigCounters:AB$ PutCounter | Cost$ X | Defined$ Self | CounterType$ TIME | CounterNum$ X
+SVar:X:Count$xPaid
+
+Oracle:Vanishing 1 (This creature enters with a time counter on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen this creature enters, you may pay {X}. If you do, put X time counters on it.

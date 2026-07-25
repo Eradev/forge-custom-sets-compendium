@@ -1,0 +1,12 @@
+Name:Voice of the Sisterhood
+ManaCost:4 G
+Types:Creature Dryad
+PT:2/5
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ At the beginning of your upkeep, you may pay {1}{G}. If you do, create a 1/1 green Dryad creature token with “Sacrifice this token: Add one mana of any color.”
+
+SVar:TrigToken:AB$ Token | Cost$ 1 G | TokenScript$ g_1_1_dryad_sac
+
+Oracle:At the beginning of your upkeep, you may pay {1}{G}. If you do, create a 1/1 green Dryad creature token with “Sacrifice this token: Add one mana of any color.”
+
+DeckHas:Ability$Token

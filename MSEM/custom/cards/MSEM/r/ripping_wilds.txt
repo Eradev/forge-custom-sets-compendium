@@ -1,0 +1,12 @@
+Name:Ripping Wilds
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ ChangeZone | Cost$ 2 T Sac<1/CARDNAME/this land> | Origin$ Hand | Destination$ Battlefield | ChangeType$ Land.Basic+YouCtrl | ChangeTypeDesc$ basic land card | ChangeNum$ 2 | TargetMin$ 0 | Tapped$ True | SpellDescription$ You may put up to two basic land cards from your hand onto the battlefield tapped.
+
+Oracle:This land enters tapped.\n{T}: Add {C}.\n{2}, {T}, Sacrifice this land: You may put up to two basic land cards from your hand onto the battlefield tapped.

@@ -1,0 +1,9 @@
+Name:Sentinel's Longbow
+ManaCost:2
+Types:Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddKeyword$ Vigilance & Reach | Description$ Equipped creature has vigilance and reach.
+
+K:Equip:3
+
+Oracle:Equipped creature has vigilance and reach.\nEquip {3}

@@ -1,0 +1,10 @@
+Name:Clashborn Stormling
+ManaCost:2 U
+Types:Creature Elemental
+PT:2/3
+
+K:Flying
+
+K:Vanishing:3
+
+Oracle:Flying\nVanishing 3 (This creature enters with three time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)

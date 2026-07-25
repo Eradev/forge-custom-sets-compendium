@@ -1,0 +1,10 @@
+Name:Bolstered Stockpiles
+ManaCost:2 W W
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl | AffectedZone$ Battlefield | AddPower$ AffectedX | AddToughness$ AffectedX | AddSVar$ EqMe & EnMe | Description$ Each creature you control gets +1/+1 for each permanent attached to it.
+SVar:AffectedX:Count$Valid Permanent.Attached
+SVar:EqMe:SVar:EquipMe:Multiple
+SVar:EnMe:SVar:EnchantMe:Multiple
+
+Oracle:Each creature you control gets +1/+1 for each permanent attached to it.

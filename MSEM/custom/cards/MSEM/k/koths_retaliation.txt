@@ -1,0 +1,13 @@
+Name:Koth's Retaliation
+ManaCost:3 R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ 4 | DamageSource$ Self | SubAbility$ DBDelayedTrigger | SpellDescription$ CARDNAME deals 4 damage to target creature.
+
+SVar:DBDelayedTrigger:DB$ DelayedTrigger | Mode$ ChangesZone | RememberObjects$ Targeted | ValidCard$ Card.IsTriggerRemembered | Origin$ Battlefield | Destination$ Graveyard | ThisTurn$ True | Execute$ TrigExile | SpellDescription$ When that creature dies this turn, exile its controller's graveyard.
+
+SVar:TrigExile:DB$ ChangeZoneAll | Defined$ TriggeredCardController | Origin$ Graveyard | Destination$ Exile
+
+Oracle:Koth's Retaliation deals 4 damage to target creature. When that creature dies this turn, exile its controller's graveyard.
+
+DeckHas:Ability$Graveyard

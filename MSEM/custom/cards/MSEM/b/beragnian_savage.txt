@@ -1,0 +1,8 @@
+Name:Beragnian Savage
+ManaCost:R
+Types:Creature Human Barbarian Warrior
+PT:1/1
+
+S:Mode$ Continuous | Affected$ Card.Self+equipped | AddPower$ 1 | AddKeyword$ First Strike | Description$ Armed — This creature gets +1/+0 and has first strike as long as it's equipped.
+
+Oracle:Armed — This creature gets +1/+0 and has first strike as long as it's equipped.

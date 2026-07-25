@@ -1,0 +1,10 @@
+Name:Landbound Sage
+ManaCost:1 G
+Types:Creature Elf Druid
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigReveal | TriggerDescription$ Landfall — Whenever a land you control enters, you may reveal the top card of your library. If it's a land card, put it into your hand.
+
+SVar:TrigReveal:DB$ Dig | DigNum$ 1 | Reveal$ True | Optional$ True | ChangeNum$ 1 | ChangeValid$ Land | DestinationZone$ Hand | DestinationZone2$ Library | LibraryPosition2$ 0
+
+Oracle:Landfall — Whenever a land you control enters, you may reveal the top card of your library. If it's a land card, put it into your hand.

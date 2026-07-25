@@ -1,0 +1,9 @@
+Name:Furious Betrayal
+ManaCost:1 R R
+Types:Sorcery
+
+A:SP$ GainControl | ValidTgts$ Creature | TgtPrompt$ Select target creature | LoseControl$ EOT | Untap$ True | SubAbility$ DBPump | SpellDescription$ Gain control of target creature until end of turn. Untap that creature. Until end of turn, it gets +1/+0 and gains haste.
+
+SVar:DBPump:DB$ Pump | Defined$ Targeted | NumAtt$ +1 | KW$ Haste | Duration$ UntilEndOfTurn
+
+Oracle:Gain control of target creature until end of turn. Untap that creature. Until end of turn, it gets +1/+0 and gains haste.

@@ -1,0 +1,9 @@
+Name:Wurmscape
+ManaCost:4 G G
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigWurm | TriggerDescription$ Landfall — Whenever a land you control enters, create a 5/5 green Wurm creature token with trample.
+
+SVar:TrigWurm:DB$ Token | TokenScript$ g_5_5_wurm_trample | TokenAmount$ 1 | TokenOwner$ You
+
+Oracle:Landfall — Whenever a land you control enters, create a 5/5 green Wurm creature token with trample.

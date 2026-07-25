@@ -1,0 +1,19 @@
+Name:Dashing Rager
+ManaCost:3 R
+Types:Creature Goblin Warrior
+PT:3/1
+
+K:Trample
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigAttach | TriggerDescription$ When this creature enters, attach all Equipment on the battlefield to it. (Control of the Equipment doesn't change.)
+
+SVar:TrigAttach:DB$ Attach | Object$ Valid Equipment | Defined$ Self
+
+T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | Execute$ TrigSacrifice | TriggerDescription$ At the beginning of the end step, sacrifice this creature.
+
+SVar:TrigSacrifice:DB$ Sacrifice | Defined$ Self
+
+Oracle:Trample, haste\nWhen this creature enters, attach all Equipment on the battlefield to it. (Control of the Equipment doesn't change.)\nAt the beginning of the end step, sacrifice this creature.
+
+DeckHints:Type$Equipment

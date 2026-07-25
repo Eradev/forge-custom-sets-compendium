@@ -1,0 +1,8 @@
+Name:Prepare for Confrontation
+ManaCost:2 W
+Types:Instant
+
+A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | NumDef$ +2 | SubAbility$ DBUntap | SpellDescription$ Creatures you control get +0/+2 until end of turn. Untap those creatures.
+SVar:DBUntap:DB$ UntapAll | ValidCards$ Creature.YouCtrl
+
+Oracle:Creatures you control get +0/+2 until end of turn. Untap those creatures.

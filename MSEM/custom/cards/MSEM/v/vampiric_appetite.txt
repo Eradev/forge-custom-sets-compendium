@@ -1,0 +1,18 @@
+Name:Vampiric Appetite
+ManaCost:B
+Types:Enchantment Aura
+
+K:Enchant:Creature.YouCtrl:creature you control
+K:Vanishing:3
+
+SVar:AttachAILogic:Pump
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 3 | AddToughness$ 3 | Description$ Enchanted creature gets +3/+3.
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ DBDelay | TriggerDescription$ When this enchantment leaves the battlefield, sacrifice enchanted creature.
+
+SVar:DBDelay:DB$ DelayedTrigger | Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | RememberObjects$ Enchanted | Execute$ TrigSacrifice | TriggerDescription$ When CARDNAME leaves the battlefield, sacrifice enchanted creature.
+
+SVar:TrigSacrifice:DB$ SacrificeAll | Defined$ DelayTriggerRememberedLKI
+
+Oracle:Enchant creature you control\nVanishing 3 (This permanent enters with three time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nEnchanted creature gets +3/+3.\nWhen this enchantment leaves the battlefield, sacrifice enchanted creature.

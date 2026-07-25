@@ -1,0 +1,16 @@
+Name:Feralborn Druid
+ManaCost:4 G G
+Types:Creature Elf Druid
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigWolves | TriggerDescription$ When this creature enters, create two 2/2 green Wolf creature tokens.
+
+SVar:TrigWolves:DB$ Token | TokenScript$ g_2_2_wolf | TokenAmount$ 2 | TokenOwner$ You
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +1/+1 for each Wolf you control.
+
+SVar:X:Count$Valid Wolf.YouCtrl
+
+Oracle:When this creature enters, create two 2/2 green Wolf creature tokens.\nThis creature gets +1/+1 for each Wolf you control.
+
+DeckHints:Type$Wolf

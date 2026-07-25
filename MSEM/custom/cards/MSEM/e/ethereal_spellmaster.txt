@@ -1,0 +1,12 @@
+Name:Ethereal Spellmaster
+ManaCost:4 U U
+Types:Creature Elemental Wizard
+PT:5/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self+wasCast | Execute$ TrigSearch | OptionalDecider$ You | TriggerDescription$ When this creature enters, if it was cast, you may search your library for an instant or sorcery card with mana value 3 or less and cast it without paying its mana cost. If you do, shuffle your library.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Library | ChangeType$ Instant.cmcLE3,Sorcery.cmcLE3 | ChangeNum$ 1 | Imprint$ True | Reveal$ True | Shuffle$ False | SubAbility$ DBPlay
+SVar:DBPlay:DB$ Play | Defined$ Imprinted | ValidZone$ Library | ValidSA$ Spell | Controller$ You | WithoutManaCost$ True | RememberPlayed$ True | SubAbility$ DBShuffle
+SVar:DBShuffle:DB$ Shuffle | Defined$ You | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ GE1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearImprinted$ True
+
+Oracle:When this creature enters, if it was cast, you may search your library for an instant or sorcery card with mana value 3 or less and cast it without paying its mana cost. If you do, shuffle your library. (If it has X in its mana cost, X is 0.)

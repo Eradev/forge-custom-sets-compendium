@@ -1,0 +1,9 @@
+Name:Priest of Forbiddance
+ManaCost:2 W W
+Types:Creature Human Cleric
+PT:1/6
+
+S:Mode$ RaiseCost | ValidCard$ Card | Activator$ Opponent | Type$ Spell | Cost$ 2 | Amount$ X | Relative$ True | Description$ Spells your opponents cast cost {2} more to cast for each card with the same name as that spell in that player's graveyard and for each nonland permanent on the battlefield with the same name as that spell.
+SVar:X:Count$ValidGraveyard,Battlefield Card.YouOwn+inZoneGraveyard+sharesNameWith OriginalHost,Permanent.nonLand+inZoneBattlefield+sharesNameWith OriginalHost
+
+Oracle:Spells your opponents cast cost {2} more to cast for each card with the same name as that spell in that player's graveyard and for each nonland permanent on the battlefield with the same name as that spell.

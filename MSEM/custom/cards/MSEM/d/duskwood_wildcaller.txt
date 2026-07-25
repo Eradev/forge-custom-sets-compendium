@@ -1,0 +1,10 @@
+Name:Duskwood Wildcaller
+ManaCost:2 G
+Types:Creature Elf Shaman
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigWolf | TriggerDescription$ Landfall — Whenever a land you control enters, you may pay {1}{G}. If you do, create a 2/2 green Wolf creature token.
+
+SVar:TrigWolf:AB$ Token | Cost$ 1 G | TokenScript$ g_2_2_wolf | TokenAmount$ 1 | TokenOwner$ You | SpellDescription$ Create a 2/2 green Wolf creature token.
+
+Oracle:Landfall — Whenever a land you control enters, you may pay {1}{G}. If you do, create a 2/2 green Wolf creature token.

@@ -1,0 +1,17 @@
+Name:Embodiment of Abundance
+ManaCost:6 G G
+Types:Creature Elemental
+PT:4/5
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCharm | TriggerDescription$ When this creature enters, choose one —\n• Search your library for up to X basic land cards, where X is the number of lands you control, and put them onto the battlefield tapped. Then shuffle.\n• Create a 1/1 green Elf Druid creature token for each creature you control.
+
+SVar:TrigCharm:DB$ Charm | Choices$ DBLands,DBTokens
+
+SVar:DBLands:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Land.Basic | ChangeTypeDesc$ basic land | ChangeNum$ XLand | Tapped$ True | SpellDescription$ Search your library for up to X basic land cards, where X is the number of lands you control, and put them onto the battlefield tapped. Then shuffle.
+
+SVar:DBTokens:DB$ Token | TokenScript$ g_1_1_elf_druid | TokenAmount$ XCreature | TokenOwner$ You | SpellDescription$ Create a 1/1 green Elf Druid creature token for each creature you control.
+
+SVar:XLand:Count$Valid Land.YouCtrl
+SVar:XCreature:Count$Valid Creature.YouCtrl
+
+Oracle:When this creature enters, choose one —\n• Search your library for up to X basic land cards, where X is the number of lands you control, and put them onto the battlefield tapped. Then shuffle.\n• Create a 1/1 green Elf Druid creature token for each creature you control.

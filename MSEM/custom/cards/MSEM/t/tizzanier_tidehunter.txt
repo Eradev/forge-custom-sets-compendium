@@ -1,0 +1,10 @@
+Name:Tizzanier Tidehunter
+ManaCost:3 U
+Types:Creature Merfolk Wizard
+PT:2/4
+
+S:Mode$ CantBlockBy | ValidAttacker$ Card.Self | ValidBlocker$ Creature | IsPresent$ Creature.Merfolk+YouCtrl+Other | PresentCompare$ GE1 | Description$ This creature can't be blocked as long as you control another Merfolk.
+
+Oracle:This creature can't be blocked as long as you control another Merfolk.
+
+DeckHints:Type$Merfolk

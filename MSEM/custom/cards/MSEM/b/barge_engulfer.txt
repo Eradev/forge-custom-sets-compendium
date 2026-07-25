@@ -1,0 +1,11 @@
+Name:Barge Engulfer
+ManaCost:5 U
+Types:Creature Serpent
+PT:5/5
+
+K:Defender
+
+A:AB$ Animate | Cost$ Discard<1/Card> | Defined$ Self | staticAbilities$ CanAttack | SpellDescription$ This creature can attack as though it didn't have defender. | StackDescription$ SpellDescription
+SVar:CanAttack:Mode$ CanAttackDefender | ValidCard$ Card.Self | Description$ This creature can attack as though it didn't have defender.
+
+Oracle:Defender\nDiscard a card: This creature can attack as though it didn't have defender until end of turn.

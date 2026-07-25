@@ -1,0 +1,11 @@
+Name:Into Strange Territories
+ManaCost:3 G
+Types:Enchantment
+
+T:Mode$ TapsForMana | ValidCard$ Land | Activator$ You | Execute$ TrigMana | TriggerZones$ Battlefield | Static$ True | TriggerDescription$ Whenever you tap a land for mana, add one mana of any type that land produced.
+
+SVar:TrigMana:DB$ ManaReflected | ColorOrType$ Type | ReflectProperty$ Produced | Defined$ You
+
+A:AB$ Untap | Cost$ Sac<1/CARDNAME/this enchantment> | UntapUpTo$ True | UntapType$ Land | Amount$ 2 | SpellDescription$ Untap up to two lands.
+
+Oracle:Whenever you tap a land for mana, add one mana of any type that land produced.\nSacrifice this enchantment: Untap up to two lands.

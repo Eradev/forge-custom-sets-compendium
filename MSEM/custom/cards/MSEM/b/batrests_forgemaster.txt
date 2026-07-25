@@ -1,0 +1,13 @@
+Name:Batrest's Forgemaster
+ManaCost:4 R W
+Types:Creature Human Barbarian Warrior
+PT:5/5
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSearch | TriggerDescription$ When this creature enters, you may search your library for an Equipment card, reveal it, put it into your hand, then shuffle.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Card.Equipment | ChangeNum$ 1 | ShuffleNonMandatory$ True
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigEffect | TriggerDescription$ Whenever this creature attacks, Equipment spells you cast this turn cost {2} less to cast.
+SVar:TrigEffect:DB$ Effect | StaticAbilities$ ReduceCost
+SVar:ReduceCost:Mode$ ReduceCost | ValidCard$ Equipment | Type$ Spell | Activator$ You | Amount$ 2 | Description$ Equipment spells you cast this turn cost {2} less to cast.
+
+Oracle:When this creature enters, you may search your library for an Equipment card, reveal it, put it into your hand, then shuffle.\nWhenever this creature attacks, Equipment spells you cast this turn cost {2} less to cast.

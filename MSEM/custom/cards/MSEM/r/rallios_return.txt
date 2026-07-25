@@ -1,0 +1,17 @@
+Name:Rallios' Return
+ManaCost:1 U B
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Library | Destination$ Graveyard | ValidCard$ Card.YouOwn | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigTop | TriggerDescription$ Whenever a card is put into your graveyard from your library, you may put it on top of your library.
+
+SVar:TrigTop:DB$ ChangeZone | Defined$ TriggeredCard | Origin$ Graveyard | Destination$ Library | LibraryPosition$ 0
+
+A:AB$ Effect | Cost$ U B Sac<1/CARDNAME/this enchantment> | TgtZone$ Graveyard | ValidTgts$ Card.YouOwn | TgtPrompt$ Select target card in your graveyard | RememberObjects$ Targeted | ForgetOnMoved$ Graveyard,Stack | ForgetOnCast$ False | StaticAbilities$ MayPlay | ReplacementEffects$ ReplaceGraveyard | Duration$ UntilEndOfTurn | SpellDescription$ Until end of turn, you may play target card from your graveyard. If that spell would be put into a graveyard, exile it instead.
+
+SVar:MayPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Graveyard | Description$ You may play target card from your graveyard this turn.
+SVar:ReplaceGraveyard:Event$ Moved | ValidLKI$ Card.IsRemembered+CastSa Spell.MayPlaySource | Origin$ Stack | Destination$ Graveyard | ReplaceWith$ MoveExile | Description$ If that spell would be put into a graveyard, exile it instead.
+SVar:MoveExile:DB$ ChangeZone | Defined$ ReplacedCard | Origin$ Stack | Destination$ Exile
+
+Oracle:Whenever a card is put into your graveyard from your library, you may put it on top of your library.\n{U}{B}, Sacrifice this enchantment: Until end of turn, you may play target card from your graveyard. If that spell would be put into a graveyard, exile it instead.
+
+DeckHas:Ability$Graveyard

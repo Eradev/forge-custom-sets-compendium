@@ -1,0 +1,15 @@
+Name:Until the Last Breath
+ManaCost:1 R
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature.attacking | TgtPrompt$ Select target attacking creature | NumAtt$ +1 | NumDef$ +0 | Duration$ UntilEndOfTurn | SubAbility$ DBGrantTrigger | SpellDescription$ Target attacking creature gets +1/+0 until end of turn. When that creature dies this turn, it deals damage equal to its power to defending player.
+
+SVar:DBGrantTrigger:DB$ Animate | Defined$ ParentTarget | Triggers$ DiesTrig | Duration$ UntilEndOfTurn | StackDescription$ None
+
+SVar:DiesTrig:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigDamage | TriggerDescription$ When this creature dies this turn, it deals damage equal to its power to defending player.
+
+SVar:TrigDamage:DB$ DealDamage | Defined$ Player.attackedBySourceThisTurn | NumDmg$ X | DamageSource$ TriggeredCardLKICopy
+
+SVar:X:TriggeredCard$CardPower
+
+Oracle:Target attacking creature gets +1/+0 until end of turn. When that creature dies this turn, it deals damage equal to its power to defending player.

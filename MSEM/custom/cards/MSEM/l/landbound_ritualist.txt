@@ -1,0 +1,10 @@
+Name:Landbound Ritualist
+ManaCost:2 B G
+Types:Creature Elf Druid
+PT:2/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigLand | TriggerDescription$ When this creature enters, you may put a land card from your hand or graveyard onto the battlefield tapped.
+
+SVar:TrigLand:DB$ ChangeZone | Origin$ Hand,Graveyard | Destination$ Battlefield | ChangeType$ Land.YouOwn | ChangeNum$ 1 | Tapped$ True
+
+Oracle:When this creature enters, you may put a land card from your hand or graveyard onto the battlefield tapped.

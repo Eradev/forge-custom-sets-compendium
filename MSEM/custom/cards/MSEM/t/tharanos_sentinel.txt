@@ -1,0 +1,10 @@
+Name:Tharanos' Sentinel
+ManaCost:1 W
+Types:Creature Human Soldier
+PT:2/1
+K:Lifelink
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigUntap | IsPresent$ Creature.YouCtrl+toughnessGE4 | PresentCompare$ GE1 | TriggerDescription$ Bulwark — Whenever this creature attacks, if you control a creature with toughness 4 or greater, untap it.
+SVar:TrigUntap:DB$ Untap | Defined$ TriggeredAttacker
+
+Oracle:Lifelink\nBulwark — Whenever this creature attacks, if you control a creature with toughness 4 or greater, untap it.

@@ -1,0 +1,10 @@
+Name:Faithtorn Danuri
+ManaCost:3 W
+Types:Creature Human Cleric
+PT:3/4
+
+K:Lifelink
+
+K:Vanishing:3
+
+Oracle:Lifelink\nVanishing 3 (This creature enters with three time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)

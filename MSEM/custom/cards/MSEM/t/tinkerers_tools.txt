@@ -1,0 +1,14 @@
+Name:Tinkerer's Tools
+ManaCost:1
+Types:Artifact
+
+A:AB$ Sacrifice | Cost$ X 2 T Sac<1/CARDNAME/this artifact> | Defined$ You | SacValid$ Artifact | SacMessage$ artifact | RememberSacrificed$ True | SubAbility$ DBSearch | SorcerySpeed$ True | SpellDescription$ Sacrifice an artifact. If you do, search your library for an artifact card with mana value less than or equal to the sacrificed artifact's mana value plus X. Put it onto the battlefield, then shuffle. Activate only as a sorcery.
+
+SVar:DBSearch:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Artifact.cmcLEY | ChangeTypeDesc$ artifact card with mana value less than or equal to the sacrificed artifact's mana value plus X | ChangeNum$ 1 | AILogic$ SacAndUpgrade | ConditionDefined$ Remembered | ConditionPresent$ Card
+
+SVar:X:Count$xPaid
+SVar:Y:Remembered$CardManaCost/Plus.X
+
+Oracle:{X}{2}, {T}, Sacrifice this artifact: Sacrifice an artifact. If you do, search your library for an artifact card with mana value less than or equal to the sacrificed artifact's mana value plus X. Put it onto the battlefield, then shuffle. Activate only as a sorcery.
+
+DeckHints:Type$Artifact

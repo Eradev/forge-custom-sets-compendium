@@ -1,0 +1,17 @@
+Name:Forgeborn Barbarian
+ManaCost:1 R R
+Types:Creature Human Barbarian Warrior
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+attacking | AddAbility$ ABPump | Description$ Attacking creatures you control have "{R}: This creature gets +1/+0 until end of turn."
+
+SVar:ABPump:AB$ Pump | Cost$ R | Defined$ Self | NumAtt$ +1 | Duration$ UntilEndOfTurn | SpellDescription$ This creature gets +1/+0 until end of turn.
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigMana | TriggerDescription$ Armed — Whenever this creature attacks, add {R} for each equipped creature you control.
+
+SVar:TrigMana:DB$ Mana | Produced$ R | Amount$ X
+SVar:X:Count$Valid Creature.YouCtrl+equipped
+
+Oracle:Attacking creatures you control have “{R}: This creature gets +1/+0 until end of turn.”\nArmed — Whenever this creature attacks, add {R} for each equipped creature you control.
+
+DeckNeeds:Type$Equipment

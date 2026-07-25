@@ -1,0 +1,14 @@
+Name:Batrest, Fellor Leader
+ManaCost:5 R W
+Types:Legendary Creature Human Barbarian Warrior
+PT:1/1
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ NICKNAME gets +1/+1 for each Equipment attached to it.
+SVar:X:Count$Valid Equipment.Attached
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ Astrina | TriggerDescription$ When NICKNAME enters, create Astrina, Forged for Glory, a legendary colorless Equipment artifact token with “Equipped creature gets +4/+4 and has first strike and lifelink” and equip {4}. Attach it to NICKNAME.
+SVar:Astrina:DB$ Token | TokenScript$ astrina_forged_for_glory | RememberTokens$ True | SubAbility$ DBAttach
+SVar:DBAttach:DB$ Attach | Object$ Remembered | Defined$ Self | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Batrest gets +1/+1 for each Equipment attached to it.\nWhen Batrest enters, create Astrina, Forged for Glory, a legendary colorless Equipment artifact token with “Equipped creature gets +4/+4 and has first strike and lifelink” and equip {4}. Attach it to Batrest.

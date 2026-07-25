@@ -1,0 +1,11 @@
+Name:Barbarian Hoarders
+ManaCost:1 R W
+Types:Creature Human Barbarian Warrior
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ EquipmentSelection | TriggerDescription$ When this creature enters, you may attach target Equipment you control to it.
+
+SVar:EquipmentSelection:DB$ Pump | ValidTgts$ Equipment.YouCtrl | TgtPrompt$ Select target equipment you control | SubAbility$ DBAttach | StackDescription$ None
+SVar:DBAttach:DB$ Attach | Optional$ True | Object$ ParentTarget | Defined$ Self
+
+Oracle:When this creature enters, you may attach target Equipment you control to it.

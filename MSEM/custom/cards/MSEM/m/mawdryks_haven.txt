@@ -1,0 +1,11 @@
+Name:Mawdryk's Haven
+ManaCost:2 G
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigMana | TriggerDescription$ Landfall — Whenever a land you control enters, add {G}.
+
+SVar:TrigMana:DB$ Mana | Defined$ You | Produced$ G
+
+A:AB$ Pump | Cost$ 3 G | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | NumAtt$ +2 | NumDef$ +2 | Duration$ UntilEndOfTurn | SpellDescription$ Target creature you control gets +2/+2 until end of turn.
+
+Oracle:Landfall — Whenever a land you control enters, add {G}.\n{3}{G}: Target creature you control gets +2/+2 until end of turn.

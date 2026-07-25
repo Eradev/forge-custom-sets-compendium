@@ -1,0 +1,16 @@
+Name:Master Echomage
+ManaCost:2 U U
+Types:Creature Human Wizard
+PT:2/3
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPlay | TriggerDescription$ When this creature enters, you may cast target instant or sorcery card from your graveyard with mana value X or less without paying its mana cost, where X is the number of Wizards you control. Exile that card instead of putting it into your graveyard as it resolves.
+
+SVar:TrigPlay:DB$ Play | TgtZone$ Graveyard | ValidTgts$ Instant.YouOwn+cmcLEX,Sorcery.YouOwn+cmcLEX | ValidTgtsDesc$ instant or sorcery card with mana value X or less in your graveyard | TgtPrompt$ Select target instant or sorcery card with mana value X or less in your graveyard | ValidSA$ Spell | WithoutManaCost$ True | Optional$ True | ReplaceGraveyard$ Exile | AILogic$ ReplaySpell
+
+SVar:X:Count$Valid Wizard.YouCtrl
+
+Oracle:Flash\nWhen this creature enters, you may cast target instant or sorcery card from your graveyard with mana value X or less without paying its mana cost, where X is the number of Wizards you control. Exile that card instead of putting it into your graveyard as it resolves.
+
+DeckHints:Type$Wizard

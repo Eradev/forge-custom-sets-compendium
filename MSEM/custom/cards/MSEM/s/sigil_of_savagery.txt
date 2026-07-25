@@ -1,0 +1,9 @@
+Name:Sigil of Savagery
+ManaCost:3
+Types:Artifact
+
+A:AB$ Mana | Cost$ T | Produced$ Combo R G | SpellDescription$ Add {R} or {G}.
+
+A:AB$ Mana | Cost$ T Sac<1/CARDNAME/this artifact> | Produced$ R G | SpellDescription$ Add {R}{G}.
+
+Oracle:{T}: Add {R} or {G}.\n{T}, Sacrifice this artifact: Add {R}{G}.

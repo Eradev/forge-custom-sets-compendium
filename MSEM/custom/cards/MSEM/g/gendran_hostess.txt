@@ -1,0 +1,10 @@
+Name:Gendran Hostess
+ManaCost:4 G
+Types:Creature Dryad
+PT:3/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigSearch | TriggerDescription$ When this creature enters, you may search your library for a basic land card, reveal it, put it into your hand, then shuffle.
+
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Land.Basic | ChangeTypeDesc$ basic land | ChangeNum$ 1 | Reveal$ True
+
+Oracle:When this creature enters, you may search your library for a basic land card, reveal it, put it into your hand, then shuffle.

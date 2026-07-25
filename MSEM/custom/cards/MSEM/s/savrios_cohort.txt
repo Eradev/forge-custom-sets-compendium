@@ -1,0 +1,14 @@
+Name:Savrios' Cohort
+ManaCost:1 R
+Types:Creature Human Wizard
+PT:2/1
+
+K:Prowess
+
+T:Mode$ SpellCast | ValidCard$ Card.nonCreature | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigTime | TriggerDescription$ Whenever you cast a noncreature spell, you may choose target permanent with one or more time counters on it, then put a time counter on it or remove a time counter from it.
+
+SVar:TrigTime:DB$ AddOrRemoveCounter | ValidTgts$ Permanent.counters_GE1_TIME | TgtPrompt$ Select target permanent with one or more time counters on it | CounterType$ TIME | CounterNum$ 1
+
+Oracle:Prowess\nWhenever you cast a noncreature spell, you may choose target permanent with one or more time counters on it, then put a time counter on it or remove a time counter from it.
+
+DeckHas:Ability$Counters

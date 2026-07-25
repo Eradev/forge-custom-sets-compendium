@@ -1,0 +1,12 @@
+Name:Pandora's Eviction
+ManaCost:3 W
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this enchantment enters, exile target creature an opponent controls until this enchantment leaves the battlefield.
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | Origin$ Battlefield | Destination$ Exile | Duration$ UntilHostLeavesPlay
+
+A:AB$ ChangeZone | Cost$ 4 W | Defined$ Self | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBDelayedReturn | SpellDescription$ Exile this enchantment. Return it to the battlefield under its owner's control at the beginning of the next end step.
+SVar:DBDelayedReturn:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | Execute$ DBReturn | RememberObjects$ RememberedLKI | TriggerDescription$ Return this enchantment to the battlefield under its owner's control at the beginning of the next end step.
+SVar:DBReturn:DB$ ChangeZone | Defined$ DelayTriggerRememberedLKI | Origin$ Exile | Destination$ Battlefield
+
+Oracle:When this enchantment enters, exile target creature an opponent controls until this enchantment leaves the battlefield.\n{4}{W}: Exile this enchantment. Return it to the battlefield under its owner's control at the beginning of the next end step.

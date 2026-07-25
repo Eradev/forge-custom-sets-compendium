@@ -1,0 +1,8 @@
+Name:Shrapnelcrafter
+ManaCost:2 R
+Types:Creature Human Barbarian Warrior
+PT:2/2
+
+A:AB$ Mana | Cost$ T Sac<1/Artifact/artifact> | Produced$ R | Amount$ 3 | SpellDescription$ Add {R}{R}{R}.
+
+Oracle:{T}, Sacrifice an artifact: Add {R}{R}{R}.

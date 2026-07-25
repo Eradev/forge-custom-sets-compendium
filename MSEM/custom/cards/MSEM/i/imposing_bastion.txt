@@ -1,0 +1,8 @@
+Name:Imposing Bastion
+ManaCost:2 W
+Types:Creature Wall
+PT:1/5
+
+K:Defender
+
+Oracle:Defender

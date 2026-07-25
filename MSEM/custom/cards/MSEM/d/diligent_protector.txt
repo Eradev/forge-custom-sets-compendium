@@ -1,0 +1,8 @@
+Name:Diligent Protector     
+ManaCost:2 W
+Types:Creature Human Soldier
+PT:2/3
+
+S:Mode$ Continuous | Affected$ Card.Self+untapped | AddToughness$ 2 | Description$ As long as this creature is untapped, it gets +0/+2.
+
+Oracle:As long as this creature is untapped, it gets +0/+2.

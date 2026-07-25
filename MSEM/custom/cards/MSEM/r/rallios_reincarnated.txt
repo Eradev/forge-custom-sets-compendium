@@ -1,0 +1,12 @@
+Name:Rallios Reincarnated
+ManaCost:3 B B
+Types:Legendary Creature Zombie Warrior
+PT:3/4
+
+K:Vanishing:5
+
+T:Mode$ CounterRemoved | ValidCard$ Card.Self | TriggerZones$ Battlefield | CounterType$ TIME | ValidPlayer$ You | Execute$ TrigToken | TriggerDescription$ Whenever you remove a time counter from NICKNAME, create a tapped 2/2 black Zombie creature token.
+
+SVar:TrigToken:DB$ Token | TokenScript$ b_2_2_zombie | TokenTapped$ True
+
+Oracle:Vanishing 5 (This creature enters with five time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhenever you remove a time counter from Rallios, create a tapped 2/2 black Zombie creature token.

@@ -1,0 +1,9 @@
+Name:Soulstone Servant
+ManaCost:2 W
+Types:Creature Spirit Soldier
+PT:2/2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPump | IsPresent$ Creature.YouCtrl+toughnessGE4 | PresentCompare$ GE1 | TriggerDescription$ Bulwark — Whenever this creature attacks, if you control a creature with toughness 4 or greater, this creature gets +2/+2 and gains flying until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredAttacker | NumAtt$ 2 | NumDef$ 2 | KW$ Flying
+
+Oracle:Bulwark — Whenever this creature attacks, if you control a creature with toughness 4 or greater, this creature gets +2/+2 and gains flying until end of turn.

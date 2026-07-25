@@ -1,0 +1,12 @@
+Name:Prosanian Shieldmaster
+ManaCost:4 G W
+Types:Creature Human Soldier
+PT:4/5
+
+S:Mode$ CombatDamageToughness | ValidCard$ Creature.YouCtrl | Description$ Each creature you control assigns combat damage equal to its toughness rather than its power.
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl+Other | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever another creature you control enters, creatures you control get +0/+1 until end of turn.
+
+SVar:TrigPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +0 | NumDef$ +1 | Duration$ UntilEndOfTurn
+
+Oracle:Each creature you control assigns combat damage equal to its toughness rather than its power.\nWhenever another creature you control enters, creatures you control get +0/+1 until end of turn.

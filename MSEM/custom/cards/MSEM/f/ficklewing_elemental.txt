@@ -1,0 +1,12 @@
+Name:Ficklewing Elemental
+ManaCost:2 U
+Types:Creature Elemental
+PT:3/3
+
+K:Flying
+K:etbCounter:TIME:X:no Condition:This creature enters with a time counter on it for each card in your hand.
+K:Vanishing
+
+SVar:X:Count$CardsInYourHand
+
+Oracle:Flying\nVanishing (At the beginning of your upkeep, remove a time counter from this permanent. When the last is removed, sacrifice it.)\nThis creature enters with a time counter on it for each card in your hand.

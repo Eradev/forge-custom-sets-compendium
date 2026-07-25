@@ -26,6 +26,11 @@ These changes might not be reflected in their official ruling.
 ## Set implementation progress
 
 ```text
+Aftermath (AFM)                       -  90% (228/254)
+  Missing cards:
+    * Every card with Reprise, or referencing it.
+    * Every card with Engorge, or referencing it.
+    * Master of Steel
 Video Horror System (VHS)             -  97% (83/86)
   Missing cards:
     * Maddened Preacher

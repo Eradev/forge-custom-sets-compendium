@@ -1,0 +1,10 @@
+Name:Treetop Defense (MSEM)
+ManaCost:2 G
+Types:Instant
+
+A:SP$ Effect | ReplacementEffects$ RPrevent | SubAbility$ DBReach | AILogic$ Fog | SpellDescription$ Prevent all combat damage creatures with flying would deal this turn. Creatures you control gain reach until end of turn.
+
+SVar:RPrevent:Event$ DamageDone | Prevent$ True | IsCombat$ True | ActiveZones$ Command | ValidSource$ Creature.withFlying | Description$ Prevent all combat damage creatures with flying would deal this turn.
+SVar:DBReach:DB$ PumpAll | ValidCards$ Creature.YouCtrl | KW$ Reach | Duration$ UntilEndOfTurn
+
+Oracle:Prevent all combat damage creatures with flying would deal this turn. Creatures you control gain reach until end of turn.

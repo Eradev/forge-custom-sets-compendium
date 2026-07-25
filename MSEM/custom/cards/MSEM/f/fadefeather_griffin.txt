@@ -1,0 +1,16 @@
+Name:Fadefeather Griffin     
+ManaCost:4 W
+Types:Creature Griffin
+PT:5/4
+
+K:Flying
+
+K:First Strike
+
+K:etbCounter:TIME:X:no Condition:This creature enters with a time counter on it for each other creature you control.
+
+K:Vanishing
+
+SVar:X:Count$Valid Creature.Other+YouCtrl
+
+Oracle:Flying, first strike\nVanishing (At the beginning of your upkeep, remove a time counter from this permanent. When the last is removed, sacrifice it.)\nThis creature enters with a time counter on it for each other creature you control.

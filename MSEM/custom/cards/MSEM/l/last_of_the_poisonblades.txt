@@ -1,0 +1,10 @@
+Name:Last of the Poisonblades
+ManaCost:3 B
+Types:Creature Elf Rogue
+PT:4/4
+
+K:Deathtouch
+
+K:Vanishing:4
+
+Oracle:Deathtouch\nVanishing 4 (This creature enters with four time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)

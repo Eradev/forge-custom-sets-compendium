@@ -1,0 +1,10 @@
+Name:Humanity's Hope
+ManaCost:2 G W
+Types:Creature Human Cleric
+PT:3/3
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+Other+untapped | AddKeyword$ Indestructible | Description$ Other untapped creatures you control have indestructible.
+
+A:AB$ Pump | Cost$ 2 G W | ValidTgts$ Creature | TgtPrompt$ Select target creature | KW$ Vigilance | Duration$ UntilEndOfTurn | SpellDescription$ Target creature gains vigilance until end of turn.
+
+Oracle:Other untapped creatures you control have indestructible.\n{2}{G}{W}: Target creature gains vigilance until end of turn.

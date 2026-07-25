@@ -1,0 +1,10 @@
+Name:Duskwood Marshal
+ManaCost:3 G
+Types:Creature Elf Soldier
+PT:2/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigVigilance | TriggerDescription$ Landfall — Whenever a land you control enters, target creature you control gains vigilance until end of turn.
+
+SVar:TrigVigilance:DB$ Pump | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | KW$ Vigilance | Duration$ UntilEndOfTurn
+
+Oracle:Landfall — Whenever a land you control enters, target creature you control gains vigilance until end of turn.

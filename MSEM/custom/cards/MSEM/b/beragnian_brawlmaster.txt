@@ -1,0 +1,11 @@
+Name:Beragnian Brawlmaster
+ManaCost:2 R W
+Types:Creature Human Barbarian Warrior
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self,Creature.Warrior+Other+YouCtrl | Execute$ TrigFight | TriggerDescription$ Whenever this creature or another Warrior you control enters, that Warrior fights target creature an opponent controls.
+SVar:TrigFight:DB$ Fight | Defined$ TriggeredCardLKICopy | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls.
+
+A:AB$ Pump | Cost$ R W | ValidTgts$ Creature.Warrior | TgtPrompt$ Select target Warrior creature | NumAtt$ +1 | NumDef$ +1
+
+Oracle:Whenever this creature or another Warrior you control enters, that Warrior fights target creature an opponent controls.\n{R}{W}: Target Warrior creature gets +1/+1 until end of turn.

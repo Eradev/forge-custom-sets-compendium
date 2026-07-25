@@ -1,0 +1,8 @@
+Name:Lodestone Colossus
+ManaCost:6
+Types:Artifact Creature Golem
+PT:5/1
+
+K:Menace
+
+Oracle:Menace

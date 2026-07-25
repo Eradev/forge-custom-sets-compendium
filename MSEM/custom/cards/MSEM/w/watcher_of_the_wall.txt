@@ -1,0 +1,12 @@
+Name:Watcher of the Wall
+ManaCost:1 W
+Types:Creature Human Soldier
+PT:2/2
+K:Vigilance
+
+A:AB$ Token | Cost$ 1 W T | TokenAmount$ 1 | TokenScript$ w_1_1_soldier | CheckSVar$ X | SVarCompare$ GE1 | SpellDescription$ Bulwark — Create a 1/1 white Soldier creature token. Activate only if you control a creature with toughness 4 or greater.
+SVar:X:Count$Valid Creature.YouCtrl+toughnessGE4
+
+Oracle:Vigilance\nBulwark — {1}{W}, {T}: Create a 1/1 white Soldier creature token. Activate only if you control a creature with toughness 4 or greater.
+
+DeckNeeds:Type$Soldier

@@ -1,0 +1,5 @@
+Name:Legion of Wights
+ManaCost:4 B
+Types:Creature Zombie Soldier
+PT:4/4
+Oracle:

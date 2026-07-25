@@ -1,0 +1,14 @@
+Name:Feral Cleaver
+ManaCost:3
+Types:Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 3 | Description$ Equipped creature gets +3/+0.
+
+T:Mode$ AttackerUnblocked | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPay | TriggerDescription$ Whenever a creature you control attacks and isn't blocked, you may pay {4}. If you do, attach this Equipment to that creature.
+
+SVar:TrigPay:AB$ ImmediateTrigger | Cost$ 4 | Execute$ TrigAttach | RememberObjects$ TriggeredAttackerLKICopy
+SVar:TrigAttach:DB$ Attach | Defined$ DelayTriggerRememberedLKI
+
+K:Equip:3
+
+Oracle:Equipped creature gets +3/+0.\nWhenever a creature you control attacks and isn't blocked, you may pay {4}. If you do, attach this Equipment to that creature.\nEquip {3}

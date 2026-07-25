@@ -1,0 +1,9 @@
+Name:Undying Terror
+ManaCost:3 B
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl | AddPower$ 2 | AddKeyword$ Deathtouch | CheckSVar$ GraveCount | SVarCompare$ GE10 | Description$ Creatures you control get +2/+0 and have deathtouch as long as ten or more cards are in your graveyard.
+
+SVar:GraveCount:Count$ValidGraveyard Card.YouOwn
+
+Oracle:Creatures you control get +2/+0 and have deathtouch as long as ten or more cards are in your graveyard.

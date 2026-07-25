@@ -1,0 +1,9 @@
+Name:Reality Check
+ManaCost:2 U
+Types:Instant
+
+A:SP$ PutCounter | ValidTgts$ Permanent.nonLand | TgtPrompt$ Select target nonland permanent | CounterType$ TIME | CounterNum$ 4 | SubAbility$ DBVanishing | SpellDescription$ Put four time counters on target nonland permanent. If it doesn't have vanishing, it gains vanishing.
+
+SVar:DBVanishing:DB$ Pump | Defined$ Targeted | KW$ Vanishing | Duration$ Permanent | ConditionDefined$ Targeted | ConditionPresent$ Card.withVanishing | ConditionCompare$ EQ0
+
+Oracle:Put four time counters on target nonland permanent. If it doesn't have vanishing, it gains vanishing. (At the beginning of your upkeep, remove a time counter from that permanent. When the last is removed, sacrifice it.)

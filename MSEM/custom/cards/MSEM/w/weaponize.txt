@@ -1,0 +1,11 @@
+Name:Weaponize
+ManaCost:R
+Types:Sorcery
+
+A:SP$ Animate | ValidTgts$ Artifact.nonCreature+nonEquipment | TgtPrompt$ Select target noncreature, non-Equipment artifact | Types$ Equipment | RemoveArtifactTypes$ True | Keywords$ Equip:X | staticAbilities$ EquipPump | sVars$ X | Duration$ UntilEndOfTurn | SpellDescription$ Until end of turn, target noncreature, non-Equipment artifact becomes an Equipment with equip {X} and "Equipped creature gets +X/+0," where X is that artifact's mana value.
+
+SVar:X:Count$CardManaCost
+
+SVar:EquipPump:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ X | Description$ Equipped creature gets +X/+0, where X is CARDNAME's mana value.
+
+Oracle:Until end of turn, target noncreature, non-Equipment artifact becomes an Equipment with equip X and "Equipped creature gets +X/+0", where X is that artifact's mana value.

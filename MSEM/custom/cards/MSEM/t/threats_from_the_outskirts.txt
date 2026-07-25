@@ -1,0 +1,9 @@
+Name:Threats from the Outskirts
+ManaCost:2 R
+Types:Instant
+
+A:SP$ PumpAll | ValidCards$ Creature.attacking | NumAtt$ +2 | Duration$ UntilEndOfTurn | SubAbility$ DBArmed | SpellDescription$ Attacking creatures get +2/+0 until end of turn. Armed — Equipped creatures you control get an additional +1/+0 until end of turn.
+
+SVar:DBArmed:DB$ PumpAll | ValidCards$ Creature.YouCtrl+equipped | NumAtt$ +1 | Duration$ UntilEndOfTurn
+
+Oracle:Attacking creatures get +2/+0 until end of turn.\nArmed — Equipped creatures you control get an additional +1/+0 until end of turn.

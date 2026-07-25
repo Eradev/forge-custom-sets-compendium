@@ -1,0 +1,14 @@
+Name:Arcane Rebound
+ManaCost:2 U U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | RememberCountered$ True | SubAbility$ DBEffect | SpellDescription$ Counter target spell. If that spell is countered this way, until the end of your next turn, the next spell you cast that shares a type with it costs {X} less to cast, where X is that spell's mana value.
+SVar:DBEffect:DB$ Effect | ConditionDefined$ Remembered | ConditionPresent$ Card | RememberObjects$ RememberedCard | StaticAbilities$ ReduceCostEffect | Triggers$ RemoveOnCast | Duration$ UntilTheEndOfYourNextTurn | SubAbility$ DBCleanup | StackDescription$ If that spell is countered this way, until the end of your next turn, the next spell you cast that shares a type with it costs {X} less to cast, where X is that spell's mana value.
+SVar:ReduceCostEffect:Mode$ ReduceCost | ValidCard$ Card.YouCtrl+sharesCardTypeWith RememberedCard | Type$ Spell | Activator$ You | Amount$ X | Description$ The next spell you cast that shares a type with the countered spell costs {X} less to cast until the end of your next turn, where X is that spell's mana value.
+SVar:RemoveOnCast:Mode$ SpellCast | TriggerZones$ Command | ValidActivatingPlayer$ You | ValidCard$ Card.sharesCardTypeWith RememberedCard | Execute$ RemoveEffect | Static$ True
+SVar:RemoveEffect:DB$ ChangeZone | Origin$ Command | Destination$ Exile
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$CardManaCost
+
+Oracle:Counter target spell. If that spell is countered this way, until the end of your next turn, the next spell you cast that shares a type with it costs {X} less to cast, where X is that spell's mana value.

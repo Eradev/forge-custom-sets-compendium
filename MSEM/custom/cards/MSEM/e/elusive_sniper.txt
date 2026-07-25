@@ -1,0 +1,10 @@
+Name:Elusive Sniper
+Types:Creature Elf Soldier Archer
+ManaCost:3 G
+PT:1/3
+
+K:Hexproof
+
+K:Reach
+
+Oracle:Hexproof, reach

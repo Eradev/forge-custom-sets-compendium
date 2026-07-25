@@ -1,0 +1,9 @@
+Name:Purging Reolem
+ManaCost:2 B B
+Types:Instant
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ 2 | EffectZone$ All | IsPresent$ Land.YouCtrl+ThisTurnEntered | Description$ Landfall — This spell costs {2} less to cast if you had a land you control enter this turn.
+
+A:SP$ Destroy | ValidTgts$ Creature | TgtPrompt$ Select target creature | SpellDescription$ Destroy target creature.
+
+Oracle:Landfall — This spell costs {2} less to cast if you had a land you control enter this turn.\nDestroy target creature.

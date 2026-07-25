@@ -1,0 +1,11 @@
+Name:Abolishers of Sin
+ManaCost:5 W
+Types:Creature Human Cleric
+PT:3/6
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigBlink | TriggerDescription$ At the beginning of your end step, you may pay {W}. If you do, exile target creature you control, then return that card to the battlefield under your control.
+SVar:TrigBlink:AB$ ChangeZone | Cost$ W | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | GainControl$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:At the beginning of your end step, you may pay {W}. If you do, exile target creature you control, then return that card to the battlefield under your control.

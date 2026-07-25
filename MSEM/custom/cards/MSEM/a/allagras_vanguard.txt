@@ -1,0 +1,9 @@
+Name:Allagras' Vanguard
+ManaCost:4 U
+Types:Creature Merfolk
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create two 1/1 blue Merfolk creature tokens with "When this token dies, draw a card, then discard a card".
+SVar:TrigToken:DB$ Token | TokenScript$ u_1_1_merfolk_looting | TokenAmount$ 2
+
+Oracle:When this creature enters, create two 1/1 blue Merfolk creature tokens with "When this token dies, draw a card, then discard a card".

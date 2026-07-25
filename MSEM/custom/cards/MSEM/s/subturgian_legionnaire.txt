@@ -1,0 +1,14 @@
+Name:Subturgian Legionnaire
+ManaCost:4 B
+Types:Creature Vampire
+PT:3/3
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.DamagedBy | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever a creature dealt damage by this creature this turn dies, create a 1/1 black Vampire creature token with lifelink.
+
+SVar:TrigToken:DB$ Token | TokenScript$ b_1_1_vampire_lifelink
+
+Oracle:Flying\nWhenever a creature dealt damage by this creature this turn dies, create a 1/1 black Vampire creature token with lifelink.
+
+DeckHas:Ability$Token|LifeGain

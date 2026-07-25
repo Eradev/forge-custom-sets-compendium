@@ -1,0 +1,8 @@
+Name:Ready for the Odyssey
+ManaCost:2 W
+Types:Sorcery
+
+A:SP$ Draw | NumCards$ X | SpellDescription$ Draw a card for each creature you control with a permanent attached to it.
+SVar:X:Count$Valid Creature.YouCtrl+enchanted,Creature.YouCtrl+equipped
+
+Oracle:Draw a card for each creature you control with a permanent attached to it.

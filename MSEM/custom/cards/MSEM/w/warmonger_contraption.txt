@@ -1,0 +1,17 @@
+Name:Warmonger Contraption
+ManaCost:3
+Types:Artifact Creature Construct
+PT:*/*
+
+K:ETBReplacement:Other:ChooseCT
+
+SVar:ChooseCT:DB$ ChooseType | Type$ Creature | AILogic$ MostProminentInComputerDeck | SpellDescription$ As this creature enters, choose a creature type.
+
+S:Mode$ Continuous | Affected$ Card.Self | CharacteristicDefining$ True | AddType$ ChosenType | Description$ This creature is the chosen type in addition to its other types.
+
+S:Mode$ Continuous | CharacteristicDefining$ True | SetPower$ X | SetToughness$ X | Description$ This creature's power and toughness are each equal to the number of creatures of the chosen type you control.
+
+SVar:X:Count$Valid Creature.ChosenType+YouCtrl
+SVar:NoZeroToughnessAI:True
+
+Oracle:As this creature enters, choose a creature type.\nThis creature is the chosen type in addition to its other types.\nThis creature's power and toughness are each equal to the number of creatures of the chosen type you control.

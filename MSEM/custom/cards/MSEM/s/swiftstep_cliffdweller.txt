@@ -1,0 +1,10 @@
+Name:Swiftstep Cliffdweller
+ManaCost:2 R
+Types:Creature Goblin
+PT:3/2
+
+S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Haste | IsPresent$ Creature.Goblin+Other+YouCtrl | PresentCompare$ GE1 | Description$ This creature has haste as long as you control another Goblin.
+
+Oracle:This creature has haste as long as you control another Goblin.
+
+DeckHints:Type$Goblin

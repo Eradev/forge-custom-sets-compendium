@@ -1,0 +1,10 @@
+Name:Voice of Khaliz
+ManaCost:3 B G
+Types:Creature Elf Druid
+PT:3/4
+
+S:Mode$ Continuous | Affected$ You | AdjustLandPlays$ 1 | Description$ You may play an additional land on each of your turns.
+
+A:AB$ Draw | Cost$ 1 B G Sac<1/Land/land> | Defined$ You | NumCards$ 1 | SpellDescription$ Draw a card.
+
+Oracle:You may play an additional land on each of your turns.\n{1}{B}{G}, Sacrifice a land: Draw a card.

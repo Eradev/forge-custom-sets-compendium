@@ -1,0 +1,12 @@
+Name:Cease Conflict
+ManaCost:1 W W
+Types:Enchantment Aura
+
+K:Enchant:Creature
+SVar:AttachAILogic:Curse
+
+S:Mode$ CantAttack,CantBlock | ValidCard$ Creature.EnchantedBy | Description$ Enchanted creature can't attack or block.
+
+A:AB$ Attach | Cost$ 3 W | ValidTgts$ Creature | TgtPrompt$ Select target creature | SpellDescription$ Attach this enchantment to target creature.
+
+Oracle:Enchant creature\nEnchanted creature can't attack or block.\n{3}{W}: Attach this enchantment to target creature.

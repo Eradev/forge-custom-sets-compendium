@@ -1,0 +1,9 @@
+Name:Flamewaker's Staff
+ManaCost:1
+Types:Artifact Equipment
+
+A:AB$ Pump | Cost$ 2 | Defined$ Equipped | NumAtt$ +1 | NumDef$ +0 | Duration$ UntilEndOfTurn | SpellDescription$ Equipped creature gets +1/+0 until end of turn.
+
+K:Equip:1
+
+Oracle:{2}: Equipped creature gets +1/+0 until end of turn.\nEquip {1}

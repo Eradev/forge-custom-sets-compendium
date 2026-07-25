@@ -1,0 +1,11 @@
+Name:Chronomancer's Bauble
+ManaCost:1
+Types:Artifact
+
+A:AB$ RepeatEach | Cost$ 2 T Sac<1/CARDNAME/this artifact> | RepeatCards$ Permanent.counters_GE1_TIME | RepeatSubAbility$ DBAdjustCounter | SpellDescription$ For each permanent with a time counter on it, you may put a time counter on that permanent or remove a time counter from it.
+
+SVar:DBAdjustCounter:DB$ AddOrRemoveCounter | Defined$ Remembered | DefinedPlayer$ You | CounterType$ TIME | CounterNum$ 1 | Optional$ True
+
+Oracle:{2}, {T}, Sacrifice this artifact: For each permanent with a time counter on it, you may put a time counter on that permanent or remove a time counter from it.
+
+DeckHas:Ability$Counters

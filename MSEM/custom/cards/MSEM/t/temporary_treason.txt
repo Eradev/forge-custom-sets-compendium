@@ -1,0 +1,12 @@
+Name:Temporary Treason
+ManaCost:2 U U
+Types:Enchantment Aura
+
+K:Enchant:Permanent.nonLand
+K:Vanishing:3
+
+S:Mode$ Continuous | Affected$ Permanent.EnchantedBy | GainControl$ You | Description$ You control enchanted permanent.
+
+SVar:AttachAILogic:GainControl
+
+Oracle:Enchant nonland permanent\nVanishing 3 (This permanent enters with three time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nYou control enchanted permanent.

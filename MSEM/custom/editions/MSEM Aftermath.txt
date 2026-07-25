@@ -1,0 +1,281 @@
+[metadata]
+Code=MSEM_AFM
+Name=Aftermath
+Date=2017-06-08
+Type=Custom
+Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
+
+[cards]
+1 U Abolishers of Sin @Zanariya
+2 U Accursed Phantasm @ChrisCold
+3 U Assault on Prosania @rodg-art
+4 U Barbaric Dexterity @TamplierPainter
+5 R Bolstered Stockpiles @merl1ncz
+6 U Builder's Blessing @shenfeic
+7 C Cease Conflict @Elle-Shengxuan-Shi
+8 R Danuri Banisher @MarioWibisono
+9 R Danuri Custodian @Liang-Xing
+10 C Devout Wallkeepers @JohanGrenier
+11 C Diligent Protector @Susse-n
+12 R Doomed Fate @Gworld
+13 U Fadefeather Griffin @Grey-Seagull
+14 C Faithtorn Danuri @SirTiefling
+15 U Fellor Armorsmith @DiegoGisbertLlorens
+16 C Fellor Elite @Peter-Ortiz
+17 C Gallord's Intervention @PabloFernandezArtwrk
+18 U Haunter of the Deadlands @Vulpes-Ibculta
+19 C Imposing Bastion @brown67
+20 U Majestic Garrison @Tokotewhero
+21 R Master of Steel @Hamsterfly
+22 U Pandora's Eviction @John-Stone-Art
+23 C Prepare for Confrontation @mattforsyth
+24 M Priest of Forbiddance @RobotDelEspacio
+25 U Prosanian Warden @Clint Cearley
+26 R Punishing Catastrophe @Titus Lunter
+27 C Purifying Light @Alex Garner
+28 C Rallios' Demise @rogner5th
+29 U Ready for the Odyssey @tithendar
+30 M Sanctuary @UnidColor
+31 R Soulstone Commander @pearl-of-light
+32 R Soulstone Redeemer @Mac-tire
+33 C Soulstone Servant @JakeWBullock
+34 C Stay on Edge @Allnamesinuse
+35 C Steelborn Apprentice @michalivan
+36 C Strength of the Phalanx @RaymondMinnaar
+37 C Tharanos' Sentinel @bocho
+38 C Wailing Spirit @reaper78
+39 U Watcher of the Wall @yagaminoue
+40 C Winterborn Savage @pusiaty
+41 M Allagras, Tidal Master @ZhangQipeng
+42 U Allagras' Vanguard @PatrickMcEvoy
+43 C Arcane Dexterity @Smolin
+44 R Arcane Rebound @jason-felix
+45 U Arcanist's Dispersal @Tsabo6
+46 C Barge Engulfer @lithriel
+47 C Beragnian Blizzard @tjota
+48 C Bloodchill Risen @RomanDubina
+49 U Budding Echomage @Castaguer93
+50 U Chillwhisper Witch @lavam00
+51 R Chronomancer Adept @jason-felix
+52 C Clashborn Stormling @aerroscape
+53 C Close Escape @GreyHues
+54 U Curse of the Deadlands @Datem
+55 R Deadland Summoner @spherco
+56 C Distort Reality @chazillah
+57 C Echoing Knowledge @WandererLink
+58 C Erratic Arcanomancer @0oki
+59 M Ethereal Spellmaster @Chaoyuan Xu
+60 U Ficklewing Elemental @SaraLynArt
+61 C Final Revelation @entroz
+62 C Griptide @Igor Kieryluk
+63 C Hapless Chronomancer @JoshCalloway
+64 C Lafterii Augur @chazillah
+65 R Master Echomage @Chris Bjors
+66 U Memories of the Past @Borja Pindado
+67 R Mental Supremacist @PhuThieu1989
+68 C Merfolk Looter @Austin Hsu
+69 U Merfolk Visionary @Chenzan
+70 R Merkurio's Insight @ThreeDeee
+71 U Merkurio's Rebuttal @velinov
+72 U Reality Check @karichristensen
+73 C Risen Looter @Cynic-pavel
+74 U Shape the Tides @thegryph
+75 R Temporary Treason @Andantonius
+76 R The Tideshift @Wasteland-3D
+77 U Tideshift Elemental @kingkostas
+78 C Time to Depart @neisbeis
+79 C Tizzanier Tidehunter @gallegosart-com
+80 U Weather the Storm (MSEM) @88grzes
+81 C Abhorrent Exhumer @mattforsyth
+82 R Accursed Existence @SeanSoong
+83 U Bane of Sanity @TSABER
+84 C Blade of Reolem @nJoo
+85 C Blood Servant @Allnamesinuse
+86 C Bloodrite Fiend @mlappas
+87 R Corpse Exploiter @artofjosevega
+88 C Curse of the Drow @Rheann
+89 C Deadland Mongrel @PhuThieu1989
+90 U Deadland Scavenger @TSRodriguez
+91 U Drow Bloodmage @SimonARPalmer
+92 C Drow Ritualist @telthona
+93 U Dulling Necromancer @DanRobArt
+94 C Endrison Harvester @NathanRosario
+95 C Guilty Execution @Chris Bjors
+96 R Ill-Fated Profit @gallegosart-com
+97 C Last of the Poisonblades @lzfrusnckop
+98 C Legion of Wights @SpineBender
+99 U Mawdryk's Accusation @jiuge
+100 R Mawdryk's Elite @StrogOST
+101 C Necrobite @RalphHorsley
+102 U Purging Reolem @DaveRapoza
+103 R Rallios Reincarnated @Algido
+104 U Scourge of the Deadlands @mattforsyth
+105 C Sinful Past @KoTnoneKoT
+106 C Subturgian Bloodhunter @gongcheng
+107 U Subturgian Legionnaire @Samarskiy
+108 R Subturgian Proliferator @Dmitry Burmak
+109 C Survive the Wreckage @HideTheInsanity
+110 U Temporal Resuscitation @Mac-tire
+111 M Tharyen, Lord of Subturgia @hgjart
+112 R Tharyen's Machinations @JasonEngle
+113 R Tharyen's Sadism @yinyuming
+114 U Tharyen's Vanguard @pamansazz
+115 U Undying Terror @uncannyknack
+116 C Undying Welcome @dekades8
+117 U Unhallowed Legion @Darkcloud013
+118 C Vampiric Appetite @hugo-richard
+119 U Winds of Toxicity @dekades8
+120 C Beragnian Intimidator @RaymondMinnaar
+121 C Beragnian Savage @w15nu91
+122 C Burn with Rage @velinov
+123 U Cannon Fodder @TARGETE
+124 R Chronowing Phoenix @chevsy
+125 U Clanleader of Beragnos @AnthonyDevine
+126 C Continental Collapse @cyl1981
+127 U Crazed Wildlings @nstoyanov
+128 R Dashing Rager @ARTOFJUSTAMAN
+129 C Ebbing Savage @gongcheng
+130 U Expand Your Options @Felipe Escobar
+131 U Fervent Arcanomancer @jason-felix
+132 C Fickleflame Summon @NathanParkArt
+133 R Forgeborn Barbarian @draken4o
+134 C Forgemaster's Gift @Candra
+135 C Furious Betrayal @andreiaugrai
+136 C Goblin Twinblades @Tsabo6
+137 U Hordedriver Enthusiast @thiennh2
+138 C Imminent Collision @alexiuss
+139 C Instinctual Savagery @caiomm
+140 M Khalizors' Last Stand @PE-Travers
+141 M Koth, One True Hero @Immar Palomera
+142 U Koth's Retaliation @Nemca
+143 U Lavacore Elemental @E. M. Gist
+144 C Merciless Brute @nachomolina
+145 R Meteor Volley @zoppy
+146 R Pyromancer's Fury @michalivan
+147 R Roggar's Frenzy @KEKSE0719
+148 U Roggar's Gambit @ZsoltKosa
+149 U Savrios' Cohort @Gworld
+150 U Shrapnelcrafter @NathanRosario
+151 C Surge of Depravity @JoshCalloway
+152 C Swallowed by the Earth @DreadJim
+153 C Swiftstep Cliffdweller @chichapie
+154 U Threats from the Outskirts @TomEdwardsConcepts
+155 C Timecrafter Lafterii @Manzanedo
+156 R Unstable Magmaling @jubjubjedi
+157 C Until the Last Breath @GregTaylorArt
+158 U Vaporizing Blast @WillOBrien
+159 R Weaponize @MeganeRid
+160 U Bloodthirsty Berserkers @theDURRRRIAN
+161 C Counteroffense @thiennh2
+162 C Duskwood Marshal @mattforsyth
+163 C Duskwood Vanguard @fangogogo
+164 U Duskwood Wildcaller @daRoz
+165 C Elusive Sniper @HappySadCorner
+166 M Embodiment of Abundance @Robjenx
+167 U Endrison Familiar @Tsabo6
+168 C Explore @Concept-Cube
+169 R Feralborn Druid @DNA-1
+170 C Fogborn Mauler @Lisa Steinberg
+171 R Formidable Bulkvine @MarcWasHere
+172 C Fortress Sentinel @Allnamesinuse
+173 C Gendran Hostess @sketcheth
+174 U Grace of Gendra @Kobold-Art
+175 C Groundswell @o-Sehaliah-o
+176 U Infuse Vitality @jeffreylai
+177 R Into Strange Territories @Satibalzane
+178 C Irisglow Dryad @Okha
+179 R Khaliz-Dorahn Restored @Fel-X
+180 R Landbound Connoisseur @Callergi
+181 U Landbound Sage @engelszorn
+182 U Mawdryk's Haven @Bob Kehl
+183 C Offer to Nature @Castaguer93
+184 U One with Nature @MartaNael
+185 C Pandora's Antagonism @ptitvinc
+186 U Road to Endris-Dorahn @Narog-art
+187 U Soothevine Elemental @thiago-almeida
+188 C Stronghold Recruit @Taaks
+189 R Summon to the Cause @AlMaNeGrA
+190 R Tharanos' Legion @muratgul
+191 U Tharanos' Stratagem @JohnMcCambridge
+192 R Traversing Bulkvine @JasonEngle
+193 C Treetop Defense (MSEM) @Clooms
+194 U Voice of the Sisterhood @Jakdaw
+195 C Voice of the Wild @Yakovlev-vad
+196 U Waning Behemoth @Felipe Escobar
+197 C Withering Bulkvine @thiago-almeida
+198 C Wolfbriar Sapling @Crazymic
+199 M Wurmscape @Tira-Owl
+200 C Barbarian Hoarders @pixelOgre
+201 M Batrest, Fellor Leader @gooloo0-o
+202 R Batrest's Forgemaster @friendhaircut
+203 R Beragnian Brawlmaster @anna-lakisova
+204 M Elemental Clash @elbardo
+205 R Endrison Nourisher @TylerEdlinArt
+206 U Fellor Ironborn @hualu
+207 C Fleshgraft Aberration @bigmac996
+208 R Gallord's Ascension @FrankAtt
+209 U Garrison Mobilizer @Tsabo6
+210 R Graveborn Usurper @Brolken
+211 M Humanity's Hope @Cosmic0ne
+212 R Lafterii Ingenuity @theTelekinesis
+213 C Landbound Ritualist @serenity2200
+214 U Magus of Memories @OlchaS
+215 R Mawdryk, Endrison Warden @JasonEngle
+216 M Mulchborn Behemoth @Aravan100
+217 R Prosanian Shieldmaster @irvintustin
+218 C Purgeward Adept @Eedenartwork
+219 R Rallios' Return @CKGoksoy
+220 M Rise from Death @Akiman
+221 R Savrios' Timeshifter @Samarskiy
+222 U Vestige of Evil @Manzanedo
+223 U Voice of Khaliz @IvanSevic
+224 C Whimsical Elemental @ArtofTy
+225 C Atemporal Blade @LeeSmith
+226 C Bone Saw @Kev Walker
+227 U Chronomancer's Bauble @nekrosavant
+228 U Cranial Archive @Volkan Baga
+229 U Feral Cleaver @LeeSmith
+230 C Flamewaker's Staff @tjota
+231 C Lodestone Colossus @htkpeh
+232 U Massive Waraxe @joelhustak
+233 R Rallying Banner @DevJohnson
+234 U Ruin Salvager @Venishi
+235 M Savrios' Masterpiece @DusanMarkovic
+236 C Sentinel's Longbow @CurtisWalkerWood
+237 C Sigil of Destruction @DusanMarkovic
+238 C Sigil of Duty @shiprock
+239 C Sigil of Savagery @Deiv Calviz
+240 U Soulstone Shard @KoTnoneKoT
+241 C Stonework Vigilante @Dmitry Burmak
+242 R Tinkerer's Tools @A-u-R-e-L
+243 C Wanderer's Talisman @AlvinHew
+244 U Warmonger Contraption @ALMEIDAHelder
+245 U Wings of the Arcanomancer @mlappas
+246 U Collapsing Ground @FacundoDiaz
+247 R The High Prairies @Fel-X
+248 U Ripping Wilds @Narholt
+249 C Unstable Footing (MSEM) @Titus Lunter
+250 L Plains @LongJh
+251 L Island @agnidevi
+252 L Swamp @RaV89
+253 L Mountain @MishaART
+254 L Forest @chuanzhong
+
+[tokens]
+1 w_1_1_soldier @MaBuArt
+2 w_1_1_spirit_flying @Jason Engle
+3 u_1_1_merfolk_looting @saint-max
+4 b_1_1_vampire_lifelink @Pencracker
+5 b_x_x_zombie @Halycon450
+6 b_2_2_zombie @TheRafa
+7 r_1_1_elemental @Emory
+8 r_3_1_elemental_trample_haste @jackfrozz
+9 r_1_1_goblin @AntonZemskov
+10 g_1_1_dryad_sac @jerry8448
+11 g_1_1_elf_druid @unrealsmoker
+12 g_2_2_wolf @Ooki
+13 g_5_5_wurm_trample @Anthony Francisco
+14 astrina_forged_for_glory @Thomas Tenery
+
+[other]
+15 emblem_allagras_tidal_master @Zhang Qipeng

@@ -1,0 +1,17 @@
+Name:Khaliz-Dorahn Restored
+ManaCost:4 G
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ Card.TopLibrary+YouCtrl | AffectedZone$ Library | MayLookAt$ Player | Description$ Play with the top card of your library revealed.
+
+S:Mode$ Continuous | Affected$ Land.TopLibrary+YouCtrl | AffectedZone$ Library | MayPlay$ True | Description$ You may play lands from the top of your library.
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ Lands | SVarCompare$ GE15 | Execute$ TrigWin | TriggerDescription$ At the beginning of your upkeep, if you control fifteen lands with different names, you win the game.
+
+SVar:TrigWin:DB$ WinsGame | Defined$ You | ConditionCheckSVar$ Lands | ConditionSVarCompare$ GE15
+SVar:Lands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:Play with the top card of your library revealed.\nYou may play lands from the top of your library.\nAt the beginning of your upkeep, if you control fifteen lands with different names, you win the game.
+
+DeckHints:Type$Land
+AI:RemoveDeck:Random

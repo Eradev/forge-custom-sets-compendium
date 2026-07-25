@@ -1,0 +1,10 @@
+Name:Summon to the Cause
+ManaCost:4 G G
+Types:Sorcery
+
+A:SP$ Scry | ScryNum$ X | SubAbility$ DBDig | SpellDescription$ Scry X, where X is the highest toughness among creatures you control, then reveal the top card of your library. If it's a creature with mana value X or less, you may put it onto the battlefield.
+
+SVar:DBDig:DB$ Dig | DigNum$ 1 | Reveal$ True | ChangeNum$ 1 | ChangeValid$ Creature.cmcLEX | DestinationZone$ Battlefield | Optional$ True
+SVar:X:Count$Valid Creature.YouCtrl$GreatestCardToughness
+
+Oracle:Scry X, where X is the highest toughness among creatures you control, then reveal the top card of your library. If it's a creature with mana value X or less, you may put it onto the battlefield.

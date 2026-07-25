@@ -1,0 +1,15 @@
+Name:Fellor Ironborn
+ManaCost:4 R W
+Types:Creature Human Barbarian Warrior
+PT:5/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReturn | TriggerDescription$ When this creature enters, you may return target artifact card from your graveyard to the battlefield. If it's an Equipment, you may attach it to target creature you control.
+
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Artifact.YouOwn | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target artifact card in your graveyard | RememberChanged$ True | SubAbility$ DBChoose
+SVar:DBChoose:DB$ ChooseCard | Choices$ Creature.YouCtrl | ChoiceTitle$ Choose a creature you control to attach the Equipment to | Amount$ 1 | Optional$ True | ConditionDefined$ Remembered | ConditionPresent$ Equipment | ConditionCompare$ GE1 | SubAbility$ DBAttach
+SVar:DBAttach:DB$ Attach | Object$ Remembered | Defined$ ChosenCard | ConditionDefined$ Remembered | ConditionPresent$ Equipment | ConditionCompare$ GE1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+
+Oracle:When this creature enters, you may return target artifact card from your graveyard to the battlefield. If it's an Equipment, you may attach it to target creature you control.
+
+DeckHints:Type$Artifact|Equipment

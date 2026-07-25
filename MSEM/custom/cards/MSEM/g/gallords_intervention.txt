@@ -1,0 +1,11 @@
+Name:Gallord's Intervention
+ManaCost:1 W
+Types:Instant
+
+A:SP$ Token | TokenScript$ w_1_1_soldier | RememberTokens$ True | SubAbility$ DBPump | SpellDescription$ Create a 1/1 white Soldier creature token. It gets +1/+1 and gains first strike until end of turn.
+SVar:DBPump:DB$ Pump | Defined$ Remembered | NumAtt$ +1 | NumDef$ +1 | KW$ First Strike | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Create a 1/1 white Soldier creature token. It gets +1/+1 and gains first strike until end of turn.
+
+DeckHas:Ability$Token

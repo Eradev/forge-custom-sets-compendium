@@ -1,0 +1,10 @@
+Name:Bloodthirsty Berserkers
+ManaCost:5 G
+Types:Creature Human Barbarian Warrior
+PT:5/4
+
+K:Trample
+
+S:Mode$ MinMaxBlocker | ValidCard$ Card.Self | Max$ 1 | Description$ This creature can't be blocked by more than one creature.
+
+Oracle:Trample\nThis creature can't be blocked by more than one creature.

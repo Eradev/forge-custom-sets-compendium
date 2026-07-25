@@ -1,0 +1,10 @@
+Name:Survive the Wreckage
+ManaCost:1 B
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Creature.YouOwn | TgtPrompt$ Select up to one target creature card in your graveyard | TargetMin$ 0 | TargetMax$ 1 | SubAbility$ DBLand | SpellDescription$ Return up to one target creature card and up to one target land card from your graveyard to your hand.
+SVar:DBLand:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Land.YouOwn | TgtPrompt$ Select up to one target land card in your graveyard | TargetMin$ 0 | TargetMax$ 1
+
+Oracle:Return up to one target creature card and up to one target land card from your graveyard to your hand.
+
+DeckHas:Ability$Graveyard

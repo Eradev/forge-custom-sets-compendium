@@ -1,0 +1,12 @@
+Name:Danuri Custodian
+ManaCost:2 W
+Types:Creature Human Cleric
+PT:2/1
+
+R:Event$ Moved | ValidCard$ Creature.OppCtrl | Destination$ Battlefield | ActiveZones$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ Creatures your opponents control enter tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ ReplacedCard | ETB$ True
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Player | TriggerZones$ Battlefield | IsPresent$ Creature.YouCtrl+toughnessGE4 | Execute$ TrigIndestructible | TriggerDescription$ Bulwark — At the beginning of each upkeep, if you control a creature with toughness 4 or greater, this creature gains indestructible until end of turn.
+SVar:TrigIndestructible:DB$ Pump | Defined$ Self | KW$ Indestructible
+
+Oracle:Creatures your opponents control enter tapped.\nBulwark — At the beginning of each upkeep, if you control a creature with toughness 4 or greater, this creature gains indestructible until end of turn.

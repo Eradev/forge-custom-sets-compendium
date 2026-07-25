@@ -1,0 +1,11 @@
+Name:Time to Depart
+ManaCost:1 U
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Creature | TgtPrompt$ Select target creature | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn | SpellDescription$ Exile target creature, then return that card to the battlefield under its owner's control.
+
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | GainControl$ False | SubAbility$ DBCleanup
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Exile target creature, then return that card to the battlefield under its owner's control.

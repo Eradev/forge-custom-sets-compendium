@@ -1,0 +1,9 @@
+Name:Dryad Token
+ManaCost:no cost
+Colors:green
+Types:Creature Dryad
+PT:1/1
+
+A:AB$ Mana | Cost$ Sac<1/CARDNAME/this token> | Produced$ Any | Amount$ 1 | SpellDescription$ Add one mana of any color.
+
+Oracle:Sacrifice this token: Add one mana of any color.

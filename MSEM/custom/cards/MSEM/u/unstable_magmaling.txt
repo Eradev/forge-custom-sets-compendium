@@ -1,0 +1,12 @@
+Name:Unstable Magmaling
+ManaCost:4 R
+Types:Creature Elemental
+PT:5/5
+
+K:Vanishing:5
+
+A:AB$ FlipCoin | Cost$ 1 R SubCounter<1/TIME> | ValidTgts$ Any | TgtPrompt$ Select any target | WinSubAbility$ DBDamage | SpellDescription$ Flip a coin. If you win the flip, this creature deals 3 damage to any target.
+
+SVar:DBDamage:DB$ DealDamage | Defined$ Targeted | NumDmg$ 3 | DamageSource$ Self
+
+Oracle:Vanishing 5 (This creature enters with five time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\n{1}{R}, Remove a time counter from this creature: Flip a coin. If you win the flip, it deals 3 damage to any target.

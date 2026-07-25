@@ -1,0 +1,12 @@
+Name:Irisglow Dryad
+ManaCost:2 G
+Types:Creature Dryad
+PT:0/4
+
+A:AB$ Mana | Cost$ T | Produced$ G | SpellDescription$ Add {G}.
+
+A:AB$ Mana | Cost$ T | Produced$ Any | Amount$ 1 | IsPresent$ Dryad.YouCtrl+Other | PresentCompare$ GE1 | SpellDescription$ Add one mana of any color. Activate only if you control another Dryad.
+
+Oracle:{T}: Add {G}.\n{T}: Add one mana of any color. Activate only if you control another Dryad.
+
+DeckHints:Type$Dryad

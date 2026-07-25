@@ -1,0 +1,12 @@
+Name:Hapless Chronomancer
+ManaCost:2 U
+Types:Creature Human Wizard
+PT:2/3
+
+K:Vanishing:3
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self+counters_EQ0_TIME | Execute$ TrigReturn | TriggerDescription$ When this creature dies, if it had no time counters on it, return target instant or sorcery card from your graveyard to your hand.
+
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Instant.YouOwn,Sorcery.YouOwn | TgtPrompt$ Select target instant or sorcery card in your graveyard
+
+Oracle:Vanishing 3 (This creature enters with three time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen this creature dies, if it had no time counters on it, return target instant or sorcery card from your graveyard to your hand.

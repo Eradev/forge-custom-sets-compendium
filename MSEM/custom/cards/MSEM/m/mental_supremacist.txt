@@ -1,0 +1,10 @@
+Name:Mental Supremacist
+ManaCost:3 U
+Types:Creature Human Wizard
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigAnimate | TriggerDescription$ When this creature enters, choose target creature you don't control. That creature has base power and toughness 1/1 and loses all abilities for as long as you control this creature.
+
+SVar:TrigAnimate:DB$ Animate | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you don't control | Power$ 1 | Toughness$ 1 | RemoveAllAbilities$ True | Duration$ AsLongAsControl
+
+Oracle:When this creature enters, choose target creature you don't control. That creature has base power and toughness 1/1 and loses all abilities for as long as you control this creature.

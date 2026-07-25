@@ -1,0 +1,17 @@
+Name:Curse of the Drow
+ManaCost:1 B B
+Types:Sorcery
+
+A:SP$ Discard | ValidTgts$ Player | NumCards$ 2 | Mode$ TgtChoose | RememberDiscarded$ True | SubAbility$ DBExile | SpellDescription$ Target player discards two cards. Exile up to one land card discarded this way. You may play that card for as long as it remains exiled.
+
+SVar:DBExile:DB$ ChangeZone | Hidden$ True | Origin$ Graveyard | Destination$ Exile | ChangeType$ Land.IsRemembered | ChangeNum$ 1 | Optional$ True | SelectPrompt$ Exile up to one land card discarded this way | RememberChanged$ True | ForgetOtherRemembered$ True | SubAbility$ DBEffect
+
+SVar:DBEffect:DB$ Effect | RememberObjects$ RememberedCard | StaticAbilities$ STPlay | Duration$ Permanent | ForgetOnMoved$ Exile | SubAbility$ DBCleanup
+
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ You may play that card for as long as it remains exiled.
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Target player discards two cards. Exile up to one land card discarded this way. You may play that card for as long as it remains exiled.
+
+DeckHas:Ability$Discard

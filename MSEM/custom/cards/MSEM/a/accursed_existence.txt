@@ -1,0 +1,10 @@
+Name:Accursed Existence
+ManaCost:3 B B
+Types:Enchantment
+
+R:Event$ Moved | ActiveZones$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.!token+YouDontCtrl | ReplaceWith$ Exile | Description$ If a nontoken creature you don't control would die, exile it instead.
+SVar:Exile:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Exile | Defined$ ReplacedCard
+
+S:Mode$ Continuous | MayPlay$ True | Affected$ Card.ExiledWithSource | AffectedZone$ Exile | MayPlayLimit$ 1 | Description$ Once each turn, you may cast a card exiled with this enchantment.
+
+Oracle:If a nontoken creature you don't control would die, exile it instead.\nOnce each turn, you may cast a card exiled with this enchantment.

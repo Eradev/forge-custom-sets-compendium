@@ -1,0 +1,8 @@
+Name:Subturgian Bloodhunter
+ManaCost:2 B
+Types:Creature Vampire
+PT:3/1
+
+K:Lifelink
+
+Oracle:Lifelink

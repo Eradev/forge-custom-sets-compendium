@@ -1,0 +1,14 @@
+Name:Vaporizing Blast
+ManaCost:2 R
+Types:Instant
+
+A:SP$ Branch | ValidTgts$ Creature | TgtPrompt$ Select target creature | BranchConditionSVar$ X | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBGreaterDamage | FalseSubAbility$ DBNormalDamage | SpellDescription$ CARDNAME deals 3 damage to target creature. If that creature has a permanent attached to it, instead CARDNAME deals 7 damage to that creature and 2 damage to that creature's controller.
+
+SVar:X:Count$Valid Card.AttachedTo Targeted
+
+SVar:DBNormalDamage:DB$ DealDamage | Defined$ Targeted | NumDmg$ 3 | DamageSource$ Self
+
+SVar:DBGreaterDamage:DB$ DealDamage | Defined$ Targeted | NumDmg$ 7 | DamageSource$ Self | SubAbility$ DBControllerDamage
+SVar:DBControllerDamage:DB$ DealDamage | Defined$ TargetedController | NumDmg$ 2 | DamageSource$ Self
+
+Oracle:Vaporizing Blast deals 3 damage to target creature. If that creature has a permanent attached to it, instead Vaporizing Blast deals 7 damage to that creature and 2 damage to that creature's controller.

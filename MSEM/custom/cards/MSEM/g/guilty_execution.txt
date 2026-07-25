@@ -1,0 +1,11 @@
+Name:Guilty Execution
+ManaCost:3 B
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ -3 | NumDef$ -3 | SubAbility$ DBDelay | SpellDescription$ Target creature gets -3/-3 until end of turn. When that creature dies this turn, its controller loses 2 life.
+
+SVar:DBDelay:DB$ DelayedTrigger | Mode$ ChangesZone | RememberObjects$ Targeted | ValidCard$ Card.IsTriggerRemembered | Origin$ Battlefield | Destination$ Graveyard | ThisTurn$ True | Execute$ TrigLoseLife | TriggerDescription$ When that creature dies this turn, its controller loses 2 life.
+
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ TriggeredCardController | LifeAmount$ 2
+
+Oracle:Target creature gets -3/-3 until end of turn. When that creature dies this turn, its controller loses 2 life.

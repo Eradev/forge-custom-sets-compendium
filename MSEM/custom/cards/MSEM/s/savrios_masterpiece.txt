@@ -1,0 +1,14 @@
+Name:Savrios' Masterpiece
+ManaCost:3
+Types:Artifact
+
+S:Mode$ ReduceCost | ValidCard$ Creature | Type$ Spell | Activator$ You | Amount$ 2 | Description$ Creature spells you cast cost {2} less to cast.
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl+withoutVanishing | TriggerZones$ Battlefield | Execute$ TrigCounters | TriggerDescription$ Whenever a creature you control enters, if it doesn't have vanishing, put four time counters on it and it gains vanishing.
+
+SVar:TrigCounters:DB$ PutCounter | Defined$ TriggeredCard | CounterType$ TIME | CounterNum$ 4 | SubAbility$ DBVanishing
+SVar:DBVanishing:DB$ Pump | Defined$ TriggeredCard | KW$ Vanishing | Duration$ Permanent
+
+Oracle:Creature spells you cast cost {2} less to cast.\nWhenever a creature you control enters, if it doesn't have vanishing, put four time counters on it and it gains vanishing. (At the beginning of your upkeep, remove a time counter from that permanent. When the last is removed, sacrifice it.)
+
+DeckHas:Ability$Counters

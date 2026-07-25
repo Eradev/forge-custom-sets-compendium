@@ -1,0 +1,14 @@
+Name:Massive Waraxe
+ManaCost:4
+Types:Artifact Equipment
+
+T:Mode$ Attacks | ValidCard$ Creature.EquippedBy | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever equipped creature attacks, it gets +1/+0 until end of turn for each other attacking creature.
+
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredAttackerLKICopy | NumAtt$ +X | NumDef$ +0 | Duration$ UntilEndOfTurn
+SVar:X:Count$Valid Creature.attacking+!EquippedBy
+
+A:AB$ Pump | Cost$ tapXType<2/Creature.YouCtrl> | Defined$ Equipped | KW$ Trample | Duration$ UntilEndOfTurn | SpellDescription$ Equipped creature gains trample until end of turn.
+
+K:Equip:3
+
+Oracle:Whenever equipped creature attacks, it gets +1/+0 until end of turn for each other attacking creature.\nTap two untapped creatures you control: Equipped creature gains trample until end of turn.\nEquip {3}

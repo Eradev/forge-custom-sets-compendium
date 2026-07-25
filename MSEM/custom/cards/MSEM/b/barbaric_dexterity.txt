@@ -1,0 +1,8 @@
+Name:Barbaric Dexterity
+ManaCost:2 W
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ X | NumDef$ X | KW$ Flying & First Strike | SpellDescription$ Until end of turn, target creature gets +1/+1 for each Equipment attached to it and gains flying and first strike.
+SVar:X:Count$Valid Equipment.AttachedTo Targeted
+
+Oracle:Until end of turn, target creature gets +1/+1 for each Equipment attached to it and gains flying and first strike.

@@ -1,0 +1,10 @@
+Name:Goblin Twinblades
+ManaCost:1 R
+Types:Creature Goblin Warrior
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 1/1 red Goblin creature token.
+
+SVar:TrigToken:DB$ Token | TokenScript$ r_1_1_goblin | TokenAmount$ 1 | TokenOwner$ You
+
+Oracle:When this creature enters, create a 1/1 red Goblin creature token.

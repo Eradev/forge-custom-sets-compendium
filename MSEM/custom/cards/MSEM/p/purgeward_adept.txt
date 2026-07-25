@@ -1,0 +1,13 @@
+Name:Purgeward Adept
+ManaCost:4 G W
+Types:Creature Human Soldier
+PT:3/5
+
+K:Vigilance
+
+T:Mode$ Blocks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever this creature blocks or becomes blocked, it gets +1/+0 until end of turn.
+T:Mode$ AttackerBlocked | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | Secondary$ True | TriggerDescription$ Whenever this creature blocks or becomes blocked, it gets +1/+0 until end of turn.
+
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +1 | NumDef$ +0 | Duration$ UntilEndOfTurn
+
+Oracle:Vigilance\nWhenever this creature blocks or becomes blocked, it gets +1/+0 until end of turn.

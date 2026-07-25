@@ -1,0 +1,18 @@
+Name:Mulchborn Behemoth
+ManaCost:4 B G
+Types:Creature Elemental Giant
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSacrifice | TriggerDescription$ When this creature enters, you may sacrifice any number of lands.
+
+SVar:TrigSacrifice:DB$ Sacrifice | Defined$ You | Amount$ SacX | SacValid$ Land | SacMessage$ any number of lands | Optional$ True
+SVar:SacX:Count$Valid Land.YouCtrl
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +1/+1 for each land card in your graveyard.
+SVar:X:Count$ValidGraveyard Land.YouOwn
+
+A:AB$ Destroy | Cost$ B G Sac<1/Land/land> | ValidTgts$ Creature,Land | TgtPrompt$ Select target creature or land | SpellDescription$ Destroy target creature or land.
+
+Oracle:When this creature enters, you may sacrifice any number of lands.\nThis creature gets +1/+1 for each land card in your graveyard.\n{B}{G}, Sacrifice a land: Destroy target creature or land.
+
+DeckHas:Ability$Sacrifice

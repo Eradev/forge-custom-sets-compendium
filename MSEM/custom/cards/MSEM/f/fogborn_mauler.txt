@@ -1,0 +1,13 @@
+Name:Fogborn Mauler
+ManaCost:6 G
+Types:Creature Beast
+PT:7/7
+
+K:Vanishing:3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigLife | TriggerDescription$ When this creature enters or leaves the battlefield, you gain 2 life.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigLife | Secondary$ True | TriggerDescription$ When this creature enters or leaves the battlefield, you gain 2 life.
+
+SVar:TrigLife:DB$ GainLife | Defined$ You | LifeAmount$ 2
+
+Oracle:Vanishing 3 (This creature enters with three time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen this creature enters or leaves the battlefield, you gain 2 life.
