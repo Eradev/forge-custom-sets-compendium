@@ -3,7 +3,7 @@ ManaCost:1 U
 Types:Sorcery
 
 SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
-A:SP$ Token | TokenScript$ u_1_1_otter_draw | TokenAmount$ X | TokenOwner$ You | SpellDescription$ Create a 1/1 blue Otter creature token with "Whenever this creature deals combat damage to a player, draw a card." Wanderlust — If you control four or more differently named lands, create two of those tokens instead.
+A:SP$ Token | TokenScript$ u_1_1_otter_draw | TokenAmount$ X | SpellDescription$ Create a 1/1 blue Otter creature token with "Whenever this creature deals combat damage to a player, draw a card." Wanderlust — If you control four or more differently named lands, create two of those tokens instead.
 SVar:X:Count$Compare WanderLands GE4.2.1
 
 Oracle:Create a 1/1 blue Otter creature token with "Whenever this creature deals combat damage to a player, draw a card."\nWanderlust — If you control four or more differently named lands, create two of those tokens instead.

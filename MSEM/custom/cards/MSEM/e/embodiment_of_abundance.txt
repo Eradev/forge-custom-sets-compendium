@@ -9,7 +9,7 @@ SVar:TrigCharm:DB$ Charm | Choices$ DBLands,DBTokens
 
 SVar:DBLands:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Land.Basic | ChangeTypeDesc$ basic land | ChangeNum$ XLand | Tapped$ True | SpellDescription$ Search your library for up to X basic land cards, where X is the number of lands you control, and put them onto the battlefield tapped. Then shuffle.
 
-SVar:DBTokens:DB$ Token | TokenScript$ g_1_1_elf_druid | TokenAmount$ XCreature | TokenOwner$ You | SpellDescription$ Create a 1/1 green Elf Druid creature token for each creature you control.
+SVar:DBTokens:DB$ Token | TokenScript$ g_1_1_elf_druid | TokenAmount$ XCreature | SpellDescription$ Create a 1/1 green Elf Druid creature token for each creature you control.
 
 SVar:XLand:Count$Valid Land.YouCtrl
 SVar:XCreature:Count$Valid Creature.YouCtrl

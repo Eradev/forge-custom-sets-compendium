@@ -7,7 +7,7 @@ A:AB$ ChangeZone | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Origin$ Li
 
 A:AB$ DealDamage | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ X | DamageSource$ Self | SpellDescription$ NICKNAME deals damage to target creature equal to the number of Mountains you control.
 
-A:AB$ Token | Cost$ SubCounter<7/LOYALTY> | Ultimate$ True | Planeswalker$ True | TokenScript$ r_3_1_elemental_trample_haste | TokenAmount$ X | TokenOwner$ You | SpellDescription$ Create X 3/1 red Elemental creature tokens with trample and haste, where X is the number of Mountains you control.
+A:AB$ Token | Cost$ SubCounter<7/LOYALTY> | Ultimate$ True | Planeswalker$ True | TokenScript$ r_3_1_elemental_trample_haste | TokenAmount$ X | SpellDescription$ Create X 3/1 red Elemental creature tokens with trample and haste, where X is the number of Mountains you control.
 
 SVar:X:Count$Valid Mountain.YouCtrl
 

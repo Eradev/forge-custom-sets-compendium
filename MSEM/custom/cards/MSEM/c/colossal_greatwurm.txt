@@ -10,7 +10,7 @@ K:etbCounter:P1P1:5:no Condition:This creature enters with five +1/+1 counters o
 T:Mode$ Drawn | ValidCard$ Card | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever a player draws a card, put a +1/+1 counter on this creature.
 SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1
 
-A:AB$ Token | Cost$ SubCounter<3/P1P1> | TokenScript$ g_3_3_wurm | TokenOwner$ You | SpellDescription$ Create a 3/3 green Wurm creature token.
+A:AB$ Token | Cost$ SubCounter<3/P1P1> | TokenScript$ g_3_3_wurm | SpellDescription$ Create a 3/3 green Wurm creature token.
 
 Oracle:Trample\nThis creature enters with five +1/+1 counters on it.\nWhenever a player draws a card, put a +1/+1 counter on this creature.\nRemove three +1/+1 counters from this creature: Create a 3/3 green Wurm creature token.
 

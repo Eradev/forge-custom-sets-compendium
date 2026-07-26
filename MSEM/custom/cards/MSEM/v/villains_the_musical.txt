@@ -7,7 +7,7 @@ SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 1
 
 K:Chapter:3:DBToken,DBToken,DBLoseLife
 
-SVar:DBToken:DB$ Token | TokenScript$ b_1_1_actor_lifelink | TokenOwner$ You | SpellDescription$ Create a 1/1 black Actor creature token with lifelink.
+SVar:DBToken:DB$ Token | TokenScript$ b_1_1_actor_lifelink | SpellDescription$ Create a 1/1 black Actor creature token with lifelink.
 
 SVar:DBLoseLife:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ X | SubAbility$ DBGainLife | SpellDescription$ Each opponent loses life equal to the number of tokens you control. You gain life equal to the life lost this way.
 SVar:DBGainLife:DB$ GainLife | LifeAmount$ AFLifeLost
