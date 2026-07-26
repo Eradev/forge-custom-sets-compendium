@@ -2,6 +2,6 @@ Name:Finishing Touches
 ManaCost:B
 Types:Instant
 
-A:SP$ Destroy | ValidTgts$ Creature | AITgts$ Creature.wasDealtDamageThisTurn | ConditionDefined$ Targeted | Condition$ Creature.wasDealtDamageThisTurn | SpellDescription$ Destroy target creature if it was dealt damage this turn.
+A:SP$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Creature,Planeswalker | TgtPrompt$ Select target creature or planeswalker | ConditionDefined$ Targeted | ConditionPresent$ Card.dealtDamageThisTurn,Card.wasDealtDamageThisTurn | ConditionCompare$ GE1 | AITgts$ Creature.dealtDamageThisTurn,Creature.wasDealtDamageThisTurn,Planeswalker.dealtDamageThisTurn,Planeswalker.wasDealtDamageThisTurn | SpellDescription$ Exile target creature or planeswalker if it dealt or was dealt damage this turn.
 
-Oracle:Destroy target creature if it was dealt damage this turn.
+Oracle:Exile target creature or planeswalker if it dealt or was dealt damage this turn.

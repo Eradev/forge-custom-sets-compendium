@@ -2,7 +2,7 @@ Name:One with Seishin
 ManaCost:1 W
 Types:Enchantment
 
-S:Mode$ Continuous | Affected$ Creature.Colorless+Other+YouCtrl | AddPower$ 1 | AddToughness$ 1 | Description$ Other colorless creatures you control get +1/+1.
+S:Mode$ Continuous | Affected$ Creature.Colorless+YouCtrl | AddPower$ 1 | AddToughness$ 1 | Description$ Colorless creatures you control get +1/+1.
 
 Oracle:Colorless creatures you control get +1/+1.
 

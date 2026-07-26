@@ -6,7 +6,7 @@ PT:5/5
 K:First Strike
 K:Vigilance
 
-K:Partner:Commander Hyctaleon
+K:Partner with:Commander Hyctaleon
 
 T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigChange | OptionalDecider$ You | TriggerDescription$ At the beginning of your upkeep, you may search your library for a Soldier card, reveal it, put it into your hand, then shuffle.
 SVar:TrigChange:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Card.Soldier | ChangeNum$ 1 | ShuffleNonMandatory$ True

@@ -3,7 +3,7 @@ ManaCost:2 B B
 Types:Legendary Creature Human Wizard
 PT:2/2
 
-K:Partner:Kasoha, Keeper of Truths
+K:Partner with:Kasoha, Keeper of Truths
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self,Creature.Legendary | Execute$ TrigDraw | TriggerDescription$ Whenever Shizura or another legendary creature dies, target player draws two cards and loses 2 life.
 SVar:TrigDraw:DB$ Draw | ValidTgts$ Player | NumCards$ 2 | SubAbility$ DBLoseLife
