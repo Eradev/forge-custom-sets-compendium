@@ -2,7 +2,7 @@ Name:Seishin's Edge
 ManaCost:1
 Types:Artifact Equipment
 
-S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ AffectedX | Description$ Equipped creature gets +1/+0 for each colorless creature you control.
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ X | Description$ Equipped creature gets +1/+0 for each colorless creature you control.
 SVar:X:Count$Valid Creature.Colorless+YouCtrl
 
 K:Equip:1

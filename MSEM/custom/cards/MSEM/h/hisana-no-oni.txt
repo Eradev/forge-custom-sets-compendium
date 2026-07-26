@@ -1,7 +1,6 @@
 Name:Hisana-no-Oni
 ManaCost:2 U U
 Types:Creature Demon Spirit
-
 PT:2/2
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChange | TriggerDescription$ When this creature enters, gain control of target creature for as long as this creature remains on the battlefield.

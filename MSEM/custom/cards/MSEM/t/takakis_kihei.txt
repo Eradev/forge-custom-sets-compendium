@@ -1,5 +1,5 @@
 Name:Takaki's Kihei
-ManaCost:1W
+ManaCost:1 W
 Types:Creature Human Samurai Knight
 PT:2/2
 

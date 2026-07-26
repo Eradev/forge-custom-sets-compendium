@@ -2,6 +2,6 @@ Name:Tales of Old Jidai
 ManaCost:1 U U
 Types:Instant
 
-A:SP$ Draw | NumCards$ 2 | SpellDescription$ Draws two cards.
+A:SP$ Draw | NumCards$ 2 | SpellDescription$ Draw two cards.
 
-Oracle:Draws two cards.
+Oracle:Draw two cards.

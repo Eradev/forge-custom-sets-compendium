@@ -7,6 +7,6 @@ SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
 
-A:AB$ ManaReflected | Cost$ T | ColorOrType$ Color | Valid$ Defined.ValidGraveyard Creature.YouOwn | ReflectProperty$ Is | SpellDescription$ Add one mana of any color among cards in your graveyard.
+A:AB$ ManaReflected | Cost$ T | ColorOrType$ Color | Valid$ Defined.ValidGraveyard Card.YouOwn | ReflectProperty$ Is | SpellDescription$ Add one mana of any color among cards in your graveyard.
 
 Oracle:This land enters tapped.\n{T}: Add {C}.\n{T}: Add one mana of any color among cards in your graveyard.
