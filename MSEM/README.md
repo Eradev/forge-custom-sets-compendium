@@ -92,6 +92,7 @@ Examples on how to implement custom keywords and mechanisms.
 * [Rerun](#rerun)
 * [Showcase](#showcase)
 * [Torment](#torment)
+* [Inscribe](#inscribe)
 
 ### Aetherize
 
@@ -467,7 +468,18 @@ Inscribe {2}{W} ({2}{W}: Exile this card from your hand inscribed on a creature 
 Implementation:
 
 ```text
-A:AB$ Pump | Cost$ 2 W Reveal<1/CARDNAME> | ActivationZone$ Hand | ValidTgts$ Creature.YouCtrl | TgtZone$ Battlefield | TgtPrompt$ Select target creature you control | SorcerySpeed$ True | NumAtt$ 0 | NumDef$ 0 | Duration$ Permanent | StackDescription$ SpellDescription | SubAbility$ DBExileForInscribe | PrecostDesc$ Inscribe | SpellDescription$ ({2}{W}: Exile this card from your hand inscribed on a creature you control. Whenever that creature attacks, its controller may cast a copy of the inscribed card without paying its mana cost. Inscribe only as a sorcery.) SVar:DBExileForInscribe:DB$ ChangeZone | Defined$ Self.YouOwn | Origin$ Hand | Destination$ Exile | RememberChanged$ True | ForgetOtherRemembered$ True | SubAbility$ DBCreateInscribe SVar:DBCreateInscribe:DB$ Effect | Name$ Inscription Effect | ConditionDefined$ Remembered | ConditionPresent$ Card.inZoneExile | ConditionCompare$ EQ1 | RememberObjects$ Targeted | StaticAbilities$ STInscribeDesc | Triggers$ InscribeTrigger,InscribedCreatureLeaves,InscriptionRemovedFromExile | ImprintCards$ Remembered | Duration$ Permanent | SubAbility$ DBCleanup SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True SVar:STInscribeDesc:Mode$ Continuous | Affected$ Card.IsRemembered | Secondary$ True | AddStaticAbility$ InscribeOnCreature | AddSVar$ SVarInscribed SVar:InscribeOnCreature:Mode$ Continuous | Affected$ Card.Self | Description$ Inscribed — CARDNAME SVar:SVarInscribed:SVar:IsInscribed:Number$1 SVar:InscribeTrigger:Mode$ Attacks | ValidCard$ Card.IsRemembered | Execute$ PlayInscribed | TriggerDescription$ Whenever the inscribed creature attacks, its controller may cast a copy of EFFECTSOURCE without paying its mana cost. SVar:PlayInscribed:DB$ Play | Defined$ Imprinted | WithoutManaCost$ True | CopyCard$ True | Optional$ True | Controller$ TriggeredAttackerController | ValidSA$ Spell SVar:InscribedCreatureLeaves:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.IsRemembered | Execute$ ExileEffect | Static$ True | TriggerDescription$ When the inscribed creature leaves the battlefield, end the inscription. SVar:InscriptionRemovedFromExile:Mode$ ChangesZone | Origin$ Exile | ValidCard$ Card.IsImprinted | Execute$ ExileEffect | Static$ True SVar:ExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+A:AB$ Pump | Cost$ 2 W Reveal<1/CARDNAME> | ActivationZone$ Hand | ValidTgts$ Creature.YouCtrl | TgtZone$ Battlefield | TgtPrompt$ Select target creature you control | SorcerySpeed$ True | NumAtt$ 0 | NumDef$ 0 | Duration$ Permanent | StackDescription$ SpellDescription | SubAbility$ DBExileForInscribe | PrecostDesc$ Inscribe | SpellDescription$ ({2}{W}: Exile this card from your hand inscribed on a creature you control. Whenever that creature attacks, its controller may cast a copy of the inscribed card without paying its mana cost. Inscribe only as a sorcery.)
+SVar:DBExileForInscribe:DB$ ChangeZone | Defined$ Self.YouOwn | Origin$ Hand | Destination$ Exile | RememberChanged$ True | ForgetOtherRemembered$ True | SubAbility$ DBCreateInscribe
+SVar:DBCreateInscribe:DB$ Effect | Name$ Inscription Effect | ConditionDefined$ Remembered | ConditionPresent$ Card.inZoneExile | ConditionCompare$ EQ1 | RememberObjects$ Targeted | StaticAbilities$ STInscribeDesc | Triggers$ InscribeTrigger,InscribedCreatureLeaves,InscriptionRemovedFromExile | ImprintCards$ Remembered | Duration$ Permanent | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:STInscribeDesc:Mode$ Continuous | Affected$ Card.IsRemembered | Secondary$ True | AddStaticAbility$ InscribeOnCreature | AddSVar$ SVarInscribed
+SVar:InscribeOnCreature:Mode$ Continuous | Affected$ Card.Self | Description$ Inscribed — CARDNAME
+SVar:SVarInscribed:SVar:IsInscribed:Number$1
+SVar:InscribeTrigger:Mode$ Attacks | ValidCard$ Card.IsRemembered | Execute$ PlayInscribed | TriggerDescription$ Whenever the inscribed creature attacks, its controller may cast a copy of EFFECTSOURCE without paying its mana cost.
+SVar:PlayInscribed:DB$ Play | Defined$ Imprinted | WithoutManaCost$ True | CopyCard$ True | Optional$ True | Controller$ TriggeredAttackerController | ValidSA$ Spell
+SVar:InscribedCreatureLeaves:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.IsRemembered | Execute$ ExileEffect | Static$ True | TriggerDescription$ When the inscribed creature leaves the battlefield, end the inscription.
+SVar:InscriptionRemovedFromExile:Mode$ ChangesZone | Origin$ Exile | ValidCard$ Card.IsImprinted | Execute$ ExileEffect | Static$ True
+SVar:ExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
 ```
 
 The activated ability exiles the Inscription card, then creates a permanent command-zone effect that remembers the creature and imprints the exiled card. When the remembered creature attacks, the effect allows its controller to cast a copy of the imprinted card without paying its mana cost.
