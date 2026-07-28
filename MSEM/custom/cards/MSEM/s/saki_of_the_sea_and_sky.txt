@@ -1,0 +1,14 @@
+Name:Saki of the Sea and Sky
+ManaCost:U R W
+Types:Legendary Creature Human Wizard
+PT:3/2
+K:Flying
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ CARDNAME gets +1/+1 for each card inscribed onto it and each permanent attached to it.
+
+SVar:X:Count$Valid Permanent.Attached
+
+SVar:EnchantMe:Multiple
+SVar:EquipMe:Multiple
+
+Oracle:Flying\nSaki of the Sea and Sky gets +1/+1 for each card inscribed onto it and each permanent attached to it.

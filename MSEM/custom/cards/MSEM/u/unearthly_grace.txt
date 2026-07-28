@@ -1,0 +1,16 @@
+Name:Unearthly Grace
+ManaCost:2 U
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | Execute$ TrigGraceChoice | TriggerDescription$ Whenever a creature you control dies, you may return all Auras attached to it from your graveyard and all Inscription cards inscribed on it from exile to your hand.
+
+SVar:TrigGraceChoice:DB$ GenericChoice | Defined$ You | Choices$ GraceReturnChoice,GraceDeclineChoice | ChoicePrompt$ Return all Auras and Inscription cards attached or inscribed to the creature?
+
+SVar:GraceReturnChoice:DB$ ChangeZone | Defined$ AttachedTo TriggeredCardLKICopy.Aura | Origin$ Graveyard | Destination$ Hand | SubAbility$ GraceReturnSignal | SpellDescription$ Return all Auras and Inscription cards.
+SVar:GraceReturnSignal:DB$ ImmediateTrigger | RememberObjects$ TriggeredCardLKICopy | Execute$ GraceReturnMarker
+SVar:GraceReturnMarker:DB$ Cleanup | Named$ GraceReturnSignal
+
+SVar:GraceDeclineChoice:DB$ ImmediateTrigger | RememberObjects$ TriggeredCardLKICopy | Execute$ GraceDeclineMarker | SpellDescription$ Return nothing.
+SVar:GraceDeclineMarker:DB$ Cleanup | Named$ GraceDeclineSignal
+
+Oracle:Whenever a creature you control dies, you may return all cards that were inscribed onto that creature and all Auras that were attached to that creature to their owners' hands.

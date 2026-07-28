@@ -1,0 +1,56 @@
+Name:Favor of the Emperor
+ManaCost:2 B
+Types:Sorcery Inscription
+
+A:SP$ Draw | NumCards$ 2 | Defined$ You | SubAbility$ DBLoseLife | SpellDescription$ You draw two cards and you lose 2 life.
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2 | Defined$ You
+
+A:AB$ Pump | Cost$ 3 B B Reveal<1/CARDNAME> | ActivationZone$ Hand | ValidTgts$ Creature.YouCtrl | TgtZone$ Battlefield | TgtPrompt$ Select target creature you control | SorcerySpeed$ True | NumAtt$ 0 | NumDef$ 0 | Duration$ Permanent | StackDescription$ SpellDescription | SubAbility$ DBExileForInscribe | PrecostDesc$ Inscribe | SpellDescription$ ({3}{B}{B}: Exile this card from your hand inscribed on a creature you control. Whenever that creature attacks, its controller may cast a copy of the inscribed card without paying its mana cost. Inscribe only as a sorcery.)
+SVar:DBExileForInscribe:DB$ ChangeZone | Defined$ Self.YouOwn | Origin$ Hand | Destination$ Exile | RememberChanged$ True | ForgetOtherRemembered$ True | SubAbility$ DBCreateInscribe
+SVar:DBCreateInscribe:DB$ Effect | Name$ Inscription Effect | ConditionDefined$ Remembered | ConditionPresent$ Card.inZoneExile | ConditionCompare$ EQ1 | RememberObjects$ Targeted | StaticAbilities$ STInscribeDesc,STShokanBattalionBonus,STSakuraSpiritBonus,STSakiBonus,STLordAsharoCast | Triggers$ InscribeTrigger,InscribedCreatureLeaves,InscriptionRemovedFromExile,UnearthlyGraceReturnSignal,UnearthlyGraceDeclineSignal | ImprintCards$ Remembered | Duration$ Permanent | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+A:AB$ Pump | Cost$ 3 B B | ActivationZone$ Graveyard | ValidTgts$ Creature.YouCtrl | TgtZone$ Battlefield | TgtPrompt$ Select target creature you control | SorcerySpeed$ True | NumAtt$ 0 | NumDef$ 0 | Duration$ Permanent | StackDescription$ SpellDescription | SubAbility$ DBExileForInscribeGraveyard | CheckSVar$ CanInscribeFromGraveyard | SVarCompare$ GE1
+SVar:DBExileForInscribeGraveyard:DB$ ChangeZone | Defined$ Self.YouOwn | Origin$ Graveyard | Destination$ Exile | RememberChanged$ True | ForgetOtherRemembered$ True | SubAbility$ DBCreateInscribe
+
+SVar:InscribedCreatureLeaves:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.IsRemembered | IsPresent$ Card.namedUnearthly Grace+YouCtrl | PresentZone$ Battlefield | PresentCompare$ EQ0 | Execute$ ExileEffect | Static$ True | TriggerDescription$ When the inscribed creature leaves the battlefield, end the inscription.
+
+SVar:STInscribeDesc:Mode$ Continuous | Affected$ Card.IsRemembered | Secondary$ True | AddStaticAbility$ InscribeOnCreature | AddSVar$ SVarInscribed
+
+SVar:STShokanBattalionBonus:Mode$ Continuous | Affected$ Card.IsRemembered+namedShokan Battalion | AddKeyword$ Double Strike | Secondary$ True
+
+SVar:STSakuraSpiritBonus:Mode$ Continuous | Affected$ Card.IsRemembered+namedSakura Spirit | AddKeyword$ Lifelink | Secondary$ True
+
+SVar:STSakiBonus:Mode$ Continuous | Affected$ Card.IsRemembered+namedSaki of the Sea and Sky | AddPower$ 1 | AddToughness$ 1 | Secondary$ True
+
+SVar:InscribeOnCreature:Mode$ Continuous | Affected$ Card.Self | Description$ Inscribed — Favor of the Emperor
+
+SVar:InscribeTrigger:Mode$ Attacks | ValidCard$ Card.IsRemembered | Execute$ PlayInscribed | TriggerDescription$ Whenever the inscribed creature attacks, its controller may cast a copy of EFFECTSOURCE without paying its mana cost.
+SVar:PlayInscribed:DB$ Play | Defined$ Imprinted | WithoutManaCost$ True | CopyCard$ True | Optional$ True | Controller$ TriggeredAttackerController | ValidSA$ Spell
+
+SVar:InscriptionRemovedFromExile:Mode$ ChangesZone | Origin$ Exile | ValidCard$ Card.IsImprinted | Execute$ ExileEffect | Static$ True
+SVar:ExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+
+SVar:SVarInscribed:SVar:IsInscribed:Number$1
+
+SVar:UnearthlyGraceReturnSignal:Mode$ AbilityTriggered | ValidMode$ Immediate | ValidSource$ Card.namedUnearthly Grace | ValidSpellAbility$ Ability.NamedAbilityGraceReturnSignal | Execute$ ReturnInscription | Static$ True
+SVar:ReturnInscription:DB$ ChangeZone | Defined$ Imprinted | Origin$ Exile | Destination$ Hand | ConditionDefined$ TriggeredSpellAbility>DelayTriggerRememberedLKI | ConditionPresent$ Card.IsRemembered | ConditionCompare$ EQ1
+
+SVar:UnearthlyGraceDeclineSignal:Mode$ AbilityTriggered | ValidMode$ Immediate | ValidSource$ Card.namedUnearthly Grace | ValidSpellAbility$ Ability.NamedAbilityGraceDeclineSignal | Execute$ EndInscriptionAfterGrace | Static$ True
+SVar:EndInscriptionAfterGrace:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile | ConditionDefined$ TriggeredSpellAbility>DelayTriggerRememberedLKI | ConditionPresent$ Card.IsRemembered | ConditionCompare$ EQ1
+
+T:Mode$ AbilityTriggered | ValidMode$ Immediate | ValidSource$ Card.namedWay of the Dragon | TriggerZones$ Exile | Execute$ WayChooseCreature | Static$ True
+SVar:WayChooseCreature:DB$ ChooseCard | Defined$ You | Choices$ Creature.YouCtrl | ChoiceZone$ Battlefield | Amount$ 1 | MinAmount$ 0 | RememberChosen$ True | ChoiceTitle$ Choose a creature you control to inscribe Favor of the Emperor onto | ConditionDefined$ TriggeredSpellAbility>DelayTriggerRememberedLKI | ConditionPresent$ Card.StrictlySelf | ConditionCompare$ EQ1 | SubAbility$ WayCreateInscribe
+SVar:WayCreateInscribe:DB$ Effect | Name$ Inscription Effect | ConditionDefined$ Remembered | ConditionPresent$ Creature.inZoneBattlefield | ConditionCompare$ EQ1 | RememberObjects$ Remembered | StaticAbilities$ STInscribeDesc,STShokanBattalionBonus,STSakuraSpiritBonus,STSakiBonus,STLordAsharoCast | Triggers$ InscribeTrigger,InscribedCreatureLeaves,InscriptionRemovedFromExile,UnearthlyGraceReturnSignal,UnearthlyGraceDeclineSignal | ImprintCards$ Self | Duration$ Permanent | SubAbility$ DBCleanup
+
+T:Mode$ AbilityTriggered | ValidMode$ Immediate | ValidSpellAbility$ Ability.NamedAbilityAsharoInscribeSignal | TriggerZones$ Exile | Execute$ AsharoCreateInscribe | Static$ True
+SVar:AsharoCreateInscribe:DB$ Effect | Name$ Inscription Effect | ConditionDefined$ TriggeredSpellAbility>DelayTriggerRememberedLKI | ConditionPresent$ Card.StrictlySelf,Creature.inZoneBattlefield | ConditionCompare$ EQ2 | RememberObjects$ TriggeredSpellAbility>DelayTriggerRemembered.Creature+inZoneBattlefield | StaticAbilities$ STInscribeDesc,STShokanBattalionBonus,STSakuraSpiritBonus,STSakiBonus,STLordAsharoCast | Triggers$ InscribeTrigger,InscribedCreatureLeaves,InscriptionRemovedFromExile,UnearthlyGraceReturnSignal,UnearthlyGraceDeclineSignal | ImprintCards$ Self | Duration$ Permanent
+
+SVar:STLordAsharoCast:Mode$ Continuous | Affected$ Card.IsRemembered+namedLord Asharo | AddAbility$ ABLordAsharoCast | AddSVar$ DBLordAsharoCast & DBLordAsharoCleanup | Secondary$ True
+SVar:ABLordAsharoCast:AB$ NameCard | Cost$ T | Defined$ You | ChooseFromList$ Favor of the Emperor | SubAbility$ DBLordAsharoCast | StackDescription$ SpellDescription | SpellDescription$ Cast a copy of Inner Peace without paying its mana cost.
+SVar:DBLordAsharoCast:DB$ Play | CopyFromChosenName$ True | WithoutManaCost$ True | SubAbility$ DBLordAsharoCleanup | StackDescription$ None
+SVar:DBLordAsharoCleanup:DB$ Cleanup | ClearNamedCard$ True
+
+Oracle:You draw two cards and you lose 2 life.\nInscribe {3}{B}{B} ({3}{B}{B}: Exile this card from your hand inscribed on a creature you control. Whenever that creature attacks, its controller may cast a copy of the inscribed card without paying its mana cost. Inscribe only as a sorcery.)
+
+DeckHas:Ability$Draw
