@@ -1,0 +1,14 @@
+Name:Kamito Eternalist
+ManaCost:R
+Types:Creature Human Wizard
+PT:1/2
+K:Prowess
+
+S:Mode$ Continuous | Affected$ Card.Inscription+YouOwn | AffectedZone$ Graveyard | AddSVar$ CanInscribeFromGraveyard | Description$ You may activate inscribe abilities from your graveyard as though they were in your hand.
+
+SVar:CanInscribeFromGraveyard:Number$1
+
+DeckHas:Ability$Graveyard
+DeckHints:Type$Inscription
+
+Oracle:Prowess\nYou may activate inscribe abilities from your graveyard as though they were in your hand.

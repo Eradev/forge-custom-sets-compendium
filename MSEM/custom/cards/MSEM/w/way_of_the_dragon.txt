@@ -1,0 +1,14 @@
+Name:Way of the Dragon
+ManaCost:3 R
+Types:Sorcery
+
+A:SP$ ChangeZoneAll | Origin$ Command | Destination$ Exile | ChangeType$ Effect.YouCtrl+namedInscription Effect | SubAbility$ DBExileInscriptions | StackDescription$ SpellDescription | SpellDescription$ Exile all Inscription cards from your graveyard and all exiled Inscription cards you own. For each card exiled this way, you may inscribe it onto a creature you control.
+
+SVar:DBExileInscriptions:DB$ ChangeZoneAll | Origin$ Graveyard,Exile | Destination$ Exile | ChangeType$ Card.Inscription+YouOwn | SubAbility$ DBSignalInscriptions | StackDescription$ None
+
+SVar:DBSignalInscriptions:DB$ ImmediateTrigger | RememberObjects$ ValidExile Card.Inscription+YouOwn | TriggerDescription$ Way of the Dragon processes the exiled Inscription cards.
+
+Oracle:Exile all Inscription cards from your graveyard and all exiled Inscription cards you own. For each card exiled this way, you may inscribe it onto a creature you control. (Whenever that creature attacks, its controller may cast a copy of the inscribed card without paying its mana cost.)
+
+DeckHas:Ability$Graveyard
+DeckHints:Type$Inscription

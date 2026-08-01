@@ -1,0 +1,8 @@
+Name:Shokan Battalion
+ManaCost:3 W
+Types:Creature Human Samurai
+PT:3/4
+
+S:Mode$ Continuous | Affected$ Card.Self+enchanted,Card.Self+equipped | AddKeyword$ Double Strike | Description$ CARDNAME has double strike as long as it's enchanted, equipped, or has a card inscribed onto it.
+
+Oracle:Shokan Battalion has double strike as long as it's enchanted, equipped, or has a card inscribed onto it.
