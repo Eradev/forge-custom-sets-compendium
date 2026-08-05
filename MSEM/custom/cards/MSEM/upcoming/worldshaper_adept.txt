@@ -3,17 +3,17 @@ ManaCost:2 G
 Types:Creature Human Druid
 PT:3/2
 
-A:AB$ GenericChoice | Cost$ T Sac<1/CARDNAME/this creature> | Choices$ DBPI,DBPS,DBPM,DBPF,DBIS,DBIM,DBIF,DBSM,DBSF,DBMF | SpellDescription$ Choose two basic land types. Create a tapped colorless land token of the chosen types.
+A:AB$ GenericChoice | Cost$ T Sac<1/CARDNAME/this creature> | Choices$ DBPI,DBPS,DBPM,DBFP,DBIS,DBIM,DBFI,DBSM,DBSF,DBMF | SpellDescription$ Choose two basic land types. Create a tapped colorless land token of the chosen types.
 SVar:DBPI:DB$ Token | TokenScript$ plains_island | TokenTapped$ True | SpellDescription$ Plains and Island
 SVar:DBPS:DB$ Token | TokenScript$ plains_swamp | TokenTapped$ True | SpellDescription$ Plains and Swamp
-SVar:DBPM:DB$ Token | TokenScript$ plains_mountain | TokenTapped$ True | SpellDescription$ Plains and Mountain
-SVar:DBPF:DB$ Token | TokenScript$ plains_forest | TokenTapped$ True | SpellDescription$ Plains and Forest
 SVar:DBIS:DB$ Token | TokenScript$ island_swamp | TokenTapped$ True | SpellDescription$ Island and Swamp
 SVar:DBIM:DB$ Token | TokenScript$ island_mountain | TokenTapped$ True | SpellDescription$ Island and Mountain
-SVar:DBIF:DB$ Token | TokenScript$ island_forest | TokenTapped$ True | SpellDescription$ Island and Forest
+SVar:DBFI:DB$ Token | TokenScript$ forest_island | TokenTapped$ True | SpellDescription$ Forest and Island
 SVar:DBSM:DB$ Token | TokenScript$ swamp_mountain | TokenTapped$ True | SpellDescription$ Swamp and Mountain
 SVar:DBSF:DB$ Token | TokenScript$ swamp_forest | TokenTapped$ True | SpellDescription$ Swamp and Forest
+SVar:DBFP:DB$ Token | TokenScript$ forest_plains | TokenTapped$ True | SpellDescription$ Forest and Plains
 SVar:DBMF:DB$ Token | TokenScript$ mountain_forest | TokenTapped$ True | SpellDescription$ Mountain and Forest
+SVar:DBPM:DB$ Token | TokenScript$ mountain_plains | SpellDescription$ Mountain and Plains
 
 Oracle:{T}, Sacrifice this creature: Choose two basic land types. Create a tapped colorless land token of the chosen types.
 

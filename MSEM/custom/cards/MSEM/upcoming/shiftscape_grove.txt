@@ -5,8 +5,8 @@ Types:Land
 A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
 
 A:AB$ GenericChoice | Cost$ T Exile<1/CARDNAME/this land> | ActivationPhases$ Upkeep | PlayerTurn$ True | Choices$ DBPlains,DBIsland,DBSwamp,DBMountain | SpellDescription$ Choose a basic land type other than Forest. Create a colorless land token that's a Forest and the chosen basic land type. Activate only during your upkeep.
-SVar:DBPlains:DB$ Token | TokenScript$ plains_forest | SpellDescription$ Plains
-SVar:DBIsland:DB$ Token | TokenScript$ island_forest | SpellDescription$ Island
+SVar:DBPlains:DB$ Token | TokenScript$ forest_plains | SpellDescription$ Plains
+SVar:DBIsland:DB$ Token | TokenScript$ forest_island | SpellDescription$ Island
 SVar:DBSwamp:DB$ Token | TokenScript$ swamp_forest | SpellDescription$ Swamp
 SVar:DBMountain:DB$ Token | TokenScript$ mountain_forest | SpellDescription$ Mountain
 

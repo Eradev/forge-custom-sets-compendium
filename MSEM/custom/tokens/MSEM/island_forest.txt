@@ -1,5 +1,0 @@
-Name:Island Forest Token
-ManaCost:no cost
-Colors:colorless
-Types:Land Island Forest
-Oracle:({T}: Add {U} or {G}.)

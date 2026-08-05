@@ -1,5 +1,0 @@
-Name:Plains Forest Token
-ManaCost:no cost
-Colors:colorless
-Types:Land Plains Forest
-Oracle:({T}: Add {W} or {G}.)
