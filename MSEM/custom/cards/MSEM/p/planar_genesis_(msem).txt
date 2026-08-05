@@ -1,4 +1,4 @@
-Name:Planar Genesis
+Name:Planar Genesis (MSEM)
 ManaCost:5 G G G
 Types:Sorcery
 
