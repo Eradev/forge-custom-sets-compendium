@@ -4,7 +4,7 @@ Types:Creature Treefolk Shaman
 PT:6/6
 
 S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ X | EffectZone$ All | Description$ This spell costs {1} less to cast for each differently named land you control.
-SVar:X:Count$DifferentCardNames_Land.YouCtrl+inZoneBattlefield
+SVar:X:Count$Valid Land.YouCtrl$DifferentCardNames
 
 K:Reach
 
