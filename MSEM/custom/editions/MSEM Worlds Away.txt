@@ -213,11 +213,11 @@ Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 Special
 205 C Otherworldly Plains @Anthony Brault
 206 C Otherworldly Swamp @Anthony Brault
 207 R Zhedina Exchange @Deiv Calviz
-208 L Plains_WAY @Olexii Shuhurov
-209 L Island_WAY @Avant Choi
-210 L Swamp_WAY @Jing Chun
-211 L Mountain_WAY @Moritz Lacusteanu
-212 L Forest_WAY @Tristan Faure
+208 L Plains @Olexii Shuhurov
+209 L Island @Avant Choi
+210 L Swamp @Jing Chun
+211 L Mountain @Moritz Lacusteanu
+212 L Forest @Tristan Faure
 213 S Abandoned Monument @Andrew Bosley
 214 S Autumn Canopy @Logan Feliciano
 215 S Blossoming Expanse @Tristan Faure
