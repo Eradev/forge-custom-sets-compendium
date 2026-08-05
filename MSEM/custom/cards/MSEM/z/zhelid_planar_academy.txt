@@ -1,0 +1,10 @@
+Name:Zhelid, Planar Academy
+ManaCost:no cost
+Types:Legendary Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Scry | Cost$ T | ScryNum$ 1 | CheckSVar$ WanderLands | SVarCompare$ GE4 | SpellDescription$ Wanderlust — Scry 1. Activate only if you control four or more differently named lands.
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:{T}: Add {C}.\nWanderlust — {T}: Scry 1. Activate only if you control four or more differently named lands.
