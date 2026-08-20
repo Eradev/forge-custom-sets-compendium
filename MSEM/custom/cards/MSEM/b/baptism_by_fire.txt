@@ -1,0 +1,24 @@
+Name:Baptism by Fire
+ManaCost:1 R
+Types:Instant
+
+#-------------------
+# Golden Age trigger
+#-------------------
+T:Mode$ SpellCast | ValidCard$ Card.Self | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+
+SVar:EnterGoldenAge:DB$ Effect | Name$ Golden Age | StaticAbilities$ GoldenAgeDesc | Duration$ Permanent | Unique$ True
+SVar:GoldenAgeDesc:Mode$ Continuous | Description$ You are in a renaissance.
+
+SVar:GoldenAgeSpell:Count$ThisTurnCast_Card.Instant+YouCtrl,Card.Sorcery+YouCtrl/LimitMax.1
+SVar:GoldenAgeAbility:Count$ThisTurnActivated_Activated.!ManaAbility+YouCtrl/LimitMax.1
+SVar:GoldenAgeAttack:Count$AttackersDeclared/LimitMax.1
+SVar:GoldenCheck1:SVar$GoldenAgeSpell/Plus.GoldenAgeAbility
+SVar:GoldenCheckFinal:SVar$GoldenCheck1/Plus.GoldenAgeAttack
+#-------------------
+
+A:SP$ DealDamage | ValidTgts$ Creature,Planeswalker | TgtPrompt$ Select target creature or planeswalker | NumDmg$ X | SpellDescription$ CARDNAME deals 3 damage to target creature or planeswalker. If you're in a renaissance, CARDNAME deals 6 damage to that permanent instead.
+SVar:X:Count$Compare IsRenaissance EQ1.6.3
+SVar:IsRenaissance:Count$ValidCommand Effect.YouCtrl+namedGolden Age/LimitMax.1
+
+Oracle:Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)\nBaptism by Fire deals 3 damage to target creature or planeswalker. If you're in a renaissance, Baptism by Fire deals 6 damage to that permanent instead.

@@ -1,0 +1,27 @@
+Name:Fox of a Radiant Meadow
+ManaCost:1 W
+Types:Creature Fox
+PT:2/2
+
+#-------------------
+# Golden Age trigger
+#-------------------
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Secondary$ True | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+T:Mode$ AttackersDeclared | AttackingPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Secondary$ True | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+T:Mode$ AbilityCast | ValidActivatingPlayer$ You | ValidSA$ SpellAbility.!ManaAbility | TriggerZones$ Battlefield | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Secondary$ True | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+
+SVar:EnterGoldenAge:DB$ Effect | Name$ Golden Age | StaticAbilities$ GoldenAgeDesc | Duration$ Permanent | Unique$ True
+SVar:GoldenAgeDesc:Mode$ Continuous | Description$ You are in a renaissance.
+
+SVar:GoldenAgeSpell:Count$ThisTurnCast_Card.Instant+YouCtrl,Card.Sorcery+YouCtrl/LimitMax.1
+SVar:GoldenAgeAbility:Count$ThisTurnActivated_Activated.!ManaAbility+YouCtrl/LimitMax.1
+SVar:GoldenAgeAttack:Count$AttackersDeclared/LimitMax.1
+SVar:GoldenCheck1:SVar$GoldenAgeSpell/Plus.GoldenAgeAbility
+SVar:GoldenCheckFinal:SVar$GoldenCheck1/Plus.GoldenAgeAttack
+#-------------------
+
+S:Mode$ Continuous | Affected$ Self | AddKeyword$ Double Strike | CheckSVar$ IsRenaissance | SVarCompare$ EQ1 | Description$ This creature has double strike as long as you're in a renaissance.
+SVar:IsRenaissance:Count$ValidCommand Effect.YouCtrl+namedGolden Age/LimitMax.1
+
+Oracle:Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)\nThis creature has double strike as long as you're in a renaissance.
