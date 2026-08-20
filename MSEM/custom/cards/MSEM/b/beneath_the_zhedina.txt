@@ -1,0 +1,10 @@
+Name:Beneath the Zhedina
+ManaCost:1 B
+Types:Instant
+
+A:SP$ Mill | NumCards$ 4 | SubAbility$ DBChangeZone | SpellDescription$ Mill four cards, then you may return a creature or planeswalker card from your graveyard to your hand.
+SVar:DBChangeZone:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ChangeType$ Creature.YouOwn,Planeswalker.YouOwn | Hidden$ True | Optional$ True
+
+S:Mode$ CantTarget | ValidTarget$ Card.YouOwn+!Card.Self | AffectedZone$ Graveyard | Activator$ Opponent | EffectZone$ Graveyard | Description$ As long as this card is in your graveyard, other cards in your graveyard can't be the targets of spells or abilities your opponents control.
+
+Oracle:Mill four cards, then you may return a creature or planeswalker card from your graveyard to your hand.\nAs long as this card is in your graveyard, other cards in your graveyard can't be the target of spells or abilities your opponents control.

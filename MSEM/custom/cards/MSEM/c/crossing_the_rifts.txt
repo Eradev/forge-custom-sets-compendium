@@ -1,0 +1,9 @@
+Name:Crossing the Rifts
+ManaCost:2 R
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Land.hasABasicLandType | ChangeNum$ 2 | SubAbility$ DelTrig | SpellDescription$ Search your library for up to two land cards with basic land types, put them onto the battlefield, then shuffle. Sacrifice two lands at the beginning of the next end step.
+SVar:DelTrig:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | Execute$ TrigSac | TriggerDescription$ Sacrifice two lands at the beginning of the next end step.
+SVar:TrigSac:DB$ Sacrifice | Defined$ You | SacValid$ Land | Amount$ 2
+
+Oracle:Search your library for up to two land cards with basic land types, put them onto the battlefield, then shuffle. Sacrifice two lands at the beginning of the next end step.

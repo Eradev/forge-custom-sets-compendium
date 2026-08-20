@@ -2,5 +2,4 @@ Name:Mountain Forest Token
 ManaCost:no cost
 Colors:colorless
 Types:Land Mountain Forest
-
-Oracle:({T}: Add {R} pr {G}.)
+Oracle:({T}: Add {R} or {G}.)

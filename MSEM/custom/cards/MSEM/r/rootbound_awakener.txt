@@ -1,0 +1,11 @@
+Name:Rootbound Awakener
+ManaCost:3 G G
+Types:Creature Human Aurashaper Druid
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a green Aura enchantment token named Vivification attached to target creature or land. The token has enchant creature or land and "Enchanted permanent is a creature with base power and toughness 5/5 in addition to its other types."
+SVar:TrigToken:DB$ Token | TokenScript$ vivification | AttachedTo$ Targeted | ValidTgts$ Creature,Land | TgtPrompt$ Select target creature or land
+
+Oracle:When this creature enters, create a green Aura enchantment token named Vivification attached to target creature or land. The token has enchant creature or land and "Enchanted permanent is a creature with base power and toughness 5/5 in addition to its other types."
+
+DeckHas:Ability$Token & Type$Aura

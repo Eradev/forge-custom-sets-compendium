@@ -1,0 +1,13 @@
+Name:Zephyr Gliders
+ManaCost:3 W U
+Types:Creature Human Wizard Scout
+PT:3/3
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When this creature enters, up to two target creatures you control gain flying until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.YouCtrl | TargetMin$ 0 | TargetMax$ 2 | KW$ Flying
+
+Oracle:Flying\nWhen this creature enters, up to two target creatures you control gain flying until end of turn.
+
+SVar:PlayMain1:TRUE

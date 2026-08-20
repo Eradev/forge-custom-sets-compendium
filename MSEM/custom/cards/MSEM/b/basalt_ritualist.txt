@@ -1,0 +1,17 @@
+Name:Basalt Ritualist
+ManaCost:B R
+Types:Creature Human Druid
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChoice | TriggerDescription$ When this creature enters, you may sacrifice a land or exile a land card from your graveyard. When you do, exile target creature, instant, or sorcery card from your graveyard. Until the end of your next turn, you may play that card. If that spell would be put into a graveyard, exile it instead.
+SVar:TrigChoice:DB$ GenericChoice | Choices$ DBSacLand,DBExileLand
+SVar:DBSacLand:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Creature.YouOwn,Instant.YouOwn,Sorcery.YouOwn | ValidTgtsDesc$ creature, instant, or sorcery card in your graveyard | UnlessCost$ Sac<1/Land> | UnlessPayer$ You | UnlessSwitched$ True | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Sacrifice a land.
+SVar:DBExileLand:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Creature.YouOwn,Instant.YouOwn,Sorcery.YouOwn | ValidTgtsDesc$ creature, instant, or sorcery card in your graveyard | UnlessCost$ ExileFromGrave<1/Land/land card> | UnlessPayer$ You | UnlessSwitched$ True | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Exile a land card from your graveyard.
+SVar:DBEffect:DB$ Effect | StaticAbilities$ STPlay | RememberObjects$ Remembered | ForgetOnMoved$ Exile | Duration$ UntilTheEndOfYourNextTurn | SubAbility$ DBEffect2
+SVar:STPlay:Mode$ Continuous | Affected$ Card.IsRemembered | AffectedZone$ Exile | MayPlay$ True | Description$ Until the end of your next turn, you may play that card.
+SVar:DBEffect2:DB$ Effect | RememberObjects$ Remembered | ExileOnMoved$ Stack | ReplacementEffects$ ReplaceGraveyard | SubAbility$ DBCleanup
+SVar:ReplaceGraveyard:Event$ Moved | ValidCard$ Card.IsRemembered | Origin$ Stack | Destination$ Graveyard | ReplaceWith$ MoveExile | Description$ If that spell would be put into a graveyard, exile it instead.
+SVar:MoveExile:DB$ ChangeZone | Defined$ ReplacedCard | Origin$ Stack | Destination$ Exile
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When this creature enters, you may sacrifice a land or exile a land card from your graveyard. When you do, exile target creature, instant, or sorcery card from your graveyard. Until the end of your next turn, you may play that card. If that spell would be put into a graveyard, exile it instead.

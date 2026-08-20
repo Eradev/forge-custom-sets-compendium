@@ -1,0 +1,9 @@
+Name:Aether Road Caravan
+ManaCost:2 U R
+Types:Creature Human Wizard Scout
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainControl | TriggerDescription$ When this creature enters, gain control of target nonland permanent with mana value 3 or less for as long as you control it.
+SVar:TrigGainControl:DB$ GainControl | ValidTgts$ Permanent.nonLand+cmcLE3 | TgtPrompt$ Select target nonland permanent with mana value 3 or less | LoseControl$ LeavesPlay,LoseControl
+
+Oracle:When this creature enters, gain control of target nonland permanent with mana value 3 or less for as long as you control it.

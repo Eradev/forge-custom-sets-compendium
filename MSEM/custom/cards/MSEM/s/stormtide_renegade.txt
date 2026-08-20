@@ -1,0 +1,11 @@
+Name:Stormtide Renegade
+ManaCost:U
+Types:Creature Merfolk Rogue
+PT:1/1
+
+T:Mode$ DamageDoneOnce | CombatDamage$ True | ValidSource$ Creature.YouCtrl | ValidTarget$ Player | TriggerZones$ Battlefield | Execute$ TrigExile | TriggerDescription$ Whenever one or more creatures you control deal combat damage to a player, exile a nonland card from that player's graveyard. Copy it. You may cast the copy. (You still pay its costs, including color. Copies of permanents enter as tokens.)
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Card.nonLand+OppOwn | TargetMax$ 1 | TargetRestrictions$ PlayerIsTriggeredTarget | TgtPrompt$ Select target nonland card from that player's graveyard | Origin$ Graveyard | Destination$ Exile | RememberChanged$ True | SubAbility$ DBPlay
+SVar:DBPlay:DB$ Play | Defined$ Remembered | ValidSA$ Spell | Optional$ True | CopyCard$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Whenever one or more creatures you control deal combat damage to a player, exile a nonland card from that player's graveyard. Copy it. You may cast the copy. (You still pay its costs, including color. Copies of permanents enter as tokens.)

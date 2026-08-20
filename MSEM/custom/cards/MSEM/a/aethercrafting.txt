@@ -1,0 +1,10 @@
+Name:Aethercrafting
+ManaCost:3 W
+Types:Sorcery
+
+A:SP$ CopyPermanent | ValidTgts$ Artifact.YouCtrl,Enchantment.YouCtrl | TgtPrompt$ Select target artifact or enchantment you control | SpellDescription$ Create a token that's a copy of target artifact or enchantment you control.
+
+Oracle:Create a token that's a copy of target artifact or enchantment you control.
+
+DeckHas:Ability$Token
+DeckNeeds:Type$Artifact|Enchantment

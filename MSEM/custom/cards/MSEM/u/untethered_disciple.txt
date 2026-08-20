@@ -1,0 +1,16 @@
+Name:Untethered Disciple
+ManaCost:2 G G
+Types:Creature Insect Monk
+PT:3/2
+
+T:Mode$ SpellCast | ValidCard$ Card.nonGreen | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPumpAll | TriggerDescription$ Whenever you cast a nongreen spell, creatures you control get +1/+1 until end of turn.
+SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigTokens | TriggerDescription$ Wanderlust — When this creature enters, if you control four or more differently named lands, create two 1/1 Scout creature tokens that are all colors.
+SVar:TrigTokens:DB$ Token | TokenScript$ all_1_1_scout | TokenAmount$ 2 | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:Whenever you cast a nongreen spell, creatures you control get +1/+1 until end of turn.\nWanderlust — When this creature enters, if you control four or more differently named lands, create two 1/1 Scout creature tokens that are all colors.
+
+SVar:PlayMain1:TRUE
+DeckHas:Ability$Token & Type$Scout

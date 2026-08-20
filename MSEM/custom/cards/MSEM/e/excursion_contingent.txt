@@ -1,0 +1,14 @@
+Name:Excursion Contingent
+ManaCost:1 U
+Types:Creature Human Wizard Scout
+PT:2/1
+
+R:Event$ Counter | ValidSA$ Spell.YouCtrl+!wasCastFromYourHand | Layer$ CantHappen | ActiveZones$ Battlefield | Description$ Spells you cast from anywhere other than your hand can't be countered.
+
+T:Mode$ SpellCast | ValidCard$ Spell.sharesNameWith YourGraveyard | ValidActivatingPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ TrigDraw | OptionalDecider$ You | TriggerDescription$ Whenever an opponent casts a spell with the same name as a card they own in exile or in their graveyard, you may draw a card.
+
+T:Mode$ SpellCast | ValidCard$ Spell.sharesNameWith Card.OppOwn+inZoneExile | ValidActivatingPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ TrigDraw | OptionalDecider$ You | Secondary$ True | TriggerDescription$ Whenever an opponent casts a spell with the same name as a card they own in exile or in their graveyard, you may draw a card.
+
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Spells you cast from anywhere other than your hand can't be countered.\nWhenever an opponent casts a spell with the same name as a card they own in exile or in their graveyard, you may draw a card.

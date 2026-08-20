@@ -1,0 +1,12 @@
+Name:Spoils of the Undermarket
+ManaCost:2 B
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigMill | TriggerDescription$ At the beginning of your upkeep, each opponent mills two cards.
+SVar:TrigMill:DB$ Mill | Defined$ Player.Opponent | NumCards$ 2
+
+A:AB$ ChangeZone | Cost$ 3 B | ValidTgts$ Card.nonLand+OppOwn | TgtPrompt$ Select target nonland card in an opponent's graveyard | Origin$ Graveyard | Destination$ Exile | SorcerySpeed$ True | RememberChanged$ True | SubAbility$ DBPlay | SpellDescription$ Exile target nonland card from an opponent's graveyard. Copy it. You may cast the copy. Activate only as a sorcery. (You still pay its costs, including color. Copies of permanents enter as tokens.)
+SVar:DBPlay:DB$ Play | Defined$ Remembered | ValidSA$ Spell | Optional$ True | CopyCard$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:At the beginning of your upkeep, each opponent mills two cards.\n{3}{B}: Exile target nonland card from an opponent's graveyard. Copy it. You may cast the copy. Activate only as a sorcery. (You still pay its costs, including color. Copies of permanents enter as tokens.)

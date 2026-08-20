@@ -1,0 +1,15 @@
+Name:Akkrixian Assailants
+ManaCost:2 G
+Types:Creature Insect Warrior
+PT:3/2
+
+K:Trample
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigCounter | TriggerDescription$ Wanderlust — Whenever this creature attacks, if you control four or more differently named lands, put a +1/+1 counter on it.
+SVar:TrigCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:Trample\nWanderlust — Whenever this creature attacks, if you control four or more differently named lands, put a +1/+1 counter on it.
+
+SVar:HasAttackEffect:True
+DeckHas:Ability$Counters

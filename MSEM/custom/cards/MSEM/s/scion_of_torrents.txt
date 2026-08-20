@@ -1,0 +1,18 @@
+Name:Scion of Torrents
+ManaCost:3 U U
+Types:Creature Elemental Avatar
+PT:5/5
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigBounce | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may return target nonland permanent to its owner's hand.
+SVar:TrigBounce:DB$ ChangeZone | ValidTgts$ Permanent.nonLand | TgtPrompt$ Select target nonland permanent | Origin$ Battlefield | Destination$ Hand
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Island.YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigAetherize | TriggerDescription$ Whenever an Island you control enters, you may aetherize this creature. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:TrigAetherize:DB$ CopyPermanent | Defined$ Self | RememberTokens$ True | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Flying\nWhen this creature enters, you may return target nonland permanent to its owner's hand.\nWhenever an Island you control enters, you may aetherize this creature. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+DeckHas:Ability$Token|Aetherize

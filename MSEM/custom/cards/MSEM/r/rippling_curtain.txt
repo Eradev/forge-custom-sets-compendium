@@ -1,0 +1,12 @@
+Name:Rippling Curtain
+ManaCost:3
+Types:Artifact
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigAetherize | TriggerDescription$ At the beginning of your end step, aetherize target permanent you control. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:TrigAetherize:DB$ CopyPermanent | ValidTgts$ Permanent.YouCtrl | TgtPrompt$ Select target permanent you control | RememberTokens$ True | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:At the beginning of your end step, aetherize target permanent you control. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+DeckHas:Ability$Token|Aetherize

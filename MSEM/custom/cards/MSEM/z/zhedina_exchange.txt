@@ -1,0 +1,13 @@
+Name:Zhedina Exchange
+ManaCost:no cost
+Types:Land
+
+K:ETBReplacement:Other:DBChooseBasic
+SVar:DBChooseBasic:DB$ ChooseType | Type$ Basic Land | SpellDescription$ As tgis land enters, choose a basic land type.
+
+S:Mode$ Continuous | Affected$ Land.Basic+YouCtrl+ChosenType | AddAbility$ AnyMana | Description$ Basic lands you control of the chosen type have "{T}: Add one mana of any color."
+SVar:AnyMana:AB$ Mana | Cost$ T | Produced$ Any | Activator$ Player | SpellDescription$ Add one mana of any color.
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+Oracle:When this land enters, choose a basic land type.\nBasic lands you control of the chosen type have "{T}: Add one mana of any color."\n{T}: Add {C}.

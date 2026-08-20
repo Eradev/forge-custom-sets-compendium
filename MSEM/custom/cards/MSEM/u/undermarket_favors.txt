@@ -1,0 +1,11 @@
+Name:Undermarket Favors
+ManaCost:U B
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDiscardMill | TriggerDescription$ When this enchantment enters, target player discards a card, then mills four cards.
+SVar:TrigDiscardMill:DB$ Discard | ValidTgts$ Player | Mode$ TgtChoose | SubAbility$ DBMill
+SVar:DBMill:DB$ Mill | NumCards$ 4 | Defined$ Targeted
+
+A:AB$ Draw | Cost$ 1 Sac<1/CARDNAME/this enchantment> | SpellDescription$ Draw a card.
+
+Oracle:When this enchantment enters, target player discards a card, then mills four cards.\n{1}, Sacrifice this enchantment: Draw a card.

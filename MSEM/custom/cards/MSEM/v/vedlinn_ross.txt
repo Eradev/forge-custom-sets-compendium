@@ -1,0 +1,14 @@
+Name:Vedlinn Ross
+ManaCost:2 U B
+Types:Legendary Creature Human Rogue
+PT:3/4
+
+T:Mode$ Taps | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigExile | TriggerDescription$ Whenever CARDNAME becomes tapped, exile a nonland card from target opponent's graveyard. Copy it. You may cast the copy this turn. (You still pay its costs, including color. Copies of permanents enter as tokens.)
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Card.nonLand+OppOwn | TgtPrompt$ Select target nonland card in an opponent's graveyard | Origin$ Graveyard | Destination$ Exile | RememberChanged$ True | SubAbility$ DBPlay
+SVar:DBPlay:DB$ Play | Defined$ Remembered | ValidSA$ Spell | Optional$ True | CopyCard$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+T:Mode$ SpellCast | ValidCard$ Card.!wasCastFromYourHand | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCopy | TriggerDescription$ Whenever you cast a spell from anywhere other than your hand, copy it. You may choose new targets for the copies.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | MayChooseTarget$ True
+
+Oracle:Whenever Vedlinn Ross becomes tapped, exile a nonland card from target opponent's graveyard. Copy it. You may cast the copy this turn. (You still pay its costs, including color. Copies of permanents enter as tokens.)\nWhenever you cast a spell from anywhere other than your hand, copy it. You may choose new targets for the copies.

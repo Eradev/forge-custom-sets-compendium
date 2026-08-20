@@ -1,0 +1,13 @@
+Name:Voliv Edgelands
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSac | TriggerDescription$ When this land enters, sacrifice it unless you pay {1}.
+SVar:TrigSac:DB$ Sacrifice | UnlessCost$ 1 | UnlessPayer$ You
+
+S:Mode$ Continuous | Affected$ Card.Self | EffectZone$ Battlefield | GainsAbilitiesOf$ Land.Other | GainsValidAbilities$ Activated | Description$ This land has all activated abilities of other lands.
+
+Oracle:This land enters tapped.\nWhen this land enters, sacrifice it unless you pay {1}.\nThis land has all activated abilities of other lands.

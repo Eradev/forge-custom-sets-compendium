@@ -1,0 +1,15 @@
+Name:Wasteland Ravagers
+ManaCost:3 B R
+Types:Creature Dinosaur
+PT:4/4
+
+K:Trample
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChoice | TriggerDescription$ When this creature enters, you may sacrifice a land or exile a land card from your graveyard. If you do, creatures you control get +1/+0 and gain haste until end of turn.
+SVar:TrigChoice:DB$ GenericChoice | Choices$ DBSacPump,DBExilePump
+SVar:DBSacPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | KW$ Haste | UnlessCost$ Sac<1/Land> | UnlessPayer$ You | UnlessSwitched$ True
+SVar:DBExilePump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | KW$ Haste | UnlessCost$ ExileFromGrave<1/Land/land card> | UnlessPayer$ You | UnlessSwitched$ True
+
+Oracle:Trample\nWhen this creature enters, you may sacrifice a land or exile a land card from your graveyard. If you do, creatures you control get +1/+0 and gain haste until end of turn.
+
+SVar:PlayMain1:TRUE

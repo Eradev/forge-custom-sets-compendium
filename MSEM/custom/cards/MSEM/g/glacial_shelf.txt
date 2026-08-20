@@ -1,0 +1,13 @@
+Name:Glacial Shelf
+ManaCost:no cost
+Types:Snow Land
+
+K:You may choose not to untap CARDNAME during your untap step.
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Tap | Cost$ 4 T | ValidTgts$ Creature.attackingYou | TgtPrompt$ Select target creature that's attacking you | SubAbility$ DBEffect | SpellDescription$ Tap target creature that's attacking you. It doesn't untap during its controller's untap step for as long as this land remains tapped.
+SVar:DBEffect:DB$ Effect | ReplacementEffects$ DontUntap | RememberObjects$ Targeted | Duration$ UntilUntaps | ExileOnMoved$ Battlefield
+SVar:DontUntap:Event$ Untap | ValidCard$ Card.IsRemembered | ValidStepTurnToController$ You | Layer$ CantHappen | Description$ That creature doesn't untap during its controller's untap step for as long as EFFECTSOURCE remains tapped.
+
+Oracle:You may choose not to untap this land during your untap step.\n{T}: Add {C}.\n{4}, {T}: Tap target creature that's attacking you. It doesn't untap during its controller's untap step for as long as this land remains tapped.

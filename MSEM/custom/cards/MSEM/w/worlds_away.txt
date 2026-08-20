@@ -1,0 +1,10 @@
+Name:Worlds Away
+ManaCost:3 U U
+Types:Sorcery
+
+S:Mode$ Continuous | CharacteristicDefining$ True | AddKeyword$ Flash | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4 | Description$ Wanderlust — This spell has flash as long as you control four or more differently named lands.
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+A:SP$ Draw | NumCards$ 4 | SpellDescription$ Draw four cards.
+
+Oracle:Wanderlust — This spell has flash as long as you control four or more differently named lands.\nDraw four cards.

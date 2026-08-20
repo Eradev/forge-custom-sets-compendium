@@ -8,5 +8,6 @@ K:Vigilance
 K:Reach
 
 T:Mode$ AttackerBlocked | ValidCard$ Creature.withFlying | ValidBlocker$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever this creature blocks a creature with flying, it gets +2/+0 until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +2 | Duration$ UntilEndOfTurn
 
 Oracle:Vigilance, reach\nWhenever this creature blocks a creature with flying, it gets +2/+0 until end of turn.

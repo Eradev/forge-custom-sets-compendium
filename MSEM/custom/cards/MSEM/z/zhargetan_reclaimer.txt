@@ -1,0 +1,20 @@
+Name:Zhargetan Reclaimer
+ManaCost:2 B
+Types:Creature Elf Pirate
+PT:3/2
+
+K:First Strike
+
+K:Menace
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChoose | TriggerDescription$ When this creature enters, put any number of cards your opponents own from exile into their owners' graveyards. If three or more cards were put into graveyards this way, create two 1/1 Scout creature tokens that are all colors.
+SVar:TrigChoose:DB$ ChooseCard | Defined$ You | MinAmount$ 0 | Amount$ X | Choices$ Card.OppOwn | ChoiceTitle$ Choose any number of cards your opponents own in exile | ChoiceZone$ Exile | RememberChosen$ True | SubAbility$ DBToGrave
+SVar:DBToGrave:DB$ ChangeZoneAll | ChangeType$ Card.IsRemembered | Origin$ Exile | Destination$ Graveyard | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ all_1_1_scout | TokenAmount$ 2 | ConditionCheckSVar$ Y | ConditionSVarCompare$ GE3 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+SVar:X:Count$ValidExile Card.OppOwn
+SVar:Y:Count$RememberedSize
+
+Oracle:First strike, menace\nWhen this creature enters, put any number of cards your opponents own from exile into their owners' graveyards. If three or more cards were put into graveyards this way, create two 1/1 Scout creature tokens that are all colors.
+
+DeckHas:Ability$Token & Type$Scout

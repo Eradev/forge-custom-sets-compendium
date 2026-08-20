@@ -9,7 +9,7 @@ K:Lifelink
 T:Mode$ LifeGained | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ Whenever you gain life, each opponent loses 1 life.
 SVar:TrigLoseLife:DB$ LoseLife | Defined$ Opponent | LifeAmount$ 1
 
-A:AB$ Token | Cost$ 4 B B | TokenScript$ b_1_1_vampire_lifelink | TokenAmount$ X | TokenOwner$ You | SpellDescription$ Create a 1/1 black Vampire creature token with lifelink for each nontoken creature that died this turn.
+A:AB$ Token | Cost$ 4 B B | TokenScript$ b_1_1_vampire_lifelink | TokenAmount$ X | SpellDescription$ Create a 1/1 black Vampire creature token with lifelink for each nontoken creature that died this turn.
 
 SVar:X:Count$ThisTurnEntered_Graveyard_from_Battlefield_Creature.!token
 

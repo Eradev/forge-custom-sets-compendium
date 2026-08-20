@@ -1,0 +1,26 @@
+Name:Voliv Ritualist
+ManaCost:1 R
+Types:Creature Human Shaman
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChoice | TriggerDescription$ When this creature enters, choose two different basic land types. Create a tapped colorless land token that's the chosen types.
+SVar:TrigChoice:DB$ GenericChoice | Choices$ DBPI,DBPS,DBPM,DBFP,DBIS,DBIM,DBFI,DBSM,DBSF,DBMF
+SVar:DBPI:DB$ Token | TokenScript$ plains_island | TokenTapped$ True | SpellDescription$ Plains and Island
+SVar:DBPS:DB$ Token | TokenScript$ plains_swamp | TokenTapped$ True | SpellDescription$ Plains and Swamp
+SVar:DBFP:DB$ Token | TokenScript$ forest_plains | TokenTapped$ True | SpellDescription$ Forest and Plains
+SVar:DBIS:DB$ Token | TokenScript$ island_swamp | TokenTapped$ True | SpellDescription$ Island and Swamp
+SVar:DBIM:DB$ Token | TokenScript$ island_mountain | TokenTapped$ True | SpellDescription$ Island and Mountain
+SVar:DBFI:DB$ Token | TokenScript$ forest_island | TokenTapped$ True | SpellDescription$ Forest and Island
+SVar:DBSM:DB$ Token | TokenScript$ swamp_mountain | TokenTapped$ True | SpellDescription$ Swamp and Mountain
+SVar:DBSF:DB$ Token | TokenScript$ swamp_forest | TokenTapped$ True | SpellDescription$ Swamp and Forest
+SVar:DBMF:DB$ Token | TokenScript$ mountain_forest | TokenTapped$ True | SpellDescription$ Mountain and Forest
+SVar:DBPM:DB$ Token | TokenScript$ mountain_plains | SpellDescription$ Mountain and Plains
+
+T:Mode$ PhaseOut | ValidCard$ Card.phasedOutSelf | Execute$ TrigSac | TriggerDescription$ When this creature is no longer on the battlefield, sacrifice a land.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | TriggerZones$ Battlefield | Secondary$ True | Execute$ TrigSac | TriggerDescription$ When this creature is no longer on the battlefield, sacrifice a land.
+
+SVar:TrigSac:DB$ Sacrifice | SacValid$ Land | Defined$ You
+
+Oracle:When this creature enters, choose two different basic land types. Create a tapped colorless land token that's the chosen types. When this creature is no longer on the battlefield, sacrifice a land.
+
+DeckHas:Ability$Token

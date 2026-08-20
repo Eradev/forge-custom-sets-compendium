@@ -1,0 +1,13 @@
+Name:Skylight Fortress
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigSearch | TriggerDescription$ When this land enters, you may search your library for a card named Skylight Fortress, reveal it, put it into your hand, then shuffle.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Card.namedSkylight Fortress | ChangeNum$ 1
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+Oracle:This land enters tapped.\nWhen this land enters, you may search your library for a card named Skylight Fortress, reveal it, put it into your hand, then shuffle.\n{T}: Add {C}.

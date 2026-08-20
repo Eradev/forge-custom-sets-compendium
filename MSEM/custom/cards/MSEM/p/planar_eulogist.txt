@@ -1,0 +1,16 @@
+Name:Planar Eulogist
+ManaCost:2 B
+Types:Creature Human Wizard
+PT:3/1
+
+A:AB$ CopyPermanent | Cost$ B T Sac<1/CARDNAME/this creature> | TgtZone$ Graveyard | ValidTgts$ Creature | TgtPrompt$ Select target creature card in a graveyard | RememberTokens$ True | SorcerySpeed$ True | SubAbility$ DBExileToken | SpellDescription$ Aetherize target creature card in a graveyard. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+A:AB$ CopyPermanent | Cost$ 6 B | TgtZone$ Graveyard | ValidTgts$ Creature | TgtPrompt$ Select target creature card in a graveyard | RememberTokens$ True | SorcerySpeed$ True | SubAbility$ DBExileToken2 | SpellDescription$ Aetherize target creature card in a graveyard.
+SVar:DBExileToken2:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup2
+SVar:DBCleanup2:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:{B}, {T}, Sacrifice this creature: Aetherize target creature card in a graveyard. (To aetherize, create a token that's a copy of it, then exile that token.)\n{6}{B}: Aetherize target creature card in a graveyard.
+
+DeckHas:Ability$Token|Aetherize

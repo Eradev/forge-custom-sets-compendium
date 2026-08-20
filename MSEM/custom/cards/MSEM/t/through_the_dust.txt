@@ -6,7 +6,8 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.S
 SVar:TrigDig:DB$ Dig | DigNum$ 7 | Reveal$ True | ChangeNum$ 1 | ChangeValid$ Creature | DestinationZone$ Battlefield | RestRandomOrder$ True | RememberChanged$ True | SubAbility$ DBAnimate
 SVar:DBAnimate:DB$ Animate | Types$ Aura | Keywords$ Enchant:Creature | Duration$ Permanent | SubAbility$ DBAttach
 SVar:DBAttach:DB$ Attach | Defined$ Remembered | SubAbility$ DBDelay
-SVar:DBDelay:DB$ DelayedTrigger | Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Battlefield | Execute$ TrigSacrifice | RememberObjects$ RememberedLKI | TriggerDescription$ When this enchantment leaves the battlefield, that creature's controller sacrifices it.
+SVar:DBDelay:DB$ DelayedTrigger | Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Battlefield | Execute$ TrigSacrifice | RememberObjects$ RememberedLKI | TriggerDescription$ When this enchantment is no longer on the battlefield, enchanted creature's controller sacrifices it. | SubAbility$ DBDelayPhase
+SVar:DBDelayPhase:DB$ DelayedTrigger | Mode$ PhaseOut | ValidCard$ Card.phasedOutSelf | Execute$ TrigSacrifice | RememberObjects$ RememberedLKI | TriggerDescription$ When this enchantment is no longer on the battlefield, enchanted creature's controller sacrifices it.
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ DBCleanup | Static$ True
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True

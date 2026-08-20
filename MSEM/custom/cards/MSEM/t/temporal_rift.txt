@@ -1,0 +1,11 @@
+Name:Temporal Rift
+ManaCost:2 W
+Types:Enchantment
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Destination$ Battlefield | Execute$ TrigExile | TriggerDescription$ When this enchantment enters, exile target creature an opponent controls until it leaves the battlefield.
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | Origin$ Battlefield | Destination$ Exile | Duration$ UntilHostLeavesPlay
+
+T:Mode$ Exiled | Origin$ Battlefield | ValidCard$ Permanent.token+YouCtrl | ValidCause$ SpellAbility.NamedAbilityAetherize | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigReturn | TriggerDescription$ Whenever you aetherize, you may return this enchantment to its owner's hand.
+SVar:TrigReturn:DB$ ChangeZone | Defined$ Self | Origin$ Battlefield | Destination$ Hand
+
+Oracle:When this enchantment enters, exile target creature an opponent controls until it leaves the battlefield.\nWhenever you aetherize, you may return this enchantment to its owner's hand.

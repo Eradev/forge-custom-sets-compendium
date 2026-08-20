@@ -1,0 +1,10 @@
+Name:Shuddering Node
+ManaCost:no cost
+Types:Land Swamp Forest
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ 1 T | Produced$ Combo B G | Amount$ 2 | SpellDescription$ Add {B}{B} or {G}{G}.
+
+Oracle:({T}: Add {B} or {G}.)\nThis land enters tapped.\n{1}, {T}: Add {B}{B} or {G}{G}.

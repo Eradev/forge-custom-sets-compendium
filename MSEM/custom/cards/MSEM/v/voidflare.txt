@@ -1,0 +1,9 @@
+Name:Voidflare
+ManaCost:R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ X | SpellDescription$ CARDNAME deals 2 damage to any target.\nWanderlust — CARDNAME deals 3 damage instead if you control four or more differently named lands.
+SVar:X:Count$Compare GE4 WanderLands.3.2
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:Voidflare deals 2 damage to any target.\nWanderlust — Voidflare deals 3 damage instead if you control four or more differently named lands.

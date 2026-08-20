@@ -1,0 +1,5 @@
+Name:Island Mountain Token
+ManaCost:no cost
+Colors:colorless
+Types:Land Island Mountain
+Oracle:({T}: Add {U} or {R}.)

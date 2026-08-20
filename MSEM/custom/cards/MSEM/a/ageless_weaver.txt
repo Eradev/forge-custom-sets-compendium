@@ -1,0 +1,14 @@
+Name:Ageless Weaver
+ManaCost:4 G
+Types:Creature Human Aurashaper Shaman
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a green Aura enchantment token named Years of Experience attached to target creature. The token has enchant creature and "Enchanted creature gets +2/+2."
+SVar:TrigToken:DB$ Token | TokenScript$ years_of_experience | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.enchanted+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigElemental | TriggerDescription$ Whenever an enchanted creature you control dies, create a 3/3 green Elemental creature token.
+SVar:TrigElemental:DB$ Token | TokenScript$ g_3_3_elemental
+
+Oracle:When this creature enters, create a green Aura enchantment token named Years of Experience attached to target creature. The token has enchant creature and "Enchanted creature gets +2/+2."\nWhenever an enchanted creature you control dies, create a 3/3 green Elemental creature token.
+
+DeckHas:Ability$Token & Type$Aura|Elemental

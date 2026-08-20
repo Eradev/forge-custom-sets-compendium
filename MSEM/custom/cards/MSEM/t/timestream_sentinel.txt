@@ -1,0 +1,13 @@
+Name:Timestream Sentinel
+ManaCost:W W
+Types:Creature Angel
+PT:2/2
+
+K:Flying
+
+K:Lifelink
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounters | TriggerDescription$ When this creature enters, put two +1/+1 counters on each other creature named Timestream Sentinel you control.
+SVar:TrigCounters:DB$ PutCounterAll | ValidCards$ Creature.YouCtrl+Other+namedTimestream Sentinel | CounterType$ P1P1 | CounterNum$ 2
+
+Oracle:Flying, lifelink\nWhen this creature enters, put two +1/+1 counters on each other creature named Timestream Sentinel you control.

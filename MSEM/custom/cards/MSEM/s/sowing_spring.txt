@@ -1,0 +1,12 @@
+Name:Sowing Spring
+ManaCost:1 G
+Types:Enchantment Aura
+
+K:Enchant:Land
+
+S:Mode$ Continuous | Affected$ Land.EnchantedBy | SetName$ Flowering Expanse | Description$ Enchanted land's name is Flowering Expanse.
+
+T:Mode$ TapsForMana | ValidCard$ Card.EnchantedBy | Execute$ TrigMana | Static$ True | TriggerDescription$ Whenever enchanted land is tapped for mana, add one mana of any color.
+SVar:TrigMana:DB$ Mana | Produced$ Any | Defined$ You
+
+Oracle:Enchant land\nEnchanted land's name is Flowering Expanse.\nWhenever enchanted land is tapped for mana, add one mana of any color.

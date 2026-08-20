@@ -6,7 +6,7 @@ A:SP$ Charm | Choices$ DBIndestructible,DBGainLife,DBDraw | CharmNum$ 2
 
 SVar:DBIndestructible:DB$ Pump | ValidTgts$ Creature | KW$ Indestructible | SpellDescription$ Target creature gains indestructible until end of turn.
 
-SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 3 | SpellDescription$ You gain 3 life.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 3 | SpellDescription$ You gain 3 life.
 
 SVar:DBDraw:DB$ Draw | SpellDescription$ Draw a card.
 

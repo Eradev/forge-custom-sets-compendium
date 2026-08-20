@@ -1,0 +1,15 @@
+Name:Shiftscape Canyon
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ GenericChoice | Cost$ T Exile<1/CARDNAME/this land> | ActivationPhases$ Upkeep | PlayerTurn$ True | Choices$ DBIsland,DBMountain,DBForest,DBSwamp | SpellDescription$ Choose a basic land type other than Plains. Create a colorless land token that's a Plains and the chosen basic land type. Activate only during your upkeep.
+SVar:DBIsland:DB$ Token | TokenScript$ plains_island | SpellDescription$ Island
+SVar:DBMountain:DB$ Token | TokenScript$ mountain_plains | SpellDescription$ Mountain
+SVar:DBForest:DB$ Token | TokenScript$ forest_plains | SpellDescription$ Forest
+SVar:DBSwamp:DB$ Token | TokenScript$ plains_swamp | SpellDescription$ Swamp
+
+Oracle:{T}: Add {C}.\n{T}, Exile this land: Choose a basic land type other than Plains. Create a colorless land token that's a Plains and the chosen basic land type. Activate only during your upkeep.
+
+DeckHas:Ability$Token

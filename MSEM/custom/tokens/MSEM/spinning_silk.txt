@@ -1,0 +1,11 @@
+Name:Spinning Silk
+ManaCost:no cost
+Colors:white
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+T:Mode$ Attacks | ValidCard$ Card.EnchantedBy | Execute$ TrigTap | TriggerDescription$ Whenever enchanted creature attacks, tap target creature defending player controls.
+SVar:TrigTap:DB$ Tap | ValidTgts$ Creature.ControlledBy TriggeredDefendingPlayer | TgtPrompt$ Select target creature defending player controls
+
+Oracle:Enchant creature\nWhenever enchanted creature attacks, tap target creature defending player controls.

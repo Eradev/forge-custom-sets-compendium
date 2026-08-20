@@ -1,0 +1,14 @@
+Name:Relentless Pathcutter
+ManaCost:2 G G
+Types:Creature Elf Aurashaper Warrior
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a green Aura enchantment token named Enmity attached to target creature. The token has enchant creature and "Enchanted creature gets +2/+0 and has trample."
+SVar:TrigToken:DB$ Token | TokenScript$ enmity | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigReturn | TriggerDescription$ When this creature dies, return it to its owner's hand.
+SVar:TrigReturn:DB$ ChangeZone | Defined$ TriggeredNewCardLKICopy | Origin$ Graveyard | Destination$ Hand
+
+Oracle:When this creature enters, create a green Aura enchantment token named Enmity attached to target creature. The token has enchant creature and "Enchanted creature gets +2/+0 and has trample."\nWhen Relentless Pathcutter dies, return it to its owner's hand.
+
+DeckHas:Ability$Token & Type$Aura

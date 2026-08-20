@@ -1,0 +1,11 @@
+Name:Xoqal, World Eater
+ManaCost:1 B R
+Types:Legendary Creature Horror
+PT:3/4
+
+K:Menace
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigSearch | TriggerDescription$ Whenever a land enters, you may search its controller's library for up to three land cards with the same name as that card, put them into that player's graveyard, then that player shuffles.
+SVar:TrigSearch:DB$ ChangeZone | DefinedPlayer$ TriggeredCardController | Origin$ Library | Destination$ Graveyard | ChangeType$ Land.sharesNameWith TriggeredCard | ChangeNum$ 3 | Chooser$ You | Shuffle$ True
+
+Oracle:Menace\nWhenever a land enters, you may search its controller's library for up to three land cards with the same name as that card, put them into that player's graveyard, then that player shuffles.

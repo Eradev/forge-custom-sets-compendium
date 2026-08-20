@@ -1,0 +1,9 @@
+Name:Razione Racecourse
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Pump | Cost$ 2 T | ValidTgts$ Creature | KW$ Haste | SpellDescription$ Target creature gains haste until end of turn.
+
+Oracle:{T}: Add {C}.\n{2}, {T}: Target creature gains haste until end of turn.

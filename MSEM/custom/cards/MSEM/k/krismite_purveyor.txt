@@ -1,0 +1,9 @@
+Name:Krismite Purveyor
+ManaCost:R
+Types:Creature Human Wizard
+PT:1/1
+
+T:Mode$ Sacrificed | ValidCard$ Land | ValidPlayer$ You | FirstTime$ True | Execute$ TrigMana | TriggerZones$ Battlefield | TriggerDescription$ Once each turn, when you sacrifice a land, you may add one mana of any color. Until end of turn, you don't lose this mana as steps and phases end.
+SVar:TrigMana:DB$ Mana | Produced$ Any | Optional$ True | PersistentMana$ True
+
+Oracle:Once each turn, when you sacrifice a land, you may add one mana of any color. Until end of turn, you don't lose this mana as steps and phases end.

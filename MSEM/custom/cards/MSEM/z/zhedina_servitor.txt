@@ -1,0 +1,11 @@
+Name:Zhedina Servitor
+ManaCost:7
+Types:Artifact Creature Construct
+PT:8/8
+
+K:Defender
+
+S:Mode$ CanAttackDefender | ValidCard$ Card.Self | ConditionCheckSVar$ WanderLands | ConditionSVarCompare$ GE4 | Description$ Wanderlust — As long as you control four or more differently named lands, this creature can attack as though it didn't have defender.
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+
+Oracle:Defender\nWanderlust — As long as you control four or more differently named lands, this creature can attack as though it didn't have defender.

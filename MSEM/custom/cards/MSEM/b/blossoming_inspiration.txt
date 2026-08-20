@@ -1,0 +1,9 @@
+Name:Blossoming Inspiration
+ManaCost:2 G W
+Types:Sorcery
+
+A:SP$ CopyPermanent | Defined$ Valid Aura.YouCtrl | AILogic$ DuplicatePerms | SpellDescription$ For each Aura you control, create a token that's a copy of that Aura.
+
+DeckHas:Type$Aura
+
+Oracle:For each Aura you control, create a token that's a copy of that Aura.

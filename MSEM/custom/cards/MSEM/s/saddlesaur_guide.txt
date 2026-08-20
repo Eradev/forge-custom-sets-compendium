@@ -1,0 +1,13 @@
+Name:Saddlesaur Guide
+ManaCost:3 G
+Types:Creature Human Aurashaper Scout
+PT:1/2
+
+K:Trample
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a green Aura enchantment token named Hefty Load attached to target creature. The token has enchant creature and "Enchanted creature gets +2/+2 and has trample."
+SVar:TrigToken:DB$ Token | TokenScript$ hefty_load | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature
+
+Oracle:Trample\nWhen this creature enters, create a green Aura enchantment token named Hefty Load attached to target creature. The token has enchant creature and "Enchanted creature gets +2/+2 and has trample."
+
+DeckHas:Ability$Token & Type$Aura

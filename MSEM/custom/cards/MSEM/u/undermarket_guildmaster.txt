@@ -1,0 +1,13 @@
+Name:Undermarket Guildmaster
+ManaCost:3 B
+Types:Creature Human Rogue
+PT:2/4
+
+K:Flash
+
+R:Event$ Draw | ActiveZones$ Battlefield | ValidPlayer$ Opponent | ReplaceWith$ ExileTop | Description$ If an opponent would draw a card, that player exiles the top card of their library instead. During each player's turn, that player may play that card for as long as it remains exiled.
+SVar:ExileTop:DB$ Dig | Defined$ ReplacedPlayer | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | NoReveal$ True
+
+S:Mode$ Continuous | MayPlay$ True | MayPlayPlayer$ CardOwner | Affected$ Card.ExiledWithSource | AffectedZone$ Exile | Description$ During each player's turn, that player may play cards they exiled with CARDNAME for as long as those cards remain exiled.
+
+Oracle:Flash\nIf an opponent would draw a card, that player exiles the top card of their library instead. During each player's turn, that player may play that card for as long as it remains exiled.

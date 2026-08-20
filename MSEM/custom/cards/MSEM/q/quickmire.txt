@@ -1,0 +1,10 @@
+Name:Quickmire
+ManaCost:3 B
+Types:Sorcery
+
+A:SP$ Destroy | ValidTgts$ Creature,Planeswalker | SubAbility$ DBToken | SpellDescription$ Destroy target creature or planeswalker. Create a tapped colorless land token named Fading Rift with "{T}, Sacrifice this land: Add one mana of any color."
+SVar:DBToken:DB$ Token | TokenScript$ fading_rift | TokenTapped$ True
+
+Oracle:Destroy target creature or planeswalker. Create a tapped colorless land token named Fading Rift with "{T}, Sacrifice this land: Add one mana of any color."
+
+DeckHas:Ability$Token

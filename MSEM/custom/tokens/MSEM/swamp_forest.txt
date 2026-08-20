@@ -1,0 +1,5 @@
+Name:Swamp Forest Token
+ManaCost:no cost
+Colors:colorless
+Types:Land Swamp Forest
+Oracle:({T}: Add {B} or {G}.)

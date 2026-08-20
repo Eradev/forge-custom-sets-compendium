@@ -1,0 +1,11 @@
+Name:Razorshell Marauder
+ManaCost:2 B
+Types:Creature Insect Warrior
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChoice | TriggerDescription$ When this creature enters, you may sacrifice a land or exile a land card from your graveyard. When you do, target creature gets -1/-1 until end of turn and can't block this turn.
+SVar:TrigChoice:DB$ GenericChoice | Choices$ DBSacToDebuff,DBExileToDebuff
+SVar:DBSacToDebuff:DB$ Pump | UnlessCost$ Sac<1/Land> | UnlessPayer$ You | UnlessSwitched$ True | ValidTgts$ Creature | NumAtt$ -1 | NumDef$ -1 | KW$ HIDDEN CARDNAME can't block. | IsCurse$ True
+SVar:DBExileToDebuff:DB$ Pump | UnlessCost$ ExileFromGrave<1/Land> | UnlessPayer$ You | UnlessSwitched$ True | ValidTgts$ Creature | NumAtt$ -1 | NumDef$ -1 | KW$ HIDDEN CARDNAME can't block. | IsCurse$ True
+
+Oracle:When this creature enters, you may sacrifice a land or exile a land card from your graveyard. When you do, target creature gets -1/-1 until end of turn and can't block this turn.

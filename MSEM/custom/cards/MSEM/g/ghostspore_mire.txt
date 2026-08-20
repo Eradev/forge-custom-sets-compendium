@@ -1,0 +1,12 @@
+Name:Ghostspore Mire
+ManaCost:no cost
+Types:Land Island Swamp
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ 1 T | Produced$ U | Amount$ 2 | SpellDescription$ Add {U}{U}.
+
+A:AB$ Mana | Cost$ 1 T | Produced$ B | Amount$ 2 | SpellDescription$ Add {B}{B}.
+
+Oracle:({T}: Add {U} or {B}.)\nThis land enters tapped.\n{1}, {T}: Add {U}{U} or {B}{B}.

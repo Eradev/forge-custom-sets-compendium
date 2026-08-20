@@ -48,7 +48,15 @@ Riddles of Revio (RVO)                -  83% (226/272)
     * Ancient Tome
     * Dthan, Who Bloodies the Sands
     * Reytha's Discovery
-Worlds Away (WAY)                     -   3% (11/262)
+Worlds Away (WAY)                     -  97% (255/262)
+  Missing cards:
+    * Destabilizing the Rifts
+    * Ethereal Stone
+    * Isolated
+    * Mabil Fardancer
+    * Syzygy Privateer
+    * Verdant Renewal
+    * Zhedina Coastguard
 Storytime (101)                       -  14% (15/101)
 Kaleidoscope (KLC)                    -  100%
 Path of Shadows (PSA)                 -  99% (208/209)
@@ -84,6 +92,7 @@ Examples on how to implement custom keywords and mechanisms.
 * [Golden Age](#golden-age)
 * [Horrific](#horrific)
 * [Infiltrate](#infiltrate)
+* [Inscribe](#inscribe)
 * [Kindle](#kindle)
 * [Menagerie](#menagerie)
 * [Mirage](#mirage)
@@ -92,7 +101,7 @@ Examples on how to implement custom keywords and mechanisms.
 * [Rerun](#rerun)
 * [Showcase](#showcase)
 * [Torment](#torment)
-* [Inscribe](#inscribe)
+* [Wanderlust](#wanderlust)
 
 ### Aetherize
 
@@ -106,7 +115,7 @@ Implementation:
 
 ```text
 A:AB$ CopyPermanent | Cost$ 3 U Sac<1/CARDNAME/this creature> | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | RememberTokens$ True | SpellDescription$ Aetherize target creature you control. (To aetherize, create a token that's a copy of it, then exile that token.) | SubAbility$ DBExileToken
-SVar:DBExileToken:DB$ ChangeZone | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 ```
 
@@ -308,6 +317,37 @@ SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +1 | NumDef$ +1
 
 [Jump to top](#keywords-and-mechanisms-implementation)
 
+### Inscribe
+
+Inscribe is defined as:
+
+```text
+Inscribe {2}{W} ({2}{W}: Exile this card from your hand inscribed on a creature you control. Whenever that creature attacks, its controller may cast a copy of the inscribed card without paying its mana cost. Inscribe only as a sorcery.)
+```
+
+Implementation:
+
+```text
+A:AB$ Pump | Cost$ 2 W Reveal<1/CARDNAME> | ActivationZone$ Hand | ValidTgts$ Creature.YouCtrl | TgtZone$ Battlefield | TgtPrompt$ Select target creature you control | SorcerySpeed$ True | NumAtt$ 0 | NumDef$ 0 | Duration$ Permanent | StackDescription$ SpellDescription | SubAbility$ DBExileForInscribe | PrecostDesc$ Inscribe | SpellDescription$ ({2}{W}: Exile this card from your hand inscribed on a creature you control. Whenever that creature attacks, its controller may cast a copy of the inscribed card without paying its mana cost. Inscribe only as a sorcery.)
+SVar:DBExileForInscribe:DB$ ChangeZone | Defined$ Self.YouOwn | Origin$ Hand | Destination$ Exile | RememberChanged$ True | ForgetOtherRemembered$ True | SubAbility$ DBCreateInscribe
+SVar:DBCreateInscribe:DB$ Effect | Name$ Inscription Effect | ConditionDefined$ Remembered | ConditionPresent$ Card.inZoneExile | ConditionCompare$ EQ1 | RememberObjects$ Targeted | StaticAbilities$ STInscribeDesc | Triggers$ InscribeTrigger,InscribedCreatureLeaves,InscriptionRemovedFromExile | ImprintCards$ Remembered | Duration$ Permanent | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:STInscribeDesc:Mode$ Continuous | Affected$ Card.IsRemembered | Secondary$ True | AddStaticAbility$ InscribeOnCreature | AddSVar$ SVarInscribed
+SVar:InscribeOnCreature:Mode$ Continuous | Affected$ Card.Self | Description$ Inscribed — CARDNAME
+SVar:SVarInscribed:SVar:IsInscribed:Number$1
+SVar:InscribeTrigger:Mode$ Attacks | ValidCard$ Card.IsRemembered | Execute$ PlayInscribed | TriggerDescription$ Whenever the inscribed creature attacks, its controller may cast a copy of EFFECTSOURCE without paying its mana cost.
+SVar:PlayInscribed:DB$ Play | Defined$ Imprinted | WithoutManaCost$ True | CopyCard$ True | Optional$ True | Controller$ TriggeredAttackerController | ValidSA$ Spell
+SVar:InscribedCreatureLeaves:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.IsRemembered | Execute$ ExileEffect | Static$ True | TriggerDescription$ When the inscribed creature leaves the battlefield, end the inscription.
+SVar:InscriptionRemovedFromExile:Mode$ ChangesZone | Origin$ Exile | ValidCard$ Card.IsImprinted | Execute$ ExileEffect | Static$ True
+SVar:ExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+```
+
+The activated ability exiles the Inscription card, then creates a permanent command-zone effect that remembers the creature and imprints the exiled card. When the remembered creature attacks, the effect allows its controller to cast a copy of the imprinted card without paying its mana cost.
+
+The effect ends if either the inscribed creature leaves the battlefield or the imprinted card leaves exile.
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
 ### Kindle
 
 Kindle is defined as:
@@ -449,41 +489,27 @@ To torment yourself, lose 3 life unless you discard a card or sacrifice a nonlan
 Implementation:
 
 ```text
-SVar:DBTorment:DB$ GenericChoice | Defined$ You | AILogic$ PayUnlessCost | Choices$ DBPaySac,DBPayDiscard | FallbackAbility$ DBLoseLifeFallback | SpellDescription$ Lose 3 life unless you discard a card or sacrifice a nonland permanent.
-SVar:DBPaySac:DB$ LoseLife | LifeAmount$ 3 | Defined$ You | UnlessCost$ Sac<1/Permanent.nonland/nonland permanent> | UnlessPayer$ You | SpellDescription$ Lose 3 life unless you sacrifice a nonland permanent.
-SVar:DBPayDiscard:DB$ LoseLife | LifeAmount$ 3 | Defined$ You | UnlessCost$ Discard<1/Card.Other/card> | UnlessPayer$ You | SpellDescription$ Lose 3 life unless you discard a card.
-SVar:DBLoseLifeFallback:DB$ LoseLife | Defined$ You | LifeAmount$ 3
+SVar:DBTorment:DB$ GenericChoice | AILogic$ PayUnlessCost | Choices$ DBPaySac,DBPayDiscard | FallbackAbility$ DBLoseLifeFallback | SpellDescription$ Lose 3 life unless you discard a card or sacrifice a nonland permanent.
+SVar:DBPaySac:DB$ LoseLife | LifeAmount$ 3 | UnlessCost$ Sac<1/Permanent.nonland/nonland permanent> | UnlessPayer$ You | SpellDescription$ Lose 3 life unless you sacrifice a nonland permanent.
+SVar:DBPayDiscard:DB$ LoseLife | LifeAmount$ 3 | UnlessCost$ Discard<1/Card.Other/card> | UnlessPayer$ You | SpellDescription$ Lose 3 life unless you discard a card.
+SVar:DBLoseLifeFallback:DB$ LoseLife | LifeAmount$ 3
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
 
-### Inscribe
+### Wanderlust
 
-Inscribe is defined as:
-
-```text
-Inscribe {2}{W} ({2}{W}: Exile this card from your hand inscribed on a creature you control. Whenever that creature attacks, its controller may cast a copy of the inscribed card without paying its mana cost. Inscribe only as a sorcery.)
-```
-
-Implementation:
+Wanderlust is defined as:
 
 ```text
-A:AB$ Pump | Cost$ 2 W Reveal<1/CARDNAME> | ActivationZone$ Hand | ValidTgts$ Creature.YouCtrl | TgtZone$ Battlefield | TgtPrompt$ Select target creature you control | SorcerySpeed$ True | NumAtt$ 0 | NumDef$ 0 | Duration$ Permanent | StackDescription$ SpellDescription | SubAbility$ DBExileForInscribe | PrecostDesc$ Inscribe | SpellDescription$ ({2}{W}: Exile this card from your hand inscribed on a creature you control. Whenever that creature attacks, its controller may cast a copy of the inscribed card without paying its mana cost. Inscribe only as a sorcery.)
-SVar:DBExileForInscribe:DB$ ChangeZone | Defined$ Self.YouOwn | Origin$ Hand | Destination$ Exile | RememberChanged$ True | ForgetOtherRemembered$ True | SubAbility$ DBCreateInscribe
-SVar:DBCreateInscribe:DB$ Effect | Name$ Inscription Effect | ConditionDefined$ Remembered | ConditionPresent$ Card.inZoneExile | ConditionCompare$ EQ1 | RememberObjects$ Targeted | StaticAbilities$ STInscribeDesc | Triggers$ InscribeTrigger,InscribedCreatureLeaves,InscriptionRemovedFromExile | ImprintCards$ Remembered | Duration$ Permanent | SubAbility$ DBCleanup
-SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
-SVar:STInscribeDesc:Mode$ Continuous | Affected$ Card.IsRemembered | Secondary$ True | AddStaticAbility$ InscribeOnCreature | AddSVar$ SVarInscribed
-SVar:InscribeOnCreature:Mode$ Continuous | Affected$ Card.Self | Description$ Inscribed — CARDNAME
-SVar:SVarInscribed:SVar:IsInscribed:Number$1
-SVar:InscribeTrigger:Mode$ Attacks | ValidCard$ Card.IsRemembered | Execute$ PlayInscribed | TriggerDescription$ Whenever the inscribed creature attacks, its controller may cast a copy of EFFECTSOURCE without paying its mana cost.
-SVar:PlayInscribed:DB$ Play | Defined$ Imprinted | WithoutManaCost$ True | CopyCard$ True | Optional$ True | Controller$ TriggeredAttackerController | ValidSA$ Spell
-SVar:InscribedCreatureLeaves:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.IsRemembered | Execute$ ExileEffect | Static$ True | TriggerDescription$ When the inscribed creature leaves the battlefield, end the inscription.
-SVar:InscriptionRemovedFromExile:Mode$ ChangesZone | Origin$ Exile | ValidCard$ Card.IsImprinted | Execute$ ExileEffect | Static$ True
-SVar:ExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+Wanderlust — {T}: Scry 1. Activate only if you control four or more differently named lands.
 ```
 
-The activated ability exiles the Inscription card, then creates a permanent command-zone effect that remembers the creature and imprints the exiled card. When the remembered creature attacks, the effect allows its controller to cast a copy of the imprinted card without paying its mana cost.
+To check for Wanderlust:
 
-The effect ends if either the inscribed creature leaves the battlefield or the imprinted card leaves exile.
+```text
+A:AB$ Scry | Cost$ T | ScryNum$ 1 | CheckSVar$ WanderLands | SVarCompare$ GE4 | SpellDescription$ Wanderlust — Scry 1. Activate only if you control four or more differently named lands.
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+```
 
 [Jump to top](#keywords-and-mechanisms-implementation)

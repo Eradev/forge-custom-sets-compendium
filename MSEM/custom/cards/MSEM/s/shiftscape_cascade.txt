@@ -1,0 +1,15 @@
+Name:Shiftscape Cascade
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ GenericChoice | Cost$ T Exile<1/CARDNAME/this land> | ActivationPhases$ Upkeep | PlayerTurn$ True | Choices$ DBPlains,DBSwamp,DBMountain,DBForest | SpellDescription$ Choose a basic land type other than Island. Create a colorless land token that's an Island and the chosen basic land type. Activate only during your upkeep.
+SVar:DBPlains:DB$ Token | TokenScript$ plains_island | SpellDescription$ Plains
+SVar:DBSwamp:DB$ Token | TokenScript$ island_swamp | SpellDescription$ Swamp
+SVar:DBMountain:DB$ Token | TokenScript$ island_mountain | SpellDescription$ Mountain
+SVar:DBForest:DB$ Token | TokenScript$ forest_island | SpellDescription$ Forest
+
+Oracle:{T}: Add {C}.\n{T}, Exile this land: Choose a basic land type other than Island. Create a colorless land token that's an Island and the chosen basic land type. Activate only during your upkeep.
+
+DeckHas:Ability$Token

@@ -1,0 +1,5 @@
+Name:Island Swamp Token
+ManaCost:no cost
+Colors:colorless
+Types:Land Island Swamp
+Oracle:({T}: Add {U} or {B}.)

@@ -1,0 +1,21 @@
+Name:Morphic Verge
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ GenericChoice | Cost$ 1 T Sac<1/CARDNAME/this land> | Choices$ DBPI,DBPS,DBPM,DBFP,DBIS,DBIM,DBFI,DBSM,DBSF,DBMF | SpellDescription$ Choose two different basic land types. Create a colorless land token that's the chosen types.
+SVar:DBPI:DB$ Token | TokenScript$ plains_island | SpellDescription$ Plains and Island
+SVar:DBPS:DB$ Token | TokenScript$ plains_swamp | SpellDescription$ Plains and Swamp
+SVar:DBFP:DB$ Token | TokenScript$ forest_plains | SpellDescription$ Forest and Plains
+SVar:DBIS:DB$ Token | TokenScript$ island_swamp | SpellDescription$ Island and Swamp
+SVar:DBIM:DB$ Token | TokenScript$ island_mountain | SpellDescription$ Island and Mountain
+SVar:DBFI:DB$ Token | TokenScript$ forest_island | SpellDescription$ Forest and Island
+SVar:DBSM:DB$ Token | TokenScript$ swamp_mountain | SpellDescription$ Swamp and Mountain
+SVar:DBSF:DB$ Token | TokenScript$ swamp_forest | SpellDescription$ Swamp and Forest
+SVar:DBMF:DB$ Token | TokenScript$ mountain_forest | SpellDescription$ Mountain and Forest
+SVar:DBPM:DB$ Token | TokenScript$ mountain_plains | SpellDescription$ Mountain and Plains
+
+Oracle:{T}: Add {C}.\n{1}, {T}, Sacrifice this land: Choose two different basic land types. Create a colorless land token that's the chosen types.
+
+DeckHas:Ability$Token

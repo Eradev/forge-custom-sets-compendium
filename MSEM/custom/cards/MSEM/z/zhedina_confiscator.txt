@@ -1,0 +1,8 @@
+Name:Zhedina Confiscator
+ManaCost:1 W
+Types:Creature Human Advisor
+PT:2/2
+
+A:AB$ Destroy | Cost$ 1 Sac<1/CARDNAME/this creature> | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment | SpellDescription$ Destroy target artifact or enchantment.
+
+Oracle:{1}, Sacrifice this creature: Destroy target artifact or enchantment.

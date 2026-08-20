@@ -1,0 +1,14 @@
+Name:Notorious Smuggler
+ManaCost:U B
+Types:Creature Human Pirate
+PT:2/2
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReveal | TriggerDescription$ When this creature enters, target opponent reveals their hand. Choose a nonland card revealed this way. Copy it. You may cast the copy this turn. (You still pay its costs, including color. Copies of permanents enter as tokens.)
+SVar:TrigReveal:DB$ RevealHand | ValidTgts$ Opponent | RememberRevealed$ True | SubAbility$ DBChoose
+SVar:DBChoose:DB$ ChooseCard | ChoiceZone$ Hand | Amount$ 1 | Choices$ Card.nonLand+IsRemembered | Mandatory$ True | ChoiceTitle$ Choose a nonland card revealed this way | SubAbility$ DBPlay
+SVar:DBPlay:DB$ Play | Defined$ ChosenCard | ValidSA$ Spell | CopyCard$ True | Optional$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+
+Oracle:Flash\nWhen this creature enters, target opponent reveals their hand. Choose a nonland card revealed this way. Copy it. You may cast the copy this turn. (You still pay its costs, including color. Copies of permanents enter as tokens.)

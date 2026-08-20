@@ -1,0 +1,13 @@
+Name:Tears of Tizuma
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ U | SpellDescription$ Add {U}.
+
+T:Mode$ TapsForMana | ValidCard$ Card.Self | Execute$ TrigMill | TriggerZones$ Battlefield | TriggerDescription$ Whenever this land becomes tapped for mana, target player mills a card.
+SVar:TrigMill:DB$ Mill | NumCards$ 1 | ValidTgts$ Player
+
+Oracle:This land enters tapped.\n{T}: Add {U}.\nWhenever this land becomes tapped for mana, target player mills a card.

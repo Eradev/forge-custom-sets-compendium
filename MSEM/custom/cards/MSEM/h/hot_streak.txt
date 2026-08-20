@@ -1,0 +1,12 @@
+Name:Hot Streak
+ManaCost:R
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | NumAtt$ +2 | SubAbility$ DBAetherize | SpellDescription$ Target creature you control gets +2/+0 until end of turn. If that creature is attacking, you may aetherize it. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:DBAetherize:DB$ CopyPermanent | Defined$ ParentTarget | Optional$ True | ConditionDefined$ ParentTarget | ConditionPresent$ Creature.attacking | RememberTokens$ True | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Target creature you control gets +2/+0 until end of turn. If that creature is attacking, you may aetherize it. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+DeckHas:Ability$Token|Aetherize

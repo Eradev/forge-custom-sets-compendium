@@ -1,0 +1,13 @@
+Name:Guided by the Weave
+ManaCost:1 G
+Types:Instant
+
+A:SP$ Charm | Choices$ DBFightMode,DBDestroyEnchant
+
+SVar:DBFightMode:DB$ Pump | ValidTgts$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1 | ConditionDefined$ Targeted | ConditionPresent$ Card.Enchanted | SubAbility$ DBFight | SpellDescription$ Target creature you control gets +1/+1 until end of turn if it's enchanted. Then it fights target creature you don't control.
+
+SVar:DBFight:DB$ Fight | Defined$ ParentTarget | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you don't control
+
+SVar:DBDestroyEnchant:DB$ Destroy | ValidTgts$ Enchantment | TgtPrompt$ Select target enchantment | SpellDescription$ Destroy target enchantment.
+
+Oracle:Choose one —\n• Target creature you control gets +1/+1 until end of turn if it's enchanted. Then it fights target creature you don't control.\n• Destroy target enchantment.

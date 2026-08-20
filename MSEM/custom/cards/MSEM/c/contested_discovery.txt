@@ -1,0 +1,15 @@
+Name:Contested Discovery
+ManaCost:2 U
+Types:Enchantment Aura
+
+K:Enchant:Land
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Execute$ TrigGainControl | Origin$ Any | Destination$ Battlefield | TriggerDescription$ When this Aura enters and at the beginning of your upkeep, untap enchanted land. You gain control of that land until end of turn.
+SVar:TrigGainControl:DB$ GainControl | Defined$ Enchanted | LoseControl$ EOT | SubAbility$ DBUntap
+SVar:DBUntap:DB$ Untap | Defined$ Enchanted
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigGainControl2 | Secondary$ True | TriggerDescription$ At the beginning of your upkeep, untap enchanted land. You gain control of that land until end of turn.
+SVar:TrigGainControl2:DB$ GainControl | Defined$ Enchanted | LoseControl$ EOT | SubAbility$ DBUntap2
+SVar:DBUntap2:DB$ Untap | Defined$ Enchanted
+
+Oracle:Enchant land\nWhen this Aura enters and at the beginning of your upkeep, untap enchanted land. You gain control of that land until end of turn.

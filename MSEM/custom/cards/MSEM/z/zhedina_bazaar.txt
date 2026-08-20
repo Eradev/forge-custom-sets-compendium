@@ -1,0 +1,9 @@
+Name:Zhedina Bazaar
+ManaCost:3
+Types:Artifact
+
+A:AB$ Draw | Cost$ T Sac<1/Artifact;Enchantment/artifact or enchantment> | SpellDescription$ Draw a card.
+
+Oracle:{T}, Sacrifice an artifact or enchantment: Draw a card.
+
+DeckHas:Ability$Sacrifice

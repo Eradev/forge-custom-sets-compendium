@@ -1,0 +1,9 @@
+Name:Hunter of Incantations
+ManaCost:1 R
+Types:Creature Human Warrior
+PT:2/2
+
+T:Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ Opponent | TriggerZones$ Battlefield | PlayerTurn$ True | Execute$ TrigDamage | TriggerDescription$ Whenever an opponent casts a spell during your turn, this creature deals 2 damage to that player.
+SVar:TrigDamage:DB$ DealDamage | Defined$ TriggeredActivator | NumDmg$ 2
+
+Oracle:Whenever an opponent casts a spell during your turn, this creature deals 2 damage to that player.

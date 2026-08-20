@@ -1,0 +1,15 @@
+Name:Blackrift Dryad
+ManaCost:3 B
+Types:Creature Dryad Warlock
+PT:3/2
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigSurveil | TriggerDescription$ At the beginning of combat on your turn, surveil 1.
+SVar:TrigSurveil:DB$ Surveil | Amount$ 1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Graveyard | ValidCard$ Land.!token+YouOwn | TriggerZones$ Battlefield | Execute$ TrigDrain | TriggerDescription$ Whenever a land card is put into your graveyard from anywhere, each opponent loses 1 life and you gain 1 life.
+SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 1 | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 1
+
+Oracle:At the beginning of combat on each of your turns, surveil 1.\nWhenever a land card is put into your graveyard from anywhere, each opponent loses 1 life and you gain 1 life.
+
+DeckHas:Ability$Graveyard|LifeGain

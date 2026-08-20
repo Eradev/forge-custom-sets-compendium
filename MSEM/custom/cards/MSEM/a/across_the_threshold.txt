@@ -1,0 +1,9 @@
+Name:Across the Threshold
+ManaCost:2 U U
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Card.nonLand+OppOwn | TgtPrompt$ Select target nonland card in an opponent's graveyard | RememberChanged$ True | SubAbility$ DBPlay | SpellDescription$ Exile a nonland card from target opponent's graveyard. Copy it. You may cast the copy without paying its mana cost. (Copies of permanents enter as tokens.)
+SVar:DBPlay:DB$ Play | Valid$ Card.IsRemembered | ValidZone$ Exile | Controller$ You | CopyCard$ True | WithoutManaCost$ True | ValidSA$ Spell | Optional$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Exile a nonland card from target opponent's graveyard. Copy it. You may cast the copy without paying its mana cost. (Copies of permanents enter as tokens.)

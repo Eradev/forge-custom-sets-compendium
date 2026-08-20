@@ -1,0 +1,21 @@
+Name:Soaring Biome
+ManaCost:2
+Types:Artifact Vehicle
+PT:3/3
+
+K:Flying
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigChoice | TriggerDescription$ Whenever this Vehicle attacks, create a Plains token, Island token, Swamp token, Mountain token, or Forest token. Sacrifice that land at the beginning of the next end step.
+SVar:TrigChoice:DB$ GenericChoice | Choices$ DBPlains,DBIsland,DBSwamp,DBMountain,DBForest
+SVar:DBPlains:DB$ CopyPermanent | DefinedName$ Plains | AtEOT$ Sacrifice | SpellDescription$ Plains
+SVar:DBIsland:DB$ CopyPermanent | DefinedName$ Island | AtEOT$ Sacrifice | SpellDescription$ Island
+SVar:DBSwamp:DB$ CopyPermanent | DefinedName$ Swamp | AtEOT$ Sacrifice | SpellDescription$ Swamp
+SVar:DBMountain:DB$ CopyPermanent | DefinedName$ Mountain | AtEOT$ Sacrifice | SpellDescription$ Mountain
+SVar:DBForest:DB$ CopyPermanent | DefinedName$ Forest | AtEOT$ Sacrifice | SpellDescription$ Forest
+
+K:Crew:2
+
+Oracle:Flying\nWhenever this Vehicle attacks, create a Plains token, Island token, Swamp token, Mountain token, or Forest token. Sacrifice that land at the beginning of the next end step.\nCrew 2 (Tap any number of creatures you control with total power 2 or more: This Vehicle becomes an artifact creature until end of turn.)
+
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Token

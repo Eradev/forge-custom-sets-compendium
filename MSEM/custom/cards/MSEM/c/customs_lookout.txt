@@ -1,0 +1,14 @@
+Name:Customs Lookout
+ManaCost:U B
+Types:Creature Human Rogue
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDrawDiscard | TriggerDescription$ When this creature enters, each player draws a card, then discards a card.
+SVar:TrigDrawDiscard:DB$ Draw | Defined$ Player | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ Player | Mode$ TgtChoose
+
+T:Mode$ SpellCast | ValidCard$ Card.sharesNameWith YourGraveyard | ValidActivatingPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ TrigScry | OptionalDecider$ You | TriggerDescription$ Whenever an opponent casts a spell with the same name as a card they own in exile or in their graveyard, you may scry 2.
+T:Mode$ SpellCast | ValidCard$ Card.sharesNameWith ValidExile Card.OppOwn | ValidActivatingPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ TrigScry | OptionalDecider$ You | Secondary$ True | TriggerDescription$ Whenever an opponent casts a spell with the same name as a card they own in exile or in their graveyard, you may scry 2.
+SVar:TrigScry:DB$ Scry | ScryNum$ 2
+
+Oracle:When this creature enters, each player draws a card, then discards a card.\nWhenever an opponent casts a spell with the same name as a card they own in exile or in their graveyard, you may scry 2.

@@ -7,7 +7,7 @@ A:SP$ Charm | Choices$ DBSacrifice,DBLoseGain,DBDiscard | CharmNum$ 3 | CanRepea
 SVar:DBSacrifice:DB$ Sacrifice | Defined$ Opponent | SacValid$ Creature | SpellDescription$ Each opponent sacrifices a creature.
 
 SVar:DBLoseGain:DB$ LoseLife | Defined$ Opponent | LifeAmount$ 2 | SubAbility$ DBGainLife | SpellDescription$ Each opponent loses 2 life and you gain 2 life.
-SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 2
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 2
 
 SVar:DBDiscard:DB$ Discard | ValidTgts$ Player | Mode$ RevealYouChoose | DiscardValid$ Card.nonLand | NumCards$ 1 | SpellDescription$ Choose a player and look at their hand. Choose a nonland card from among them. They discard it.
 

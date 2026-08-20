@@ -1,0 +1,11 @@
+Name:Umberlure Angler
+ManaCost:1 B
+Types:Creature Merfolk Warlock
+PT:2/1
+
+R:Event$ Moved | ActiveZones$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Creature+!token+OppOwn | ReplaceWith$ Exile | Description$ If a creature card would be put into an opponent's graveyard from anywhere, instead exile it, then copy it. You may cast the copy. (You still pay its costs, including color. Copies of permanents enter as tokens.)
+SVar:Exile:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Exile | Defined$ ReplacedCard | RememberChanged$ True | SubAbility$ DBPlay
+SVar:DBPlay:DB$ Play | Defined$ Remembered | ValidSA$ Spell | CopyCard$ True | Optional$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:If a creature card would be put into an opponent's graveyard from anywhere, instead exile it, then copy it. You may cast the copy. (You still pay its costs, including color. Copies of permanents enter as tokens.)

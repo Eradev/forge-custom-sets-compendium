@@ -1,0 +1,11 @@
+Name:Master of Imports
+ManaCost:1 R
+Types:Creature Human Advisor
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.nonBasic+!token+OppCtrl | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever a nonbasic nontoken land enters under an opponent's control, create a tapped colorless land token named Fading Rift with "{T}, Sacrifice this land: Add one mana of any color."
+SVar:TrigToken:DB$ Token | TokenScript$ fading_rift | TokenTapped$ True
+
+Oracle:Whenever a nonbasic nontoken land enters under an opponent's control, create a tapped colorless land token named Fading Rift with "{T}, Sacrifice this land: Add one mana of any color."
+
+DeckHas:Ability$Token

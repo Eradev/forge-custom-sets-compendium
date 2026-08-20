@@ -1,0 +1,18 @@
+Name:Planar Genesis (MSEM)
+ManaCost:5 G G G
+Types:Sorcery
+
+A:SP$ Token | TokenScript$ plains_island | TokenTapped$ True | SubAbility$ DBToken2 | SpellDescription$ For each pair of basic land types, create a tapped colorless land token of those types. (The basic land types are Plains, Island, Swamp, Mountain, and Forest.)
+SVar:DBToken2:DB$ Token | TokenScript$ plains_swamp | TokenTapped$ True | SubAbility$ DBToken3
+SVar:DBToken3:DB$ Token | TokenScript$ forest_plains | TokenTapped$ True | SubAbility$ DBToken4
+SVar:DBToken4:DB$ Token | TokenScript$ island_swamp | TokenTapped$ True | SubAbility$ DBToken5
+SVar:DBToken5:DB$ Token | TokenScript$ island_mountain | TokenTapped$ True | SubAbility$ DBToken6
+SVar:DBToken6:DB$ Token | TokenScript$ forest_island | TokenTapped$ True | SubAbility$ DBToken7
+SVar:DBToken7:DB$ Token | TokenScript$ swamp_mountain | TokenTapped$ True | SubAbility$ DBToken8
+SVar:DBToken8:DB$ Token | TokenScript$ swamp_forest | TokenTapped$ True | SubAbility$ DBToken9
+SVar:DBToken9:DB$ Token | TokenScript$ mountain_forest | TokenTapped$ True | SubAbility$ DBToken10
+SVar:DBToken10:DB$ Token | TokenScript$ mountain_plains | TokenTapped$ True
+
+Oracle:For each pair of basic land types, create a tapped colorless land token of those types. (The basic land types are Plains, Island, Swamp, Mountain, and Forest.)
+
+DeckHas:Ability$Token

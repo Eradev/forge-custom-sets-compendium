@@ -1,0 +1,12 @@
+Name:Journeying Giftbearer
+ManaCost:1 G W
+Types:Creature Cat Aurashaper Cleric
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self,Creature.!token+YouCtrl+Other | Execute$ TrigToken | TriggerDescription$ Whenever this creature or another nontoken creature you control enters, create a green and white Aura enchantment token named Wild Boon attached to that creature. The token has enchant creature and "Enchanted creature gets +1/+1."
+SVar:TrigToken:DB$ Token | TokenScript$ wild_boon | AttachedTo$ TriggeredCard
+
+Oracle:Whenever this creature or another nontoken creature you control enters, create a green and white Aura enchantment token named Wild Boon attached to that creature. The token has enchant creature and "Enchanted creature gets +1/+1."
+
+SVar:PlayMain1:TRUE
+DeckHas:Ability$Token & Type$Aura

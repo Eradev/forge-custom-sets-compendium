@@ -1,0 +1,13 @@
+Name:Rubble Seer
+ManaCost:1 R
+Types:Creature Goblin Shaman
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChoice | TriggerDescription$ When this creature enters, you may sacrifice a land or exile a land card from your graveyard. If you do, exile the top card of your library. Until the end of your next turn, you may play that card.
+SVar:TrigChoice:DB$ GenericChoice | Choices$ DBSacToExile,DBExileToExile
+SVar:DBSacToExile:DB$ Dig | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | Defined$ You | UnlessCost$ Sac<1/Land> | UnlessPayer$ You | UnlessSwitched$ True | SubAbility$ DBEffect
+SVar:DBExileToExile:DB$ Dig | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | Defined$ You | UnlessCost$ ExileFromGrave<1/Land> | UnlessPayer$ You | UnlessSwitched$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | StaticAbilities$ STPlay | ExileOnMoved$ Stack | Duration$ UntilTheEndOfYourNextTurn | RememberObjects$ ExiledWithEffectSource
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.ExiledWithEffectSource | AffectedZone$ Exile | Description$ Until the end of your next turn, you may play that card.
+
+Oracle:When this creature enters, you may sacrifice a land or exile a land card from your graveyard. If you do, exile the top card of your library. Until the end of your next turn, you may play that card.

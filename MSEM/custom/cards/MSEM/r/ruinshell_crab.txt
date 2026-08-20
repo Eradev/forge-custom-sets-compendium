@@ -1,0 +1,12 @@
+Name:Ruinshell Crab
+ManaCost:G G
+Types:Creature Crab
+PT:2/3
+
+K:Ward:2
+
+A:AB$ ChangeZone | Cost$ G G G T ExileFromGrave<1/Creature/creature card> | Origin$ Library | Destination$ Hand | ChangeType$ Creature.sharesNameWith Exiled | ChangeNum$ 2 | SorcerySpeed$ True | SpellDescription$ Search your library for up to two creature cards that share a name with the exiled card, reveal them, put them into your hand, then shuffle.
+
+Oracle:Ward {2}\n{G}{G}{G}, {T}, Exile a creature card from your graveyard: Search your library for up to two creature cards that share a name with the exiled card, reveal them, put them into your hand, then shuffle.
+
+DeckHas:Ability$Graveyard

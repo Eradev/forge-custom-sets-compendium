@@ -1,0 +1,10 @@
+Name:Blossoming Expanse
+ManaCost:no cost
+Types:Land
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChange | OptionalDecider$ You | TriggerDescription$ When this land enters, you may put a basic land card from your hand onto the battlefield tapped.
+SVar:TrigChange:DB$ ChangeZone | Origin$ Hand | Destination$ Battlefield | Tapped$ True | ChangeType$ Land.Basic | ChangeTypeDesc$ basic land
+
+A:AB$ Mana | Cost$ 1 T | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+Oracle:When this land enters, you may put a basic land card from your hand onto the battlefield tapped.\n{1}, {T}: Add one mana of any color.

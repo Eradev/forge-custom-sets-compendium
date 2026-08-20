@@ -1,0 +1,14 @@
+Name:Offworld Surveyors
+ManaCost:G
+Types:Creature Human Scout
+PT:1/1
+
+A:AB$ ChangeZone | Cost$ T | Origin$ Hand | Destination$ Battlefield | ChangeType$ Land | ChangeNum$ 1 | Optional$ True | SpellDescription$ You may put a land card from your hand onto the battlefield.
+
+A:AB$ CopyPermanent | Cost$ 1 T | ValidTgts$ Land.YouCtrl | TgtPrompt$ Select target land you control | RememberTokens$ True | SpellDescription$ Aetherize target land you control. (To aetherize, create a token that's a copy of it, then exile that token.) | SubAbility$ DBExileToken
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:{T}: You may put a land card from your hand onto the battlefield.\n{1}, {T}: Aetherize target land you control. (To aetherize, create a token that's a copy of it, then exile that token.)
+
+DeckHas:Ability$Token|Aetherize

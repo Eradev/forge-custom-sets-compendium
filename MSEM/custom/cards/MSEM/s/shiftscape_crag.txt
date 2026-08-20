@@ -1,0 +1,15 @@
+Name:Shiftscape Crag
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ GenericChoice | Cost$ T Exile<1/CARDNAME/this land> | ActivationPhases$ Upkeep | PlayerTurn$ True | Choices$ DBPlains,DBIsland,DBForest,DBSwamp | SpellDescription$ Choose a basic land type other than Mountain. Create a colorless land token that's a Mountain and the chosen basic land type. Activate only during your upkeep.
+SVar:DBPlains:DB$ Token | TokenScript$ mountain_plains | SpellDescription$ Plains
+SVar:DBIsland:DB$ Token | TokenScript$ island_mountain | SpellDescription$ Island
+SVar:DBForest:DB$ Token | TokenScript$ mountain_forest | SpellDescription$ Forest
+SVar:DBSwamp:DB$ Token | TokenScript$ swamp_mountain | SpellDescription$ Swamp
+
+Oracle:{T}: Add {C}.\n{T}, Exile this land: Choose a basic land type other than Mountain. Create a colorless land token that's a Mountain and the chosen basic land type. Activate only during your upkeep.
+
+DeckHas:Ability$Token

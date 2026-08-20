@@ -1,0 +1,10 @@
+Name:Akkrixian Ambassador
+ManaCost:G W
+Types:Creature Insect Aurashaper Advisor
+PT:2/2
+
+S:Mode$ ReduceCost | ValidCard$ Aura,Creature.Aurashaper | Type$ Spell | Activator$ You | Amount$ 1 | Description$ Aurashaper and Aura spells you cast cost {1} less to cast.
+
+Oracle:Aurashaper and Aura spells you cast cost {1} less to cast.
+
+DeckHints:Type$Aura|Aurashaper

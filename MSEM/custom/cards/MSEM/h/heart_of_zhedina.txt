@@ -1,0 +1,11 @@
+Name:Heart of Zhedina
+ManaCost:no cost
+Types:Legendary Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Cost$ T | Produced$ Any | Amount$ ManaAmt | PrecostDesc$ Wanderlust — | CheckSVar$ WanderLands | SVarCompare$ GE4 | SpellDescription$ Add one mana of any color. Activate only if you control four or more differently named lands. If you control seven or more, you may add three mana of that color instead.
+SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
+SVar:ManaAmt:Count$Compare WanderLands GE7.3.1
+
+Oracle:{T}: Add {C}.\nWanderlust — {T}: Add one mana of any color. Activate only if you control four or more differently named lands. If you control seven or more, you may add three mana of that color instead.

@@ -1,0 +1,15 @@
+Name:Soulblade
+ManaCost:1 W
+Types:Artifact Equipment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this Equipment enters, exile target creature card with mana value 3 or less from your graveyard.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Creature.YouOwn+cmcLE3 | TgtPrompt$ Select target creature card with mana value 3 or less in your graveyard | ExileWithSource$ True
+
+T:Mode$ Attacks | ValidCard$ Card.EquippedBy | Execute$ TrigCopy | TriggerDescription$ Whenever equipped creature attacks, create a token that's a copy of a card exiled with this Equipment that's tapped and attacking. Exile the token at end of combat.
+SVar:TrigCopy:DB$ CopyPermanent | Defined$ ValidExile Card.ExiledWithSource | TokenAttacking$ True | TokenTapped$ True | AtEOT$ ExileCombat
+
+K:Equip:1
+
+Oracle:When this Equipment enters, exile target creature card with mana value 3 or less from your graveyard.\nWhenever equipped creature attacks, create a token that's a copy of a card exiled with this Equipment that's tapped and attacking. Exile the token at end of combat.\nEquip {1}
+
+DeckHas:Ability$Token|Graveyard

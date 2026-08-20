@@ -1,0 +1,12 @@
+Name:Glimmer
+ManaCost:1 U
+Types:Instant
+
+A:SP$ CopyPermanent | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | RememberTokens$ True | SubAbility$ DBExileToken | SpellDescription$ Aetherize target creature you control. (To aetherize, create a token that's a copy of it, then exile that token.)
+SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw
+
+Oracle:Aetherize target creature you control. (To aetherize, create a token that's a copy of it, then exile that token.)\nDraw a card.
+
+DeckHas:Ability$Token|Aetherize

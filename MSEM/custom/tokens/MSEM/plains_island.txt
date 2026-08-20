@@ -1,0 +1,5 @@
+Name:Plains Island Token
+ManaCost:no cost
+Colors:colorless
+Types:Land Plains Island
+Oracle:({T}: Add {W} or {U}.)

@@ -6,7 +6,7 @@ PT:4/4
 K:Trample
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouDontCtrl | TriggerZones$ Battlefield | Execute$ Gain2 | TriggerDescription$ Whenever a creature you don't control dies, you gain 2 life.
-SVar:Gain2:DB$ GainLife | Defined$ You | LifeAmount$ 2
+SVar:Gain2:DB$ GainLife | LifeAmount$ 2
 
 T:Mode$ LifeGained | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCounters | TriggerDescription$ Whenever you gain life, put that many +1/+1 counters on target creature you control.
 SVar:TrigCounters:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ X | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control

@@ -1,0 +1,9 @@
+Name:Filch
+ManaCost:U
+Types:Sorcery
+
+A:SP$ Mill | NumCards$ 4 | ValidTgts$ Opponent | SubAbility$ DBScry | SpellDescription$ Target opponent mills four cards. Scry 2.
+
+SVar:DBScry:DB$ Scry | ScryNum$ 2
+
+Oracle:Target opponent mills four cards. Scry 2.
