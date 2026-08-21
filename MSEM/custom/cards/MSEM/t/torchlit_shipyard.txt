@@ -1,0 +1,8 @@
+Name:Torchlit Shipyard
+ManaCost:no cost
+Types:Land Island Mountain
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+K:Cycling:UR
+Oracle:({T}: Add {U} or {R}.)\nThis land enters tapped.\nCycling {UR} ({UR}, Discard this card: Draw a card.)

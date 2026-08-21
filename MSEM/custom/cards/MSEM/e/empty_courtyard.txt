@@ -1,0 +1,8 @@
+Name:Empty Courtyard
+ManaCost:no cost
+Types:Land Swamp Forest
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+K:Cycling:BG
+Oracle:({T}: Add {B} or {G}.)\nThis land enters tapped.\nCycling {BG} ({BG}, Discard this card: Draw a card.)
