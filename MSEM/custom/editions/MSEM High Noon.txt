@@ -277,11 +277,11 @@ Type=Custom
 # 268 R Sunrise River @Jean Guillet
 # 269 R Sunrise Ruins @Ihor Reshetnikov
 # 270 R Sunrise Woods @illustrum
-# 271 L Plains @Madspeitersen
-# 272 L Island @Adam Varga
-# 273 L Swamp @Nick Grey
-# 274 L Mountain @Dan Evan
-# 275 L Forest @Scott Williams
+271 L Plains @Madspeitersen
+272 L Island @Adam Varga
+273 L Swamp @Nick Grey
+274 L Mountain @Dan Evan
+275 L Forest @Scott Williams
 # 276 S Ghostway @Dave Greco
 # 277 S Murder @xx-Lethal-xx
 # 278 S Unassuming Swineherd @Daniel Eskridge
