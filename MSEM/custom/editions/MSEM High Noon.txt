@@ -11,7 +11,7 @@ Type=Custom
 # 3 R Bearidge Charmer @Andrew Ryan
 # 4 R Bearidge Jailer @Felipe Gaona
 # 5 R Bearidge Marshall @John Silva
-# 6 C Bearidge Preacher @Steve Gibson
+6 C Bearidge Preacher @Steve Gibson
 # 7 C Bold Griffin @Akeiron
 # 8 M Calamity Rose @andava
 # 9 U Collapsed Mine @Filip Dudek
