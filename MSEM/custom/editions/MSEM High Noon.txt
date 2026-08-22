@@ -51,7 +51,7 @@ Type=Custom
 # 43 M Aether Leak @Ralph Horsley
 # 44 U Aetherite Slugs @ChrisAppel
 # 45 U Aetherwhirl @Rita Micozzi
-# 46 U Arcane Heist @Weston T Jones
+46 U Arcane Caper @Weston T Jones
 # 47 C Blind Soulcaller @Stephen Garrett Rusk
 # 48 U Cage the Mind @Josiane Rey
 # 49 C Cardsharp Drifter @FalseDelusion
@@ -287,11 +287,10 @@ Type=Custom
 # 278 S Unassuming Swineherd @Daniel Eskridge
 # 279 S Mistbreaker @Patrick Reilly
 
-
 [tokens]
-# Spirit @Elizabeth Sherry
-# Arrest @Pinokko
-# Bird @Alex Stone
-# Beast @Jasper Sandner
-# Elf Scout @Emmanuel Madail Monzon
-# Gold @BobShmob
+# 1 Spirit @Elizabeth Sherry
+# 2 Arrest @Pinokko
+# 3 Bird @Alex Stone
+# 4 Beast @Jasper Sandner
+# 5 Elf Scout @Emmanuel Madail Monzon
+6 c_a_gold_sac @BobShmob
