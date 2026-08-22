@@ -221,7 +221,7 @@ Type=Custom
 # 213 R Aether Striders @Filip Dudek
 # 214 R At the Gallows @AzraelLaVolpe
 # 215 M Azun, Sheriff of Daisite @Javier Charro
-# 216 U Bounty Leveler @Alexander Nanitchkov
+216 U Bounty Leveler @Alexander Nanitchkov
 # 217 R Burning-Tree Shaman @Andreia Ugrai
 # 218 R Chief Striking Dawn @Katelyn Malmsten
 # 219 U Dusk Occultist @DigitalSashimi
