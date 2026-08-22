@@ -31,7 +31,7 @@ Type=Custom
 24 R Abandoned Meadow @vantasyartz
 25 R Abandoned Wilderness @mozyy-ryzel
 # 26 - 30 were removed
-26 R Ornate Interior @Rheann On Da
+26 R Ornate Interior @Rheann on dA
 27 R Torchlit Shipyard @Darek Zabrocki
 28 R Empty Courtyard @Marco Bucci
 29 R Courtroom Halls @Chris Ostrowski
