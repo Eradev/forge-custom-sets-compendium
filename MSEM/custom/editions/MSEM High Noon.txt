@@ -134,7 +134,7 @@ Type=Custom
 # 126 C Wanted @JabyReArt
 # 127 R Wendigo @Yigit Koroglu
 # 128 U Azun's Play @Riccardo Rullo
-# 129 C Bleeding Bear @Sebastien Ecosse
+129 C Bleeding Bear @Sebastien Ecosse
 # 130 R Bloodshot Berserker @kikicianjur
 # 131 U Brazen Drifter @0800
 # 132 C Campfire Stories @enigmasystem
