@@ -1,0 +1,10 @@
+Name:Charlie Fraser, Taking Point
+ManaCost:1 R W
+Types:Legendary Creature Human Soldier Detective
+PT:3/3
+
+T:Mode$ Attacks | ValidCard$ Creature.YouCtrl | Alone$ True | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigUntap | ActivationLimit$ 1 | TriggerDescription$ Once each turn, when a creature you control attacks alone, you may untap target attacking creature. After this combat, there's an additional combat step.
+SVar:TrigUntap:DB$ Untap | ValidTgts$ Creature.attacking | TgtPrompt$ Select target attacking creature | SubAbility$ DBAddCombat
+SVar:DBAddCombat:DB$ AddPhase | ExtraPhase$ Combat | AfterPhase$ EndCombat
+
+Oracle:Once each turn, when a creature you control attacks alone, you may untap target attacking creature. After this combat, there's an additional combat step.

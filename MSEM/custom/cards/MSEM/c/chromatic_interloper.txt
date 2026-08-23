@@ -1,0 +1,52 @@
+Name:Chromatic Interloper
+ManaCost:W U B R G
+Types:Creature Elemental Horror
+PT:7/7
+
+K:ETBReplacement:Other:ChooseAbilities
+SVar:ChooseAbilities:DB$ GenericChoice | Choices$ FSMen,FSVig,FSTramp,FSHaste,MenVig,MenTramp,MenHaste,VigTramp,VigHaste,TrampHaste | SpellDescription$ As this creature enters, choose two abilities from among first strike, menace, vigilance, trample, or haste.
+SVar:FSMen:DB$ StoreSVar | SVar$ VarFSMen | Type$ Number | Expression$ 1 | SpellDescription$ First strike, menace
+SVar:FSVig:DB$ StoreSVar | SVar$ VarFSVig | Type$ Number | Expression$ 1 | SpellDescription$ First strike, vigilance
+SVar:FSTramp:DB$ StoreSVar | SVar$ VarFSTramp | Type$ Number | Expression$ 1 | SpellDescription$ First strike, trample
+SVar:FSHaste:DB$ StoreSVar | SVar$ VarFSHaste | Type$ Number | Expression$ 1 | SpellDescription$ First strike, haste
+SVar:MenVig:DB$ StoreSVar | SVar$ VarMenVig | Type$ Number | Expression$ 1 | SpellDescription$ Menace, vigilance
+SVar:MenTramp:DB$ StoreSVar | SVar$ VarMenTramp | Type$ Number | Expression$ 1 | SpellDescription$ Menace, trample
+SVar:MenHaste:DB$ StoreSVar | SVar$ VarMenHaste | Type$ Number | Expression$ 1 | SpellDescription$ Menace, haste
+SVar:VigTramp:DB$ StoreSVar | SVar$ VarVigTramp | Type$ Number | Expression$ 1 | SpellDescription$ Vigilance, trample
+SVar:VigHaste:DB$ StoreSVar | SVar$ VarVigHaste | Type$ Number | Expression$ 1 | SpellDescription$ Vigilance, haste
+SVar:TrampHaste:DB$ StoreSVar | SVar$ VarTrampHaste | Type$ Number | Expression$ 1 | SpellDescription$ Trample, haste
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+cmcGE5 | AddKeyword$ First Strike & Menace | CheckSVar$ VarFSMen | SVarCompare$ EQ1 | Description$ Creatures you control with mana value 5 or greater have the chosen abilities.
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+cmcGE5 | AddKeyword$ First Strike & Vigilance | CheckSVar$ VarFSVig | SVarCompare$ EQ1 | Secondary$ True
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+cmcGE5 | AddKeyword$ First Strike & Trample | CheckSVar$ VarFSTramp | SVarCompare$ EQ1 | Secondary$ True
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+cmcGE5 | AddKeyword$ First Strike & Haste | CheckSVar$ VarFSHaste | SVarCompare$ EQ1 | Secondary$ True
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+cmcGE5 | AddKeyword$ Menace & Vigilance | CheckSVar$ VarMenVig | SVarCompare$ EQ1 | Secondary$ True
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+cmcGE5 | AddKeyword$ Menace & Trample | CheckSVar$ VarMenTramp | SVarCompare$ EQ1 | Secondary$ True
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+cmcGE5 | AddKeyword$ Menace & Haste | CheckSVar$ VarMenHaste | SVarCompare$ EQ1 | Secondary$ True
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+cmcGE5 | AddKeyword$ Vigilance & Trample | CheckSVar$ VarVigTramp | SVarCompare$ EQ1 | Secondary$ True
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+cmcGE5 | AddKeyword$ Vigilance & Haste | CheckSVar$ VarVigHaste | SVarCompare$ EQ1 | Secondary$ True
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+cmcGE5 | AddKeyword$ Trample & Haste | CheckSVar$ VarTrampHaste | SVarCompare$ EQ1 | Secondary$ True
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Battlefield | Destination$ Any | Execute$ ResetSVars | Static$ True
+SVar:ResetSVars:DB$ StoreSVar | SVar$ VarFSMen | Type$ Number | Expression$ 0 | SubAbility$ R2
+SVar:R2:DB$ StoreSVar | SVar$ VarFSVig | Type$ Number | Expression$ 0 | SubAbility$ R3
+SVar:R3:DB$ StoreSVar | SVar$ VarFSTramp | Type$ Number | Expression$ 0 | SubAbility$ R4
+SVar:R4:DB$ StoreSVar | SVar$ VarFSHaste | Type$ Number | Expression$ 0 | SubAbility$ R5
+SVar:R5:DB$ StoreSVar | SVar$ VarMenVig | Type$ Number | Expression$ 0 | SubAbility$ R6
+SVar:R6:DB$ StoreSVar | SVar$ VarMenTramp | Type$ Number | Expression$ 0 | SubAbility$ R7
+SVar:R7:DB$ StoreSVar | SVar$ VarMenHaste | Type$ Number | Expression$ 0 | SubAbility$ R8
+SVar:R8:DB$ StoreSVar | SVar$ VarVigTramp | Type$ Number | Expression$ 0 | SubAbility$ R9
+SVar:R9:DB$ StoreSVar | SVar$ VarVigHaste | Type$ Number | Expression$ 0 | SubAbility$ R10
+SVar:R10:DB$ StoreSVar | SVar$ VarTrampHaste | Type$ Number | Expression$ 0
+SVar:VarFSMen:Number$0
+SVar:VarFSVig:Number$0
+SVar:VarFSTramp:Number$0
+SVar:VarFSHaste:Number$0
+SVar:VarMenVig:Number$0
+SVar:VarMenTramp:Number$0
+SVar:VarMenHaste:Number$0
+SVar:VarVigTramp:Number$0
+SVar:VarVigHaste:Number$0
+SVar:VarTrampHaste:Number$0
+
+Oracle:As this creature enters, choose two abilities from among first strike, menace, vigilance, trample, or haste.\nCreatures you control with mana value 5 or greater have the chosen abilities.

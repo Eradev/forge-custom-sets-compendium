@@ -1,0 +1,18 @@
+Name:Chosen of Yhzag
+ManaCost:1 B
+Types:Creature Human Warlock
+PT:1/3
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigSac | TriggerDescription$ At the beginning of your upkeep, you may sacrifice another creature. If that creature had mana value 2 or greater, create a 3/2 colorless Horror creature token. Otherwise, create a 1/1 colorless Human creature token.
+SVar:TrigSac:DB$ Sacrifice | SacValid$ Creature.Other | Amount$ 1 | RememberSacrificed$ True | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ c_3_2_horror | ConditionCheckSVar$ SacCMC | ConditionSVarCompare$ GE2 | SubAbility$ DBTokenHuman
+SVar:DBTokenHuman:DB$ Token | TokenScript$ c_1_1_human | ConditionCheckSVar$ SacCMC | ConditionSVarCompare$ LT2 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:SacCMC:Remembered$CardManaCost
+
+T:Mode$ TokenCreated | ValidPlayer$ You | ValidToken$ Creature.token+YouCtrl | Execute$ TrigMenace | TriggerZones$ Battlefield | TriggerDescription$ Whenever you create a creature token, you may pay 2 life. If you do, put a menace counter on it.
+SVar:TrigMenace:AB$ PutCounter | Cost$ PayLife<2> | Defined$ TriggeredToken | CounterType$ Menace | CounterNum$ 1
+
+Oracle:At the beginning of your upkeep, you may sacrifice another creature. If that creature had mana value 2 or greater, create a 3/2 colorless Horror creature token. Otherwise, create a 1/1 colorless Human creature token.\nWhenever you create a creature token, you may pay 2 life. If you do, put a menace counter on it.
+
+DeckHas:Ability$Token|Sacrifice|Counters & Type$Horror
