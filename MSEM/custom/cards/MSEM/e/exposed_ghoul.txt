@@ -1,0 +1,5 @@
+Name:Exposed Ghoul
+ManaCost:2 B
+Types:Creature Spirit Rogue
+PT:3/2
+Oracle:
