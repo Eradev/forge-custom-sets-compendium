@@ -1,6 +1,6 @@
 Name:Hieroglyphic Constrictor
 ManaCost:0
-Colors:Blue
+Colors:blue
 Types:Artifact Creature Snake
 PT:1/1
 
