@@ -1,0 +1,8 @@
+Name:Skilled Protector
+ManaCost:1 W
+Types:Creature Human Ninja
+PT:1/3
+
+K:Lifelink
+
+Oracle:Lifelink

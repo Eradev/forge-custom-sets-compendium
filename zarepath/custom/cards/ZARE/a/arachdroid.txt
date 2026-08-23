@@ -1,0 +1,10 @@
+Name:Arachdroid
+ManaCost:6 G G
+Types:Artifact Creature Spider Construct
+PT:8/8
+
+K:Vigilance
+
+K:Reach
+
+Oracle:Vigilance, reach

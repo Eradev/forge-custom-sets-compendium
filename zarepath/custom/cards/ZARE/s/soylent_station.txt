@@ -1,0 +1,9 @@
+Name:Soylent Station
+ManaCost:1
+Types:Artifact
+
+A:AB$ Mana | Cost$ T Sac<1/Creature.nonArtifact> | Produced$ G | Amount$ 2 | SpellDescription$ Add {G}{G}.
+
+Oracle:{T}, Sacrifice a nonartifact creature: Add {G}{G}.
+
+AI:RemoveDeck:All

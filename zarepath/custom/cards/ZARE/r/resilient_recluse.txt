@@ -1,0 +1,8 @@
+Name:Resilient Recluse
+ManaCost:2 G
+Types: Creature Human Spider Mutant
+PT:1/5
+
+K:Reach
+
+Oracle:Reach (This creature can block creatures with flying.)

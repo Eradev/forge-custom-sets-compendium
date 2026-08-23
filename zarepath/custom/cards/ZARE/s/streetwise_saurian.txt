@@ -1,0 +1,8 @@
+Name:Streetwise Saurian
+ManaCost:1 G
+Types:Creature Lizard Mutant
+PT:2/2
+
+K:Vigilance
+
+Oracle:Vigilance (Attacking doesn't cause this creature to tap.)

@@ -2,7 +2,7 @@ param(
     [bool]$images = $false
 )
 
-$prefix = "zarepath"
+$prefix = "ZARE"
 $customSource = "..\custom"
 $forgeCustomDestination = "$($env:APPDATA)\Forge"
 

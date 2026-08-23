@@ -1,0 +1,8 @@
+Name:Misclick
+ManaCost:1 B
+Types:Instant
+
+A:SP$ ChangeZoneAll | Cost$ 1 B | ChangeType$ Card.counters_GE1_UPLOAD | Origin$ Exile | Destination$ Library | LibraryPosition$ -1 | RandomOrder$ True | SubAbility$ EachGraveyard | SpellDescription$ Put each uploaded card and each graveyard on the bottom of their owners' libraries in a random order.
+SVar:EachGraveyard:DB$ ChangeZoneAll | ChangeType$ Card | Origin$ Graveyard | Destination$ Library | LibraryPosition$ -1 | RandomOrder$ True | AILogic$ ExileGraveyards
+
+Oracle:Put each uploaded card and each graveyard on the bottom of their owners' libraries in a random order.

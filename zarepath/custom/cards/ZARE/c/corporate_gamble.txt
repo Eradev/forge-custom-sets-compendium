@@ -1,0 +1,9 @@
+Name:Corporate Gamble
+ManaCost:4 R R
+Types:Sorcery
+
+A:SP$ FlipACoin | Cost$ 4 R R | Amount$ 10 | NoCall$ True | HeadsSubAbility$ TheySacrifice | TailsSubAbility$ YouSacrifice | StackDescription$ SpellDescription | SpellDescription$ Flip ten coins. Target opponent sacrifices a permanent for each coin that comes up heads, then you sacrifice a permanent for each coin that comes up tails.
+SVar:TheySacrifice:DB$ Sacrifice | SacValid$ Permanent | Defined$ Opponent | Amount$ X
+SVar:YouSacrifice:DB$ Sacrifice | SacValid$ Permanent | Defined$ You | Amount$ X
+
+Oracle:Flip ten coins. Target opponent sacrifices a permanent for each coin that comes up heads, then you sacrifice a permanent for each coin that comes up tails.

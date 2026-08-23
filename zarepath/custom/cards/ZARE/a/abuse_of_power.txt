@@ -1,0 +1,10 @@
+Name:Abuse of Power
+ManaCost:B
+Types:Instant
+
+A:SP$ Pump | Cost$ B | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ 3 | SubAbility$ Superiority | SpellDescription$ Target creature gets +3/+0 until end of turn. Superiority - That creature also gains indestructible until end of turn if you have more life than an opponent.
+SVar:Superiority:DB$ Pump | Defined$ Targeted | KW$ Indestructible | ConditionCheckSVar$ X | ConditionSVarCompare$ GTY | ConditionDescription$ Superiority - That creature also gains indestructible until end of turn if you have more life than an opponent.
+SVar:X:Count$YourLifeTotal
+SVar:Y:PlayerCountOpponents$LowestLifeTotal
+
+Oracle:Target creature gets +3/+0 until end of turn.\nSuperiority - That creature also gains indestructible until end of turn if you have more life than an opponent.

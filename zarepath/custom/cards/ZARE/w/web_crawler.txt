@@ -1,0 +1,8 @@
+Name:Web Crawler
+ManaCost:4 G
+Types:Artifact Creature Spider Construct
+PT:3/5
+
+K:Reach
+
+Oracle:Reach (This creature can block creatures with flying.)
