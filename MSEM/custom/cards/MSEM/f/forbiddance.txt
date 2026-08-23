@@ -1,0 +1,7 @@
+Name:Forbiddance
+ManaCost:U U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | TgtPrompt$ Select target permanent spell | ValidTgts$ Permanent | SpellDescription$ Counter target permanent spell.
+
+Oracle:Counter target permanent spell.

@@ -1,0 +1,10 @@
+Name:From Forsaken Depths
+ManaCost:2 G
+Types:Enchantment
+
+R:Event$ Draw | ActiveZones$ Battlefield | ValidPlayer$ You | Optional$ True | ReplaceWith$ SkipForHorror | ActivationLimit$ 1 | Description$ Once each turn, if you would draw a card, you may skip that draw. If you do, create a tapped 3/2 colorless Horror creature token.
+SVar:SkipForHorror:DB$ Token | TokenScript$ c_3_2_horror | TokenTapped$ True
+
+Oracle:Once each turn, if you would draw a card, you may skip that draw. If you do, create a tapped 3/2 colorless Horror creature token.
+
+DeckHas:Ability$Token & Type$Horror

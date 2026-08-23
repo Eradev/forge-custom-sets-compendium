@@ -1,0 +1,15 @@
+Name:Fatal Decision
+ManaCost:1 B B
+Types:Sorcery
+
+A:SP$ Charm | Choices$ DBExileTokens,DBExileTarget,DBHandExile | CharmNum$ 1
+
+SVar:DBExileTokens:DB$ ChangeZoneAll | Origin$ Battlefield | Destination$ Exile | ChangeType$ Creature.token | SpellDescription$ Exile all creature tokens.
+
+SVar:DBExileTarget:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Creature,Planeswalker | TgtPrompt$ Select target creature or planeswalker | SpellDescription$ Exile target creature or planeswalker.
+
+SVar:DBHandExile:DB$ RepeatEach | RepeatPlayers$ Player.Opponent | RepeatSubAbility$ DBOppExile | SpellDescription$ Each opponent exiles a card from their hand and loses 2 life.
+SVar:DBOppExile:DB$ ChangeZone | DefinedPlayer$ Remembered | Origin$ Hand | Destination$ Exile | ChangeType$ Card | ChangeNum$ 1 | Chooser$ Remembered | Mandatory$ True | Hidden$ True | SubAbility$ DBLose
+SVar:DBLose:DB$ LoseLife | Defined$ Remembered | LifeAmount$ 2
+
+Oracle:Choose one -\n• Exile all creature tokens.\n• Exile target creature or planeswalker.\n• Each opponent exiles a card from their hand and loses 2 life.

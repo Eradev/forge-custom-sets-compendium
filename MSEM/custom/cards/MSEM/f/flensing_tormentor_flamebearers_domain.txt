@@ -1,0 +1,27 @@
+Name:Flensing Tormentor
+ManaCost:1 R
+Types:Creature Horror
+PT:2/2
+
+K:Menace
+
+T:Mode$ AbilityCast | ValidCard$ Card.OppCtrl | ValidSA$ Activated.!ManaAbility | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever an opponent activates an ability that isn't a mana ability, this creature deals 1 damage to that player.
+SVar:TrigDamage:DB$ DealDamage | Defined$ TriggeredActivator | NumDmg$ 1
+
+Oracle:Menace\nWhenever an opponent activates an ability that isn't a mana ability, this creature deals 1 damage to that player.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Flamebearer's Domain
+ManaCost:no cost
+Colors:red
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ R | SpellDescription$ Add {R}.
+
+Oracle:This land enters tapped.\n{T}: Add {R}.
