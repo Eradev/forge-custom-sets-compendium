@@ -1,5 +1,0 @@
-Name:NuGolem
-ManaCost:3 U
-Types:Artifact Creature Construct
-PT:3/4
-Oracle:

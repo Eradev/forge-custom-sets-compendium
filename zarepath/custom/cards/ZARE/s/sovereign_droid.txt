@@ -1,0 +1,10 @@
+Name:Sovereign Droid
+ManaCost:4 W W
+Types:Artifact Creature Construct
+PT:3/6
+
+K:Flying
+
+K:Lifelink
+
+Oracle:Flying, Lifelink

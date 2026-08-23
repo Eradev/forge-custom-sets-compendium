@@ -1,0 +1,8 @@
+Name:Smash Droid
+ManaCost:4 R
+Types:Artifact Creature Construct
+PT:5/4
+
+K:Trample
+
+Oracle:Trample

@@ -1,5 +1,0 @@
-Name:Robo Boxer
-ManaCost:1 B
-Types:Artifact Creature Human
-PT:2/2
-Oracle:

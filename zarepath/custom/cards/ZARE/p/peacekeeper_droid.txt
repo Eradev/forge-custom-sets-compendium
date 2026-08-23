@@ -1,0 +1,5 @@
+Name:Peacekeeper Droid
+ManaCost:2 W
+Types:Artifact Creature Construct
+PT:3/2
+Oracle:

@@ -1,0 +1,11 @@
+Name:Particular Skills
+ManaCost:2 R
+Types:Sorcery
+
+A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +2 | SubAbility$ DBPump | SpellDescription$ Creatures you control get +2/+0 until end of turn.
+SVar:DBPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl+equipped | KW$ First Strike | SubAbility$ DBPump2 | SpellDescription$ Equipped creatures you control gain first strike until end of turn.
+SVar:DBPump2:DB$ PumpAll | ValidCards$ Creature.YouCtrl+Mutant | KW$ Trample | SpellDescription$ Mutants you control gain trample until end of turn.
+
+Oracle:Creatures you control get +2/+0 until end of turn.\nEquipped creatures you control gain first strike until end of turn.\nMutants you control gain trample until end of turn.
+
+DeckNeeds:Type$Mutant

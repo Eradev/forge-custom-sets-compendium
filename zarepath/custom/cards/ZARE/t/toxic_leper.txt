@@ -1,0 +1,8 @@
+Name:Toxic Leper
+ManaCost:1 G
+Types:Creature Human Mutant
+PT:2/1
+
+K:Deathtouch
+
+Oracle:Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)

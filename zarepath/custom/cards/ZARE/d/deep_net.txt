@@ -1,0 +1,22 @@
+Name:Deep Net
+ManaCost:B B B
+Types:Enchantment
+
+R:Event$ BeginPhase | ActiveZones$ Battlefield | ValidPlayer$ You | Phase$ Draw | Skip$ True | Description$ Skip your draw step.
+
+A:AB$ Dig | Cost$ B | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBAnimate | StackDescription$ {p:You} uploads the top card of their library. | SpellDescription$ Upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
+SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Abilities$ ABRemoveUpload | sVars$ DBDownload | Duration$ Permanent | SubAbility$ MarkUpload | StackDescription$ None
+SVar:MarkUpload:DB$ PutCounter | Defined$ Remembered | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:ABRemoveUpload:AB$ RemoveCounter | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBDownload | PrecostDesc$ Download – | SpellDescription$ Return this card to your hand any time you could cast a sorcery.
+SVar:DBDownload:DB$ ChangeZone | Defined$ Self | Hidden$ True | Origin$ Exile | Destination$ Hand | StackDescription$ SpellDescription
+
+A:AB$ ChooseCard | Cost$ PayLife<2> | Defined$ You | Choices$ Card.YouOwn+counters_GE1_UPLOAD | Amount$ 1 | ChoiceZone$ Exile | SubAbility$ RemCounter | SorcerySpeed$ True | SpellDescription$ Put an uploaded card you own into your hand. Activate this ability only any time you could cast a sorcery.
+SVar:RemCounter:DB$ RemoveCounter | Defined$ ChosenCard | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ Download
+SVar:Download:DB$ ChangeZone | Defined$ ChosenCard | Origin$ Exile | Destination$ Hand | Hidden$ True | ForgetChanged$ True | SubAbility$ DBCleanupChosen
+SVar:DBCleanupChosen:DB$ Cleanup | ClearChosenCard$ True
+
+Oracle:Skip your draw step.\n{B}: Upload the top card of your library.\nPay 2 life: Put an uploaded card you own into your hand. Activate this ability only any time you could cast a sorcery.
+
+AI:RemoveDeck:Random
+DeckHints:Ability$LifeGain

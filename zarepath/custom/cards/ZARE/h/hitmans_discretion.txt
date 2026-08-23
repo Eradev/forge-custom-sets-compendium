@@ -1,0 +1,9 @@
+Name:Hitman's Discretion
+ManaCost:2 B
+Types: Sorcery
+
+A:SP$ Charm | Cost$ 2 B | Choices$ SacTap,SacUntap | CharmNum$ 1
+SVar:SacTap:DB$ Sacrifice | ValidTgts$ Player | SacValid$ Creature.tapped | SacMessage$ Creature | SpellDescription$ Target player sacrifices a tapped creature.
+SVar:SacUntap:DB$ Sacrifice | ValidTgts$ Player | SacValid$ Creature.untapped | SacMessage$ Creature | SpellDescription$ Target player sacrifices a untapped creature.
+
+Oracle:Choose one —\n• Target player sacrifices a tapped creature.\n• Target player sacrifices a untapped creature.

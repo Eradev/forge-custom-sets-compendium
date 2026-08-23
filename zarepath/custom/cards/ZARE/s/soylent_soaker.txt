@@ -1,0 +1,8 @@
+Name:Soylent Soaker
+ManaCost:3 G
+Types:Creature Mutant
+PT:2/4
+
+A:AB$ Mana | Cost$ T | Produced$ G G | SpellDescription$ Add {G}{G}.
+
+Oracle:{T}: Add {G}{G}.
