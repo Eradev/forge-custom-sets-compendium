@@ -1,0 +1,13 @@
+Name:Reality Collapse
+ManaCost:1 R
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ At the beginning of your upkeep, this enchantment deals 1 damage to each opponent.
+SVar:TrigDamage:DB$ DealDamage | Defined$ Player.Opponent | NumDmg$ 1
+
+A:AB$ Effect | Cost$ 2 R | Triggers$ NonCombatDmg | SpellDescription$ Until end of turn, whenever an opponent is dealt noncombat damage, this enchantment deals that much damage to target creature that player controls.
+SVar:NonCombatDmg:Mode$ DamageDoneOnce | ValidTarget$ Opponent | CombatDamage$ False | TriggerZones$ Command | Execute$ TrigMirror | TriggerDescription$ Whenever an opponent is dealt noncombat damage, EFFECTSOURCE deals that much damage to target creature that player controls.
+SVar:TrigMirror:DB$ DealDamage | ValidTgts$ Creature.ControlledBy TriggeredTarget | TgtPrompt$ Select target creature that player controls | NumDmg$ X | DamageSource$ EffectSource
+SVar:X:TriggerCount$DamageAmount
+
+Oracle:At the beginning of your upkeep, this enchantment deals 1 damage to each opponent.\n{2}{R}: Until end of turn, whenever an opponent is dealt noncombat damage, this enchantment deals that much damage to target creature that player controls.

@@ -1,0 +1,10 @@
+Name:Ritual Preparations
+ManaCost:3 G
+Types:Enchantment
+
+K:ETBReplacement:Other:ChooseColor
+SVar:ChooseColor:DB$ ChooseColor | Defined$ You | AILogic$ MostProminentInComputerDeck | SpellDescription$ As this enchantment enters, choose a color.
+
+S:Mode$ UnspentMana | ValidPlayer$ You | ManaType$ Chosen | Description$ You don't lose unspent mana of the chosen color as steps and phases end.
+
+Oracle:As this enchantment enters, choose a color.\nYou don't lose unspent mana of the chosen color as steps and phases end.
