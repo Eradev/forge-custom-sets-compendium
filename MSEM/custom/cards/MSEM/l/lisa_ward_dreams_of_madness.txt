@@ -1,0 +1,12 @@
+Name:Lisa Ward, Dreams of Madness
+ManaCost:2 B R
+Types:Legendary Creature Human Artist
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.Other+YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigCopy | ActivationLimit$ 1 | TriggerDescription$ Once each turn, when another creature you control dies, you may create a token that's a copy of it, except it's a Treasure artifact with "{T}, Sacrifice this artifact: Add one mana of any color." (It loses its other types.)
+SVar:TrigCopy:DB$ CopyPermanent | Defined$ TriggeredCardLKICopy | AddTypes$ Artifact & Treasure | RemoveCardTypes$ True | AddAbilities$ TreasureSac
+SVar:TreasureSac:AB$ Mana | Cost$ T Sac<1/CARDNAME> | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+Oracle:Once each turn, when another creature you control dies, you may create a token that's a copy of it, except it's a Treasure artifact with "{T}, Sacrifice this artifact: Add one mana of any color." (It loses its other types.)
+
+DeckHas:Ability$Token|Sacrifice & Type$Treasure|Artifact
