@@ -1,0 +1,7 @@
+Name:Thunder Crow
+ManaCost:3 U
+Types:Creature Elemental Bird
+PT:2/3
+K:Flying
+K:Prowess
+Oracle:Flying\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)
