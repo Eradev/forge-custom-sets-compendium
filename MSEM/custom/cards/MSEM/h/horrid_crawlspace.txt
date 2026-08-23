@@ -1,0 +1,7 @@
+Name:Horrid Crawlspace
+ManaCost:2
+Types:Artifact
+
+S:Mode$ AttackRestrict | MaxAttackers$ 2 | Description$ No more than two creatures can attack each combat.
+
+Oracle:No more than two creatures can attack each combat.
