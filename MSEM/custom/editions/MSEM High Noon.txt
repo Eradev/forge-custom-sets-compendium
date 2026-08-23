@@ -39,7 +39,7 @@ Type=Custom
 # 31 C Sandbluff Irregular @Tess Garman
 # 32 C Sandbluff Training @Nacho Molina
 # 33 R Slinger's Showdown @Denis Kornev
-# 34 C Solemn Deputy @Lorenz Hideyoshi Ruwwe
+34 C Solemn Deputy @Lorenz Hideyoshi Ruwwe
 # 35 C Songs of the Howlers @Jerome Jacinto
 # 36 C Spirit Guidance @Muhammad Firdaus
 # 37 U Stand Your Ground @Merilliza Chan
