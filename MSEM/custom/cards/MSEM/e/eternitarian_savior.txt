@@ -1,0 +1,13 @@
+Name:Eternitarian Savior
+ManaCost:1 G
+Types:Creature Human Warrior
+PT:2/3
+
+A:AB$ ChangeZone | Cost$ 1 G | Origin$ Battlefield | Destination$ Hand | ValidTgts$ Permanent.Other+YouCtrl | TgtPrompt$ Select another target permanent you control | SpellDescription$ Return another target permanent you control to its owner's hand.
+
+A:AB$ ChangeZone | Cost$ X G | Origin$ Hand | Destination$ Battlefield | ChangeType$ Creature.YouOwn+cmcLEX | ChangeNum$ 1 | Optional$ True | RememberChanged$ True | SubAbility$ DBPump | SpellDescription$ You may put a creature card with mana value X or less from your hand onto the battlefield. It gains trample and haste until end of turn.
+SVar:DBPump:DB$ Pump | Defined$ Remembered | KW$ Trample & Haste | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Count$xPaid
+
+Oracle:{1}{G}: Return another target permanent you control to its owner's hand.\n{X}{G}: You may put a creature card with mana value X or less from your hand onto the battlefield. It gains trample and haste until end of turn.
