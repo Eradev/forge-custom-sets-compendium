@@ -1,0 +1,13 @@
+Name:Umbral Hunter
+ManaCost:1 R R
+Types:Creature Horror
+PT:3/1
+
+K:Flying
+
+A:AB$ ChangeZone | Cost$ 1 R R R | Origin$ Graveyard | Destination$ Hand | ActivationZone$ Graveyard | SubAbility$ DBPump | SpellDescription$ Return this card from your graveyard to your hand. If it's the declare attackers step, up to one target attacking creature gets +3/+1 until end of turn.
+SVar:DBPump:DB$ Pump | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Creature.attacking | TgtPrompt$ Select up to one target attacking creature | NumAtt$ +3 | NumDef$ +1 | Condition$ PlayerTurn | ConditionPhases$ Declare Attackers
+
+Oracle:Flying\n{1}{R}{R}{R}: Return this card from your graveyard to your hand. If it's the declare attackers step, up to one target attacking creature gets +3/+1 until end of turn.
+
+DeckHas:Ability$Graveyard
