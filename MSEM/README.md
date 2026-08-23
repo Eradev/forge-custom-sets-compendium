@@ -51,12 +51,13 @@ Riddles of Revio (RVO)                -  83% (226/272)
     * Ancient Tome
     * Dthan, Who Bloodies the Sands
     * Reytha's Discovery
-Worlds Away (WAY)                     -  97% (255/262)
+Worlds Away (WAY)                     -  96% (254/262)
   Missing cards:
     * Destabilizing the Rifts
     * Ethereal Stone
     * Isolated
     * Mabil Fardancer
+    * Smuggler's Den
     * Syzygy Privateer
     * Verdant Renewal
     * Zhedina Coastguard
@@ -66,7 +67,7 @@ Path of Shadows (PSA)                 -  99% (208/209)
   Missing cards:
      * The Sacred Gate
 A Tourney at Whiterun (TWR)           -  100%
-Tides of War (TOW)                    -  36% (98/271)
+Tides of War (TOW)                    -  37% (102/271)
 Pyramids of Atuum (POA)               -  98% (126/128)
   Missing cards:
     * Righteous Priestess
