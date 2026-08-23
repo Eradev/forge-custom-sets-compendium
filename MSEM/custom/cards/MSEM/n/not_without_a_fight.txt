@@ -1,0 +1,14 @@
+Name:Not Without a Fight
+ManaCost:2 W
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ At the beginning of your end step, create a tapped 1/1 colorless Human creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_human | TokenTapped$ True
+
+T:Mode$ AttackersDeclared | AttackingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigLoyalty | TriggerDescription$ Whenever you attack, put a loyalty counter on each planeswalker you control.
+SVar:TrigLoyalty:DB$ PutCounterAll | ValidCards$ Planeswalker.YouCtrl | CounterType$ LOYALTY | CounterNum$ 1
+
+Oracle:At the beginning of your end step, create a tapped 1/1 colorless Human creature token.\nWhenever you attack, put a loyalty counter on each planeswalker you control.
+
+DeckHas:Ability$Token|Counters & Type$Human
+DeckHints:Type$Planeswalker
