@@ -1,0 +1,14 @@
+Name:Deepdrinker's Effigy
+ManaCost:1
+Types:Artifact
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigChoose | TriggerDescription$ At the beginning of your upkeep, choose an opponent. That player creates a 3/2 colorless Horror creature token.
+SVar:TrigChoose:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | ChoiceTitle$ Choose an opponent | SubAbility$ TrigToken
+SVar:TrigToken:DB$ Token | TokenScript$ c_3_2_horror | TokenOwner$ ChosenPlayer | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenPlayer$ True
+
+A:AB$ GainControl | Cost$ 2 | ValidTgts$ Opponent | TgtPrompt$ Select target opponent | Defined$ Self | NewController$ Targeted | SpellDescription$ Target opponent gains control of this artifact.
+
+Oracle:At the beginning of your upkeep, choose an opponent. That player creates a 3/2 colorless Horror creature token.\n{2}: Target opponent gains control of this artifact.
+
+DeckHas:Ability$Token & Type$Horror

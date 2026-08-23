@@ -1,0 +1,19 @@
+Name:Dread Sacricolist
+ManaCost:3 W W
+Types:Creature Angel Horror
+PT:4/4
+
+K:Flash
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ Whenever this creature enters or attacks, another target creature you control gets +1/+1 and gains flying until end of turn. Untap it.
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPump | Secondary$ True | TriggerDescription$ Whenever this creature enters or attacks, another target creature you control gets +1/+1 and gains flying until end of turn. Untap it.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.Other+YouCtrl | TgtPrompt$ Select another target creature you control | NumAtt$ +1 | NumDef$ +1 | KW$ Flying | SubAbility$ DBUntap
+SVar:DBUntap:DB$ Untap | Defined$ Targeted
+
+K:Evoke:1 W
+
+Oracle:Flash\nFlying\nWhenever this creature enters or attacks, another target creature you control gets +1/+1 and gains flying until end of turn. Untap it.\nEvoke {1}{W} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)
+
+SVar:HasAttackEffect:TRUE

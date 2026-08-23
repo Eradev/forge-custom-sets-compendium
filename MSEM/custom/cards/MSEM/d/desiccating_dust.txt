@@ -1,0 +1,13 @@
+Name:Desiccating Dust
+ManaCost:1 W
+Types:Instant
+
+A:SP$ Charm | Choices$ DBLoseAbilities,DBDestroy | CharmNum$ Z | MinCharmNum$ 1 | AdditionalDescription$ . You may choose both if an opponent controls three or more tapped creatures.
+SVar:Z:Count$Compare Y GE3.2.1
+SVar:Y:Count$Valid Creature.tapped+OppCtrl
+
+SVar:DBLoseAbilities:DB$ Animate | ValidTgts$ Player | TgtPrompt$ Select target player | AllValid$ Creature.TargetedPlayerCtrl | RemoveAllAbilities$ True | SpellDescription$ Creatures target player controls lose all abilities until end of turn.
+
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Creature.tapped | TgtPrompt$ Select target tapped creature | SpellDescription$ Destroy target tapped creature.
+
+Oracle:Choose one. You may choose both if an opponent controls three or more tapped creatures.\n• Creatures target player controls lose all abilities until end of turn.\n• Destroy target tapped creature.
