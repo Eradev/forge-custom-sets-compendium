@@ -1,0 +1,11 @@
+Name:Solomon Rivers, Arcane Dabbler
+ManaCost:U B
+Types:Legendary Creature Human Warlock
+PT:2/2
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Player | TriggerZones$ Battlefield | Execute$ TrigChoose | TriggerDescription$ At the beginning of each player's upkeep, that player may pay {2} or 2 life. If they don't, they return a permanent they control to its owner's hand.
+SVar:TrigChoose:DB$ GenericChoice | Defined$ TriggeredPlayer | Choices$ AvoidMana,AvoidLife | AILogic$ PayUnlessCost
+SVar:AvoidMana:DB$ ChangeZone | Origin$ Battlefield | Destination$ Hand | ChangeType$ Permanent | DefinedPlayer$ TriggeredPlayer | ChangeNum$ 1 | Hidden$ True | Mandatory$ True | Chooser$ TriggeredPlayer | UnlessCost$ 2 | UnlessPayer$ TriggeredPlayer | SpellDescription$ Pay {2}.
+SVar:AvoidLife:DB$ ChangeZone | Origin$ Battlefield | Destination$ Hand | ChangeType$ Permanent | DefinedPlayer$ TriggeredPlayer | ChangeNum$ 1 | Hidden$ True | Mandatory$ True | Chooser$ TriggeredPlayer | UnlessCost$ PayLife<2> | UnlessPayer$ TriggeredPlayer | SpellDescription$ Pay 2 life.
+
+Oracle:At the beginning of each player's upkeep, that player may pay {2} or 2 life. If they don't, they return a permanent they control to its owner's hand.

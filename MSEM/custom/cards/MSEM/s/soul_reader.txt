@@ -1,0 +1,18 @@
+Name:Soul Reader
+ManaCost:W
+Types:Creature Human Wizard
+PT:1/2
+
+A:AB$ PutCounter | Cost$ 1 | RaiseCost$ X | CounterType$ P1P1 | CounterNum$ 1 | SorcerySpeed$ True | PrecostDesc$ Improve | SpellDescription$ ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
+SVar:X:Count$CardCounters.P1P1
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigExile | IsPresent$ Card.Self+counters_GE2 | TriggerDescription$ At the beginning of your end step, if this creature has two or more counters on it, exile up to one target nonland permanent you own. Return that card to your hand or to the battlefield under its owner's control.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Permanent.YouOwn+nonLand | TgtPrompt$ Select up to one target nonland permanent you own | RememberChanged$ True | SubAbility$ DBChoice
+SVar:DBChoice:DB$ GenericChoice | Choices$ DBHand,DBBF | ConditionDefined$ Remembered | ConditionPresent$ Card
+SVar:DBHand:DB$ ChangeZone | Origin$ Exile | Destination$ Hand | Defined$ Remembered | SubAbility$ DBCleanup | SpellDescription$ Return it to your hand.
+SVar:DBBF:DB$ ChangeZone | Origin$ Exile | Destination$ Battlefield | Defined$ Remembered | SubAbility$ DBCleanup | SpellDescription$ Return it to the battlefield.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Improve {1} ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)\nAt the beginning of your end step, if this creature has two or more counters on it, exile up to one target nonland permanent you own. Return that card to your hand or to the battlefield under its owner's control.
+
+DeckHas:Ability$Counters
