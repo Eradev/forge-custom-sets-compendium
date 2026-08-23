@@ -1,0 +1,154 @@
+[metadata]
+Code=MSEM_TMI
+Name=Toll Midnight
+Date=2024-09-01
+Type=Custom
+Booster=7 Rare, 1 LandSpecial
+
+[Rare]
+Base=Rare:fromSheet("MSEM_TMI cards")
+
+[LandSpecial]
+Base=Land:fromSheet("MSEM_TMI cards")
+Replace=.50F Special:fromSheet("MSEM_TMI cards")
+
+[cards]
+1 R Formless Eidolon @Alex Aguilar
+2 R Screams from the Deep @MorkarDFC
+3 R What Remains of Samuel Quinn @Helge C. Balzer
+4 R Yhzag, Alpha and Omega @Mark Erskine
+5a R Aberrant Apostle @Mark Erskine
+6 R Across the Planar Void @Lino Drieghe
+7 R Atal, the Shroudmaker @Mark Erskine
+8 R Beyond the Veil @Stephen Somers
+9 R Bridgehaven's Finest @Borja Pindado
+10 R Desiccating Dust @Matt Dixon
+11 R Dread Sacricolist @Mark Erskine
+12 R Grandmaster of the Order @Bryce Cook
+13 R Nathaniel O'Brien @Aleksander Karcz
+14 R Not Without a Fight @Adam Schumpert
+15 R Safehouse Caretaker @Joshua Cairos
+16 R Sepulchral Guide @Quintin Gleim
+17 R Soul Reader @Aurore Folny
+18 R Stoneport Provisioner @Alexandre Dainche
+19 R Unwitting Fanatic @Stephen Somers
+20 R Ward of Seclusion @Tomasz Jedruszek
+21 R Benthic Tidebreaker @Stanislav Dikolenko
+22 R Cenotaph Conjurant @Frank Walls
+23a R Cephalovorous Flukes @Mark Erskine
+24 R Chronal Echo @Andreas Zafiratos
+25 R Duncaster Nightwatcher @Sedone Thongvilay
+26 R Forbiddance @Pavel Kolomyets
+27 R Fractured Persona @Dan Watson
+28 R Grasper of Secrets @Jason Engle
+29 R Hideaway Agent @Adam Schumpert
+30 R Professor Henrick Crawford @Paolo Puggioni
+31 R Rowena Bishop @Andreia Ugrai
+32 R Shed the Corporeal Form @Brian Valenzuela
+33 R Stillmarsh Brinecatcher @Peter Polach
+34 R Streetwise Investigator @Adam Lane
+35 R Vedu, the Deepdrinker @Mark Erskine
+36 R Warped Physiognomist @Mark Erskine
+37a R Ashfeaster Ghouls @Mark Erskine
+38 R Blasphemous Conversion @Anders Finer
+39 R Cedric Shaw @Jake Murray
+40 R Chosen of Yhzag @Nicholas Gregory
+41 R Disciple of Myriad Fates @Billy Norrby
+42 R Duskling Stalker @MorkarDFC
+43 R Fatal Decision @Daryl Toh
+44 R Feed Those Below @Scott Purdy
+45 R Formed from Twisted Aeons @Michal Milkowski
+46 R Goremound @Sam Lamont
+47 R Gravetiller @Mark Erskine
+48 R Groz, the Nightshaper @Mark Erskine
+49 R Marrowskitter @MorkarDFC
+50 R Rattlecage Terror @Helge C. Balzer
+51 R Temeration @Damien Worm
+52 R Visions of the End @Adam S. Doyle
+53 R Austere Instructor @Borja Pindado
+54 R Bennett Brooks @Eric Deschamps
+55 R Blazing Exultation @Amelie Hutt
+56 R Bloodfiend Ravager @Jon Bosco
+57 R Corpulent Gibberer @Sam Lamont
+58 R Edgar Stokes, Slightly Unhinged @Sara Winters
+59 R Empty the Magazine @Robert Laskey
+60 R Eruq, the Flamebearer @Mark Erskine
+61 R Fate of the World @Shane Pierce
+62a R Flensing Tormentor @Mark Erskine
+63 R Keepers of the Reach @Allan Bednar
+64 R Mouthpiece of Yhzag @Chun Lo
+65 R Reality Collapse @Ethan Patrick Harris
+66 R Reckless Mutationist @Reiko Murakami
+67 R Stillmarsh Smuggler @Henning
+68 R Umbral Hunter @Alexander Chelyshev
+69 R Agency Doorbreakers @Kyri Koniotu
+70 R Amorphous Tyrant @Mark Erskine
+71 R Darren Hunter @Magalie Villeneuve
+72 R Enthralled Fantasist @Andrea Ugrai
+73 R Eternitarian Savior @Diana Martinez
+74 R Keeper of the Ancient Ways @Pixoloid Studios
+75 R Memories Rewound @Brian Valenzuela
+76 R Molting Abomination @Guillaume Ducos
+77 R Rova, the Fleshweaver @Mark Erskine
+78 R Runebound Disciple @Christine Mitzuk
+79 R Sire of the Shapeless @Mark Erskine
+80 R Theodore Harper, Head Librarian @Romain Leguay
+81 R Vile Progenitor @Tiffany Turrill
+82a R Voracious Spawn @Mark Erskine
+83 R Whitney Banks, Ace Mechanic @David Hovey
+84 R Cranial Glass @Ethan Patrick Harris
+85 R Etched Prism @Greg Bobrowski
+86 R Eternity's Eye @Robert Laskey
+87 R Faithforged Pauldron @Imad Awan
+88 R Gasoline Canister @Marcin Jakubowski
+89 R Hexstone @Ethan Patrick Harris
+90 R The Pactbinder's Cane @Ethan Patrick Harris
+91 R Tome of the Lidless Gaze @Anna Mohrbacher
+92 R Bridgehaven @Cristi Balanescu
+93 R Crypt of Myriad Fates @Chris Malidore
+94 R Ghost Quarter @Ed Mattinian
+95 R Planar Rift @Rafal Hrynkiewicz
+96 R Sealed Archives @Drew Whitmore
+97 L Plains @Tomasz Jedruszek
+98 L Island @Tomasz Jedruszek
+99 L Swamp @Tomasz Jedruszek
+100 L Mountain @Tomasz Jedruszek
+101 L Forest @Tomasz Jedruszek
+102 S All In This Together @Christopher Burdett
+103 S Burdens of the Deceased @Patrick McEvoy
+104 S Discoveries Worth Forgetting @Anders Finer
+105 S Within Midnight's Nexus @Julian Asmodeus
+106 S Crypt Gnawer @Bjorn Lensig
+107 S Curse of Impending Doom @Alexander Kozachenko
+108 S Run & Gun @Diego Gisbert Llorens
+109 S Unguarded Relics @Jb Casacop
+110 S From Forsaken Depths @Cyril Van Der Haegan
+111 S Ritual Preparations @Brian Valenzuela
+112 S Charlie Fraser, Taking Point @Anthony Foti
+113 S Chromatic Interloper @KoTnoneKoT
+114 S The Duncaster Terror @Stephen Somers
+115 S Elise Fisher, Tough as Nails @Magali Villeneuve
+116 S Gaspar Reeves, Occult Broker @Lukasz Matuszek
+117 S Ivy Kissinger, Sharpshooter @Drazenka Kimpel
+118 S Lisa Ward, Dreams of Madness @Aleksander Karcz
+119 S Meridian Mills, Seeking Answers @Quintin Gleim
+120 S Scarlett Gallagher, Postmaster @Andrea Ugrai
+121 S The Servant in the Ivory Mask @Adam Lane
+122 S Solomon Rivers, Arcane Dabbler @Alexandre Dainche
+123 S Cavalier Deluxe Roadster @Darek Zabrocki
+124 S Deepdrinker's Effigy @Matthias Kolros
+125 S Horrid Crawlspace @Joshua Cairos
+126 S Nightmare Alley @Joshua Cairos
+
+[tokens]
+1 c_2_2_eye_horror_flying @Disezno
+2 c_3_2_horror @Mark Erskine
+3 c_1_1_human @Magda Lysak
+9 c_a_treasure_sac @Sarah Lindstrom
+
+[WalkerTypes]
+Bennett
+Cedric
+Darren
+Nathaniel
+Rowena
