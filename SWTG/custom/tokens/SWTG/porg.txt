@@ -1,5 +1,5 @@
 Name:Porg
-Colors:Green
+Colors:green
 Types:Creature Bird
 PT:0/1
 
