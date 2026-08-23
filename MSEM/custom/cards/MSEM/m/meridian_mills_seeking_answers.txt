@@ -1,0 +1,16 @@
+Name:Meridian Mills, Seeking Answers
+ManaCost:2 W U
+Types:Legendary Creature Human Detective
+PT:2/4
+
+R:Event$ BeginPhase | ActiveZones$ Battlefield | ValidPlayer$ You | Phase$ Draw | Skip$ True | Description$ Skip your draw step.
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigWheel | TriggerDescription$ At the beginning of your upkeep, shuffle your hand and graveyard into your library, then draw three cards.
+SVar:TrigWheel:DB$ ChangeZoneAll | ChangeType$ Card.YouOwn | Origin$ Hand,Graveyard | Destination$ Library | Shuffle$ True | UseAllOriginZones$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | NumCards$ 3
+
+S:Mode$ CantBeCast | ValidCard$ Card | Caster$ You | NumLimitEachTurn$ 1 | Description$ You can't cast more than one spell each turn.
+
+Oracle:Skip your draw step.\nAt the beginning of your upkeep, shuffle your hand and graveyard into your library, then draw three cards.\nYou can't cast more than one spell each turn.
+
+DeckHas:Ability$Graveyard

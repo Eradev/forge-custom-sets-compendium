@@ -1,0 +1,15 @@
+Name:Mouthpiece of Yhzag
+ManaCost:1 R
+Types:Creature Horror Warlock
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigToken | TriggerDescription$ When this creature enters, you may have target opponent create a tapped 1/1 colorless Human creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_human | TokenTapped$ True | TokenOwner$ Targeted | ValidTgts$ Opponent | TgtPrompt$ Select target opponent
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigSteal | TriggerDescription$ Whenever this creature attacks, gain control of target Human creature you don't control with mana value 3 or less until end of turn. Tap it. It's attacking.
+SVar:TrigSteal:DB$ GainControl | ValidTgts$ Creature.Human+YouDontCtrl+cmcLE3 | TgtPrompt$ Select target Human creature you don't control with mana value 3 or less | LoseControl$ EOT | Tapped$ True | Attacking$ True
+
+Oracle:When this creature enters, you may have target opponent create a tapped 1/1 colorless Human creature token.\nWhenever this creature attacks, gain control of target Human creature you don't control with mana value 3 or less until end of turn. Tap it. It's attacking.
+
+DeckHas:Ability$Token & Type$Human
+SVar:HasAttackEffect:TRUE
