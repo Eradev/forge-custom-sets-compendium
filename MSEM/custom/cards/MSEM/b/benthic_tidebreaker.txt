@@ -1,0 +1,17 @@
+Name:Benthic Tidebreaker
+ManaCost:3 U U
+Types:Creature Octopus Horror
+PT:5/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReveal | TriggerDescription$ When this creature enters, reveal the top card of each player's library and exile one of those cards. You may play that card for as long as it remains exiled, and you may spend blue mana as though it were mana of any color to cast it.
+SVar:TrigReveal:DB$ Dig | Defined$ Player | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | Reveal$ True | RememberChanged$ True | SubAbility$ DBChoose
+SVar:DBChoose:DB$ ChooseCard | Mandatory$ True | Choices$ Card.IsRemembered | ChoiceZone$ Exile | Amount$ 1 | Imprint$ True | SubAbility$ DBReturnRest
+SVar:DBReturnRest:DB$ ChangeZoneAll | Origin$ Exile | Destination$ Library | LibraryPosition$ 0 | ChangeType$ Card.IsRemembered+!IsImprinted | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ Imprinted | StaticAbilities$ STPlay,STMana | Duration$ Permanent | ForgetOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ You may play that card for as long as it remains exiled.
+SVar:STMana:Mode$ ManaConvert | ValidPlayer$ You | ValidCard$ Card.IsRemembered | ValidSA$ Spell.MayPlaySource | ManaConversion$ Blue->AnyColor | AffectedZone$ Exile | Description$ You may spend blue mana as though it were mana of any color to cast it.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearImprinted$ True
+
+K:Evoke:1 U
+
+Oracle:When this creature enters, reveal the top card of each player's library and exile one of those cards. You may play that card for as long as it remains exiled, and you may spend blue mana as though it were mana of any color to cast it.\nEvoke {1}{U} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)
