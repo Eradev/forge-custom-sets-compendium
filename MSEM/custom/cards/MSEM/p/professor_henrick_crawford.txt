@@ -1,0 +1,10 @@
+Name:Professor Henrick Crawford
+ManaCost:2 U
+Types:Legendary Creature Human Wizard
+PT:2/3
+
+A:AB$ CopySpellAbility | Cost$ 1 T | TgtPrompt$ Select target activated or triggered ability you control | TargetType$ Activated.YouCtrl,Triggered.YouCtrl | ValidTgts$ Card,Emblem | MayChooseTarget$ True | SpellDescription$ Copy target activated or triggered ability you control. You may choose new targets for the copy.
+
+A:AB$ CopySpellAbility | Cost$ 3 U T | TgtPrompt$ Select target spell you control | ValidTgts$ Card.YouCtrl | TargetType$ Spell | MayChooseTarget$ True | SpellDescription$ Copy target spell you control. You may choose new targets for the copy. (A copy of a permanent spell becomes a token.)
+
+Oracle:{1}, {T}: Copy target activated or triggered ability you control. You may choose new targets for the copy.\n{3}{U}, {T}: Copy target spell you control. You may choose new targets for the copy. (A copy of a permanent spell becomes a token.)
