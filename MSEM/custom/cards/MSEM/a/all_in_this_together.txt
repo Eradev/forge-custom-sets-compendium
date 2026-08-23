@@ -1,0 +1,10 @@
+Name:All In This Together
+ManaCost:2 W
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.nonToken+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever a nontoken creature you control enters, create a 1/1 colorless Human creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_human
+
+Oracle:Whenever a nontoken creature you control enters, create a 1/1 colorless Human creature token.
+
+DeckHas:Ability$Token & Type$Human

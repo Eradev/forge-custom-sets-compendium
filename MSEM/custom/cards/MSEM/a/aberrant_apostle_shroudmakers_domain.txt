@@ -1,0 +1,29 @@
+Name:Aberrant Apostle
+ManaCost:1 W
+Types:Creature Horror Cleric
+PT:2/1
+
+A:AB$ Charm | Cost$ 1 Sac<1/CARDNAME/this creature> | ReduceCost$ X | Choices$ DBDestroyArtifact,DBDestroyEnchantment,DBExileGrave | SpellDescription$ Choose one. This ability costs {1} less to activate as long as this creature entered this turn.
+SVar:DBDestroyArtifact:DB$ Destroy | ValidTgts$ Artifact | TgtPrompt$ Select target artifact | SpellDescription$ Destroy target artifact.
+SVar:DBDestroyEnchantment:DB$ Destroy | ValidTgts$ Enchantment | TgtPrompt$ Select target enchantment | SpellDescription$ Destroy target enchantment.
+SVar:DBExileGrave:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Card | TgtPrompt$ Select target card in a graveyard | SpellDescription$ Exile target card from a graveyard.
+SVar:X:Count$Compare Y GE1.1.0
+SVar:Y:Count$Valid Card.Self+ThisTurnEntered
+
+Oracle:{1}, Sacrifice this creature: Choose one. This ability costs {1} less to activate as long as this creature entered this turn.\n• Destroy target artifact.\n• Destroy target enchantment.\n• Exile target card from a graveyard.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Shroudmaker's Domain
+ManaCost:no cost
+Colors:white
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ W | SpellDescription$ Add {W}.
+
+Oracle:This land enters tapped.\n{T}: Add {W}.

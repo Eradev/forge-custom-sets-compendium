@@ -1,0 +1,17 @@
+Name:Amorphous Tyrant
+ManaCost:3 G G
+Types:Creature Horror
+PT:6/5
+
+K:Reach
+
+K:Vigilance
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDamage | TriggerDescription$ When this creature enters, another target creature you control deals damage equal to its power to target creature or planeswalker you don't control.
+SVar:TrigDamage:DB$ Pump | ValidTgts$ Creature.Other+YouCtrl | AILogic$ PowerDmg | TgtPrompt$ Select another target creature you control | SubAbility$ DBDamage
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Creature.YouDontCtrl,Planeswalker.YouDontCtrl | AILogic$ PowerDmg | TgtPrompt$ Select target creature or planeswalker you don't control | NumDmg$ X | DamageSource$ ParentTarget
+SVar:X:ParentTargeted$CardPower
+
+K:Evoke:G
+
+Oracle:Reach, vigilance\nWhen this creature enters, another target creature you control deals damage equal to its power to target creature or planeswalker you don't control.\nEvoke {G} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)
