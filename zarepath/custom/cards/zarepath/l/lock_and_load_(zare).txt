@@ -1,4 +1,4 @@
-Name:Lock and Load (NET)
+Name:Lock and Load (ZARE)
 ManaCost:2 R R
 Types:Sorcery
 
