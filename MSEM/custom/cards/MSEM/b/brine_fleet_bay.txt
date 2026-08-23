@@ -1,6 +1,7 @@
 Name:Brine Fleet Bay
 ManaCost:no cost
 Types:Legendary Artifact Land Vehicle
+PT:5/5
 
 A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
 
