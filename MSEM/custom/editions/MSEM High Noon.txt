@@ -111,7 +111,7 @@ Type=Custom
 # 103 C Graygulch Turncoat @Aaron Riley
 # 104 U Hard Knocks @Julaxart
 # 105 U Haunting Horseman @nedesem
-# 106 C Haunting Stragglers @Mateusz Michalski
+106 C Haunting Stragglers @Mateusz Michalski
 # 107 U Howler Sellout @Tess Garman
 # 108 C Lonely Return @Daniel Eskridge
 # 109 C March of the Gray @Ratushnyak Vitaliy
