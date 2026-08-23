@@ -6,7 +6,7 @@ Type=Custom
 # Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 
 [cards]
-# 1 C Arrest @Suzanne Helmigh
+1 C Arrest @Suzanne Helmigh
 # 2 U Atop Their High Horses @Jon Hodgson
 # 3 R Bearidge Charmer @Andrew Ryan
 # 4 R Bearidge Jailer @Felipe Gaona
@@ -26,7 +26,7 @@ Type=Custom
 # 18 C Harsh Wastes @ehecod
 # 19 C Haunting Bard @ghostbow
 # 20 C Judges' Shield @Brolken
-# 21 C Kill Shot @Markus Vesper
+21 C Kill Shot @Markus Vesper
 # 22 U Lone Stranger @Kai Carpenter
 # 23 C Old-World Forgotten @white-angel-ariah
 # 24 U Old-World Walker @OchreJelly
@@ -56,18 +56,18 @@ Type=Custom
 # 48 U Cage the Mind @Josiane Rey
 # 49 C Cardsharp Drifter @FalseDelusion
 # 50 R Daisite Express @Daniel Eskridge
-# 51 R Disallow @Etopato
-# 52 C Dispel @Nicolas-John Poulin
+51 R Disallow @Etopato
+52 C Dispel @Nicolas-John Poulin
 # 53 U Elven Wanderer @Pam Hage
 # 54 C Embed @Andrew Hou
 # 55 C Fool's Gold @Riccardo Rullo
 # 56 R Full House @Christopher Bradley
-# 57 C Ghostly Flicker @Charlie Bowater
+57 C Ghostly Flicker @Charlie Bowater
 # 58 U Gleaming Rider @Randy Vargas
 # 59 C Gulchdrinker Serpent @Ben Wootten
 # 60 C Head in the Clouds @Ashiria
 # 61 C High Spirits @Darek Zabrocki
-# 62 U Invisible Stalker @JakeWBullock
+62 U Invisible Stalker @JakeWBullock
 # 63 C Ironeyes Scoundrel @Roiuky
 # 64 U Luck of the Draw @justduet
 # 65 C Merchant's Guile @Alex Allen
@@ -81,8 +81,8 @@ Type=Custom
 # 73 U Slinger's Storm @Ivan Cirovic
 # 74 R Sparkling Jackalope @LuxDani
 # 75 M Spirit of the Falls @Sebastien Ecosse
-# 76 C Stealer of Secrets @Alex Allen
-# 77 C Straw Soldiers @Rhineville
+76 C Stealer of Secrets @Alex Allen
+77 C Straw Soldiers @Rhineville
 # 78 C Street Urchin @Roiuky
 # 79 C Thunder Crow @Simon Seene
 # 80 C Ulek Windrider @Stephen Garrett Rusk
@@ -116,12 +116,12 @@ Type=Custom
 # 108 C Lonely Return @Daniel Eskridge
 # 109 C March of the Gray @Ratushnyak Vitaliy
 # 110 U Midnight Fright @Suzanne Helmich
-# 111 U Murder @0oki
+111 U Murder @0oki
 # 112 C Nightrail Forger @Marko Djurdjevic
 # 113 U Nightrail Kingpin @Randy Vargas
 # 114 C Pickpocket @Jordan Kerbow
 # 115 C Public Hanging @Elson Wong
-# 116 U Ravenous Chupacabra @Felipe Escobar
+116 U Ravenous Chupacabra @Felipe Escobar
 # 117 C Roxite's Revenge @RGUS
 # 118 R Sareng, the Dealer @John Silva
 # 119 U Spirit of Infamy @R-SRaven
@@ -138,7 +138,7 @@ Type=Custom
 # 130 R Bloodshot Berserker @kikicianjur
 # 131 U Brazen Drifter @0800
 # 132 C Campfire Stories @enigmasystem
-# 133 C Cathartic Reunion @Daniel Eskridge
+133 C Cathartic Reunion @Daniel Eskridge
 # 134 R Creed, Eternal Straggler @Keith Williams
 # 135 C Crossfire @Jordy Lakiere
 # 136 R Deputy Gibem @changinghand
@@ -172,7 +172,7 @@ Type=Custom
 # 164 C Sunset Cliffs Lawman @David Su
 # 165 R Tavern Brawl @Sebastien Ecosse
 # 166 M Terror of Sunset Cliffs @kikicianjur
-# 167 C Threaten @Alexander Nanitchkov
+167 C Threaten @Alexander Nanitchkov
 # 168 R Train Heist @Roman Chaliy
 # 169 C Wave of Goblins @Andrew Hou
 # 170 U Wild Bounties @Haley Wakefield
@@ -186,7 +186,7 @@ Type=Custom
 # 178 C Eternal Scout @Odobenus
 # 179 U Expedition Leader @Randy Vargas
 # 180 U Fireheart Centaur @Orchetto
-# 181 C Fog @Daniel Eskridge
+181 C Fog @Daniel Eskridge
 # 182 U Frontier Hoof @Josh Cotton
 # 183 R Frontier Meditation @Leonid Kozienko
 # 184 C Frontier Outrider @fishcapades
@@ -222,7 +222,7 @@ Type=Custom
 # 214 R At the Gallows @AzraelLaVolpe
 # 215 M Azun, Sheriff of Daisite @Javier Charro
 216 U Bounty Leveler @Alexander Nanitchkov
-# 217 R Burning-Tree Shaman @Andreia Ugrai
+217 R Burning-Tree Shaman @Andreia Ugrai
 # 218 R Chief Striking Dawn @Katelyn Malmsten
 # 219 U Dusk Occultist @DigitalSashimi
 # 220 U Dusk Rider @Aaron Riley
@@ -234,7 +234,7 @@ Type=Custom
 # 226 U Miner's Barracks @Jerome Jacinto
 # 227 U Nightrail Fence @Jackson Tjota
 # 228 U Quelling Tavern @Rafael Michael Hayduk
-# 229 U Recoil @13tangerines
+229 U Recoil @13tangerines
 # 230 R Roxite of Nightrail @Pyeongjun Park
 # typo on Lackeybot?
 # 231 U Sandbluff Inciter @Roiuky
@@ -283,7 +283,7 @@ Type=Custom
 274 L Mountain @Dan Evan
 275 L Forest @Scott Williams
 276 S Ghostway @Dave Greco
-# 277 S Murder @xx-Lethal-xx
+277 S Murder @xx-Lethal-xx
 # 278 S Unassuming Swineherd @Daniel Eskridge
 # 279 S Mistbreaker @Patrick Reilly
 
