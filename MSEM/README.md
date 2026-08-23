@@ -26,11 +26,14 @@ These changes might not be reflected in their official ruling.
 ## Set implementation progress
 
 ```text
-Aftermath (AFM)                       -  90% (228/254)
+Toll Midnight (TMI)                   -  95% (120/126)
   Missing cards:
-    * Every card with Reprise, or referencing it.
-    * Every card with Engorge, or referencing it.
-    * Master of Steel
+    * Austere Instructor
+    * Edgar Stokes, Slightly Unhinged
+    * Ivy Kissinger, Sharpshooter
+    * Rattlecage Terror
+    * Shed the Corporeal Form
+    * What Remains of Samuel Quinn
 Video Horror System (VHS)             -  97% (83/86)
   Missing cards:
     * Maddened Preacher
@@ -68,6 +71,11 @@ Pyramids of Atuum (POA)               -  98% (126/128)
   Missing cards:
     * Righteous Priestess
     * Sphinx of Riddles
+Aftermath (AFM)                       -  90% (228/254)
+  Missing cards:
+    * Every card with Reprise, or referencing it.
+    * Every card with Engorge, or referencing it.
+    * Master of Steel
 
 Reprints / Promo sets:
 MSEM Champions (CHAMPIONS)
@@ -91,6 +99,7 @@ Examples on how to implement custom keywords and mechanisms.
 * [Foresight](#foresight)
 * [Golden Age](#golden-age)
 * [Horrific](#horrific)
+* [Improve](#improve)
 * [Infiltrate](#infiltrate)
 * [Inscribe](#inscribe)
 * [Kindle](#kindle)
@@ -296,6 +305,23 @@ To check if you're horrific, you can check this var if it is greater than 0:
 
 ```text
 SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Improve
+
+Improve is defined as:
+
+```text
+Improve {1} ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)\
+```
+
+Implementation:
+
+```text
+A:AB$ PutCounter | Cost$ 1 | RaiseCost$ X | CounterType$ P1P1 | CounterNum$ 1 | SorcerySpeed$ True | PrecostDesc$ Improve | SpellDescription$ ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
+SVar:X:Count$CardCounters.P1P1
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
