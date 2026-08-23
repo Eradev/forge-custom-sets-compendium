@@ -1,0 +1,15 @@
+Name:Vile Progenitor
+ManaCost:4 G
+Types:Creature Beast Horror
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters, create a 3/2 colorless Horror creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_3_2_horror
+
+S:Mode$ Continuous | Affected$ Creature.Horror+YouCtrl | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Trample | IsPresent$ Land.YouCtrl | PresentCompare$ GE5 | Description$ As long as you control five or more lands, Horrors you control get +1/+1 and have trample.
+
+K:Evoke:1 G
+
+Oracle:When this creature enters, create a 3/2 colorless Horror creature token.\nAs long as you control five or more lands, Horrors you control get +1/+1 and have trample.\nEvoke {1}{G} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)
+
+DeckHas:Ability$Token
