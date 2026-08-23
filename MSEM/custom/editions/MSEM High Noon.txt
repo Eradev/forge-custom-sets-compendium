@@ -30,7 +30,7 @@ Type=Custom
 # 22 U Lone Stranger @Kai Carpenter
 # 23 C Old-World Forgotten @white-angel-ariah
 # 24 U Old-World Walker @OchreJelly
-# 25 C Pioneer of Wild Places @Marzena Nereida Piwowar
+25 C Pioneer of Wild Places @Marzena Nereida Piwowar
 # 26 R Preacher of Stray Souls @Mario Vazquez
 # 27 R Ride into the Sunset @Daniel Wachter
 # 28 C Sandbluff Barflies @Monika Andruszkiewicz
