@@ -1,0 +1,7 @@
+Name:Eversoar
+ManaCost:W W
+Types:Creature Bird
+PT:2/2
+K:Flying
+K:Vigilante
+Oracle:Flying, vigilante

@@ -17,7 +17,7 @@ Type=Custom
 # 9 U Collapsed Mine @Filip Dudek
 10 U Diligent Deputy @Sebastien Ecosse
 # 11 R Drifting Warden @donmalo
-# 12 U Eversoar @0oki
+12 U Eversoar @0oki
 # 13 C Forlorn Farmhand @Daniel Eskridge
 # 14 C Frontier Paragon @dleoblack
 15 R Ghostway @Denis Kornev
