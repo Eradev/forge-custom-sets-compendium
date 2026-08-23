@@ -20,7 +20,7 @@ Type=Custom
 # 12 U Eversoar @0oki
 # 13 C Forlorn Farmhand @Daniel Eskridge
 # 14 C Frontier Paragon @dleoblack
-# 15 R Ghostway @Denis Kornev
+15 R Ghostway @Denis Kornev
 # 16 C Graygulch Howler @Mehrdad Isvandi
 # 17 U Hardened Soul @Justin Wong
 # 18 C Harsh Wastes @ehecod
@@ -282,7 +282,7 @@ Type=Custom
 273 L Swamp @Nick Grey
 274 L Mountain @Dan Evan
 275 L Forest @Scott Williams
-# 276 S Ghostway @Dave Greco
+276 S Ghostway @Dave Greco
 # 277 S Murder @xx-Lethal-xx
 # 278 S Unassuming Swineherd @Daniel Eskridge
 # 279 S Mistbreaker @Patrick Reilly
