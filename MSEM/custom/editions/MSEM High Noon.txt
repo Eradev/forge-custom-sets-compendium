@@ -204,7 +204,7 @@ Type=Custom
 # 196 R One with the Herd @Daniel Eskridge
 # 197 R Patron of the Ancients @Rob Joseph
 # 198 U Qilan Archer @Roiuky
-# 199 C Qilan Explorer @Rodrigo Mendez
+199 C Qilan Explorer @Rodrigo Mendez
 # 200 C Qilan Seer @breath-art
 # 201 C Qilan Wanderer @Roiuky
 # 202 C Scout Ahead @Daniel Eskridge
