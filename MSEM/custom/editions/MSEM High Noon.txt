@@ -86,7 +86,7 @@ Type=Custom
 # 78 C Street Urchin @Roiuky
 79 C Thunder Crow @Simon Seene
 # 80 C Ulek Windrider @Stephen Garrett Rusk
-# 81 U Vivid Hallucination @Alex Stone
+81 U Vivid Hallucination @Alex Stone
 # 82 R Weaver of the Winds @janaschi
 # 83 C Whirling Thoughts @Vilenchik
 # 84 U Window Shopping @Biwer Vincent
