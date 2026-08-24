@@ -183,7 +183,7 @@ Type=Custom
 175 C Brush Sniper @Anna Lakisova
 # 176 C Canopy Ambush @Ashiria
 # 177 U Creeping Hidebehind @Ryan Van Dongen
-# 178 C Eternal Scout @Odobenus
+178 C Eternal Scout @Odobenus
 # 179 U Expedition Leader @Randy Vargas
 # 180 U Fireheart Centaur @Orchetto
 181 C Fog @Daniel Eskridge
