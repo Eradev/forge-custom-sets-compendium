@@ -1,0 +1,6 @@
+Name:Heartwood Sniper
+ManaCost:1 R
+Types:Creature Centaur Archer
+PT:2/1
+K:Reach
+Oracle:Reach

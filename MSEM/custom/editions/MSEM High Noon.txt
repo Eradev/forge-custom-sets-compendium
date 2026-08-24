@@ -54,7 +54,7 @@ Type=Custom
 46 U Arcane Caper @Weston T Jones
 # 47 C Blind Soulcaller @Stephen Garrett Rusk
 # 48 U Cage the Mind @Josiane Rey
-# 49 C Cardsharp Drifter @FalseDelusion
+49 C Cardsharp Drifter @FalseDelusion
 # 50 R Daisite Express @Daniel Eskridge
 51 R Disallow @Etopato
 52 C Dispel @Nicolas-John Poulin
@@ -143,11 +143,11 @@ Type=Custom
 # 135 C Crossfire @Jordy Lakiere
 # 136 R Deputy Gibem @changinghand
 # 137 U Derringer Revelation @Wojtek Fus
-# 138 U Driver of Herds @Oleg Saakyan
+138 U Driver of Herds @Oleg Saakyan
 # 139 C Dual Wield @J A D
 # 140 M Haide Bankbuster @Li Joshua
 # 141 U Hair-Trigger Marshall @Larry Wilson
-# 142 C Heartwood Sniper @Roiuky
+142 C Heartwood Sniper @Roiuky
 # 143 U Howler Sheriff @Katie Hofgard
 # 144 C Injustice @Francis James R Arandez
 # 145 U Ironeyes Desperado @Lorenz Hideyoshi Ruwwe
