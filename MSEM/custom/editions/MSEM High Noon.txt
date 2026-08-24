@@ -122,7 +122,7 @@ Type=Custom
 # 114 C Pickpocket @Jordan Kerbow
 # 115 C Public Hanging @Elson Wong
 116 U Ravenous Chupacabra @Felipe Escobar
-# 117 C Roxite's Revenge @RGUS
+117 C Roxite's Revenge @RGUS
 # 118 R Sareng, the Dealer @John Silva
 # 119 U Spirit of Infamy @R-SRaven
 # 120 U Staking Hand @Biwer Vincent
