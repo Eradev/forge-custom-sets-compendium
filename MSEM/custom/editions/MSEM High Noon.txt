@@ -105,7 +105,7 @@ Type=Custom
 # 97 C Gift of Shadows @vtas
 98 C Grasping Spirits @Roiuky
 # 99 U Graygulch Drifter @Bozhko Diitrov
-# 100 C Graygulch Lurker @Felipe Gaona
+100 C Graygulch Lurker @Felipe Gaona
 # 101 C Graygulch Outcast @Marko Djurdjevic
 # 102 R Graygulch Revenant @Malte J. Zirbel
 # 103 C Graygulch Turncoat @Aaron Riley
