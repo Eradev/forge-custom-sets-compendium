@@ -102,7 +102,7 @@ Type=Custom
 94 U Feed to the Pigs @Daniel Eskridge
 95 U From the Shadows @Gregory Fromenteau
 # 96 R Ghastly Character @Mateusz Ozminski
-# 97 C Gift of Shadows @vtas
+97 C Gift of Shadows @vtas
 98 C Grasping Spirits @Roiuky
 # 99 U Graygulch Drifter @Bozhko Diitrov
 100 C Graygulch Lurker @Felipe Gaona
