@@ -99,7 +99,7 @@ Type=Custom
 # 91 R Cardsharp @wacalac
 # 92 C Down Barrel @Vulpes Ibculta
 93 C Exposed Ghoul @Roman Chaliy
-# 94 U Feed to the Pigs @Daniel Eskridge
+94 U Feed to the Pigs @Daniel Eskridge
 95 U From the Shadows @Gregory Fromenteau
 # 96 R Ghastly Character @Mateusz Ozminski
 # 97 C Gift of Shadows @vtas

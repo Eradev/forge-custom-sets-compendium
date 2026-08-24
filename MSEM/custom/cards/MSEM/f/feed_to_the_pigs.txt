@@ -1,0 +1,7 @@
+Name:Feed to the Pigs
+ManaCost:X B B
+Types:Sorcery
+A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ X | SubAbility$ DBGainLife | SpellDescription$ CARDNAME deals X damage to any target. You gain X life.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ X
+SVar:X:Count$xPaid
+Oracle:Feed to the Pigs deals X damage to any target. You gain X life.
