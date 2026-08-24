@@ -136,7 +136,7 @@ Type=Custom
 # 128 U Azun's Play @Riccardo Rullo
 129 C Bleeding Bear @Sebastien Ecosse
 # 130 R Bloodshot Berserker @kikicianjur
-# 131 U Brazen Drifter @0800
+131 U Brazen Drifter @0800
 # 132 C Campfire Stories @enigmasystem
 133 C Cathartic Reunion @Daniel Eskridge
 # 134 R Creed, Eternal Straggler @Keith Williams
