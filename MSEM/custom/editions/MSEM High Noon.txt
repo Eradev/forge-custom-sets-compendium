@@ -60,7 +60,7 @@ Type=Custom
 52 C Dispel @Nicolas-John Poulin
 # 53 U Elven Wanderer @Pam Hage
 # 54 C Embed @Andrew Hou
-# 55 C Fool's Gold @Riccardo Rullo
+55 C Fool's Gold @Riccardo Rullo
 # 56 R Full House @Christopher Bradley
 57 C Ghostly Flicker @Charlie Bowater
 # 58 U Gleaming Rider @Randy Vargas
