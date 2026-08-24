@@ -206,7 +206,7 @@ Type=Custom
 # 198 U Qilan Archer @Roiuky
 199 C Qilan Explorer @Rodrigo Mendez
 # 200 C Qilan Seer @breath-art
-# 201 C Qilan Wanderer @Roiuky
+201 C Qilan Wanderer @Roiuky
 # 202 C Scout Ahead @Daniel Eskridge
 # 203 U Spectral Hunter @Eren Arik
 # 204 C Take Aim @icarus-falls
