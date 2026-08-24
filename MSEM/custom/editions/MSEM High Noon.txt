@@ -66,7 +66,7 @@ Type=Custom
 # 58 U Gleaming Rider @Randy Vargas
 59 C Gulchdrinker Serpent @Ben Wootten
 # 60 C Head in the Clouds @Ashiria
-# 61 C High Spirits @Darek Zabrocki
+61 C High Spirits @Darek Zabrocki
 62 U Invisible Stalker @JakeWBullock
 # 63 C Ironeyes Scoundrel @Roiuky
 # 64 U Luck of the Draw @justduet
