@@ -194,7 +194,7 @@ Type=Custom
 # 186 U Gifts of Ancient Ulek @Rick Troula
 # 187 C Gun Fight @Andrei Pervukhin
 # 188 U Lead the Charge @Daniel Eskridge
-# 189 C Lingering Guide @kanovsky
+189 C Lingering Guide @kanovsky
 # 190 U Loreweaver @Marya Yetseva
 # 191 R Mentor of the Mighty @Daniel Eskridge
 # 192 R Mistbreaker @patrick Reilly
