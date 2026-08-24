@@ -1,0 +1,6 @@
+Name:Qilan Raiders
+ManaCost:2 R
+Types:Creature Centaur Warrior
+PT:3/2
+K:Menace
+Oracle:Menace
