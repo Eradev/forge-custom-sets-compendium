@@ -64,7 +64,7 @@ Type=Custom
 # 56 R Full House @Christopher Bradley
 57 C Ghostly Flicker @Charlie Bowater
 # 58 U Gleaming Rider @Randy Vargas
-# 59 C Gulchdrinker Serpent @Ben Wootten
+59 C Gulchdrinker Serpent @Ben Wootten
 # 60 C Head in the Clouds @Ashiria
 # 61 C High Spirits @Darek Zabrocki
 62 U Invisible Stalker @JakeWBullock
