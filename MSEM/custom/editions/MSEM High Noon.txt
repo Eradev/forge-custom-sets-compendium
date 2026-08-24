@@ -77,7 +77,7 @@ Type=Custom
 # 69 U Prolific Thief @Alex Allen
 # 70 C Refund @Vince Biwer
 71 C Silence of the Drifter @JNickBlack
-# 72 U Slighted Spirit @Chris Malidore
+72 U Slighted Spirit @Chris Malidore
 # 73 U Slinger's Storm @Ivan Cirovic
 # 74 R Sparkling Jackalope @LuxDani
 # 75 M Spirit of the Falls @Sebastien Ecosse
