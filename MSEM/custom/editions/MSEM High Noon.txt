@@ -152,7 +152,7 @@ Type=Custom
 # 144 C Injustice @Francis James R Arandez
 # 145 U Ironeyes Desperado @Lorenz Hideyoshi Ruwwe
 146 C Ironeyes Slingers @HaphazardMachine
-# 147 U Land Grab @Jamshed Jurabaev
+147 U Land Grab @Jamshed Jurabaev
 # 148 C Make an Entrance @Eduardo Ferigato
 # 149 C Mudslinging @Igor Grechanyi
 # 150 R Open Road @Camila Vielmond
