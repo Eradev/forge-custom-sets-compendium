@@ -19,7 +19,7 @@ Type=Custom
 # 11 R Drifting Warden @donmalo
 12 U Eversoar @0oki
 13 C Forlorn Farmhand @Daniel Eskridge
-# 14 C Frontier Paragon @dleoblack
+14 C Frontier Paragon @dleoblack
 15 R Ghostway @Denis Kornev
 # 16 C Graygulch Howler @Mehrdad Isvandi
 # 17 U Hardened Soul @Justin Wong
