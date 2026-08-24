@@ -259,7 +259,7 @@ Type=Custom
 # 250 C Heavy Moneybag @Angelique Shelley
 # 251 C Mighty Totem @Dudu Torres
 # 252 U Moonlit Lurker @Steve Hamilton
-# 253 U Murderkeep @Andrew Dobell
+253 U Murderkeep @Andrew Dobell
 # 254 C Needle Doll @spyders
 # 255 C Penny Dreadful @Jian Guo
 256 C Resolute Scarecrow @donmalo
