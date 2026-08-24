@@ -92,7 +92,7 @@ Type=Custom
 # 84 U Window Shopping @Biwer Vincent
 # 85 R Winning Hand @Larry Wilson
 # 86 M Axom, the Drifter @Daniel Kamarudin
-# 87 C Bloodleaf Butcher @Telmand
+87 C Bloodleaf Butcher @Telmand
 88 C Bloodleaf Poisoner @Roiuky
 # 89 C Bloodthirsty Ambusher @Sal Vador
 # 90 R Bounty Collector @Marcin Bystrzycki
