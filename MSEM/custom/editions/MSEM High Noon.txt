@@ -236,7 +236,7 @@ Type=Custom
 # 228 U Quelling Tavern @Rafael Michael Hayduk
 229 U Recoil @13tangerines
 # 230 R Roxite of Nightrail @Pyeongjun Park
-# typo on Lackeybot?
+# artist typo on Lackeybot?
 # 231 U Sandbluff Inciter @Roiuky
 # 232 R Stickup @Robin Boer
 # 233 M Stormcall Thunderbird @Selladorra
