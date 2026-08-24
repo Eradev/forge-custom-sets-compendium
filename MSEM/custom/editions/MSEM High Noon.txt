@@ -18,7 +18,7 @@ Type=Custom
 10 U Diligent Deputy @Sebastien Ecosse
 # 11 R Drifting Warden @donmalo
 12 U Eversoar @0oki
-# 13 C Forlorn Farmhand @Daniel Eskridge
+13 C Forlorn Farmhand @Daniel Eskridge
 # 14 C Frontier Paragon @dleoblack
 15 R Ghostway @Denis Kornev
 # 16 C Graygulch Howler @Mehrdad Isvandi
@@ -288,7 +288,7 @@ Type=Custom
 # 279 S Mistbreaker @Patrick Reilly
 
 [tokens]
-# 1 Spirit @Elizabeth Sherry
+1 c_1_1_spirit @Elizabeth Sherry
 # 2 Arrest @Pinokko
 # 3 Bird @Alex Stone
 # 4 Beast @Jasper Sandner
