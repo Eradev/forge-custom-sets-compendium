@@ -209,7 +209,7 @@ Type=Custom
 201 C Qilan Wanderer @Roiuky
 # 202 C Scout Ahead @Daniel Eskridge
 # 203 U Spectral Hunter @Eren Arik
-# 204 C Take Aim @icarus-falls
+204 C Take Aim @icarus-falls
 # 205 C Tracker of Wild Places @Steve Gibson
 # 206 U Trailbloomer @Deer-in-Headlights
 # 207 C Ulek Crusher @Kerem Beyit
