@@ -180,7 +180,7 @@ Type=Custom
 # 172 U Bloodleaf Druid @David Lawrence Loebman
 # 173 R Bloodleaf Tracker @Malte J. Zirbel
 # 174 C Bloodleaf Warcry @Mehmet Ozon
-# 175 C Brush Sniper @Anna Lakisova
+175 C Brush Sniper @Anna Lakisova
 # 176 C Canopy Ambush @Ashiria
 # 177 U Creeping Hidebehind @Ryan Van Dongen
 # 178 C Eternal Scout @Odobenus
