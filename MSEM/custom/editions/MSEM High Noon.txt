@@ -160,7 +160,7 @@ Type=Custom
 # 152 U Postmark Bullet @DrawingNightmare
 153 C Qilan Raiders @JakeWBullock
 # 154 R Qilan Stormers @Kimonas
-# 155 C Qilan Warrior @Roiuky
+155 C Qilan Warrior @Roiuky
 # 156 R Rain of Blood @Andrew Hou
 # 157 C Reforge @Antonio Caparo
 # 158 C Sandbluff Assailant @rou-tan

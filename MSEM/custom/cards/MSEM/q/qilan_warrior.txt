@@ -1,0 +1,6 @@
+Name:Qilan Warrior
+ManaCost:3 R
+Types:Creature Centaur Warrior
+PT:3/3
+K:Trample
+Oracle:Trample
