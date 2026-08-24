@@ -265,7 +265,7 @@ Type=Custom
 256 C Resolute Scarecrow @donmalo
 # 257 U Scoundrel's Aetherlock @Joe Slucher
 # 258 U Shredding Sword @Ryohei Hase
-# 259 C Tumblewalker @Yasmin Joyner and oddmountain
+259 C Tumblewalker @Yasmin Joyner and oddmountain
 # 260 U Ulek Guardian @Jacob Atienza
 # 261 M The Wicker Lord @m-hugo
 # 262 C Worn Saddle @Justin Oaksford
