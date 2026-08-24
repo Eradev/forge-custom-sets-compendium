@@ -262,7 +262,7 @@ Type=Custom
 # 253 U Murderkeep @Andrew Dobell
 # 254 C Needle Doll @spyders
 # 255 C Penny Dreadful @Jian Guo
-# 256 C Resolute Scarecrow @donmalo
+256 C Resolute Scarecrow @donmalo
 # 257 U Scoundrel's Aetherlock @Joe Slucher
 # 258 U Shredding Sword @Ryohei Hase
 # 259 C Tumblewalker @Yasmin Joyner and oddmountain
