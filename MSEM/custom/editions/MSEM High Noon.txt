@@ -127,7 +127,7 @@ Type=Custom
 # 119 U Spirit of Infamy @R-SRaven
 # 120 U Staking Hand @Biwer Vincent
 # 121 C Sunset Cliffs Patron @Nacho Molina
-# 122 R Unassuming Swineherd @Daniel Eskridge
+122 R Unassuming Swineherd @Daniel Eskridge
 # 123 U Uncovered Mine @Ralph Horsley
 # 124 R Vengeful Agent @ErothBlackDragon
 # 125 C Victims of Graygulch @Ghion Quentin
@@ -284,7 +284,7 @@ Type=Custom
 275 L Forest @Scott Williams
 276 S Ghostway @Dave Greco
 277 S Murder @xx-Lethal-xx
-# 278 S Unassuming Swineherd @Daniel Eskridge
+278 S Unassuming Swineherd @Daniel Eskridge
 # 279 S Mistbreaker @Patrick Reilly
 
 [tokens]
