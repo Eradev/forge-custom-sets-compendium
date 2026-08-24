@@ -44,7 +44,7 @@ Type=Custom
 # 36 C Spirit Guidance @Muhammad Firdaus
 # 37 U Stand Your Ground @Merilliza Chan
 # 38 U Tailwind Griffin @Luphin
-# 39 U Tales of the Lingering @Justinas Vitkus
+39 U Tales of the Lingering @Justinas Vitkus
 # 40 U Uncommon Grit @Aaron Riley
 # 41 U Wardens of the Ulek @Mario Vazquez
 # 42 U Warning Shot @Anatol Arvrea
