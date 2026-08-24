@@ -94,7 +94,7 @@ Type=Custom
 # 86 M Axom, the Drifter @Daniel Kamarudin
 87 C Bloodleaf Butcher @Telmand
 88 C Bloodleaf Poisoner @Roiuky
-# 89 C Bloodthirsty Ambusher @Sal Vador
+89 C Bloodthirsty Ambusher @Sal Vador
 # 90 R Bounty Collector @Marcin Bystrzycki
 # 91 R Cardsharp @wacalac
 # 92 C Down Barrel @Vulpes Ibculta
