@@ -6,7 +6,7 @@ A:SP$ Charm | Choices$ DBSacrifice,DBDiscard,DBChange | CharmNum$ 3 | CanRepeatM
 
 SVar:DBSacrifice:DB$ Sacrifice | SacValid$ Creature | Defined$ Player | SpellDescription$ Each player sacrifices a creature.
 
-SVar:DBDiscard:DB$ Discard | Defined$ Player | NumCards$ 1 | Mode$ TgtChoose | SpellDescription$ Each player discards a card.
+SVar:DBDiscard:DB$ Discard | Defined$ Player | Mode$ TgtChoose | SpellDescription$ Each player discards a card.
 
 SVar:DBChange:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | SelectPrompt$ Choose a creature card with mana value 3 or less | ChangeType$ Creature.YouOwn+cmcLE3 | Hidden$ True | SpellDescription$ Return a creature card with mana value 3 or less from your graveyard to the battlefield.
 

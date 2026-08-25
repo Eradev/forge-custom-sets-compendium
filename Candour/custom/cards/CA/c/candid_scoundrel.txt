@@ -8,7 +8,7 @@ K:Menace
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCharm | TriggerDescription$ When this creature enters, ABILITY
 SVar:TrigCharm:DB$ Charm | Choices$ DBLoot,DBTreasure,DBCounter,DBDamage
 
-SVar:DBLoot:DB$ Discard | Mode$ TgtChoose | NumCards$ 1 | SubAbility$ DBDraw | SpellDescription$ Discard a card, then draw a card.
+SVar:DBLoot:DB$ Discard | Mode$ TgtChoose | SubAbility$ DBDraw | SpellDescription$ Discard a card, then draw a card.
 SVar:DBDraw:DB$ Draw
 
 SVar:DBTreasure:DB$ Token | TokenScript$ c_a_treasure_sac | SpellDescription$ Create a Treasure token.

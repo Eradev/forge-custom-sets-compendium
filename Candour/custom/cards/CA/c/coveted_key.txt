@@ -7,7 +7,7 @@ A:AB$ Untap | Cost$ 1 T | ValidTgts$ Permanent.nonLand | TgtPrompt$ Select targe
 A:AB$ GainLife | Cost$ 2 T | LifeAmount$ 2 | SpellDescription$ You gain 2 life.
 
 A:AB$ Draw | Cost$ 3 T | NumCards$ 1 | SpellDescription$ Draw a card, then discard a card. | SubAbility$ DBDiscard
-SVar:DBDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose
+SVar:DBDiscard:DB$ Discard | Mode$ TgtChoose
 
 A:AB$ Token | Cost$ 4 T | TokenScript$ c_a_treasure_sac | SpellDescription$ Create a Treasure token.
 

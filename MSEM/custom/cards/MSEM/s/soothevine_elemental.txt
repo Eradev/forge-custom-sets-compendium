@@ -7,7 +7,6 @@ K:Defender
 K:Reach
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this creature enters, draw a card.
-
-SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+SVar:TrigDraw:DB$ Draw
 
 Oracle:Defender, reach\nWhen this creature enters, draw a card.

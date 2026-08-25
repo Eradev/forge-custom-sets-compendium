@@ -6,8 +6,8 @@ PT:2/1
 K:Flying
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDiscard | TriggerDescription$ When this creature enters, discard your hand, then draw three cards.
-SVar:TrigDiscard:DB$ Discard | Mode$ Hand | Defined$ You | SubAbility$ DBDraw
-SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 3
+SVar:TrigDiscard:DB$ Discard | Mode$ Hand | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | NumCards$ 3
 
 K:Escape:2 R R ExileFromGrave<5/Card.Other/other>
 K:etbCounter:P1P1:2:ValidCard$ Card.Self+escaped:CARDNAME escapes with two +1/+1 counters on it.

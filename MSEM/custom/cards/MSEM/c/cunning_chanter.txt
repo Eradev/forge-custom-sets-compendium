@@ -6,6 +6,6 @@ PT:2/1
 A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
 
 T:Mode$ Taps | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ Whenever this creature becomes tapped, each opponent mills a card.
-SVar:TrigMill:DB$ Mill | Defined$ Opponent | NumCards$ 1
+SVar:TrigMill:DB$ Mill | Defined$ Opponent
 
 Oracle:{T}: Add {C}.\nWhenever this creature becomes tapped, each opponent mills a card.

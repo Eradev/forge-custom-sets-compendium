@@ -6,7 +6,7 @@ PT:8/8
 K:Menace
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ When CARDNAME enters, mill four cards.
-SVar:TrigMill:DB$ Mill | NumCards$ 4 | Defined$ You
+SVar:TrigMill:DB$ Mill | NumCards$ 4
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Graveyard | ValidCard$ Card.YouOwn | TriggerZones$ Battlefield | Execute$ TrigDrain | TriggerDescription$ Whenever a card is put into your graveyard from anywhere, each opponent loses 1 life and you gain 1 life.
 SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 1 | SubAbility$ DBGainLife

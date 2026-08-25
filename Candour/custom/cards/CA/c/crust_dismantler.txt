@@ -11,7 +11,7 @@ SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Permanent.nonCreature+nonLand | TgtPro
 
 T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigDraw | TriggerDescription$ Whenever this Vehicle deals combat damage to a player, draw two cards, then discard a card. Then, if each player descended this turn, destroy target noncreature, nonland permanent.
 SVar:TrigDraw:DB$ Draw | NumCards$ 2 | SubAbility$ DBDiscard
-SVar:DBDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 1 | SubAbility$ DBDestroy
+SVar:DBDiscard:DB$ Discard | Mode$ TgtChoose | SubAbility$ DBDestroy
 SVar:DBDestroy:DB$ Destroy | ValidTgts$ Permanent.nonCreature+nonLand | TgtPrompt$ Select target noncreature, nonland permanent | TargetMin$ 0 | TargetMax$ 1 | ConditionCheckSVar$ DescendedPlayers | ConditionSVarCompare$ EQTotalPlayers
 SVar:DescendedPlayers:PlayerCountPlayers$HasPropertydescended
 SVar:TotalPlayers:PlayerCountPlayers$Amount

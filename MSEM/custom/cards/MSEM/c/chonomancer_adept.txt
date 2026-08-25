@@ -7,7 +7,7 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.S
 SVar:TrigAddTime:DB$ PutCounter | Defined$ Valid Permanent.YouCtrl+counters_GE1_TIME | CounterType$ TIME | CounterNum$ 1
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Permanent.withVanishing+YouCtrl | Execute$ TrigDraw | OptionalDecider$ You | TriggerDescription$ Whenever a permanent with vanishing you control leaves the battlefield, you may draw a card.
-SVar:TrigDraw:DB$ Draw | NumCards$ 1
+SVar:TrigDraw:DB$ Draw
 
 Oracle:When this creature enters, put a time counter on each permanent you control with a time counter on it.\nWhenever a permanent with vanishing you control leaves the battlefield, you may draw a card.
 

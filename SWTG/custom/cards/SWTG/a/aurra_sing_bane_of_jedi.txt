@@ -10,7 +10,7 @@ SVar:DBDealSelf:DB$ DealDamage | NumDmg$ 1 | Defined$ You | SpellDescription$ De
 
 A:AB$ Effect | Cost$ SubCounter<4/LOYALTY> | Planeswalker$ True | ValidTgts$ Player | EffectOwner$ Targeted | Name$ Emblem — Aurra Sing | Image$ emblem_aurra_sing_bane_of_jedi | Triggers$ EffLeave | Duration$ Permanent | SpellDescription$ Target player gets an emblem with "Whenever a nontoken creature you control leaves the battlefield, discard a card." | TgtPrompt$ Select target player
 SVar:EffLeave:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Creature.nonToken+YouCtrl | Execute$ EmblemDiscard | TriggerDescription$ Whenever a nontoken creature you control leaves the battlefield, discard a card.
-SVar:EmblemDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 1
+SVar:EmblemDiscard:DB$ Discard | Mode$ TgtChoose
 
 A:AB$ Effect | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | SpellDescription$ Each player discards his or her hand and exiles all creatures he or she controls. Each player's life total becomes 1. | SubAbility$ DBExileAll
 SVar:DBExileAll:DB$ ChangeZoneAll | ChangeType$ Creature | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBDiscardAll

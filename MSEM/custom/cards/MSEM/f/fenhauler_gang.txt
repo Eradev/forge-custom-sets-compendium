@@ -5,14 +5,12 @@ PT:4/3
 
 K:Menace
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ When CARDNAME enters, each player mills three cards.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ When this creature enters, each player mills three cards.
+SVar:TrigMill:DB$ Mill | Defined$ Player | NumCards$ 3 
 
-SVar:TrigMill:DB$ Mill | NumCards$ 3 | Defined$ Player
-
-T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigReturn | TriggerDescription$ Whenever CARDNAME deals combat damage to a player, return up to one target creature or land card from your graveyard to your hand.
-
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigReturn | TriggerDescription$ Whenever this creature deals combat damage to a player, return up to one target creature or land card from your graveyard to your hand.
 SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Creature.YouOwn,Land.YouOwn | TgtPrompt$ Select up to one target creature or land card in your graveyard
 
-Oracle:Menace\nWhen Fenhauler Gang enters, each player mills three cards.\nWhenever Fenhauler Gang deals combat damage to a player, return up to one target creature or land card from your graveyard to your hand.
+Oracle:Menace\nWhen this creature enters, each player mills three cards.\nWhenever this creature deals combat damage to a player, return up to one target creature or land card from your graveyard to your hand.
 
 DeckHas:Ability$Graveyard

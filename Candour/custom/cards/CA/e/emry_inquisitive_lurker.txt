@@ -4,7 +4,7 @@ Types:Legendary Creature Merfolk Wizard
 PT:0/2
 
 A:AB$ Draw | Cost$ 1 T | SpellDescription$ Draw a card, then discard a card. | SubAbility$ DBDiscard
-SVar:DBDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose
+SVar:DBDiscard:DB$ Discard | Mode$ TgtChoose
 
 T:Mode$ DiscardedAll | ValidPlayer$ You | ValidCard$ Card.Artifact | TriggerZones$ Battlefield | Execute$ TrigCharm | TriggerDescription$ Whenever you discard one or more artifact cards, ABILITY
 SVar:TrigCharm:DB$ Charm | Choices$ DBClue,DBTreasure,DBSword
