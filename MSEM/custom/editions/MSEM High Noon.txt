@@ -110,7 +110,7 @@ Type=Custom
 102 R Graygulch Revenant @Malte J. Zirbel
 # 103 C Graygulch Turncoat @Aaron Riley
 # 104 U Hard Knocks @Julaxart
-# 105 U Haunting Horseman @nedesem
+105 U Haunting Horseman @nedesem
 106 C Haunting Stragglers @Mateusz Michalski
 # 107 U Howler Sellout @Tess Garman
 # 108 C Lonely Return @Daniel Eskridge
@@ -120,7 +120,7 @@ Type=Custom
 # 112 C Nightrail Forger @Marko Djurdjevic
 # 113 U Nightrail Kingpin @Randy Vargas
 # 114 C Pickpocket @Jordan Kerbow
-# 115 C Public Hanging @Elson Wong
+115 C Public Hanging @Elson Wong
 116 U Ravenous Chupacabra @Felipe Escobar
 117 C Roxite's Revenge @RGUS
 # 118 R Sareng, the Dealer @John Silva
