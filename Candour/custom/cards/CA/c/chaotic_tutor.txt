@@ -1,0 +1,12 @@
+Name:Chaotic Tutor
+ManaCost:R
+Types:Sorcery
+
+A:SP$ NameCard | Defined$ You | SubAbility$ DBSearch | SpellDescription$ Choose a card name. Search your library for a card with the chosen name, reveal it, put it into your hand, discard a card at random, then shuffle. If you discarded a card with the chosen name, draw a card.
+SVar:DBSearch:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Card.NamedCard | ChangeNum$ 1 | NoShuffle$ True | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Mode$ Random | NumCards$ 1 | RememberDiscarded$ True | SubAbility$ DBShuffle
+SVar:DBShuffle:DB$ Shuffle | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | ConditionDefined$ Remembered | ConditionPresent$ Card.NamedCard | ConditionCompare$ EQ1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearNamedCard$ True
+
+Oracle:Choose a card name. Search your library for a card with the chosen name, reveal it, put it into your hand, discard a card at random, then shuffle. If you discarded a card with the chosen name, draw a card.

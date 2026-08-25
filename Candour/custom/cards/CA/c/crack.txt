@@ -1,0 +1,8 @@
+Name:Crack
+ManaCost:B
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ 3 | SubAbility$ DBLoseLife | SpellDescription$ CARDNAME deals 3 damage to any target. You lose 3 life.
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 3
+
+Oracle:Crack deals 3 damage to any target.\nYou lose 3 life.

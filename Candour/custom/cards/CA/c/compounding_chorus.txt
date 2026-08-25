@@ -1,0 +1,9 @@
+Name:Compounding Chorus
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | ValidTgts$ Card | TgtPrompt$ Select target spell | UnlessCost$ 1 | SpellDescription$ Counter target spell unless its controller pays {1}.
+
+K:Storm
+
+Oracle:Counter target spell unless its controller pays {1}.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)

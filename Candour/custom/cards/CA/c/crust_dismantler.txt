@@ -1,0 +1,21 @@
+Name:Crust Dismantler
+ManaCost:3 R
+Types:Artifact Vehicle
+PT:4/4
+
+K:Trample
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | TriggerDescription$ When this Vehicle enters, destroy target noncreature, nonland permanent.
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Permanent.nonCreature+nonLand | TgtPrompt$ Select target noncreature, nonland permanent
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigDraw | TriggerDescription$ Whenever this Vehicle deals combat damage to a player, draw two cards, then discard a card. Then, if each player descended this turn, destroy target noncreature, nonland permanent.
+SVar:TrigDraw:DB$ Draw | NumCards$ 2 | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 1 | SubAbility$ DBDestroy
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Permanent.nonCreature+nonLand | TgtPrompt$ Select target noncreature, nonland permanent | TargetMin$ 0 | TargetMax$ 1 | ConditionCheckSVar$ DescendedPlayers | ConditionSVarCompare$ EQTotalPlayers
+SVar:DescendedPlayers:PlayerCountPlayers$HasPropertydescended
+SVar:TotalPlayers:PlayerCountPlayers$Amount
+
+K:Crew:2
+
+Oracle:Trample, haste\nWhen this Vehicle enters, destroy target noncreature, nonland permanent.\nWhenever this Vehicle deals combat damage to a player, draw two cards, then discard a card. Then, if each player descended this turn, destroy target noncreature, nonland permanent.\nCrew 2

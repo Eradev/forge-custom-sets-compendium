@@ -1,0 +1,14 @@
+Name:City of Opal
+ManaCost:no cost
+Types:Land
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDestroy | TriggerDescription$ At the beginning of your upkeep, destroy this land.
+SVar:TrigDestroy:DB$ Destroy | Defined$ Self
+
+A:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+A:AB$ PutCounter | Cost$ 2 | Defined$ Self | CounterType$ Indestructible | CounterNum$ 1 | SpellDescription$ Put an indestructible counter on this land.
+
+Oracle:At the beginning of your upkeep, destroy this land.\n{T}: Add one mana of any color.\n{2}: Put an indestructible counter on this land.
+
+AI:RemoveDeck:Random
