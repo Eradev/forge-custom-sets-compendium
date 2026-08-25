@@ -1,0 +1,9 @@
+Name:Woodland Ravager
+ManaCost:2 G
+Types:Creature Wurm
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | TriggerDescription$ When this creature enters, destroy target artifact, enchantment, or nonbasic land.
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Artifact,Enchantment,Land.nonBasic | TgtPrompt$ Select target artifact, enchantment, or nonbasic land
+
+Oracle:When this creature enters, destroy target artifact, enchantment, or nonbasic land.
