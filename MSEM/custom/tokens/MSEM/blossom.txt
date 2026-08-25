@@ -1,0 +1,13 @@
+Name:Blossom
+ManaCost:no cost
+Colors:green
+Types:Enchantment Aura
+
+K:Enchant:Land
+
+T:Mode$ TapsForMana | ValidCard$ Card.AttachedBy | Execute$ TrigMana | Static$ True | TriggerDescription$ Whenever enchanted land is tapped for mana, add {G}.
+SVar:TrigMana:DB$ Mana | Produced$ G | Amount$ 1 | Defined$ TriggeredCardController
+
+Oracle:Enchant land\nWhenever enchanted land is tapped for mana, add {G}.
+
+SVar:AttachAILogic:Pump
