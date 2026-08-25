@@ -9,7 +9,7 @@ SVar:DBFight:DB$ Fight | Defined$ ParentTarget | ValidTgts$ Creature.YouDontCtrl
 
 SVar:DBToken:DB$ Token | ValidTgts$ Player | TokenScript$ g_2_2_lizard | TokenOwner$ ThisTargetedPlayer | SpellDescription$ Target player creates a 2/2 green Lizard creature token.
 
-SVar:DBMillGain:DB$ Mill | NumCards$ 4 | Defined$ You | SubAbility$ DBGainLife | SpellDescription$ You mill four cards and gain 4 life.
+SVar:DBMillGain:DB$ Mill | NumCards$ 4 | SubAbility$ DBGainLife | SpellDescription$ You mill four cards and gain 4 life.
 SVar:DBGainLife:DB$ GainLife | LifeAmount$ 4
 
 Oracle:Choose three. You may choose the same mode more than once.\n• Put a +1/+1 counter on up to one target creature you control, then you may have it fight target creature you don't control.\n• Target player creates a 2/2 green Lizard creature token.\n• You mill four cards and gain 4 life.
