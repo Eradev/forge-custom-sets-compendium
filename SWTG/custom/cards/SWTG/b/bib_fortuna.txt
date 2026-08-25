@@ -5,9 +5,9 @@ PT:2/1
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigTutor | TriggerDescription$ When CARDNAME enters, search your library for a card, then shuffle and put that card on top. You lose 1 life.
 SVar:TrigTutor:DB$ ChangeZone | Origin$ Library | Destination$ Library | LibraryPosition$ 0 | ChangeType$ Card | SubAbility$ LoseLife | SpellDescription$
-SVar:LoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1
+SVar:LoseLife:DB$ LoseLife | LifeAmount$ 1
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigShuffle | TriggerDescription$ When CARDNAME dies, shuffle your library.
-SVar:TrigShuffle:DB$ Shuffle | Defined$ You
+SVar:TrigShuffle:DB$ Shuffle
 
 Oracle:When Bib Fortuna enters, search your library for a card, then shuffle your library and put that card on top of it. You lose 1 life.\nWhen Bib Fortuna dies, shuffle your library.
