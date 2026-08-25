@@ -181,7 +181,7 @@ Type=Custom
 # 173 R Bloodleaf Tracker @Malte J. Zirbel
 # 174 C Bloodleaf Warcry @Mehmet Ozon
 175 C Brush Sniper @Anna Lakisova
-# 176 C Canopy Ambush @Ashiria
+176 C Canopy Ambush @Ashiria
 # 177 U Creeping Hidebehind @Ryan Van Dongen
 178 C Eternal Scout @Odobenus
 # 179 U Expedition Leader @Randy Vargas
@@ -292,5 +292,5 @@ Type=Custom
 # 2 Arrest @Pinokko
 # 3 Bird @Alex Stone
 # 4 Beast @Jasper Sandner
-# 5 Elf Scout @Emmanuel Madail Monzon
+5 g_1_1_elf_scout @Emmanuel Madail Monzon
 6 c_a_gold_sac @BobShmob
