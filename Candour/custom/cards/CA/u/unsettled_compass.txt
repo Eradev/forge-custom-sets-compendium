@@ -1,0 +1,8 @@
+Name:Unsettled Compass
+ManaCost:1 U
+Types:Artifact
+
+T:Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Card.Self+wasCastByYou | Execute$ TrigDiscover | TriggerZones$ Battlefield | TriggerDescription$ When this artifact enters, if you cast it, discover 2. (Exile cards from the top of your library until you exile a nonland card with mana value 2 or less. Cast it without paying its mana cost or put it into your hand. Put the rest on the bottom in a random order.)
+SVar:TrigDiscover:DB$ Discover | Num$ 2
+
+Oracle:When this artifact enters, if you cast it, discover 2. (Exile cards from the top of your library until you exile a nonland card with mana value 2 or less. Cast it without paying its mana cost or put it into your hand. Put the rest on the bottom in a random order.)

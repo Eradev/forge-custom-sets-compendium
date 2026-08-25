@@ -1,0 +1,8 @@
+Name:Underground Volcano
+ManaCost:no cost
+Types:Land Cave
+
+A:AB$ Mana | Cost$ T Sac<1/CARDNAME/this land> | Produced$ R | Amount$ 3 | SubAbility$ DBPain | SpellDescription$ Add {R}{R}{R}. It deals 3 damage to you.
+SVar:DBPain:DB$ DealDamage | NumDmg$ 3 | Defined$ You
+
+Oracle:{T}, Sacrifice this land: Add {R}{R}{R}. It deals 3 damage to you.
