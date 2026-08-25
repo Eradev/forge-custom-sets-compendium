@@ -1,0 +1,15 @@
+Name:Deathrite Mystic
+ManaCost:1 B
+Types:Creature Elf Shaman
+PT:2/3
+
+A:AB$ ChangeZone | Cost$ 1 | Origin$ Graveyard | Destination$ Exile | TgtPrompt$ Choose target card in a graveyard | ValidTgts$ Card | SpellDescription$ Exile target card from a graveyard.
+
+A:AB$ ChangeZone | Cost$ T | Origin$ Exile | Destination$ Graveyard | ValidTgts$ Card.ExiledWithSource | TgtZone$ Exile | TgtPrompt$ Select target card exiled with this creature | SubAbility$ DBCharm | SpellDescription$ Put target card exiled with this creature into its owner's graveyard, choose one —
+SVar:DBCharm:DB$ Charm | Choices$ DBGainLife,DBLoseLife
+
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 2 | SpellDescription$ You gain 2 life.
+
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2 | ValidTgts$ Opponent | TgtPrompt$ Select target opponent | SpellDescription$ Target opponent loses 2 life.
+
+Oracle:{1}: Exile target card from a graveyard.\n{T}: Put target card exiled with this creature into its owner's graveyard, choose one —\n• You gain 2 life.\n• Target opponent loses 2 life.

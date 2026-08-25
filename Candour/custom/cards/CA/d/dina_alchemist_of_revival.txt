@@ -1,0 +1,13 @@
+Name:Dina, Alchemist of Revival
+ManaCost:1 G
+Types:Legendary Creature Dryad Druid
+PT:2/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigLearn | TriggerDescription$ When NICKNAME enters, learn. (You may reveal a Lesson card you own from outside the game and put it into your hand, or discard a card to draw a card.)
+SVar:TrigLearn:DB$ Learn
+
+A:AB$ ChangeZone | Cost$ 1 G Sac<1/CARDNAME/NICKNAME> | Origin$ Graveyard | Destination$ Hand | TgtPrompt$ Select target card in your graveyard | ValidTgts$ Card.YouCtrl | SpellDescription$ Return target card from your graveyard to your hand.
+
+Oracle:When Dina enters, learn. (You may reveal a Lesson card you own from outside the game and put it into your hand, or discard a card to draw a card.)\n{1}{G}, Sacrifice Dina: Return target card from your graveyard to your hand.
+
+DeckHas:Ability$Graveyard|Sacrifice|Discard
