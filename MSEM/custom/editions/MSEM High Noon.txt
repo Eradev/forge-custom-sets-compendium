@@ -270,7 +270,7 @@ Type=Custom
 # 261 M The Wicker Lord @m-hugo
 # 262 C Worn Saddle @Justin Oaksford
 263 M The Aetherite Saloon @Ji You Zhoung
-# 264 R Derelict Town @iidamrak
+264 R Derelict Town @iidamrak
 # 265 U Forgotten Haunt @Anthony Wolff
 # 266 R Sunrise Bluffs @Ajai Gautham
 # 267 R Sunrise Prairie @Jean Guillet
