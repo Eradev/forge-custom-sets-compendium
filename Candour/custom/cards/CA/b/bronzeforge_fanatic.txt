@@ -1,0 +1,16 @@
+Name:Bronzeforge Fanatic
+ManaCost:1 W
+Types:Creature Dwarf Warrior
+PT:3/1
+
+K:Vigilance
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigTutor | TriggerDescription$ When this creature enters, search your library for an Equipment card with mana value 2 or less, put it onto the battlefield, then shuffle.
+SVar:TrigTutor:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Equipment.cmcLE2 | ChangeNum$ 1 | Shuffle$ True
+
+A:AB$ Pump | Cost$ T | ValidTgts$ Equipment.YouCtrl | TgtPrompt$ Select target Equipment you control | SubAbility$ DBAttach | StackDescription$ None | SpellDescription$ Attach target Equipment you control to target creature you control.
+SVar:DBAttach:DB$ Attach | Object$ ParentTarget | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control
+
+Oracle:Vigilance\nWhen this creature enters, search your library for an Equipment card with mana value 2 or less, put it onto the battlefield, then shuffle.\n{T}: Attach target Equipment you control to target creature you control.
+
+DeckNeeds:Type$Equipment
