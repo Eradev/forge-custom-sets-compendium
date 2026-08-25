@@ -177,7 +177,7 @@ Type=Custom
 # 169 C Wave of Goblins @Andrew Hou
 # 170 U Wild Bounties @Haley Wakefield
 # 171 R Aether Recoverer @RJ Palmer
-# 172 U Bloodleaf Druid @David Lawrence Loebman
+172 U Bloodleaf Druid @David Lawrence Loebman
 # 173 R Bloodleaf Tracker @Malte J. Zirbel
 # 174 C Bloodleaf Warcry @Mehmet Ozon
 175 C Brush Sniper @Anna Lakisova
