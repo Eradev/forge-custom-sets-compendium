@@ -8,7 +8,7 @@ SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Li
 SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
 
 T:Mode$ Phase | Phase$ Upkeep | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ At the beginning of each upkeep, put a charge counter on up to one target permanent.
-SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Permanent | TgtPrompt$ Select up to one target permanent | TargetMin$ 0 | TargetMax$ 1 | CounterType$ CHARGE | CounterNum$ 1
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ CHARGE | ValidTgts$ Permanent | TgtPrompt$ Select up to one target permanent | TargetMin$ 0 | TargetMax$ 1
 
 T:Mode$ Taps | ValidCard$ Permanent.counters_GE1_CHARGE | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Bio-Electrokinesis — Whenever a permanent with a charge counter becomes tapped, NICKNAME deals 1 damage to that permanent's controller.
 SVar:TrigDamage:DB$ DealDamage | Defined$ TriggeredCardController | NumDmg$ 1

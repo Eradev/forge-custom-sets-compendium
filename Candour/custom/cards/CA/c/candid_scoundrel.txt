@@ -13,7 +13,7 @@ SVar:DBDraw:DB$ Draw
 
 SVar:DBTreasure:DB$ Token | TokenScript$ c_a_treasure_sac | SpellDescription$ Create a Treasure token.
 
-SVar:DBCounter:DB$ PutCounter | ValidTgts$ Creature.Other | TgtPrompt$ Select another target creature | CounterType$ P1P1 | SpellDescription$ Put a +1/+1 counter on another target creature.
+SVar:DBCounter:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature.Other | TgtPrompt$ Select another target creature | SpellDescription$ Put a +1/+1 counter on another target creature.
 
 SVar:DBDamage:DB$ DealDamage | Defined$ Player.Opponent | NumDmg$ 2 | SpellDescription$ This creature deals 2 damage to each opponent.
 

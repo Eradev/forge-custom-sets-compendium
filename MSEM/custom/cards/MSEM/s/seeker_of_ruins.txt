@@ -6,7 +6,7 @@ PT:2/1
 K:Mentor
 
 T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever this creature deals combat damage to a player, put a +1/+1 counter on it.
-SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1
 
 Oracle:Mentor (Whenever this creature attacks, put a +1/+1 counter on target attacking creature with lesser power.)\nWhenever this creature deals combat damage to a player, put a +1/+1 counter on it.
 

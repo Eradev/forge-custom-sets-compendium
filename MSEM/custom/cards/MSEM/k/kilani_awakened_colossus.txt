@@ -6,7 +6,7 @@ PT:1/5
 K:Trample
 
 A:AB$ Draw | Cost$ T | NumCards$ 1 | SubAbility$ DBPutCounter | SpellDescription$ Draw a card. Put a charge counter on NICKNAME.
-SVar:DBPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ CHARGE
+SVar:DBPutCounter:DB$ PutCounter | CounterType$ CHARGE
 
 A:AB$ Pump | Cost$ SubCounter<1/CHARGE> | Defined$ Self | NumAtt$ Double | SpellDescription$ Double his power until end of turn.
 

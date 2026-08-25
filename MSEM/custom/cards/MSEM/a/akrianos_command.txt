@@ -10,7 +10,7 @@ SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Creature.attacking | TgtPrompt$ Selec
 
 SVar:TrigPump:DB$ PumpAll | ValidTgts$ Player | TgtPrompt$ Select target player  | ValidCards$ Creature.TargetedPlayerCtrl | KW$ Indestructible | SpellDescription$ Creatures target player controls gain indestructible until end of turn.
 
-SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature | TgtPrompt$ Select target creature | CounterType$ P1P1 | SubAbility$ DBUntap | SpellDescription$ Put a +1/+1 counter on target creature and untap it.
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature | TgtPrompt$ Select target creature | SubAbility$ DBUntap | SpellDescription$ Put a +1/+1 counter on target creature and untap it.
 SVar:DBUntap:DB$ Untap | Defined$ Targeted
 
 Oracle:Choose two —\n• Target player creates two 1/1 white Soldier creature tokens.\n• Exile target attacking creature.\n• Creatures target player controls gain indestructible until end of turn.\n• Put a +1/+1 counter on target creature and untap it.

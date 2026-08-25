@@ -6,7 +6,7 @@ PT:3/3
 S:Mode$ CantGainLife | ValidPlayer$ Player | Description$ Players can't gain life.
 
 T:Mode$ Phase | Phase$ Upkeep | TriggerZones$ Battlefield | Execute$ TrigBlaze | TriggerDescription$ At the beginning of each upkeep, put a blaze counter on NICKNAME.
-SVar:TrigBlaze:DB$ PutCounter | Defined$ Self | CounterType$ BLAZE | CounterNum$ 1 | SubAbility$ BlazeDmg
+SVar:TrigBlaze:DB$ PutCounter | CounterType$ BLAZE | SubAbility$ BlazeDmg
 SVar:BlazeDmg:DB$ DealDamage | ValidTgts$ Any | NumDmg$ X | SpellDescription$ NICKNAME deals X damage to any target.
 SVar:X:Count$CardCounters.BLAZE
 

@@ -11,8 +11,8 @@ S:Mode$ CantBlock | ValidCard$ Card.Self | Description$ This creature can't bloc
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChoice | TriggerDescription$ When this creature enters, you may sacrifice a land or exile a land card from your graveyard. If you do, put a +1/+1 counter on it.
 SVar:TrigChoice:DB$ GenericChoice | Choices$ DBSacCounter,DBExileCounter
-SVar:DBSacCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | UnlessCost$ Sac<1/Land> | UnlessPayer$ You | UnlessSwitched$ True
-SVar:DBExileCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | UnlessCost$ ExileFromGrave<1/Land/land card> | UnlessPayer$ You | UnlessSwitched$ True
+SVar:DBSacCounter:DB$ PutCounter | CounterType$ P1P1 | UnlessCost$ Sac<1/Land> | UnlessPayer$ You | UnlessSwitched$ True
+SVar:DBExileCounter:DB$ PutCounter | CounterType$ P1P1 | UnlessCost$ ExileFromGrave<1/Land/land card> | UnlessPayer$ You | UnlessSwitched$ True
 
 Oracle:Flying, haste\nThis creature can't block.\nWhen this creature enters, you may sacrifice a land or exile a land card from your graveyard. If you do, put a +1/+1 counter on it.
 

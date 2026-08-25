@@ -8,7 +8,7 @@ SVar:ChangeZoneDB:DB$ ChangeZone | Origin$ Hand | Destination$ Library | ChangeN
 
 K:Class:2:3 U:AddTrigger$ TrigDrawn
 SVar:TrigDrawn:Mode$ Drawn | ValidCard$ Card.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever you draw a card, put a +1/+1 counter on target creature.
-SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature | CounterType$ P1P1
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature
 
 K:Class:3:5 U:AddTrigger$ TrigClassLevel
 SVar:TrigClassLevel:Mode$ ClassLevelGained | ClassLevel$ 3 | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ When this Class becomes level 3, create Tamiyo's Notebook, a legendary artifact token with "Spells you cast cost {2} less to cast" and "{T}: Draw a card."

@@ -4,7 +4,7 @@ Types:Creature Twi'lek Jedi
 PT:4/4
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigBuff | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may put a +1/+1 counter on another target creature.
-SVar:TrigBuff:DB$ PutCounter | ValidTgts$ Creature.Other | TgtPrompt$ Select another target creature | CounterType$ P1P1 | CounterNum$ 1
+SVar:TrigBuff:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature.Other | TgtPrompt$ Select another target creature
 
 A:AB$ ChangeZone | Named$ Meditate | Cost$ 1 W | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
 

@@ -6,7 +6,7 @@ PT:2/1
 K:Undying
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPutCounterAll | TriggerDescription$ When this creature enters, put a -1/-1 counter on each creature you don't control.
-SVar:TrigPutCounterAll:DB$ PutCounterAll | ValidCards$ Creature.YouDontCtrl | IsCurse$ True | CounterType$ M1M1 | CounterNum$ 1
+SVar:TrigPutCounterAll:DB$ PutCounterAll | ValidCards$ Creature.YouDontCtrl | IsCurse$ True | CounterType$ M1M1
 
 T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigProliferate | TriggerDescription$ At the beginning of your end step, proliferate.
 SVar:TrigProliferate:DB$ Proliferate

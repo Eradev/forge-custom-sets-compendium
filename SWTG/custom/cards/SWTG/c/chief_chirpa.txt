@@ -6,7 +6,7 @@ PT:2/2
 A:AB$ PutCounter | Cost$ 2 R G W | Monstrosity$ 2
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.Green+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigCounter | OptionalDecider$ You | TriggerDescription$ Whenever a green creature you control dies, you may put a +1/+1 counter on another target Ewok creature you control.
-SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 1 | ValidTgts$ Ewok.YouCtrl+Other | TgtPrompt$ Select another target Ewok you control
+SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Ewok.YouCtrl+Other | TgtPrompt$ Select another target Ewok you control
 
 T:Mode$ BecomeMonstrous | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigTokens | TriggerDescription$ When CARDNAME becomes monstrous, create three 1/1 green Ewok creature tokens.
 SVar:TrigTokens:DB$ Token | TokenAmount$ 3 | TokenScript$ g_1_1_ewok

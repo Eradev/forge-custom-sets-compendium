@@ -4,7 +4,7 @@ Types:Legendary Creature Cerean Jedi
 PT:4/4
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ When CARDNAME enters, put a +1/+1 counter on each other creature you control.
-SVar:TrigPutCounter:DB$ PutCounterAll | CounterType$ P1P1 | CounterNum$ 1 | ValidCards$ Creature.YouCtrl+Other
+SVar:TrigPutCounter:DB$ PutCounterAll | CounterType$ P1P1 | ValidCards$ Creature.YouCtrl+Other
 
 A:AB$ ChangeZone | Named$ Meditate | Cost$ 1 G | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
 

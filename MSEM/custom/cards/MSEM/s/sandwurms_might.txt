@@ -7,7 +7,7 @@ SVar:TrigFight:DB$ Pump | ValidTgts$ Creature.YouCtrl | AILogic$ Fight | TgtProm
 SVar:DBFight:DB$ Fight | Defined$ ParentTarget | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you don't control
 
 K:ETBReplacement:Other:AddExtraCounter:Mandatory:Battlefield:Creature.YouCtrl
-SVar:AddExtraCounter:DB$ PutCounter | ETB$ True | Defined$ ReplacedCard | CounterType$ P1P1 | SpellDescription$ Each creature you control enters with an additional +1/+1 counter on it.
+SVar:AddExtraCounter:DB$ PutCounter | Defined$ ReplacedCard | CounterType$ P1P1 | ETB$ True | SpellDescription$ Each creature you control enters with an additional +1/+1 counter on it.
 
 Oracle:When this enchantment enters, you may have target creature you control fight target creature you don't control.\nEach creature you control enters with an additional +1/+1 counter on it.
 

@@ -7,7 +7,7 @@ SVar:TrigETB:DB$ Draw | SubAbility$ DBNameCard
 SVar:DBNameCard:DB$ NameCard | Defined$ You | ValidCards$ Card.Creature | ValidDescription$ creature card
 
 T:Mode$ DamageDone | ValidSource$ Creature.YouCtrl+sharesNameWith ChosenCard | ValidTarget$ Player | Execute$ TrigCounter | TriggerDescription$ Whenever a creature with the chosen name you control deals damage to a player, put a +1/+1 counter on it.
-SVar:TrigCounter:DB$ PutCounter | Defined$ TriggeredSource | CounterType$ P1P1 | CounterNum$ 1
+SVar:TrigCounter:DB$ PutCounter | Defined$ TriggeredSource | CounterType$ P1P1
 
 Oracle:When this enchantment enters, draw a card, then choose a creature card name.\nWhenever a creature with the chosen name you control deals damage to a player, put a +1/+1 counter on it.
 

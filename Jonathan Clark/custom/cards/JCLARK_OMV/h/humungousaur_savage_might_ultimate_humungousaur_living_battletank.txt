@@ -9,10 +9,10 @@ R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DB
 SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
 SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
 
-A:AB$ PutCounter | Cost$ X R G W | Defined$ Self | CounterType$ P1P1 | CounterNum$ X | SubAbility$ DBCounters | SpellDescription$ Put X +1/+1 counters on NICKNAME, then if its power is 10 or greater, put a vigilance and menace counter on it.
+A:AB$ PutCounter | Cost$ X R G W | CounterType$ P1P1 | CounterNum$ X | SubAbility$ DBCounters | SpellDescription$ Put X +1/+1 counters on NICKNAME, then if its power is 10 or greater, put a vigilance and menace counter on it.
 SVar:X:Count$xPaid
-SVar:DBCounters:DB$ PutCounter | Defined$ Self | ConditionCheckSVar$ Pow | ConditionSVarCompare$ GE10 | CounterType$ Vigilance | CounterNum$ 1 | SubAbility$ DBMenace
-SVar:DBMenace:DB$ PutCounter | Defined$ Self | ConditionCheckSVar$ Pow | ConditionSVarCompare$ GE10 | CounterType$ Menace | CounterNum$ 1
+SVar:DBCounters:DB$ PutCounter | CounterType$ Vigilance | ConditionCheckSVar$ Pow | ConditionSVarCompare$ GE10 | SubAbility$ DBMenace
+SVar:DBMenace:DB$ PutCounter | CounterType$ Menace | ConditionCheckSVar$ Pow | ConditionSVarCompare$ GE10
 SVar:Pow:Count$CardPower
 
 A:AB$ SetState | Cost$ 3 U B | Defined$ Self | Mode$ Transform | SorcerySpeed$ True | PrecostDesc$ Goin' Ultimate! — | SpellDescription$ Transform NICKNAME, activate only as a sorcery.

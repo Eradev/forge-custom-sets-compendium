@@ -5,7 +5,7 @@ Types:Enchantment Aura
 K:Enchant:Creature
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounter | TriggerDescription$ When this Aura enters, put a +1/+1 counter on enchanted creature.
-SVar:TrigCounter:DB$ PutCounter | ValidTgts$ Creature.EnchantedBy | CounterType$ P1P1
+SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature.EnchantedBy
 
 A:AB$ ChangeZone | Cost$ SubCounter<1/P1P1/Creature.EnchantedBy/enchanted creature> | SorcerySpeed$ True | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | Origin$ Battlefield | Destination$ Exile | Duration$ UntilHostLeavesPlay | SpellDescription$ Exile target creature an opponent controls until this Aura leaves the battlefield. Activate only as a sorcery.
 
