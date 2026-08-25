@@ -1,0 +1,15 @@
+Name:Embalmed Gargoyle
+ManaCost:2 B
+Types:Artifact Creature Gargoyle
+PT:1/1
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create two 1/1 white Spirit creature tokens with flying.
+SVar:TrigToken:DB$ Token | TokenAmount$ 2 | TokenScript$ w_1_1_spirit_flying
+
+K:Embalm:1 W
+
+Oracle:Flying\nWhen this creature enters, create two 1/1 white Spirit creature tokens with flying.\nEmbalm {1}{W} ({1}{W}, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Gargoyle with no mana cost. Embalm only as a sorcery.)
+
+DeckHas:Ability$Token|Graveyard & Type$Spirit

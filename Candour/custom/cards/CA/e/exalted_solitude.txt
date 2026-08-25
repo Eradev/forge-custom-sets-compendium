@@ -1,0 +1,18 @@
+Name:Exalted Solitude
+ManaCost:1 W
+Types:Enchantment
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this enchantment enters, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+S:Mode$ Continuous | Affected$ Permanent.nonBasic | AddType$ Legendary | Description$ All nonbasic permanents are legendary.
+
+T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | Execute$ TrigSac | TriggerDescription$ At the beginning of the end step, sacrifice this enchantment.
+SVar:TrigSac:DB$ Sacrifice | SacValid$ Self
+
+Oracle:Flash\nWhen this enchantment enters, draw a card.\nAll nonbasic permanents are legendary.\nAt the beginning of the end step, sacrifice this enchantment.
+
+SVar:EndOfTurnLeavePlay:True
+AI:RemoveDeck:Random

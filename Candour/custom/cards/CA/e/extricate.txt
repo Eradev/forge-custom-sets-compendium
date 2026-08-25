@@ -1,0 +1,8 @@
+Name:Extricate
+ManaCost:B
+Types:Sorcery
+
+A:SP$ Discard | ValidTgts$ Player | NumCards$ 1 | DiscardValid$ Card.nonLand | Mode$ RevealYouChoose | SubAbility$ DBLoseLife | SpellDescription$ Target player reveals their hand. You choose a nonland card from it. That player discards that card. You lose 3 life unless you exile a card from your graveyard.
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 3 | UnlessCost$ ExileFromGrave<1/Card> | UnlessPayer$ You
+
+Oracle:Target player reveals their hand. You choose a nonland card from it. That player discards that card.\nYou lose 3 life unless you exile a card from your graveyard.
