@@ -70,7 +70,7 @@ Type=Custom
 62 U Invisible Stalker @JakeWBullock
 # 63 C Ironeyes Scoundrel @Roiuky
 # 64 U Luck of the Draw @justduet
-# 65 C Merchant's Guile @Alex Allen
+65 C Merchant's Guile @Alex Allen
 # 66 R Nameless Drifter @Brandon Liao
 67 C Nightrail Printer @Jana Schirmer
 # 68 R Pocket Aces @RUshN
