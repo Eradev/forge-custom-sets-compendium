@@ -3,9 +3,12 @@ ManaCost:W
 Types:Creature Human Wizard
 PT:2/1
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may exile target artifact or enchantment until it leaves the battlefield.
-SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment | Duration$ UntilHostLeavesPlay
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may exile target artifact or enchantment.
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment | Origin$ Battlefield | Destination$ Exile
 
-Oracle:When this creature enters, you may exile target artifact or enchantment until it leaves the battlefield.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigReturn | TriggerDescription$ When this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.
+SVar:TrigReturn:DB$ ChangeZone | Defined$ ExiledWith | Origin$ Exile | Destination$ Battlefield
+
+Oracle:When this creature enters, you may exile target artifact or enchantment.\nWhen this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.
 
 SVar:PlayMain1:TRUE
