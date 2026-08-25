@@ -1,0 +1,11 @@
+Name:Mizzium Micromancer
+ManaCost:1 U
+Types:Creature Human Wizard
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this creature enters, exile target instant or sorcery card with mana value 1 from your graveyard. Copy that card. You may cast the copy without paying its mana cost.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | TgtPrompt$ Choose target instant or sorcery card with mana value 1 in your graveyard | ValidTgts$ Instant.YouOwn+cmcEQ1,Sorcery.YouOwn+cmcEQ1 | RememberChanged$ True | SubAbility$ DBPlay
+SVar:DBPlay:DB$ Play | Defined$ Remembered | ValidZone$ Exile | Controller$ You | CopyCard$ True | WithoutManaCost$ True | ValidSA$ Spell | Optional$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When this creature enters, exile target instant or sorcery card with mana value 1 from your graveyard. Copy that card. You may cast the copy without paying its mana cost.

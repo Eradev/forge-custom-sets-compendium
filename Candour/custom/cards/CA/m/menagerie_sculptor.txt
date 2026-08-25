@@ -1,0 +1,12 @@
+Name:Menagerie Sculptor
+ManaCost:1 G
+Types:Creature Elf Artificer
+PT:0/1
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCounters | TriggerDescription$ At the beginning of your end step, put a +1/+1 counter on any number of target creatures that don't share a creature type with each other.
+SVar:TrigCounters:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature | TargetsWithoutSameCreatureType$ True | TargetMin$ 0 | TargetMax$ MaxTgts | TgtPrompt$ Select any number of target creatures that don't share a creature type with each other
+SVar:MaxTgts:Count$Valid Creature
+
+Oracle:At the beginning of your end step, put a +1/+1 counter on any number of target creatures that don't share a creature type with each other.
+
+DeckHas:Ability$Counters
