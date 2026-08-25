@@ -1,7 +1,7 @@
 Name:Thriving Viper
 ManaCost:1 G
 Types:Creature Snake
-PT:1/1
+PT:2/2
 
 K:Trample
 
