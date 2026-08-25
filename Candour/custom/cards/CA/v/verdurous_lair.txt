@@ -1,0 +1,15 @@
+Name:Verdurous Lair
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you control a Mountain or a Plains.
+SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Mountain.YouCtrl,Plains.YouCtrl | ConditionCompare$ EQ0
+
+A:AB$ Mana | Cost$ T | Produced$ G | SpellDescription$ Add {G}.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this land leaves the battlefield, create a 2/2 red, green, and white Plant Dragon creature token with flying and lifelink.
+SVar:TrigToken:DB$ Token | TokenScript$ rgw_2_2_plant_dragon_flying_lifelink
+
+Oracle:This land enters tapped unless you control a Mountain or a Plains.\n{T}: Add {G}.\nWhen this land leaves the battlefield, create a 2/2 red, green, and white Plant Dragon creature token with flying and lifelink.
+
+DeckHas:Ability$Token
