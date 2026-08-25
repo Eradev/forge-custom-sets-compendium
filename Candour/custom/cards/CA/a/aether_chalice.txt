@@ -1,0 +1,18 @@
+Name:Aether Chalice
+ManaCost:X X
+Types:Artifact
+
+K:etbCounter:CHARGE:X
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPay | TriggerDescription$ At the beginning of your upkeep, you may pay {X}{X}. If you do, put X charge counters on this artifact.
+SVar:TrigPay:AB$ PutCounter | Cost$ X X | CounterType$ CHARGE | CounterNum$ X | SpellDescription$ Put X charge counters on CARDNAME.
+
+T:Mode$ SpellCast | ValidCard$ Card.cmcEQY | ValidActivatingPlayer$ Player | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ Whenever a player casts a spell with mana value equal to the number of charge counters on this artifact, counter that spell.
+SVar:TrigCounter:DB$ Counter | Defined$ TriggeredSpellAbility
+
+SVar:X:Count$xPaid
+SVar:Y:Count$CardCounters.CHARGE
+
+Oracle:This artifact enters with X charge counters on it.\nAt the beginning of your upkeep, you may pay {X}{X}. If you do, put X charge counters on this artifact.\nWhenever a player casts a spell with mana value equal to the number of charge counters on this artifact, counter that spell.
+
+DeckHas:Ability$Counters

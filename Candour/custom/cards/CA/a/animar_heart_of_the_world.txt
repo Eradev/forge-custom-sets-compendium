@@ -1,0 +1,16 @@
+Name:Animar, Heart of the World
+ManaCost:G
+Types:Legendary Creature Elemental
+PT:0/0
+
+K:etbCounter:P1P1:1:no Condition:NICKNAME enters with a +1/+1 counter on it.
+
+T:Mode$ SpellCast | ValidCard$ Card.cmcGTX | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever you cast a spell with mana value greater than the number of +1/+1 counters on NICKNAME, put a +1/+1 counter on it.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
+SVar:X:Count$CardCounters.P1P1
+
+A:AB$ ChangeZone | Cost$ SubCounter<3/P1P1> | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Card.YouOwn | TgtPrompt$ Select target card in your graveyard | SpellDescription$ Return target card from your graveyard to your hand.
+
+Oracle:Animar enters with a +1/+1 counter on it.\nWhenever you cast a spell with mana value greater than the number of +1/+1 counters on Animar, put a +1/+1 counter on it.\nRemove three +1/+1 counters: Return target card from your graveyard to your hand.
+
+DeckHas:Ability$Counters|Graveyard

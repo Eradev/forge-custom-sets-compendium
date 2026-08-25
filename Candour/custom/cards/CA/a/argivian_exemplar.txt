@@ -1,0 +1,16 @@
+Name:Argivian Exemplar
+ManaCost:8 W
+Types:Creature Human Soldier
+PT:4/4
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ X | EffectZone$ All | Description$ This spell costs {2} less to cast for each creature you control.
+SVar:X:Count$Valid Creature.YouCtrl/Times.2
+
+K:Vigilance
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When this creature enters, creatures you control get +2/+2 and gain vigilance until end of turn.
+SVar:TrigPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +2 | NumDef$ +2 | KW$ Vigilance
+
+Oracle:This spell costs {2} less to cast for each creature you control.\nVigilance\nWhen this creature enters, creatures you control get +2/+2 and gain vigilance until end of turn.
+
+SVar:PlayMain1:TRUE

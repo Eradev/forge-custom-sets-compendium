@@ -1,0 +1,14 @@
+Name:Apocalypse Obliterator
+ManaCost:1 B
+Types:Creature Phyrexian Horror
+PT:3/1
+
+K:Menace
+
+T:Mode$ DamageDoneOnce | Execute$ TrigIncubate | ValidTarget$ Card.Self | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature is dealt damage, incubate X, where X is the damage dealt this way.
+SVar:TrigIncubate:DB$ Incubate | Amount$ X
+SVar:X:TriggerCount$DamageAmount
+
+Oracle:Menace\nWhenever this creature is dealt damage, incubate X, where X is the damage dealt this way. (Create an Incubator token with X +1/+1 counters on it and "{2}: Transform this token." It transforms into a 0/0 Phyrexian artifact creature.)
+
+DeckHas:Ability$Counters|Token & Type$Incubator|Artifact
