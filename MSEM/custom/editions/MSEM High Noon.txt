@@ -23,7 +23,7 @@ Type=Custom
 15 R Ghostway @Denis Kornev
 # 16 C Graygulch Howler @Mehrdad Isvandi
 # 17 U Hardened Soul @Justin Wong
-# 18 C Harsh Wastes @ehecod
+18 C Harsh Wastes @ehecod
 # 19 C Haunting Bard @ghostbow
 # 20 C Judges' Shield @Brolken
 21 C Kill Shot @Markus Vesper
