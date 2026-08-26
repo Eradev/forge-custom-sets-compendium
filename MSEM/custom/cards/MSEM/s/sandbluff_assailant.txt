@@ -1,0 +1,7 @@
+Name:Sandbluff Assailant
+ManaCost:1 R
+Types:Creature Spirit Soldier
+PT:2/1
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDamage | TriggerDescription$ When CARDNAME enters, it deals 1 damage to target player or planeswalker.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Player,Planeswalker | TgtPrompt$ Select target player or planeswalker  | NumDmg$ 1
+Oracle:When Sandbluff Assailant enters, it deals 1 damage to target player or planeswalker.
