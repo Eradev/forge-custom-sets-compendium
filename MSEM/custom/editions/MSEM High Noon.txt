@@ -13,7 +13,7 @@ Type=Custom
 # 5 R Bearidge Marshall @John Silva
 6 C Bearidge Preacher @Steve Gibson
 7 C Bold Griffin @Akeiron
-# 8 M Calamity Rose @andava
+8 M Calamity Rose @andava
 9 U Collapsed Mine @Filip Dudek
 10 U Diligent Deputy @Sebastien Ecosse
 # 11 R Drifting Warden @donmalo
