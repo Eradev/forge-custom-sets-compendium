@@ -188,7 +188,7 @@ Type=Custom
 # 180 U Fireheart Centaur @Orchetto
 181 C Fog @Daniel Eskridge
 # 182 U Frontier Hoof @Josh Cotton
-# 183 R Frontier Meditation @Leonid Kozienko
+183 R Frontier Meditation @Leonid Kozienko
 184 C Frontier Outrider @fishcapades
 # 185 C Frontier Scouts @Bob Kehl
 # 186 U Gifts of Ancient Ulek @Rick Troula
