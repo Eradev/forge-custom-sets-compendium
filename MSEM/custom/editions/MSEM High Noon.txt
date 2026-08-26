@@ -169,7 +169,7 @@ Type=Custom
 # 161 U Spectral Slinger @Riccardo Rullo
 # 162 U Stolen Cache @Riccardo Rullo
 # 163 C Sunset Cliffs Hunter @Carlos Fabián Villa
-# 164 C Sunset Cliffs Lawman @David Su
+164 C Sunset Cliffs Lawman @David Su
 # 165 R Tavern Brawl @Sebastien Ecosse
 # 166 M Terror of Sunset Cliffs @kikicianjur
 167 C Threaten @Alexander Nanitchkov
