@@ -16,7 +16,7 @@ Type=Custom
 8 M Calamity Rose @andava
 9 U Collapsed Mine @Filip Dudek
 10 U Diligent Deputy @Sebastien Ecosse
-# 11 R Drifting Warden @donmalo
+11 R Drifting Warden @donmalo
 12 U Eversoar @0oki
 13 C Forlorn Farmhand @Daniel Eskridge
 14 C Frontier Paragon @dleoblack
