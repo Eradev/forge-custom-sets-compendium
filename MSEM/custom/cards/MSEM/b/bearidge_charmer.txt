@@ -1,0 +1,7 @@
+Name:Bearidge Charmer
+ManaCost:2 W
+Types:Creature Human Cleric
+PT:2/2
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | ValidCard$ Artifact.YouCtrl,Enchantment+YouCtrl | Optional$ True | Execute$ TrigDetain | TriggerDescription$ Whenever an artifact or enchantment you control enters, you may detain target nonland permanent.
+SVar:TrigDetain:DB$ Detain | ValidTgts$ Permanent.nonLand | ValidTgtsDesc$ nonland permanents
+Oracle:Whenever an artifact or enchantment you control enters, you may detain target nonland permanent.

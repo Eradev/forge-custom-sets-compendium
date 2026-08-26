@@ -8,7 +8,7 @@ Type=Custom
 [cards]
 1 C Arrest @Suzanne Helmigh
 # 2 U Atop Their High Horses @Jon Hodgson
-# 3 R Bearidge Charmer @Andrew Ryan
+3 R Bearidge Charmer @Andrew Ryan
 # 4 R Bearidge Jailer @Felipe Gaona
 # 5 R Bearidge Marshall @John Silva
 6 C Bearidge Preacher @Steve Gibson
