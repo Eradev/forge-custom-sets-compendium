@@ -211,7 +211,7 @@ Type=Custom
 # 203 U Spectral Hunter @Eren Arik
 204 C Take Aim @icarus-falls
 # 205 C Tracker of Wild Places @Steve Gibson
-# 206 U Trailbloomer @Deer-in-Headlights
+206 U Trailbloomer @Deer-in-Headlights
 # 207 C Ulek Crusher @Kerem Beyit
 # 208 C Ulek Elder @Merilliza Chan
 # 209 U Ulek Wayfinder @Tansie Stephens
