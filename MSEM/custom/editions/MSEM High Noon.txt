@@ -43,7 +43,7 @@ Type=Custom
 # 35 C Songs of the Howlers @Jerome Jacinto
 # 36 C Spirit Guidance @Muhammad Firdaus
 # 37 U Stand Your Ground @Merilliza Chan
-# 38 U Tailwind Griffin @Luphin
+38 U Tailwind Griffin @Luphin
 39 U Tales of the Lingering @Justinas Vitkus
 # 40 U Uncommon Grit @Aaron Riley
 # 41 U Wardens of the Ulek @Mario Vazquez
