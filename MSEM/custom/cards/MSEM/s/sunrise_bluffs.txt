@@ -1,0 +1,9 @@
+Name:Sunrise Bluffs
+ManaCost:no cost
+Types:Land
+A:AB$ Mana | Cost$ T | Produced$ R | SpellDescription$ Add {R}.
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+T:Mode$ Phase | Phase$ UntapOtherPlayer | ValidPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigUntap | TriggerDescription$ At the beginning of each other player's untap step, you may untap CARDNAME. Whenever you do, you pay 1 life.
+SVar:TrigUntap:AB$ Untap | Cost$ PayLife<1>
+Oracle:Sunrise Bluffs enters tapped.\n{T}: Add {R}.\nAt the beginning of each other player's untap step, you may untap Sunrise Bluffs. Whenever you do, you pay 1 life.

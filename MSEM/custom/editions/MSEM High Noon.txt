@@ -272,11 +272,11 @@ Type=Custom
 263 M The Aetherite Saloon @Ji You Zhoung
 264 R Derelict Town @iidamrak
 # 265 U Forgotten Haunt @Anthony Wolff
-# 266 R Sunrise Bluffs @Ajai Gautham
-# 267 R Sunrise Prairie @Jean Guillet
-# 268 R Sunrise River @Jean Guillet
-# 269 R Sunrise Ruins @Ihor Reshetnikov
-# 270 R Sunrise Woods @illustrum
+266 R Sunrise Bluffs @Ajai Gautham
+267 R Sunrise Prairie @Jean Guillet
+268 R Sunrise River @Jean Guillet
+269 R Sunrise Ruins @Ihor Reshetnikov
+270 R Sunrise Woods @illustrum
 271 L Plains @Madspeitersen
 272 L Island @Adam Varga
 273 L Swamp @Nick Grey

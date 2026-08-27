@@ -1,0 +1,9 @@
+Name:Sunrise Prarie
+ManaCost:no cost
+Types:Land
+A:AB$ Mana | Cost$ T | Produced$ W | SpellDescription$ Add {W}.
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+T:Mode$ Phase | Phase$ UntapOtherPlayer | ValidPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigUntap | TriggerDescription$ At the beginning of each other player's untap step, you may untap CARDNAME. Whenever you do, you pay 1 life.
+SVar:TrigUntap:AB$ Untap | Cost$ PayLife<1>
+Oracle:Sunrise Prarie enters tapped.\n{T}: Add {W}.\nAt the beginning of each other player's untap step, you may untap Sunrise Prarie. Whenever you do, you pay 1 life.
