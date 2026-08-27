@@ -247,7 +247,7 @@ Type=Custom
 # 238 U Aetherite Dagger @Bernard Ben
 # 239 R Aetherite Shackles @Aranthulas
 # 240 C Aetherite Vein @Larry Wilson
-# 241 U Aetherlock Effigy @Sebastian Caiveau
+241 U Aetherlock Effigy @Sebastian Caiveau
 # 242 C Aetherlock Pistol @Riccardo Rullo
 # 243 C Binding Lasso @Enmanuel Martinez
 244 C Cruel Effigy @LozanoX
@@ -290,7 +290,7 @@ Type=Custom
 [tokens]
 1 c_1_1_spirit @Elizabeth Sherry
 2 arrest @Pinokko
-# 3 Bird @Alex Stone
+3 b_1_1_bird_flying @Alex Stone
 # 4 Beast @Jasper Sandner
 5 g_1_1_elf_scout @Emmanuel Madail Monzon
 6 c_a_gold_sac @BobShmob
