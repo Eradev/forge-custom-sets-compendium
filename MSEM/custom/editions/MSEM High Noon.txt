@@ -83,7 +83,7 @@ Type=Custom
 # 75 M Spirit of the Falls @Sebastien Ecosse
 76 C Stealer of Secrets @Alex Allen
 77 C Straw Soldiers @Rhineville
-# 78 C Street Urchin @Roiuky
+78 C Street Smarts @Roiuky
 79 C Thunder Crow @Simon Seene
 # 80 C Ulek Windrider @Stephen Garrett Rusk
 81 U Vivid Hallucination @Alex Stone
