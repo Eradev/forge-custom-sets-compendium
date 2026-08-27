@@ -250,7 +250,7 @@ Type=Custom
 # 241 U Aetherlock Effigy @Sebastian Caiveau
 # 242 C Aetherlock Pistol @Riccardo Rullo
 # 243 C Binding Lasso @Enmanuel Martinez
-# 244 C Cruel Effigy @LozanoX
+244 C Cruel Effigy @LozanoX
 # 245 M Dead Man's Hand @Andrew Dobell and Andirilien
 # 246 U Derelict Watcher @donmalo
 # 247 U Dreamkeeper @highdarktemplar
