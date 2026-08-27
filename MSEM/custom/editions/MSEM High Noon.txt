@@ -225,7 +225,7 @@ Type=Custom
 217 R Burning-Tree Shaman @Andreia Ugrai
 # 218 R Chief Striking Dawn @Katelyn Malmsten
 # 219 U Dusk Occultist @DigitalSashimi
-# 220 U Dusk Rider @Aaron Riley
+220 U Dusk Rider @Aaron Riley
 # 221 R Imposing Griffin @Anna Podedworna
 # 222 M Judges of Bearidge @Marko Djurdjevic
 # 223 M Koshui, the Trader @SaneKyle

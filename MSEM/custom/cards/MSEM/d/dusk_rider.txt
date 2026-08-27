@@ -1,0 +1,8 @@
+Name:Dusk Rider
+ManaCost:1 W B
+Types:Creature Spirit Mercenary
+PT:2/3
+K:Lifelink
+A:AB$ DealDamage | Cost$ W B T | ValidTgts$ Creature.attacking | TgtPrompt$ Select target attacking creature | NumDmg$ X | SpellDescription$ CARDNAME deals X damage to target attacking creature, where X is the number of Spirits you control.
+SVar:X:Count$Valid Spirit.YouCtrl
+Oracle:Lifelink\n{W}, {B}, {T}: Dusk Rider deals X damage to target attacking creature, where X is the number of Spirits you control.
