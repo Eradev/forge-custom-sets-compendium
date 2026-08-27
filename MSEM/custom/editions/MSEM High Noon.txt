@@ -233,7 +233,7 @@ Type=Custom
 # 225 U Maligned Scavenger @ApeironDiesirae
 # 226 U Miner's Barracks @Jerome Jacinto
 # 227 U Nightrail Fence @Jackson Tjota
-# 228 U Quelling Tavern @Rafael Michael Hayduk
+228 U Quelling Tavern @Rafael Michael Hayduk
 229 U Recoil @13tangerines
 # 230 R Roxite of Nightrail @Pyeongjun Park
 # artist typo on Lackeybot?

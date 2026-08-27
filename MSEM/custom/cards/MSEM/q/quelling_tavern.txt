@@ -1,0 +1,7 @@
+Name:Quelling Tavern
+ManaCost:2 W B
+Types:Enchantment
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDetain | TriggerDescription$ Whenever you cast an instant or sorcery spell, CARDNAME deals 2 damage to each opponent.
+SVar:TrigDetain:DB$ Detain | ValidTgts$ Creature.OppCtrl | ValidTgtsDesc$ creature an opponent controls
+DeckHints:Type$Instant|Sorcery
+Oracle:Whenever you cast an instant or sorcery spell, detain target creature an opponent controls.
