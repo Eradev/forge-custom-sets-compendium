@@ -128,7 +128,7 @@ Type=Custom
 # 120 U Staking Hand @Biwer Vincent
 121 C Sunset Cliffs Patron @Nacho Molina
 122 R Unassuming Swineherd @Daniel Eskridge
-# 123 U Uncovered Mine @Ralph Horsley
+123 U Uncovered Mine @Ralph Horsley
 # 124 R Vengeful Agent @ErothBlackDragon
 # 125 C Victims of Graygulch @Ghion Quentin
 # 126 C Wanted @JabyReArt
