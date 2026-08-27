@@ -1,0 +1,10 @@
+Name:Bearidge Marshall
+ManaCost:4 W W
+Types:Creature Human Soldier
+PT:3/6
+S:Mode$ Continuous | Affected$ Aura.YouCtrl,Equipment.YouCtrl | AddKeyword$ Indestructible | Description$ Auras and Equipments you control have indestructible.
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigToken | Secondary$ True | TriggerDescription$ Whenever NICKNAME attacks, create a white Aura enchantment token named Arrest attached to target creature an opponent controls. The token has enchant creature and "Enchanted creature can't attack or block, and it's activated abilities can't be activated."
+SVar:TrigToken:DB$ Token | TokenScript$ arrest | TokenOwner$ You | AttachedTo$ Targeted | ValidTgts$ Creature.OppCtrl | ValidTgtsDesc$ creature an opponent controls
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Token
+Oracle:Auras and Equipments you control have indestructible.\nWhenever Bearidge Marshall attacks, create a white Aura enchantment token named Arrest attached to target creature an opponent controls. The token has enchant creature and "Enchanted creature can't attack or block, and it's activated abilities can't be activated."
