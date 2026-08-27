@@ -126,7 +126,7 @@ Type=Custom
 # 118 R Sareng, the Dealer @John Silva
 # 119 U Spirit of Infamy @R-SRaven
 # 120 U Staking Hand @Biwer Vincent
-# 121 C Sunset Cliffs Patron @Nacho Molina
+121 C Sunset Cliffs Patron @Nacho Molina
 122 R Unassuming Swineherd @Daniel Eskridge
 # 123 U Uncovered Mine @Ralph Horsley
 # 124 R Vengeful Agent @ErothBlackDragon
