@@ -252,9 +252,9 @@ Type=Custom
 # 243 C Binding Lasso @Enmanuel Martinez
 244 C Cruel Effigy @LozanoX
 # 245 M Dead Man's Hand @Andrew Dobell and Andirilien
-# 246 U Derelict Watcher @donmalo
+246 U Derelict Watcher @donmalo
 # 247 U Dreamkeeper @highdarktemplar
-# 248 R Foulweather Effigy @dominuself
+248 R Foulweather Effigy @dominuself
 # 249 C Gambler's Dice @Ian Llanas
 # 250 C Heavy Moneybag @Angelique Shelley
 # 251 C Mighty Totem @Dudu Torres
