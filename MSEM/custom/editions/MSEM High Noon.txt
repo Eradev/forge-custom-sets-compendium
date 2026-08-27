@@ -68,7 +68,7 @@ Type=Custom
 # 60 C Head in the Clouds @Ashiria
 61 C High Spirits @Darek Zabrocki
 62 U Invisible Stalker @JakeWBullock
-# 63 C Ironeyes Scoundrel @Roiuky
+63 C Ironeyes Scoundrel @Roiuky
 # 64 U Luck of the Draw @justduet
 65 C Merchant's Guile @Alex Allen
 # 66 R Nameless Drifter @Brandon Liao
