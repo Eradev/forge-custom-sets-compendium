@@ -1,0 +1,7 @@
+Name:Sandbluff Duelist
+ManaCost:2 R
+Types:Creature Spirit Soldier
+PT:2/1
+K:First Strike
+S:Mode$ ReduceCost | Activator$ You | Type$ Spell | Phases$ BeginCombat->EndCombat | Amount$ 1 | Description$ Spells you cast during combat cost {1} less to cast.
+Oracle:First strike\nSpells you cast during combat cost {1} less to cast.
