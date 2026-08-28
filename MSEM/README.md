@@ -58,6 +58,7 @@ Worlds Away (WAY)                     -  97% (255/262)
     * Verdant Renewal
     * Zhedina Coastguard
 Storytime (101)                       -  14% (15/101)
+High Noon (HI12)                      -  43% (121/279)
 Kaleidoscope (KLC)                    -  100%
 Path of Shadows (PSA)                 -  99% (208/209)
   Missing cards:
@@ -85,6 +86,7 @@ Examples on how to implement custom keywords and mechanisms.
 * [Ascend](#ascend)
 * [Art of War](#art-of-war)
 * [Bleed](#bleed)
+* [Bounty](#bounty)
 * [Deception](#deception)
 * [Fabled](#fabled)
 * [Fleeting](#fleeting)
@@ -168,6 +170,26 @@ Implementation:
 ```text
 S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 R | CheckSVar$ X | SVarCompare$ GE1 | Description$ Bleed {2}{R} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
 SVar:X:Count$LifeOppsLostThisTurn
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Bounty
+
+> The MSEM bounty counter functionality is a limited counterpart of the bounty token provided by Bounty Board, without giving out life.
+
+Bounty is defined as
+
+```text
+[something], you may post a bounty on target creature. (Put a bounty counter on target creature. It has "When this creature dies, each opponent draws a card" as long as it has a bounty counter on it.)
+```
+
+Implementation:
+
+```text
+SVar:TrigBounty:DB$ PutCounter | ValidTgts$ Creature | CounterType$ BOUNTY | CounterNum$ 1 | IsCurse$ True | SpellDescription$ Put a bounty counter on target creature.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.counters_GE1_BOUNTY | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever a creature with a bounty counter on it dies, each of its controller's opponents draws a card.
+SVar:TrigDraw:DB$ Draw | Defined$ Player.OpponentOf TriggeredCardController | NumCards$ 1
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
@@ -470,7 +492,7 @@ S:Mode$ AlternativeCost | Named$ Showcase | ValidSA$ Spell.Self | EffectZone$ Al
 SVar:DBToken:DB$ Token | ConditionCheckSVar$ AltCostPaid | TokenScript$ r_1_1_bard_cantblock | RememberTokens$ True | SubAbility$ DBEffect
 SVar:DBEffect:DB$ Effect | ConditionCheckSVar$ AltCostPaid | RememberObjects$ Remembered | ImprintCards$ Self | Triggers$ TriggerShowcaseAttack,TriggerTokenMoved | Duration$ Permanent | SubAbility$ DBExile
 SVar:TriggerShowcaseAttack:Mode$ Attacks | ValidCard$ Card.IsRemembered | Execute$ PlayShowcase | TriggerDescription$ Whenever the showcased creature attacks, you may cast a copy of EFFECTSOURCE without paying its mana cost.
-SVar:PlayShowcase:DB$ Play | Defined$ Imprinted | WithoutManaCost$ True | CopyCard$ True | Optional$ True | OptionalDecider$ You 
+SVar:PlayShowcase:DB$ Play | Defined$ Imprinted | WithoutManaCost$ True | CopyCard$ True | Optional$ True | OptionalDecider$ You
 SVar:TriggerTokenMoved:Mode$ ChangesZone | ValidCard$ Card.IsRemembered | ExcludedDestinations$ Battlefield | Execute$ ExileEffect | Static$ True
 SVar:ExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
 SVar:DBExile:DB$ ChangeZone | ConditionCheckSVar$ AltCostPaid | Defined$ Self | Origin$ Stack | Destination$ Exile | SubAbility$ DBCleanup
