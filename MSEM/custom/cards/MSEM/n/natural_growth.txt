@@ -3,4 +3,4 @@ ManaCost:2 G
 Types:Sorcery
 A:SP$ Destroy | ValidTgts$ Artifact,Enchantment | SubAbility$ DBScry | SpellDescription$ Destroy target artifact or enchantment. Scry 1.
 SVar:DBScry:DB$ Scry | ScryNum$ 1
-Oracle:Destroy target artifact or enchantment. Scry 1.
+Oracle:Destroy target artifact or enchantment.\nScry 1.
