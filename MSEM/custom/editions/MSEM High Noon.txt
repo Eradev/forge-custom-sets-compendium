@@ -33,7 +33,7 @@ Type=Custom
 25 C Pioneer of Wild Places @Marzena Nereida Piwowar
 # 26 R Preacher of Stray Souls @Mario Vazquez
 # 27 R Ride into the Sunset @Daniel Wachter
-# 28 C Sandbluff Barflies @Monika Andruszkiewicz
+28 C Sandbluff Barflies @Monika Andruszkiewicz
 # 29 C Sandbluff Confiscator @thienbao
 # 30 C Sandbluff Enforcers @kiikii-sempai
 # 31 C Sandbluff Irregular @Tess Garman
