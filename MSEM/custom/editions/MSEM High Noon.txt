@@ -35,7 +35,7 @@ Type=Custom
 # 27 R Ride into the Sunset @Daniel Wachter
 28 C Sandbluff Barflies @Monika Andruszkiewicz
 29 C Sandbluff Confiscator @thienbao
-# 30 C Sandbluff Enforcers @kiikii-sempai
+30 C Sandbluff Enforcers @kiikii-sempai
 # 31 C Sandbluff Irregular @Tess Garman
 # 32 C Sandbluff Training @Nacho Molina
 # 33 R Slinger's Showdown @Denis Kornev
