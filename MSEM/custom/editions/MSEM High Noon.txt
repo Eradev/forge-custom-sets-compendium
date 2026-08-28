@@ -46,7 +46,7 @@ Type=Custom
 38 U Tailwind Griffin @Luphin
 39 U Tales of the Lingering @Justinas Vitkus
 # 40 U Uncommon Grit @Aaron Riley
-# 41 U Wardens of the Ulek @Mario Vazquez
+41 U Wardens of the Ulek @Mario Vazquez
 # 42 U Warning Shot @Anatol Arvrea
 # 43 M Aether Leak @Ralph Horsley
 # 44 U Aetherite Slugs @ChrisAppel
