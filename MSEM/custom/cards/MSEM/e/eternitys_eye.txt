@@ -1,0 +1,14 @@
+Name:Eternity's Eye
+ManaCost:3
+Types:Artifact
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDig | TriggerDescription$ When this artifact enters, look at the top seven cards of your library. Put up to three of them into your graveyard and the rest on the bottom of your library in a random order.
+SVar:TrigDig:DB$ Dig | DigNum$ 7 | ChangeNum$ 3 | Optional$ True | DestinationZone$ Graveyard | LibraryPosition2$ -1 | RestRandomOrder$ True
+
+A:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+A:AB$ ChangeZone | Cost$ 2 | Origin$ Graveyard | Destination$ Library | LibraryPosition$ -1 | ValidTgts$ Card | TgtPrompt$ Select target card in a graveyard | SpellDescription$ Put target card from a graveyard on the bottom of its owner's library.
+
+Oracle:When this artifact enters, look at the top seven cards of your library. Put up to three of them into your graveyard and the rest on the bottom of your library in a random order.\n{T}: Add one mana of any color.\n{2}: Put target card from a graveyard on the bottom of its owner's library.
+
+DeckHas:Ability$Graveyard

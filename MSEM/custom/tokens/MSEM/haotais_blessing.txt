@@ -1,0 +1,12 @@
+Name:Hao'Tai's Blessing
+ManaCost:no cost
+Colors:red,white
+Types:Legendary Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 3 | AddToughness$ 3 | AddKeyword$ Flying | Description$ Enchanted creature gets +3/+3 and has flying.
+
+Oracle:Enchant creature\nEnchanted creature gets +3/+3 and has flying.
+
+SVar:AttachAILogic:Pump

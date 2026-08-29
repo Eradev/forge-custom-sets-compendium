@@ -20,7 +20,7 @@ ALTERNATE
 
 Name:Darth Vader
 ManaCost:no cost
-Colors:Black
+Colors:black
 Types:Legendary Creature Human Sith
 PT:4/4
 

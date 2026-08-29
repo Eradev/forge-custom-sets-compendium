@@ -1,0 +1,11 @@
+Name:Runebound Disciple
+ManaCost:G
+Types:Creature Human Warlock
+PT:0/1
+
+S:Mode$ ManaConvert | ValidPlayer$ You | ValidCard$ Card.cmcGE5 | ValidSA$ Spell | ManaConversion$ AnyType->AnyColor | Description$ You may spend mana as though it were mana of any color to cast spells with mana value 5 or greater or to activate abilities of permanents or permanent cards with mana value 5 or greater.
+S:Mode$ ManaConvert | ValidPlayer$ You | ValidCard$ Permanent.cmcGE5,Card.cmcGE5 | ValidSA$ Activated | ManaConversion$ AnyType->AnyColor | Secondary$ True | Description$ You may spend mana as though it were mana of any color to cast spells with mana value 5 or greater or to activate abilities of permanents or permanent cards with mana value 5 or greater.
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+Oracle:You may spend mana as though it were mana of any color to cast spells with mana value 5 or greater or to activate abilities of permanents or permanent cards with mana value 5 or greater.\n{T}: Add {C}.

@@ -1,0 +1,10 @@
+Name:Adjudicate
+ManaCost:no cost
+Colors:white
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+A:AB$ Untap | Cost$ Sac<1/CARDNAME> | Defined$ Enchanted | SpellDescription$ Untap enchanted creature.
+
+Oracle:Enchant creature\nSacrifice this token: Untap enchanted creature.

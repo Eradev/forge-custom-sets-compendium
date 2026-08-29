@@ -20,7 +20,7 @@ ALTERNATE
 
 Name:Wanderer of Oblivion
 ManaCost:no cost
-Colors:Black
+Colors:black
 Types:Creature Human Shaman
 PT:3/1
 

@@ -1,0 +1,28 @@
+Name:Ashfeaster Ghouls
+ManaCost:B
+Types:Creature Zombie Horror
+PT:1/1
+
+A:AB$ RemoveCounter | Cost$ B | ValidTgts$ Permanent | TgtPrompt$ Select target permanent | CounterType$ Any | CounterNum$ 1 | SpellDescription$ Remove a counter from target permanent.
+
+A:AB$ MoveCounter | Cost$ 3 B | ValidTgts$ Permanent | TgtPrompt$ Select target permanent | Source$ Targeted | Defined$ Self | CounterType$ Any | CounterNum$ 1 | SubAbility$ DBUnblockable | SpellDescription$ Move a counter from target permanent onto this creature. It can't be blocked this turn.
+SVar:DBUnblockable:DB$ Effect | RememberObjects$ Self | ExileOnMoved$ Battlefield | StaticAbilities$ Unblockable | Duration$ UntilHostLeftPlay
+SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ EFFECTSOURCE can't be blocked this turn.
+
+Oracle:{B}: Remove a counter from target permanent.\n{3}{B}: Move a counter from target permanent onto this creature. It can't be blocked this turn.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Nightshaper's Domain
+ManaCost:no cost
+Colors:black
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ B | SpellDescription$ Add {B}.
+
+Oracle:This land enters tapped.\n{T}: Add {B}.

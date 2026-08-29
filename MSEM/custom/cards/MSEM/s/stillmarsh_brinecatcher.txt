@@ -1,0 +1,15 @@
+Name:Stillmarsh Brinecatcher
+ManaCost:2 U
+Types:Creature Human Merfolk Horror
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigBounce | TriggerDescription$ When this creature enters, return another target nonland permanent to its owner's hand.
+SVar:TrigBounce:DB$ ChangeZone | Origin$ Battlefield | Destination$ Hand | ValidTgts$ Permanent.Other+nonLand | TgtPrompt$ Select another target nonland permanent
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigSac | IsPresent$ Permanent.YouCtrl+cmcGE5 | TriggerDescription$ At the beginning of your end step, if you control a permanent with mana value 5 or greater, you may sacrifice this creature. If you do, draw a card and create a 3/2 colorless Horror creature token.
+SVar:TrigSac:AB$ Draw | Cost$ Sac<1/CARDNAME> | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ c_3_2_horror
+
+Oracle:When this creature enters, return another target nonland permanent to its owner's hand.\nAt the beginning of your end step, if you control a permanent with mana value 5 or greater, you may sacrifice this creature. If you do, draw a card and create a 3/2 colorless Horror creature token.
+
+DeckHas:Ability$Token|Sacrifice & Type$Horror

@@ -1,0 +1,12 @@
+Name:Nightmare Alley
+ManaCost:no cost
+Types:Land
+
+T:Mode$ DamageDone | ValidTarget$ You | ValidSource$ Creature | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigSteal | TriggerDescription$ Whenever a creature deals combat damage to you, that creature's controller gains control of this land.
+SVar:TrigSteal:DB$ GainControl | Defined$ Self | NewController$ TriggeredSourceController
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Pump | Cost$ 1 T | ValidTgts$ Creature.attacking | TgtPrompt$ Select target attacking creature | NumAtt$ +1 | KW$ HIDDEN Unblockable | SpellDescription$ Target attacking creature gets +1/+0 until end of turn and can't be blocked this turn.
+
+Oracle:Whenever a creature deals combat damage to you, that creature's controller gains control of this land.\n{T}: Add {C}.\n{1}, {T}: Target attacking creature gets +1/+0 until end of turn and can't be blocked this turn.

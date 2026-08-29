@@ -1,0 +1,10 @@
+Name:Gasoline Canister
+ManaCost:1
+Types:Artifact
+
+A:AB$ DealDamage | Cost$ 1 Sac<1/CARDNAME/this artifact> | ValidTgts$ Any | NumDmg$ 1 | RememberTargets$ True | ReplaceDyingDefined$ Remembered | SubAbility$ DBCleanup | SpellDescription$ It deals 1 damage to any target. If a creature or planeswalker dealt damage this way would die this turn, exile it instead.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:{1}, Sacrifice this artifact: It deals 1 damage to any target. If a creature or planeswalker dealt damage this way would die this turn, exile it instead.
+
+DeckHas:Ability$Sacrifice

@@ -1,0 +1,16 @@
+Name:Yhzag, Alpha and Omega
+ManaCost:13
+Types:Legendary Creature Horror God
+PT:13/13
+
+K:Flying
+K:Trample
+
+S:Mode$ Continuous | MayPlay$ True | MayPlayWithoutManaCost$ True | MayPlayLimit$ 1 | MayPlayDontGrantZonePermissions$ True | Affected$ Card.YouOwn | AffectedZone$ Graveyard | Condition$ PlayerTurn | Description$ Once during each of your turns, you may cast a spell from your graveyard without paying its mana cost.
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigShuffle | TriggerDescription$ When NICKNAME is put into a graveyard from anywhere, its owner shuffles their graveyard into their library.
+SVar:TrigShuffle:DB$ ChangeZoneAll | Origin$ Graveyard | Destination$ Library | ChangeType$ Card.OwnedBy TriggeredCardOwner | Shuffle$ True | DefinedPlayer$ TriggeredCardOwner
+
+Oracle:Flying, trample\nOnce during each of your turns, you may cast a spell from your graveyard without paying its mana cost.\nWhen Yhzag is put into a graveyard from anywhere, its owner shuffles their graveyard into their library.
+
+DeckHas:Ability$Graveyard

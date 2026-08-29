@@ -1,0 +1,13 @@
+Name:Goremound
+ManaCost:4 B
+Types:Creature Zombie Horror
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When this creature enters, target creature you don't control gets -3/-3 until end of turn. All other creatures you don't control with the same name as that creature get -1/-1 until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you don't control | NumAtt$ -3 | NumDef$ -3 | IsCurse$ True | RememberTargets$ True | SubAbility$ DBPumpAll
+SVar:DBPumpAll:DB$ PumpAll | ValidCards$ Creature.YouDontCtrl+sharesNameWith Remembered+IsNotRemembered | NumAtt$ -1 | NumDef$ -1 | IsCurse$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+K:Evoke:1 B
+
+Oracle:When this creature enters, target creature you don't control gets -3/-3 until end of turn. All other creatures you don't control with the same name as that creature get -1/-1 until end of turn.\nEvoke {1}{B} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)

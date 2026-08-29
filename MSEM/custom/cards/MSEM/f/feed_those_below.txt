@@ -1,0 +1,11 @@
+Name:Feed Those Below
+ManaCost:2 B B
+Types:Sorcery
+
+A:SP$ Token | TokenScript$ c_3_2_horror | RememberTokens$ True | SubAbility$ DBPump | SpellDescription$ Create a 3/2 colorless Horror creature token. All other creatures get -3/-3 until end of turn.
+SVar:DBPump:DB$ PumpAll | ValidCards$ Creature.!IsRemembered | NumAtt$ -3 | NumDef$ -3 | IsCurse$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Create a 3/2 colorless Horror creature token. All other creatures get -3/-3 until end of turn.
+
+DeckHas:Ability$Token & Type$Horror

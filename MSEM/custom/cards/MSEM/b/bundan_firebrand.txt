@@ -16,7 +16,7 @@ ALTERNATE
 
 Name:Kanlan Jaded
 ManaCost:no cost
-Colors:Black
+Colors:black
 Types:Creature Human Warrior
 PT:2/3
 

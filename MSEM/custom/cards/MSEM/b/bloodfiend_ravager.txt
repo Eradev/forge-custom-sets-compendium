@@ -1,0 +1,18 @@
+Name:Bloodfiend Ravager
+ManaCost:3 R R
+Types:Creature Beast Horror
+PT:3/3
+
+K:Flying
+
+K:Menace
+
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDamage | TriggerDescription$ When this creature enters, it deals 2 damage to any target. If a permanent dealt damage this way would die this turn, exile it instead.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 2 | RememberDamaged$ True | ReplaceDyingDefined$ Remembered | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+K:Evoke:1 R
+
+Oracle:Flying, menace, haste\nWhen this creature enters, it deals 2 damage to any target. If a permanent dealt damage this way would die this turn, exile it instead.\nEvoke {1}{R} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)

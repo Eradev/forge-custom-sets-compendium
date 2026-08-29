@@ -1,6 +1,6 @@
 Name:AT-AT
 ManaCost:no cost
-Colors:White
+Colors:white
 Types:Artifact Creature AT-AT
 PT:5/5
 

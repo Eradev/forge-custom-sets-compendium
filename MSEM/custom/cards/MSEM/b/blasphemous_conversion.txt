@@ -1,0 +1,9 @@
+Name:Blasphemous Conversion
+ManaCost:B
+Types:Instant
+
+S:Mode$ RaiseCost | ValidCard$ Card.Self | Type$ Spell | Amount$ 3 | ValidTarget$ Card.OppOwn | EffectZone$ All | Description$ This spell costs {3} more to cast if it targets a card in an opponent's graveyard.
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | GainControl$ True | ValidTgts$ Creature.ThisTurnEnteredFrom_Battlefield,Planeswalker.ThisTurnEnteredFrom_Battlefield | TgtPrompt$ Select target creature or planeswalker card in a graveyard that was put there from the battlefield this turn | SpellDescription$ Choose target creature or planeswalker card in a graveyard that was put there from the battlefield this turn. Put that card onto the battlefield under your control.
+
+Oracle:This spell costs {3} more to cast if it targets a card in an opponent's graveyard.\nChoose target creature or planeswalker card in a graveyard that was put there from the battlefield this turn. Put that card onto the battlefield under your control.

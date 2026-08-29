@@ -1,0 +1,11 @@
+Name:Temeration
+ManaCost:B
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Creature.cmcLE2 | TgtPrompt$ Select target creature with mana value 2 or less | RememberTargets$ True | SubAbility$ DBGain | SpellDescription$ Destroy target creature with mana value 2 or less. If it was a token, you gain 2 life.
+SVar:DBGain:DB$ GainLife | LifeAmount$ 2 | ConditionDefined$ Remembered | ConditionPresent$ Creature.token | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Destroy target creature with mana value 2 or less. If it was a token, you gain 2 life.
+
+DeckHas:Ability$LifeGain

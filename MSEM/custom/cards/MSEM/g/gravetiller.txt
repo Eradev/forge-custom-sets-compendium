@@ -1,0 +1,20 @@
+Name:Gravetiller
+ManaCost:4 B
+Types:Creature Horror
+PT:3/3
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigExile | TriggerDescription$ When this creature enters, you may exile target creature or planeswalker card from a graveyard. If it had mana value 4 or less, you may return it to its owner's hand. Otherwise, you may shuffle it into its owner's library.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Creature,Planeswalker | TgtPrompt$ Select target creature or planeswalker card in a graveyard | RememberChanged$ True | SubAbility$ DBBranch
+SVar:DBBranch:DB$ Branch | BranchConditionSVar$ CMC | BranchConditionSVarCompare$ LE4 | TrueSubAbility$ DBHand | FalseSubAbility$ DBShuffle
+SVar:DBHand:DB$ ChangeZone | Origin$ Exile | Destination$ Hand | Defined$ Remembered | Optional$ True | SubAbility$ DBCleanup
+SVar:DBShuffle:DB$ ChangeZone | Origin$ Exile | Destination$ Library | Defined$ Remembered | Shuffle$ True | Optional$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:CMC:Remembered$CardManaCost
+
+K:Evoke:B
+
+Oracle:Flash\nWhen this creature enters, you may exile target creature or planeswalker card from a graveyard. If it had mana value 4 or less, you may return it to its owner's hand. Otherwise, you may shuffle it into its owner's library.\nEvoke {B} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)
+
+DeckHas:Ability$Graveyard

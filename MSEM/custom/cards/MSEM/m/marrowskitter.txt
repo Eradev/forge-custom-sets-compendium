@@ -1,0 +1,15 @@
+Name:Marrowskitter
+ManaCost:B
+Types:Creature Spider Skeleton Horror
+PT:1/1
+
+S:Mode$ CantBlock | ValidCard$ Card.Self | Description$ CARDNAME can't block and can't be blocked.
+S:Mode$ CantBlockBy | ValidAttacker$ Card.Self | Secondary$ True | Description$ CARDNAME can't block and can't be blocked.
+
+A:AB$ ChangeZone | Cost$ 3 B B | Origin$ Graveyard | Destination$ Battlefield | ActivationZone$ Graveyard | RememberChanged$ True | SubAbility$ DBCopy | SpellDescription$ Return this card from your graveyard to the battlefield. Create a token that's a copy of it.
+SVar:DBCopy:DB$ CopyPermanent | Defined$ Remembered | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:This creature can't block and can't be blocked.\n{3}{B}{B}: Return this card from your graveyard to the battlefield. Create a token that's a copy of it.
+
+DeckHas:Ability$Token|Graveyard

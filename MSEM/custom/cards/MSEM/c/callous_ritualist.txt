@@ -14,7 +14,7 @@ ALTERNATE
 
 Name:Heartless Angel
 ManaCost:no cost
-Colors:White,black
+Colors:white,black
 Types:Creature Angel
 PT:4/4
 

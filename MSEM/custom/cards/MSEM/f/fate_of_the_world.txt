@@ -1,0 +1,15 @@
+Name:Fate of the World
+ManaCost:3 R
+Types:Sorcery
+
+A:SP$ Charm | Choices$ DBArtifact,DBLand,DBDamage | CharmNum$ Z | MinCharmNum$ 1 | AdditionalDescription$ . If you attacked with a creature with mana value 5 or greater this turn, you may choose any number instead.
+SVar:Z:Count$Compare Y GE1.3.1
+SVar:Y:Count$CreaturesAttackedThisTurn Creature.YouCtrl+cmcGE5
+
+SVar:DBArtifact:DB$ Destroy | ValidTgts$ Artifact | TgtPrompt$ Select target artifact | SpellDescription$ Destroy target artifact.
+
+SVar:DBLand:DB$ Destroy | ValidTgts$ Land | TgtPrompt$ Select target land | SpellDescription$ Destroy target land.
+
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Any | TgtPrompt$ Select any target to distribute damage to | NumDmg$ 3 | TargetMin$ 1 | TargetMax$ 3 | DividedAsYouChoose$ 3 | SpellDescription$ CARDNAME deals 3 damage divided as you choose among one, two, or three targets.
+
+Oracle:Choose one. If you attacked with a creature with mana value 5 or greater this turn, you may choose any number instead.\n• Destroy target artifact.\n• Destroy target land.\n• Fate of the World deals 3 damage divided as you choose among one, two, or three targets.

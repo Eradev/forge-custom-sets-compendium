@@ -1,0 +1,19 @@
+Name:Nathaniel O'Brien
+ManaCost:2 W W
+Types:Legendary Planeswalker Nathaniel
+Loyalty:4
+
+A:AB$ Token | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | TokenScript$ c_1_1_human | SpellDescription$ Create a 1/1 colorless Human creature token.
+
+A:AB$ Branch | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | BranchConditionSVar$ Insight | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBBF | FalseSubAbility$ DBHand | SpellDescription$ Return target permanent card with mana value 3 or less from your graveyard to your hand. If you have an insight counter, return that permanent card to the battlefield instead.
+SVar:DBHand:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Permanent.YouOwn+cmcLE3 | TgtPrompt$ Select target permanent card with mana value 3 or less in your graveyard
+SVar:DBBF:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Permanent.YouOwn+cmcLE3 | TgtPrompt$ Select target permanent card with mana value 3 or less in your graveyard
+SVar:Insight:Count$YourCountersInsight
+
+A:AB$ PutCounter | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | Defined$ You | CounterType$ Insight | CounterNum$ 1 | SpellDescription$ You get an insight counter.
+
+A:AB$ Pump | Cost$ SubCounter<1/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | KW$ HIDDEN CARDNAME can't attack. & HIDDEN CARDNAME can't block. | Duration$ UntilYourNextTurn | IsCurse$ True | SpellDescription$ Target creature can't attack or block until your next turn.
+
+Oracle:[+1]: Create a 1/1 colorless Human creature token.\n[0]: Return target permanent card with mana value 3 or less from your graveyard to your hand. If you have an insight counter, return that permanent card to the battlefield instead.\n[0]: You get an insight counter.\n[-1]: Target creature can't attack or block until your next turn.
+
+DeckHas:Ability$Token|Counters|Graveyard & Type$Human

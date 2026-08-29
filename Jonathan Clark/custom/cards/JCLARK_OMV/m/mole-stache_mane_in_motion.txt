@@ -1,4 +1,4 @@
-Name:Mole-stache, Mane in Motion 
+Name:Mole-Stache, Mane in Motion
 ManaCost:1 G W
 Types:Legendary Creature Alien Mole
 PT:3/3
@@ -10,4 +10,4 @@ SVar:OmniDmg:DB$ LoseLife | LifeAmount$ 1
 T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ At the beginning of combat on your turn, put your choice of a flying, vigilance or lifelink counter on NICKNAME.
 SVar:TrigCounter:DB$ PutCounter | CounterType$ Flying,Vigilance,Lifelink
 
-Oracle:Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nAt the beginning of combat on your turn, put your choice of a flying, vigilance or lifelink counter on Mole-stache.
+Oracle:Omnishuffle 1 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 1 life.)\nAt the beginning of combat on your turn, put your choice of a flying, vigilance or lifelink counter on Mole-Stache.

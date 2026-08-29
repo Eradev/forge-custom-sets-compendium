@@ -1,0 +1,10 @@
+Name:Grandmaster of the Order
+ManaCost:1 W
+Types:Creature Human Noble Knight
+PT:2/2
+
+R:Event$ Moved | ActiveZones$ Battlefield | Origin$ Graveyard,Exile | ValidLKI$ Creature | Prevent$ True | Layer$ CantHappen | Description$ Creature cards can't leave the graveyard or exile.
+
+S:Mode$ CantBeCast | Origin$ Graveyard,Exile | Description$ Players can't cast spells from graveyards or from exile.
+
+Oracle:Creature cards can't leave the graveyard or exile.\nPlayers can't cast spells from graveyards or from exile.

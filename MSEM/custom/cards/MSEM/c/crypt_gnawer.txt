@@ -1,0 +1,19 @@
+Name:Crypt Gnawer
+ManaCost:B
+Types:Creature Zombie Horror
+PT:1/1
+
+K:Menace
+
+K:Haste
+
+K:Decayed
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Graveyard | Execute$ TrigReturn | CheckSVar$ CreaturesInYard | SVarCompare$ GE3 | IsPresent$ Creature.namedCrypt Gnawer+YouCtrl | PresentCompare$ EQ0 | TriggerDescription$ At the beginning of combat on each of your turns, if you have three or more creature cards in your graveyard and haven't controlled a creature named Crypt Gnawer this turn, return this card from your graveyard to the battlefield.
+SVar:TrigReturn:DB$ ChangeZone | Defined$ Self | Origin$ Graveyard | Destination$ Battlefield | ConditionCheckSVar$ ControlledNamed | ConditionSVarCompare$ EQ0
+SVar:CreaturesInYard:Count$ValidGraveyard Creature.YouOwn
+SVar:ControlledNamed:Count$ThisTurnEntered_Battlefield_Card.namedCrypt Gnawer+YouCtrl
+
+Oracle:Menace, haste, decayed (This can't block. When it attacks, sacrifice it at end of combat.)\nAt the beginning of combat on each of your turns, if you have three or more creature cards in your graveyard and haven't controlled a creature named Crypt Gnawer this turn, return this card from your graveyard to the battlefield.
+
+DeckHas:Ability$Graveyard

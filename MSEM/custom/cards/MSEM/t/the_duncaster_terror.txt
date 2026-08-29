@@ -1,0 +1,18 @@
+Name:The Duncaster Terror
+ManaCost:3 B G
+Types:Legendary Creature Horror
+PT:3/3
+
+K:Flying
+
+K:Menace
+
+T:Mode$ DamageDone | ValidSource$ Creature.Other+YouCtrl | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigSac | TriggerZones$ Battlefield | TriggerDescription$ Whenever another creature you control deals combat damage to a player, sacrifice it.
+SVar:TrigSac:DB$ Destroy | Defined$ TriggeredSourceLKICopy | Sacrifice$ True
+
+R:Event$ Draw | ActiveZones$ Battlefield | ValidPlayer$ You | Optional$ True | ReplaceWith$ ReturnCreature | Description$ If you would draw a card, you may instead return a creature card from your graveyard to your hand.
+SVar:ReturnCreature:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ChangeType$ Creature.YouOwn | ChangeNum$ 1 | Hidden$ True | Mandatory$ True
+
+Oracle:Flying, menace\nWhenever another creature you control deals combat damage to a player, sacrifice it.\nIf you would draw a card, you may instead return a creature card from your graveyard to your hand.
+
+DeckHas:Ability$Sacrifice|Graveyard

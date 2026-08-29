@@ -1,0 +1,16 @@
+Name:The Servant in the Ivory Mask
+ManaCost:1 W B
+Types:Legendary Creature Human Warlock
+PT:2/3
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ At the beginning of your end step, create a 1/1 colorless Human creature. Put a sacrifice counter on it.
+SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_human | RememberTokens$ True | SubAbility$ DBCounter
+SVar:DBCounter:DB$ PutCounter | Defined$ Remembered | CounterType$ SACRIFICE | CounterNum$ 1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+S:Mode$ Continuous | Affected$ Creature.token+YouCtrl+counters_GE1_SACRIFICE | AddHiddenKeyword$ CARDNAME can't attack. & CARDNAME can't block. | AddAbility$ SacMana | Description$ Creature tokens you control with sacrifice counters on them can't attack or block and have "Sacrifice this creature: Add {C}."
+SVar:SacMana:AB$ Mana | Cost$ Sac<1/CARDNAME> | Produced$ C | SpellDescription$ Add {C}.
+
+Oracle:At the beginning of your end step, create a 1/1 colorless Human creature. Put a sacrifice counter on it.\nCreature tokens you control with sacrifice counters on them can't attack or block and have "Sacrifice this creature: Add {C}."
+
+DeckHas:Ability$Token|Counters|Sacrifice

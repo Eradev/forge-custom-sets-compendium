@@ -1,0 +1,9 @@
+Name:Keeper of the Ancient Ways
+ManaCost:2 G
+Types:Creature Human Druid
+PT:1/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | TriggerDescription$ When this creature enters, destroy up to three target noncreature, nonland artifacts and/or enchantments with total mana value 3 or less.
+SVar:TrigDestroy:DB$ Destroy | TargetMin$ 0 | TargetMax$ 3 | ValidTgts$ Artifact.nonCreature+nonLand,Enchantment.nonCreature+nonLand | TgtPrompt$ Select up to three target noncreature, nonland artifacts and/or enchantments | TargetsWithTotalCMC$ 3
+
+Oracle:When this creature enters, destroy up to three target noncreature, nonland artifacts and/or enchantments with total mana value 3 or less.

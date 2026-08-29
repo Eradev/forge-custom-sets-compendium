@@ -1,0 +1,15 @@
+Name:Eruq, the Flamebearer
+ManaCost:4 R R R
+Types:Legendary Creature Elder Horror
+PT:7/7
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigDamage | ActivationLimit$ 1 | TriggerDescription$ Once each turn, when NICKNAME enters or you attack with one or more Horrors, you may have it deal 2 damage to each opponent. Then if it isn't a token, gain control of target creature an opponent controls until end of turn. Tap it. It's attacking its controller.
+T:Mode$ AttackersDeclared | ValidAttackers$ Creature.Horror+YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigDamage | ActivationLimit$ 1 | Secondary$ True | TriggerDescription$ Once each turn, when NICKNAME enters or you attack with one or more Horrors, you may have it deal 2 damage to each opponent. Then if it isn't a token, gain control of target creature an opponent controls until end of turn. Tap it. It's attacking its controller.
+SVar:TrigDamage:DB$ DealDamage | Defined$ Player.Opponent | NumDmg$ 2 | SubAbility$ DBSteal
+SVar:DBSteal:DB$ GainControl | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | LoseControl$ EOT | Tapped$ True | Attacking$ TargetedController | ConditionPresent$ Card.Self+nonToken
+
+A:AB$ CopyPermanent | Cost$ 2 R R Discard<1/CARDNAME/this card> | ActivationZone$ Hand | Defined$ Self | SetPower$ 4 | SetToughness$ 4 | NonLegendary$ True | SorcerySpeed$ True | SpellDescription$ Create a token that's a copy of NICKNAME, except it's 4/4 and isn't legendary. Activate only as a sorcery.
+
+Oracle:Once each turn, when Eruq enters or you attack with one or more Horrors, you may have it deal 2 damage to each opponent. Then if it isn't a token, gain control of target creature an opponent controls until end of turn. Tap it. It's attacking its controller.\n{2}{R}{R}, Discard this card: Create a token that's a copy of Eruq, except it's 4/4 and isn't legendary. Activate only as a sorcery.
+
+DeckHas:Ability$Token|Discard

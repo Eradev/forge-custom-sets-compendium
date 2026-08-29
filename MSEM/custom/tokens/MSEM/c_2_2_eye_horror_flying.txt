@@ -1,0 +1,9 @@
+Name:Eye Horror Token
+ManaCost:no cost
+Colors:colorless
+Types:Creature Eye Horror
+PT:2/2
+
+K:Flying
+
+Oracle:Flying

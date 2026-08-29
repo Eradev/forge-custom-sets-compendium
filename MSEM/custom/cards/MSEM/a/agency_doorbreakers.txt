@@ -1,0 +1,19 @@
+Name:Agency Doorbreakers
+ManaCost:2 G
+Types:Creature Human Soldier Detective
+PT:3/3
+
+A:AB$ PutCounter | Cost$ 1 | RaiseCost$ X | CounterType$ P1P1 | CounterNum$ 1 | SorcerySpeed$ True | PrecostDesc$ Improve | SpellDescription$ ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
+SVar:X:Count$CardCounters.P1P1
+
+T:Mode$ CounterAddedOnce | ValidCard$ Permanent.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigToken | ActivationLimit$ 1 | TriggerDescription$ Once each turn, when one or more counters are put on a permanent you control, create a 1/1 colorless Human creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_human
+
+T:Mode$ AttackersDeclared | Execute$ TrigDestroy | ValidAttackers$ Creature | ValidAttackersAmount$ GE3 | TriggerZones$ Battlefield | AttackingPlayer$ You | TriggerDescription$ Whenever you attack with three or more creatures, destroy up to one target artifact or enchantment.
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select up to one target artifact or enchantment | TargetMin$ 0 | TargetMax$ 1
+
+Oracle:Improve {1} ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)\nOnce each turn, when one or more counters are put on a permanent you control, create a 1/1 colorless Human creature token.\nWhenever you attack with three or more creatures, destroy up to one target artifact or enchantment.
+
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Token|Counters
+DeckHints:Ability$Counters

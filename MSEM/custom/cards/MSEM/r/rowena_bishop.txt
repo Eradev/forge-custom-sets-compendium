@@ -1,0 +1,24 @@
+Name:Rowena Bishop
+ManaCost:3 U U
+Types:Legendary Planeswalker Rowena
+Loyalty:4
+
+A:AB$ Tap | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | ValidTgts$ Permanent | TgtPrompt$ Select target permanent | SubAbility$ DBStun | SpellDescription$ Tap target permanent. Put a stun counter on it.
+SVar:DBStun:DB$ PutCounter | Defined$ Targeted | CounterType$ Stun | CounterNum$ 1
+
+A:AB$ Branch | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | BranchConditionSVar$ Insight | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBChoice | FalseSubAbility$ DBTop | SpellDescription$ Put target artifact, instant, or sorcery card from your graveyard on top of your library. If you have an insight counter, you may return that card to your hand instead.
+SVar:DBTop:DB$ ChangeZone | Origin$ Graveyard | Destination$ Library | LibraryPosition$ 0 | ValidTgts$ Artifact.YouOwn,Instant.YouOwn,Sorcery.YouOwn | TgtPrompt$ Select target artifact, instant, or sorcery card in your graveyard
+SVar:DBChoice:DB$ GenericChoice | Choices$ DBTop,DBHand
+SVar:DBHand:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Artifact.YouOwn,Instant.YouOwn,Sorcery.YouOwn | TgtPrompt$ Select target artifact, instant, or sorcery card in your graveyard | SpellDescription$ Return it to your hand.
+SVar:Insight:Count$YourCountersInsight
+
+A:AB$ PutCounter | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | Defined$ You | CounterType$ Insight | CounterNum$ 1 | SpellDescription$ You get an insight counter.
+
+A:AB$ Effect | Cost$ SubCounter<1/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | RememberObjects$ Targeted | StaticAbilities$ Unblockable | Triggers$ DmgDraw | ExileOnMoved$ Battlefield | SpellDescription$ Target creature can't be blocked this turn. Until end of turn, whenever that creature deals damage to an opponent, you draw a card.
+SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ This creature can't be blocked this turn.
+SVar:DmgDraw:Mode$ DamageDone | ValidSource$ Card.IsRemembered | ValidTarget$ Opponent | TriggerZones$ Command | Execute$ TrigDraw | TriggerDescription$ Whenever this creature deals damage to an opponent, you draw a card.
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+Oracle:[+1]: Tap target permanent. Put a stun counter on it. (If a permanent with a stun counter would become untapped, remove one from it instead.)\n[0]: Put target artifact, instant, or sorcery card from your graveyard on top of your library. If you have an insight counter, you may return that card to your hand instead.\n[0]: You get an insight counter.\n[-1]: Target creature can't be blocked this turn. Until end of turn, whenever that creature deals damage to an opponent, you draw a card.
+
+DeckHas:Ability$Counters|Graveyard

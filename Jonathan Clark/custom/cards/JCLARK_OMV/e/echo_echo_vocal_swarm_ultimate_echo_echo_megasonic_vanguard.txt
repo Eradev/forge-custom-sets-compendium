@@ -25,7 +25,7 @@ ALTERNATE
 
 Name:Ultimate Echo Echo, Megasonic Vanguard
 ManaCost:no cost
-Colors:W U B R G
+Colors:all
 Types:Legendary Artifact Creature Alien Construct
 PT:4/6
 

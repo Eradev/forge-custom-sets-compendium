@@ -1,0 +1,14 @@
+Name:Sealed Archives
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Cost$ T tapXType<1/Artifact.untapped;Creature.untapped;Land.untapped/artifact, creature, or land> | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+A:AB$ NameCard | Cost$ T | SubAbility$ DBReveal | SpellDescription$ Choose a card name, then reveal the top card of your library. If that card has the chosen name, you may sacrifice this land and draw a card.
+SVar:DBReveal:DB$ Dig | DigNum$ 1 | Reveal$ True | RememberRevealed$ True | DestinationZone$ Library | LibraryPosition$ 0 | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | NumCards$ 1 | UnlessCost$ Sac<1/CARDNAME> | UnlessPayer$ You | UnlessSwitched$ True | ConditionDefined$ Remembered | ConditionPresent$ Card.NamedCard | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearNamedCard$ True
+
+Oracle:{T}: Add {C}.\n{T}, Tap an untapped artifact, creature, or land you control: Add one mana of any color.\n{T}: Choose a card name, then reveal the top card of your library. If that card has the chosen name, you may sacrifice this land and draw a card.

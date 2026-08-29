@@ -1,0 +1,16 @@
+Name:Groz, the Nightshaper
+ManaCost:4 B B B
+Types:Legendary Creature Elder Horror
+PT:7/7
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigReturn | ActivationLimit$ 1 | TriggerDescription$ Once each turn, when NICKNAME enters or you attack with one or more Horrors, you may return target nonlegendary creature card from your graveyard to your hand. Then if it isn't a token, create a token that's a copy of that creature card.
+T:Mode$ AttackersDeclared | ValidAttackers$ Creature.Horror+YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigReturn | ActivationLimit$ 1 | Secondary$ True | TriggerDescription$ Once each turn, when NICKNAME enters or you attack with one or more Horrors, you may return target nonlegendary creature card from your graveyard to your hand. Then if it isn't a token, create a token that's a copy of that creature card.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Creature.YouOwn+nonLegendary | TgtPrompt$ Select target nonlegendary creature card in your graveyard | RememberTargets$ True | SubAbility$ DBCopy
+SVar:DBCopy:DB$ CopyPermanent | Defined$ Remembered | ConditionPresent$ Card.Self+nonToken | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+A:AB$ CopyPermanent | Cost$ 2 B B Discard<1/CARDNAME/this card> | ActivationZone$ Hand | Defined$ Self | SetPower$ 4 | SetToughness$ 4 | NonLegendary$ True | SorcerySpeed$ True | SpellDescription$ Create a token that's a copy of NICKNAME, except it's 4/4 and isn't legendary. Activate only as a sorcery.
+
+Oracle:Once each turn, when Groz enters or you attack with one or more Horrors, you may return target nonlegendary creature card from your graveyard to your hand. Then if it isn't a token, create a token that's a copy of that creature card.\n{2}{B}{B}, Discard this card: Create a token that's a copy of Groz, except it's 4/4 and isn't legendary. Activate only as a sorcery.
+
+DeckHas:Ability$Token|Discard|Graveyard

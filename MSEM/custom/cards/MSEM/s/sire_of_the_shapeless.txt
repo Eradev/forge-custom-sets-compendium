@@ -1,0 +1,17 @@
+Name:Sire of the Shapeless
+ManaCost:6 G G
+Types:Creature Horror
+PT:6/6
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ 3 | IsPresent$ Creature.YouCtrl | PresentCompare$ GE3 | EffectZone$ All | Description$ This creature costs {3} less to cast as long as you control three or more creatures.
+
+K:Trample
+
+K:Haste
+
+A:AB$ Token | Cost$ G Reveal<1/CARDNAME/this card> | ActivationZone$ Hand | TokenScript$ c_1_1_human | SubAbility$ DBShuffle | SorcerySpeed$ True | SpellDescription$ Create a 1/1 colorless Human creature token. Shuffle it into your library. Activate only as a sorcery.
+SVar:DBShuffle:DB$ ChangeZone | Defined$ Self | Origin$ Hand | Destination$ Library | Shuffle$ True
+
+Oracle:This creature costs {3} less to cast as long as you control three or more creatures.\nTrample, haste\n{G}, Reveal this card from your hand: Create a 1/1 colorless Human creature token. Shuffle it into your library. Activate only as a sorcery.
+
+DeckHas:Ability$Token & Type$Human

@@ -1,0 +1,22 @@
+Name:Bennett Brooks
+ManaCost:2 R R
+Types:Legendary Planeswalker Bennett
+Loyalty:4
+
+A:AB$ PumpAll | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | KW$ Haste | SpellDescription$ Creatures you control get +1/+0 and gain haste until end of turn.
+
+A:AB$ DealDamage | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | Defined$ Player.Opponent | NumDmg$ 2 | SubAbility$ DBTreasure | SpellDescription$ CARDNAME deals 2 damage to each opponent. If you have an insight counter, create two Treasure tokens.
+SVar:DBTreasure:DB$ Token | TokenAmount$ 2 | TokenScript$ c_a_treasure_sac | ConditionCheckSVar$ Insight | ConditionSVarCompare$ GE1
+SVar:Insight:Count$YourCountersInsight
+
+A:AB$ PutCounter | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | Defined$ You | CounterType$ Insight | CounterNum$ 1 | SpellDescription$ You get an insight counter.
+
+A:AB$ Sacrifice | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | SacValid$ Artifact | RememberSacrificed$ True | StackDescription$ SpellDescription | SubAbility$ DBReturn | SpellDescription$ Sacrifice an artifact. If you do, return target artifact card from your graveyard to the battlefield.
+SVar:DBReturn:DB$ ChangeZone | ValidTgts$ Artifact.YouOwn | TgtPrompt$ Select target artifact card in your graveyard | Origin$ Graveyard | Destination$ Battlefield | ConditionCheckSVar$ X | StackDescription$ None | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$Amount
+
+Oracle:[+1]: Creatures you control get +1/+0 and gain haste until end of turn.\n[0]: Bennett Brooks deals 2 damage to each opponent. If you have an insight counter, create two Treasure tokens.\n[0]: You get an insight counter.\n[-2]: Sacrifice an artifact. If you do, return target artifact card from your graveyard to the battlefield.
+
+DeckHas:Ability$Token|Sacrifice|Graveyard & Type$Treasure|Artifact
+DeckHints:Type$Artifact & Ability$Counters

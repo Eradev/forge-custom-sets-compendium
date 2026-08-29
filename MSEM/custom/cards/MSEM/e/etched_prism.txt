@@ -1,0 +1,11 @@
+Name:Etched Prism
+ManaCost:1
+Types:Artifact
+
+A:AB$ ChangeZone | Cost$ T | Origin$ Battlefield | Destination$ Library | LibraryPosition$ -1 | ValidTgts$ Permanent.YouOwn | TgtPrompt$ Select target permanent you own | SpellDescription$ Put target permanent you own on the bottom of your library.
+
+A:AB$ Mana | Cost$ 1 T | Produced$ Any | TriggersWhenSpent$ TrigLose | SpellDescription$ Add one mana of any color. When that mana is spent, target opponent loses 1 life.
+SVar:TrigLose:Mode$ SpellCast | ValidCard$ Card | Execute$ DBLose | TriggerDescription$ When that mana is spent, target opponent loses 1 life.
+SVar:DBLose:DB$ LoseLife | ValidTgts$ Opponent | LifeAmount$ 1
+
+Oracle:{T}: Put target permanent you own on the bottom of your library.\n{1}, {T}: Add one mana of any color. When that mana is spent, target opponent loses 1 life.

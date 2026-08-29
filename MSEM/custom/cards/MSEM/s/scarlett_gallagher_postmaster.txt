@@ -1,0 +1,12 @@
+Name:Scarlett Gallagher, Postmaster
+ManaCost:U R
+Types:Legendary Creature Human Scout
+PT:2/2
+
+K:Prowess
+
+K:Haste
+
+S:Mode$ ManaConvert | ValidPlayer$ You | ValidCard$ Card.nonCreature+cmcLE3 | ValidSA$ Spell | ManaConversion$ AnyType->AnyColor | Description$ You may spend mana as though it were mana of any color to cast noncreature spells with mana value 3 or less.
+
+Oracle:Prowess, haste\nYou may spend mana as though it were mana of any color to cast noncreature spells with mana value 3 or less.

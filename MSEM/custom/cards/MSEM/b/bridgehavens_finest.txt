@@ -1,0 +1,16 @@
+Name:Bridgehaven's Finest
+ManaCost:1 W
+Types:Creature Human Soldier Detective
+PT:1/1
+
+A:AB$ PutCounter | Cost$ 1 | RaiseCost$ X | CounterType$ P1P1 | CounterNum$ 1 | SorcerySpeed$ True | PrecostDesc$ Improve | SpellDescription$ ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
+SVar:X:Count$CardCounters.P1P1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 1/1 colorless Human creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_human
+
+S:Mode$ Continuous | Affected$ Creature.Other+YouCtrl | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Card.Self+counters_GE2 | Description$ Other creatures you control get +1/+1 as long as this creature has two or more counters on it.
+
+Oracle:Improve {1} ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)\nWhen this creature enters, create a 1/1 colorless Human creature token.\nOther creatures you control get +1/+1 as long as this creature has two or more counters on it.
+
+DeckHas:Ability$Token|Counters

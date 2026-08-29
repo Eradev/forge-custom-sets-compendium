@@ -1,0 +1,14 @@
+Name:Hexstone
+ManaCost:2
+Types:Artifact
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ At the beginning of your upkeep, put a charge counter on this artifact.
+SVar:TrigCounter:DB$ PutCounter | Defined$ Self | CounterType$ CHARGE | CounterNum$ 1
+
+A:AB$ ChooseType | Cost$ T Sac<1/CARDNAME/this artifact> | Type$ Nonland Permanent | AILogic$ MostProminentComputerControls | SubAbility$ DBDestroy | SpellDescription$ Choose a nonland permanent type. Destroy each permanent of the chosen type with mana value less than or equal to the number of charge counters on this artifact.
+SVar:DBDestroy:DB$ DestroyAll | ValidCards$ Permanent.ChosenType+cmcLEX
+SVar:X:Count$CardCounters.CHARGE
+
+Oracle:At the beginning of your upkeep, put a charge counter on this artifact.\n{T}, Sacrifice this artifact: Choose a nonland permanent type. Destroy each permanent of the chosen type with mana value less than or equal to the number of charge counters on this artifact.
+
+DeckHas:Ability$Counters|Sacrifice
