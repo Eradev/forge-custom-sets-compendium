@@ -9,6 +9,6 @@ A:AB$ Animate | Cost$ 1 R | Defined$ Self | Power$ 2 | Toughness$ 2 | Types$ Dra
 
 SVar:DragonPump:AB$ Pump | Cost$ R | Defined$ Self | NumAtt$ +1 | SpellDescription$ This creature gets +1/+0 until end of turn.
 
-Oracle:Dragon spells you cast cost {1} less to cast.\n{1}{R}: Until end of turn, this creature becomes a 2/2 red Dragon creature with flying and "{R}: Miyoga Dragonsoul gets +1/+0 until end of turn." Activate only as a sorcery.
+Oracle:Dragon spells you cast cost {1} less to cast.\n{1}{R}: Until end of turn, this creature becomes a 2/2 red Dragon creature with flying and "{R}: This creature gets +1/+0 until end of turn." Activate only as a sorcery.
 
 DeckNeeds:Type$Dragon
