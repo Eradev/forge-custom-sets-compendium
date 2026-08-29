@@ -8,7 +8,7 @@ SVar:DBPump:DB$ Pump | ValidTgts$ Creature | NumAtt$ +1 | NumDef$ +1 | KW$ Hexpr
 
 SVar:DBDebuff:DB$ Pump | ValidTgts$ Creature | NumAtt$ -4 | IsCurse$ True | SpellDescription$ Target creature gets -4/-0 until end of turn.
 
-SVar:DBScryDraw:DB$ Scry SubAbility$ DBDraw | SpellDescription$ Scry 1, then draw a card.
+SVar:DBScryDraw:DB$ Scry | SubAbility$ DBDraw | SpellDescription$ Scry 1, then draw a card.
 SVar:DBDraw:DB$ Draw
 
 Oracle:Choose one —\n• Target creature gets +1/+1 and gains hexproof until end of turn.\n• Target creature gets -4/-0 until end of turn.\n• Scry 1, then draw a card.

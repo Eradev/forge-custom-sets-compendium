@@ -1,0 +1,8 @@
+Name:Sensei of the Seven Winds
+ManaCost:3 U U
+Types:Creature Human Wizard
+PT:2/4
+
+S:Mode$ UntapOtherPlayer | ValidCard$ Permanent.YouCtrl | Description$ Untap all permanents you control during each other player's untap step.
+
+Oracle:Untap all permanents you control during each other player's untap step.

@@ -1,0 +1,23 @@
+Name:Asharo's Handmaiden
+ManaCost:1 R
+Types:Creature Human Wizard
+PT:2/2
+
+T:Mode$ SpellCast | ValidCard$ Card.Inscription+!token+!copiedSpell | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigChooseCreature | TriggerDescription$ Whenever you cast an Inscription spell, you may choose target creature you control. If you do, as that Inscription resolves, exile it inscribed onto that creature instead of putting it anywhere else.
+
+SVar:TrigChooseCreature:DB$ Pump | ValidTgts$ Creature.YouCtrl | TgtPrompt$ You may choose target creature you control | TargetMin$ 0 | TargetMax$ 1 | NumAtt$ 0 | NumDef$ 0 | SubAbility$ DBCreateAsharoEffect | SpellDescription$ You may choose target creature you control.
+
+SVar:DBCreateAsharoEffect:DB$ Effect | Name$ Asharo Inscription Effect | ConditionDefined$ Targeted | ConditionPresent$ Creature.inZoneBattlefield | ConditionCompare$ EQ1 | RememberObjects$ TriggeredCard | ImprintCards$ Targeted | ReplacementEffects$ REAsharoInscribe | Triggers$ AsharoCardExiled | Duration$ UntilEndOfTurn
+
+SVar:REAsharoInscribe:Event$ Moved | ValidCard$ Card.Inscription+IsRemembered | Origin$ Stack | ExcludeDestination$ Exile | Fizzle$ False | IsPresent$ Creature.IsImprinted | PresentZone$ Battlefield | PresentCompare$ GE1 | ReplaceWith$ DBAsharoExile | Description$ As that Inscription resolves, exile it inscribed onto the chosen creature instead of putting it anywhere else.
+
+SVar:DBAsharoExile:DB$ ChangeZone | Defined$ ReplacedCard | Origin$ Stack | Destination$ Exile | RememberChanged$ True | ForgetOtherRemembered$ True
+
+SVar:AsharoCardExiled:Mode$ ChangesZone | Origin$ Stack | Destination$ Exile | ValidCard$ Card.IsRemembered | Execute$ DBAsharoSignal | TriggerDescription$ Asharo's Handmaiden prepares to inscribe the resolved Inscription spell.
+
+SVar:DBAsharoSignal:DB$ ImmediateTrigger | RememberObjects$ Remembered & Imprinted | Execute$ DBAsharoSignalMarker | TriggerDescription$ Asharo's Handmaiden inscribes the resolved Inscription spell.
+SVar:DBAsharoSignalMarker:DB$ Cleanup | Named$ AsharoInscribeSignal
+
+Oracle:Whenever you cast an Inscription spell, you may choose target creature you control. If you do, as that Inscription resolves, exile it inscribed onto that creature instead of putting it anywhere else.
+
+DeckHints:Type$Inscription

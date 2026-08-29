@@ -1,0 +1,9 @@
+Name:Festival of Fading Lights
+ManaCost:2 W
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Enchantment | SubAbility$ DBDestroyAll | StackDescription$ SpellDescription | SpellDescription$ Destroy target enchantment and all other enchantments with the same name as that enchantment. Draw a card.
+SVar:DBDestroyAll:DB$ DestroyAll | ValidCards$ TargetedCard.Self,Enchantment.NotDefinedTargeted+sharesNameWith Targeted | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw
+
+Oracle:Destroy target enchantment and all other enchantments with the same name as that enchantment.\nDraw a card.

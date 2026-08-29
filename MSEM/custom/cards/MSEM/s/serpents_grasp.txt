@@ -1,0 +1,13 @@
+Name:Serpent's Grasp
+ManaCost:1 B
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ -2 | NumDef$ -2 | IsCurse$ True | SubAbility$ DBDelayedTrigger | SpellDescription$ Target creature gets -2/-2 until end of turn.
+SVar:DBDelayedTrigger:DB$ DelayedTrigger | Mode$ ChangesZone | RememberObjects$ Targeted | ValidCard$ Card.IsTriggerRemembered | Origin$ Battlefield | Destination$ Graveyard | ThisTurn$ True | Execute$ TrigChoice | SpellDescription$ When that creature dies this turn, its controller loses 2 life or gets a poison counter.
+SVar:TrigChoice:DB$ GenericChoice | Defined$ TriggeredCardController | Choices$ DBLoseLife,DBPoison
+SVar:DBLoseLife:DB$ LoseLife | Defined$ TriggeredCardController | LifeAmount$ 2 | SpellDescription$ Lose 2 life
+SVar:DBPoison:DB$ Poison | Defined$ TriggeredCardController | Num$ 1 | SpellDescription$ Get a poison counter
+
+Oracle:Target creature gets -2/-2 until end of turn. When that creature dies this turn, its controller loses 2 life or gets a poison counter.
+
+DeckHas:Ability$Counters

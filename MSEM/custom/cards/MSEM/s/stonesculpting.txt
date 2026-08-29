@@ -1,0 +1,7 @@
+Name:Stonesculpting
+ManaCost:1 R R
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Artifact,Land.nonBasic | TgtPrompt$ Select target artifact or nonbasic land | SpellDescription$ Destroy target artifact or nonbasic land.
+
+Oracle:Destroy target artifact or nonbasic land.

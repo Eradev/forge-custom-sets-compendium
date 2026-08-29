@@ -1,0 +1,14 @@
+Name:Sage's Ashes
+ManaCost:1
+Types:Artifact
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This artifact enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ ChangeZone | Cost$ T Sac<1/CARDNAME/this artifact> | Origin$ Graveyard | Destination$ Library | LibraryPosition$ 0 | ValidTgts$ Card | AITgts$ Card.YouOwn | TgtPrompt$ Select target card from a graveyard | SpellDescription$ Put target card from a graveyard on top of its owner's library.
+
+A:AB$ Draw | Cost$ 3 ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | SpellDescription$ Draw a card.
+
+Oracle:This artifact enters tapped.\n{T}, Sacrifice this artifact: Put target card from a graveyard on top of its owner's library.\n{3}, Exile this card from your graveyard: Draw a card.
+
+DeckHas:Ability$Graveyard

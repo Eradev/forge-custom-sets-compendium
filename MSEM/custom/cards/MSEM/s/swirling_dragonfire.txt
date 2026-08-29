@@ -1,0 +1,11 @@
+Name:Swirling Dragonfire
+ManaCost:6 R
+Types:Sorcery
+
+A:SP$ DealDamage | ValidTgts$ Any | TgtPrompt$ Select any target | NumDmg$ X | SpellDescription$ CARDNAME deals damage to any target equal to the number of instant and sorcery cards in your graveyard.
+SVar:X:Count$ValidGraveyard Instant.YouOwn,Sorcery.YouOwn
+
+Oracle:Swirling Dragonfire deals damage to any target equal to the number of instant and sorcery cards in your graveyard.
+
+DeckHas:Ability$Graveyard
+DeckNeeds:Type$Instant|Sorcery

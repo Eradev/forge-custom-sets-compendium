@@ -1,0 +1,13 @@
+Name:Mokuteki Ambusher
+ManaCost:1 R R
+Types:Creature Human Archer Samurai
+PT:3/1
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGrantAbility | TriggerDescription$ When this creature enters, until end of turn, other creatures you control gain "{T}: This creature deals 1 damage to any target."
+SVar:TrigGrantAbility:DB$ AnimateAll | ValidCards$ Creature.Other+YouCtrl | Abilities$ DamageAbility
+
+SVar:DamageAbility:AB$ DealDamage | Cost$ T | ValidTgts$ Any | NumDmg$ 1 | SpellDescription$ This creature deals 1 damage to any target.
+
+Oracle:Flash\nWhen this creature enters, until end of turn, other creatures you control gain "{T}: This creature deals 1 damage to any target."

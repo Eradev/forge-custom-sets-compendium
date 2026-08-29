@@ -1,0 +1,14 @@
+Name:Windwielder
+ManaCost:1 U
+Types:Creature Human Wizard
+PT:1/3
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ DBReturnInscription | TriggerDescription$ When CARDNAME enters, you may return target Inscription card from your graveyard to your hand.
+SVar:DBReturnInscription:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Card.Inscription+YouOwn | TgtPrompt$ Select target Inscription card in your graveyard | Optional$ True
+
+Oracle:Flying\nWhen Windwielder enters, you may return target Inscription card from your graveyard to your hand.
+
+DeckHas:Ability$Graveyard
+DeckHints:Type$Inscription

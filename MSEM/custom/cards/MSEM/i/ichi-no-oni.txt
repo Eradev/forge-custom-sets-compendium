@@ -1,0 +1,9 @@
+Name:Ichi-no-Oni
+ManaCost:1 B
+Types:Creature Demon Spirit
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigLoseLife | TriggerDescription$ When this creature enters, each player loses 2 life.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ Player | LifeAmount$ 2
+
+Oracle:When this creature enters, each player loses 2 life.

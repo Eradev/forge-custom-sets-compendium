@@ -1,0 +1,17 @@
+Name:Sankataar Ambusher
+ManaCost:2 G
+Types:Creature Snake Warrior
+PT:2/3
+
+K:Flash
+
+K:Poisonous:2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ X | SVarCompare$ GE1 | Execute$ TrigPump | TriggerDescription$ When this creature enters, if an opponent is poisoned, it gets +2/+2 until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +2 | NumDef$ +2
+
+SVar:X:Count$TotalOppPoisonCounters
+
+Oracle:Flash\nPoisonous 2 (Whenever this creature deals combat damage to a player, that player gets two poison counters. A player with ten or more poison counters loses the game.)\nWhen this creature enters, if an opponent is poisoned, it gets +2/+2 until end of turn.
+
+DeckHints:Keyword$Infect|Toxic|Poisonous

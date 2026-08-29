@@ -1,0 +1,12 @@
+Name:Fang of Mautakesh
+ManaCost:1 B G
+Types:Creature Snake Assassin
+PT:2/2
+
+K:Poisonous:2
+
+S:Mode$ Continuous | Affected$ Creature.Snake+YouCtrl | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Poisonous:1 | Description$ Snakes you control get +1/+1 and have poisonous 1. (Multiple instances of poisonous trigger separately.)
+
+Oracle:Poisonous 2 (Whenever this creature deals combat damage to a player, that player gets two poison counters. A player with ten or more poison counters loses the game.)\nSnakes you control get +1/+1 and have poisonous 1. (Multiple instances of poisonous trigger separately.)
+
+DeckHints:Keyword$Infect|Toxic|Poisonous & Type$Snake

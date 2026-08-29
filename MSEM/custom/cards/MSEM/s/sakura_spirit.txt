@@ -1,0 +1,10 @@
+Name:Sakura Spirit
+ManaCost:1 W
+Types:Creature Spirit
+PT:2/1
+
+K:Flying
+
+S:Mode$ Continuous | Affected$ Card.Self+enchanted,Card.Self+equipped | AddKeyword$ Lifelink | Description$ CARDNAME has lifelink as long as it's equipped, enchanted, or has a card inscribed onto it.
+
+Oracle:Flying\nSakura Spirit has lifelink as long as it's equipped, enchanted, or has a card inscribed onto it.

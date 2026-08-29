@@ -1,0 +1,16 @@
+Name:Taiyohata Champion
+ManaCost:1 R W
+Types:Creature Human Samurai
+PT:3/2
+
+K:Flash
+
+K:First Strike
+
+R:Event$ Moved | ValidCard$ Card.Self+wasCastByYou | Origin$ Stack | Destination$ Battlefield | ActivePhases$ Declare Attackers | PlayerTurn$ True | ReplaceWith$ ETBTapped | ReplacementResult$ Updated | Description$ If you cast this creature during your declare attackers step, it enters tapped and attacking.
+SVar:ETBTapped:DB$ Tap | Defined$ ReplacedCard | ETB$ True
+
+T:Mode$ ChangesZone | Origin$ Stack | Destination$ Battlefield | ValidCard$ Card.Self+wasCastByYou | Phase$ Declare Attackers | PlayerTurn$ True | Execute$ TrigAttack | Static$ True
+SVar:TrigAttack:DB$ ChangeCombatants | Defined$ Self | Attacking$ True
+
+Oracle:Flash\nFirst strike\nIf you cast this creature during your declare attackers step, it enters tapped and attacking.

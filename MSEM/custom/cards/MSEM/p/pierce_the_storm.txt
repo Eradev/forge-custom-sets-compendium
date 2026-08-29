@@ -1,0 +1,10 @@
+Name:Pierce the Storm
+ManaCost:X U
+Types:Instant
+
+A:SP$ Charm | Announce$ X | Choices$ DBCounterUnless,DBCounterExact
+SVar:DBCounterUnless:DB$ Counter | TargetType$ Spell | ValidTgts$ Card | TgtPrompt$ Select target spell | UnlessCost$ X | SpellDescription$ Counter target spell unless its controller pays {X}.
+SVar:DBCounterExact:DB$ Counter | TargetType$ Spell | ValidTgts$ Card.cmcEQX | TgtPrompt$ Select target spell with mana value X | SpellDescription$ Counter target spell with mana value X.
+SVar:X:Count$xPaid
+
+Oracle:Choose one —\n• Counter target spell unless its controller pays {X}.\n• Counter target spell with mana value X.

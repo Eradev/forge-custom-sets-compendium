@@ -1,0 +1,11 @@
+Name:Giku Weaponsmith
+ManaCost:3 R
+Types:Creature Human Artificer
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters, create two colorless Equipment artifact tokens with "Equipped creature gets +1/+1" and equip {1}.
+SVar:TrigToken:DB$ Token | TokenAmount$ 2 | TokenScript$ c_a_equipment_p1p1
+
+Oracle:When Giku Weaponsmith enters, create two colorless Equipment artifact tokens with "Equipped creature gets +1/+1" and equip {1}.
+
+DeckHas:Ability$Token

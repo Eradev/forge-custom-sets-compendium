@@ -1,0 +1,15 @@
+Name:Lord Shigure
+ManaCost:3 U
+Types:Legendary Creature Human Wizard
+PT:3/2
+
+K:Prowess
+
+T:Mode$ SpellCast | ValidCard$ Card.nonCreature | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigReduceCost | TriggerDescription$ Whenever you cast a noncreature spell, noncreature spells you cast cost {1} less to cast until end of turn.
+SVar:TrigReduceCost:DB$ Effect | StaticAbilities$ ReduceCost | Duration$ UntilEndOfTurn
+
+SVar:ReduceCost:Mode$ ReduceCost | ValidCard$ Card.nonCreature | Activator$ You | Type$ Spell | Amount$ 1 | Description$ Noncreature spells you cast cost {1} less to cast.
+
+Oracle:Prowess\nWhenever you cast a noncreature spell, noncreature spells you cast cost {1} less to cast until end of turn.
+
+DeckHints:Type$Instant|Sorcery

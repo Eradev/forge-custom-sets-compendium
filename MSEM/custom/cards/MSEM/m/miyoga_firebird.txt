@@ -1,0 +1,19 @@
+Name:Miyoga Firebird
+ManaCost:1 U R
+Types:Creature Phoenix
+PT:3/2
+
+K:Flying
+
+K:Haste
+
+S:Mode$ MustAttack | ValidCreature$ Card.Self | Description$ This creature attacks each combat if able.
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Graveyard | CheckSVar$ X | SVarCompare$ EQ3 | NoResolvingCheck$ True | OptionalDecider$ You | Execute$ TrigReturn | TriggerDescription$ Whenever you cast your third instant or sorcery spell this turn, you may return this card from your graveyard to the battlefield.
+SVar:TrigReturn:DB$ ChangeZone | Defined$ Self | Origin$ Graveyard | Destination$ Battlefield
+
+SVar:X:Count$ThisTurnCast_Instant.YouCtrl,Sorcery.YouCtrl
+
+Oracle:Flying, haste\nThis creature attacks each combat if able.\nWhenever you cast your third instant or sorcery spell this turn, you may return this card from your graveyard to the battlefield.
+
+DeckNeeds:Type$Instant|Sorcery

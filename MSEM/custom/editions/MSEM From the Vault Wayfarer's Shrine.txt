@@ -9,7 +9,7 @@ Type=Custom
 2 S Wayfarer's Shrine @Jude Smith
 3 S Wayfarer's Shrine @Alfven Ato
 4 S Wayfarer's Shrine @Alexander Minze Thümler
-5 S Wayfarer's Shrine @Taisa KislovarP)
+5 S Wayfarer's Shrine @Taisa Kislova (DarP)
 6 S Wayfarer's Shrine @Alexandr Pachin
 7 S Wayfarer's Shrine @su j Ahn
 8 S Wayfarer's Shrine @Grady Frederick

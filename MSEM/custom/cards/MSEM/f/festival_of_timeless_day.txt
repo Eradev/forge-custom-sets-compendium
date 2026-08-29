@@ -1,0 +1,10 @@
+Name:Festival of Timeless Day
+ManaCost:2 G
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | RememberTargets$ True | NumAtt$ +2 | NumDef$ +2 | SubAbility$ DBPumpAll | SpellDescription$ Target creature and all other creatures with the same name as that creature get +2/+2 until end of turn. Draw a card.
+SVar:DBPumpAll:DB$ PumpAll | ValidCards$ Remembered.sameName+Other+Creature | NumAtt$ +2 | NumDef$ +2 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw
+
+Oracle:Target creature and all other creatures with the same name as that creature get +2/+2 until end of turn.\nDraw a card.

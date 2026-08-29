@@ -1,0 +1,11 @@
+Name:Wizened Calligrapher
+ManaCost:2 U
+Types:Creature Human Wizard
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSearch | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may search your library for an instant or sorcery card, reveal it, then shuffle and put that card on top of it.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Library | LibraryPosition$ 0 | ChangeType$ Instant,Sorcery | ChangeTypeDesc$ instant or sorcery card | ShuffleNonMandatory$ True
+
+Oracle:When this creature enters, you may search your library for an instant or sorcery card, reveal it, then shuffle and put that card on top of it.
+
+DeckHints:Type$Instant|Sorcery

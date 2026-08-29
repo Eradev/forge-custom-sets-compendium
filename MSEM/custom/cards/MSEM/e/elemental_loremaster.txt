@@ -1,0 +1,11 @@
+Name:Elemental Loremaster
+ManaCost:2 R
+Types:Creature Human Wizard
+PT:3/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReturn | TriggerDescription$ When CARDNAME enters, return an instant or sorcery card at random from your graveyard to your hand.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ChangeType$ Instant.YouOwn,Sorcery.YouOwn | ChangeNum$ 1 | Hidden$ True | AtRandom$ True
+
+Oracle:When Elemental Loremaster enters, return an instant or sorcery card at random from your graveyard to your hand.
+
+DeckHas:Ability$Graveyard

@@ -1,0 +1,9 @@
+Name:Protector of the Gates
+ManaCost:W
+Types:Creature Human Samurai
+PT:2/2
+
+S:Mode$ CantAttack | ValidCard$ Card.Self | CheckSVar$ X | SVarCompare$ LT1 | Description$ CARDNAME can't attack unless it's equipped, enchanted, or has a card inscribed onto it.
+SVar:X:Count$Valid Card.Self+equipped,Card.Self+enchanted/Plus.IsInscribed
+
+Oracle:Protector of the Gates can't attack unless it's equipped, enchanted, or has a card inscribed onto it.

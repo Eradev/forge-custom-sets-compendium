@@ -1,0 +1,11 @@
+Name:Teikoku Daimyo
+ManaCost:1 W W
+Types:Creature Human Samurai
+PT:3/3
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigPutCounterAll | TriggerDescription$ Art of war — At the beginning of your end step, if CARDNAME dealt damage to an opponent this turn, put a +1/+1 counter on each creature you control that attacked this turn.
+SVar:TrigPutCounterAll:DB$ PutCounterAll | ValidCards$ Creature.YouCtrl+attackedThisTurn | CounterType$ P1P1 | CounterNum$ 1
+
+Oracle:Art of war — At the beginning of your end step, if Teikoku Daimyo dealt damage to an opponent this turn, put a +1/+1 counter on each creature you control that attacked this turn.
+
+DeckHas:Ability$Counters

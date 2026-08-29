@@ -1,0 +1,11 @@
+Name:Imperial Legion
+ManaCost:2 G G
+Types:Creature Human Samurai
+PT:4/4
+
+K:Trample
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigPutCounter | TriggerDescription$ Art of war — At the beginning of each end step, if this creature dealt damage to an opponent this turn, put a +1/+1 counter on it.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 2
+
+Oracle:Trample\nArt of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, put two +1/+1 counters on it.

@@ -1,0 +1,14 @@
+Name:Kiyomi's Yoroi
+ManaCost:2 B
+Types:Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | Description$ Equipped creature gets +2/+2.
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Creature.EquippedBy+dealtDamageToOppThisTurn | Execute$ TrigReturn | OptionalDecider$ You | TriggerDescription$ Art of war — At the beginning of your end step, if equipped creature dealt damage to an opponent this turn, you may return target creature card from your graveyard to your hand.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Creature.YouOwn | TgtPrompt$ Select target creature card in your graveyard
+
+K:Equip:2
+
+Oracle:Equipped creature gets +2/+2.\nArt of war — At the beginning of your end step, if equipped creature dealt damage to an opponent this turn, you may return target creature card from your graveyard to your hand.\nEquip {2}
+
+DeckHas:Ability$Graveyard

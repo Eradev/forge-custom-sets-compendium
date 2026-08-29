@@ -1,0 +1,13 @@
+Name:Sankataar Coilborn
+ManaCost:1 G
+Types:Creature Snake Warrior
+PT:2/2
+
+K:Poisonous:2
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | CheckSVar$ X | SVarCompare$ GE1 | Description$ This creature gets +1/+1 as long as an opponent is poisoned.
+SVar:X:Count$TotalOppPoisonCounters
+
+Oracle:Poisonous 2 (Whenever this creature deals combat damage to a player, that player gets two poison counters. A player with ten or more poison counters loses the game.)\nThis creature gets +1/+1 as long as an opponent is poisoned.
+
+DeckHints:Keyword$Infect|Toxic|Poisonous

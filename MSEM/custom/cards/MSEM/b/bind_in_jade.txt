@@ -1,0 +1,11 @@
+Name:Bind in Jade
+ManaCost:G
+Types:Instant
+
+A:SP$ Effect | StaticAbilities$ STBlankGraveyards | Duration$ EndOfTurn | SubAbility$ DBDraw | SpellDescription$ Until end of turn, cards in graveyards lose all names, card types, and abilities. Draw a card.
+SVar:STBlankGraveyards:Mode$ Continuous | Affected$ Card | AffectedZone$ Graveyard | SetName$   | RemoveCardTypes$ True | RemoveType$ Instant & Sorcery | RemoveAllAbilities$ True
+SVar:DBDraw:DB$ Draw
+
+Oracle:Until end of turn, cards in graveyards lose all names, card types, and abilities.\nDraw a card.
+
+DeckHas:Ability$Graveyard

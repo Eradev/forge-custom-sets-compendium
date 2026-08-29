@@ -1,0 +1,8 @@
+Name:Servant of the White Hand
+ManaCost:1 W B
+Types:Creature Human Samurai
+PT:2/2
+
+S:Mode$ RaiseCost | ValidCard$ Card.nonCreature | Type$ Spell | Activator$ Opponent | Amount$ 1 | Description$ Noncreature spells your opponents cast cost {1} more to cast.
+
+Oracle:Noncreature spells your opponents cast cost {1} more to cast.
