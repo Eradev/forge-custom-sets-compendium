@@ -50,6 +50,4 @@ SVar:ABLordAsharoCast:AB$ NameCard | Cost$ T | Defined$ You | ChooseFromList$ Wi
 SVar:DBLordAsharoCast:DB$ Play | CopyFromChosenName$ True | WithoutManaCost$ True | SubAbility$ DBLordAsharoCleanup | StackDescription$ None
 SVar:DBLordAsharoCleanup:DB$ Cleanup | ClearNamedCard$ True
 
-
-When you next cast an instant or sorcery spell this turn, copy that spell. You may choose new targets for the copy.
-Inscribe {2}{R}{R} ({2}{R}{R}: Exile this card from your hand inscribed on a creature you control. Whenever that creature attacks, its controller may cast a copy of the inscribed card without paying its mana cost. Inscribe only as a sorcery.)
+Oracle:When you next cast an instant or sorcery spell this turn, copy that spell. You may choose new targets for the copy.\nInscribe {2}{R}{R} ({2}{R}{R}: Exile this card from your hand inscribed on a creature you control. Whenever that creature attacks, its controller may cast a copy of the inscribed card without paying its mana cost. Inscribe only as a sorcery.)
