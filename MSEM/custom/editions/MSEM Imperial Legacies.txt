@@ -150,11 +150,13 @@ Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 142 L Forest @Hai Hoang
 
 [tokens]
-1 c_1_1_samurai
-2 c_copy_spirit
-3 u_1_1_bird_flying
-4 c_a_equipment_p1p1
-5 c_a_equipment_p1p1
+1 c_1_1_samurai @Gong Studios
+3 u_1_1_bird_flying @Allison O'Neil
+4 c_a_equipment_p1p1 @Aurelien Hubert
+5 c_a_equipment_p1p1 @L5RWiki
+
+[other]
+2 c_copy_spirit @Aurelien Hubert
 
 [WalkerTypes]
 Ayashi
