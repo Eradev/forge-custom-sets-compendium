@@ -1,0 +1,15 @@
+Name:Flameshriek Amalgam
+ManaCost:X 1 R
+Types:Creature Mouse Dragon
+PT:1/1
+
+K:Ravenous
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDamage | TriggerDescription$ When this creature enters, it deals damage equal to its power to any target.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ Y
+SVar:Y:Count$CardPower
+SVar:X:Count$xPaid
+
+Oracle:Ravenous (This creature enters with X +1/+1 counters on it. If X is 5 or more, draw a card when it enters.)\nWhen this creature enters, it deals damage equal to its power to any target.
+
+DeckHas:Ability$Counters

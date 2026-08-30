@@ -1,0 +1,12 @@
+Name:Feral Rage
+ManaCost:G
+Types:Sorcery
+
+A:SP$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ +X | KW$ Trample | Duration$ UntilTheEndOfTargetedNextTurn | SubAbility$ DBEffect | SpellDescription$ Target creature gets +X/+0 and gains trample until the end of its controller's next turn, where X is its power. At the beginning of its controller's next end step, it deals damage to itself equal to its power.
+SVar:X:Targeted$CardPower
+SVar:DBEffect:DB$ Effect | RememberObjects$ Targeted | EffectOwner$ TargetedController | Duration$ UntilYourNextEndStep | Triggers$ TrigEnd | ExileOnMoved$ Battlefield
+SVar:TrigEnd:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | Execute$ TrigDmg | TriggerDescription$ At the beginning of its controller's next end step, that creature deals damage to itself equal to its power.
+SVar:TrigDmg:DB$ DealDamage | Defined$ Remembered | DamageSource$ Remembered | NumDmg$ Z
+SVar:Z:Remembered$CardPower
+
+Oracle:Target creature gets +X/+0 and gains trample until the end of its controller's next turn, where X is its power.\nAt the beginning of its controller's next end step, it deals damage to itself equal to its power.
