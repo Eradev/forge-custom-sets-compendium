@@ -1,0 +1,13 @@
+Name:Jin-Gitaxias, Synthesis Architect
+ManaCost:6 U U
+Types:Legendary Creature Phyrexian Praetor
+PT:8/11
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When NICKNAME enters, draw four cards.
+SVar:TrigDraw:DB$ Draw | NumCards$ 4
+
+A:AB$ TapOrUntap | Cost$ Discard<1/Card> | ValidTgts$ Artifact,Creature,Land | TgtPrompt$ Select target artifact, creature, or land | SpellDescription$ You may tap or untap target artifact, creature, or land.
+
+Oracle:Flash\nWhen Jin-Gitaxias enters, draw four cards.\nDiscard a card: You may tap or untap target artifact, creature, or land.
