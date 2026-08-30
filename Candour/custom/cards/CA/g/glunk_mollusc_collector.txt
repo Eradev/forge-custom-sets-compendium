@@ -1,0 +1,18 @@
+Name:Glunk, Mollusc Collector
+ManaCost:2 B
+Types:Legendary Planeswalker Glunk
+Loyalty:3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReturn | TriggerDescription$ When NICKNAME enters, return target creature card with power or toughness 1 or less from your graveyard to the battlefield.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature.YouOwn+powerLE1,Creature.YouOwn+toughnessLE1 | TgtPrompt$ Select target creature card with power or toughness 1 or less in your graveyard
+
+A:AB$ Token | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | TokenScript$ b_0_1_snail | SpellDescription$ Create a 0/1 black Snail creature token.
+
+A:AB$ Sacrifice | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | SacValid$ Creature | Optional$ True | RememberSacrificed$ True | SubAbility$ DBDraw | SpellDescription$ You may sacrifice a creature. If you do, draw a card. If that creature was a Snail, each opponent loses 2 life.
+SVar:DBDraw:DB$ Draw | ConditionDefined$ Remembered | ConditionPresent$ Card | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 2 | ConditionDefined$ Remembered | ConditionPresent$ Snail | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When Glunk enters, return target creature card with power or toughness 1 or less from your graveyard to the battlefield.\n[+1]: Create a 0/1 black Snail creature token.\n[0]: You may sacrifice a creature. If you do, draw a card. If that creature was a Snail, each opponent loses 2 life.
+
+DeckHas:Ability$Token|Sacrifice|Graveyard & Type$Snail

@@ -1,0 +1,12 @@
+Name:Galehenge Siege
+ManaCost:1 W
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Permanent.nonCreature+OppCtrl | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever a noncreature permanent an opponent controls leaves the battlefield, create two 1/1 red Warrior creature tokens.
+SVar:TrigToken:DB$ Token | TokenAmount$ 2 | TokenScript$ r_1_1_warrior
+
+A:AB$ Destroy | Cost$ 3 | PrecostDesc$ Exhaust — | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment | Exhaust$ True | SpellDescription$ Destroy target artifact or enchantment. (Activate each exhaust ability only once.)
+
+Oracle:Whenever a noncreature permanent an opponent controls leaves the battlefield, create two 1/1 red Warrior creature tokens.\nExhaust — {3}: Destroy target artifact or enchantment. (Activate each exhaust ability only once.)
+
+DeckHas:Ability$Token & Type$Warrior
