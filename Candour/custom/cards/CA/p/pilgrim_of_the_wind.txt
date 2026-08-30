@@ -1,0 +1,17 @@
+Name:Pilgrim of the Wind
+ManaCost:1 U
+Types:Creature Bird Wizard
+PT:2/2
+
+K:Flash
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigTap | TriggerDescription$ When this creature enters, tap target creature an opponent controls and put a stun counter on it. It loses all abilities until end of turn.
+SVar:TrigTap:DB$ Tap | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | SubAbility$ DBPutCounter
+SVar:DBPutCounter:DB$ PutCounter | Defined$ Targeted | CounterType$ Stun | SubAbility$ DBAnimate
+SVar:DBAnimate:DB$ Animate | Defined$ Targeted | RemoveAllAbilities$ True | IsCurse$ True
+
+Oracle:Flash\nFlying\nWhen this creature enters, tap target creature an opponent controls and put a stun counter on it. It loses all abilities until end of turn.
+
+SVar:PlayMain1:TRUE

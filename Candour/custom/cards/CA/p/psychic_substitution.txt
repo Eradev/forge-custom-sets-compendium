@@ -1,0 +1,10 @@
+Name:Psychic Substitution
+ManaCost:U
+Types:Sorcery
+
+A:SP$ ChangeZone | ValidTgts$ Player | TgtPrompt$ Select target player | Origin$ Hand | Destination$ Library | LibraryPosition$ -1 | ChangeType$ Card.nonLand | ChangeNum$ 1 | Hidden$ True | RememberChanged$ True | Chooser$ You | Optional$ True | IsCurse$ True | SubAbility$ DBDrawTarget | SpellDescription$ Look at target player's hand. You may choose a nonland card from it. If you do, that player reveals the chosen card, puts it on the bottom of their library, then draws a card. Draw a card.
+SVar:DBDrawTarget:DB$ Draw | Defined$ Targeted | SubAbility$ DBDrawYou | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ1
+SVar:DBDrawYou:DB$ Draw | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Look at target player's hand. You may choose a nonland card from it. If you do, that player reveals the chosen card, puts it on the bottom of their library, then draws a card.\nDraw a card.

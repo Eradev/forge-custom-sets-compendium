@@ -1,0 +1,12 @@
+Name:Primordial Flourish
+ManaCost:X 1 G
+Types:Sorcery
+
+S:Mode$ RaiseCost | ValidCard$ Card.Self | Activator$ You | Type$ Spell | Cost$ ChooseCard<1/Creature.YouCtrl+cmcLEX+inZoneBattlefield> | EffectZone$ All | Description$ As an additional cost to cast this spell, choose a creature you control with mana value X or less.
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Creature.cmcLEY | ChangeNum$ 2 | StackDescription$ SpellDescription | SpellDescription$ Search your library for up to two creature cards each with mana value less than or equal to the chosen creature's mana value, put them onto the battlefield, then shuffle.
+
+SVar:X:Count$xPaid
+SVar:Y:Revealed$CardManaCost
+
+Oracle:As an additional cost to cast this spell, choose a creature you control with mana value X or less.\nSearch your library for up to two creature cards each with mana value less than or equal to the chosen creature's mana value, put them onto the battlefield, then shuffle.

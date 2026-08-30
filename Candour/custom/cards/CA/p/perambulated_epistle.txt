@@ -1,0 +1,15 @@
+Name:Perambulated Epistle
+ManaCost:2
+Types:Artifact
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigETB | TriggerDescription$ When this artifact enters, scry 1, then target creature you control explores.
+SVar:TrigETB:DB$ Scry | SubAbility$ DBExplore
+SVar:DBExplore:DB$ Explore | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control
+
+T:Mode$ AttackersDeclared | AttackingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigExile | OptionalDecider$ You | TriggerDescription$ Whenever you attack, you may exile this artifact. If you do, return it to the battlefield under its owner's control.
+SVar:TrigExile:DB$ ChangeZone | Defined$ Self | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Defined$ CorrectedSelf | Origin$ All | Destination$ Battlefield
+
+Oracle:When this artifact enters, scry 1, then target creature you control explores.\nWhenever you attack, you may exile this artifact. If you do, return it to the battlefield under its owner's control.
+
+DeckHas:Ability$Counters
