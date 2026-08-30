@@ -1,0 +1,165 @@
+[metadata]
+Code=MSEM_IMP
+Name=Imperial Legacies
+Date=2017-06-08
+Type=Custom
+Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
+
+[cards]
+1 M Ayashi, Winter Poet @Mario Wibisono
+2 M Azuma Hashiro, the Thronebreaker @Drew Baker
+3 C Dragonwall Samurai @Miguel Coimbra
+4 C Dreadful Authority @Miguel Coimbra
+5 R Emperor's Retainer @Conceptopolis
+6 M Empress Kogane @Mario Wibisono
+7 R Exemplar of Honor @Albert Tavira
+8 C Festival of Fading Lights @IFS
+9 R Final Rest @Eddie Sharam
+10 R Flash of Steel @Isuardi Therianto
+11 U Harmony @Francisco Miyara
+12 C Imperial Strategist @Jason Engle
+13 U Kogane's Swordmaster @Conceptopolis
+14 U Kogane's Yoroi @Aurelien Hubert
+15 U Oshiruko Cleansing @Wen Juinn
+16 C Protector of the Gates @Tony Foti
+17 C Sakura Spirit @Hannah Böving
+18 U Sheraku Elite @Adam Schumpert
+19 R Taiyohata's Dominion @Alayna Lemmer
+20 C Teikoku Cavalry @Andrew Olson
+21 U Teikoku Daimyo @Conceptopolis
+22 C Teikoku Samurai @Shen Fei
+23 C Valor in Battle @Aurelien Hubert
+24 U Voice of Sheraku @Conceptopolis
+25 C Will of the Emperor @Conceptopolis
+26 R Favor of the Court @Mario Wibisono
+27 C Festival of Winter's Night @A.C. Swedberg
+28 C Flow of the River @Crystal Ben
+29 C Hinasa Mystic @Wen Juinn
+30 C Imperial Taxes @Wen Juinn
+31 C Inner Thoughts @Aurelien Hubert
+32 C Jidai Serpent @Felipe Gaona
+33 R Kowareta Scrounger @Conceptopolis
+34 M Lord Shigure @Jason Engle
+35 R Masked Impersonator @Michael Komack
+36 U Pierce the Storm @Dmitry Burmak
+37 C Reversal of Fates @Sergio Camarena
+38 R Seek the Future @Charles Urbach
+39 U Seeker of Mysteries @Jason Engle
+40 R Sensei of the Seven Winds @Marcel Mercado
+41 U Shigure's Yoroi @Aurelien Hubert
+42 U Shroud of Hinasa @Conceptopolis
+43 C Silk Crane Adept @Isuardi Therianto
+44 C Soaring Dreams @Anna Christenson
+45 U Student of Shigure @Immar Palomera
+46 U Tranquil Ascetic @Matt Zeilinger
+47 C Windwielder @Matt Zeilinger
+48 U Wizened Calligrapher @Veronica V. Jones
+49 C Blade of the Serpent @Charles Urbach
+50 R Council's Will @Jason Engle
+51 C Disciple of Hashiro @Conceptopolis
+52 U Discorporate @Adam Schumpert
+53 C Hashiro's Infiltrator @Drew Baker
+54 C Ichi-no-Oni @Eric Lofgren
+55 C Imperial Kensai @William O'connor
+56 U Kiyomi's Disciple @Sam Flegal
+57 U Kiyomi's Yoroi @Aurelien Hubert
+58 R Kurayami Ronin @Drew Baker
+59 M Lady Kiyomi @Charles Urbach
+60 C Masked Stalker @Jason Engle
+61 U Midnight's Pale Moon @Lino Drieghe
+62 R The Moon Rises @Chris Ostrowski
+63 R Sankataar Nightbringer @Conceptopolis
+64 C Sankataar Scourge @Conceptopolis
+65 C Serpent's Grasp @Carlos Nuñez de Castro Torres
+66 U Snake Cult Initiation @Carlos Nuñez de Castro Torres
+67 U Soul Leak @Lake Hurwitz
+68 R Storm of Shadows @Luis Nuñez de Castro Torres
+69 U Touch of the Coil @Conceptopolis
+70 C Unearth the Fallen @Hugh Jamieson
+71 U Vizier of Mautakesh @Conceptopolis
+72 U Asharo's Handmaiden @Mario Wibisono
+73 U Asharo's Yoroi @Aurelien Hubert
+74 C Dragon's Ire @Mark Pennington
+75 U Elemental Loremaster @Richard Garcia
+76 C Festival of Roaring Dragons @Damien Mammoliti
+77 R Fireheart Channeler @Jason Engle
+78 U Giku Weaponsmith @Matt Zeilinger
+79 M Lord Asharo @Jazz Siy
+80 R Masterwork Artisan @Matt Zeilinger
+81 C Miyoga Dragonsoul @William O'Connor
+82 R Mokuteki Ambusher @Lee Smith
+83 C Sasori Ronin @Florian Stitz
+84 U Scorch @Steve Argyle
+85 R Searing Script @Wen Juinn
+86 U Stonesculpting @Jason Engle
+87 C Sudden Seism @Carlos Nuñez de Castro Torres
+88 C Swirling Dragonfire @Edwin David
+89 C Teikoku Skirmisher @Jason Juta
+90 U Violent Repercussions @Edwin David
+91 C Void Sculptor @Conceptopolis
+92 C Wavebreaker @Shen Fei
+93 R Wild Lightning @Diego Gisbert Llorens
+94 C Yamisaran Guard @Marcel Mercado
+95 C Aghavaan's Corrupter @Hoover & Spears
+96 R Awakening the Dragon @Calderon Studio
+97 U Bind in Jade @Diego Gisbert LLorens
+98 R Chalkira Duelist @Steve Argyle
+99 C Day of the Emperor @Chris Ostrowski
+100 M Emperor Kenshiro @Shen Fei
+101 C Festival of Timeless Day @Adam Denton
+102 C Hone the Blade @Michael Philippi
+103 C Imperial Legion @Shen Fei
+104 U Kenshiro's Cavalry @Marcel Mercado
+105 U Kenshiro's Yoroi @Aurelien Hubert
+106 R Legends Remembered @Wen Juinn
+107 C Masamori Ranger @James Hall
+108 U Mautakesh Strangler @Conceptopolis
+109 R Raiun Bay Admiral @Shen Fei
+110 U Raiun Bay Merchant @Jonathan Moore
+111 C Sankataar Ambusher @Conceptopolis
+112 C Sankataar Assailant @Conceptopolis
+113 C Sankataar Coilborn @Conceptopolis
+114 R Scales of Aghavaan @Conceptopolis
+115 U Shinrin Blademaster @Sergio Camarena
+116 C Shinrin Sage @Hai An
+117 U Through the Mists @Carlos Nuñez de Castro Torres
+118 U Fang of Mautakesh @Conceptopolis
+119 U Miyoga Firebird @IFS
+120 U Servant of the White Hand @Greg Lambrakis
+121 U Shinrin Spellhunter @Conceptopolis
+122 U Taiyohata Champion @Slawomir Maniak
+123 R Celestial O-Yoroi @Aurelien Hubert
+124 R Cursed Scroll @Gong Studios
+125 R Dragon's Wake @Gong Studios
+126 U Dragonwall Fragment @Chris Ostrowski
+127 M Palace of Heavenly Sovereigns @Alayna Lemmer
+128 C Raiun Bay Junk @George Rushing
+129 R Sage's Ashes @Erich Schreiner
+130a M Aghavaan's Wound @Jon Hodgson
+131 R Ancient Ossuary @Chris Ostrowski
+132 R Clutch of the Coil @Conceptopolis
+133 U Heavenly Temple @Charles Urbach
+134 C Imperial Marketplace @Marcel Mercado
+135 R Shrouded Sanctuary @Charles Urbach
+136 R Sunrise Orchard @Chris Ostrowski
+137 R Wayfarer's Shrine @Chris Ostrowski
+138 L Plains @Hai Hoang
+139 L Island @Hai Hoang
+140 L Swamp @Hai Hoang
+141 L Mountain @Hai Hoang
+142 L Forest @Hai Hoang
+
+[tokens]
+1 c_1_1_samurai @Gong Studios
+3 u_1_1_bird_flying @Allison O'Neil
+4 c_a_equipment_p1p1 @Aurelien Hubert
+5 c_a_equipment_p1p1 @L5RWiki
+
+[other]
+2 c_copy_spirit @Aurelien Hubert
+
+[WalkerTypes]
+Ayashi
+
+[SpellTypes]
+Inscription

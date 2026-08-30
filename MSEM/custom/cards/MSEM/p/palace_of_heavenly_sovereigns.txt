@@ -1,0 +1,45 @@
+Name:Palace of Heavenly Sovereigns
+ManaCost:5
+Types:Legendary Artifact
+
+S:Mode$ Continuous | Affected$ Instant.YouOwn,Sorcery.YouOwn | AffectedZone$ Hand | AddAbility$ PalaceInscribe | AddSVar$ STInscribeDesc & InscribeOnCreature & SVarInscribed & STShokanBattalionBonus & STSakuraSpiritBonus & STSakiBonus & InscribeTrigger & PlayInscribed & InscribedCreatureLeaves & InscriptionRemovedFromExile & ExileEffect & UnearthlyGraceReturnSignal & ReturnInscription & UnearthlyGraceDeclineSignal & EndInscriptionAfterGrace | Description$ Each instant and sorcery card you own that isn't on the battlefield has inscribe. The inscribe cost is equal to its mana cost.
+
+SVar:PalaceInscribe:AB$ Effect | Cost$ ExileFromHand<1/CARDNAME/this card> Mana<0\Exiled> | CostDesc$ Pay this card's mana cost and exile it from your hand: | PrecostDesc$ Inscribe — | ActivationZone$ Hand | ValidTgts$ Creature.YouCtrl | TgtZone$ Battlefield | TgtPrompt$ Select target creature you control | SorcerySpeed$ True | Name$ Inscription Effect | ConditionDefined$ Self | ConditionPresent$ Card.inZoneExile | ConditionCompare$ EQ1 | RememberObjects$ Targeted | ImprintCards$ Self | StaticAbilities$ STInscribeDesc,STShokanBattalionBonus,STSakuraSpiritBonus,STSakiBonus | Triggers$ InscribeTrigger,InscribedCreatureLeaves,InscriptionRemovedFromExile,UnearthlyGraceReturnSignal,UnearthlyGraceDeclineSignal | Duration$ Permanent | SpellDescription$ Exile this card inscribed on a creature you control. Whenever that creature attacks, its controller may cast a copy of the inscribed card without paying its mana cost. Activate only as a sorcery.
+
+S:Mode$ Continuous | Affected$ Instant.YouOwn,Sorcery.YouOwn | AffectedZone$ Graveyard | AddAbility$ PalaceInscribeGraveyard | AddSVar$ STInscribeDesc & InscribeOnCreature & SVarInscribed & STShokanBattalionBonus & STSakuraSpiritBonus & STSakiBonus & InscribeTrigger & PlayInscribed & InscribedCreatureLeaves & InscriptionRemovedFromExile & ExileEffect & UnearthlyGraceReturnSignal & ReturnInscription & UnearthlyGraceDeclineSignal & EndInscriptionAfterGrace | Secondary$ True
+
+SVar:PalaceInscribeGraveyard:AB$ Effect | Cost$ ExileFromGrave<1/CARDNAME/this card> Mana<0\Exiled> | CostDesc$ Pay this card's mana cost and exile it from your graveyard: | ActivationZone$ Graveyard | ValidTgts$ Creature.YouCtrl | TgtZone$ Battlefield | TgtPrompt$ Select target creature you control | SorcerySpeed$ True | Name$ Inscription Effect | ConditionDefined$ Self | ConditionPresent$ Card.inZoneExile | ConditionCompare$ EQ1 | RememberObjects$ Targeted | ImprintCards$ Self | StaticAbilities$ STInscribeDesc,STShokanBattalionBonus,STSakuraSpiritBonus,STSakiBonus | Triggers$ InscribeTrigger,InscribedCreatureLeaves,InscriptionRemovedFromExile,UnearthlyGraceReturnSignal,UnearthlyGraceDeclineSignal | Duration$ Permanent | CheckSVar$ CanInscribeFromGraveyard | SVarCompare$ GE1 | Secondary$ True
+
+SVar:STInscribeDesc:Mode$ Continuous | Affected$ Card.IsRemembered | Secondary$ True | AddStaticAbility$ InscribeOnCreature | AddSVar$ SVarInscribed
+
+SVar:InscribeOnCreature:Mode$ Continuous | Affected$ Card.Self | Description$ Inscribed
+
+SVar:SVarInscribed:SVar:IsInscribed:Number$1
+
+SVar:STShokanBattalionBonus:Mode$ Continuous | Affected$ Card.IsRemembered+namedShokan Battalion | AddKeyword$ Double Strike | Secondary$ True
+
+SVar:STSakuraSpiritBonus:Mode$ Continuous | Affected$ Card.IsRemembered+namedSakura Spirit | AddKeyword$ Lifelink | Secondary$ True
+
+SVar:STSakiBonus:Mode$ Continuous | Affected$ Card.IsRemembered+namedSaki of the Sea and Sky | AddPower$ 1 | AddToughness$ 1 | Secondary$ True
+
+SVar:InscribeTrigger:Mode$ Attacks | ValidCard$ Card.IsRemembered | Execute$ PlayInscribed | TriggerDescription$ Whenever the inscribed creature attacks, its controller may cast a copy of the card inscribed on it without paying its mana cost.
+
+SVar:PlayInscribed:DB$ Play | Defined$ Imprinted | WithoutManaCost$ True | CopyCard$ True | Optional$ True | Controller$ TriggeredAttackerController | ValidSA$ Spell
+
+SVar:InscribedCreatureLeaves:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.IsRemembered | IsPresent$ Card.namedUnearthly Grace+YouCtrl | PresentZone$ Battlefield | PresentCompare$ EQ0 | Execute$ ExileEffect | Static$ True | TriggerDescription$ When the inscribed creature leaves the battlefield, end the inscription.
+
+SVar:InscriptionRemovedFromExile:Mode$ ChangesZone | Origin$ Exile | ValidCard$ Card.IsImprinted | Execute$ ExileEffect | Static$ True
+
+SVar:ExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+
+SVar:UnearthlyGraceReturnSignal:Mode$ AbilityTriggered | ValidMode$ Immediate | ValidSource$ Card.namedUnearthly Grace | ValidSpellAbility$ Ability.NamedAbilityGraceReturnSignal | Execute$ ReturnInscription | Static$ True
+
+SVar:ReturnInscription:DB$ ChangeZone | Defined$ Imprinted | Origin$ Exile | Destination$ Hand | ConditionDefined$ TriggeredSpellAbility>DelayTriggerRememberedLKI | ConditionPresent$ Card.IsRemembered | ConditionCompare$ EQ1
+
+SVar:UnearthlyGraceDeclineSignal:Mode$ AbilityTriggered | ValidMode$ Immediate | ValidSource$ Card.namedUnearthly Grace | ValidSpellAbility$ Ability.NamedAbilityGraceDeclineSignal | Execute$ EndInscriptionAfterGrace | Static$ True
+
+SVar:EndInscriptionAfterGrace:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile | ConditionDefined$ TriggeredSpellAbility>DelayTriggerRememberedLKI | ConditionPresent$ Card.IsRemembered | ConditionCompare$ EQ1
+
+Oracle:Each instant and sorcery card you own that isn't on the battlefield has inscribe. The inscribe cost is equal to its mana cost. (Exile that spell card inscribed on a creature you control. Whenever that creature attacks, its controller may cast a copy of the inscribed card without paying its mana cost. Inscribe only as a sorcery.)
+
+DeckHints:Type$Instant|Sorcery

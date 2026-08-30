@@ -1,0 +1,14 @@
+Name:Dragonwall Samurai
+ManaCost:2 W
+Types:Creature Human Samurai
+PT:2/1
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPrevent | TriggerDescription$ When this creature enters, prevent all combat damage target creature would deal this turn.
+SVar:TrigPrevent:DB$ Effect | ValidTgts$ Creature | TgtPrompt$ Select target creature whose combat damage will be prevented | ReplacementEffects$ RPrevent | RememberObjects$ Targeted | ExileOnMoved$ Battlefield
+SVar:RPrevent:Event$ DamageDone | Prevent$ True | IsCombat$ True | ValidSource$ Card.IsRemembered | Description$ Prevent all combat damage target creature would deal this turn.
+
+Oracle:Flash\nWhen this creature enters, prevent all combat damage target creature would deal this turn.
+
+SVar:AmbushAI:True

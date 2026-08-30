@@ -1,0 +1,14 @@
+Name:Kogane's Yoroi
+ManaCost:2 W
+Types:Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | Description$ Equipped creature gets +2/+2.
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Creature.EquippedBy+dealtDamageToOppThisTurn | Execute$ TrigToken | TriggerDescription$ Art of war — At the beginning of your end step, if equipped creature dealt damage to an opponent this turn, create a 1/1 colorless Samurai creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_samurai
+
+K:Equip:2
+
+Oracle:Equipped creature gets +2/+2.\nArt of war — At the beginning of your end step, if equipped creature dealt damage to an opponent this turn, create a 1/1 colorless Samurai creature token.\nEquip {2}
+
+DeckHas:Ability$Token

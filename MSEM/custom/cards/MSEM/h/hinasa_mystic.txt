@@ -1,0 +1,11 @@
+Name:Hinasa Mystic
+ManaCost:1 U
+Types:Creature Human Wizard
+PT:0/1
+
+K:Prowess
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Destination$ Battlefield | Execute$ TrigDraw | TriggerDescription$ When this creature enters, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhen this creature enters, draw a card.

@@ -1,0 +1,14 @@
+Name:Student of Shigure
+ManaCost:2 U
+Types:Creature Human Samurai
+PT:2/3
+
+K:Prowess
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | OptionalDecider$ You | Execute$ TrigDraw | TriggerDescription$ Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, you may draw a card, then discard a card.
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose
+
+Oracle:Prowess\nArt of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, you may draw a card, then discard a card.
+
+DeckHas:Ability$Discard

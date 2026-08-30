@@ -1,0 +1,9 @@
+Name:Wavebreaker
+ManaCost:1 R
+Types:Creature Human Wizard
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMana | TriggerDescription$ When this creature enters, add two mana of any one color. You can't spend this mana to cast spells.
+SVar:TrigMana:DB$ Mana | Produced$ Any | Amount$ 2 | RestrictValid$ nonSpell
+
+Oracle:When this creature enters, add two mana of any one color. You can't spend this mana to cast spells.

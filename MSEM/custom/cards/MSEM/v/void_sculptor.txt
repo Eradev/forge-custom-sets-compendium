@@ -1,0 +1,11 @@
+Name:Void Sculptor
+ManaCost:R
+Types:Creature Human Wizard
+PT:1/1
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ Player | TriggerZones$ Battlefield | CheckSVar$ X | Execute$ TrigDamage | TriggerDescription$ At the beginning of each end step, if you've cast a noncreature spell this turn, this creature deals 1 damage to each opponent.
+SVar:TrigDamage:DB$ DealDamage | Defined$ Opponent | NumDmg$ 1
+
+SVar:X:Count$ThisTurnCast_Card.nonCreature+YouCtrl
+
+Oracle:At the beginning of each end step, if you've cast a noncreature spell this turn, this creature deals 1 damage to each opponent.

@@ -72,6 +72,8 @@ Pyramids of Atuum (POA)               -  98% (126/128)
   Missing cards:
     * Righteous Priestess
     * Sphinx of Riddles
+Imperial Legacies (IMP)               -  99% (141/142)
+    * Bind in Jade
 Aftermath (AFM)                       -  90% (228/254)
   Missing cards:
     * Every card with Reprise, or referencing it.

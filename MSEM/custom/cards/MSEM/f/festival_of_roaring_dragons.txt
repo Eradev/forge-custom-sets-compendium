@@ -1,0 +1,11 @@
+Name:Festival of Roaring Dragons
+ManaCost:2 R
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Artifact | TgtPrompt$ Select target artifact | SubAbility$ DBDestroyAll | SpellDescription$ Destroy target artifact and all other artifacts with the same name as that artifact. Draw a card.
+SVar:DBDestroyAll:DB$ DestroyAll | ValidCards$ TargetedCard.Self,Artifact.NotDefinedTargeted+sharesNameWith Targeted | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw
+
+Oracle:Destroy target artifact and all other artifacts with the same name as that artifact.\nDraw a card.
+
+AI:RemoveDeck:All

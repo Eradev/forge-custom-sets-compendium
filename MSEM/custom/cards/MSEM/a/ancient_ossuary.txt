@@ -1,0 +1,9 @@
+Name:Ancient Ossuary
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ ChangeZone | Cost$ 3 Discard<1/CARDNAME/this card> | ActivationZone$ Hand | Origin$ Library | Destination$ Hand | ChangeType$ Land | ChangeNum$ 1 | SpellDescription$ Search your library for a land card, reveal it, put it into your hand, then shuffle.
+
+Oracle:{T}: Add {C}.\n{3}, Discard this card: Search your library for a land card, reveal it, put it into your hand, then shuffle.

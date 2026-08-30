@@ -1,0 +1,11 @@
+Name:Clutch of the Coil
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Animate | Cost$ 1 | Defined$ Self | Power$ 1 | Toughness$ 1 | Types$ Creature,Snake | RemoveCreatureTypes$ True | Keywords$ Poisonous:2 | SpellDescription$ This land becomes a 1/1 Snake creature with poisonous 2 until end of turn. It's still a land. (Whenever that creature deals combat damage to a player, that player gets two poison counters. A player with ten or more poison counters loses the game.)
+
+Oracle:{T}: Add {C}.\n{1}: This land becomes a 1/1 Snake creature with poisonous 2 until end of turn. It's still a land. (Whenever that creature deals combat damage to a player, that player gets two poison counters. A player with ten or more poison counters loses the game.)
+
+DeckHints:Keyword$Infect|Toxic|Poisonous

@@ -1,0 +1,11 @@
+Name:Raiun Bay Junk
+ManaCost:2
+Types:Artifact Vehicle
+PT:2/3
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigPutCounter | TriggerDescription$ Art of war — At the beginning of each end step, if this Vehicle dealt damage to an opponent this turn, put a +1/+1 counter on it.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1
+
+A:AB$ Animate | Cost$ tapXType<1/Creature> | Defined$ Self | Types$ Artifact,Creature | SpellDescription$ This Vehicle becomes an artifact creature until end of turn.
+
+Oracle:Art of war — At the beginning of your end step, if this Vehicle dealt damage to an opponent this turn, put a +1/+1 counter on it.\nTap an untapped creature you control: this Vehicle becomes an artifact creature until end of turn.

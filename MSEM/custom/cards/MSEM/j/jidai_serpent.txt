@@ -1,0 +1,12 @@
+Name:Jidai Serpent
+ManaCost:4 U U
+Types:Creature Serpent
+PT:5/6
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ X | EffectZone$ All | Description$ This spell costs {1} less to cast for each spell you cast this turn.
+SVar:X:Count$ThisTurnCast_Card.YouCtrl
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this creature enters, draw two cards.
+SVar:TrigDraw:DB$ Draw | NumCards$ 2
+
+Oracle:This spell costs {1} less to cast for each spell you cast this turn.\nWhen this creature enters, draw two cards.

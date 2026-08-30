@@ -1,0 +1,14 @@
+Name:Aghavaan's Corrupter
+ManaCost:2 G
+Types:Creature Snake Wizard
+PT:1/4
+
+K:Poisonous:1
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDestroy | TriggerDescription$ At the beginning of your upkeep, destroy target artifact or enchantment if its controller is poisoned.
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment | ConditionCheckSVar$ X
+SVar:X:TargetedController$Counters.Poison
+
+Oracle:Poisonous 1 (Whenever this creature deals combat damage to a player, that player gets a poison counter. A player with ten or more poison counters loses the game.)\nAt the beginning of your upkeep, destroy target artifact or enchantment if its controller is poisoned.
+
+DeckHas:Ability$Counters

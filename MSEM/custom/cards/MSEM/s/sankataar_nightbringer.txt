@@ -1,0 +1,15 @@
+Name:Sankataar Nightbringer
+ManaCost:4 B
+Types:Creature Snake Assassin
+PT:5/2
+
+K:Poisonous:5
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ X | OptionalDecider$ You | Execute$ TrigDestroy | TriggerDescription$ At the beginning of your upkeep, if an opponent is poisoned, you may destroy target Human.
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Human | TgtPrompt$ Select target Human
+
+SVar:X:Count$TotalOppPoisonCounters
+
+Oracle:Poisonous 5 (Whenever this creature deals combat damage to a player, that player gets five poison counters. A player with ten or more poison counters loses the game.)\nAt the beginning of your upkeep, if an opponent is poisoned, you may destroy target Human.
+
+DeckHints:Keyword$Infect|Toxic|Poisonous

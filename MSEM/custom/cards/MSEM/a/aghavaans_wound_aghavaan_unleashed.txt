@@ -1,0 +1,38 @@
+Name:Aghavaan's Wound
+ManaCost:no cost
+Types:Legendary Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ Player | TriggerZones$ Battlefield | IsPresent$ Creature.Snake+YouCtrl | PresentCompare$ GE5 | Execute$ TrigTransform | TriggerDescription$ At the beginning of each end step, if you control five or more Snake creatures, transform CARDNAME.
+SVar:TrigTransform:DB$ SetState | Defined$ Self | Mode$ Transform
+
+AlternateMode:DoubleFaced
+
+Oracle:{T}: Add {C}.\nAt the beginning of each end step, if you control five or more Snake creatures, transform Aghavaan's Wound.
+
+ALTERNATE
+
+Name:Aghavaan Unleashed
+ManaCost:no cost
+Colors:black,green
+Types:Legendary Creature Snake God
+PT:8/8
+
+K:Menace
+
+K:Trample
+
+K:Indestructible
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigPoison | TriggerDescription$ Whenever CARDNAME deals combat damage to a player, that player gets that many poison counters.
+SVar:TrigPoison:DB$ Poison | Defined$ TriggeredTarget | Num$ X
+SVar:X:TriggerCount$DamageAmount
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigTransformBack | TriggerDescription$ At the beginning of your end step, sacrifice another creature or transform CARDNAME.
+SVar:TrigTransformBack:DB$ SetState | Defined$ Self | Mode$ Transform | UnlessCost$ Sac<1/Creature.Other/another creature> | UnlessPayer$ You
+
+Oracle:Menace, trample, indestructible\nWhenever Aghavaan Unleashed deals combat damage to a player, that player gets that many poison counters.\nAt the beginning of your end step, sacrifice another creature or transform Aghavaan Unleashed.
+
+DeckHas:Ability$Sacrifice|Counters
+DeckHints:Type$Snake & Keyword$Infect|Toxic|Poisonous

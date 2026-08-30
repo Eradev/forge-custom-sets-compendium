@@ -1,0 +1,10 @@
+Name:Touch of the Coil
+ManaCost:1 B
+Types:Instant
+
+A:SP$ Poison | ValidTgts$ Player | Num$ 1 | SubAbility$ DBDraw | SpellDescription$ Target player gets a poison counter. Draw a card.
+SVar:DBDraw:DB$ Draw
+
+Oracle:Target player gets a poison counter.\nDraw a card.
+
+DeckHas:Ability$Counters

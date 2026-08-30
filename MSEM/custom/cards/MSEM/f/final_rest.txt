@@ -1,0 +1,7 @@
+Name:Final Rest
+ManaCost:W
+Types:Sorcery
+
+A:SP$ ChangeZone | Cost$ W Sac<1/Creature> | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Exile | SpellDescription$ Exile target creature.
+
+Oracle:As an additional cost to cast this spell, sacrifice a creature.\nExile target creature.

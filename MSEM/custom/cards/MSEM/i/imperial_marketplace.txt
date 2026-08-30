@@ -1,0 +1,13 @@
+Name:Imperial Marketplace
+ManaCost:no cost
+Types:Land
+
+K:etbCounter:CHARGE:1
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ PutCounter | Cost$ T SubCounter<1/CHARGE> | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | CounterType$ P1P1 | CounterNum$ 1 | SpellDescription$ Put a +1/+1 counter on target creature you control.
+
+Oracle:This land enters with a charge counter on it.\n{T}: Add {C}.\n{T}, Remove a charge counter from this land: Put a +1/+1 counter on target creature you control.
+
+DeckHas:Ability$Counters

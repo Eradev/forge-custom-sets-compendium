@@ -1,0 +1,14 @@
+Name:Shinrin Blademaster
+ManaCost:1 G G
+Types:Creature Human Samurai
+PT:3/2
+
+K:Flash
+
+R:Event$ AddCounter | ActiveZones$ Battlefield | ValidCard$ Creature.YouCtrl+inZoneBattlefield | ReplaceWith$ AddOneMoreCounters | Description$ If one or more counters would be put on a creature you control, put that many plus one of each of those kinds of counters on that creature instead.
+SVar:AddOneMoreCounters:DB$ ReplaceCounter | ChooseCounter$ True | Amount$ X
+SVar:X:ReplaceCount$CounterNum/Plus.1
+
+Oracle:Flash\nIf one or more counters would be put on a creature you control, put that many plus one of each of those kinds of counters on that creature instead.
+
+DeckNeeds:Ability$Counters

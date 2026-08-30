@@ -1,0 +1,10 @@
+Name:Unearth the Fallen
+ManaCost:1 B
+Types:Instant
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Hand | TargetMin$ 0 | TargetMax$ 2 | TgtPrompt$ Select up to two target creature cards in your graveyard | ValidTgts$ Creature.YouOwn | SubAbility$ DBLoseLife | SpellDescription$ Return up to two target creature cards from your graveyard to your hand. You lose 2 life.
+SVar:DBLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 2
+
+Oracle:Return up to two target creature cards from your graveyard to your hand. You lose 2 life.
+
+DeckHas:Ability$Graveyard

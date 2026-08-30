@@ -1,0 +1,16 @@
+Name:Mautakesh Strangler
+ManaCost:2 G
+Types:Creature Snake Warrior
+PT:3/3
+
+K:Poisonous:3
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ X | SVarCompare$ GE1 | OptionalDecider$ You | Execute$ TrigFight | TriggerDescription$ At the beginning of your upkeep, if an opponent is poisoned, you may have this creature fight target creature you don't control.
+SVar:TrigFight:DB$ Fight | Defined$ Self | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you don't control
+
+SVar:X:Count$TotalOppPoisonCounters
+
+Oracle:Poisonous 3 (Whenever this creature deals combat damage to a player, that player gets three poison counters. A player with ten or more poison counters loses the game.)\nAt the beginning of your upkeep, if an opponent is poisoned, you may have this creature fight target creature you don't control.
+
+DeckHas:Ability$Counters
+DeckHints:Keyword$Infect|Toxic|Poisonous

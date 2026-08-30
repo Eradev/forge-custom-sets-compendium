@@ -1,0 +1,8 @@
+Name:Flow of the River
+ManaCost:U
+Types:Instant
+
+A:SP$ Untap | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | SubAbility$ DBPump | SpellDescription$ Untap target creature you control. It gains hexproof until end of turn.
+SVar:DBPump:DB$ Pump | Defined$ Targeted | KW$ Hexproof
+
+Oracle:Untap target creature you control. It gains hexproof until end of turn.

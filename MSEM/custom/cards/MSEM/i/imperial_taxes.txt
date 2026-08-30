@@ -1,0 +1,11 @@
+Name:Imperial Taxes
+ManaCost:1 U
+Types:Enchantment Aura
+
+K:Enchant:Land.YouDontCtrl:land you don't control
+SVar:AttachAILogic:Curse
+
+T:Mode$ Taps | ValidCard$ Card.AttachedBy | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigDraw | TriggerDescription$ Whenever enchanted land becomes tapped, you may draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Enchant land you don't control\nWhenever enchanted land becomes tapped, you may draw a card.

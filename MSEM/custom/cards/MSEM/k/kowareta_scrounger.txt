@@ -1,0 +1,11 @@
+Name:Kowareta Scrounger
+ManaCost:1 U
+Types:Creature Human Samurai Mercenary
+PT:2/1
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | OptionalDecider$ You | Execute$ TrigSearch | TriggerDescription$ Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, you may search your library for an artifact card, reveal it, put it into your hand, then shuffle.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Artifact | ChangeTypeDesc$ artifact card | Optional$ True
+
+Oracle:Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, you may search your library for an artifact card, reveal it, put it into your hand, then shuffle.
+
+DeckHints:Type$Artifact
