@@ -1,0 +1,17 @@
+Name:Osseous Overlord
+ManaCost:1 B
+Types:Creature Skeleton Noble
+PT:2/2
+
+K:Lifelink
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPrepare | TriggerDescription$ At the beginning of combat on your turn, you may exile four cards from your graveyard. If you do, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)
+SVar:TrigPrepare:AB$ AlterAttribute | Cost$ ExileFromGrave<4/Card> | Attributes$ Prepared
+
+AlternateMode:Prepare
+
+Oracle:Lifelink\nAt the beginning of combat on your turn, you may exile four cards from your graveyard. If you do, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)
+
+ALTERNATE
+
+CopyFaceFrom:Snuff Out

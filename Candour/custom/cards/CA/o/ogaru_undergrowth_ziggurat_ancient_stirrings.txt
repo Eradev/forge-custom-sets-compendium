@@ -1,0 +1,19 @@
+Name:Ogaru, Undergrowth Ziggurat
+ManaCost:no cost
+Types:Legendary Land
+
+K:Ascend
+
+A:AB$ Mana | Cost$ T PayLife<3> | Produced$ G | SpellDescription$ Add {G}.
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | CheckSVar$ BlessingCheck | SVarCompare$ EQ1 | Execute$ TrigPrepare | TriggerDescription$ At the beginning of your end step, if you have the city's blessing, this land becomes prepared.
+SVar:BlessingCheck:Count$Blessing.1.0
+SVar:TrigPrepare:DB$ AlterAttribute | Attributes$ Prepared
+
+AlternateMode:Prepare
+
+Oracle:Ascend (If you control ten or more permanents, you get the city's blessing for the rest of the game.)\n{T}, Pay 3 life: Add {G}.\nAt the beginning of your end step, if you have the city's blessing, this land becomes prepared.
+
+ALTERNATE
+
+CopyFaceFrom:Ancient Stirrings

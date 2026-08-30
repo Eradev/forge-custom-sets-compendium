@@ -1,0 +1,11 @@
+Name:Omnishard Agent
+ManaCost:3
+Colors:all
+Types:Artifact Creature Human
+PT:2/2
+
+K:Cascade
+
+Text:This creature is all colors.
+
+Oracle:Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)\nThis creature is all colors.

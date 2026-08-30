@@ -1,0 +1,15 @@
+Name:Oleaginous Fen
+ManaCost:no cost
+Types:Legendary Land
+
+A:AB$ Mana | Cost$ T PayLife<3> | Produced$ B | SpellDescription$ Add {B}.
+
+A:AB$ AlterAttribute | Cost$ ExileFromGrave<3/Creature> | Attributes$ Prepared | SpellDescription$ Exile three creature cards from your graveyard: This land becomes prepared.
+
+AlternateMode:Prepare
+
+Oracle:{T}, Pay 3 life: Add {B}.\nExile three creature cards from your graveyard: This land becomes prepared.
+
+ALTERNATE
+
+CopyFaceFrom:Spoils of Blood
