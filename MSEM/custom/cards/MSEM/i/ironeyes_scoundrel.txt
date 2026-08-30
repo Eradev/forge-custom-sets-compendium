@@ -2,6 +2,9 @@ Name:Ironeyes Scoundrel
 ManaCost:1 U
 Types:Creature Human Rogue
 PT:1/2
+
 K:Prowess
+
 S:Mode$ ReduceCost | Activator$ You | Type$ Spell | Phases$ BeginCombat->EndCombat | Amount$ 1 | Description$ Spells you cast during combat cost {1} less to cast.
-Oracle:Prowess\nSpells you cast during combat cost {1} less to cast.
+
+Oracle:Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nSpells you cast during combat cost {1} less to cast.
