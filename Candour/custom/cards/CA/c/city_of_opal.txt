@@ -7,7 +7,7 @@ SVar:TrigDestroy:DB$ Destroy | Defined$ Self
 
 A:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
 
-A:AB$ PutCounter | Cost$ 2 | Defined$ Self | CounterType$ Indestructible | SpellDescription$ Put an indestructible counter on this land.
+A:AB$ PutCounter | Cost$ 2 | CounterType$ Indestructible | SpellDescription$ Put an indestructible counter on this land.
 
 Oracle:At the beginning of your upkeep, destroy this land.\n{T}: Add one mana of any color.\n{2}: Put an indestructible counter on this land.
 

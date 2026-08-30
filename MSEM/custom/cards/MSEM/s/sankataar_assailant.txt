@@ -6,7 +6,7 @@ PT:3/3
 K:Poisonous:3
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounter | TriggerDescription$ When this creature enters, choose a counter on target permanent or player. Give that permanent or player another counter of that kind.
-SVar:TrigCounter:DB$ PutCounter | ValidTgts$ Permanent,Player | TgtPrompt$ Select target permanent or player | CounterType$ ExistingCounter | CounterNum$ 1
+SVar:TrigCounter:DB$ PutCounter | CounterType$ ExistingCounter | ValidTgts$ Permanent,Player | TgtPrompt$ Select target permanent or player
 
 Oracle:Poisonous 3 (Whenever this creature deals combat damage to a player, that player gets three poison counters. A player with ten or more poison counters loses the game.)\nWhen this creature enters, choose a counter on target permanent or player. Give that permanent or player another counter of that kind.
 

@@ -6,6 +6,6 @@ PT:2/1
 K:Flying
 
 T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigDiscard | TriggerDescription$ When this creature enters, target player discards a card.
-SVar:TrigDiscard:DB$ Discard | ValidTgts$ Player | Mode$ TgtChoose | NumCards$ 1
+SVar:TrigDiscard:DB$ Discard | ValidTgts$ Player | Mode$ TgtChoose
 
 Oracle:Flying\nWhen this creature enters, target player discards a card.

@@ -2,7 +2,7 @@ Name:Cavalier Deluxe Roadster
 ManaCost:2
 Types:Artifact Vehicle
 
-A:AB$ PutCounter | Cost$ 1 | RaiseCost$ X | CounterType$ P1P1 | CounterNum$ 1 | SorcerySpeed$ True | PrecostDesc$ Improve | SpellDescription$ ({1}: Put a +1/+1 counter on this artifact. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
+A:AB$ PutCounter | Cost$ 1 | RaiseCost$ X | CounterType$ P1P1 | SorcerySpeed$ True | PrecostDesc$ Improve | SpellDescription$ ({1}: Put a +1/+1 counter on this artifact. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
 SVar:X:Count$CardCounters.P1P1
 
 T:Mode$ BecomesCrewed | ValidCard$ Card.Self | Execute$ TrigPhase | TriggerDescription$ Whenever one or more creatures crew this Vehicle, you may phase out up to one of those creatures.

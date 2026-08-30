@@ -3,7 +3,7 @@ ManaCost:U B R
 Types:Legendary Planeswalker Snoke
 Loyalty:3
 
-A:AB$ PutCounter | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Defined$ Self | CounterType$ LOYALTY | CounterNum$ HateFlag | SpellDescription$ Put a loyalty counter on CARDNAME for each life lost by all opponents from noncombat sources this turn.
+A:AB$ PutCounter | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | CounterType$ LOYALTY | CounterNum$ HateFlag | SpellDescription$ Put a loyalty counter on CARDNAME for each life lost by all opponents from noncombat sources this turn.
 
 A:AB$ Draw | Cost$ SubCounter<1/LOYALTY> | Planeswalker$ True | NumCards$ 1 | SubAbility$ DBLoseLife | SpellDescription$ Draw a card and lose 1 life.
 SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1

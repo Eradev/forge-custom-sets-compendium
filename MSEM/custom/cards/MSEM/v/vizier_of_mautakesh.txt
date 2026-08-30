@@ -5,7 +5,7 @@ PT:2/1
 
 K:Poisonous:2
 
-A:AB$ PutCounter | Cost$ 2 B | ValidTgts$ Permanent,Player | TgtPrompt$ Select target permanent or player | CounterType$ ExistingCounter | CounterNum$ 1 | SpellDescription$ Choose a counter on target permanent or player. Give that permanent or player another counter of that kind.
+A:AB$ PutCounter | Cost$ 2 B | CounterType$ ExistingCounter | ValidTgts$ Permanent,Player | TgtPrompt$ Select target permanent or player | SpellDescription$ Choose a counter on target permanent or player. Give that permanent or player another counter of that kind.
 
 Oracle:Poisonous 2 (Whenever this creature deals combat damage to a player, that player gets two poison counters. A player with ten or more poison counters loses the game.)\n{2}{B}: Choose a counter on target permanent or player. Give that permanent or player another counter of that kind.
 

@@ -3,7 +3,7 @@ ManaCost:2
 Types:Artifact Equipment
 
 S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddKeyword$ Hexproof | AddAbility$ Improve | Description$ Equipped creature has hexproof and improve {1}. ({1}: Put a +1/+1 counter on that creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
-SVar:Improve:AB$ PutCounter | Cost$ 1 | RaiseCost$ X | CounterType$ P1P1 | CounterNum$ 1 | SorcerySpeed$ True | PrecostDesc$ Improve | SpellDescription$ ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
+SVar:Improve:AB$ PutCounter | Cost$ 1 | RaiseCost$ X | CounterType$ P1P1 | SorcerySpeed$ True | PrecostDesc$ Improve | SpellDescription$ ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
 SVar:X:Count$CardCounters.P1P1
 
 A:AB$ ChangeZone | Cost$ 4 | Origin$ Hand | Destination$ Battlefield | ActivationZone$ Hand | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature | SpellDescription$ Put this card from your hand onto the battlefield attached to target creature.

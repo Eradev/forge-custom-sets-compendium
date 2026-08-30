@@ -21,7 +21,7 @@ SVar:GoldenCheck1:SVar$GoldenAgeSpell/Plus.GoldenAgeAbility
 SVar:GoldenCheckFinal:SVar$GoldenCheck1/Plus.GoldenAgeAttack
 #-------------------
 
-A:AB$ Scry | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | ScryNum$ 1 | SubAbility$ DBDraw | SpellDescription$ Scry 1. If you're in a renaissance, draw a card.
+A:AB$ Scry | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | SubAbility$ DBDraw | SpellDescription$ Scry 1. If you're in a renaissance, draw a card.
 SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ IsRenaissance | ConditionSVarCompare$ EQ1
 SVar:IsRenaissance:Count$ValidCommand Effect.YouCtrl+namedGolden Age/LimitMax.1
 

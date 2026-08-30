@@ -3,7 +3,7 @@ ManaCost:1 W
 Types:Creature Human Soldier Detective
 PT:1/1
 
-A:AB$ PutCounter | Cost$ 1 | RaiseCost$ X | CounterType$ P1P1 | CounterNum$ 1 | SorcerySpeed$ True | PrecostDesc$ Improve | SpellDescription$ ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
+A:AB$ PutCounter | Cost$ 1 | RaiseCost$ X | CounterType$ P1P1 | SorcerySpeed$ True | PrecostDesc$ Improve | SpellDescription$ ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
 SVar:X:Count$CardCounters.P1P1
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 1/1 colorless Human creature token.

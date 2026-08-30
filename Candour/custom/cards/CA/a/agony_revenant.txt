@@ -10,7 +10,7 @@ SVar:TrigDiscard:DB$ Discard | Mode$ Hand | SubAbility$ DBDraw
 SVar:DBDraw:DB$ Draw | NumCards$ 3
 
 K:Escape:2 R R ExileFromGrave<5/Card.Other/other>
-K:etbCounter:P1P1:2:ValidCard$ Card.Self+escaped:CARDNAME escapes with two +1/+1 counters on it.
+K:etbCounter:P1P1:2:ValidCard$ Card.Self+escaped:This creature escapes with two +1/+1 counters on it.
 
 Oracle:Flying\nWhen this creature enters, discard your hand, then draw three cards.\nEscape—{2}{R}{R}, Exile five other cards from your graveyard. (You may cast this card from your graveyard for its escape cost.)\nThis creature escapes with two +1/+1 counters on it.
 

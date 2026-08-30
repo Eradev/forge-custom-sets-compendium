@@ -25,7 +25,7 @@ K:Trample
 
 K:Haste
 
-T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigTapAll | TriggerDescription$ When CARDNAME enters, tap all lands target player controls. They don't untap during their controller's next untap step.
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigTapAll | TriggerDescription$ When this creature enters, tap all lands target player controls. They don't untap during their controller's next untap step.
 SVar:TrigTapAll:DB$ TapAll | ValidTgts$ Player | TgtPrompt$ Select target player | ValidCards$ Land | SubAbility$ DBPumpAll
 SVar:DBPumpAll:DB$ PumpAll | Defined$ Targeted | ValidCards$ Land | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent
 
