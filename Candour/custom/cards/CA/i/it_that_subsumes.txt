@@ -1,0 +1,14 @@
+Name:It that Subsumes
+ManaCost:3
+Types:Creature Eldrazi
+PT:2/1
+
+K:Delve
+
+K:Flash
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigCounter | TriggerDescription$ When you cast this spell, counter target spell an opponent controls if no colored mana was spent to cast it.
+SVar:TrigCounter:DB$ Counter | TargetType$ Spell | ValidTgts$ Card.OppCtrl | TgtPrompt$ Select target spell an opponent controls | ConditionCheckSVar$ X | ConditionSVarCompare$ EQ0
+SVar:X:Targeted$Converge
+
+Oracle:Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)\nFlash\nWhen you cast this spell, counter target spell an opponent controls if no colored mana was spent to cast it.

@@ -1,0 +1,12 @@
+Name:Imperious Loamspeaker
+ManaCost:1 G
+Types:Creature Elf Druid
+PT:1/4
+
+A:AB$ Untap | Cost$ T | ValidTgts$ Land | TgtPrompt$ Select target land | SpellDescription$ Untap target land.
+
+A:AB$ Animate | Cost$ T | ValidTgts$ Land.YouCtrl | TgtPrompt$ Select target land you control | Power$ 4 | Toughness$ 4 | Types$ Creature,Elemental | Keywords$ Haste | Duration$ UntilEndOfTurn | SpellDescription$ Target land you control becomes a 4/4 Elemental creature with haste until end of turn. It's still a land.
+
+A:AB$ Untap | Cost$ 2 G | SpellDescription$ Untap this creature.
+
+Oracle:{T}: Untap target land.\n{T}: Target land you control becomes a 4/4 Elemental creature with haste until end of turn. It's still a land.\n{2}{G}: Untap this creature.

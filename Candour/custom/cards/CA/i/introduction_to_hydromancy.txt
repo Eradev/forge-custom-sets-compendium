@@ -1,0 +1,9 @@
+Name:Introduction to Hydromancy
+ManaCost:U
+Types:Instant Lesson
+
+A:SP$ TapOrUntap | ValidTgts$ Permanent | TgtPrompt$ Select target permanent | SubAbility$ DBDraw | SpellDescription$ You may tap or untap target permanent.
+SVar:DBDraw:DB$ Draw | SubAbility$ DBDiscard | SpellDescription$ Draw a card, then discard a card.
+SVar:DBDiscard:DB$ Discard | Mode$ TgtChoose
+
+Oracle:You may tap or untap target permanent.\nDraw a card, then discard a card.

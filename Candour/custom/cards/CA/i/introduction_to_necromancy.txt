@@ -1,0 +1,9 @@
+Name:Introduction to Necromancy
+ManaCost:B
+Types:Sorcery Lesson
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature.YouOwn+cmcLE2 | TgtPrompt$ Select target creature card with mana value 2 or less in your graveyard | SpellDescription$ Return target creature card with mana value 2 or less from your graveyard to the battlefield.
+
+Oracle:Return target creature card with mana value 2 or less from your graveyard to the battlefield.
+
+DeckHas:Ability$Graveyard
