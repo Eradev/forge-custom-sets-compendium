@@ -1,0 +1,19 @@
+Name:Hezotl, Supreme Hellion
+ManaCost:3 R R
+Types:Legendary Planeswalker Hezotl
+Loyalty:5
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDamage | TriggerDescription$ When NICKNAME enters, it deals 3 damage to each creature.
+SVar:TrigDamage:DB$ DamageAll | ValidCards$ Creature | NumDmg$ 3
+
+A:AB$ Sacrifice | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | SacValid$ Land | Optional$ True | RememberSacrificed$ True | SubAbility$ DBToken | SpellDescription$ You may sacrifice a land. If you do, create an X/X red Hellion creature token, where X is NICKNAME's loyalty.
+SVar:DBToken:DB$ Token | TokenAmount$ 1 | TokenOwner$ You | TokenName$ Hellion | TokenTypes$ Creature,Hellion | TokenColors$ Red | TokenPower$ X | TokenToughness$ X | ConditionDefined$ Remembered | ConditionPresent$ Card | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Count$CardLoyalty
+
+A:AB$ Destroy | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Land | TgtPrompt$ Select target land | SubAbility$ DBDmg | SpellDescription$ Destroy target land. NICKNAME deals 3 damage to that land's controller.
+SVar:DBDmg:DB$ DealDamage | Defined$ TargetedController | NumDmg$ 3
+
+Oracle:When Hezotl enters, it deals 3 damage to each creature.\n[+1]: You may sacrifice a land. If you do, create an X/X red Hellion creature token, where X is Hezotl's loyalty.\n[-2]: Destroy target land. Hezotl deals 3 damage to that land's controller.
+
+DeckHas:Ability$Token|Sacrifice & Type$Hellion
