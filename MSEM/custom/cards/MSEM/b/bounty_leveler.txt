@@ -3,7 +3,7 @@ ManaCost:B R
 Types:Creature Spirit Mercenary
 PT:2/2
 
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.HasCounters | TriggerZones$ Battlefield | SubAbility$ DBToken | SpellDescription$ Whenever a creature with a counter on it dies, create a Gold token. (It's an artifact with "Sacrifice this artifact: Add one mana of any color.")
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.HasCounters | TriggerZones$ Battlefield | Execute$ DBToken | SpellDescription$ Whenever a creature with a counter on it dies, create a Gold token. (It's an artifact with "Sacrifice this artifact: Add one mana of any color.")
 SVar:DBToken:DB$ Token | TokenScript$ c_a_gold_sac | TokenOwner$ You
 
 Oracle:Whenever a creature with a counter on it dies, create a Gold token. (It's an artifact with "Sacrifice this artifact: Add one mana of any color.")
