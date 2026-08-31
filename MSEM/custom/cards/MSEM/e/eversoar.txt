@@ -4,6 +4,6 @@ Types:Creature Bird
 PT:2/2
 
 K:Flying
-K:Vigilante
+K:Vigilance
 
-Oracle:Flying, vigilante
+Oracle:Flying, vigilance
