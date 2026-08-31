@@ -6,7 +6,7 @@ PT:4/3
 K:Menace
 K:Haste
 
-S:Mode$ Continuous | Affected$ Creature.Centaur+Other+YouCtrl | AddPower$ 1 | Description$ Other Centaurs you control get +1/0.
+S:Mode$ Continuous | Affected$ Creature.Centaur+Other+YouCtrl | AddPower$ 1 | Description$ Other Centaurs you control get +1/+0.
 
 DeckHints:Type$Centaur
 
