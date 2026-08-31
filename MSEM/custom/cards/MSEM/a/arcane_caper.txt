@@ -2,8 +2,8 @@ Name:Arcane Caper
 ManaCost:1 U U
 Types:Instant
 
-A:SP$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | ConditionCheckSVar$ X | ConditionSVarCompare$ EQ0 | SubAbility$ DBToken | SpellDescription$ Counter target spell. If a permanent spell is countered this way, create a Gold token. (It's an artifact with "Sacrifice this artifact: Add one mana of any color.")
-SVar:DBToken:DB$ Token | TokenScript$ c_a_gold_sac | TokenOwner$ You
+A:SP$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | SubAbility$ DBToken | SpellDescription$ Counter target spell. If a permanent spell is countered this way, create a Gold token. (It's an artifact with "Sacrifice this artifact: Add one mana of any color.")
+SVar:DBToken:DB$ Token | Defined$ Targeted | ConditionCheckSVar$ X | ConditionSVarCompare$ GE1 | TokenScript$ c_a_gold_sac | TokenOwner$ You
 SVar:X:Targeted$Valid Permanent
 
 Oracle:Counter target spell. If a permanent spell is countered this way, create a Gold token. (It's an artifact with "Sacrifice this artifact: Add one mana of any color.")
