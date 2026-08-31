@@ -13,4 +13,4 @@ SVar:DBEachDraw:DB$ Draw | Defined$ Player | NumCards$ 7
 T:Mode$ Discarded | ValidCard$ Card.OppOwn | TriggerZones$ Battlefield | Execute$ TrigDealDamage | TriggerDescription$ Whenever an opponent discards a card, CARDNAME deals 1 damage to that player.
 SVar:TrigDealDamage:DB$ DealDamage | Defined$ TriggeredCardController | NumDmg$ 1
 
-Oracle:Flying, first strike\nWhenever Terror of Sunset Cliffs attacks, each player discards their hand, then draws seven cards.\nWhenever an opponent discards a card, Terroir of Sunset Cliffs deals 1 damage to that player.
+Oracle:Flying, first strike\nWhenever this creature attacks, each player discards their hand, then draws seven cards.\nWhenever an opponent discards a card, this creature deals 1 damage to that player.
