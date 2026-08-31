@@ -1,4 +1,4 @@
-Name:Sunrise Prarie
+Name:Sunrise Prairie
 ManaCost:no cost
 Types:Land
 
