@@ -2,11 +2,17 @@ Name:Aetherlock Effigy
 ManaCost:5
 Types:Artifact Creature Scarecrow
 PT:4/3
+
 K:Defender
 K:Reach
+
 S:Mode$ Continuous | Affected$ Card.Self | CanBlockAmount$ 1 | Description$ CARDNAME can block an additional creature each combat.
+
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME dies, create two 1/1 black Bird creature tokens with flying.
 SVar:TrigToken:DB$ Token | TokenAmount$ 2 | TokenScript$ b_1_1_bird_flying
+
 SVar:SacMe:4
+
 DeckHas:Ability$Token
+
 Oracle:Defender, reach\nAetherlock Effigy can block an additional creature each combat.\nWhen Aetherlock Effigy dies, create two 1/1 black Bird creature tokens with flying.

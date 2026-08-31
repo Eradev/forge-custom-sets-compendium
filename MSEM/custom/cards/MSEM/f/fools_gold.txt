@@ -1,5 +1,7 @@
 Name:Fool's Gold
 ManaCost:2 U
 Types:Instant
+
 A:SP$ Counter | TargetType$ Spell | TgtPrompt$ Select target monocolored spell | ValidTgts$ Card.MonoColor | SpellDescription$ Counter target monocolored spell.
+
 Oracle:Counter target monocolored spell.

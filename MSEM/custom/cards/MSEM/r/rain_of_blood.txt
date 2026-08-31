@@ -1,5 +1,7 @@
 Name:Rain of Blood
 ManaCost:3 R
 Types:Sorcery
+
 A:SP$ DamageAll | NumDmg$ 3 | ValidCards$ Creature | ValidPlayers$ Player | ValidDescription$ each creature and each player. | SpellDescription$ CARDNAME deals 3 damage to each creature and each player.
+
 Oracle:Rain of Blood deals 3 damage to each creature and each player.

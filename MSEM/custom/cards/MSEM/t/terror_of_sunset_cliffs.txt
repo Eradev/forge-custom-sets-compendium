@@ -2,11 +2,15 @@ Name:Terror of Sunset Cliffs
 ManaCost:5 R R R
 Types:Creature Manticore
 PT:7/7
+
 K:Flying
 K:First Strike
+
 T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigDiscard | TriggerDescription$ Whenever CARDNAME attacks, each player discards their hand, then draws seven cards.
 SVar:TrigDiscard:DB$ Discard  | Mode$ Hand | Defined$ Player | SubAbility$ DBEachDraw | SpellDescription$ Each player discards their hand, then draws seven cards.
 SVar:DBEachDraw:DB$ Draw | Defined$ Player | NumCards$ 7
+
 T:Mode$ Discarded | ValidCard$ Card.OppOwn | TriggerZones$ Battlefield | Execute$ TrigDealDamage | TriggerDescription$ Whenever an opponent discards a card, CARDNAME deals 1 damage to that player.
 SVar:TrigDealDamage:DB$ DealDamage | Defined$ TriggeredCardController | NumDmg$ 1
+
 Oracle:Flying, first strike\nWhenever Terror of Sunset Cliffs attacks, each player discards their hand, then draws seven cards.\nWhenever an opponent discards a card, Terroir of Sunset Cliffs deals 1 damage to that player.

@@ -2,6 +2,8 @@ Name:Brush Sniper
 ManaCost:3 G
 Types:Creature Elf Warrior Archer
 PT:4/2
+
 K:Reach
 K:Hexproof
+
 Oracle:Reach\nHexproof

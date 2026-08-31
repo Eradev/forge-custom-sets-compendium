@@ -1,7 +1,10 @@
 Name:Derelict Town
 ManaCost:no cost
 Types:Land
+
 A:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
+
 T:Mode$ TapsForMana | ValidCard$ Card.Self | Activator$ You | Execute$ TrigReturn | TriggerDescription$ Whenever you tap CARDNAME for mana, return it to its owner's hand.
 SVar:TrigReturn:DB$ ChangeZone | Defined$ Self | Origin$ Battlefield | Destination$ Hand
+
 Oracle:{T}: Add one mana of any color.\nWhenever you tap Derelict Town for mana, return it to its owner's hand.

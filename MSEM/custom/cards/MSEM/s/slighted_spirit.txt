@@ -2,8 +2,12 @@ Name:Slighted Spirit
 ManaCost:4 U U
 Types:Creature Spirit
 PT:3/4
+
 K:Flying
+
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ Detain | TriggerDescription$ When CARDNAME enters, detain up to two target creatures. (Until your next turn, those creatures can't attack or block and their activated abilities can't be activated.)
 SVar:Detain:DB$ Detain | TargetMin$ 0 | TargetMax$ 2 | ValidTgts$ Creature | ValidTgtsDesc$ creatures
+
 SVar:PlayMain1:TRUE
+
 Oracle:Flying\nWhen Slighted Spirit enters, detain up to two target creatures. (Until your next turn, those permanents can't attack or block and their activated abilities can't be activated.)

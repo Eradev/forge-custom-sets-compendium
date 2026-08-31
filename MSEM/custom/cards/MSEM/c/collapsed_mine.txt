@@ -2,7 +2,10 @@ Name:Collapsed Mine
 ManaCost:2 W W
 Types:Enchantment
 K:Flash
+
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When CARDNAME enters, exile target nonland permanent until CARDNAME leaves the battlefield.
 SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Permanent.nonLand | TgtPrompt$ Select target nonland permanent | Duration$ UntilHostLeavesPlay
+
 SVar:OblivionRing:TRUE
+
 Oracle:Flash\nWhen Collapsed Mine enters, exile target nonland permanent until Collapsed Mine leaves the battlefield.

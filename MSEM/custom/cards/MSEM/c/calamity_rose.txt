@@ -2,9 +2,12 @@ Name:Calamity Rose
 ManaCost:4 W W
 Types:Legendary Creature Human Scout
 PT:3/5
+
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigBalanceArtifact | TriggerDescription$ When CARDNAME enters, each player chooses a number of artifacts they control equal to the number of artifacts controlled by the player who controls the fewest, then sacrifices the rest. Each player discards cards the same way.
 SVar:TrigBalanceArtifact:DB$ Balance | Valid$ Artifact | AILogic$ BalancePermanents | SubAbility$ BalanceHands | SpellDescription$ Each player chooses a number of artifacts they control equal to the number of artifacts controlled by the player who controls the fewest, then sacrifices the rest. Each player discards cards the same way.
 SVar:BalanceHands:DB$ Balance | Zone$ Hand
+
 AI:RemoveDeck:All
 AI:RemoveDeck:Random
+
 Oracle:When Calamity Rose enters, each player chooses a number of artifacts they control equal to the number of artifacts controlled by the player who controls the fewest, then sacrifices the rest. Each player discards cards the same way.

@@ -2,5 +2,7 @@ Name:Frontier Outrider
 ManaCost:1 G G
 Types:Creature Centaur Scout
 PT:3/3
+
 K:Trample
+
 Oracle:Trample

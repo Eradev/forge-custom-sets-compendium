@@ -2,6 +2,8 @@ Name:Haunting Stragglers
 ManaCost:1 B
 Types:Creature Spirit
 PT:1/2
+
 K:Flying
 K:Lifelink
+
 Oracle:Flying, lifelink

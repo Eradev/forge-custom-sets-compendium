@@ -2,5 +2,7 @@ Name:Grasping Spirits
 ManaCost:3 B
 Types:Creature Spirit
 PT:4/2
+
 K:Menace
+
 Oracle:Menace

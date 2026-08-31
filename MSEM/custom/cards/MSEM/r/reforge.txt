@@ -1,6 +1,8 @@
 Name:Reforge
 ManaCost:1 R
 Types:Instant
+
 A:SP$ Destroy | ValidTgts$ Artifact | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target artifact. | SubAbility$ DBToken | SpellDescription$ Destroy up to one target artifact.
 SVar:DBToken:DB$ Token | TokenScript$ c_a_gold_sac | TokenOwner$ You
+
 Oracle:Destroy up to one target artifact. Create a Gold token. (It's an artifact with "Sacrifice this artifact: Add one mana of any color.")

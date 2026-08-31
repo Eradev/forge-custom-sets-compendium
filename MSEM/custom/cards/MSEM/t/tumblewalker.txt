@@ -2,6 +2,9 @@ Name:Tumblewalker
 ManaCost:3
 Types:Artifact Creature Scarecrow
 PT:2/3
+
 S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Vigilance | IsPresent$ Scarecrow.Other+YouCtrl | Description$ CARDNAME has vigilance as long as you control another Scarecrow.
+
 DeckHints:Type$Scarecrow
+
 Oracle:Tumblewalker has vigilance as long as you control another Scarecrow.

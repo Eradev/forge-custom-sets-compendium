@@ -2,7 +2,9 @@ Name:Murderkeep
 ManaCost:7
 Types:Artifact Creature Scarecrow
 PT:5/4
+
 T:Mode$ Attacks | ValidCard$ Creature.withFlying | Attacked$ You | TriggerZones$ Battlefield | Execute$ DelTrig | TriggerDescription$ Whenever a creature with flying attacks you, gain control of that creature at end of combat.
 SVar:DelTrig:DB$ DelayedTrigger | Mode$ Phase | Phase$ EndCombat | ValidPlayer$ Player | Execute$ TrigGainControl | RememberObjects$ TriggeredAttackerLKICopy | TriggerDescription$ Gain control of attacking creature.
 SVar:TrigGainControl:DB$ GainControl | Defined$ DelayTriggerRememberedLKI | NewController$ You
+
 Oracle:Whenever a creature with flying attacks you, gain control of that creature at end of combat.
