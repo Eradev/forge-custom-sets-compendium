@@ -5,6 +5,6 @@ PT:0/2
 
 K:Reach
 
-S:Mode$ ReduceCost | ValidCard$ Scarecrow | Type$ Spell | Activator$ You | Amount$ 1 | Description$ Scarecrowspells you cast cost {1} less to cast.
+S:Mode$ ReduceCost | ValidCard$ Scarecrow | Type$ Spell | Activator$ You | Amount$ 1 | Description$ Scarecrow spells you cast cost {1} less to cast.
 
 Oracle:Reach\nScarecrow spells you cast cost {1} less to cast.
