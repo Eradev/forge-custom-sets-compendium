@@ -1,0 +1,17 @@
+Name:Timaru, Twofold Equilibrium
+ManaCost:1 W
+Types:Legendary Planeswalker Timaru
+Loyalty:1
+
+T:Mode$ SpellCast | ValidCard$ Card.YouCtrl | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigToken | ActivatorThisTurnCast$ EQ2 | TriggerDescription$ Whenever you cast your second spell each turn, create a 1/1 white Monk creature token with prowess.
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_monk_prowess | TokenOwner$ You
+
+A:AB$ Effect | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | StaticAbilities$ ReduceCost | ForgetOnCast$ Card.YouCtrl | SpellDescription$ The next spell you cast this turn costs {1} less to cast.
+SVar:ReduceCost:Mode$ ReduceCost | Type$ Spell | Activator$ You | Amount$ 1 | Description$ The next spell you cast this turn costs {1} less to cast.
+
+A:AB$ PumpAll | Cost$ SubCounter<3/LOYALTY> | Planeswalker$ True | ValidCards$ Monk.YouCtrl | KW$ Double Strike & Vigilance | SpellDescription$ Monks you control gain double strike and vigilance until end of turn.
+
+Oracle:Whenever you cast your second spell each turn, create a 1/1 white Monk creature token with prowess.\n[+1]: The next spell you cast this turn costs {1} less to cast.\n[-3]: Monks you control gain double strike and vigilance until end of turn.
+
+DeckHas:Ability$Token & Type$Monk
+SVar:PlayMain1:TRUE

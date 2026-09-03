@@ -1,0 +1,15 @@
+Name:T'ranta, Baloth Tamer
+ManaCost:3 G G
+Types:Legendary Creature Human Shaman
+PT:3/5
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When NICKNAME enters, create a Goss, a 5/3 green Beast creature token with trample.
+SVar:TrigToken:DB$ Token | TokenScript$ goss | TokenOwner$ You
+
+A:AB$ Draw | Cost$ Sac<1/Creature> | NumCards$ X | SubAbility$ DBDiscard | SpellDescription$ Draw cards equal to the sacrificed creature's power, then discard three cards.
+SVar:DBDiscard:DB$ Discard | NumCards$ 3 | Mode$ TgtChoose
+SVar:X:Sacrificed$CardPower
+
+Oracle:When T'ranta enters, create a Goss, a 5/3 green Beast creature token with trample.\nSacrifice a creature: Draw cards equal to the sacrificed creature's power, then discard three cards.
+
+DeckHas:Ability$Token|Sacrifice|Discard & Type$Beast

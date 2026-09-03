@@ -1,0 +1,19 @@
+Name:Towashi Infiltrator
+ManaCost:1 U U
+Types:Creature Phyrexian Human Rogue
+PT:2/2
+
+K:Flash
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | Description$ This creature can't be blocked.
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigPrepare | TriggerDescription$ Whenever this creature deals combat damage to a player, it becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)
+SVar:TrigPrepare:DB$ AlterAttribute | Attributes$ Prepared
+
+AlternateMode:Prepare
+
+Oracle:Flash\nThis creature can't be blocked.\nWhenever this creature deals combat damage to a player, it becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)
+
+ALTERNATE
+
+CopyFaceFrom:Gitaxian Probe

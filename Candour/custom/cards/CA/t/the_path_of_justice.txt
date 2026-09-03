@@ -1,0 +1,16 @@
+Name:The Path of Justice
+ManaCost:no cost
+Types:Legendary Land
+
+A:AB$ Mana | Cost$ T PayLife<3> | Produced$ W | SpellDescription$ Add {W}.
+
+T:Mode$ Destroyed | ValidCauser$ Player.Opponent | ValidCard$ Permanent.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPrepare | TriggerDescription$ Whenever a spell or ability an opponent controls destroys a permanent you control, this land becomes prepared.
+SVar:TrigPrepare:DB$ AlterAttribute | Attributes$ Prepared
+
+AlternateMode:Prepare
+
+Oracle:{T}, Pay 3 life: Add {W}.\nWhenever a spell or ability an opponent controls destroys a permanent you control, this land becomes prepared.
+
+ALTERNATE
+
+CopyFaceFrom:Path to Exile
