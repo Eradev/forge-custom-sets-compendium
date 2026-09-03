@@ -1,0 +1,15 @@
+Name:Striking Outburst
+ManaCost:4 R
+Types:Instant
+
+A:SP$ Dig | DestinationZone$ Exile | DigNum$ 5 | ChangeNum$ All | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Exile the top five cards of your library. Until end of turn, you may cast spells from among them. Add five mana in any combination of colors.
+SVar:DBEffect:DB$ Effect | RememberObjects$ RememberedCard | StaticAbilities$ STPlay | SubAbility$ DBCleanup | ForgetOnMoved$ Exile
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.nonLand+IsRemembered | AffectedZone$ Exile | Description$ Until end of turn, you may cast spells from among them.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | SubAbility$ DBMana
+SVar:DBMana:DB$ Mana | Produced$ Combo Any | Amount$ 5 | AILogic$ ManaRitual | AINoRecursiveCheck$ True
+
+A:AB$ Token | Cost$ 1 R Discard<1/CARDNAME/this card> | ActivationZone$ Hand | TokenScript$ c_a_treasure_sac | AILogic$ AlwaysOnDiscard | SpellDescription$ Create a Treasure token.
+
+Oracle:Exile the top five cards of your library. Until end of turn, you may cast spells from among them.\nAdd five mana in any combination of colors.\n{1}{R}, Discard this card: Create a Treasure token.
+
+DeckHas:Ability$Token & Type$Treasure

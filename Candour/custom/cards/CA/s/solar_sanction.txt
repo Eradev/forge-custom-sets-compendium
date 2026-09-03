@@ -1,0 +1,13 @@
+Name:Solar Sanction
+ManaCost:W
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this enchantment enters, exile target nonland permanent an opponent controls with mana value 1 or less until this enchantment leaves the battlefield.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Permanent.nonLand+OppCtrl+cmcLE1 | TgtPrompt$ Select target nonland permanent an opponent controls with mana value 1 or less | Duration$ UntilHostLeavesPlay
+
+K:Plainscycling:1
+
+Oracle:When this enchantment enters, exile target nonland permanent an opponent controls with mana value 1 or less until this enchantment leaves the battlefield.\nPlainscycling {1} ({1}, Discard this card: Search your library for a Plains card, reveal it, put it into your hand, then shuffle.)
+
+SVar:PlayMain1:TRUE
+SVar:OblivionRing:TRUE

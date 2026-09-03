@@ -1,0 +1,10 @@
+Name:Sunburst
+ManaCost:X G G
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Creature.YouOwn | WithTotalCMC$ Y | ChangeNum$ Z | AnyNumber$ True | Hidden$ True | PrecostDesc$ Converge — | SpellDescription$ Search your library for any number of creature cards with total mana value less than or equal to the number of colors of mana spent to cast this spell, put them onto the battlefield, then shuffle.
+
+SVar:Y:Count$Converge
+SVar:Z:Count$ValidLibrary Creature.YouOwn
+
+Oracle:Converge — Search your library for any number of creature cards with total mana value less than or equal to the number of colors of mana spent to cast this spell, put them onto the battlefield, then shuffle.

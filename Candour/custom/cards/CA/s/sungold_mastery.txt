@@ -1,0 +1,15 @@
+Name:Sungold Mastery
+ManaCost:1 W
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this enchantment enters, create a Thraben Inspector token. (It's a {W} 1/2 Human Soldier creature with "When this creature enters, investigate.")
+SVar:TrigToken:DB$ CopyPermanent | DefinedName$ Thraben Inspector
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ X | SVarCompare$ GE3 | Execute$ TrigPump | TriggerDescription$ Coven — At the beginning of combat on your turn, if you control three or more creatures with different powers, creatures you control get +2/+2 and gain vigilance until end of turn.
+SVar:TrigPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +2 | NumDef$ +2 | KW$ Vigilance
+SVar:X:Count$Valid Creature.YouCtrl$DifferentCardPower
+
+Oracle:When this enchantment enters, create a Thraben Inspector token. (It's a {W} 1/2 Human Soldier creature with "When this creature enters, investigate.")\nCoven — At the beginning of combat on your turn, if you control three or more creatures with different powers, creatures you control get +2/+2 and gain vigilance until end of turn.
+
+DeckHas:Ability$Token|Investigate
+DeckHints:Name$Thraben Inspector

@@ -1,0 +1,12 @@
+Name:Shrieking Shaft
+ManaCost:2
+Types:Artifact
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigOptional | TriggerDescription$ At the beginning of your end step you may sacrifice a land. If you do, put two dig counters on this artifact, then draw X cards unless target opponent pays X life, where X is the number of dig counters on this artifact.
+SVar:TrigOptional:AB$ PutCounter | Cost$ Sac<1/Land/land> | CounterType$ DIG | CounterNum$ 2 | Optional$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | NumCards$ X | ValidTgts$ Opponent | UnlessCost$ PayLife<X> | UnlessPayer$ Targeted
+SVar:X:Count$CardCounters.DIG
+
+Oracle:At the beginning of your end step you may sacrifice a land. If you do, put two dig counters on this artifact, then draw X cards unless target opponent pays X life, where X is the number of dig counters on this artifact.
+
+DeckHas:Ability$Sacrifice

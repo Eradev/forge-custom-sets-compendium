@@ -1,0 +1,10 @@
+Name:Swindle
+ManaCost:U
+Types:Instant
+
+A:SP$ Draw | NumCards$ 2 | SubAbility$ DBDiscard | SpellDescription$ Draw two cards, then discard three cards.
+SVar:DBDiscard:DB$ Discard | NumCards$ 3 | Mode$ TgtChoose
+
+Oracle:Draw two cards, then discard three cards.
+
+DeckHas:Ability$Discard

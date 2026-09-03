@@ -1,0 +1,13 @@
+Name:Segovian Seraph
+ManaCost:W
+Types:Creature Angel Warrior
+PT:1/1
+
+K:Flying
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ At the beginning of combat on your turn, target creature you control gains your choice of flying, vigilance, or lifelink until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | KWChoice$ Flying,Vigilance,Lifelink
+
+Oracle:Flying\nAt the beginning of combat on your turn, target creature you control gains your choice of flying, vigilance, or lifelink until end of turn.
+
+SVar:PlayMain1:TRUE

@@ -1,0 +1,13 @@
+Name:Suspended Megaliths
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you control a Plains or a Swamp.
+SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Plains.YouCtrl,Swamp.YouCtrl | ConditionCompare$ EQ0
+
+A:AB$ Mana | Cost$ T | Produced$ U | SpellDescription$ Add {U}.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this land leaves the battlefield, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:This land enters tapped unless you control a Plains or a Swamp.\n{T}: Add {U}.\nWhen this land leaves the battlefield, draw a card.

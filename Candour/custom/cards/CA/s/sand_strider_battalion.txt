@@ -1,0 +1,12 @@
+Name:Sand-Strider Battalion
+ManaCost:W
+Types:Creature Human Warrior
+PT:2/1
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigEndure | TriggerDescription$ Whenever this creature attacks, you may pay {X}{X}. If you do, it endures X. (Put X +1/+1 counters on it or create an X/X white Spirit creature token.)
+SVar:TrigEndure:AB$ Endure | Cost$ XX | Num$ X
+SVar:X:Count$xPaid
+
+Oracle:Whenever this creature attacks, you may pay {X}{X}. If you do, it endures X. (Put X +1/+1 counters on it or create an X/X white Spirit creature token.)
+
+DeckHas:Ability$Counters|Token & Type$Spirit

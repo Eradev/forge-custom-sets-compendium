@@ -1,0 +1,9 @@
+Name:Synthetic Mortality
+ManaCost:WP
+Types:Instant
+
+K:Replicate:PayLife<1>
+
+A:SP$ PutCounter | ValidTgts$ Permanent | TgtPrompt$ Select target permanent | CounterType$ FINALITY | SpellDescription$ Put a finality counter on target permanent. (If a permanent with a finality counter on it would be put into a graveyard from the battlefield, exile it instead.)
+
+Oracle:({W/P} can be paid with either {W} or 2 life.)\nReplicate—Pay 1 life. (When you cast this spell, copy it for each time you paid its replicate cost. You may choose new targets for the copies.)\nPut a finality counter on target permanent. (If a permanent with a finality counter on it would be put into a graveyard from the battlefield, exile it instead.)

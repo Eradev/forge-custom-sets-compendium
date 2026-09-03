@@ -1,0 +1,21 @@
+Name:Slagsparrow
+ManaCost:R
+Types:Creature Elemental Bird
+PT:2/2
+
+A:SP$ PermanentCreature | Cost$ R Sac<1/Artifact>
+
+K:Flying
+
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ When this creature enters, mill a card. You may play that card this turn.
+SVar:TrigMill:DB$ Mill | RememberMilled$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ RememberedCard | StaticAbilities$ Play | SubAbility$ DBCleanup | ExileOnMoved$ Graveyard,Exile
+SVar:Play:Mode$ Continuous | MayPlay$ True | EffectZone$ Command | Affected$ Card.IsRemembered | AffectedZone$ Graveyard,Exile | Description$ You may play that card this turn.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:As an additional cost to cast this spell, sacrifice an artifact.\nFlying, haste\nWhen this creature enters, mill a card. You may play that card this turn.
+
+DeckHas:Ability$Mill|Sacrifice
+DeckHints:Type$Artifact
