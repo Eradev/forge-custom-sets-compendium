@@ -1,0 +1,15 @@
+Name:Restless Necropolis
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you control an Island or a Mountain.
+SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Island.YouCtrl,Mountain.YouCtrl | ConditionCompare$ EQ0
+
+A:AB$ Mana | Cost$ T | Produced$ B | SpellDescription$ Add {B}.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigReturn | TriggerDescription$ When this land leaves the battlefield, return target creature card from your graveyard to your hand.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Creature.YouOwn | TgtPrompt$ Select target creature card in your graveyard
+
+Oracle:This land enters tapped unless you control an Island or a Mountain.\n{T}: Add {B}.\nWhen this land leaves the battlefield, return target creature card from your graveyard to your hand.
+
+DeckHas:Ability$Graveyard

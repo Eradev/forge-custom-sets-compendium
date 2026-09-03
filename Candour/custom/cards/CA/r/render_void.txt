@@ -1,0 +1,9 @@
+Name:Render Void
+ManaCost:W U B
+Types:Instant
+
+R:Event$ Counter | ValidCard$ Card.Self | ValidSA$ Spell | Layer$ CantHappen | Description$ This spell can't be countered.
+
+A:SP$ ChangeZone | ValidTgts$ Card.inZoneStack,Permanent.nonLand,Card.inZoneGraveyard,Card.inZoneExile | TgtZone$ Stack,Battlefield,Graveyard,Exile | TgtPrompt$ Select target spell, nonland permanent, card in a graveyard, or card in exile | Origin$ Stack,Battlefield,Graveyard,Exile | Destination$ Exile | SpellDescription$ Exile target spell, nonland permanent, card in a graveyard, or card in exile.
+
+Oracle:This spell can't be countered.\nExile target spell, nonland permanent, card in a graveyard, or card in exile.

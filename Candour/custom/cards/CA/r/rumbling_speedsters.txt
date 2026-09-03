@@ -1,0 +1,13 @@
+Name:Rumbling Speedsters
+ManaCost:1 R
+Types:Creature Goblin
+PT:1/1
+
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSearch | TriggerDescription$ When this creature enters, search your library for a Vehicle card or a creature card with haste, reveal it, put it into your hand, then shuffle.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Vehicle,Creature.withHaste | ChangeTypeDesc$ Vehicle card or creature card with haste | ChangeNum$ 1
+
+Oracle:Haste\nWhen this creature enters, search your library for a Vehicle card or a creature card with haste, reveal it, put it into your hand, then shuffle.
+
+DeckHints:Type$Vehicle & Keyword$Haste

@@ -1,0 +1,14 @@
+Name:Rallying Recruiter
+ManaCost:R
+Types:Creature Lizard Warrior
+PT:1/1
+
+K:Menace
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigRecruit | TriggerDescription$ Whenever this creature deals combat damage to a player, recruit. (Draw a card, then discard a card. If you discarded a nonland card, create a 1/1 white Human Soldier creature token.)
+SVar:TrigRecruit:DB$ Recruit
+
+Oracle:Menace\nWhenever this creature deals combat damage to a player, recruit. (Draw a card, then discard a card. If you discarded a nonland card, create a 1/1 white Human Soldier creature token.)
+
+DeckHas:Ability$Token|Discard & Type$Human|Soldier
+SVar:MustAttack:True

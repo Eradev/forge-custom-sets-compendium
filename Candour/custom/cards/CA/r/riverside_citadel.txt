@@ -1,0 +1,15 @@
+Name:Riverside Citadel
+ManaCost:no cost
+Types:Land
+
+A:AB$ Repeat | Cost$ T | RepeatSubAbility$ DBCleanAndMill | MaxRepeat$ MaxRepeats | RepeatCheckSVar$ MilledLand | RepeatSVarCompare$ EQ0 | SubAbility$ DBMana | SpellDescription$ Mill a card. If a land card was milled this way, add {C}. Otherwise, repeat this process.
+SVar:DBCleanAndMill:DB$ Cleanup | ClearRemembered$ True | SubAbility$ DBMill
+SVar:DBMill:DB$ Mill | RememberMilled$ True
+SVar:MilledLand:Remembered$Valid Land
+SVar:MaxRepeats:Count$ValidLibrary Card.YouOwn
+SVar:DBMana:DB$ Mana | Produced$ C | ConditionDefined$ Remembered | ConditionPresent$ Land | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:{T}: Mill a card. If a land card was milled this way, add {C}. Otherwise, repeat this process.
+
+DeckHas:Ability$Mill
