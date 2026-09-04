@@ -6,6 +6,6 @@ PT:2/2
 T:Mode$ ChangesZone | Origin$ Graveyard | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCopy | TriggerDescription$ When this creature enters from a graveyard, create two tokens that are copies of it.
 SVar:TrigCopy:DB$ CopyPermanent | Defined$ TriggeredCardLKICopy | NumCopies$ 2
 
-A:AB$ ChangeZone | Cost$ 4 B B Sac<1/Creature> | Defined$ Self | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Return this creature from your graveyard to the battlefield. Activate only as a sorcery.
+A:AB$ ChangeZone | Cost$ 4 B B Sac<1/Creature> | Defined$ Self | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Return this card from your graveyard to the battlefield. Activate only as a sorcery.
 
-Oracle:When this creature enters from a graveyard, create two tokens that are copies of it.\n{4}{B}{B}, Sacrifice a creature: Return this creature from your graveyard to the battlefield. Activate only as a sorcery.
+Oracle:When this creature enters from a graveyard, create two tokens that are copies of it.\n{4}{B}{B}, Sacrifice a creature: Return this card from your graveyard to the battlefield. Activate only as a sorcery.
