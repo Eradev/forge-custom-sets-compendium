@@ -13,4 +13,4 @@ SVar:TrigSac:DB$ Sacrifice | SacValid$ Creature | Defined$ Player
 SVar:HateFlag:PlayerCountRegisteredOpponents$LifeLostThisTurn/Minus.OppCombatDmg
 SVar:OppCombatDmg:PlayerCountRegisteredOpponents$DamageThisTurn/Minus.PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
 
-K:Menace\nHate - Whenever Knights of Ren enters or attacks, if an opponent lost life from a source other than combat damage this turn, you may have each player sacrifice a creature.
+Oracle:Menace\nHate - Whenever Knights of Ren enters or attacks, if an opponent lost life from a source other than combat damage this turn, you may have each player sacrifice a creature.
