@@ -1,0 +1,12 @@
+Name:Asharo's Yoroi
+ManaCost:2 R
+Types:Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | Description$ Equipped creature gets +2/+2.
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Creature.EquippedBy+dealtDamageToOppThisTurn | Execute$ TrigNoUntap | TriggerDescription$ Art of war — At the beginning of your end step, if equipped creature dealt damage to an opponent this turn, target nonbasic land an opponent controls doesn't untap during its controller's next untap step.
+SVar:TrigNoUntap:DB$ Pump | ValidTgts$ Land.nonBasic+OppCtrl | TgtPrompt$ Select target nonbasic land an opponent controls | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent | IsCurse$ True
+
+K:Equip:2
+
+Oracle:Equipped creature gets +2/+2.\nArt of war — At the beginning of your end step, if equipped creature dealt damage to an opponent this turn, target nonbasic land an opponent controls doesn't untap during its controller's next untap step.\nEquip {2}

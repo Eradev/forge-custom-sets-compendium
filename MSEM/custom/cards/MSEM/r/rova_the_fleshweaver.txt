@@ -1,0 +1,17 @@
+Name:Rova, the Fleshweaver
+ManaCost:4 G G G
+Types:Legendary Creature Elder Horror
+PT:7/7
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigCounters | ActivationLimit$ 1 | TriggerDescription$ Once each turn, when NICKNAME enters or you attack with one or more Horrors, you may put a +1/+1 counter on each creature you control. Then if it isn't a token, untap each land you control. Until your next turn, you may cast permanent spells as though they had flash.
+T:Mode$ AttackersDeclared | ValidAttackers$ Creature.Horror+YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigCounters | ActivationLimit$ 1 | Secondary$ True | TriggerDescription$ Once each turn, when NICKNAME enters or you attack with one or more Horrors, you may put a +1/+1 counter on each creature you control. Then if it isn't a token, untap each land you control. Until your next turn, you may cast permanent spells as though they had flash.
+SVar:TrigCounters:DB$ PutCounterAll | ValidCards$ Creature.YouCtrl | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBUntap
+SVar:DBUntap:DB$ UntapAll | ValidCards$ Land.YouCtrl | ConditionPresent$ Card.Self+nonToken | SubAbility$ DBFlash
+SVar:DBFlash:DB$ Effect | StaticAbilities$ FlashPerm | Duration$ UntilYourNextTurn | ConditionPresent$ Card.Self+nonToken
+SVar:FlashPerm:Mode$ CastWithFlash | ValidCard$ Permanent | ValidSA$ Spell | Caster$ You | Description$ Until your next turn, you may cast permanent spells as though they had flash.
+
+A:AB$ CopyPermanent | Cost$ 2 G G Discard<1/CARDNAME/this card> | ActivationZone$ Hand | Defined$ Self | SetPower$ 4 | SetToughness$ 4 | NonLegendary$ True | SorcerySpeed$ True | SpellDescription$ Create a token that's a copy of NICKNAME, except it's 4/4 and isn't legendary. Activate only as a sorcery.
+
+Oracle:Once each turn, when Rova enters or you attack with one or more Horrors, you may put a +1/+1 counter on each creature you control. Then if it isn't a token, untap each land you control. Until your next turn, you may cast permanent spells as though they had flash.\n{2}{G}{G}, Discard this card: Create a token that's a copy of Rova, except it's 4/4 and isn't legendary. Activate only as a sorcery.
+
+DeckHas:Ability$Token|Discard|Counters

@@ -1,0 +1,15 @@
+Name:Molting Abomination
+ManaCost:1 G
+Types:Creature Human Horror
+PT:2/2
+
+S:Mode$ CantBlockBy | ValidAttacker$ Card.Self | ValidBlocker$ Creature.powerLE2 | Description$ This creature can't be blocked by creatures with power 2 or less.
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player,Planeswalker | CombatDamage$ True | Execute$ TrigToken | TriggerDescription$ Whenever this creature deals combat damage to a player or planeswalker, create a tapped 3/2 colorless Horror creature token. Put a stun counter on that token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_3_2_horror | TokenTapped$ True | RememberTokens$ True | SubAbility$ DBStun
+SVar:DBStun:DB$ PutCounter | Defined$ Remembered | CounterType$ Stun | CounterNum$ 1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:This creature can't be blocked by creatures with power 2 or less.\nWhenever this creature deals combat damage to a player or planeswalker, create a tapped 3/2 colorless Horror creature token. Put a stun counter on that token. (If a permanent with a stun counter would become untapped, remove one from it instead.)
+
+DeckHas:Ability$Token|Counters

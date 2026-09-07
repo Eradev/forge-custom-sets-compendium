@@ -1,0 +1,12 @@
+Name:Chronal Echo
+ManaCost:2 U
+Types:Creature Spirit Horror
+PT:2/3
+
+K:Flying
+
+A:AB$ GenericChoice | Cost$ 2 U | ValidTgts$ Creature | TgtPrompt$ Select target creature | Choices$ ChooseTiny,ChooseBig | ActivationPhases$ Upkeep,Draw,Main1,Main2,EndOfTurn | SpellDescription$ Until end of turn, target creature has your choice of base power and toughness 1/1 or 4/4 until end of turn. Activate only outside of combat.
+SVar:ChooseTiny:DB$ Animate | Defined$ Targeted | Power$ 1 | Toughness$ 1 | SpellDescription$ 1/1
+SVar:ChooseBig:DB$ Animate | Defined$ Targeted | Power$ 4 | Toughness$ 4 | SpellDescription$ 4/4
+
+Oracle:Flying\n{2}{U}: Until end of turn, target creature has your choice of base power and toughness 1/1 or 4/4 until end of turn. Activate only outside of combat.

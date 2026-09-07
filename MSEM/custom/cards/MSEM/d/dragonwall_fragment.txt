@@ -1,0 +1,15 @@
+Name:Dragonwall Fragment
+ManaCost:3
+Types:Artifact Creature Wall
+PT:0/6
+
+K:Defender
+
+K:A deck can have any number of cards named CARDNAME.
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Creature.YouCtrl+namedDragonwall Fragment | PresentCompare$ GE20 | Execute$ TrigWinGame | TriggerDescription$ At the beginning of your upkeep, if you control twenty or more creatures named CARDNAME, you win the game.
+SVar:TrigWinGame:DB$ WinsGame | Defined$ You
+
+Oracle:Defender\nA deck can have any number of cards named Dragonwall Fragment.\nAt the beginning of your upkeep, if you control twenty or more creatures named Dragonwall Fragment, you win the game.
+
+DeckNeeds:Name$Dragonwall Fragment

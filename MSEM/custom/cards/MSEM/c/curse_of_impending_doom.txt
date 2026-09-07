@@ -1,0 +1,13 @@
+Name:Curse of Impending Doom
+ManaCost:B
+Types:Enchantment Aura Curse
+
+K:Enchant:Player
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Player.EnchantedBy | TriggerZones$ Battlefield | Execute$ TrigLose | CheckSVar$ X | SVarCompare$ LE1 | TriggerDescription$ At the beginning of enchanted player's upkeep, if that player has one or fewer cards in hand, they lose 3 life.
+SVar:TrigLose:DB$ LoseLife | Defined$ TriggeredPlayer | LifeAmount$ 3
+SVar:X:Count$ValidHand Card.OwnedBy TriggeredPlayer
+
+Oracle:Enchant player\nAt the beginning of enchanted player's upkeep, if that player has one or fewer cards in hand, they lose 3 life.
+
+SVar:AttachAILogic:Curse

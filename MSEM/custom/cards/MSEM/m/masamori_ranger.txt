@@ -1,0 +1,11 @@
+Name:Masamori Ranger
+ManaCost:2 G
+Types:Creature Human Scout Ranger
+PT:3/2
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigSearch | TriggerDescription$ Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | Tapped$ True | ChangeType$ Land.Basic | ChangeTypeDesc$ basic land
+
+Oracle:Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.
+
+DeckHas:Ability$Graveyard

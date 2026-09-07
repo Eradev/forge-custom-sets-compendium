@@ -1,0 +1,13 @@
+Name:Unguarded Relics
+ManaCost:1 R
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigToken | TriggerDescription$ At the beginning of your upkeep, you may create a Treasure token. If you do, an opponent of your choice creates a tapped Treasure token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_a_treasure_sac | SubAbility$ DBChoose
+SVar:DBChoose:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | ChoiceTitle$ Choose an opponent | SubAbility$ DBOpp
+SVar:DBOpp:DB$ Token | TokenScript$ c_a_treasure_sac | TokenTapped$ True | TokenOwner$ ChosenPlayer | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenPlayer$ True
+
+Oracle:At the beginning of your upkeep, you may create a Treasure token. If you do, an opponent of your choice creates a tapped Treasure token.
+
+DeckHas:Ability$Token|Sacrifice & Type$Treasure

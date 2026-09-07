@@ -1,0 +1,9 @@
+Name:Hideaway Agent
+ManaCost:3 U
+Types:Creature Human Rogue Detective
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSteal | TriggerDescription$ When this creature enters, gain control of target nonland permanent with mana value 3 or less for as long as you control it.
+SVar:TrigSteal:DB$ GainControl | ValidTgts$ Permanent.nonLand+cmcLE3 | TgtPrompt$ Select target nonland permanent with mana value 3 or less | LoseControl$ LeavesPlay | SpellDescription$ Gain control of target nonland permanent with mana value 3 or less for as long as you control it.
+
+Oracle:When this creature enters, gain control of target nonland permanent with mana value 3 or less for as long as you control it.

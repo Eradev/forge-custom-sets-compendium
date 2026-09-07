@@ -1,0 +1,15 @@
+Name:Duncaster Nightwatcher
+ManaCost:3 U
+Types:Creature Human Detective
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters and whenever you cast a noncreature spell, create a 1/1 colorless Human creature token.
+T:Mode$ SpellCast | ValidCard$ Card.nonCreature | ValidActivatingPlayer$ You | Execute$ TrigToken | TriggerZones$ Battlefield | Secondary$ True | TriggerDescription$ When this creature enters and whenever you cast a noncreature spell, create a 1/1 colorless Human creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_human
+
+T:Mode$ AttackersDeclared | Execute$ TrigReturn | ValidAttackers$ Creature | ValidAttackersAmount$ GE3 | TriggerZones$ Battlefield | AttackingPlayer$ You | TriggerDescription$ Whenever you attack with three or more creatures, return target noncreature, nonland card with mana value 3 or less from your graveyard to your hand.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Card.YouOwn+nonCreature+nonLand+cmcLE3 | TgtPrompt$ Select target noncreature, nonland card with mana value 3 or less in your graveyard
+
+Oracle:When this creature enters and whenever you cast a noncreature spell, create a 1/1 colorless Human creature token.\nWhenever you attack with three or more creatures, return target noncreature, nonland card with mana value 3 or less from your graveyard to your hand.
+
+DeckHas:Ability$Token|Graveyard

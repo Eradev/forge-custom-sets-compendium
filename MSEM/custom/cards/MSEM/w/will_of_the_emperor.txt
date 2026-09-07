@@ -1,0 +1,11 @@
+Name:Will of the Emperor
+ManaCost:2 W
+Types:Instant
+
+A:SP$ Token | TokenAmount$ 2 | TokenScript$ c_1_1_samurai | RememberTokens$ True | SubAbility$ DBPump | SpellDescription$ Create two 1/1 colorless Samurai creature tokens. Those creatures gain first strike until end of turn.
+SVar:DBPump:DB$ Pump | Defined$ Remembered | KW$ First Strike | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Create two 1/1 colorless Samurai creature tokens. Those creatures gain first strike until end of turn.
+
+DeckHas:Ability$Token

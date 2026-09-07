@@ -1,0 +1,13 @@
+Name:Blazing Exultation
+ManaCost:1 R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ 3 | SpellDescription$ CARDNAME deals 3 damage to any target.
+
+A:AB$ ChangeZone | Cost$ 2 R | ActivationZone$ Graveyard | Origin$ Graveyard | Destination$ Library | Defined$ Self | SubAbility$ DBOther | SpellDescription$ Shuffle this card and up to one other instant or sorcery card from your graveyard into your library.
+SVar:DBOther:DB$ ChangeZone | Origin$ Graveyard | Destination$ Library | ValidTgts$ Instant.YouOwn,Sorcery.YouOwn | TgtPrompt$ Select up to one other instant or sorcery card in your graveyard | TargetMin$ 0 | TargetMax$ 1 | SubAbility$ DBShuffle
+SVar:DBShuffle:DB$ Shuffle | Defined$ You
+
+Oracle:Blazing Exultation deals 3 damage to any target.\n{2}{R}: Shuffle this card and up to one other instant or sorcery card from your graveyard into your library.
+
+DeckHas:Ability$Graveyard

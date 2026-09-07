@@ -1,0 +1,10 @@
+Name:Kurayami Ronin
+ManaCost:1 B
+Types:Creature Human Samurai
+PT:3/1
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigDraw | TriggerDescription$ Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, you draw a card and you lose 1 life.
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1
+
+Oracle:Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, you draw a card and you lose 1 life.

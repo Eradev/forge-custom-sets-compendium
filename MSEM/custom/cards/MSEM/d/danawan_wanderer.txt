@@ -17,7 +17,7 @@ ALTERNATE
 
 Name:Punan Trailblazer
 ManaCost:no cost
-Colors:Green
+Colors:green
 Types:Creature Human Warrior
 PT:3/3
 

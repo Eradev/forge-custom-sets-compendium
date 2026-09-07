@@ -1,0 +1,27 @@
+Name:Cephalovorous Flukes
+ManaCost:1 U
+Types:Creature Worm Horror
+PT:1/1
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounter | TriggerDescription$ When this creature enters, counter target spell or ability that targets you or a permanent you control.
+SVar:TrigCounter:DB$ Counter | TargetType$ Spell,Activated,Triggered | TgtPrompt$ Select target spell or ability that targets you or a permanent you control | ValidTgts$ Card,Emblem | TargetValidTargeting$ You,Permanent.YouCtrl+inRealZoneBattlefield
+
+Oracle:Flash\nWhen this creature enters, counter target spell or ability that targets you or a permanent you control.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Deepdrinker's Domain
+ManaCost:no cost
+Colors:blue
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ U | SpellDescription$ Add {U}.
+
+Oracle:This land enters tapped.\n{T}: Add {U}.

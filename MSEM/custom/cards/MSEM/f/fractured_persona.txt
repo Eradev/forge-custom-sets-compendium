@@ -1,0 +1,15 @@
+Name:Fractured Persona
+ManaCost:1 U
+Types:Enchantment Aura
+
+K:Flash
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | SetPower$ 0 | SetToughness$ 1 | RemoveAllAbilities$ True | RemoveCreatureTypes$ True | Description$ Enchanted creature has base power and toughness 0/1 and loses all abilities and creature types.
+
+A:AB$ ChangeZone | Cost$ 2 U | Defined$ Self | Origin$ Battlefield | Destination$ Hand | SpellDescription$ Return this enchantment to its owner's hand.
+
+Oracle:Flash\nEnchant creature\nEnchanted creature has base power and toughness 0/1 and loses all abilities and creature types.\n{2}{U}: Return this enchantment to its owner's hand.
+
+SVar:AttachAILogic:Curse

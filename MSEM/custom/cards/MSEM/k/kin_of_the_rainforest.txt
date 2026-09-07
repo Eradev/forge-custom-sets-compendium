@@ -17,7 +17,7 @@ ALTERNATE
 
 Name:Desperate Ravager
 ManaCost:no cost
-Colors:Red
+Colors:red
 Types:Creature Human Warrior
 PT:3/1
 

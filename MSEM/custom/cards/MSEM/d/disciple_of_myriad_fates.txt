@@ -1,0 +1,13 @@
+Name:Disciple of Myriad Fates
+ManaCost:2 B
+Types:Creature Human Warlock
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDrain | TriggerDescription$ Whenever another creature you control dies, each opponent loses 1 life and you gain 1 life. Then you may pay {B}. If you do, this creature becomes a copy of that creature, except it has this ability.
+SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 1 | SubAbility$ DBGain
+SVar:DBGain:DB$ GainLife | LifeAmount$ 1 | SubAbility$ DBCopy
+SVar:DBCopy:AB$ Clone | Cost$ B | Defined$ TriggeredCardLKICopy | GainThisAbility$ True
+
+Oracle:Whenever another creature you control dies, each opponent loses 1 life and you gain 1 life. Then you may pay {B}. If you do, this creature becomes a copy of that creature, except it has this ability.
+
+DeckHas:Ability$LifeGain

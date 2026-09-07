@@ -1,0 +1,15 @@
+Name:Whitney Banks, Ace Mechanic
+ManaCost:G
+Types:Legendary Creature Human Warrior
+PT:1/1
+
+A:AB$ PutCounter | Cost$ 1 | RaiseCost$ X | CounterType$ P1P1 | CounterNum$ 1 | SorcerySpeed$ True | PrecostDesc$ Improve | SpellDescription$ ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
+SVar:X:Count$CardCounters.P1P1
+
+S:Mode$ Continuous | Affected$ Creature.Other+YouCtrl | AddAbility$ Improve | Description$ Other creatures you control have improve {1}.
+SVar:Improve:AB$ PutCounter | Cost$ 1 | RaiseCost$ Y | CounterType$ P1P1 | CounterNum$ 1 | SorcerySpeed$ True | PrecostDesc$ Improve | SpellDescription$ ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
+SVar:Y:Count$CardCounters.P1P1
+
+Oracle:Improve {1} ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)\nOther creatures you control have improve {1}.
+
+DeckHas:Ability$Counters

@@ -1,6 +1,6 @@
 Name:B-Wing
 ManaCost:no cost
-Colors:Blue
+Colors:blue
 Types:Artifact Creature Rebel Starship
 PT:2/3
 

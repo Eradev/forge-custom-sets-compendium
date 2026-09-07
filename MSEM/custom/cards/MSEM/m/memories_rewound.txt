@@ -1,0 +1,12 @@
+Name:Memories Rewound
+ManaCost:G
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigTop | TriggerDescription$ When this enchantment enters, you may put target card from your graveyard on top of your library.
+SVar:TrigTop:DB$ ChangeZone | Origin$ Graveyard | Destination$ Library | LibraryPosition$ 0 | ValidTgts$ Card.YouOwn | TgtPrompt$ Select target card in your graveyard
+
+A:AB$ ChangeZone | Cost$ 1 | Origin$ Graveyard | Destination$ Library | LibraryPosition$ -1 | ValidTgts$ Card.YouOwn | TgtPrompt$ Select target card in your graveyard | ActivationLimit$ 1 | PlayerTurn$ True | SpellDescription$ Put target card from your graveyard on the bottom of your library. Activate only once during each of your turns.
+
+Oracle:When this enchantment enters, you may put target card from your graveyard on top of your library.\n{1}: Put target card from your graveyard on the bottom of your library. Activate only once during each of your turns.
+
+DeckHas:Ability$Graveyard

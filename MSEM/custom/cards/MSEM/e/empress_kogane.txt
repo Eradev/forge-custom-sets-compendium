@@ -1,0 +1,15 @@
+Name:Empress Kogane
+ManaCost:1 W W
+Types:Legendary Creature Human
+PT:2/2
+
+S:Mode$ CantAttack,CantBlock | ValidCard$ Card.Self | Description$ CARDNAME can't attack or block.
+
+T:Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ Opponent | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigGainLife | TriggerDescription$ Whenever an opponent casts a spell, you may gain life equal to that spell's mana value.
+SVar:TrigGainLife:DB$ GainLife | Defined$ You | LifeAmount$ X
+
+SVar:X:TriggeredSpellAbility$CardManaCostLKI
+
+Oracle:Empress Kogane can't attack or block.\nWhenever an opponent casts a spell, you may gain life equal to that spell's mana value.
+
+DeckHas:Ability$LifeGain

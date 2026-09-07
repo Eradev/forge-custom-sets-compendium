@@ -1,0 +1,7 @@
+Name:Burdens of the Deceased
+ManaCost:2 W
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ Player | AddKeyword$ UntapAdjust:Permanent:3 | Description$ Players can't untap more than three permanents during their untap steps.
+
+Oracle:Players can't untap more than three permanents during their untap steps.

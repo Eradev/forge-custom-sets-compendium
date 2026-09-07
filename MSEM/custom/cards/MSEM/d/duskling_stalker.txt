@@ -1,0 +1,13 @@
+Name:Duskling Stalker
+ManaCost:1 B
+Types:Creature Beast Horror
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigReturn | ConditionPresent$ Card.StrictlySelf+counters_EQ0 | TriggerDescription$ When this creature dies, if it didn't have any counters on it, return it to the battlefield with your choice of a deathtouch, lifelink, or +1/+1 counter on it.
+SVar:TrigReturn:DB$ ChangeZone | Defined$ TriggeredNewCardLKICopy | Origin$ Graveyard | Destination$ Battlefield | RememberChanged$ True | SubAbility$ DBCounter
+SVar:DBCounter:DB$ PutCounter | Defined$ Remembered | CounterType$ Deathtouch,Lifelink,P1P1 | CounterNum$ 1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When this creature dies, if it didn't have any counters on it, return it to the battlefield with your choice of a deathtouch, lifelink, or +1/+1 counter on it.
+
+DeckHas:Ability$Counters|Graveyard

@@ -1,0 +1,17 @@
+Name:Sepulchral Guide
+ManaCost:1 W
+Types:Creature Spirit
+PT:2/1
+
+K:Flying
+
+K:Vigilance
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPrevent | TriggerDescription$ Whenever this creature attacks, prevent all combat damage that would be dealt to another target creature you control this turn. If that creature has two or more counters on it, untap it.
+SVar:TrigPrevent:DB$ Effect | ValidTgts$ Creature.Other+YouCtrl | TgtPrompt$ Select another target creature you control | RememberObjects$ Targeted | ReplacementEffects$ RPrevent | SubAbility$ DBUntap
+SVar:RPrevent:Event$ DamageDone | Prevent$ True | IsCombat$ True | ValidTarget$ Card.IsRemembered | Description$ Prevent all combat damage that would be dealt to the targeted creature this turn.
+SVar:DBUntap:DB$ Untap | Defined$ Targeted | ConditionDefined$ Targeted | ConditionPresent$ Card.counters_GE2
+
+Oracle:Flying, vigilance\nWhenever this creature attacks, prevent all combat damage that would be dealt to another target creature you control this turn. If that creature has two or more counters on it, untap it.
+
+SVar:HasAttackEffect:TRUE

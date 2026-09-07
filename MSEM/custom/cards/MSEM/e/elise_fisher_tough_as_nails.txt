@@ -1,0 +1,13 @@
+Name:Elise Fisher, Tough as Nails
+ManaCost:1 R G
+Types:Legendary Creature Human Citizen
+PT:3/3
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigChoice | TriggerDescription$ At the beginning of combat on your turn, creatures you control gain your choice of trample, menace, haste, or +1/+0 until end of turn.
+SVar:TrigChoice:DB$ GenericChoice | Choices$ ChooseTramp,ChooseMenace,ChooseHaste,ChoosePump
+SVar:ChooseTramp:DB$ PumpAll | ValidCards$ Creature.YouCtrl | KW$ Trample | SpellDescription$ Trample
+SVar:ChooseMenace:DB$ PumpAll | ValidCards$ Creature.YouCtrl | KW$ Menace | SpellDescription$ Menace
+SVar:ChooseHaste:DB$ PumpAll | ValidCards$ Creature.YouCtrl | KW$ Haste | SpellDescription$ Haste
+SVar:ChoosePump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | SpellDescription$ +1/+0
+
+Oracle:At the beginning of combat on your turn, creatures you control gain your choice of trample, menace, haste, or +1/+0 until end of turn.

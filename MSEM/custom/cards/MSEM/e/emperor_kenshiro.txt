@@ -1,0 +1,11 @@
+Name:Emperor Kenshiro
+ManaCost:1 G G
+Types:Legendary Creature Human Samurai
+PT:3/2
+
+K:Vigilance
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | OptionalDecider$ You | Execute$ TrigCreature | TriggerDescription$ Art of war — At the beginning of your end step, if CARDNAME dealt damage to an opponent this turn, you may put a creature card from your hand onto the battlefield tapped.
+SVar:TrigCreature:DB$ ChangeZone | Origin$ Hand | Destination$ Battlefield | ChangeType$ Creature | ChangeNum$ 1 | Tapped$ True
+
+Oracle:Vigilance\nArt of war — At the beginning of your end step, if Emperor Kenshiro dealt damage to an opponent this turn, you may put a creature card from your hand onto the battlefield tapped.

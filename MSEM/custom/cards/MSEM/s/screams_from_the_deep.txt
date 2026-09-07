@@ -1,0 +1,14 @@
+Name:Screams from the Deep
+ManaCost:9
+Types:Creature Fish Horror
+PT:7/6
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When  this creature enters, exile up to one target monocolored permanent.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Permanent.MonoColor | TgtPrompt$ Select up to one target monocolored permanent
+
+S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ HIDDEN CARDNAME assigns combat damage as though it weren't blocked. | CheckSVar$ ExileCount | SVarCompare$ GE3 | Description$ As long as an opponent owns three or more cards in exile, you may have  this creature assign its combat damage as though it weren't blocked.
+SVar:ExileCount:Count$ValidExile Card.OppOwn
+
+K:Evoke:5
+
+Oracle:When this creature enters, exile up to one target monocolored permanent.\nAs long as an opponent owns three or more cards in exile, you may have  this creature assign its combat damage as though it weren't blocked.\nEvoke {5} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)

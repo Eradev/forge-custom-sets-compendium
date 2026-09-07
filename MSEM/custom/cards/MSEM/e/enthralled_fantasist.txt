@@ -1,0 +1,16 @@
+Name:Enthralled Fantasist
+ManaCost:1 G
+Types:Creature Human Artist
+PT:1/2
+
+A:AB$ PutCounter | Cost$ 1 | RaiseCost$ X | CounterType$ P1P1 | CounterNum$ 1 | SorcerySpeed$ True | PrecostDesc$ Improve | SpellDescription$ ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
+SVar:X:Count$CardCounters.P1P1
+
+A:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+A:AB$ Mana | Cost$ T | Produced$ Any | Amount$ Y | SpellDescription$ Add X mana of any one color, where X is the greatest number of counters among creatures you control.
+SVar:Y:Count$Valid Creature.YouCtrl$GreatestNumberOfCounters
+
+Oracle:Improve {1} ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)\n{T}: Add one mana of any color.\n{T}: Add X mana of any one color, where X is the greatest number of counters among creatures you control.
+
+DeckHas:Ability$Counters

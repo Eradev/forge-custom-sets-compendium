@@ -17,7 +17,7 @@ ALTERNATE
 
 Name:Weathered Pilgrim
 ManaCost:no cost
-Colors:Green
+Colors:green
 Types:Creature Human Scout
 PT:3/2
 

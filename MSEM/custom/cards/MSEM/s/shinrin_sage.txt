@@ -1,0 +1,9 @@
+Name:Shinrin Sage
+ManaCost:G
+Types:Creature Human Wizard
+PT:1/2
+
+A:AB$ Mana | Cost$ T | Produced$ Any | Amount$ 1 | CheckSVar$ X | SVarCompare$ GE1 | SpellDescription$ Add one mana of any color. Activate only if this creature is enchanted, equipped, or has a card inscribed onto it.
+SVar:X:Count$Valid Card.Self+equipped,Card.Self+enchanted/Plus.IsInscribed
+
+Oracle:{T}: Add one mana of any color. Activate only if this creature is enchanted, equipped, or has a card inscribed onto it.

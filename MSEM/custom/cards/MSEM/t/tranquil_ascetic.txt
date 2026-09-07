@@ -1,0 +1,8 @@
+Name:Tranquil Ascetic
+ManaCost:U
+Types:Creature Human Wizard
+PT:0/2
+
+K:Hexproof
+
+Oracle:Hexproof (This creature can't be the target of spells or abilities your opponents control.)

@@ -1,0 +1,12 @@
+Name:Exemplar of Honor
+ManaCost:1 W W
+Types:Creature Human Samurai
+PT:3/2
+
+K:First Strike
+
+K:Vigilance
+
+K:Lifelink
+
+Oracle:First strike, vigilance, lifelink

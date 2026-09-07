@@ -1,0 +1,21 @@
+Name:Darren Hunter
+ManaCost:2 G G
+Types:Legendary Planeswalker Darren
+Loyalty:3
+
+A:AB$ Mana | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Produced$ Any | Amount$ 2 | SpellDescription$ Add two mana of any one color.
+
+A:AB$ PutCounter | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | CounterType$ P1P1 | CounterNum$ 2 | SubAbility$ DBBranch | SpellDescription$ Put two +1/+1 counters on target creature you control. Then put your choice of a reach, vigilance, or trample counter on it. If you have an insight counter, you may put all of those counters on that creature instead.
+SVar:DBBranch:DB$ Branch | BranchConditionSVar$ Insight | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBOptional | FalseSubAbility$ ChooseOne
+SVar:DBOptional:DB$ GenericChoice | Choices$ ChooseOne,ChooseAll
+SVar:ChooseOne:DB$ PutCounter | Defined$ Targeted | CounterType$ Reach,Vigilance,Trample | CounterNum$ 1 | SpellDescription$ Put your choice of a reach, vigilance, or trample counter on it.
+SVar:ChooseAll:DB$ PutCounter | Defined$ Targeted | CounterTypes$ Reach,Vigilance,Trample | CounterNum$ 1 | SpellDescription$ Put a reach counter, a vigilance counter, and a trample counter on it.
+SVar:Insight:Count$YourCountersInsight
+
+A:AB$ PutCounter | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | Defined$ You | CounterType$ Insight | CounterNum$ 1 | SpellDescription$ You get an insight counter.
+
+A:AB$ Destroy | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Permanent.nonCreature+nonLand | TgtPrompt$ Select target noncreature, nonland permanent | SpellDescription$ Destroy target noncreature, nonland permanent.
+
+Oracle:[+1]: Add two mana of any one color.\n[0]: Put two +1/+1 counters on target creature you control. Then put your choice of a reach, vigilance, or trample counter on it. If you have an insight counter, you may put all of those counters on that creature instead.\n[0]: You get an insight counter. \n[-2]: Destroy target noncreature, nonland permanent.
+
+DeckHas:Ability$Counters

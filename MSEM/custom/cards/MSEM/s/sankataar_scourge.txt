@@ -1,0 +1,13 @@
+Name:Sankataar Scourge
+ManaCost:1 B
+Types:Creature Snake Warrior
+PT:2/1
+
+K:Poisonous:2
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self+attackedThisTurn | Execute$ TrigPoison | TriggerDescription$ When this creature dies, if it attacked this turn, target opponent gets a poison counter.
+SVar:TrigPoison:DB$ Poison | ValidTgts$ Opponent | Num$ 1
+
+Oracle:Poisonous 2 (Whenever this creature deals combat damage to a player, that player gets two poison counters. A player with ten or more poison counters loses the game.)\nWhen this creature dies, if it attacked this turn, target opponent gets a poison counter.
+
+DeckHas:Ability$Counters

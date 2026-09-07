@@ -1,0 +1,11 @@
+Name:Bridgehaven
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Cost$ 1 T | Produced$ Any | ReduceCost$ X | SpellDescription$ Add one mana of any color. This ability costs {1} less to activate if you control three or more basic lands.
+SVar:X:Count$Compare Y GE3.1.0
+SVar:Y:Count$Valid Land.Basic+YouCtrl
+
+Oracle:{T}: Add {C}.\n{1}, {T}: Add one mana of any color. This ability costs {1} less to activate if you control three or more basic lands.

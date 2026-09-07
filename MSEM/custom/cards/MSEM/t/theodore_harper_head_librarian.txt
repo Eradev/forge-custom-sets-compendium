@@ -1,0 +1,20 @@
+Name:Theodore Harper, Head Librarian
+ManaCost:2 G
+Types:Legendary Creature Human Advisor
+PT:2/1
+
+K:ETBReplacement:Other:HarperChoice
+SVar:HarperChoice:DB$ GenericChoice | Choices$ Fact,Fiction | Defined$ You | SetChosenMode$ True | ShowChoice$ ExceptSelf | SpellDescription$ As NICKNAME enters, choose Fact or Fiction.
+SVar:Fact:DB$ Pump | SpellDescription$ Fact
+SVar:Fiction:DB$ Pump | SpellDescription$ Fiction
+
+S:Mode$ Continuous | Affected$ Card.Self+ChosenModeFact | AddStaticAbility$ FactReduce | Description$ Fact — Permanent spells you cast cost {1} less to cast. This effect can't reduce the amount of mana a spell costs to cast to less than one mana.
+SVar:FactReduce:Mode$ ReduceCost | ValidCard$ Permanent | Type$ Spell | Activator$ You | Amount$ 1 | MinAmount$ 1 | Secondary$ True | Description$ Permanent spells you cast cost {1} less to cast. This effect can't reduce the amount of mana a spell costs to cast to less than one mana.
+
+S:Mode$ Continuous | Affected$ Card.Self+ChosenModeFiction | AddTrigger$ FictionETB | Description$ Fiction — When NICKNAME enters, return a permanent card from your graveyard to your hand.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ FictionReturn | Secondary$ True | TriggerDescription$ When NICKNAME enters, return a permanent card from your graveyard to your hand.
+SVar:FictionReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ChangeType$ Permanent.YouOwn | ChangeNum$ 1 | Hidden$ True | Mandatory$ True
+
+Oracle:As Theodore Harper enters, choose Fact or Fiction.\n• Fact — Permanent spells you cast cost {1} less to cast. This effect can't reduce the amount of mana a spell costs to cast to less than one mana.\n• Fiction — When Theodore Harper enters, return a permanent card from your graveyard to your hand.
+
+DeckHas:Ability$Graveyard

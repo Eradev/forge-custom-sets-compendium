@@ -1,0 +1,14 @@
+Name:Empty the Magazine
+ManaCost:R
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 1 | AddKeyword$ Menace & Haste | Description$ Enchanted creature gets +1/+0 and has menace and haste.
+
+S:Mode$ Continuous | Affected$ Card.Self | MayPlay$ True | MayPlayAltManaCost$ 3 R | AffectedZone$ Graveyard | EffectZone$ Graveyard | Description$ You may cast this card from your graveyard by paying {3}{R} rather than paying its mana cost.
+
+Oracle:Enchant creature\nEnchanted creature gets +1/+0 and has menace and haste.\nYou may cast this card from your graveyard by paying {3}{R} rather than paying its mana cost.
+
+SVar:AttachAILogic:Pump
+DeckHas:Ability$Graveyard

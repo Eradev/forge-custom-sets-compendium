@@ -1,0 +1,9 @@
+Name:Run & Gun
+ManaCost:2 R
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ At the beginning of your end step, this enchantment deals damage to each opponent equal to the number of tapped creatures you control.
+SVar:TrigDamage:DB$ DealDamage | Defined$ Player.Opponent | NumDmg$ X
+SVar:X:Count$Valid Creature.tapped+YouCtrl
+
+Oracle:At the beginning of your end step, this enchantment deals damage to each opponent equal to the number of tapped creatures you control.

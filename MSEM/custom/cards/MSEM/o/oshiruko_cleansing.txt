@@ -1,0 +1,8 @@
+Name:Oshiruko Cleansing
+ManaCost:1 W
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Permanent.!token+YouCtrl | TgtPrompt$ Select target nontoken permanent you control | Origin$ Battlefield | Destination$ Exile | RememberTargets$ True | SubAbility$ DBReturn | SpellDescription$ Exile target nontoken permanent you control, then return that card to the battlefield under its owner's control.
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield
+
+Oracle:Exile target nontoken permanent you control, then return that card to the battlefield under its owner's control.

@@ -1,0 +1,7 @@
+Name:Within Midnight's Nexus
+ManaCost:1 U
+Types:Enchantment
+
+S:Mode$ Panharmonicon | ValidMode$ ChangesZone,ChangesZoneAll | ValidCard$ Permanent.YouCtrl | ValidCause$ Permanent.YouCtrl+cmcGE5 | Destination$ Battlefield | Description$ If a permanent you control with mana value 5 or greater entering causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.
+
+Oracle:If a permanent you control with mana value 5 or greater entering causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.

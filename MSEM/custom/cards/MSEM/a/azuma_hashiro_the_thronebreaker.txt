@@ -1,0 +1,13 @@
+Name:Azuma Hashiro, the Thronebreaker
+ManaCost:7
+Types:Legendary Creature Demon Samurai
+PT:7/7
+
+K:Menace
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPlay | TriggerDescription$ When NICKNAME enters, you may cast up to two cards from your opponents' graveyards without paying their mana costs. If those spells would be put into a graveyard, exile them instead.
+SVar:TrigPlay:DB$ Play | Valid$ Card.OppCtrl | ValidZone$ Graveyard | ValidSA$ Spell | Controller$ You | Amount$ 2 | WithoutManaCost$ True | Optional$ True | ReplaceGraveyard$ Exile | AILogic$ ReplaySpell
+
+Oracle:Menace\nWhen Azuma Hashiro enters, you may cast up to two cards from your opponents' graveyards without paying their mana costs. If those spells would be put into a graveyard, exile that card instead.
+
+DeckHas:Ability$Graveyard

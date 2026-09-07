@@ -1,0 +1,13 @@
+Name:Unwitting Fanatic
+ManaCost:2 W
+Types:Creature Human Warlock Detective
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 3/2 colorless Horror creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_3_2_horror
+
+A:AB$ Pump | Cost$ Sac<1/CARDNAME/this creature> | ValidTgts$ Permanent.Other+YouCtrl | TgtPrompt$ Select another target permanent you control | KW$ Hexproof & Indestructible | SpellDescription$ Another target permanent you control gains hexproof and indestructible until end of turn.
+
+Oracle:When this creature enters, create a 3/2 colorless Horror creature token.\nSacrifice this creature: Another target permanent you control gains hexproof and indestructible until end of turn.
+
+DeckHas:Ability$Token & Type$Horror

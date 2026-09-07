@@ -1,0 +1,9 @@
+Name:Imperial Strategist
+ManaCost:W
+Types:Creature Human Advisor
+PT:1/2
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Player | TriggerZones$ Battlefield | Execute$ TrigTap | OptionalDecider$ You | TriggerDescription$ At the beginning of each upkeep, you may pay {W}. If you do, tap target creature.
+SVar:TrigTap:AB$ Tap | Cost$ W | ValidTgts$ Creature | TgtPrompt$ Select target creature | SpellDescription$ You may pay {W}. If you do, tap target creature.
+
+Oracle:At the beginning of each upkeep, you may pay {W}. If you do, tap target creature.

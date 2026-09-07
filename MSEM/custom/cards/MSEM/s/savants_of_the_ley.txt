@@ -17,7 +17,7 @@ ALTERNATE
 
 Name:Tyrants of Bundan
 ManaCost:no cost
-Colors:Red
+Colors:red
 Types:Creature Human Shaman
 PT:4/4
 

@@ -1,0 +1,14 @@
+Name:Formed from Twisted Aeons
+ManaCost:2 B B
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Exile | TargetMin$ 0 | TargetMax$ MaxTgts | ValidTgts$ Creature.YouOwn,Planeswalker.YouOwn | TgtPrompt$ Choose any number of target creature and/or planeswalker cards in your graveyard | RememberTargets$ True | SubAbility$ DBChoose | SpellDescription$ Choose any number of target creature and/or planeswalker cards in your graveyard. Return one of them to the battlefield and put the rest on top of your library in any order.
+SVar:DBChoose:DB$ ChooseCard | Choices$ Card.IsRemembered | ChoiceZone$ Exile | Mandatory$ True | Amount$ 1 | ConditionDefined$ Remembered | ConditionPresent$ Card | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Origin$ Exile | Destination$ Battlefield | Defined$ ChosenCard | ForgetChanged$ True | SubAbility$ DBRest
+SVar:DBRest:DB$ ChangeZone | Origin$ Exile | Destination$ Library | Defined$ Remembered | LibraryPosition$ 0 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+SVar:MaxTgts:Count$ValidGraveyard Creature.YouOwn,Planeswalker.YouOwn
+
+Oracle:Choose any number of target creature and/or planeswalker cards in your graveyard. Return one of them to the battlefield and put the rest on top of your library in any order.
+
+DeckHas:Ability$Graveyard

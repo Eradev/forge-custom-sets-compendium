@@ -1,0 +1,31 @@
+Name:Voracious Spawn
+ManaCost:1 G
+Types:Creature Horror
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ Whenever this creature enters or attacks, exile up to one target card from a graveyard. If you exile a permanent card, put a +1/+1 counter on it. If you exile a nonpermanent card, you gain 1 life.
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigExile | Secondary$ True | TriggerDescription$ Whenever this creature enters or attacks, exile up to one target card from a graveyard. If you exile a permanent card, put a +1/+1 counter on it. If you exile a nonpermanent card, you gain 1 life.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Card | TgtPrompt$ Select up to one target card in a graveyard | RememberChanged$ True | SubAbility$ DBCounter
+SVar:DBCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | ConditionDefined$ Remembered | ConditionPresent$ Permanent | SubAbility$ DBLife
+SVar:DBLife:DB$ GainLife | LifeAmount$ 1 | ConditionDefined$ Remembered | ConditionPresent$ Card.nonPermanent | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Whenever this creature enters or attacks, exile up to one target card from a graveyard. If you exile a permanent card, put a +1/+1 counter on it. If you exile a nonpermanent card, you gain 1 life.
+
+SVar:HasAttackEffect:TRUE
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Fleshweaver's Domain
+ManaCost:no cost
+Colors:green
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ G | SpellDescription$ Add {G}.
+
+Oracle:This land enters tapped.\n{T}: Add {G}.

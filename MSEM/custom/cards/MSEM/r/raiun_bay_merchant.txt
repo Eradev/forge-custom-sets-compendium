@@ -1,0 +1,8 @@
+Name:Raiun Bay Merchant
+ManaCost:1 G
+Types:Creature Human Advisor
+PT:2/1
+
+S:Mode$ Continuous | Affected$ Card.Self | AddHiddenKeyword$ All creatures able to block CARDNAME do so. | Description$ All creatures able to block this creature do so.
+
+Oracle:All creatures able to block this creature do so.

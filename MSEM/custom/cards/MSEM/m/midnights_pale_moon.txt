@@ -1,0 +1,12 @@
+Name:Midnight's Pale Moon
+ManaCost:2 B B
+Types:Sorcery
+
+A:SP$ LoseLife | Defined$ Player | LifeAmount$ 2 | SubAbility$ DBDiscard | SpellDescription$ Each player loses 2 life, discards two cards, sacrifices two creatures, then sacrifices two lands.
+SVar:DBDiscard:DB$ Discard | Defined$ Player | Mode$ TgtChoose | NumCards$ 2 | SubAbility$ DBSacCreatures
+SVar:DBSacCreatures:DB$ Sacrifice | Defined$ Player | SacValid$ Creature | Amount$ 2 | SubAbility$ DBSacLands
+SVar:DBSacLands:DB$ Sacrifice | Defined$ Player | SacValid$ Land | Amount$ 2
+
+Oracle:Each player loses 2 life, discards two cards, sacrifices two creatures, then sacrifices two lands.
+
+DeckHas:Ability$Discard|Sacrifice

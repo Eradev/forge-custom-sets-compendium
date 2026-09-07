@@ -1,0 +1,14 @@
+Name:Across the Planar Void
+ManaCost:X W
+Types:Instant
+
+A:SP$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Creature | TgtPrompt$ Select target creature | RememberChanged$ True | SubAbility$ DelTrig | SpellDescription$ Exile target creature. At the beginning of the next end step, return that card to the battlefield under its owner's control with your choice of X counters on it from among +1/+1, flying, first strike, and/or vigilance.
+SVar:DelTrig:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | Execute$ TrigReturn | RememberObjects$ RememberedLKI | TriggerDescription$ Return that card to the battlefield under its owner's control with your choice of X counters on it from among +1/+1, flying, first strike, and/or vigilance. | SubAbility$ DBCleanup
+SVar:TrigReturn:DB$ ChangeZone | Defined$ DelayTriggerRememberedLKI | Origin$ Exile | Destination$ Battlefield | RememberChanged$ True | SubAbility$ DBCounters
+SVar:DBCounters:DB$ PutCounter | Defined$ Remembered | CounterTypes$ P1P1,Flying,First Strike,Vigilance | CounterNum$ X | SplitAmount$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Count$xPaid
+
+Oracle:Exile target creature. At the beginning of the next end step, return that card to the battlefield under its owner's control with your choice of X counters on it from among +1/+1, flying, first strike, and/or vigilance.
+
+DeckHas:Ability$Counters

@@ -1,0 +1,12 @@
+Name:Kenshiro's Yoroi
+ManaCost:2 G
+Types:Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | Description$ Equipped creature gets +2/+2.
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Creature.EquippedBy+dealtDamageToOppThisTurn | Execute$ TrigUntap | TriggerDescription$ Art of war — At the beginning of your end step, if equipped creature dealt damage to an opponent this turn, untap up to three target lands you control.
+SVar:TrigUntap:DB$ Untap | ValidTgts$ Land.YouCtrl | TgtPrompt$ Select up to three target lands you control | TargetMin$ 0 | TargetMax$ 3
+
+K:Equip:2
+
+Oracle:Equipped creature gets +2/+2.\nArt of war — At the beginning of your end step, if equipped creature dealt damage to an opponent this turn, untap up to three target lands you control.\nEquip {2}

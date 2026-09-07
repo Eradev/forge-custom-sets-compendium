@@ -1,6 +1,6 @@
 Name:TIE Fighter
 ManaCost:no cost
-Colors:Black
+Colors:black
 Types:Artifact Creature Starship
 PT:1/1
 

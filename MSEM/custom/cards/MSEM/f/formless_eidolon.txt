@@ -1,0 +1,18 @@
+Name:Formless Eidolon
+ManaCost:5
+Types:Creature Spirit Horror
+PT:4/3
+
+K:Flying
+
+K:Vigilance
+
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCopy | TriggerDescription$ When this creature enters, create a tapped token that's a copy of target land you control.
+SVar:TrigCopy:DB$ CopyPermanent | ValidTgts$ Land.YouCtrl | TgtPrompt$ Select target land you control | TokenTapped$ True
+
+K:Evoke:3
+
+Oracle:Flying, vigilance\nWhen this creature enters, create a tapped token that's a copy of target land you control.\nEvoke {3} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)
+
+DeckHas:Ability$Token

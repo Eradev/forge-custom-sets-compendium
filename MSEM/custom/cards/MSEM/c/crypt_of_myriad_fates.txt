@@ -1,0 +1,12 @@
+Name:Crypt of Myriad Fates
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Clone | Cost$ X | ValidTgts$ Creature.YouOwn+cmcLEX | TgtZone$ Graveyard | TgtPrompt$ Select target creature card with mana value X or less in your graveyard | SetPower$ 2 | SetToughness$ 2 | AddTypes$ Land | Duration$ UntilEndOfTurn | ActivationPhases$ Upkeep,Draw,Main1,Main2,EndOfTurn | SpellDescription$ This land becomes a copy of target creature card with mana value X or less in your graveyard until end of turn, except it's 2/2 and a land in addition to its other types. Activate only outside of combat.
+SVar:X:Count$xPaid
+
+Oracle:{T}: Add {C}.\n{X}: This land becomes a copy of target creature card with mana value X or less in your graveyard until end of turn, except it's 2/2 and a land in addition to its other types. Activate only outside of combat.
+
+DeckHints:Ability$Graveyard

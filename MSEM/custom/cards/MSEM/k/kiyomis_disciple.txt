@@ -1,0 +1,16 @@
+Name:Kiyomi's Disciple
+ManaCost:3 B
+Types:Creature Human Wizard
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReanimate | TriggerDescription$ When this creature enters, put target creature card from a graveyard onto the battlefield under your control. When this creature leaves the battlefield, that creature's controller sacrifices it.
+SVar:TrigReanimate:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature | TgtPrompt$ Select target creature card from a graveyard | GainControl$ True | RememberChanged$ True | SubAbility$ DBDelay
+SVar:DBDelay:DB$ DelayedTrigger | Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Battlefield | Execute$ TrigSacrifice | RememberObjects$ RememberedLKI | TriggerDescription$ When this creature leaves the battlefield, that creature's controller sacrifices it.
+SVar:TrigSacrifice:DB$ SacrificeAll | Defined$ DelayTriggerRememberedLKI
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ DBCleanup | Static$ True
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When this creature enters, put target creature card from a graveyard onto the battlefield under your control. When this creature leaves the battlefield, that creature's controller sacrifices it.
+
+DeckHas:Ability$Graveyard

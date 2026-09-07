@@ -1,0 +1,10 @@
+Name:Flash of Steel
+ManaCost:1 W
+Types:Instant
+
+A:SP$ Attach | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | Object$ Valid Equipment.YouCtrl | Optional$ True | SubAbility$ DBDraw | SpellDescription$ For each Equipment you control, you may attach it to target creature you control. Draw a card.
+SVar:DBDraw:DB$ Draw | Defined$ You
+
+Oracle:For each Equipment you control, you may attach it to target creature you control.\nDraw a card.
+
+DeckNeeds:Type$Equipment

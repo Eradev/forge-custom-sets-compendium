@@ -1,0 +1,11 @@
+Name:Masked Impersonator
+ManaCost:1 U
+Types:Creature Human Shapeshifter
+PT:1/1
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | Description$ This creature can't be blocked.
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | OptionalDecider$ You | Execute$ TrigClone | TriggerDescription$ Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, you may have it become a copy of target creature you control except it has this ability.
+SVar:TrigClone:DB$ Clone | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control to copy | Optional$ True | GainThisAbility$ True | AddSVars$ TrigClone | AILogic$ CloneBestCreature
+
+Oracle:This creature can't be blocked.\nArt of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, you may have it become a copy of target creature you control except it has this ability.

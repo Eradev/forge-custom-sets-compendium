@@ -1,0 +1,15 @@
+Name:Atal, the Shroudmaker
+ManaCost:4 W W W
+Types:Legendary Creature Elder Horror
+PT:7/7
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigHumans | ActivationLimit$ 1 | TriggerDescription$ Once each turn, when NICKNAME enters or you attack with one or more Horrors, you may create two tapped 1/1 colorless Human creature tokens. If it isn't a token, creatures you control gain flying until end of turn.
+T:Mode$ AttackersDeclared | ValidAttackers$ Creature.Horror+YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigHumans | ActivationLimit$ 1 | Secondary$ True | TriggerDescription$ Once each turn, when NICKNAME enters or you attack with one or more Horrors, you may create two tapped 1/1 colorless Human creature tokens. If it isn't a token, creatures you control gain flying until end of turn.
+SVar:TrigHumans:DB$ Token | TokenAmount$ 2 | TokenScript$ c_1_1_human | TokenTapped$ True | SubAbility$ DBFlying
+SVar:DBFlying:DB$ PumpAll | ValidCards$ Creature.YouCtrl | KW$ Flying | ConditionPresent$ Card.Self+nonToken
+
+A:AB$ CopyPermanent | Cost$ 2 W W Discard<1/CARDNAME/this card> | ActivationZone$ Hand | Defined$ Self | SetPower$ 4 | SetToughness$ 4 | NonLegendary$ True | SorcerySpeed$ True | SpellDescription$ Create a token that's a copy of NICKNAME, except it's 4/4 and isn't legendary. Activate only as a sorcery.
+
+Oracle:Once each turn, when Atal enters or you attack with one or more Horrors, you may create two tapped 1/1 colorless Human creature tokens. If it isn't a token, creatures you control gain flying until end of turn.\n{2}{W}{W}, Discard this card: Create a token that's a copy of Atal, except it's 4/4 and isn't legendary. Activate only as a sorcery.
+
+DeckHas:Ability$Token|Discard & Type$Human

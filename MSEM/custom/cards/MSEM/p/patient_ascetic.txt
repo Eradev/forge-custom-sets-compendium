@@ -16,7 +16,7 @@ ALTERNATE
 
 Name:Graceful Angel
 ManaCost:no cost
-Colors:White
+Colors:white
 Types:Creature Angel
 PT:3/3
 

@@ -1,0 +1,13 @@
+Name:Fireheart Channeler
+ManaCost:1 R
+Types:Creature Human Wizard
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigDeath | OptionalDecider$ You | TriggerDescription$ When this creature dies, you may put a blaze counter on target land without a blaze counter on it. For as long as that land has a blaze counter on it, it has "At the beginning of your upkeep, this land deals 1 damage to you." (The land continues to burn after this creature has left the battlefield.)
+SVar:TrigDeath:DB$ PutCounter | IsCurse$ True | ValidTgts$ Land.counters_EQ0_BLAZE | TgtPrompt$ Select target land without a blaze counter | CounterType$ BLAZE | CounterNum$ 1 | SubAbility$ DBEffect | SpellDescription$ Put a blaze counter on target land without a blaze counter on it. For as long as that land has a blaze counter on it, it has "At the beginning of your upkeep, this land deals 1 damage to you." (The land continues to burn after CARDNAME has left the battlefield.)
+SVar:DBEffect:DB$ Effect | RememberObjects$ Targeted | StaticAbilities$ ObsidianStatic | ForgetOnMoved$ Battlefield | ForgetCounter$ BLAZE | Duration$ Permanent
+SVar:ObsidianStatic:Mode$ Continuous | Affected$ Card.IsRemembered | AddTrigger$ ObsidianBlazeTrig | Description$ For as long as that land has a blaze counter on it, it has "At the beginning of your upkeep, this land deals 1 damage to you."
+SVar:ObsidianBlazeTrig:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ ObsidianBlazeDmg | TriggerDescription$ At the beginning of your upkeep, this land deals 1 damage to you.
+SVar:ObsidianBlazeDmg:DB$ DealDamage | Defined$ You | NumDmg$ 1
+
+Oracle:When this creature dies, you may put a blaze counter on target land without a blaze counter on it. For as long as that land has a blaze counter on it, it has "At the beginning of your upkeep, this land deals 1 damage to you." (The land continues to burn after this creature has left the battlefield.)
