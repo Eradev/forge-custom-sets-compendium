@@ -1,0 +1,15 @@
+Name:Fleeting Rootwalla
+ManaCost:U
+Types:Creature Lizard
+PT:1/2
+
+A:AB$ Pump | Cost$ U | Defined$ Self | NumAtt$ +2 | ActivationLimit$ 1 | SubAbility$ DBEffect | SpellDescription$ This creature gets +2/+0 and can't be blocked until end of turn. Activate only once each turn.
+SVar:DBEffect:DB$ Effect | RememberObjects$ Self | ExileOnMoved$ Battlefield | StaticAbilities$ Unblockable
+SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ This creature can't be blocked this turn.
+
+K:Madness:0
+
+Oracle:{U}: This creature gets +2/+0 and can't be blocked until end of turn. Activate only once each turn.\nMadness {0} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)
+
+DeckHas:Ability$Discard
+DeckHints:Ability$Discard

@@ -3,10 +3,10 @@ ManaCost:U B R
 Types:Legendary Planeswalker Snoke
 Loyalty:3
 
-A:AB$ PutCounter | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Defined$ Self | CounterType$ LOYALTY | CounterNum$ HateFlag | SpellDescription$ Put a loyalty counter on CARDNAME for each life lost by all opponents from noncombat sources this turn.
+A:AB$ PutCounter | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | CounterType$ LOYALTY | CounterNum$ HateFlag | SpellDescription$ Put a loyalty counter on CARDNAME for each life lost by all opponents from noncombat sources this turn.
 
 A:AB$ Draw | Cost$ SubCounter<1/LOYALTY> | Planeswalker$ True | NumCards$ 1 | SubAbility$ DBLoseLife | SpellDescription$ Draw a card and lose 1 life.
-SVar:DBLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
 
 A:AB$ GainControl | Cost$ SubCounter<X/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature.cmcEQX | TgtPrompt$ Select target creature with mana value X | Untap$ True | AddKWs$ Haste | SubAbility$ DBDelaySac | SpellDescription$ Gain control of target creature with mana value X. Untap that creature. It gains haste. Sacrifice that creature at the beginning of the next end step.
 SVar:DBDelaySac:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | ValidPlayer$ Player | Execute$ TrigSac | RememberObjects$ Targeted | TriggerDescription$ Sacrifice that creature at the beginning of the next end step.

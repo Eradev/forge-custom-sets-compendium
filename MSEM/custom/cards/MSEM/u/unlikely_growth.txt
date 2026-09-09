@@ -9,7 +9,7 @@ SVar:Maintain:DB$ Pump | SpellDescription$ Maintain
 
 S:Mode$ Continuous | Affected$ Card.Self+ChosenModeGrow | AddTrigger$ GrowLandfall | Description$ Grow — Whenever a land you control enters, put a +1/+1 counter on target creature you control.
 SVar:GrowLandfall:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ Whenever a land you control enters, put a +1/+1 counter on target creature you control.
-SVar:TrigCounter:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | CounterType$ P1P1
+SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature.YouCtrl
 
 S:Mode$ Continuous | Affected$ Card.Self+ChosenModeMaintain | AddTrigger$ MaintainLandfall | Description$ Maintain — Whenever a land you control enters, target creature you control gains trample and indestructible until end of turn.
 SVar:MaintainLandfall:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever a land you control enters, target creature you control gains trample and indestructible until end of turn.

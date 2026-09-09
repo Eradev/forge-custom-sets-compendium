@@ -11,6 +11,6 @@ SVar:BlockSpaceflight:Mode$ CantBlockBy | ValidAttacker$ Creature.withoutSpacefl
 SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpaceflight+withoutSpacereach | ValidAttacker$ Creature.Self | Description$ CARDNAME can be blocked only by creatures with spaceflight.
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.DamagedBy | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ Whenever a creature dealt damage by CARDNAME this turn dies, put two +1/+1 counters on CARDNAME.
-SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 2 | Defined$ Self
+SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 2
 
 Oracle:First strike, spaceflight\nWhenever a creature dealt damage by Slave I this turn dies, put two +1/+1 counters on Slave I.

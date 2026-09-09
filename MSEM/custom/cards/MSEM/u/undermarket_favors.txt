@@ -4,7 +4,7 @@ Types:Enchantment
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDiscardMill | TriggerDescription$ When this enchantment enters, target player discards a card, then mills four cards.
 SVar:TrigDiscardMill:DB$ Discard | ValidTgts$ Player | Mode$ TgtChoose | SubAbility$ DBMill
-SVar:DBMill:DB$ Mill | NumCards$ 4 | Defined$ Targeted
+SVar:DBMill:DB$ Mill | Defined$ Targeted | NumCards$ 4
 
 A:AB$ Draw | Cost$ 1 Sac<1/CARDNAME/this enchantment> | SpellDescription$ Draw a card.
 

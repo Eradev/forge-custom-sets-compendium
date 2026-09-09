@@ -1,0 +1,7 @@
+Name:Stimulated Eruption
+ManaCost:R
+Types:Kindred Sorcery Dragon
+
+A:SP$ DealDamage | ValidTgts$ Creature,Planeswalker | TgtPrompt$ Select target creature or planeswalker | TargetMin$ 3 | TargetMax$ 3 | TargetsAtRandom$ True | NumDmg$ 3 | SpellDescription$ CARDNAME deals 3 damage to three different creatures and/or planeswalkers chosen at random.
+
+Oracle:Stimulated Eruption deals 3 damage to three different creatures and/or planeswalkers chosen at random.

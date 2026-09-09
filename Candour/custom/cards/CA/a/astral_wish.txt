@@ -1,0 +1,8 @@
+Name:Astral Wish
+ManaCost:R
+Types:Sorcery
+
+A:SP$ Effect | ValidTgts$ Card.faceUp | TgtZone$ Exile | TgtPrompt$ Choose a face-up card in exile | RememberObjects$ Targeted | StaticAbilities$ MayPlay | ForgetOnMoved$ Exile | SpellDescription$ Choose a face up card in exile. You may play that card this turn.
+SVar:MayPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ You may play that card this turn.
+
+Oracle:Choose a face up card in exile. You may play that card this turn.

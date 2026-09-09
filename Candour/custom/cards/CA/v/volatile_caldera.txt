@@ -1,0 +1,13 @@
+Name:Volatile Caldera
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you control a Forest or a Swamp.
+SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Forest.YouCtrl,Swamp.YouCtrl | ConditionCompare$ EQ0
+
+A:AB$ Mana | Cost$ T | Produced$ R | SpellDescription$ Add {R}.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigDamage | TriggerDescription$ When this land leaves the battlefield, it deals 1 damage to each creature.
+SVar:TrigDamage:DB$ DamageAll | ValidCards$ Creature | NumDmg$ 1
+
+Oracle:This land enters tapped unless you control a Forest or a Swamp.\n{T}: Add {R}.\nWhen this land leaves the battlefield, it deals 1 damage to each creature.

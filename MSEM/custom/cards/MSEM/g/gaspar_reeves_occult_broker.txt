@@ -4,7 +4,7 @@ Types:Legendary Creature Human Warlock
 PT:1/3
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigCounters | TriggerDescription$ Whenever another creature you control enters, put a +1/+1 counter on each creature you control with lesser power or lesser toughness than that creature.
-SVar:TrigCounters:DB$ PutCounterAll | ValidCards$ Creature.YouCtrl+powerLTX,Creature.YouCtrl+toughnessLTY | CounterType$ P1P1 | CounterNum$ 1
+SVar:TrigCounters:DB$ PutCounterAll | CounterType$ P1P1 | ValidCards$ Creature.YouCtrl+powerLTX,Creature.YouCtrl+toughnessLTY
 SVar:X:TriggeredCard$CardPower
 SVar:Y:TriggeredCard$CardToughness
 

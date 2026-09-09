@@ -1,0 +1,16 @@
+Name:Afflicted Beholder
+ManaCost:B B B
+Types:Creature Beholder Zombie
+PT:3/4
+
+K:Menace
+
+K:Deathtouch
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigEachPlayer | TriggerDescription$ Whenever this creature deals combat damage to a player, each player loses 1 life, discards a card, sacrifices a creature of their choice, then sacrifices a land of their choice.
+SVar:TrigEachPlayer:DB$ LoseLife | Defined$ Player | LifeAmount$ 1 | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Mode$ TgtChoose | Defined$ Player | SubAbility$ DBSacCreature
+SVar:DBSacCreature:DB$ Sacrifice | SacValid$ Creature | Defined$ Player | SubAbility$ DBSacLand
+SVar:DBSacLand:DB$ Sacrifice | SacValid$ Land | Defined$ Player
+
+Oracle:Menace, deathtouch\nWhenever this creature deals combat damage to a player, each player loses 1 life, discards a card, sacrifices a creature of their choice, then sacrifices a land of their choice.

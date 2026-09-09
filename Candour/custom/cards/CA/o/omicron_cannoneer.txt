@@ -1,0 +1,16 @@
+Name:Omicron Cannoneer
+ManaCost:R
+Types:Artifact Creature Cat Golem
+PT:0/1
+
+K:Ward:1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self,Artifact.Other+YouCtrl | Execute$ TrigPutCounter | ActivationLimit$ 1 | TriggerDescription$ Whenever this creature or another artifact you control enters, put a +1/+1 counter on this creature and it deals damage equal to its power to each opponent. This ability triggers only once each turn.
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1 | SubAbility$ DBDamage
+SVar:DBDamage:DB$ DealDamage | Defined$ Player.Opponent | NumDmg$ X
+SVar:X:Count$CardPower
+
+Oracle:Ward {1}\nWhenever this creature or another artifact you control enters, put a +1/+1 counter on this creature and it deals damage equal to its power to each opponent. This ability triggers only once each turn.
+
+DeckHas:Ability$Counters
+DeckHints:Type$Artifact

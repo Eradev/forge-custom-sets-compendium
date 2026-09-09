@@ -7,7 +7,7 @@ K:Enchant:Creature,Artifact:artifact or creature
 S:Mode$ CantBlock | ValidCard$ Card.EnchantedBy | Description$ Enchanted permanent can't block.
 S:Mode$ Continuous | Affected$ Card.EnchantedBy | AddTrigger$ TriggerPhase | Description$ Enchanted permanent has "At the beginning of your upkeep, you lose 1 life."
 SVar:TriggerPhase:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ TrigLoseLife | TriggerZones$ Battlefield | TriggerDescription$ At the beginning of your upkeep, you lose 1 life.
-SVar:TrigLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1
+SVar:TrigLoseLife:DB$ LoseLife | LifeAmount$ 1
 
 Oracle:Enchant artifact or creature\nEnchanted permanent can't block and has "At the beginning of your upkeep, you lose 1 life."
 

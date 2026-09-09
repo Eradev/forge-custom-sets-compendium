@@ -4,7 +4,7 @@ Types:Sorcery
 
 A:SP$ ChangeZone | ValidTgts$ Card.YouCtrl | Origin$ Graveyard | Destination$ Hand | RememberTargets$ True | SubAbility$ DBPutCounter | SpellDescription$ Return target card from your graveyard to your hand. Distribute X +1/+1 counters among any number of creatures you control, where X is that card's mana value. Exile Entropic Harvest.
 
-SVar:DBPutCounter:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select any number of creatures you control to distribute counters to | CounterType$ P1P1 | CounterNum$ X | TargetMin$ 0 | TargetMax$ X | DividedAsYouChoose$ X | SubAbility$ DBExile
+SVar:DBPutCounter:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ X | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select any number of creatures you control to distribute counters to | TargetMin$ 0 | TargetMax$ X | DividedAsYouChoose$ X | SubAbility$ DBExile
 SVar:DBExile:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Exile
 SVar:X:Remembered$CardManaCost
 

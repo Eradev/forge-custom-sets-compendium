@@ -1,0 +1,19 @@
+Name:Frenzied Stormwing
+ManaCost:3 U U
+Types:Creature Drake
+PT:2/2
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ 1 | Color$ 3 U | EffectZone$ All | CheckSVar$ X | SVarCompare$ GE2 | Description$ This spell costs {3}{U} less to cast if you've cast two or more spells this turn.
+SVar:X:Count$ThisTurnCast_Card.YouCtrl
+
+K:Flying
+
+K:Prowess
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigScry | TriggerDescription$ When this creature enters, scry 2, then draw a card.
+SVar:TrigScry:DB$ Scry | ScryNum$ 2 | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw
+
+Oracle:This spell costs {3}{U} less to cast if you've cast two or more spells this turn.\nFlying\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhen this creature enters, scry 2, then draw a card.
+
+DeckHas:Ability$Counters

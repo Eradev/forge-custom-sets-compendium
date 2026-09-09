@@ -1,0 +1,23 @@
+Name:Karn, Phyrexian Golem
+ManaCost:5
+Types:Legendary Planeswalker Karn
+Loyalty:4
+
+S:Mode$ Continuous | Affected$ Card.TopLibrary+YouCtrl | AffectedZone$ Library | MayLookAt$ You | Description$ You may look at the top card of your library any time.
+
+S:Mode$ Continuous | Affected$ Land.TopLibrary+YouCtrl,Card.TopLibrary+Colorless+YouCtrl+nonLand | AffectedZone$ Library | MayPlay$ True | Description$ You may play lands and cast colorless spells from the top of your library.
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Colorless | ValidPlayer$ You | Cost$ PayLife<ConvertedManaCost>/Times.2 | Description$ If you cast a spell this way, pay life equal to twice its mana value rather than pay its mana cost.
+
+A:AB$ Dig | Cost$ AddCounter<2/LOYALTY> | Planeswalker$ True | DigNum$ 3 | ChangeNum$ 1 | NoReveal$ True | DestinationZone$ Hand | DestinationZone2$ Library | LibraryPosition$ 0 | Reorder$ True | SpellDescription$ Look at the top three cards of your library. Put one of them into your hand and the rest on the top of your library in any order.
+
+A:AB$ ChangeZone | Cost$ SubCounter<1/LOYALTY> | Planeswalker$ True | Origin$ Sideboard | Destination$ Library | LibraryPosition$ 0 | ChangeType$ Artifact.YouOwn | ChangeNum$ 1 | Optional$ True | Hidden$ True | SpellDescription$ You may reveal an artifact card you own from outside the game. Put that card on top of your library.
+
+A:AB$ Effect | Cost$ SubCounter<7/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Karn, Phyrexian Golem | Triggers$ TrigSpellCast | Duration$ Permanent | AILogic$ Always | SpellDescription$ You get an emblem with "Whenever you cast a spell, you gain 1 life for each spell you've cast this turn."
+SVar:TrigSpellCast:Mode$ SpellCast | ValidActivatingPlayer$ You | Execute$ EffGainLife | TriggerDescription$ Whenever you cast a spell, you gain 1 life for each spell you've cast this turn.
+SVar:EffGainLife:DB$ GainLife | LifeAmount$ X
+SVar:X:Count$ThisTurnCast_Card.YouCtrl
+
+Oracle:You may look at the top card of your library any time.\nYou may play lands and cast colorless spells from the top of your library. If you cast a spell this way, pay life equal to twice its mana value rather than pay its mana cost.\n[+2]: Look at the top three cards of your library. Put one of them into your hand and the rest on the top of your library in any order.\n[-1]: You may reveal an artifact card you own from outside the game. Put that card on top of your library.\n[-7]: You get an emblem with "Whenever you cast a spell, you gain 1 life for each spell you've cast this turn."
+
+DeckHas:Ability$LifeGain

@@ -1,0 +1,12 @@
+Name:Maddening Revelation
+ManaCost:U
+Types:Instant
+
+K:Kicker:Discard<1/Card>
+
+A:SP$ Counter | TargetType$ Spell | ValidTgts$ Card.nonCreature | TgtPrompt$ Select target noncreature spell | UnlessCost$ X | SpellDescription$ Counter target noncreature spell unless its controller pays {2}. If this spell was kicked, counter that spell unless its controller pays {4} instead.
+SVar:X:Count$Kicked.4.2
+
+Oracle:Kicker—Discard a card. (You may discard a card in addition to any other costs as you cast this spell.)\nCounter target noncreature spell unless its controller pays {2}. If this spell was kicked, counter that spell unless its controller pays {4} instead.
+
+DeckHas:Ability$Discard

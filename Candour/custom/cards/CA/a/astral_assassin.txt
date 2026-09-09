@@ -1,0 +1,16 @@
+Name:Astral Assassin
+ManaCost:1 W W
+Types:Creature Vampire Assassin
+PT:2/1
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounter | TriggerDescription$ When this creature enters, counter target spell unless its controller pays {1}. If they do, create a 1/1 white Soldier creature token.
+SVar:TrigCounter:DB$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | UnlessCost$ 1 | UnlessResolveSubs$ WhenPaid | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ w_1_1_soldier
+
+K:Warp:1 W
+
+Oracle:Flash\nWhen this creature enters, counter target spell unless its controller pays {1}. If they do, create a 1/1 white Soldier creature token.\nWarp {1}{W} (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)
+
+DeckHas:Ability$Token & Type$Soldier

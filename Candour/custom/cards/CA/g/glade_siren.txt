@@ -1,0 +1,18 @@
+Name:Glade Siren
+ManaCost:B
+Types:Creature Siren
+PT:1/2
+
+K:Deathtouch
+
+T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | CheckSVar$ X | SVarCompare$ GE1 | Execute$ TrigPrepare | TriggerDescription$ Morbid — At the beginning of each end step, if a creature died this turn, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)
+SVar:X:Count$ThisTurnEntered_Graveyard_from_Battlefield_Creature
+SVar:TrigPrepare:DB$ AlterAttribute | Attributes$ Prepared
+
+AlternateMode:Prepare
+
+Oracle:Deathtouch\nMorbid — At the beginning of each end step, if a creature died this turn, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)
+
+ALTERNATE
+
+CopyFaceFrom:Succumb to Temptation

@@ -8,6 +8,6 @@ T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ 
 SVar:TrigGainLife:DB$ GainLife | Defined$ TriggeredCardController | LifeAmount$ 2
 
 T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigPutCounter | TriggerDescription$ Art of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, put a +1/+1 counter on it.
-SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1
 
 Oracle:When this creature enters or dies, you gain 2 life.\nArt of war — At the beginning of your end step, if this creature dealt damage to an opponent this turn, put a +1/+1 counter on it.

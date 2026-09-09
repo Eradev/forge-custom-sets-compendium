@@ -3,7 +3,7 @@ ManaCost:2 B
 Types:Sorcery Inscription
 
 A:SP$ Draw | NumCards$ 2 | Defined$ You | SubAbility$ DBLoseLife | SpellDescription$ You draw two cards and you lose 2 life.
-SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2 | Defined$ You
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
 
 A:AB$ Pump | Cost$ 3 B B Reveal<1/CARDNAME> | ActivationZone$ Hand | ValidTgts$ Creature.YouCtrl | TgtZone$ Battlefield | TgtPrompt$ Select target creature you control | SorcerySpeed$ True | Duration$ Permanent | StackDescription$ SpellDescription | SubAbility$ DBExileForInscribe | PrecostDesc$ Inscribe | SpellDescription$ ({3}{B}{B}: Exile this card from your hand inscribed on a creature you control. Whenever that creature attacks, its controller may cast a copy of the inscribed card without paying its mana cost. Inscribe only as a sorcery.)
 SVar:DBExileForInscribe:DB$ ChangeZone | Defined$ Self.YouOwn | Origin$ Hand | Destination$ Exile | RememberChanged$ True | ForgetOtherRemembered$ True | SubAbility$ DBCreateInscribe

@@ -11,7 +11,7 @@ SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:SacCMC:Remembered$CardManaCost
 
 T:Mode$ TokenCreated | ValidPlayer$ You | ValidToken$ Creature.token+YouCtrl | Execute$ TrigMenace | TriggerZones$ Battlefield | TriggerDescription$ Whenever you create a creature token, you may pay 2 life. If you do, put a menace counter on it.
-SVar:TrigMenace:AB$ PutCounter | Cost$ PayLife<2> | Defined$ TriggeredToken | CounterType$ Menace | CounterNum$ 1
+SVar:TrigMenace:AB$ PutCounter | Cost$ PayLife<2> | Defined$ TriggeredToken | CounterType$ Menace
 
 Oracle:At the beginning of your upkeep, you may sacrifice another creature. If that creature had mana value 2 or greater, create a 3/2 colorless Horror creature token. Otherwise, create a 1/1 colorless Human creature token.\nWhenever you create a creature token, you may pay 2 life. If you do, put a menace counter on it.
 

@@ -14,7 +14,7 @@ SVar:DBReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts
 SVar:Insight:Count$YourCountersInsight
 SVar:MaxTgt:PlayerCountPlayers$Amount
 
-A:AB$ PutCounter | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | Defined$ You | CounterType$ Insight | CounterNum$ 1 | SpellDescription$ You get an insight counter.
+A:AB$ PutCounter | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | Defined$ You | CounterType$ Insight | SpellDescription$ You get an insight counter.
 
 A:AB$ Pump | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | NumAtt$ -3 | NumDef$ -3 | IsCurse$ True | SpellDescription$ Target creature gets -3/-3 until end of turn.
 

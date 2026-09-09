@@ -8,7 +8,7 @@ K:Flying
 K:Trample
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ When this creature enters, target player mills half their library, rounded down.
-SVar:TrigMill:DB$ Mill | ValidTgts$ Player | NumCards$ X
+SVar:TrigMill:DB$ Mill | NumCards$ X | ValidTgts$ Player
 SVar:X:Count$ValidLibrary Card.TargetedPlayerOwn/HalfDown
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigCast | TriggerDescription$ When this creature dies, you may cast up to two instant, sorcery, and/or creature cards from among opponent's graveyards without paying their mana cost.

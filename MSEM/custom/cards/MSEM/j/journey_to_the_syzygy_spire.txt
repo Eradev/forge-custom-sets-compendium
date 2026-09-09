@@ -3,7 +3,7 @@ ManaCost:1 U
 Types:Enchantment
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigETB | TriggerDescription$ When this enchantment enters, draw a card, then choose a creature card name.
-SVar:TrigETB:DB$ Draw | NumCards$ 1 | SubAbility$ DBNameCard
+SVar:TrigETB:DB$ Draw | SubAbility$ DBNameCard
 SVar:DBNameCard:DB$ NameCard | Defined$ You | ValidCards$ Card.Creature | ValidDescription$ creature card
 
 T:Mode$ DamageDone | ValidSource$ Creature.YouCtrl+sharesNameWith ChosenCard | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigDraw | TriggerDescription$ Whenever a creature you control with the chosen name deals combat damage to a player, draw a card.

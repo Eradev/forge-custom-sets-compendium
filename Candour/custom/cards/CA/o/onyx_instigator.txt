@@ -1,6 +1,6 @@
 Name:Onyx Instigator
 ManaCost:2 R
-Types:Creature Elemental
+Types:Creature Elemental Dragon
 PT:3/3
 
 K:Flying

@@ -4,7 +4,7 @@ Types:Creature Human Wizard
 PT:1/3
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigLoot | TriggerDescription$ When this creature enters, you may draw a card, then discard a card.
-SVar:TrigLoot:DB$ Draw | NumCards$ 1 | Optional$ True | SubAbility$ DBDiscard
+SVar:TrigLoot:DB$ Draw | Optional$ True | SubAbility$ DBDiscard
 SVar:DBDiscard:DB$ Discard | Mode$ TgtChoose
 
 T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | Execute$ TrigAetherize | TriggerZones$ Battlefield | TriggerDescription$ Whenever you cast an instant or sorcery spell, you may aetherize target creature you control. (To aetherize, create a token that's a copy of it, then exile that token.)

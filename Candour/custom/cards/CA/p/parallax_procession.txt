@@ -1,0 +1,16 @@
+Name:Parallax Procession
+ManaCost:2 W W
+Types:Enchantment
+
+K:etbCounter:FATE:4
+
+A:AB$ ChangeZone | Cost$ SubCounter<1/FATE> | ValidTgts$ Creature | TgtPrompt$ Select target creature | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DelTrig | SpellDescription$ Exile target creature. Return that card to the battlefield under its owner's control at the beginning of the next end step.
+SVar:DelTrig:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | Execute$ TrigReturn | RememberObjects$ RememberedLKI | TriggerDescription$ Return that card to the battlefield under its owner's control at the beginning of the next end step. | SubAbility$ DBCleanup
+SVar:TrigReturn:DB$ ChangeZone | Defined$ DelayTriggerRememberedLKI | Origin$ Exile | Destination$ Battlefield
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:This enchantment enters with four fate counters on it.\nRemove a fate counter from this enchantment: Exile target creature. Return that card to the battlefield under its owner's control at the beginning of the next end step.
+
+DeckHas:Ability$Counters
+SVar:PlayMain1:TRUE
+AI:RemoveDeck:All

@@ -1,0 +1,14 @@
+Name:Parallax Blaze
+ManaCost:2 R R
+Types:Enchantment
+
+K:etbCounter:FATE:4
+
+A:AB$ DealDamage | Cost$ SubCounter<1/FATE> | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ 3 | ActivationLimit$ 1 | SubAbility$ DBSac | SpellDescription$ This enchantment deals 3 damage to target creature. If there are no fate counters on this enchantment, sacrifice it. Activate only once each turn.
+SVar:DBSac:DB$ Sacrifice | SacValid$ Self | ConditionPresent$ Card.Self+counters_EQ0_FATE
+
+S:Mode$ NoCleanupDamage | ValidCard$ Creature | Description$ Damage isn't removed from creatures during cleanup steps.
+
+Oracle:This enchantment enters with 4 fate counters on it.\nRemove a fate counter from this enchantment: This enchantment deals 3 damage to target creature. If there are no fate counters on this enchantment, sacrifice it. Activate only once each turn.\nDamage isn't removed from creatures during cleanup steps.
+
+DeckHas:Ability$Counters|Sacrifice

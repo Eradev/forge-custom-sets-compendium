@@ -5,7 +5,7 @@ PT:2/1
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPutCounter | TriggerDescription$ When this creature enters, put a +1/+1 counter on each of up to two target creatures.
 
-SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature | TgtPrompt$ Select up to two target creatures | CounterType$ P1P1 | CounterNum$ 1 | TargetMin$ 0 | TargetMax$ 2
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature | TgtPrompt$ Select up to two target creatures | TargetMin$ 0 | TargetMax$ 2
 
 T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigAetherize | TriggerDescription$ Whenever this creature attacks, you may pay {2}{W}. If you do, aetherize it. (To aetherize, create a token that's a copy of it, then exile that token.)
 

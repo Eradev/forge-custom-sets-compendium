@@ -7,7 +7,6 @@ K:Lifelink
 K:Vanishing:1
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl+Other | TriggerZones$ Battlefield | Execute$ TrigTime | TriggerDescription$ Whenever another creature you control dies, put a time counter on this creature.
-
-SVar:TrigTime:DB$ PutCounter | Defined$ Self | CounterType$ TIME
+SVar:TrigTime:DB$ PutCounter | CounterType$ TIME
 
 Oracle:Lifelink\nVanishing 1 (This creature enters with a time counter on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhenever another creature you control dies, put a time counter on this creature.

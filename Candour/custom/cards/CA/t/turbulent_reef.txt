@@ -1,0 +1,13 @@
+Name:Turbulent Reef
+ManaCost:GU
+Types:Creature Elemental
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSurveil | TriggerDescription$ When this creature enters, surveil 3.
+SVar:TrigSurveil:DB$ Surveil | Amount$ 3
+
+A:AB$ PutCounter | Cost$ ExileFromGrave<6/Card> | CounterType$ P1P1 | CounterNum$ 2 | Exhaust$ True | PrecostDesc$ Exhaust | SpellDescription$ Put two +1/+1 counters on this creature. (Activate each exhaust ability only once.)
+
+Oracle:When this creature enters, surveil 3.\nExhaust — Exile six cards from your graveyard: Put two +1/+1 counters on this creature. (Activate each exhaust ability only once.)
+
+DeckHas:Ability$Surveil|Counters|Graveyard

@@ -4,7 +4,7 @@ Types:Creature Human Samurai
 PT:2/2
 
 T:Mode$ Taps | ValidCard$ Creature.OppCtrl | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ Whenever a creature an opponent controls becomes tapped, put a +1/+1 counter on this creature.
-SVar:TrigCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
+SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1
 
 Oracle:Whenever a creature an opponent controls becomes tapped, put a +1/+1 counter on this creature.
 

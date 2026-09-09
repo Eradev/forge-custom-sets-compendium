@@ -1,0 +1,11 @@
+Name:Parallax Dawn
+ManaCost:2 R W
+Types:Sorcery
+
+A:SP$ ChangeZoneAll | ChangeType$ Creature | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn | SpellDescription$ Exile all creatures, then each player puts all face up creature cards they own in exile not exiled this way onto the battlefield.
+SVar:DBReturn:DB$ ChangeZoneAll | ChangeType$ Creature.faceUp+!IsRemembered | Origin$ Exile | Destination$ Battlefield | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+K:Paradigm
+
+Oracle:Exile all creatures, then each player puts all face up creature cards they own in exile not exiled this way onto the battlefield.\nParadigm (Then exile this spell. After you first resolve a spell with this name, you may cast a copy of it from exile without paying its mana cost at the beginning of each of your first main phases.)

@@ -1,0 +1,8 @@
+Name:Lunar Armageddon
+ManaCost:1 R
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDestroy | TriggerDescription$ At the beginning of your end step, destroy target nonbasic land chosen at random.
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Land.nonBasic | TgtPrompt$ Select target nonbasic land | TargetsAtRandom$ True
+
+Oracle:At the beginning of your end step, destroy target nonbasic land chosen at random.

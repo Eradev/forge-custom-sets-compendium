@@ -1,0 +1,17 @@
+Name:Sword of Malice and Mortality
+ManaCost:3
+Types:Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | AddSVar$ AE | AddKeyword$ Protection:Card.sharesCardTypeWith ValidGraveyard Card.OppOwn:cards that share a card type with a card in an opponent's graveyard | Description$ Equipped creature gets +2/+2 and has protection from cards that share a card type with a card in an opponent's graveyard.
+
+T:Mode$ DamageDone | ValidSource$ Creature.EquippedBy | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigDiscard | TriggerZones$ Battlefield | TriggerDescription$ Whenever equipped creature deals combat damage to a player, that player discards a card. If a card that shares a card type with a card in that player's graveyard was discarded this way, you may draw a card.
+SVar:TrigDiscard:DB$ Discard | Defined$ TriggeredTarget | Mode$ TgtChoose | RememberDiscarded$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | Optional$ True | ConditionDefined$ Remembered | ConditionPresent$ Card.sharesCardTypeWith ValidGraveyard Card.Other+OwnedBy RememberedOwner | ConditionCompare$ GE1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+K:Equip:2
+
+Oracle:Equipped creature gets +2/+2 and has protection from cards that share a card type with a card in an opponent's graveyard.\nWhenever equipped creature deals combat damage to a player, that player discards a card. If a card that shares a card type with a card in that player's graveyard was discarded this way, you may draw a card.\nEquip {2}
+
+DeckHas:Ability$Discard
+SVar:AE:SVar:MustBeBlocked:AttackingPlayerConservative

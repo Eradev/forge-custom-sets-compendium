@@ -1,0 +1,11 @@
+Name:Sadistic Standoff
+ManaCost:B
+Types:Sorcery
+
+K:Rebound
+
+A:SP$ Sacrifice | Defined$ Player | SacValid$ Creature | RememberSacrificed$ True | SubAbility$ DBLoseLife | SpellDescription$ Each player sacrifices a creature of their choice. Each player who can't loses 4 life.
+SVar:DBLoseLife:DB$ LoseLife | Defined$ NonRememberedController | LifeAmount$ 4 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Each player sacrifices a creature of their choice. Each player who can't loses 4 life.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)

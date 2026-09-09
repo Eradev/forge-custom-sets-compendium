@@ -11,7 +11,7 @@ SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigFlood | TriggerDescription$ Whenever NICKNAME enters or attacks, put a flood counter on target noncommander permanent. It's an Island for as long as it has a flood counter on it.
 T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Secondary$ True | Execute$ TrigFlood | TriggerDescription$ Whenever NICKNAME enters or attacks, put a flood counter on target noncommander permanent. It's an Island for as long as it has a flood counter on it.
-SVar:TrigFlood:DB$ PutCounter | ValidTgts$ Permanent.!IsCommander | TgtPrompt$ Select target noncommander permanent | CounterType$ FLOOD | CounterNum$ 1 | SubAbility$ DBEffect
+SVar:TrigFlood:DB$ PutCounter | CounterType$ FLOOD | ValidTgts$ Permanent.!IsCommander | TgtPrompt$ Select target noncommander permanent | SubAbility$ DBEffect
 SVar:DBEffect:DB$ Effect | RememberObjects$ Targeted | StaticAbilities$ FountainStatic | ForgetOnMoved$ Battlefield | ForgetCounter$ FLOOD | Duration$ Permanent
 SVar:FountainStatic:Mode$ Continuous | Affected$ Card.IsRemembered | AddType$ Land & Island | RemoveLandTypes$ True | RemoveCardTypes$ True | Description$ It's an Island for as long as it has a flood counter on it.
 

@@ -1,0 +1,7 @@
+Name:Glunk's Retort
+ManaCost:1 B
+Types:Instant
+
+A:SP$ Counter | Cost$ 1 B PayLife<2> | TargetType$ Spell | ValidTgts$ Creature,Enchantment,Planeswalker | TgtPrompt$ Select target enchantment, creature, or planeswalker spell | SpellDescription$ Counter target enchantment, creature, or planeswalker spell.
+
+Oracle:As an additional cost to cast this spell, pay 2 life.\nCounter target enchantment, creature, or planeswalker spell.

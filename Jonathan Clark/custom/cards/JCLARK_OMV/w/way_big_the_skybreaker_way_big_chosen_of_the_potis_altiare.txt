@@ -40,7 +40,7 @@ S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Annihilator:X | Descripti
 SVar:X:Count$CardCounters.VORTEX
 
 T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | Execute$ TrigPutCounter | TriggerDescription$ At the beginning of combat on your turn, put a vortex counter on NICKNAME.
-SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ VORTEX | CounterNum$ 1
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ VORTEX
 
 A:AB$ DealDamage | Cost$ T | ValidTgts$ Player | NumDmg$ Y | SpellDescription$ NICKNAME deals damage to target player equal to the number of creatures they control.
 SVar:Y:Count$Valid Creature.TargetedPlayerCtrl

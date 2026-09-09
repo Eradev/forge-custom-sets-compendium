@@ -1,7 +1,7 @@
 Name:Lotus Herald
 ManaCost:1 W
 Types:Creature Angel
-PT:2/1
+PT:1/2
 
 K:Flash
 

@@ -6,8 +6,8 @@ PT:2/3
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This creature enters tapped.
 SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
 
-A:AB$ ChangeZone | Cost$ 1 B | Origin$ Graveyard | Destination$ Battlefield | ActivationZone$ Graveyard | CheckSVar$ X | SVarCompare$ GTY | SpellDescription$ Return this creature from your graveyard to the battlefield. Activate this ability only if you have more life than an opponent.
+A:AB$ ChangeZone | Cost$ 1 B | Origin$ Graveyard | Destination$ Battlefield | ActivationZone$ Graveyard | CheckSVar$ X | SVarCompare$ GTY | SpellDescription$ Return this card from your graveyard to the battlefield. Activate this ability only if you have more life than an opponent.
 SVar:X:Count$YourLifeTotal
 SVar:Y:PlayerCountOpponents$LowestLifeTotal
 
-Oracle:This creature enters tapped.\nSuperiority - {1}{B}: Return this creature from your graveyard to the battlefield. Activate this ability only if you have more life than an opponent.
+Oracle:This creature enters tapped.\nSuperiority - {1}{B}: Return this card from your graveyard to the battlefield. Activate this ability only if you have more life than an opponent.

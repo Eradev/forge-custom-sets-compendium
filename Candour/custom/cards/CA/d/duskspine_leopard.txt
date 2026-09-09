@@ -1,0 +1,16 @@
+Name:Duskspine Leopard
+ManaCost:3 W W
+Types:Creature Elemental Cat
+PT:4/5
+
+K:Convoke
+
+K:Lifelink
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigDestroy | TriggerDescription$ When you cast this spell, destroy up to one target nonland permanent. Its controller creates a tapped Everywhere token.
+SVar:TrigDestroy:DB$ Destroy | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Permanent.nonLand | TgtPrompt$ Select up to one target nonland permanent | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ everywhere | LockTokenScript$ True | TokenTapped$ True | TokenOwner$ TargetedController
+
+Oracle:Convoke\nLifelink\nWhen you cast this spell, destroy up to one target nonland permanent. Its controller creates a tapped Everywhere token.
+
+DeckHas:Ability$Token|LifeGain

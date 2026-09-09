@@ -1,0 +1,16 @@
+Name:Paradoxical Astrolabe
+ManaCost:7
+Types:Legendary Artifact
+
+K:Affinity:Artifact
+
+K:Cascade
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigUntap | TriggerDescription$ When you cast this spell, untap all nonland permanents you control.
+SVar:TrigUntap:DB$ UntapAll | ValidCards$ Permanent.YouCtrl+nonLand
+
+A:AB$ ChangeZone | Cost$ 4 | Origin$ Battlefield | Destination$ Hand | SpellDescription$ Return this artifact to its owner's hand.
+
+Oracle:Affinity for artifacts (This spell costs {1} less to cast for each artifact you control.)\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order.)\nWhen you cast this spell, untap all nonland permanents you control.\n{4}: Return this artifact to its owner's hand.
+
+DeckHints:Type$Artifact

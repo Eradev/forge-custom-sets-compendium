@@ -1,0 +1,8 @@
+Name:Ad Hominem
+ManaCost:R
+Types:Enchantment
+
+R:Event$ DamageDone | ActiveZones$ Battlefield | ValidTarget$ Creature | Optional$ True | OptionalDecider$ You | ReplaceWith$ DmgController | DamageTarget$ ReplacedTargetController | Description$ If a source would deal damage to a creature, you may have it deal that much damage to that creature's controller instead.
+SVar:DmgController:DB$ ReplaceEffect | VarName$ Affected | VarValue$ ReplacedTargetController | VarType$ Player
+
+Oracle:If a source would deal damage to a creature, you may have it deal that much damage to that creature's controller instead.

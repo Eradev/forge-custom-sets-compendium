@@ -3,10 +3,9 @@ ManaCost:1 R
 Types:Creature Human Samurai
 PT:2/1
 
-S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ First Strike | Condition$ PlayerTurn | Description$ As long as it's your turn, CARDNAME has first strike.
+S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ First Strike | Condition$ PlayerTurn | Description$ As long as it's your turn, this creature has first strike.
 
-S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | CheckSVar$ X | SVarCompare$ GE1 | Description$ CARDNAME gets +1/+1 as long as it's equipped, enchanted, or has a card inscribed onto it.
-
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | CheckSVar$ X | SVarCompare$ GE1 | Description$ This creature gets +1/+1 as long as it's equipped, enchanted, or has a card inscribed onto it.
 SVar:X:Count$Valid Card.Self+equipped,Card.Self+enchanted/Plus.IsInscribed
 
-Oracle:As long as it's your turn, Kamito Champion has first strike.\nKamito Champion gets +1/+1 as long as it's equipped, enchanted, or has a card inscribed onto it.
+Oracle:As long as it's your turn, this creature has first strike.\nThis creature gets +1/+1 as long as it's equipped, enchanted, or has a card inscribed onto it.

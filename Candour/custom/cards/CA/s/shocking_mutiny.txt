@@ -1,0 +1,11 @@
+Name:Shocking Mutiny
+ManaCost:2 R
+Types:Sorcery Lesson
+
+K:Convoke
+
+A:SP$ GainControl | ValidTgts$ Creature | LoseControl$ EOT | Untap$ True | AddKWs$ Haste | SpellDescription$ Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.
+
+Oracle:Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nGain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.
+
+SVar:PlayMain1:ALWAYS

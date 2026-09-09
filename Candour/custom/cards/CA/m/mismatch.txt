@@ -1,0 +1,9 @@
+Name:Mismatch
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | ValidTgts$ Card | TgtPrompt$ Select target spell | UnlessCost$ 2 | SpellDescription$ Counter target spell unless its controller pays {2}.
+
+K:Islandcycling:1
+
+Oracle:Counter target spell unless its controller pays {2}.\nIslandcycling {1} ({1}, Discard this card: Search your library for an Island card, reveal it, put it into your hand, then shuffle.)

@@ -1,0 +1,13 @@
+Name:Snapcast
+ManaCost:U
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Permanent.nonLand,Card.inZoneStack | TgtZone$ Stack,Battlefield | Origin$ Battlefield,Stack | Destination$ Exile | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Exile target spell or nonland permanent. For as long as that card remains exiled, its owner may cast it without paying its mana cost, and may cast that spell as though it had flash.
+SVar:DBEffect:DB$ Effect | Duration$ Permanent | StaticAbilities$ MayPlay,GiveFlash | RememberObjects$ Remembered | ForgetOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:MayPlay:Mode$ Continuous | Affected$ Card.IsRemembered | AffectedZone$ Exile | MayPlay$ True | MayPlayPlayer$ CardOwner | MayPlayWithoutManaCost$ True
+SVar:GiveFlash:Mode$ CastWithFlash | ValidCard$ Card.IsRemembered | ValidSA$ Spell | MayPlayPlayer$ CardOwner | AffectedZone$ Exile
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Exile target spell or nonland permanent. For as long as that card remains exiled, its owner may cast it without paying its mana cost, and may cast that spell as though it had flash.
+
+SVar:PlayMain1:TRUE

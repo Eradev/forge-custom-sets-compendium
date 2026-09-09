@@ -1,0 +1,13 @@
+Name:Xerex Sentinel
+ManaCost:U
+Types:Artifact Creature Angel
+PT:1/1
+
+K:Flying
+
+T:Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever an opponent casts a spell, if the amount of mana that player spent to cast that spell is less than or equal to this creature's power, draw a card.
+SVar:TrigDraw:DB$ Draw | ConditionCheckSVar$ Y | ConditionSVarCompare$ LEX
+SVar:X:TriggeredCard$CastTotalManaSpent
+SVar:Y:Count$CardPower
+
+Oracle:Flying\nWhenever an opponent casts a spell, if the amount of mana that player spent to cast that spell is less than or equal to this creature's power, draw a card.

@@ -1,0 +1,16 @@
+Name:Deep Forest Patriarch
+ManaCost:1 G
+Types:Creature Squirrel Warrior
+PT:1/1
+
+K:Vanishing:3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 1/1 green Squirrel creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ g_1_1_squirrel
+
+S:Mode$ Continuous | Affected$ Creature.Squirrel+YouCtrl | AddPower$ 1 | AddToughness$ 1 | Description$ Squirrels you control get +1/+1.
+
+Oracle:Vanishing 3 (This creature enters with three time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen this creature enters, create a 1/1 green Squirrel creature token.\nSquirrels you control get +1/+1.
+
+SVar:PlayMain1:TRUE
+DeckHas:Ability$Token|Counters

@@ -3,9 +3,9 @@ ManaCost:no cost
 Types:Land
 
 A:AB$ Mana | Cost$ T | Produced$ C | SubAbility$ DBCounter | SpellDescription$ Add {C}. Put your choice of a flying, first strike, menace, trample, vigilance, or +1/+1 counter on this land.
-SVar:DBCounter:DB$ PutCounter | Defined$ Self | CounterType$ Flying,First Strike,Menace,Trample,Vigilance,P1P1 | CounterNum$ 1
+SVar:DBCounter:DB$ PutCounter | CounterType$ Flying,First Strike,Menace,Trample,Vigilance,P1P1
 
-A:AB$ RemoveCounter | Cost$ 1 T | Defined$ Self | CounterType$ Any | CounterNum$ Any | RememberAmount$ True | SubAbility$ DBMana | SpellDescription$ Remove any number of counters from this land: Add {C} for each counter removed this way.
+A:AB$ RemoveCounter | Cost$ 1 T | Defined$ Self | CounterType$ Any | CounterNum$ Any | RememberAmount$ True | SubAbility$ DBMana | SpellDescription$ Add {C} for each counter removed this way.
 SVar:DBMana:DB$ Mana | Produced$ C | Amount$ X | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:X:Count$RememberedSize

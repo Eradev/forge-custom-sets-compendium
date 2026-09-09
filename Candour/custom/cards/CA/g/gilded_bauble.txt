@@ -1,0 +1,12 @@
+Name:Gilded Bauble
+ManaCost:1
+Types:Artifact
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this artifact enters, create a Treasure token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_a_treasure_sac
+
+A:AB$ Draw | Cost$ W U B R G Sac<1/CARDNAME/this artifact> | NumCards$ 3 | SpellDescription$ Draw three cards.
+
+Oracle:When this artifact enters, create a Treasure token.\n{W}{U}{B}{R}{G}, Sacrifice this artifact: Draw three cards.
+
+DeckHas:Ability$Token|Artifact & Type$Treasure

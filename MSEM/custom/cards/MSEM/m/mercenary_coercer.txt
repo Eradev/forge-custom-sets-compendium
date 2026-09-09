@@ -6,6 +6,6 @@ PT:2/2
 K:Menace
 
 T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | Execute$ TrigDiscard | CombatDamage$ True | TriggerDescription$ Whenever this creature deals combat damage to a player, that player discards a card.
-SVar:TrigDiscard:DB$ Discard | Defined$ TriggeredTarget | NumCards$ 1 | Mode$ TgtChoose
+SVar:TrigDiscard:DB$ Discard | Defined$ TriggeredTarget | Mode$ TgtChoose
 
 Oracle:Menace (This creature can't be blocked except by two or more creatures.)\nWhenever this creature deals combat damage to a player, that player discards a card.

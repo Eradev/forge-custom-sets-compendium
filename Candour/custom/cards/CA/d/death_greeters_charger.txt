@@ -1,0 +1,24 @@
+Name:Death-Greeter's Charger
+ManaCost:2 R
+Types:Creature Human Warrior
+PT:3/2
+
+K:Backup:2:BackupAbilities
+SVar:BackupAbilities:DB$ Animate | Keywords$ Trample & Haste | staticAbilities$ CantBlock | Triggers$ EndDamage | sVars$ X
+SVar:CantBlock:Mode$ CantBlock | ValidCard$ Creature.Self | Description$ This creature can't block.
+SVar:EndDamage:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | Execute$ TrigDamageSelf | TriggerDescription$ At the beginning of the end step, this creature deals damage to itself equal to its power.
+SVar:TrigDamageSelf:DB$ DealDamage | Defined$ Self | NumDmg$ X
+SVar:X:Count$CardPower
+
+K:Trample
+
+K:Haste
+
+S:Mode$ CantBlock | ValidCard$ Creature.Self | Description$ This creature can't block.
+
+T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | Execute$ TrigDamageSelf | TriggerDescription$ At the beginning of the end step, this creature deals damage to itself equal to its power.
+
+Oracle:Backup 2 (When this creature enters, put two +1/+1 counters on target creature. If that's another creature, it gains the following abilities until end of turn.)\nTrample, haste\nThis creature can't block.\nAt the beginning of the end step, this creature deals damage to itself equal to its power.
+
+DeckHas:Ability$Counters
+SVar:PlayMain1:TRUE

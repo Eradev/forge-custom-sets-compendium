@@ -1,0 +1,8 @@
+Name:Corvidosis
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | ValidTgts$ Card | TgtPrompt$ Select target spell | SubAbility$ DBToken | SpellDescription$ Counter target spell. Its controller creates a 1/1 blue Bird creature token with flying.
+SVar:DBToken:DB$ Token | TokenScript$ u_1_1_bird_flying | TokenOwner$ TargetedController
+
+Oracle:Counter target spell. Its controller creates a 1/1 blue Bird creature token with flying.

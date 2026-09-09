@@ -1,0 +1,11 @@
+Name:Plant Dragon Token
+ManaCost:no cost
+Colors:red,green,white
+Types:Creature Plant Dragon
+PT:2/2
+
+K:Flying
+
+K:Lifelink
+
+Oracle:Flying, lifelink

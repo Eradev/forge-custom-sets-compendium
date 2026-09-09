@@ -1,0 +1,14 @@
+Name:Undergrowth Surge
+ManaCost:1 G
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ Permanent.YouOwn+nonLand | AffectedZone$ Graveyard | AddKeyword$ Escape:CardManaCost ExileFromGrave<3/Card.Other/other> | Description$ Each nonland permanent card in your graveyard has escape. The escape cost is equal to the card's mana cost plus exile three other cards from your graveyard. (You may cast cards from your graveyard for their escape cost.)
+
+T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | Execute$ TrigSac | TriggerDescription$ At the beginning of the end step, sacrifice this enchantment.
+SVar:TrigSac:DB$ Sacrifice | SacValid$ Self
+
+Oracle:Each nonland permanent card in your graveyard has escape. The escape cost is equal to the card's mana cost plus exile three other cards from your graveyard. (You may cast cards from your graveyard for their escape cost.)\nAt the beginning of the end step, sacrifice this enchantment.
+
+SVar:EndOfTurnLeavePlay:True
+AI:RemoveDeck:Random
+SVar:PlayMain1:TRUE

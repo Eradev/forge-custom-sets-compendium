@@ -4,7 +4,7 @@ Types:Sorcery
 
 A:SP$ Mill | NumCards$ 1 | ValidTgts$ Player | SubAbility$ DBToken | SpellDescription$ Target player mills a card. Create a 3/2 colorless Horror creature token. Put a decayed counter on it unless you pay 3 life.
 SVar:DBToken:DB$ Token | TokenScript$ c_3_2_horror | RememberTokens$ True | SubAbility$ DBDecayed
-SVar:DBDecayed:DB$ PutCounter | Defined$ Remembered | CounterType$ Decayed | CounterNum$ 1 | UnlessCost$ PayLife<3> | UnlessPayer$ You | SubAbility$ DBCleanup
+SVar:DBDecayed:DB$ PutCounter | Defined$ Remembered | CounterType$ Decayed | UnlessCost$ PayLife<3> | UnlessPayer$ You | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
 Oracle:Target player mills a card. Create a 3/2 colorless Horror creature token. Put a decayed counter on it unless you pay 3 life. (It can't block. When it attacks, sacrifice it at end of combat.)

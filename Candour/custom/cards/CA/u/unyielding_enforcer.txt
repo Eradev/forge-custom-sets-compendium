@@ -1,0 +1,18 @@
+Name:Unyielding Enforcer
+ManaCost:3 W
+Types:Creature Elephant Soldier
+PT:4/4
+
+K:ETBReplacement:Other:ChoosePlayer
+SVar:ChoosePlayer:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | ChoiceTitle$ Choose an opponent to look at their hand | SubAbility$ DBLook | SpellDescription$ As this creature enters, look at an opponent's hand, then choose any card name.
+SVar:DBLook:DB$ RevealHand | Defined$ ChosenPlayer | Look$ True | SubAbility$ DBNameCard
+SVar:DBNameCard:DB$ NameCard | Defined$ You | SubAbility$ DBClear
+SVar:DBClear:DB$ Cleanup | ClearChosenPlayer$ True
+
+S:Mode$ CantBeCast | ValidCard$ Card.NamedCard | Description$ Spells with the chosen name can't be cast.
+
+S:Mode$ CantBeActivated | ValidCard$ Card.NamedCard | ValidSA$ Activated.!ManaAbility | Description$ Activated abilities of sources with the chosen name can't be activated unless they're mana abilities.
+
+S:Mode$ CantAttack,CantBlock | ValidCard$ Card.NamedCard | Description$ Creatures with the chosen name can't attack or block.
+
+Oracle:As this creature enters, look at an opponent's hand, then choose any card name.\nSpells with the chosen name can't be cast.\nActivated abilities of sources with the chosen name can't be activated unless they're mana abilities.\nCreatures with the chosen name can't attack or block.

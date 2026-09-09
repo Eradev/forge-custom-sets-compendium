@@ -8,7 +8,7 @@ K:Menace
 K:Deathtouch
 
 T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ Whenever this creature attacks, you lose 1 life and draw a card.
-SVar:TrigLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1 | SubAbility$ DBDraw
+SVar:TrigLoseLife:DB$ LoseLife | LifeAmount$ 1 | SubAbility$ DBDraw
 SVar:DBDraw:DB$ Draw
 
 K:Unearth:B

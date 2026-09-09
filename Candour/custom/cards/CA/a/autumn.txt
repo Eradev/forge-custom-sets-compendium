@@ -9,7 +9,7 @@ T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | IsPresent$ Card.StrictlySelf 
 SVar:TrigImmediateTrig:AB$ ImmediateTrigger | Cost$ 1 W | Execute$ TrigCharm | SpellDescription$ At the beginning of your upkeep, if this creature is in your graveyard, you may pay {1}{W}. If you do, choose one option.
 SVar:TrigCharm:DB$ Charm | Choices$ DBPump,DBDestroy,DBGainLife
 
-SVar:DBPump:DB$ PutCounter | ValidTgts$ Creature | CounterType$ P1P1 | CounterNum$ 2 |SpellDescription$ Put two +1/+1 counters on target creature.
+SVar:DBPump:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 2 | ValidTgts$ Creature | SpellDescription$ Put two +1/+1 counters on target creature.
 
 SVar:DBDestroy:DB$ Destroy | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment | SpellDescription$ Destroy target artifact or enchantment.
 

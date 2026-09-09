@@ -3,7 +3,7 @@ ManaCost:B
 Types:Enchantment
 
 T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigMill | OptionalDecider$ You | TriggerDescription$ At the beginning of your end step, you may mill a card.
-SVar:TrigMill:DB$ Mill | NumCards$ 1 | Defined$ You
+SVar:TrigMill:DB$ Mill
 
 A:AB$ LoseLife | Cost$ 3 B ExileFromGrave<2/Card> | ValidTgts$ Player | LifeAmount$ 2 | SpellDescription$ Target player loses 2 life.
 

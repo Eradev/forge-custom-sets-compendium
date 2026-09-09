@@ -1,0 +1,22 @@
+Name:Candid Scoundrel
+ManaCost:R
+Types:Creature Human Rogue
+PT:1/1
+
+K:Menace
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCharm | TriggerDescription$ When this creature enters, ABILITY
+SVar:TrigCharm:DB$ Charm | Choices$ DBLoot,DBTreasure,DBCounter,DBDamage
+
+SVar:DBLoot:DB$ Discard | Mode$ TgtChoose | SubAbility$ DBDraw | SpellDescription$ Discard a card, then draw a card.
+SVar:DBDraw:DB$ Draw
+
+SVar:DBTreasure:DB$ Token | TokenScript$ c_a_treasure_sac | SpellDescription$ Create a Treasure token.
+
+SVar:DBCounter:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature.Other | TgtPrompt$ Select another target creature | SpellDescription$ Put a +1/+1 counter on another target creature.
+
+SVar:DBDamage:DB$ DealDamage | Defined$ Player.Opponent | NumDmg$ 2 | SpellDescription$ This creature deals 2 damage to each opponent.
+
+Oracle:Menace\nWhen this creature enters, choose one —\n• Discard a card, then draw a card.\n• Create a Treasure token.\n• Put a +1/+1 counter on another target creature.\n• This creature deals 2 damage to each opponent.
+
+DeckHas:Ability$Token|Discard|Counters & Type$Treasure

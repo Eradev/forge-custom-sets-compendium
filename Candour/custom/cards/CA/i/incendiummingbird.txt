@@ -1,0 +1,18 @@
+Name:Incendiummingbird
+ManaCost:1 R
+Types:Creature Elemental Bird
+PT:1/1
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 0 | CheckSVar$ X | SVarCompare$ GE1 | Description$ If a source you control dealt noncombat damage this turn, you may pay {0} rather than pay this spell's mana cost.
+SVar:X:Count$NonCombatDamageThisTurn Card.YouCtrl Any
+
+K:Flying
+
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a Treasure token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_a_treasure_sac
+
+Oracle:If a source you control dealt noncombat damage this turn, you may pay {0} rather than pay this spell's mana cost.\nFlying, haste\nWhen this creature enters, create a Treasure token.
+
+DeckHas:Ability$Token|Artifact & Type$Treasure

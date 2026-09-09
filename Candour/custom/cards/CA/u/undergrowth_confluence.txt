@@ -1,0 +1,15 @@
+Name:Undergrowth Confluence
+ManaCost:3 G G
+Types:Instant
+
+A:SP$ Charm | Choices$ DBDestroy,DBReturn,DBSearch | CharmNum$ 3 | CanRepeatModes$ True
+
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Artifact,Enchantment,Land | TgtPrompt$ Select target artifact, enchantment, or land | SpellDescription$ Destroy target artifact, enchantment, or land.
+
+SVar:DBReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Card.!namedUndergrowth Confluence+YouOwn | TgtPrompt$ Select target card not named Undergrowth Confluence in your graveyard | SpellDescription$ Return target card not named CARDNAME from your graveyard to your hand.
+
+SVar:DBSearch:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Land | ChangeNum$ 1 | Shuffle$ True | SpellDescription$ Search your library for a land card, put it onto the battlefield, then shuffle.
+
+Oracle:Choose three. You may choose the same mode more than once.\n• Destroy target artifact, enchantment, or land.\n• Return target card not named Undergrowth Confluence from your graveyard to your hand.\n• Search your library for a land card, put it onto the battlefield, then shuffle.
+
+DeckHas:Ability$Graveyard

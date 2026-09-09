@@ -1,0 +1,13 @@
+Name:Wandering Polymath
+ManaCost:2 W
+Types:Creature Human
+PT:1/2
+
+S:Mode$ Continuous | Affected$ Card.Self | AddType$ Bard & Monk & Paladin & Ranger & Rogue & Warrior & Wizard | Description$ This creature is also a Bard, Monk, Paladin, Ranger, Rogue, Warrior, and Wizard.
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSearch | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may search your library for a Class card, put it onto the battlefield, then shuffle.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Enchantment.Class | ChangeNum$ 1 | ShuffleNonMandatory$ True
+
+Oracle:This creature is also a Bard, Monk, Paladin, Ranger, Rogue, Warrior, and Wizard.\nWhen this creature enters, you may search your library for a Class card, put it onto the battlefield, then shuffle.
+
+DeckNeeds:Type$Class

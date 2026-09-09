@@ -7,7 +7,7 @@ K:Flying
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSearch | TriggerDescription$ When CARDNAME enters, search your library for a land card, reveal it, put it into your hand, then shuffle.
 SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Land | ChangeNum$ 1
 
-A:AB$ Animate | Cost$ 0 | Defined$ Self | Types$ Creature | PrecostDesc$ Wanderlust — | CheckSVar$ WanderLands | SVarCompare$ GE4 | SpellDescription$ CARDNAME becomes an artifact creature until end of turn. Activate only if you control four or more differently named lands.
+A:AB$ Animate | Cost$ 0 | Defined$ Self | Types$ Creature | PrecostDesc$ Wanderlust | CheckSVar$ WanderLands | SVarCompare$ GE4 | SpellDescription$ CARDNAME becomes an artifact creature until end of turn. Activate only if you control four or more differently named lands.
 SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames
 
 Oracle:Flying\nWhen Intrepid enters, search your library for a land card, reveal it, put it into your hand, then shuffle.\nWanderlust — {0}: Intrepid becomes an artifact creature until end of turn. Activate only if you control four or more differently named lands.

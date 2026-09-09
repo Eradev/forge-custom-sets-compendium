@@ -1,0 +1,19 @@
+Name:Thought Processor
+ManaCost:2
+Types:Creature Eldrazi Processor
+PT:2/1
+
+K:Menace
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigProcessor | OptionalDecider$ You | TriggerDescription$ As this creature enters, you may put a card an opponent owns from exile into that player's graveyard. If you do, this creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)
+SVar:TrigProcessor:AB$ AlterAttribute | Cost$ ExiledMoveToGrave<1/Card.OppOwn/card an opponent owns> | Attributes$ Prepared
+
+AlternateMode:Prepare
+
+Oracle:Menace\nAs this creature enters, you may put a card an opponent owns from exile into that player's graveyard. If you do, this creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)
+
+ALTERNATE
+
+CopyFaceFrom:Inquisition of Kozilek
+
+DeckHints:Keyword$Ingest

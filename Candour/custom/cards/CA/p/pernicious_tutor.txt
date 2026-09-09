@@ -1,0 +1,8 @@
+Name:Pernicious Tutor
+ManaCost:B
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Card.cmcLEX | ChangeNum$ 1 | SpellDescription$ Search your library for a card with mana value less than or equal to the amount of life you lost this turn, reveal it, put it into your hand, then shuffle.
+SVar:X:Count$LifeYouLostThisTurn
+
+Oracle:Search your library for a card with mana value less than or equal to the amount of life you lost this turn, reveal it, put it into your hand, then shuffle.

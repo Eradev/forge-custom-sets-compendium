@@ -4,12 +4,12 @@ Types:Sorcery
 
 A:SP$ Charm | Choices$ DBCounterFight,DBToken,DBMillGain | CharmNum$ 3 | CanRepeatModes$ True
 
-SVar:DBCounterFight:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature you control | CounterType$ P1P1 | SubAbility$ DBFight | SpellDescription$ Put a +1/+1 counter on up to one target creature you control, then you may have it fight target creature you don't control.
+SVar:DBCounterFight:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature.YouCtrl | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature you control | SubAbility$ DBFight | SpellDescription$ Put a +1/+1 counter on up to one target creature you control, then you may have it fight target creature you don't control.
 SVar:DBFight:DB$ Fight | Defined$ ParentTarget | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you don't control | Optional$ True | ConditionDefined$ ParentTarget | ConditionPresent$ Card 
 
 SVar:DBToken:DB$ Token | ValidTgts$ Player | TokenScript$ g_2_2_lizard | TokenOwner$ ThisTargetedPlayer | SpellDescription$ Target player creates a 2/2 green Lizard creature token.
 
-SVar:DBMillGain:DB$ Mill | NumCards$ 4 | Defined$ You | SubAbility$ DBGainLife | SpellDescription$ You mill four cards and gain 4 life.
+SVar:DBMillGain:DB$ Mill | NumCards$ 4 | SubAbility$ DBGainLife | SpellDescription$ You mill four cards and gain 4 life.
 SVar:DBGainLife:DB$ GainLife | LifeAmount$ 4
 
 Oracle:Choose three. You may choose the same mode more than once.\n• Put a +1/+1 counter on up to one target creature you control, then you may have it fight target creature you don't control.\n• Target player creates a 2/2 green Lizard creature token.\n• You mill four cards and gain 4 life.

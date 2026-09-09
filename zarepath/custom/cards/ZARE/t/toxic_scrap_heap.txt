@@ -6,7 +6,7 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.S
 SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Any | TgtPrompt$ Select any target | NumDmg$ 2
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigDiscard | TriggerController$ TriggeredCardController | Secondary$ True | TriggerDescription$ When this artifact is put into a graveyard from the battlefield, target opponent discards a card.
-SVar:TrigDiscard:DB$ Discard | ValidTgts$ Opponent | TgtPrompt$ Select an opponent | NumCards$ 1 | Mode$ TgtChoose
+SVar:TrigDiscard:DB$ Discard | ValidTgts$ Opponent | TgtPrompt$ Select an opponent | Mode$ TgtChoose
 
 Oracle:When this artifact enters, it deals 2 damage to any target. When this artifact is put into your graveyard from the battlefield, target opponent discards a card.
 

@@ -1,0 +1,14 @@
+Name:Capricious Sorcerer (CA)
+ManaCost:1 U
+Types:Creature Human Sorcerer
+PT:2/2
+
+K:Ward:1
+
+T:Mode$ SpellCast | ValidCard$ Card.YouCtrl | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigExile | OptionalDecider$ You | ActivatorThisTurnCast$ EQ2 | TriggerDescription$ Whenever you cast your second spell each turn, you may exile target nonland permanent. If you do, return that card to the battlefield under its owner's control at the beginning of the next end step.
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Permanent.nonLand | TgtPrompt$ Select target nonland permanent | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DelTrig
+SVar:DelTrig:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | Execute$ TrigReturn | TriggerDescription$ Return exiled card to the battlefield. | RememberObjects$ RememberedLKI | SubAbility$ DBCleanup
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Exile | Destination$ Battlefield | Defined$ DelayTriggerRememberedLKI
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Ward {1}\nWhenever you cast your second spell each turn, you may exile target nonland permanent. If you do, return that card to the battlefield under its owner's control at the beginning of the next end step.

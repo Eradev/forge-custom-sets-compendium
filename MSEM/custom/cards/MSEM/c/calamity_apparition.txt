@@ -15,7 +15,7 @@ SVar:DBScry:DB$ Scry | ScryNum$ 2
 
 S:Mode$ Continuous | Affected$ Card.Self+ChosenModeLinger | AddTrigger$ LingerDeathTrigger | Description$ Linger — When this creature dies, put a +1/+1 counter on target creature you control.
 SVar:LingerDeathTrigger:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigLingerDeath | TriggerDescription$ When this creature dies, put a +1/+1 counter on target creature you control.
-SVar:TrigLingerDeath:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | CounterType$ P1P1
+SVar:TrigLingerDeath:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control
 
 Oracle:As this creature enters, choose fade or linger.\nWhen this creature dies,\n• Fade — You gain 2 life and scry 2.\n• Linger — Put a +1/+1 counter on target creature you control.
 

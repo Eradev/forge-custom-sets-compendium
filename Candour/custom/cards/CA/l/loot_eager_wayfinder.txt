@@ -1,0 +1,17 @@
+Name:Loot, Eager Wayfinder
+ManaCost:G
+Types:Legendary Creature Beast Noble
+PT:1/2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPrepare | TriggerDescription$ Whenever NICKNAME attacks, he becomes prepared. (While he's prepared, you may cast a copy of his spell. Doing so unprepares him.)
+SVar:TrigPrepare:DB$ AlterAttribute | Attributes$ Prepared
+
+AlternateMode:Prepare
+
+Oracle:Whenever Loot attacks, he becomes prepared. (While he's prepared, you may cast a copy of his spell. Doing so unprepares him.)
+
+SVar:HasAttackEffect:TRUE
+
+ALTERNATE
+
+CopyFaceFrom:Enter the Unknown

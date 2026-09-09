@@ -2,6 +2,6 @@ Name:Inquisition of the Pit
 ManaCost:B
 Types:Sorcery
 
-A:SP$ Discard | ValidTgts$ Opponent | Mode$ RevealYouChoose | DiscardValid$ Permanent.nonLand | DiscardValidDesc$ nonland permanent | NumCards$ 1 | SpellDescription$ Target opponent reveals their hand. You choose a nonland permanent card from it. That player discards that card.
+A:SP$ Discard | ValidTgts$ Player | Mode$ RevealYouChoose | DiscardValid$ Permanent.nonLand | DiscardValidDesc$ nonland permanent | NumCards$ 1 | SpellDescription$ Target player reveals their hand. You choose a nonland permanent card from it. That player discards that card.
 
-Oracle:Target opponent reveals their hand. You choose a nonland permanent card from it. That player discards that card.
+Oracle:Target player reveals their hand. You choose a nonland permanent card from it. That player discards that card.

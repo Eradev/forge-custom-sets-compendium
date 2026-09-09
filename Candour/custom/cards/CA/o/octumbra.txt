@@ -1,0 +1,11 @@
+Name:Octumbra
+ManaCost:B
+Types:Creature Spider Shade
+PT:1/1
+
+K:Haste
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 7 | AddToughness$ 7 | CheckSVar$ X | SVarCompare$ LE8 | Description$ If you have 8 or less life, this creature gets +7/+7.
+SVar:X:Count$YourLifeTotal
+
+Oracle:Haste\nIf you have 8 or less life, this creature gets +7/+7.

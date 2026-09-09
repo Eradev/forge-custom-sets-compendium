@@ -1,0 +1,9 @@
+Name:Life's Fragility
+ManaCost:1 B B
+Types:Instant Lesson
+
+A:SP$ Destroy | ValidTgts$ Creature,Planeswalker | TgtPrompt$ Select target creature or planeswalker | RememberLKI$ True | SubAbility$ DBDraw | SpellDescription$ Destroy target creature or planeswalker. If a permanent you controlled or a token was destroyed this way, draw a card.
+SVar:DBDraw:DB$ Draw | ConditionDefined$ RememberedLKI | ConditionPresent$ Permanent.YouCtrl,Card.token | ConditionCompare$ EQ1 | ConditionDescription$ a permanent you controlled or a token, | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Destroy target creature or planeswalker. If a permanent you controlled or a token was destroyed this way, draw a card.

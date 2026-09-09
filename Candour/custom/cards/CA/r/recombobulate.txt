@@ -1,0 +1,12 @@
+Name:Recombobulate
+ManaCost:U
+Types:Sorcery
+
+A:SP$ ChangeZone | Cost$ U Sac<1/Artifact> | Origin$ Library | Destination$ Battlefield | ChangeType$ Artifact.cmcEQX | ChangeNum$ 1 | Shuffle$ True | AILogic$ SacAndUpgrade | SubAbility$ DBExile | SpellDescription$ As an additional cost to cast this spell, sacrifice an artifact.\nSearch your library for an artifact card with mana value X, where X is 1 plus the sacrificed artifact's mana value. Put that card onto the battlefield, then shuffle. Exile CARDNAME.
+SVar:X:Sacrificed$CardManaCost/Plus.1
+SVar:DBExile:DB$ ChangeZone | Origin$ Stack | Destination$ Exile
+
+Oracle:As an additional cost to cast this spell, sacrifice an artifact.\nSearch your library for an artifact card with mana value X, where X is 1 plus the sacrificed artifact's mana value. Put that card onto the battlefield, then shuffle. Exile Recombobulate.
+
+DeckHas:Ability$Sacrifice
+SVar:AIPreference:SacCost$Artifact

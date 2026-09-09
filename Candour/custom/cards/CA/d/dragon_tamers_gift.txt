@@ -1,0 +1,17 @@
+Name:Dragon Tamer's Gift
+ManaCost:1 W
+Types:Artifact Creature Equipment Dragon
+PT:1/1
+
+K:Flying
+
+T:Mode$ Attacks | ValidCard$ Card.Self,Creature.EquippedBy | Execute$ TrigPutCounter | TriggerDescription$ Whenever this creature or equipped creature attacks, put a +1/+1 counter on it and tap up to one target creature defending player controls.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ TriggeredAttackerLKICopy | CounterType$ P1P1 | SubAbility$ DBTap
+SVar:DBTap:DB$ Tap | ValidTgts$ Creature.ControlledBy TriggeredDefendingPlayer | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature defending player controls
+
+K:Reconfigure:W
+
+Oracle:Flying\nWhenever this creature or equipped creature attacks, put a +1/+1 counter on it and tap up to one target creature defending player controls.\nReconfigure {W} ({W}: Attach to target creature you control; or unattach from a creature. Reconfigure only as a sorcery. While attached, this isn't a creature.)
+
+DeckHas:Ability$Counters
+SVar:HasAttackEffect:TRUE

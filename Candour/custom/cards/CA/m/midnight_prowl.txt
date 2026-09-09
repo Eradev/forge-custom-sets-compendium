@@ -1,0 +1,14 @@
+Name:Midnight Prowl
+ManaCost:1 B
+Types:Sorcery
+
+A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | KW$ Intimidate | SubAbility$ DBEffect | SpellDescription$ Creatures you control gain intimidate until end of turn. Until end of turn, whenever a creature you control deals combat damage to a player, put a +1/+1 counter on that creature and that player loses 1 life.
+SVar:DBEffect:DB$ Effect | Triggers$ TrigDmg
+SVar:TrigDmg:Mode$ DamageDone | ValidSource$ Creature.YouCtrl | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigBuff | TriggerDescription$ Whenever a creature you control deals combat damage to a player, put a +1/+1 counter on that creature and that player loses 1 life.
+SVar:TrigBuff:DB$ PutCounter | Defined$ TriggeredSource | CounterType$ P1P1 | SubAbility$ DBLose
+SVar:DBLose:DB$ LoseLife | Defined$ TriggeredTarget | LifeAmount$ 1
+
+Oracle:Creatures you control gain intimidate until end of turn. (They can't be blocked except by artifact creatures and/or creatures that share a color with them.)\nUntil end of turn, whenever a creature you control deals combat damage to a player, put a +1/+1 counter on that creature and that player loses 1 life.
+
+SVar:PlayMain1:TRUE
+DeckHas:Ability$Counters

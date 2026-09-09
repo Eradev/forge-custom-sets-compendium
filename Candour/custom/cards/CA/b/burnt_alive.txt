@@ -1,0 +1,10 @@
+Name:Burnt Alive
+ManaCost:1 B R
+Types:Instant
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Exile | ChangeType$ Creature | ChangeNum$ 3 | DifferentNames$ True | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Search your library for up to three creature cards with different names, exile them, then shuffle. You may play those cards until your next end step.
+SVar:DBEffect:DB$ Effect | StaticAbilities$ MayPlay | RememberObjects$ Remembered | ForgetOnMoved$ Exile | Duration$ UntilYourNextEndStep | SubAbility$ DBCleanup
+SVar:MayPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ You may play those cards until your next end step.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Search your library for up to three creature cards with different names, exile them, then shuffle. You may play those cards until your next end step.

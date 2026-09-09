@@ -1,0 +1,9 @@
+Name:Phyrexian Scrap Searcher
+ManaCost:1 UP
+Types:Artifact Creature Phyrexian Construct
+PT:1/1
+
+K:ETBReplacement:Copy:DBCopy:Optional
+SVar:DBCopy:DB$ Clone | Choices$ Artifact.Other+cmcLE2 | SpellDescription$ You may have this creature enter as a copy of any nonland artifact on the battlefield with mana value 2 or less.
+
+Oracle:({U/P} can be paid with either {U} or 2 life.)\nYou may have this creature enter as a copy of any nonland artifact on the battlefield with mana value 2 or less.

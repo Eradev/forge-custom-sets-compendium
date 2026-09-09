@@ -2,10 +2,11 @@ Name:Conjured Conflagration
 ManaCost:R
 Types:Sorcery
 
-A:SP$ DealDamage | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ 4 | ReplaceDyingDefined$ Targeted | SpellDescription$ CARDNAME deals 4 damage to target creature. If that creature would die this turn, exile it instead.
+A:SP$ DealDamage | ValidTgts$ Creature,Planeswalker | TgtPrompt$ Select target creature or planeswalker | NumDmg$ 3 | RememberDamaged$ True | ReplaceDyingDefined$ Remembered | SubAbility$ DBCleanup | SpellDescription$ CARDNAME deals 3 damage to target creature or planeswalker. If a permanent dealt damage by CARDNAME would die this turn, exile it instead.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
 K:Madness:0
 
-Oracle:Conjured Conflagration deals 4 damage to target creature. If that creature would die this turn, exile it instead.\nMadness {0} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)
+Oracle:Conjured Conflagration deals 3 damage to target creature or planeswalker. If a permanent dealt damage by Conjured Conflagration would die this turn, exile it instead.\nMadness {0} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)
 
 DeckHints:Ability$Discard

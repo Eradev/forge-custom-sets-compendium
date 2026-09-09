@@ -2,15 +2,16 @@ Name:Animist's Talent
 ManaCost:G
 Types:Enchantment Class
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Optional$ True | Execute$ TrigChange | TriggerDescription$ When this Class enters, you may search your library for a basic card, reveal it, put it into your hand, then shuffle.
-SVar:TrigChange:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Land.Basic | ChangeNum$ 1 | ShuffleNonMandatory$ True
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigTutor | TriggerDescription$ When this Class enters, search your library for a basic land card, reveal it, put it into your hand, then shuffle.
+SVar:TrigTutor:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Land.Basic | ChangeNum$ 1 | Mandatory$ True
 
 K:Class:2:1 G:AddTrigger$ TrigLandfall
 SVar:TrigLandfall:Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever a land you control enters, put a +1/+1 counter on target creature.
-SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature | CounterType$ P1P1 | CounterNum$ 1
-
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature | TgtPrompt$ Select target creature
 K:Class:3:3 G:AddTrigger$ TriggerClassLevel
 SVar:TriggerClassLevel:Mode$ ClassLevelGained | ClassLevel$ 3 | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigChangeAllLands | Secondary$ True | TriggerDescription$ When this Class becomes level 3, return all land cards from your graveyard to the battlefield.
-SVar:TrigChangeAllLands:DB$ ChangeZoneAll | ChangeType$ Land.YouCtrl | Origin$ Graveyard | Destination$ Battlefield
+SVar:TrigChangeAllLands:DB$ ChangeZoneAll | ChangeType$ Land.YouOwn | Origin$ Graveyard | Destination$ Battlefield
 
-Oracle:(Gain the next level as a sorcery to add its ability.)\nWhen this Class enters, you may search your library for a basic card, reveal it, put it into your hand, then shuffle.\n{1}{G}: Level 2\nWhenever a land you control enters, put a +1/+1 counter on target creature.\n{3}{G}: Level 3\nWhen this Class becomes level 3, return all land cards from your graveyard to the battlefield.
+Oracle:(Gain the next level as a sorcery to add its ability.)\nWhen this Class enters, search your library for a basic land card, reveal it, put it into your hand, then shuffle.\n{1}{G}: Level 2\nWhenever a land you control enters, put a +1/+1 counter on target creature.\n{3}{G}: Level 3\nWhen this Class becomes level 3, return all land cards from your graveyard to the battlefield.
+
+DeckHas:Ability$Counters

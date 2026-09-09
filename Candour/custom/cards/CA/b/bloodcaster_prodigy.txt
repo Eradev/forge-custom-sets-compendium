@@ -1,0 +1,21 @@
+Name:Bloodcaster Prodigy
+ManaCost:1 B
+Types:Creature Vampire Wizard
+PT:2/1
+
+K:Flying
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigToken | TriggerDescription$ Whenever this creature deals combat damage to a player, create a Blood token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_a_blood_draw
+
+R:Event$ Moved | ActiveZones$ Battlefield | ValidCard$ Card.YouCtrl | Discard$ True | Condition$ PlayerTurn | ReplaceWith$ DiscardToExile | Description$ If you would discard a card during your turn, discard it into exile instead.
+SVar:DiscardToExile:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Exile | Defined$ ReplacedCard
+
+T:Mode$ Discarded | ValidCard$ Card.YouCtrl | TriggerZones$ Battlefield | Condition$ PlayerTurn | Execute$ TrigPlay | TriggerDescription$ When you do, you may cast it. If you don't cast it, put it into your graveyard.
+SVar:TrigPlay:DB$ Play | Defined$ TriggeredCard | ValidSA$ Spell | Optional$ True | RememberPlayed$ True | SubAbility$ DBYard
+SVar:DBYard:DB$ ChangeZone | Defined$ TriggeredCard | Origin$ Exile | Destination$ Graveyard | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ0 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Flying\nWhenever this creature deals combat damage to a player, create a Blood token.\nIf you would discard a card during your turn, discard it into exile instead. When you do, you may cast it. If you don't cast it, put it into your graveyard.
+
+DeckHas:Ability$Token|Sacrifice & Type$Blood

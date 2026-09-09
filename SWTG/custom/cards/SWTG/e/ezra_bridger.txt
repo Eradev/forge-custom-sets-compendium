@@ -7,7 +7,7 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.S
 SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_rebel
 
 T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever CARDNAME attacks, put a +1/+1 counter on another target rebel creature you control.
-SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature.Rebel+YouCtrl+Other | TgtPrompt$ Select another target rebel creature you control | CounterType$ P1P1 | CounterNum$ 1
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature.Rebel+YouCtrl+Other | TgtPrompt$ Select another target rebel creature you control
 
 A:AB$ ChangeZone | Named$ Meditate | Cost$ 1 GW | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
 

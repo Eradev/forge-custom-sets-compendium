@@ -1,7 +1,7 @@
 Name:Flickerfowl
-ManaCost:1 W W
+ManaCost:2 W
 Types:Creature Elemental
-PT:3/1
+PT:1/1
 
 K:Flash
 
@@ -13,4 +13,4 @@ SVar:DelTrig:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | Execute$ Tr
 SVar:TrigBounce:DB$ ChangeZone | Origin$ Exile | Destination$ Battlefield | Defined$ DelayTriggerRememberedLKI
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
-Oracle:Flash, flying\nWhen this creature enters, exile another target permanent. Return that card to the battlefield under its owner's control at the beginning of the next end step.
+Oracle:Flash\nFlying\nWhen this creature enters, exile another target permanent. Return that card to the battlefield under its owner's control at the beginning of the next end step.

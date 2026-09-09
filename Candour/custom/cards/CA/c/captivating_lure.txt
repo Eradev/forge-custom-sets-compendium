@@ -1,0 +1,15 @@
+Name:Captivating Lure
+ManaCost:1 W
+Types:Enchantment
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this enchantment enters, exile target spell. It becomes plotted. (Its owner may cast it as a sorcery on a later turn without paying its mana cost.)
+SVar:TrigExile:DB$ ChangeZone | TargetType$ Spell | ValidTgts$ Card | TgtZone$ Stack | Origin$ Stack | Destination$ Exile | IsCurse$ True | TgtPrompt$ Choose target spell | RememberChanged$ True | SubAbility$ DBPlot
+SVar:DBPlot:DB$ AlterAttribute | Defined$ Remembered | Attributes$ Plotted | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+T:Mode$ SpellCast | ValidCard$ Card.!wasCastFromTheirHand | ValidActivatingPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever an opponent casts a spell from anywhere other than their hand, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Flash\nWhen this enchantment enters, exile target spell. It becomes plotted. (Its owner may cast it as a sorcery on a later turn without paying its mana cost.)\nWhenever an opponent casts a spell from anywhere other than their hand, draw a card.

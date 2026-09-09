@@ -3,6 +3,7 @@ Code=MSEM_TMI
 Name=Toll Midnight
 Date=2024-09-01
 Type=Custom
+BoosterSlots=Rare,LandSpecial
 Booster=7 Rare, 1 LandSpecial
 
 [Rare]

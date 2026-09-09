@@ -1,0 +1,15 @@
+Name:Tidal Confluence
+ManaCost:2 U U
+Types:Instant
+
+A:SP$ Charm | Choices$ DBMill,DBReturn,DBCounter | CharmNum$ 3 | CanRepeatModes$ True
+
+SVar:DBMill:DB$ Mill | NumCards$ 3 | ValidTgts$ Player | TgtPrompt$ Select target player | SpellDescription$ Target player mills three cards.
+
+SVar:DBReturn:DB$ ChangeZone | ValidTgts$ Player | Hidden$ True | Mandatory$ True | ChangeType$ Instant.TargetedPlayerOwn+!namedTidal Confluence,Sorcery.TargetedPlayerOwn+!namedTidal Confluence | ChangeNum$ 1 | Origin$ Graveyard | Destination$ Hand | SpellDescription$ Target player returns an instant or sorcery card not named Tidal Confluence from their graveyard to their hand.
+
+SVar:DBCounter:DB$ Counter | TargetType$ Spell,Activated,Triggered | TgtPrompt$ Select target spell or ability | ValidTgts$ Card,Emblem | SpellDescription$ Counter target spell, activated ability, or triggered ability.
+
+Oracle:Choose three. You may choose the same mode more than once.\n• Target player mills three cards.\n• Target player returns an instant or sorcery card not named Tidal Confluence from their graveyard to their hand.\n• Counter target spell, activated ability, or triggered ability.
+
+DeckHas:Ability$Graveyard

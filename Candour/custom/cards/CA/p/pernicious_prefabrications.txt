@@ -1,0 +1,15 @@
+Name:Pernicious Prefabrications
+ManaCost:B
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | GainControl$ True | ValidTgts$ Creature | TgtPrompt$ Select target creature card in a graveyard | WithCountersType$ TIME | WithCountersAmount$ 3 | RememberChanged$ True | SubAbility$ DBAnimate | SpellDescription$ Put target creature card from a graveyard onto the battlefield under your control. It enters with three time counters, is an artifact in addition to its other types, and isn't a creature until the last is removed. It gains "At the beginning of your end step, remove a time counter from this permanent."
+SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Types$ Artifact | Duration$ Permanent | staticAbilities$ NotCreature | Triggers$ EndRemove | sVars$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:NotCreature:Mode$ Continuous | Affected$ Card.Self | RemoveType$ Creature | CheckSVar$ X | SVarCompare$ GE1 | Description$ This permanent isn't a creature.
+SVar:X:Count$CardCounters.TIME
+SVar:EndRemove:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigRemoveTime | TriggerDescription$ At the beginning of your end step, remove a time counter from this permanent.
+SVar:TrigRemoveTime:DB$ RemoveCounter | Defined$ Self | CounterType$ TIME
+
+Oracle:Put target creature card from a graveyard onto the battlefield under your control. It enters with three time counters, is an artifact in addition to its other types, and isn't a creature until the last is removed. It gains "At the beginning of your end step, remove a time counter from this permanent."
+
+DeckHas:Ability$Counters & Type$Artifact

@@ -1,0 +1,19 @@
+Name:Alabaster Equipoise
+ManaCost:1 W
+Types:Sorcery
+
+A:SP$ Sacrifice | Defined$ Player.Opponent+withMoreLandsThanYou | SacValid$ Land | SubAbility$ DBSacCreature | SpellDescription$ Each opponent who controls more lands than you sacrifices a land. Each opponent who controls more creatures than you sacrifices a creature. Draw a card if an opponent has more cards in hand than you. You gain 4 life if an opponent has more life than you.
+
+SVar:DBSacCreature:DB$ Sacrifice | Defined$ Player.Opponent+withMoreCreaturesThanYou | SacValid$ Creature | SubAbility$ DBDraw
+
+SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ CardsThem | ConditionSVarCompare$ GTCardsYou | SubAbility$ DBGainLife
+SVar:CardsThem:PlayerCountOpponents$HighestCardsInHand
+SVar:CardsYou:Count$CardsInYourHand
+
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 4 | ConditionCheckSVar$ LifeThem | ConditionSVarCompare$ GTLifeYou
+SVar:LifeThem:PlayerCountOpponents$HighestLifeTotal
+SVar:LifeYou:Count$YourLifeTotal
+
+Oracle:Each opponent who controls more lands than you sacrifices a land.\nEach opponent who controls more creatures than you sacrifices a creature.\nDraw a card if an opponent has more cards in hand than you.\nYou gain 4 life if an opponent has more life than you.
+
+DeckHas:Ability$LifeGain

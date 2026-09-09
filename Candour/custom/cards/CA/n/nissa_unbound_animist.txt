@@ -3,13 +3,15 @@ ManaCost:2 G G
 Types:Legendary Planeswalker Nissa
 Loyalty:4
 
-A:AB$ GenericChoice | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Choices$ DigLand,DigNonland | Defined$ You | SpellDescription$ Choose land or nonland. Reveal cards from the top of your library until you reveal a card of the chosen kind. Put that card into your hand and put all other cards revealed this way on the bottom of your library in any order.
-SVar:DigLand:DB$ DigUntil | Valid$ Card.Land | ValidDescription$ land | FoundDestination$ Hand | RevealedDestination$ Library | RevealedLibraryPosition$ -1 | SpellDescription$ Land
-SVar:DigNonland:DB$ DigUntil | Valid$ Card.nonLand | ValidDescription$ nonland | FoundDestination$ Hand | RevealedDestination$ Library | RevealedLibraryPosition$ -1 | SpellDescription$ Nonland
+A:AB$ GenericChoice | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Choices$ DigLand,DigNonland | Defined$ You | SpellDescription$ Choose land or nonland. Reveal cards from the top of your library until you reveal a card of the chosen kind. Put that card into your hand and the rest on the bottom of your library in a random order.
+SVar:DigLand:DB$ DigUntil | Valid$ Card.Land | ValidDescription$ land | FoundDestination$ Hand | RevealedDestination$ Library | RevealedLibraryPosition$ -1 | RevealRandomOrder$ True | SpellDescription$ Land
+SVar:DigNonland:DB$ DigUntil | Valid$ Card.nonLand | ValidDescription$ nonland | FoundDestination$ Hand | RevealedDestination$ Library | RevealedLibraryPosition$ -1 | RevealRandomOrder$ True | SpellDescription$ Nonland
 
 A:AB$ Token | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | TokenScript$ g_x_x_elemental | TokenPower$ X | TokenToughness$ X | SpellDescription$ Create an X/X green Elemental creature token, where X is NICKNAME's loyalty.
 SVar:X:Count$CardCounters.LOYALTY
 
 A:AB$ ChangeZoneAll | Cost$ SubCounter<3/LOYALTY> | Planeswalker$ True | Ultimate$ True | ChangeType$ Land.YouOwn | Origin$ Graveyard | Destination$ Battlefield | SpellDescription$ Return all land cards from your graveyard to the battlefield.
 
-Oracle:[+1]: Choose land or nonland. Reveal cards from the top of your library until you reveal a card of the chosen kind. Put that card into your hand and put all other cards revealed this way on the bottom of your library in any order.\n[0]: Create an X/X green Elemental creature token, where X is Nissa's loyalty.\n[-3]: Return all land cards from your graveyard to the battlefield.
+Oracle:[+1]: Choose land or nonland. Reveal cards from the top of your library until you reveal a card of the chosen kind. Put that card into your hand and the rest on the bottom of your library in a random order.\n[0]: Create an X/X green Elemental creature token, where X is Nissa's loyalty.\n[-3]: Return all land cards from your graveyard to the battlefield.
+
+DeckHas:Ability$Token|Graveyard

@@ -1,0 +1,17 @@
+Name:Llanowar Executioner
+ManaCost:1 G
+Types:Creature Elf Assassin
+PT:3/1
+
+K:Deathtouch
+
+A:AB$ Pump | Cost$ X G G | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | SubAbility$ DBFight | AILogic$ Fight | StackDescription$ None | SpellDescription$ Target creature you control fights another target creature with mana value X.
+SVar:DBFight:DB$ Fight | Defined$ ParentTarget | ValidTgts$ Creature.cmcEQX | TargetUnique$ True | TgtPrompt$ Select another target creature with mana value X
+SVar:X:Count$xPaid
+
+A:AB$ Tap | Cost$ Discard<1/Card> | Defined$ Self | SubAbility$ DBIndestructible | SpellDescription$ Tap this creature. It gains indestructible until end of turn.
+SVar:DBIndestructible:DB$ Pump | Defined$ Self | KW$ Indestructible
+
+Oracle:Deathtouch\n{X}{G}{G}: Target creature you control fights another target creature with mana value X.\nDiscard a card: Tap this creature. It gains indestructible until end of turn.
+
+DeckHas:Ability$Discard

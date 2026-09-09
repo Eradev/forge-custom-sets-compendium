@@ -1,0 +1,12 @@
+Name:Zendikar Avenged
+ManaCost:1 G G G
+Types:Sorcery
+
+A:SP$ Token | TokenAmount$ X | TokenScript$ g_0_1_plant | SubAbility$ DBPutCounters | SpellDescription$ Create a 0/1 green Plant creature token for each land you control, then put a +1/+1 counter on each creature you control for each land that entered the battlefield under your control this turn.
+SVar:DBPutCounters:DB$ PutCounterAll | CounterType$ P1P1 | CounterNum$ Y | ValidCards$ Creature.YouCtrl
+SVar:X:Count$Valid Land.YouCtrl
+SVar:Y:Count$ThisTurnEntered_Battlefield_Land.YouCtrl
+
+Oracle:Create a 0/1 green Plant creature token for each land you control, then put a +1/+1 counter on each creature you control for each land that entered the battlefield under your control this turn.
+
+DeckHas:Ability$Token|Counters & Type$Plant

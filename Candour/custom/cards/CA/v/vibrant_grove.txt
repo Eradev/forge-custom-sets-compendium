@@ -1,0 +1,15 @@
+Name:Vibrant Grove
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped unless you control a Forest or an Island.
+SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | ConditionPresent$ Forest.YouCtrl,Island.YouCtrl | ConditionCompare$ EQ0
+
+A:AB$ Mana | Cost$ T | Produced$ W | SpellDescription$ Add {W}.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigGainLife | TriggerDescription$ When this land leaves the battlefield, you gain 5 life.
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 5
+
+Oracle:This land enters tapped unless you control a Forest or an Island.\n{T}: Add {W}.\nWhen this land leaves the battlefield, you gain 5 life.
+
+DeckHas:Ability$LifeGain

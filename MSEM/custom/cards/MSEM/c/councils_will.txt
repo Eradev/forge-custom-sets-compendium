@@ -3,6 +3,6 @@ ManaCost:B
 Types:Sorcery
 
 A:SP$ ChooseType | ValidTgts$ Opponent | Type$ Card | SubAbility$ DBDiscard | AILogic$ MostProminentComputerControlsOrOwns | SpellDescription$ Target opponent chooses a card type, then reveals their hand. You choose a card from it that's not of the chosen type. That player discards that card.
-SVar:DBDiscard:DB$ Discard | Defined$ ParentTarget | Mode$ RevealYouChoose | DiscardValid$ Card.IsNotChosenType | DiscardValidDesc$ card that's not of the chosen type | NumCards$ 1
+SVar:DBDiscard:DB$ Discard | Defined$ ParentTarget | Mode$ RevealYouChoose | DiscardValid$ Card.IsNotChosenType | DiscardValidDesc$ card that's not of the chosen type
 
 Oracle:Target opponent chooses a card type, then reveals their hand. You choose a card from it that's not of the chosen type. That player discards that card.

@@ -8,6 +8,6 @@ K:Trample
 T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+dealtDamageToOppThisTurn | Execute$ TrigControl | TriggerDescription$ Art of war — At the beginning of your end step, if this Vehicle dealt damage to an opponent this turn, gain control of target land for as long as this Vehicle remains on the battlefield.
 SVar:TrigControl:DB$ GainControl | ValidTgts$ Land | TgtPrompt$ Select target land | LoseControl$ LeavesPlay
 
-A:AB$ Animate | Cost$ tapXType<3/Creature> | Defined$ Self | Types$ Artifact,Creature | SpellDescription$ Tap three untapped creatures you control: This Vehicle becomes an artifact creature until end of turn.
+A:AB$ Animate | Cost$ tapXType<3/Creature> | Defined$ Self | Types$ Artifact,Creature | SpellDescription$ This Vehicle becomes an artifact creature until end of turn.
 
 Oracle:Trample\nArt of war — At the beginning of your end step, if this Vehicle dealt damage to an opponent this turn, gain control of target land for as long as this Vehicle remains on the battlefield.\nTap three untapped creatures you control: This Vehicle becomes an artifact creature until end of turn.

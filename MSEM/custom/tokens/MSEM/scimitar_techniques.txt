@@ -1,0 +1,12 @@
+Name:Scimitar Techniques
+ManaCost:no cost
+Colors:white
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddKeyword$ First Strike | Description$ Enchanted creature has first strike.
+
+Oracle:Enchant creature\nEnchanted creature has first strike.
+
+SVar:AttachAILogic:Pump

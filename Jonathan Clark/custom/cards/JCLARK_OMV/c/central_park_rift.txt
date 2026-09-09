@@ -7,7 +7,7 @@ S:Mode$ Continuous | Affected$ You | SetMaxHandSize$ Unlimited | Description$ Yo
 A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
 
 T:Mode$ SpellCast | ValidCard$ Card | Execute$ TrigCounter | TriggerZones$ Battlefield | TriggerDescription$ Whenever a player casts a spell, put a charge counter on CARDNAME. It deals 2 damage to that player. Then if CARDNAME has eight or more charge counters on it, exile it, then return it to the battlefield transformed under its owner's control.
-SVar:TrigCounter:DB$ PutCounter | Defined$ Self | CounterType$ CHARGE | CounterNum$ 1 | SubAbility$ DBDealDamage
+SVar:TrigCounter:DB$ PutCounter | CounterType$ CHARGE | SubAbility$ DBDealDamage
 SVar:DBDealDamage:DB$ DealDamage | Defined$ TriggeredActivator | NumDmg$ 2 | SubAbility$ DBCheckTransform
 SVar:DBCheckTransform:DB$ Branch | BranchConditionSVar$ X | BranchConditionSVarCompare$ GE8 | TrueSubAbility$ DBExileTransform | FalseSubAbility$ DBCleanup
 SVar:X:Count$CardCounters.CHARGE

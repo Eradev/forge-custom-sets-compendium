@@ -1,0 +1,16 @@
+Name:Liliana, of Death's Design
+ManaCost:1 B B
+Types:Legendary Planeswalker Liliana
+Loyalty:3
+
+A:AB$ Dig | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | DigNum$ 1 | ChangeNum$ 1 | Optional$ True | DestinationZone$ Hand | ForceRevealToController$ True | RememberChanged$ True | SubAbility$ DBLoseLife | SpellDescription$ Look at the top card of your library. You may reveal that card and put it into your hand. If you do, you lose life equal to its mana value.
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ X | ConditionDefined$ Remembered | ConditionPresent$ Card | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$CardManaCost
+
+A:AB$ LoseLife | Cost$ SubCounter<1/LOYALTY> | Planeswalker$ True | ValidTgts$ Player | TgtPrompt$ Select target player | LifeAmount$ 3 | SubAbility$ DBGainLife | SpellDescription$ Target player loses 3 life and you gain 3 life.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 3
+
+A:AB$ ChangeZone | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Player | TgtPrompt$ Select target player | Origin$ Battlefield | Destination$ Exile | ChangeType$ Creature | DefinedPlayer$ Targeted | Chooser$ Targeted | Mandatory$ True | Hidden$ True | SpellDescription$ Target player exiles a creature they control.
+
+Oracle:[+1]: Look at the top card of your library. You may reveal that card and put it into your hand. If you do, you lose life equal to its mana value.\n[-1]: Target player loses 3 life and you gain 3 life.\n[-2]: Target player exiles a creature they control.
