@@ -1,0 +1,8 @@
+Name:Frontier Meditation
+ManaCost:1 G G
+Types:Enchantment
+
+R:Event$ LoseMana | ValidPlayer$ You | ReplacementResult$ Replaced | ReplaceWith$ ConvertMana | ActiveZones$ Battlefield | Description$ If you would lose unspent mana, that mana becomes colorless instead.
+SVar:ConvertMana:DB$ ReplaceMana | ReplaceType$ C
+
+Oracle:If you would lose unspent mana, that mana becomes colorless instead.

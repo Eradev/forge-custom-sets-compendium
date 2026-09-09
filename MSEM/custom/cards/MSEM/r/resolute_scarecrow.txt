@@ -1,0 +1,5 @@
+Name:Resolute Scarecrow
+ManaCost:8
+Types:Artifact Creature Scarecrow
+PT:3/8
+Oracle:

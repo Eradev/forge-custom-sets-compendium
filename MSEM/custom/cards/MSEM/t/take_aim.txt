@@ -1,0 +1,11 @@
+Name:Take Aim
+ManaCost: G
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+SVar:AttachAILogic:Pump
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 1 | AddKeyword$ Reach & Trample | Description$ Enchanted creature gets +1/+0 and has trample and reach.
+
+Oracle:Enchant creature\nEnchanted creature gets +1/+0 and has trample and reach.

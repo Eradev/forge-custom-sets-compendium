@@ -1,0 +1,9 @@
+Name:Trailbloomer
+ManaCost:1 G
+Types:Creature Centaur Scout
+PT:1/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.Basic+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigMana | TriggerDescription$ Whenever a basic land you control enters, add one mana of any color.
+SVar:TrigMana:DB$ Mana | Produced$ Any
+
+Oracle:Whenever a basic land you control enters, add one mana of any color.

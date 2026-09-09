@@ -1,0 +1,13 @@
+Name:Sunrise Woods
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ G | SpellDescription$ Add {G}.
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+T:Mode$ Phase | Phase$ UntapOtherPlayer | ValidPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigUntap | TriggerDescription$ At the beginning of each other player's untap step, you may untap CARDNAME. Whenever you do, you pay 1 life.
+SVar:TrigUntap:AB$ Untap | Cost$ PayLife<1>
+
+Oracle:Sunrise Woods enters tapped.\n{T}: Add {G}.\nAt the beginning of each other player's untap step, you may untap Sunrise Woods. Whenever you do, you pay 1 life.

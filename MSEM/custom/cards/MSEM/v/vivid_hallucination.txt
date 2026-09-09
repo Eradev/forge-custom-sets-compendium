@@ -1,0 +1,10 @@
+Name:Vivid Hallucination
+ManaCost:2 U
+Types:Creature Ox Illusion
+PT:4/4
+
+T:Mode$ Blocks | ValidCard$ Card.Self | Execute$ TrigReturn | TriggerDescription$ Whenever CARDNAME blocks or becomes blocked, return it to its owner's hand.
+T:Mode$ AttackerBlocked | ValidCard$ Card.Self | Execute$ TrigReturn | Secondary$ True | TriggerDescription$ Whenever CARDNAME blocks or becomes blocked, return it to its owner's hand.
+SVar:TrigReturn:DB$ ChangeZone | Defined$ Self | Origin$ Battlefield | Destination$ Hand
+
+Oracle:Whenever Vivid Hallucination blocks or becomes blocked, return it to its owner's hand.

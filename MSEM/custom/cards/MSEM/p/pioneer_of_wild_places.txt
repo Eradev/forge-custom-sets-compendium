@@ -1,0 +1,8 @@
+Name:Pioneer of Wild Places
+ManaCost:W
+Types:Creature Human Scout
+PT:1/1
+
+K:Lifelink
+
+Oracle:Lifelink

@@ -1,0 +1,8 @@
+Name:Bloodleaf Poisoner
+ManaCost:1 B
+Types:Creature Elf Rogue
+PT:2/1
+
+K:Deathtouch
+
+Oracle:Deathtouch

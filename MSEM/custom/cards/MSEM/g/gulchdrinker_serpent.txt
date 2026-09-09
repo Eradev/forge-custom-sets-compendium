@@ -1,0 +1,9 @@
+Name:Gulchdrinker Serpent
+ManaCost:4 U U
+Types:Creature Serpent
+PT:5/5
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ Detain | TriggerDescription$ When CARDNAME enters, detain target permanent. (Until your next turn, that permanent can't attack or block and its activated abilities can't be activated.)
+SVar:Detain:DB$ Detain | ValidTgts$ Permanent | ValidTgtsDesc$ permanent
+
+Oracle:When Gulchdrinker Serpent enters, detain target permanent. (Until your next turn, that permanent can't attack or block and its activated abilities can't be activated.)

@@ -1,0 +1,5 @@
+Name:Solemn Deputy
+ManaCost:W
+Types:Creature Human Soldier
+PT:0/4
+Oracle:

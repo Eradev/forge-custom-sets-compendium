@@ -1,0 +1,7 @@
+Name:Harsh Wastes
+ManaCost:1 W
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Creature.attacking,Creature.blocking | TgtPrompt$ Select target attacking or blocking creature | NumDmg$ 3 | SpellDescription$ CARDNAME deals 3 damage to target attacking or blocking creature.
+
+Oracle:Harsh Wastes deals 3 damage to target attacking or blocking creature.

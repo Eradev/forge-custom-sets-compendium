@@ -1,0 +1,8 @@
+Name:Bloodleaf Druid
+ManaCost:1 G
+Types:Creature Elf Scout Druid
+PT:2/1
+
+A:AB$ ManaReflected | Cost$ T | ColorOrType$ Color | Valid$ Defined.ValidGraveyard Card.YouOwn | ReflectProperty$ Is | SpellDescription$ Choose a color of a card in your graveyard. Add one mana of that color.
+
+Oracle:{T}: Choose a color of a card in your graveyard. Add one mana of that color.

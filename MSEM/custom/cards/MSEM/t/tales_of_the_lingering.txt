@@ -1,0 +1,8 @@
+Name:Tales of the Lingering
+ManaCost:3 W
+Types:Instant
+
+A:SP$ Token | TokenAmount$ 3 | TokenScript$ c_1_1_spirit | TokenOwner$ You | SpellDescription$ Create three 1/1 colorless Spirit creature tokens.
+DeckHas:Ability$Token
+
+Oracle:Create three 1/1 colorless Spirit creature tokens.

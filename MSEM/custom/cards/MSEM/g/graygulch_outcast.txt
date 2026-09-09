@@ -1,0 +1,11 @@
+Name:Graygulch Outcast
+ManaCost:4 B B
+Types:Creature Spirit
+PT:4/3
+
+K:Menace
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigLoseLife | TriggerDescription$ When CARDNAME dies, each opponent loses 3 life.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ Opponent | LifeAmount$ 3
+
+Oracle:Menace\nWhen Graygulch Outcast dies, each opponent loses 3 life.

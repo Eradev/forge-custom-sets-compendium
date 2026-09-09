@@ -1,0 +1,10 @@
+Name:Bloodthirsty Ambusher
+ManaCost:4 B
+Types:Creature Devil Spirit
+PT:3/3
+
+K:Flash
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ 2 | EffectZone$ All | IsPresent$ Card.YouOwn | PresentZone$ Graveyard | PresentCompare$ GE5 | Description$ This spell costs {2} less to cast if there are five or more cards in your graveyard.
+
+Oracle:Flash\nThis spell costs {2} less to cast if there are five or more cards in your graveyard.

@@ -1,0 +1,11 @@
+Name:Brazen Drifter
+ManaCost:2 R
+Types:Creature Human Rogue
+PT:2/2
+
+K:Haste
+
+T:Mode$ AttackersDeclared | Execute$ TrigDiscard | TriggerZones$ Battlefield | OptionalDecider$ You | TriggerDescription$ Whenever one or more creatures attack, you may discard a card. If you do, draw a card.
+SVar:TrigDiscard:AB$ Draw | Cost$ Discard<1/Card>
+
+Oracle:Haste\nWhenever one or more creatures attack, you may discard a card. If you do, draw a card.

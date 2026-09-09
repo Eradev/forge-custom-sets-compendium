@@ -1,0 +1,11 @@
+Name:Sunset Cliffs Patron
+ManaCost:1 B
+Types:Creature Human Rogue
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Optional$ True | Execute$ TrigBounty | TriggerDescription$ When CARDNAME enters, you may put a bounty counter on target creature.
+SVar:TrigBounty:DB$ PutCounter | ValidTgts$ Creature | CounterType$ BOUNTY | CounterNum$ 1 | IsCurse$ True | SpellDescription$ Put a bounty counter on target creature.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.counters_GE1_BOUNTY | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever a creature with a bounty counter on it dies, each of its controller's opponents draws a card.
+SVar:TrigDraw:DB$ Draw | Defined$ Player.OpponentOf TriggeredCardController | NumCards$ 1
+
+Oracle:When Sunset Cliffs Patron enters, you may put a bounty counter on target creature.\nWhenever a creature with a bounty counter on it dies, each of its controller's opponents draws a card.

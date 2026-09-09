@@ -1,0 +1,5 @@
+Name:Qilan Explorer
+ManaCost:4 G
+Types:Creature Centaur Scout
+PT:4/5
+Oracle:

@@ -1,0 +1,296 @@
+[metadata]
+Code=MSEM_HI12
+Name=High Noon
+Date=2018-05-01
+Type=Custom
+Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
+
+[cards]
+1 C Arrest @Suzanne Helmigh
+# 2 U Atop Their High Horses @Jon Hodgson
+3 R Bearidge Charmer @Andrew Ryan
+4 R Bearidge Jailer @Felipe Gaona
+5 R Bearidge Marshall @John Silva
+6 C Bearidge Preacher @Steve Gibson
+7 C Bold Griffin @Akeiron
+8 M Calamity Rose @andava
+9 U Collapsed Mine @Filip Dudek
+10 U Diligent Deputy @Sebastien Ecosse
+11 R Drifting Warden @donmalo
+12 U Eversoar @0oki
+13 C Forlorn Farmhand @Daniel Eskridge
+14 C Frontier Paragon @dleoblack
+15 R Ghostway @Denis Kornev
+16 C Graygulch Howler @Mehrdad Isvandi
+17 U Hardened Soul @Justin Wong
+18 C Harsh Wastes @ehecod
+19 C Haunting Bard @ghostbow
+20 C Judges' Shield @Brolken
+21 C Kill Shot @Markus Vesper
+22 U Lone Stranger @Kai Carpenter
+23 C Old-World Forgotten @white-angel-ariah
+24 U Old-World Walker @OchreJelly
+25 C Pioneer of Wild Places @Marzena Nereida Piwowar
+26 R Preacher of Stray Souls @Mario Vazquez
+27 R Ride into the Sunset @Daniel Wachter
+28 C Sandbluff Barflies @Monika Andruszkiewicz
+29 C Sandbluff Confiscator @thienbao
+30 C Sandbluff Enforcers @kiikii-sempai
+31 C Sandbluff Irregular @Tess Garman
+32 C Sandbluff Training @Nacho Molina
+33 R Slinger's Showdown @Denis Kornev
+34 C Solemn Deputy @Lorenz Hideyoshi Ruwwe
+35 C Songs of the Howlers @Jerome Jacinto
+36 C Spirit Guidance @Muhammad Firdaus
+37 U Stand Your Ground @Merilliza Chan
+38 U Tailwind Griffin @Luphin
+39 U Tales of the Lingering @Justinas Vitkus
+40 U Uncommon Grit @Aaron Riley
+41 U Wardens of the Ulek @Mario Vazquez
+42 U Warning Shot @Anatol Arvrea
+43 M Aether Leak @Ralph Horsley
+44 U Aetherite Slugs @ChrisAppel
+45 U Aetherwhirl @Rita Micozzi
+46 U Arcane Caper @Weston T Jones
+47 C Blind Soulcaller @Stephen Garrett Rusk
+48 U Cage the Mind @Josiane Rey
+49 C Cardsharp Drifter @FalseDelusion
+50 R Daisite Express @Daniel Eskridge
+51 R Disallow @Etopato
+52 C Dispel @Nicolas-John Poulin
+53 U Elven Wanderer @Pam Hage
+54 C Embed @Andrew Hou
+55 C Fool's Gold @Riccardo Rullo
+56 R Full House @Christopher Bradley
+57 C Ghostly Flicker @Charlie Bowater
+58 U Gleaming Rider @Randy Vargas
+59 C Gulchdrinker Serpent @Ben Wootten
+60 C Head in the Clouds @Ashiria
+61 C High Spirits @Darek Zabrocki
+62 U Invisible Stalker @JakeWBullock
+63 C Ironeyes Scoundrel @Roiuky
+64 U Luck of the Draw @justduet
+65 C Merchant's Guile @Alex Allen
+66 R Nameless Drifter @Brandon Liao
+67 C Nightrail Printer @Jana Schirmer
+68 R Pocket Aces @RUshN
+69 U Prolific Thief @Alex Allen
+70 C Refund @Vince Biwer
+71 C Silence of the Drifter @JNickBlack
+72 U Slighted Spirit @Chris Malidore
+73 U Slinger's Storm @Ivan Cirovic
+74 R Sparkling Jackalope @LuxDani
+75 M Spirit of the Falls @Sebastien Ecosse
+76 C Stealer of Secrets @Alex Allen
+77 C Straw Soldiers @Rhineville
+78 C Street Smarts @Roiuky
+79 C Thunder Crow @Simon Seene
+80 C Ulek Windrider @Stephen Garrett Rusk
+81 U Vivid Hallucination @Alex Stone
+82 R Weaver of the Winds @janaschi
+83 C Whirling Thoughts @Vilenchik
+84 U Window Shopping @Biwer Vincent
+85 R Winning Hand @Larry Wilson
+86 M Axom, the Drifter @Daniel Kamarudin
+87 C Bloodleaf Butcher @Telmand
+88 C Bloodleaf Poisoner @Roiuky
+89 C Bloodthirsty Ambusher @Sal Vador
+90 R Bounty Collector @Marcin Bystrzycki
+91 R Cardsharp @wacalac
+92 C Down Barrel @Vulpes Ibculta
+93 C Exposed Ghoul @Roman Chaliy
+94 U Feed to the Pigs @Daniel Eskridge
+95 U From the Shadows @Gregory Fromenteau
+96 R Ghastly Character @Mateusz Ozminski
+97 C Gift of Shadows @vtas
+98 C Grasping Spirits @Roiuky
+99 U Graygulch Drifter @Bozhko Diitrov
+100 C Graygulch Lurker @Felipe Gaona
+101 C Graygulch Outcast @Marko Djurdjevic
+102 R Graygulch Revenant @Malte J. Zirbel
+103 C Graygulch Turncoat @Aaron Riley
+104 U Hard Knocks @Julaxart
+105 U Haunting Horseman @nedesem
+106 C Haunting Stragglers @Mateusz Michalski
+107 U Howler Sellout @Tess Garman
+108 C Lonely Return @Daniel Eskridge
+109 C March of the Gray @Ratushnyak Vitaliy
+110 U Midnight Fright @Suzanne Helmich
+111 U Murder @0oki
+112 C Nightrail Forger @Marko Djurdjevic
+113 U Nightrail Kingpin @Randy Vargas
+114 C Pickpocket @Jordan Kerbow
+115 C Public Hanging @Elson Wong
+116 U Ravenous Chupacabra @Felipe Escobar
+117 C Roxite's Revenge @RGUS
+118 R Sareng, the Dealer @John Silva
+119 U Spirit of Infamy @R-SRaven
+120 U Staking Hand @Biwer Vincent
+121 C Sunset Cliffs Patron @Nacho Molina
+122 R Unassuming Swineherd @Daniel Eskridge
+123 U Uncovered Mine @Ralph Horsley
+124 R Vengeful Agent @ErothBlackDragon
+125 C Victims of Graygulch @Ghion Quentin
+126 C Wanted @JabyReArt
+127 R Wendigo @Yigit Koroglu
+128 U Azun's Play @Riccardo Rullo
+129 C Bleeding Bear @Sebastien Ecosse
+130 R Bloodshot Berserker @kikicianjur
+131 U Brazen Drifter @0800
+132 C Campfire Stories @enigmasystem
+133 C Cathartic Reunion @Daniel Eskridge
+134 R Creed, Eternal Straggler @Keith Williams
+135 C Crossfire @Jordy Lakiere
+136 R Deputy Gibem @changinghand
+137 U Derringer Revelation @Wojtek Fus
+138 U Driver of Herds @Oleg Saakyan
+139 C Dual Wield @J A D
+140 M Haide Bankbuster @Li Joshua
+141 U Hair-Trigger Marshall @Larry Wilson
+142 C Heartwood Sniper @Roiuky
+143 U Howler Sheriff @Katie Hofgard
+144 C Injustice @Francis James R Arandez
+145 U Ironeyes Desperado @Lorenz Hideyoshi Ruwwe
+146 C Ironeyes Slingers @HaphazardMachine
+147 U Land Grab @Jamshed Jurabaev
+148 C Make an Entrance @Eduardo Ferigato
+149 C Mudslinging @Igor Grechanyi
+150 R Open Road @Camila Vielmond
+151 C Pains of the Drunk @Karina Misik
+152 U Postmark Bullet @DrawingNightmare
+153 C Qilan Raiders @JakeWBullock
+154 R Qilan Stormers @Kimonas
+155 C Qilan Warrior @Roiuky
+156 R Rain of Blood @Andrew Hou
+157 C Reforge @Antonio Caparo
+158 C Sandbluff Assailant @rou-tan
+159 C Sandbluff Duelist @Filip Acovic
+160 U Sandbluff Slinger @enigmasystem
+161 U Spectral Slinger @Riccardo Rullo
+162 U Stolen Cache @Riccardo Rullo
+163 C Sunset Cliffs Hunter @Carlos Fabián Villa
+164 C Sunset Cliffs Lawman @David Su
+165 R Tavern Brawl @Sebastien Ecosse
+166 M Terror of Sunset Cliffs @kikicianjur
+167 C Threaten @Alexander Nanitchkov
+168 R Train Heist @Roman Chaliy
+169 C Wave of Goblins @Andrew Hou
+170 U Wild Bounties @Haley Wakefield
+171 R Aether Recoverer @RJ Palmer
+172 U Bloodleaf Druid @David Lawrence Loebman
+173 R Bloodleaf Tracker @Malte J. Zirbel
+174 C Bloodleaf Warcry @Mehmet Ozon
+175 C Brush Sniper @Anna Lakisova
+176 C Canopy Ambush @Ashiria
+177 U Creeping Hidebehind @Ryan Van Dongen
+178 C Eternal Scout @Odobenus
+179 U Expedition Leader @Randy Vargas
+180 U Fireheart Centaur @Orchetto
+181 C Fog @Daniel Eskridge
+182 U Frontier Hoof @Josh Cotton
+183 R Frontier Meditation @Leonid Kozienko
+184 C Frontier Outrider @fishcapades
+185 C Frontier Scouts @Bob Kehl
+186 U Gifts of Ancient Ulek @Rick Troula
+187 C Gun Fight @Andrei Pervukhin
+188 U Lead the Charge @Daniel Eskridge
+189 C Lingering Guide @kanovsky
+190 U Loreweaver @Marya Yetseva
+191 R Mentor of the Mighty @Daniel Eskridge
+192 R Mistbreaker @patrick Reilly
+193 R Mysteries of the Ulek @Moggith
+194 C Natural Growth @chvacher
+195 C Nightshade Cultivator @Wildweasel339
+196 R One with the Herd @Daniel Eskridge
+197 R Patron of the Ancients @Rob Joseph
+198 U Qilan Archer @Roiuky
+199 C Qilan Explorer @Rodrigo Mendez
+200 C Qilan Seer @breath-art
+201 C Qilan Wanderer @Roiuky
+202 C Scout Ahead @Daniel Eskridge
+203 U Spectral Hunter @Eren Arik
+204 C Take Aim @icarus-falls
+205 C Tracker of Wild Places @Steve Gibson
+206 U Trailbloomer @Deer-in-Headlights
+207 C Ulek Crusher @Kerem Beyit
+208 C Ulek Elder @Merilliza Chan
+209 U Ulek Wayfinder @Tansie Stephens
+210 C Uncharted Frontier @Darek Zabrocki
+211 M Unified Ceremony @Lulu Zhang
+212 U Walking with Ancients @Anna Dvorácková
+213 R Aether Striders @Filip Dudek
+214 R At the Gallows @AzraelLaVolpe
+215 M Azun, Sheriff of Daisite @Javier Charro
+216 U Bounty Leveler @Alexander Nanitchkov
+217 R Burning-Tree Shaman @Andreia Ugrai
+218 R Chief Striking Dawn @Katelyn Malmsten
+219 U Dusk Occultist @DigitalSashimi
+220 U Dusk Rider @Aaron Riley
+221 R Imposing Griffin @Anna Podedworna
+222 M Judges of Bearidge @Marko Djurdjevic
+223 M Koshui, the Trader @SaneKyle
+224 R Lease on Life @Felipe Escobar
+225 U Maligned Scavenger @ApeironDiesirae
+226 U Miner's Barracks @Jerome Jacinto
+227 U Nightrail Fence @Jackson Tjota
+228 U Quelling Tavern @Rafael Michael Hayduk
+229 U Recoil @13tangerines
+230 R Roxite of Nightrail @Pyeongjun Park
+# artist typo on Lackeybot?
+231 U Sandbluff Inciter @Roiuky
+232 R Stickup @Robin Boer
+233 M Stormcall Thunderbird @Selladorra
+234 R Tireless Explorer @Roiuky
+235 R Vessel of Lost Souls @Dominuself
+236 U Walker of Wild Places @Nafrin
+237 M Wu, the Shackled @telthona
+238 U Aetherite Dagger @Bernard Ben
+239 R Aetherite Shackles @Aranthulas
+240 C Aetherite Vein @Larry Wilson
+241 U Aetherlock Effigy @Sebastian Caiveau
+242 C Aetherlock Pistol @Riccardo Rullo
+243 C Binding Lasso @Enmanuel Martinez
+244 C Cruel Effigy @LozanoX
+245 M Dead Man's Hand @Andrew Dobell and Andirilien
+246 U Derelict Watcher @donmalo
+247 U Dreamkeeper @highdarktemplar
+248 R Foulweather Effigy @dominuself
+249 C Gambler's Dice @Ian Llanas
+250 C Heavy Moneybag @Angelique Shelley
+251 C Mighty Totem @Dudu Torres
+252 U Moonlit Lurker @Steve Hamilton
+253 U Murderkeep @Andrew Dobell
+254 C Needle Doll @spyders
+255 C Penny Dreadful @Jian Guo
+256 C Resolute Scarecrow @donmalo
+257 U Scoundrel's Aetherlock @Joe Slucher
+258 U Shredding Sword @Ryohei Hase
+259 C Tumblewalker @Yasmin Joyner and oddmountain
+260 U Ulek Guardian @Jacob Atienza
+261 M The Wicker Lord @m-hugo
+262 C Worn Saddle @Justin Oaksford
+263 M The Aetherite Saloon @Ji You Zhoung
+264 R Derelict Town @iidamrak
+265 U Forgotten Haunt @Anthony Wolff
+266 R Sunrise Bluffs @Ajai Gautham
+267 R Sunrise Prairie @Jean Guillet
+268 R Sunrise River @Jean Guillet
+269 R Sunrise Ruins @Ihor Reshetnikov
+270 R Sunrise Woods @illustrum
+271 L Plains @Madspeitersen
+272 L Island @Adam Varga
+273 L Swamp @Nick Grey
+274 L Mountain @Dan Evan
+275 L Forest @Scott Williams
+276 S Ghostway @Dave Greco
+277 S Murder @xx-Lethal-xx
+278 S Unassuming Swineherd @Daniel Eskridge
+279 S Mistbreaker @Patrick Reilly
+
+[tokens]
+1 c_1_1_spirit @Elizabeth Sherry
+2 arrest @Pinokko
+3 b_1_1_bird_flying @Alex Stone
+# 4 Beast @Jasper Sandner
+5 g_1_1_elf_scout @Emmanuel Madail Monzon
+6 c_a_gold_sac @BobShmob

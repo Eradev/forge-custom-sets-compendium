@@ -1,0 +1,9 @@
+Name:Forlorn Farmhand
+ManaCost:1 W
+Types:Creature Human Scout
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME dies, create a 1/1 colorless Spirit creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_spirit | TokenOwner$ You
+
+Oracle:When Forlorn Farmhand dies, create a 1/1 colorless Spirit creature token.

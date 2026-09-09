@@ -1,0 +1,7 @@
+Name:Land Grab
+ManaCost:2 R R
+Types:Sorcery
+
+A:SP$ GainControl | ValidTgts$ Land | SpellDescription$ Gain control of target land.
+
+Oracle:Gain control of target land.
