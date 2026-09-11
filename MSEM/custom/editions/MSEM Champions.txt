@@ -9,7 +9,6 @@ TokenFallbackCode=MSEM_MPS_MSE
 1 M Master of Tranquility @Jian Guo
 2 M Scorch @ryky
 3 M Cranial Violation @Didier Nguyen
-# 4
 5 M Ryukami, the First Sovereign @Dongbiao Lu
 6 M Sunken Ambitions @RHADS
 7 M Master Chef (MSEM) @Ricky Ryan ${"flavorName": "Master Chef"}
@@ -18,12 +17,10 @@ TokenFallbackCode=MSEM_MPS_MSE
 10 M Azun, Sheriff of Daisite @Artozi
 11 M Taiyohata Champion @Yuka Han Bimi
 12 M Rock // Roll @Chris Ostrowski
-# 13
-14 R Almgrove Champion @Aleksei Vinogradov
+14 M Almgrove Champion @Aleksei Vinogradov
 15 M Pocket Aces @RUshN
 16 M Suisei the Southern Star @Kawiku
 17 M Serene Prayer @David Demaret
-# 18 - 20
 21 M Villainy @Sergey Kolesov
 22 M District of Artisans @Jimmy Ling
 23 M Lady Genvieve of Caulder @Gerald Parel
@@ -42,7 +39,6 @@ TokenFallbackCode=MSEM_MPS_MSE
 36 M Glimmer @Gael Giudicelli
 37 M Carnival Yatiri @Mauricio Cid
 38 M Performer of Ambition @katorius
-# 39
 40 M Latent Potential @Syd Mills
 41 M Ardy's Study @Malacandrax
 42 M Merkurio's Familiar @Ramses Melendez
@@ -144,22 +140,23 @@ TokenFallbackCode=MSEM_MPS_MSE
 138 M Chronicles of the Kitsune @naufaldreamer
 139 M Simul, Sylvan Alchemist @AI-Blues
 140 M Biohazard @trisynine
-141 M Unceasing Flames @Hinata刺客先生
+141 M Unceasing Flames @Hinata刺客先生 
 142 M Dimensional Reshaper @cc2520, Nix, Styles_, _crystaleye, harlsquin
 143 M Unbound Expanse @桃路果子
+145 M Megalokraken @Andrej Z.T.
 146 M Soul Reader @Billy Christian
 147 M Android Bodega @Eddie Mendoza
 148 M Clawing Shaman @Felipe Castro
 149 M Boundless Hopes @Bhaskar Rac
-150 M Reflected Moment @randiocalrissian
-151 S Seal the Tomb @ArcDraws
-152 S Forgotten Idol @Kati StarSoulArt
-153 S Spark Hunter Kajiwara Ai @Dongshi389
-154 S Cindergeather Phoenix @Blackie Maiden
-155 S Nitrous Renewer @マルケー
-156 S Curse of Doubt @jiuri
-157 S Hunter's Mark (MSEM) @Scott Uminga ${"flavorName": "Hunter's Mark"}
-158 S Skirsdag Edict @dusk ming
+150 M Reflected Moment @randiocalrissian 
+151 M Seal the Tomb @ArcDraws
+152 M Forgotten Idol @Kati StarSoulArt
+153 M Spark Hunter Kajiwara Ai @dongshi389
+154 M Cinderfeather Phoenix @Blackie Maiden
+155 M Nitrous Renewer @マルケー
+156 M Curse of Doubt @jiuri
+157 M Hunter's Mark (MSEM) @Scott Uminga ${"flavorName": "Hunter's Mark"}
+158 M Skirsdag Edict @dusk ming
 159 M Nightmare Riders @Tervola
 160 M Journey Beyond @mnstrcndy, Wesley Lin, AlectorFencer 
 161 M Ragavan, Most Wanted @Hiroshi Yugen
@@ -169,6 +166,9 @@ TokenFallbackCode=MSEM_MPS_MSE
 165 M Swarming Midden @flandore
 166 M Verdant Sanctuary @すてる子
 167 M Lose Your Mind @海源
+168 M Distilled Inspiration @Steph Johnstone
+169 M Life Unto Life @Hodlover69
+170 M Operative POSH @Dmitry Vishnevsky
 
 [tokens]
 0 g_1_1_saproling @AndrewMcIntosh
@@ -199,13 +199,23 @@ TokenFallbackCode=MSEM_MPS_MSE
 25 all_1_1_scout @Mack Sztaba
 29 c_1_1_a_construct @Michael Penta
 30 c_2_2_a_soldier @NishikujiC
+32 c_a_treasure_sac @Hiroshi Yugen
 
 [other]
 26 emblem_simul_sylvan_alchemist @AI-Blues
-27 plains @Hmmuk
 
 [CreatureTypes]
 Artist:Artists
+Aurashaper:Aurashapers
 
 [EnchantmentTypes]
 Gallery:Galleries
+
+[SpellTypes]
+Revelation
+
+[WalkerTypes]
+Ai
+Azun
+Simul
+Tam
