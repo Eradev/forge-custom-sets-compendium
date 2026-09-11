@@ -1,0 +1,7 @@
+Name:Just Business
+ManaCost:B
+Types:Instant
+
+A:SP$ Sacrifice | ValidTgts$ Player | SacValid$ Creature.Legendary,Planeswalker | SpellDescription$ Target player sacrifices a legendary creature or planeswalker.
+
+Oracle:Target player sacrifices a legendary creature or planeswalker.
