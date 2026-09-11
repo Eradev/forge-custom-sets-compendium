@@ -1,0 +1,13 @@
+Name:Glymna Blackrune
+ManaCost:1 B B
+Types:Legendary Creature Human Wizard
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExileGrave | TriggerDescription$ When CARDNAME enters, exile target player's graveyard.
+SVar:TrigExileGrave:DB$ ChangeZoneAll | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Player | ChangeType$ Card
+
+S:Mode$ Continuous | Condition$ PlayerTurn | MayPlay$ True | Affected$ Creature.ExiledWithSource | AffectedZone$ Exile | Description$ During each of your turns, you may cast a creature card exiled with CARDNAME.
+
+Oracle:When Glymna Blackrune enters, exile target player's graveyard.\nDuring each of your turns, you may cast a creature card exiled with Glymna Blackrune.
+
+DeckHas:Ability$Graveyard

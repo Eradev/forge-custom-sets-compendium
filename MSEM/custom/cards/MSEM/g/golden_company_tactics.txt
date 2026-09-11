@@ -1,0 +1,12 @@
+Name:Golden Company Tactics
+ManaCost:2 W
+Types:Sorcery
+
+A:SP$ PutCounterAll | ValidCards$ Creature.YouCtrl | CounterType$ P1P1 | SubAbility$ DBRepeatSoldier | SpellDescription$ Put a +1/+1 counter on each creature you control. Repeat this process if you control a Soldier. Repeat this process again if you control a Knight.
+SVar:DBRepeatSoldier:DB$ PutCounterAll | ValidCards$ Creature.YouCtrl | CounterType$ P1P1 | ConditionPresent$ Soldier.YouCtrl | SubAbility$ DBRepeatKnight
+SVar:DBRepeatKnight:DB$ PutCounterAll | ValidCards$ Creature.YouCtrl | CounterType$ P1P1 | ConditionPresent$ Knight.YouCtrl
+
+Oracle:Put a +1/+1 counter on each creature you control. Repeat this process if you control a Soldier. Repeat this process again if you control a Knight.
+
+DeckHas:Ability$Counters
+DeckHints:Type$Soldier|Knight

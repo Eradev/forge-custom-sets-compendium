@@ -1,0 +1,13 @@
+Name:Gorbes Index
+ManaCost:2 U
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigExile | TriggerDescription$ At the beginning of your upkeep, you may exile an instant or sorcery card from your graveyard. If you do, search your library for an instant or sorcery card with mana value equal to 1 plus the exiled card's mana value, reveal it, put it into your hand, then shuffle.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Instant.YouOwn,Sorcery.YouOwn | TgtPrompt$ Select target instant or sorcery card in your graveyard | OptionalDecider$ You | RememberChanged$ True | SubAbility$ DBSearch
+SVar:DBSearch:DB$ ChangeZone | ConditionDefined$ Remembered | ConditionPresent$ Card | Origin$ Library | Destination$ Hand | ChangeType$ Instant.cmcEQX,Sorcery.cmcEQX | ChangeNum$ 1 | SubAbility$ DBCleanup
+SVar:X:Remembered$CardManaCost/Plus.1
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:At the beginning of your upkeep, you may exile an instant or sorcery card from your graveyard. If you do, search your library for an instant or sorcery card with mana value equal to 1 plus the exiled card's mana value, reveal it, put it into your hand, then shuffle.
+
+DeckHas:Ability$Graveyard
