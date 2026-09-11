@@ -1,0 +1,8 @@
+Name:Meadow's Melody
+ManaCost:X U U
+Types:Instant
+
+A:SP$ GainControl | ValidTgts$ Creature.powerLEX | TgtPrompt$ Select target creature with power X or less | SpellDescription$ Gain control of target creature with power X or less.
+SVar:X:Count$xPaid
+
+Oracle:Gain control of target creature with power X or less.

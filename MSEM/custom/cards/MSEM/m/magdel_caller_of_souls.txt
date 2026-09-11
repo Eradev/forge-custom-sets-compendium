@@ -1,0 +1,15 @@
+Name:Magdel, Caller of Souls
+ManaCost:1 W W
+Types:Legendary Creature Human
+PT:2/3
+
+K:Protection:Sorcery
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ Whenever NICKNAME attacks, create a 1/1 white Spirit creature token with flying that's tapped and attacking for each storied permanent you control. Exile the tokens at end of combat. (Enchantments and legendary permanents are storied.)
+SVar:TrigToken:DB$ Token | TokenAmount$ X | TokenScript$ w_1_1_spirit_flying | TokenTapped$ True | TokenAttacking$ True | AtEOT$ ExileCombat
+SVar:X:Count$Valid Enchantment.YouCtrl,Permanent.Legendary+YouCtrl
+
+Oracle:Protection from sorceries\nWhenever Magdel attacks, create a 1/1 white Spirit creature token with flying that's tapped and attacking for each storied permanent you control. Exile the tokens at end of combat. (Enchantments and legendary permanents are storied.)
+
+DeckHas:Ability$Token & Type$Spirit
+SVar:HasAttackEffect:TRUE

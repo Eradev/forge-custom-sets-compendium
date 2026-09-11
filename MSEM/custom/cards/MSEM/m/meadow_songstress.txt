@@ -1,0 +1,13 @@
+Name:Meadow Songstress
+ManaCost:1 G G
+Types:Creature Elemental Bard
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigConjure | TriggerDescription$ When this creature enters, conjure three cards named CARDNAME and shuffle them into your main library.
+SVar:TrigConjure:DB$ MakeCard | Conjure$ True | Name$ Meadow Songstress | Zone$ Library | Amount$ 3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.!token+YouCtrl | TriggerZones$ Battlefield | CheckSVar$ SharedName | SVarCompare$ GE2 | Execute$ TrigDraw | TriggerDescription$ Whenever a nontoken creature you control enters, if it shares a name with one or more other creatures you control, draw a card.
+SVar:TrigDraw:DB$ Draw
+SVar:SharedName:Count$Valid Creature.YouCtrl+sharesNameWith TriggeredCard
+
+Oracle:When this creature enters, conjure three cards named Meadow Songstress and shuffle them into your main library.\nWhenever a nontoken creature you control enters, if it shares a name with one or more other creatures you control, draw a card.

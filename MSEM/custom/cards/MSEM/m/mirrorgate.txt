@@ -1,0 +1,18 @@
+Name:Mirrorgate
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigETB | TriggerDescription$ When this land enters, you choose a nonbasic land card name other than CARDNAME, then each player chooses a color.
+SVar:TrigETB:DB$ NameCard | Defined$ You | ValidCards$ Card.Land+nonBasic | ValidDescription$ nonbasic land other than CARDNAME | SubAbility$ DBChooseColors
+SVar:DBChooseColors:DB$ RepeatEach | RepeatPlayers$ Player | RepeatSubAbility$ DBChooseColor
+SVar:DBChooseColor:DB$ ChooseColor | Defined$ Remembered | AILogic$ MostProminentComputerControls
+
+S:Mode$ Continuous | Affected$ Land.NamedCard | RemoveAllAbilities$ True | RemoveCardTypes$ True | RemoveLandTypes$ True | AddType$ Land | AddAbility$ ABMirrorMana | Description$ Lands with the chosen name are lands with "{T}: Add one mana of any of the chosen colors," and lose all other abilities, card types, and land types.
+SVar:ABMirrorMana:AB$ Mana | Cost$ T | Produced$ Combo Chosen | SpellDescription$ Add one mana of any of the chosen colors.
+
+A:AB$ Mana | Cost$ T | Produced$ Combo Chosen | SpellDescription$ Add one mana of any of the chosen colors.
+
+Oracle:This land enters tapped.\nWhen this land enters, you choose a nonbasic land card name other than Mirrorgate, then each player chooses a color.\nLands with the chosen name are lands with "{T}: Add one mana of any of the chosen colors," and lose all other abilities, card types, and land types.\n{T}: Add one mana of any of the chosen colors.
