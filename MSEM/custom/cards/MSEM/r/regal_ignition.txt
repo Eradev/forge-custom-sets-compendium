@@ -1,0 +1,8 @@
+Name:Regal Ignition
+ManaCost:3 R R
+Types:Sorcery
+
+A:SP$ Sacrifice | Defined$ Player | SacValid$ Land | Amount$ 3 | SubAbility$ DBDamage | SpellDescription$ Each player sacrifices three lands. Regal Ignition deals 3 damage to each nonlegendary creature.
+SVar:DBDamage:DB$ DamageAll | ValidCards$ Creature.nonLegendary | NumDmg$ 3 | ValidDescription$ each nonlegendary creature
+
+Oracle:Each player sacrifices three lands. Regal Ignition deals 3 damage to each nonlegendary creature.

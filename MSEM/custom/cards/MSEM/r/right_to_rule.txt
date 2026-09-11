@@ -1,0 +1,12 @@
+Name:Right to Rule
+ManaCost:2 W
+Types:Enchantment
+
+T:Mode$ SpellCast | ValidCard$ Enchantment,Legendary | ValidActivatingPlayer$ You | Execute$ TrigDraw | TriggerZones$ Battlefield | TriggerDescription$ Whenever you cast a storied spell, you may pay {1}. If you do, draw a card. (Enchantments and legendary spells are storied.)
+SVar:TrigDraw:AB$ Draw | Cost$ 1 | Defined$ You | NumCards$ 1 | Optional$ True
+
+A:AB$ PumpAll | Cost$ Sac<1/CARDNAME/this enchantment> | ValidCards$ Enchantment.YouCtrl,Permanent.Legendary+YouCtrl | KW$ Indestructible | SpellDescription$ Storied permanents you control gain indestructible until end of turn.
+
+Oracle:Whenever you cast a storied spell, you may pay {1}. If you do, draw a card. (Enchantments and legendary spells are storied.)\nSacrifice this enchantment: Storied permanents you control gain indestructible until end of turn.
+
+DeckNeeds:Type$Enchantment|Legendary

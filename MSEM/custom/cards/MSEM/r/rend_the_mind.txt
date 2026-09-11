@@ -1,0 +1,11 @@
+Name:Rend the Mind
+ManaCost:3 B
+Types:Sorcery
+
+A:SP$ NameCard | Defined$ You | ValidCards$ Card.nonLand | ValidDescription$ nonland | SubAbility$ DBName2 | SpellDescription$ Choose four nonland card names.
+SVar:DBName2:DB$ NameCard | Defined$ You | ValidCards$ Card.nonLand | ValidDescription$ nonland | SubAbility$ DBName3
+SVar:DBName3:DB$ NameCard | Defined$ You | ValidCards$ Card.nonLand | ValidDescription$ nonland | SubAbility$ DBName4
+SVar:DBName4:DB$ NameCard | Defined$ You | ValidCards$ Card.nonLand | ValidDescription$ nonland | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | ValidTgts$ Opponent | Mode$ RevealDiscardAll | DiscardValid$ Card.NamedCard | SpellDescription$ Target opponent reveals their hand and discards all cards with the chosen names.
+
+Oracle:Choose four nonland card names. Target opponent reveals their hand and discards all cards with the chosen names.
