@@ -1,0 +1,13 @@
+Name:Oscanthor, Trader's Ruin
+ManaCost:4 U U U
+Types:Legendary Creature Leviathan
+PT:6/6
+
+K:Flash
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | Description$ NICKNAME can't be blocked.
+
+T:Mode$ DamageDone | ValidSource$ Creature.YouCtrl | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigDraw | TriggerZones$ Battlefield | TriggerDescription$ Whenever a creature you control deals combat damage to a player, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Flash\nOscanthor can't be blocked.\nWhenever a creature you control deals combat damage to a player, draw a card.

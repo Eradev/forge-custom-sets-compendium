@@ -1,0 +1,12 @@
+Name:Overloaded Aethergate
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ CopySpellAbility | Cost$ 7 T | ValidTgts$ Instant.hasXCost,Sorcery.hasXCost | TargetType$ Spell | MayChooseTarget$ True | ReduceCost$ X | SpellDescription$ Copy target instant or sorcery spell with {X} in its mana cost. You may choose new targets for the copy. This ability costs {1} less to activate for each instant and sorcery card in your graveyard.
+SVar:X:Count$ValidGraveyard Instant.YouOwn,Sorcery.YouOwn
+
+Oracle:{T}: Add {C}.\n{7}, {T}: Copy target instant or sorcery spell with {X} in its mana cost. You may choose new targets for the copy. This ability costs {1} less to activate for each instant and sorcery card in your graveyard.
+
+DeckHints:Ability$Graveyard
