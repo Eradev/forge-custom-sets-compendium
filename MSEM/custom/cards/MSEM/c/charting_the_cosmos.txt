@@ -1,0 +1,12 @@
+Name:Charting the Cosmos
+ManaCost:1 U U
+Types:Instant
+
+A:SP$ PeekAndReveal | Defined$ You | PeekAmount$ 7 | Reveal$ True | RememberRevealed$ True | SubAbility$ ChooseNonLand | SpellDescription$ Reveal the top seven cards of your library. Starting with you, each player chooses a nonland card from among them that hasn't been chosen this way. Put the chosen cards into your hand and the rest on the bottom of your library in a random order.
+SVar:ChooseNonLand:DB$ RepeatEach | RepeatPlayers$ Player | StartingWith$ You | RepeatSubAbility$ PlayerChoose | SubAbility$ ShipToBottom
+SVar:PlayerChoose:DB$ ChooseCard | ChoiceZone$ Library | Choices$ Card.nonLand+IsRemembered+nonChosenCard | Defined$ Player.IsRemembered | MinAmount$ 0 | Amount$ 1 | SubAbility$ ChosenToHand
+SVar:ChosenToHand:DB$ ChangeZone | Origin$ Library | Destination$ Hand | Defined$ ChosenCard
+SVar:ShipToBottom:DB$ ChangeZoneAll | ChangeType$ Card.IsRemembered | Origin$ Library | Destination$ Library | LibraryPosition$ -1 | RandomOrder$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+
+Oracle:Reveal the top seven cards of your library. Starting with you, each player chooses a nonland card from among them that hasn't been chosen this way. Put the chosen cards into your hand and the rest on the bottom of your library in a random order.

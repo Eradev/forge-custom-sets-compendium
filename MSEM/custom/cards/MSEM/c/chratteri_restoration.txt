@@ -1,0 +1,10 @@
+Name:Chratteri Restoration
+ManaCost:2 G G
+Types:Sorcery
+
+A:SP$ GainLife | Defined$ Player | LifeAmount$ 4 | SubAbility$ DBReturnLands | SpellDescription$ Each player gains 4 life and returns all land cards from their graveyard to the battlefield tapped.
+SVar:DBReturnLands:DB$ ChangeZoneAll | Origin$ Graveyard | Destination$ Battlefield | Tapped$ True | ChangeType$ Land
+
+Oracle:Each player gains 4 life and returns all land cards from their graveyard to the battlefield tapped.
+
+DeckHas:Ability$LifeGain|Graveyard
