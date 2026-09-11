@@ -7,6 +7,6 @@ R:Event$ Moved | ValidCard$ Creature.OppCtrl | Destination$ Battlefield | Active
 SVar:ETBTapped:DB$ Tap | Defined$ ReplacedCard | ETB$ True
 
 T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Player | TriggerZones$ Battlefield | IsPresent$ Creature.YouCtrl+toughnessGE4 | Execute$ TrigIndestructible | TriggerDescription$ Bulwark — At the beginning of each upkeep, if you control a creature with toughness 4 or greater, this creature gains indestructible until end of turn.
-SVar:TrigIndestructible:DB$ Pump | Defined$ Self | KW$ Indestructible
+SVar:TrigIndestructible:DB$ Pump | KW$ Indestructible
 
 Oracle:Creatures your opponents control enter tapped.\nBulwark — At the beginning of each upkeep, if you control a creature with toughness 4 or greater, this creature gains indestructible until end of turn.

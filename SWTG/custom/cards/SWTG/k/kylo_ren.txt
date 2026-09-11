@@ -9,7 +9,7 @@ K:First Strike
 S:Mode$ MustAttack | ValidCreature$ Card.Self | Description$ CARDNAME attacks each combat if able.
 
 T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPumpTap | TriggerDescription$ Whenever CARDNAME attacks, it gets +1/+0 for each creature card in your graveyard and you may tap target creature defending player controls.
-SVar:TrigPumpTap:DB$ Pump | Defined$ Self | NumAtt$ X | NumDef$ 0 | SubAbility$ DBTap
+SVar:TrigPumpTap:DB$ Pump | NumAtt$ X | SubAbility$ DBTap
 SVar:DBTap:DB$ Tap | ValidTgts$ Creature.DefenderCtrl | TgtPrompt$ Select up to one target creature defending player controls | TargetMin$ 0 | TargetMax$ 1
 SVar:X:Count$ValidGraveyard Creature.YouOwn
 

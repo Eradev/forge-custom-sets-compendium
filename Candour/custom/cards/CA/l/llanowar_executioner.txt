@@ -10,7 +10,7 @@ SVar:DBFight:DB$ Fight | Defined$ ParentTarget | ValidTgts$ Creature.cmcEQX | Ta
 SVar:X:Count$xPaid
 
 A:AB$ Tap | Cost$ Discard<1/Card> | Defined$ Self | SubAbility$ DBIndestructible | SpellDescription$ Tap this creature. It gains indestructible until end of turn.
-SVar:DBIndestructible:DB$ Pump | Defined$ Self | KW$ Indestructible
+SVar:DBIndestructible:DB$ Pump | KW$ Indestructible
 
 Oracle:Deathtouch\n{X}{G}{G}: Target creature you control fights another target creature with mana value X.\nDiscard a card: Tap this creature. It gains indestructible until end of turn.
 

@@ -11,7 +11,7 @@ SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 1
 
 A:AB$ ChangeZone | Cost$ 2 | CheckSVar$ X | ChangeType$ Creature | ChangeNum$ 1 | Origin$ Graveyard | Destination$ Exile | Mandatory$ True | Hidden$ True | Chooser$ You | SubAbility$ DBPump | SpellDescription$ Exile a creature card from a graveyard: NICKNAME gains hexproof until the end of turn. Scry 2.
 SVar:X:Count$ValidGraveyard Creature
-SVar:DBPump:DB$ Pump | Defined$ Self | KW$ Hexproof | SubAbility$ DBScry
+SVar:DBPump:DB$ Pump | KW$ Hexproof | SubAbility$ DBScry
 SVar:DBScry:DB$ Scry | ScryNum$ 2
 
 Oracle:Lifelink\nWhenever a creature attacks you or a planeswalker you control, that creature's controller loses 1 life and you gain 1 life.\n{2}, Exile a creature card from a graveyard: Gwen gains hexproof until the end of turn. Scry 2.

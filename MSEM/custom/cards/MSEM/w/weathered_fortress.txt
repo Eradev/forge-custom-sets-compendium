@@ -11,7 +11,7 @@ A:AB$ Animate | Cost$ U R | Defined$ Self | Power$ 1 | Toughness$ 4 | Types$ Cre
 SVar:TrigPump:Mode$ Attacks | ValidCard$ Card.Self | Execute$ DBPump | TriggerDescription$ TriggerDescription$ Whenever this creature attacks, switch its power and toughness until end of turn.
 SVar:TrigAttack:Mode$ Attacks | ValidCard$ Card.Self | Execute$ DBTorment | TriggerDescription$ Whenever this land attacks or blocks, torment yourself.
 SVar:TrigBlock:Mode$ Blocks | ValidCard$ Card.Self | Execute$ DBTorment | Secondary$ True | TriggerDescription$ Whenever this land attacks or blocks, torment yourself.
-SVar:DBPump:DB$ Pump | Defined$ Self | KW$ HIDDEN CARDNAME's power and toughness are switched
+SVar:DBPump:DB$ Pump | KW$ HIDDEN CARDNAME's power and toughness are switched
 SVar:DBTorment:DB$ GenericChoice | AILogic$ PayUnlessCost | Choices$ DBPaySac,DBPayDiscard | FallbackAbility$ DBLoseLifeFallback | SpellDescription$ Lose 3 life unless you discard a card or sacrifice a nonland permanent.
 SVar:DBPaySac:DB$ LoseLife | LifeAmount$ 3 | UnlessCost$ Sac<1/Permanent.nonland/nonland permanent> | UnlessPayer$ You | SpellDescription$ Lose 3 life unless you sacrifice a nonland permanent.
 SVar:DBPayDiscard:DB$ LoseLife | LifeAmount$ 3 | UnlessCost$ Discard<1/Card.Other/card> | UnlessPayer$ You | SpellDescription$ Lose 3 life unless you discard a card.

@@ -6,7 +6,7 @@ PT:2/2
 K:Double Strike
 
 T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ X | SVarCompare$ GTY | Execute$ TrigPump | TriggerDescription$ Superiority - At the beginning of combat on your turn, this creature gains indestructible until end of turn if you have more life than an opponent.
-SVar:TrigPump:DB$ Pump | KW$ Indestructible | Defined$ Self
+SVar:TrigPump:DB$ Pump | KW$ Indestructible
 SVar:X:Count$YourLifeTotal
 SVar:Y:PlayerCountOpponents$LowestLifeTotal
 

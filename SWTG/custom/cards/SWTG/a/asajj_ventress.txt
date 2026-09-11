@@ -6,7 +6,7 @@ PT:3/2
 K:Double Strike
 
 T:Mode$ AttackerBlocked | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When CARDNAME becomes blocked, it gets +1/+1 for each creature blocking it until end of turn.
-SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +X | NumDef$ +X
+SVar:TrigPump:DB$ Pump | NumAtt$ +X | NumDef$ +X
 SVar:X:Count$Valid Creature.blockingTriggeredAttacker
 
 T:Mode$ Attacks | ValidCard$ Card.Self | CheckSVar$ HateFlag | SVarCompare$ GE1 | Execute$ TrigMustBlock | TriggerDescription$ Hate — Whenever CARDNAME attacks, if an opponent lost life from a source other than combat damage this turn, target creature blocks this turn if able.

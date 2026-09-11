@@ -4,6 +4,6 @@ Types:Creature Human Pilot
 PT:2/2
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Artifact.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever an artifact enters under your control, this creature gains flying until end of turn.
-SVar:TrigPump:DB$ Pump | Defined$ Self | KW$ Flying
+SVar:TrigPump:DB$ Pump | KW$ Flying
 
 Oracle:Whenever an artifact enters under your control, this creature gains flying until end of turn.
