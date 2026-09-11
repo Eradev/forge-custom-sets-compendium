@@ -1,0 +1,10 @@
+Name:Tianyuren Skycharter
+ManaCost:U
+Types:Creature Human Wizard
+PT:1/1
+
+K:Flying
+
+S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Hexproof | IsPresent$ Enchantment.YouCtrl,Permanent.Legendary+YouCtrl | Description$ This creature has hexproof as long as you control a storied permanent. (Enchantments and legendary permanents are storied.)
+
+Oracle:Flying\nThis creature has hexproof as long as you control a storied permanent. (Enchantments and legendary permanents are storied.)

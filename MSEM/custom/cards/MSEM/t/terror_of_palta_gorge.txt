@@ -1,0 +1,13 @@
+Name:Terror of Palta Gorge
+ManaCost:4 U U
+Types:Creature Leviathan
+PT:4/4
+
+K:Protection:Card.nonBlue:nonblue
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ Whenever this creature attacks, exile another target nonblue creature until it leaves the battlefield.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Creature.nonBlue+Other | TgtPrompt$ Select another target nonblue creature | Duration$ UntilHostLeavesPlay
+
+Oracle:Protection from nonblue\nWhenever this creature attacks, exile another target nonblue creature until it leaves the battlefield.
+
+SVar:HasAttackEffect:TRUE

@@ -1,0 +1,11 @@
+Name:Tidal Spite
+ManaCost:U
+Types:Sorcery
+
+A:SP$ ChangeZone | Cost$ U tapXType<X/Enchantment.YouCtrl+untapped,Permanent.Legendary+YouCtrl+untapped> | CostDesc$ As an additional cost to cast this spell, tap any number of untapped storied permanents you control. | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ Y | TgtPrompt$ Select X target creatures | Origin$ Battlefield | Destination$ Hand | SpellDescription$ Return X target creatures to their owner's hand, where X is one plus the number of permanents tapped this way.
+SVar:X:Count$xPaid
+SVar:Y:Number$1/Plus.X
+
+Oracle:As an additional cost to cast this spell, tap any number of untapped storied permanents you control.\nReturn X target creatures to their owner's hand, where X is one plus the number of permanents tapped this way.
+
+DeckNeeds:Type$Enchantment|Legendary

@@ -1,0 +1,10 @@
+Name:The Aether Lens
+ManaCost:1
+Types:Legendary Artifact
+
+S:Mode$ Continuous | AffectedZone$ Hand | Affected$ Card.OppOwn | MayLookAt$ Player | Description$ Your opponents play with their hands revealed.
+
+T:Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.OppOwn+inZoneHand+sharesNameWith TriggeredCard | Execute$ TrigDraw | TriggerDescription$ Whenever you cast a spell with the same name as a card in an opponent's hand, draw two cards.
+SVar:TrigDraw:DB$ Draw | NumCards$ 2
+
+Oracle:Your opponents play with their hands revealed.\nWhenever you cast a spell with the same name as a card in an opponent's hand, draw two cards.

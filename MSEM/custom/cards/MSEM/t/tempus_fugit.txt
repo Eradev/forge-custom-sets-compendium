@@ -1,0 +1,10 @@
+Name:Tempus Fugit
+ManaCost:1 U
+Types:Sorcery
+
+A:SP$ DelayedTrigger | Mode$ Phase | Phase$ Upkeep | Execute$ TrigUpkeep | TriggerDescription$ At the beginning of the next upkeep, untap all noncreature permanents you control and draw a card. | SubAbility$ DBExile | SpellDescription$ At the beginning of the next upkeep, untap all noncreature permanents you control and draw a card.\nExile CARDNAME.
+SVar:TrigUpkeep:DB$ UntapAll | ValidCards$ Permanent.nonCreature+YouCtrl | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw
+SVar:DBExile:DB$ ChangeZone | Origin$ Stack | Destination$ Exile | Defined$ Self
+
+Oracle:At the beginning of the next upkeep, untap all noncreature permanents you control and draw a card.\nExile Tempus Fugit.

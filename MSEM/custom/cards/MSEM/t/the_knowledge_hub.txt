@@ -1,0 +1,10 @@
+Name:The Knowledge Hub
+ManaCost:4
+Types:Legendary Artifact
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDig | TriggerDescription$ At the beginning of your upkeep, reveal the top two cards of your library. An opponent chooses one. Put the chosen card into your hand and exile the other.
+SVar:TrigDig:DB$ Dig | DigNum$ 2 | Reveal$ True | ChangeNum$ 1 | ChangeValid$ Card | DestinationZone$ Hand | DestinationZone2$ Exile | Choser$ Player.Opponent
+
+A:AB$ ChangeZone | Cost$ 4 T | Origin$ Exile | Destination$ Hand | ChangeType$ Card.ExiledWithSource | ChangeNum$ 1 | Hidden$ True | SpellDescription$ Put a card exiled with CARDNAME into its owner's hand.
+
+Oracle:At the beginning of your upkeep, reveal the top two cards of your library. An opponent chooses one. Put the chosen card into your hand and exile the other.\n{4}, {T}: Put a card exiled with The Knowledge Hub into its owner's hand.

@@ -1,0 +1,12 @@
+Name:The Start of Something
+ManaCost:W
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ LifeGained | Execute$ TrigCounter | TriggerDescription$ At the beginning of each end step, if you gained life this turn, put a +1/+1 counter on up to one target creature.
+SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 1
+SVar:LifeGained:Count$LifeYouGainedThisTurn
+
+Oracle:At the beginning of each end step, if you gained life this turn, put a +1/+1 counter on up to one target creature.
+
+DeckHas:Ability$Counters
+DeckNeeds:Ability$LifeGain
