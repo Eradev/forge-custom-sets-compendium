@@ -1,0 +1,12 @@
+Name:Guardian of Mysteries
+ManaCost:3
+Types:Enchantment Artifact
+
+K:Flying
+
+T:Mode$ SpellCast | ValidActivatingPlayer$ You | ValidSA$ Spell.Artifact,Spell.Enchantment,Spell.Modal | TriggerZones$ Battlefield | Execute$ TrigAnimate | TriggerDescription$ Whenever you cast a cryptic spell, this enchantment artifact becomes a 4/4 Sphinx creature in addition to its other types until end of turn.
+SVar:TrigAnimate:DB$ Animate | Defined$ Self | Power$ 4 | Toughness$ 4 | Types$ Creature,Sphinx
+
+A:AB$ Scry | Cost$ 1 T | ScryNum$ 2 | SpellDescription$ Scry 2.
+
+Oracle:Flying\nWhenever you cast a cryptic spell, this enchantment artifact becomes a 4/4 Sphinx creature in addition to its other types until end of turn. (Artifacts, enchantments, and modal spells are cryptic.)\n{1}, {T}: Scry 2.

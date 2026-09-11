@@ -1,0 +1,7 @@
+Name:Search the Archives
+ManaCost:W U
+Types:Instant
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Artifact.YouOwn,Enchantment.YouOwn,Card.YouOwn+hasAbility Spell.Modal | TgtPrompt$ Select target cryptic card in your graveyard | SpellDescription$ Return target cryptic card from your graveyard to your hand.
+
+Oracle:Return target cryptic card from your graveyard to your hand. (Artifacts, enchantments, and modal spells are cryptic.)

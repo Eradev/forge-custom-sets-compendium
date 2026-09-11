@@ -1,0 +1,15 @@
+Name:Spiny Lizard
+ManaCost:2 G
+Types:Creature Plant Lizard
+PT:3/3
+
+T:Mode$ SpellCast | ValidActivatingPlayer$ You | ValidSA$ Spell.Artifact,Spell.Enchantment,Spell.Modal | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ Whenever you cast a cryptic spell, put a +1/+1 counter on this creature.
+SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigGainLife | TriggerDescription$ When CARDNAME dies, you gain life equal to its power.
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ X
+SVar:X:TriggeredCard$CardPower
+
+Oracle:Whenever you cast a cryptic spell, put a +1/+1 counter on this creature. (Artifacts, enchantments, and modal spells are cryptic.)\nWhen Spiny Lizard dies, you gain life equal to its power.
+
+DeckHas:Ability$Counters|LifeGain

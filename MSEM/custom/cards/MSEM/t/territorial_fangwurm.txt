@@ -1,0 +1,11 @@
+Name:Territorial Fangwurm
+ManaCost:3 U
+Types:Creature Snake
+PT:4/5
+
+K:Defender
+
+S:Mode$ CanAttackDefender | ValidCard$ Card.Self | CheckSVar$ CrypticCast | SVarCompare$ GE1 | Description$ This creature may attack as though it didn't have defender as long as you've cast a cryptic spell this turn.
+SVar:CrypticCast:Count$ThisTurnCast_Artifact.YouCtrl,Enchantment.YouCtrl,Instant.YouCtrl+hasAbility Spell.Modal,Sorcery.YouCtrl+hasAbility Spell.Modal
+
+Oracle:Defender\nThis creature may attack as though it didn't have defender as long as you've cast a cryptic spell this turn. (Artifacts, enchantments, and modal spells are cryptic.)

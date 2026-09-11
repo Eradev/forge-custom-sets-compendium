@@ -1,0 +1,17 @@
+Name:Observer of Aeons
+ManaCost:7
+Types:Enchantment Artifact Creature Sand
+PT:4/4
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ X | EffectZone$ All | Description$ This spell costs {1} less to cast for each artifact and/or enchantment you control.
+SVar:X:Count$Valid Artifact.YouCtrl,Enchantment.YouCtrl
+
+K:Trample
+
+A:AB$ PutCounter | Cost$ 1 Sac<1/Artifact.Other;Enchantment.Other/another cryptic permanent> | CounterType$ P1P1 | SpellDescription$ Put a +1/+1 counter on this creature.
+
+A:AB$ PutCounter | Cost$ 1 ExileFromGrave<1/Artifact;Enchantment;Card.hasAbility Spell.Modal/cryptic card> | CounterType$ P1P1 | SpellDescription$ Put a +1/+1 counter on this creature.
+
+Oracle:This spell costs {1} less to cast for each artifact and/or enchantment you control.\nTrample\n{1}, Sacrifice another cryptic permanent you control or exile a cryptic card from your graveyard: Put a +1/+1 counter on this creature. (Artifacts, enchantments, and modal spells are cryptic.)
+
+DeckHas:Ability$Counters|Sacrifice

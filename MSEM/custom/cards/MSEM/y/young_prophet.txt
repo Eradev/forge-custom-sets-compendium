@@ -1,0 +1,11 @@
+Name:Young Prophet
+ManaCost:1 W
+Types:Creature Human Wizard
+PT:2/1
+
+T:Mode$ SpellCast | ValidActivatingPlayer$ You | ValidSA$ Spell.Artifact,Spell.Enchantment,Spell.Modal | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever you cast a cryptic spell, create a 1/1 white Human creature token with lifelink.
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_human_lifelink
+
+Oracle:Whenever you cast a cryptic spell, create a 1/1 white Human creature token with lifelink. (Artifacts, enchantments, and modal spells are cryptic.)
+
+DeckHas:Ability$Token|LifeGain

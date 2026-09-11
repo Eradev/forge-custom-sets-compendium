@@ -1,0 +1,10 @@
+Name:Oasis Cattle
+ManaCost:1 G
+Types:Creature Ox
+PT:2/2
+
+T:Mode$ SpellCast | ValidActivatingPlayer$ You | ValidSA$ Spell.Artifact,Spell.Enchantment,Spell.Modal | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever you cast a cryptic spell, this creature gets +1/+1 until end of turn, then untap it.
+SVar:TrigPump:DB$ Pump | NumAtt$ +1 | NumDef$ +1 | SubAbility$ DBUntap
+SVar:DBUntap:DB$ Untap
+
+Oracle:Whenever you cast a cryptic spell, this creature gets +1/+1 until end of turn, then untap it. (Artifacts, enchantments, and modal spells are cryptic.)

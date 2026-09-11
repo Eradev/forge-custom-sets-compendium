@@ -1,0 +1,10 @@
+Name:Silent Wayfarer
+ManaCost:2 U
+Types:Creature Human Wizard
+PT:3/2
+
+K:Flash
+
+S:Mode$ CastWithFlash | ValidCard$ Artifact,Enchantment,Card.hasAbility Spell.Modal | ValidSA$ Spell | Caster$ You | Description$ You may cast cryptic spells as though they had flash.
+
+Oracle:Flash\nYou may cast cryptic spells as though they had flash. (Artifacts, enchantments, and modal spells are cryptic.)

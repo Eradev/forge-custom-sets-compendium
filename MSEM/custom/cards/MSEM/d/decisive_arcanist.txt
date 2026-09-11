@@ -1,0 +1,11 @@
+Name:Decisive Arcanist
+ManaCost:1 U
+Types:Creature Human Scout
+PT:2/1
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPlay | TriggerDescription$ When  this creature enters, you may cast target modal instant or sorcery card in your graveyard. Exile that card instead of putting it into your graveyard as it resolves.
+SVar:TrigPlay:DB$ Play | ValidTgts$ Instant.YouOwn+hasAbility Spell.Modal,Sorcery.YouOwn+hasAbility Spell.Modal | TgtZone$ Graveyard | TgtPrompt$ Select target modal instant or sorcery card in your graveyard | ValidSA$ Spell | Optional$ True | ReplaceGraveyard$ Exile | AILogic$ ReplaySpell
+
+Oracle:Flash\nWhen this creature enters, you may cast target modal instant or sorcery card in your graveyard. Exile that card instead of putting it into your graveyard as it resolves.
