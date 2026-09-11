@@ -1,0 +1,11 @@
+Name:Apotheosis
+ManaCost:4 W W
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ StoriedCount | SVarCompare$ GE10 | Execute$ TrigWin | TriggerDescription$ At the beginning of your upkeep, if you control ten or more storied permanents, you win the game. (Enchantments and legendary permanents are storied.)
+SVar:TrigWin:DB$ WinsGame | Defined$ You
+SVar:StoriedCount:Count$Valid Enchantment.YouCtrl,Permanent.Legendary+YouCtrl
+
+Oracle:At the beginning of your upkeep, if you control ten or more storied permanents, you win the game. (Enchantments and legendary permanents are storied.)
+
+DeckNeeds:Type$Enchantment|Legendary

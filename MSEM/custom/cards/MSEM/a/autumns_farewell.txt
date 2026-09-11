@@ -1,0 +1,8 @@
+Name:Autumn's Farewell
+ManaCost:1 W
+Types:Sorcery
+
+A:SP$ ChangeZone | ValidTgts$ Creature,Planeswalker | TgtPrompt$ Select target creature or planeswalker | Origin$ Battlefield | Destination$ Exile | Optional$ True | OptionalDecider$ TargetedController | SubAbility$ DBSacOthers | SpellDescription$ Choose target creature or planeswalker. Its controller may exile it. If that player doesn't, they sacrifice all other creatures and planeswalkers they control.
+SVar:DBSacOthers:DB$ SacrificeAll | ValidCards$ Creature.Other+TargetedController+YouCtrl,Planeswalker.Other+TargetedController+YouCtrl | ConditionDefined$ Targeted | ConditionPresent$ Card | ConditionCompare$ GE1
+
+Oracle:Choose target creature or planeswalker. Its controller may exile it. If that player doesn't, they sacrifice all other creatures and planeswalkers they control.

@@ -1,0 +1,24 @@
+Name:Azamir, Wayward Titan
+ManaCost:8
+Types:Legendary Planeswalker Azamir
+Loyalty:5
+
+S:Mode$ Continuous | MayPlay$ True | Affected$ Card.ExiledWith Planeswalker.Azamir+YouCtrl | AffectedZone$ Exile | Description$ You may play cards exiled with Azamir planeswalkers.
+
+A:AB$ RepeatEach | Cost$ AddCounter<2/LOYALTY> | Planeswalker$ True | RepeatPlayers$ Player | RepeatSubAbility$ DBSearchExile | SubAbility$ DBShuffleAll | SpellDescription$ Search each player's library for a card and exile it. Shuffle each library searched this way.
+SVar:DBSearchExile:DB$ ChangeZone | Origin$ Library | Destination$ Exile | ChangeType$ Card | ChangeNum$ 1 | DefinedPlayer$ Player.IsRemembered | Chooser$ Player.IsRemembered
+SVar:DBShuffleAll:DB$ RepeatEach | RepeatPlayers$ Player | RepeatSubAbility$ DBShuffle
+SVar:DBShuffle:DB$ Shuffle | Defined$ Player.IsRemembered
+
+A:AB$ ChooseCard | Cost$ SubCounter<3/LOYALTY> | Planeswalker$ True | Defined$ Opponent | Choices$ Permanent | ChooseEach$ Artifact & Battle & Creature & Enchantment & Land & Planeswalker | ControlledByPlayer$ Chooser | Mandatory$ True | Reveal$ True | SubAbility$ DBExileChosen | SpellDescription$ Each opponent chooses a permanent they control for each permanent type, then exiles those permanents.
+SVar:DBExileChosen:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | Defined$ ChosenCard | SubAbility$ DBCleanupMinus3
+SVar:DBCleanupMinus3:DB$ Cleanup | ClearChosenCard$ True
+
+A:AB$ ChangeZoneAll | Cost$ SubCounter<8/LOYALTY> | Planeswalker$ True | Ultimate$ True | Origin$ Sideboard | Destination$ Exile | ChangeType$ Card.OppOwn | SubAbility$ DBEffect | SpellDescription$ Exile all cards your opponents own from outside the game. Until end of turn, you may cast spells without paying their mana costs and you may play cards exiled with Azamir planeswalkers.
+SVar:DBEffect:DB$ Effect | StaticAbilities$ STCastFree,STPlayExile | Duration$ EndOfTurn
+SVar:STCastFree:Mode$ Continuous | Affected$ Card.nonLand+YouOwn | MayPlay$ True | MayPlayWithoutManaCost$ True | AffectedZone$ Hand | Description$ Until end of turn, you may cast spells without paying their mana costs.
+SVar:STPlayExile:Mode$ Continuous | MayPlay$ True | MayPlayWithoutManaCost$ True | Affected$ Card.ExiledWith Planeswalker.Azamir+YouCtrl | AffectedZone$ Exile | Description$ You may play cards exiled with Azamir planeswalkers.
+
+Oracle:You may play cards exiled with Azamir planeswalkers.\n[+2]: Search each player's library for a card and exile it. Shuffle each library searched this way.\n[-3]: Each opponent chooses a permanent they control for each permanent type, then exiles those permanents.\n[-8]: Exile all cards your opponents own from outside the game. Until end of turn, you may cast spells without paying their mana costs and you may play cards exiled with Azamir planeswalkers.
+
+SVar:PlayMain1:TRUE

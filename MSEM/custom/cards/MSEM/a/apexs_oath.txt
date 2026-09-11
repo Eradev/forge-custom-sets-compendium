@@ -1,0 +1,16 @@
+Name:Apex's Oath
+ManaCost:1 G G
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ OppCreatures | SVarCompare$ GTYourCreatures | Execute$ TrigOath | TriggerDescription$ At the beginning of your upkeep, if an opponent controls more creatures than you, you may reveal the top seven cards of your library. Target opponent chooses a creature card revealed this way. Put that card onto the battlefield, and the rest into your graveyard.
+
+SVar:TrigOath:DB$ PeekAndReveal | Defined$ You | PeekAmount$ 7 | Reveal$ True | RememberRevealed$ True | Optional$ True | SubAbility$ DBChoose
+SVar:DBChoose:DB$ ChooseCard | ValidTgts$ Opponent | Choices$ Creature.IsRemembered | ChoiceZone$ Library | Amount$ 1 | Mandatory$ True | SubAbility$ DBToBattlefield
+SVar:DBToBattlefield:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | Defined$ ChosenCard | SubAbility$ DBRestGrave
+SVar:DBRestGrave:DB$ ChangeZoneAll | ChangeType$ Card.IsRemembered | Origin$ Library | Destination$ Graveyard | Shuffle$ False | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:OppCreatures:PlayerCountOpponents$HighestValid Creature.YouCtrl
+SVar:YourCreatures:Count$Valid Creature.YouCtrl
+
+Oracle:At the beginning of your upkeep, if an opponent controls more creatures than you, you may reveal the top seven cards of your library. Target opponent chooses a creature card revealed this way. Put that card onto the battlefield, and the rest into your graveyard.
