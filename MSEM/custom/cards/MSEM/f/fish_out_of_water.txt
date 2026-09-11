@@ -1,0 +1,10 @@
+Name:Fish Out of Water
+ManaCost:4 U U
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this enchantment enters, exile the top four cards of each library.
+SVar:TrigExile:DB$ Dig | Defined$ Player | DigNum$ 4 | ChangeNum$ All | DestinationZone$ Exile
+
+S:Mode$ Continuous | Affected$ Card.ExiledWithSource+nonLand | AffectedZone$ Exile | Condition$ PlayerTurn | MayPlay$ True | MayPlayLimit$ 1 | MayPlayWithoutManaCost$ True | Description$ During each of your turns, you may cast a card exiled with this enchantment without paying its mana cost.
+
+Oracle:When this enchantment enters, exile the top four cards of each library.\nDuring each of your turns, you may cast a card exiled with this enchantment without paying its mana cost.
