@@ -42,10 +42,9 @@ Video Horror System (VHS)             -  97% (83/86)
 Nangjiao In Bloom (NJB)               -  42% (126/297)
   Missing cards:
     * Diao of the Opal Infantry
-Riddles of Revio (RVO)                -  83% (226/272)
+Riddles of Revio (RVO)                -  88% (242/272)
   Missing cards:
     * Every card that references the supertype Riddle.
-    * Every card that references modal spells. (Cryptic, etc.)
     * Every card that references "reselect modes".
     * Every card that has Align X.
     * Ancient Tome
@@ -61,7 +60,10 @@ Worlds Away (WAY)                     -  96% (254/262)
     * Syzygy Privateer
     * Verdant Renewal
     * Zhedina Coastguard
-Storytime (101)                       -  14% (15/101)
+Storytime (101)                       -  98% (99/101)
+  Missing cards:
+    * Arpechian Champion
+    * Jara Champion
 Kaleidoscope (KLC)                    -  100%
 Path of Shadows (PSA)                 -  99% (208/209)
   Missing cards:
@@ -96,6 +98,7 @@ Examples on how to implement custom keywords and mechanisms.
 * [Ascend](#ascend)
 * [Art of War](#art-of-war)
 * [Bleed](#bleed)
+* [Cryptic](#cryptic)
 * [Deception](#deception)
 * [Fabled](#fabled)
 * [Fleeting](#fleeting)
@@ -112,6 +115,7 @@ Examples on how to implement custom keywords and mechanisms.
 * [Paranoia](#paranoia)
 * [Rerun](#rerun)
 * [Showcase](#showcase)
+* [Storied](#storied)
 * [Torment](#torment)
 * [Wanderlust](#wanderlust)
 
@@ -180,6 +184,24 @@ Implementation:
 ```text
 S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 R | CheckSVar$ X | SVarCompare$ GE1 | Description$ Bleed {2}{R} (You may cast this spell for its bleed cost if an opponent has lost life this turn.)
 SVar:X:Count$LifeOppsLostThisTurn
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Cryptic
+
+Cryptic is defined as:
+
+```text
+(Artifacts, enchantments, and modal spells are cryptic.)
+```
+
+Implementation:
+
+```text
+ValidSA$ Spell.Artifact,Spell.Enchantment,Spell.Modal
+
+ValidCard$ Artifact,Enchantment,Card.hasAbility Spell.Modal
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
@@ -506,6 +528,24 @@ SVar:DBExile:DB$ ChangeZone | ConditionCheckSVar$ AltCostPaid | Defined$ Self | 
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:AltCostPaid:Count$AltCost.1.0
 ```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Storied
+
+Storied in defined as:
+
+```text
+Enchantments and legendary permanents are storied.
+```
+
+Implementation:
+
+```text
+SVar:Storied:Count$Valid Enchantment.YouCtrl,Permanent.Legendary+YouCtrl
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
 
 ### Torment
 
