@@ -1,0 +1,9 @@
+Name:Unbound Academic
+ManaCost:3 U
+Types:Creature Human Wizard
+PT:2/4
+
+T:Mode$ DamageDone | ValidSource$ Wizard.YouCtrl | ValidTarget$ Player | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever a Wizard you control deals damage to a player, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Whenever a Wizard you control deals damage to a player, draw a card.

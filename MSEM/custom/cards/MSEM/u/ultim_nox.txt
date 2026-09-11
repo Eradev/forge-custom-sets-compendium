@@ -1,0 +1,9 @@
+Name:Ultim Nox
+ManaCost:2 B B
+Types:Sorcery
+
+S:Mode$ CantBeCast | ValidCard$ Card.Self | EffectZone$ All | IsPresent$ Creature.YouCtrl | PresentCompare$ EQ0 | Description$ Cast this spell only if you control a creature.
+
+A:SP$ ChangeZoneAll | ChangeType$ Creature | Origin$ Battlefield | Destination$ Exile | SpellDescription$ Exile all creatures.
+
+Oracle:Cast this spell only if you control a creature.\nExile all creatures.
