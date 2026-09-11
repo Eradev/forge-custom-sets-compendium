@@ -1,6 +1,7 @@
 Name:Aether Crosser
 ManaCost:2
 Types:Artifact Vehicle
+PT:2/2
 
 K:Flying
 

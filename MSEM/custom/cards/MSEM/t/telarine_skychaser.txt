@@ -1,6 +1,7 @@
 Name:Telarine Skychaser
 ManaCost:4
 Types:Artifact Vehicle
+PT:4/4
 
 K:Flying
 

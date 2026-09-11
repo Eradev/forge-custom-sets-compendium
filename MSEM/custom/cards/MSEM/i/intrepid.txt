@@ -1,6 +1,7 @@
 Name:Intrepid
 ManaCost:3
 Types:Legendary Artifact Vehicle
+PT:3/3
 
 K:Flying
 
