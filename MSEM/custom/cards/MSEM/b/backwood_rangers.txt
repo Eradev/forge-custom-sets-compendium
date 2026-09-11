@@ -1,0 +1,10 @@
+Name:Backwood Rangers
+ManaCost:1 G G
+Types:Creature Human Scout Ranger
+PT:3/3
+
+S:Mode$ Continuous | Affected$ Land.Forest+Basic+YouCtrl | AddAbility$ ABUntap | Description$ Basic Forests you control have "{G}, {T}: Untap target attacking creature and remove it from combat."
+SVar:ABUntap:AB$ Untap | Cost$ G T | ValidTgts$ Creature.attacking | TgtPrompt$ Select target attacking creature | SubAbility$ DBRemoveCombat | Activator$ Player | SpellDescription$ Untap target attacking creature and remove it from combat.
+SVar:DBRemoveCombat:DB$ RemoveFromCombat | Defined$ Targeted
+
+Oracle:Basic Forests you control have "{G}, {T}: Untap target attacking creature and remove it from combat."

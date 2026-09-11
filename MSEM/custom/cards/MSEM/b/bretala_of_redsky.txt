@@ -1,0 +1,16 @@
+Name:Bretala of Redsky
+ManaCost:4 R R R
+Types:Legendary Creature Dragon
+PT:7/6
+
+K:Flying
+
+K:Trample
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigAnimate | TriggerZones$ Battlefield | TriggerDescription$ Whenever CARDNAME attacks, she gains double strike until end of turn unless defending player sacrifices a creature.
+SVar:TrigAnimate:DB$ Animate | UnlessCost$ Sac<1/Creature> | UnlessPayer$ DefendingPlayer | staticAbilities$ STDoubleStrike
+SVar:STDoubleStrike:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Double Strike | Description$ CARDNAME has double strike.
+
+Oracle:Flying, trample\nWhenever Bretala of Redsky attacks, she gains double strike until end of turn unless defending player sacrifices a creature.
+
+SVar:HasAttackEffect:TRUE
