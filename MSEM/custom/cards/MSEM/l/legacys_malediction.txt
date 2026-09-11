@@ -1,0 +1,12 @@
+Name:Legacy's Malediction
+ManaCost:2 U
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigLoot | TriggerDescription$ At the beginning of your end step, draw a card, then discard a card.
+SVar:TrigLoot:DB$ Draw | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Mode$ TgtChoose
+
+T:Mode$ SpellCast | ValidCard$ Instant.cmcGE5,Card.hasKeywordFlash+cmcGE5 | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigCounter | TriggerDescription$ Whenever you cast a spell with mana value 5 or greater, if it's an instant or has flash, you may counter target spell.
+SVar:TrigCounter:DB$ Counter | TargetType$ Spell | ValidTgts$ Card | TgtPrompt$ Select target spell
+
+Oracle:At the beginning of your end step, draw a card, then discard a card.\nWhenever you cast a spell with mana value 5 or greater, if it's an instant or has flash, you may counter target spell.

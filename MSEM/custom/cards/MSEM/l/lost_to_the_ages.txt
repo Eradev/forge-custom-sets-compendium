@@ -1,0 +1,8 @@
+Name:Lost to the Ages
+ManaCost:G
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Artifact.cmcLEX,Enchantment.cmcLEX | TgtPrompt$ Select target artifact or enchantment with mana value less than or equal to the number of basic lands you control | Origin$ Battlefield | Destination$ Library | LibraryPosition$ -1 | SpellDescription$ Put target artifact or enchantment with mana value less than or equal to the number of basic lands you control on the bottom of its owner's library.
+SVar:X:Count$Valid Land.Basic+YouCtrl
+
+Oracle:Put target artifact or enchantment with mana value less than or equal to the number of basic lands you control on the bottom of its owner's library.
