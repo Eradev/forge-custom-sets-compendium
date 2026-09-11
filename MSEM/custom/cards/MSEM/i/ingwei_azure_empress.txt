@@ -25,9 +25,9 @@ A:AB$ Scry | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | SubAbility$ DBDr
 SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ IsRenaissance | ConditionSVarCompare$ EQ1
 SVar:IsRenaissance:Count$ValidCommand Effect.YouCtrl+namedGolden Age/LimitMax.1
 
-A:AB$ Branch | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | BranchConditionSVar$ IsRenaissance | BranchConditionSVarCompare$ EQ1 | TrueSubAbility$ DBBounce | FalseSubAbility$ DBBounceCmc | SpellDescription$ Return target nonland permanent to its owner's hand if its mana value is 3 or less or if you're in a renaissance.
-SVar:DBBounce:DB$ ChangeZone | Origin$ Battlefield | Destination$ Hand | TgtPrompt$ Choose target nonland permanent | ValidTgts$ Permanent.nonLand
-SVar:DBBounceCmc:DB$ ChangeZone | Origin$ Battlefield | Destination$ Hand | TgtPrompt$ Choose target nonland permanent with mana value 3 or less | ValidTgts$ Permanent.nonLand+cmcLE3
+A:AB$ Branch | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Permanent.nonLand | TgtPrompt$ Choose target nonland permanent | BranchConditionSVar$ IsRenaissance | BranchConditionSVarCompare$ EQ1 | TrueSubAbility$ DBBounce | FalseSubAbility$ DBBounceCmc | SpellDescription$ Return target nonland permanent to its owner's hand if its mana value is 3 or less or if you're in a renaissance.
+SVar:DBBounce:DB$ ChangeZone | Origin$ Battlefield | Destination$ Hand | Defined$ Targeted
+SVar:DBBounceCmc:DB$ ChangeZone | Origin$ Battlefield | Destination$ Hand | Defined$ Targeted | ConditionDefined$ Targeted | ConditionPresent$ Card.cmcLE3 | ConditionCompare$ EQ1
 
 A:AB$ Token | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | Ultimate$ True | TokenScript$ u_8_8_kraken | SubAbility$ DBAddTurn | SpellDescription$ Create two 8/8 blue Kraken creature tokens. If you're in a renaissance, take an extra turn after this one.
 SVar:DBAddTurn:DB$ AddTurn | NumTurns$ 1 | ConditionCheckSVar$ IsRenaissance | ConditionSVarCompare$ EQ1
