@@ -1,0 +1,11 @@
+Name:In Memoriam
+ManaCost:2 W W
+Types:Sorcery
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ 2 | EffectZone$ All | IsPresent$ Enchantment.YouOwn,Permanent.Legendary+YouOwn | PresentZone$ Graveyard | Description$ This spell costs {2} less to cast if there's a storied card in your graveyard. (Enchantments and legendary cards are storied.)
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Enchantment,Permanent.Legendary | ChangeNum$ 1 | SpellDescription$ Search your library for a storied card, reveal it, put it into your hand, then shuffle.
+
+Oracle:This spell costs {2} less to cast if there's a storied card in your graveyard. (Enchantments and legendary cards are storied.)\nSearch your library for a storied card, reveal it, put it into your hand, then shuffle.
+
+DeckNeeds:Type$Enchantment|Legendary
