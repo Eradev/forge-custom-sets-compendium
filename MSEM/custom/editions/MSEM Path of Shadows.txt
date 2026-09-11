@@ -226,7 +226,6 @@ Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 2 c_1_1_samurai
 3 c_2_2_spirit
 4 g_1_1_snake_poisonous
-5 c_a_nidohagane_warfans_equipment
 
 [other]
 6 emblem_hirukari_daughter_of_the_sun
