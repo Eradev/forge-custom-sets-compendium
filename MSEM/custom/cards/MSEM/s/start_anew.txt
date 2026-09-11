@@ -1,0 +1,11 @@
+Name:Start Anew
+ManaCost:2 U
+Types:Sorcery
+
+A:SP$ Branch | BranchConditionSVar$ HandCount | BranchConditionSVarCompare$ EQ0 | BranchConditionSVar2$ YardCount | BranchConditionSVarCompare2$ EQ0 | TrueSubAbility$ DBDrawSeven | FalseSubAbility$ DBDrawTwo | SpellDescription$ Draw two cards. If you have no cards in hand and there are no cards in your graveyard, draw seven cards instead.
+SVar:DBDrawSeven:DB$ Draw | NumCards$ 7
+SVar:DBDrawTwo:DB$ Draw | NumCards$ 2
+SVar:HandCount:Count$ValidHand Card.YouOwn
+SVar:YardCount:Count$ValidGraveyard Card.YouOwn
+
+Oracle:Draw two cards. If you have no cards in hand and there are no cards in your graveyard, draw seven cards instead.

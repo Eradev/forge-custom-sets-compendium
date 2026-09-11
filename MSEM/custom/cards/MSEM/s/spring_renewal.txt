@@ -1,0 +1,11 @@
+Name:Spring Renewal
+ManaCost:1 G G
+Types:Sorcery
+
+A:SP$ Sacrifice | Defined$ You | Amount$ SacX | SacValid$ Land | RememberSacrificed$ True | Optional$ True | SubAbility$ DBSearch | SpellDescription$ Sacrifice any number of lands. Search your library for that many basic land cards, put them onto the battlefield, then shuffle.
+SVar:DBSearch:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Land.Basic | ChangeNum$ ShiftX | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:SacX:Count$Valid Land.YouCtrl
+SVar:ShiftX:Remembered$Amount
+
+Oracle:Sacrifice any number of lands. Search your library for that many basic land cards, put them onto the battlefield, then shuffle.
