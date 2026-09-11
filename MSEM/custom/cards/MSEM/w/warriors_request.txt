@@ -1,0 +1,12 @@
+Name:Warrior's Request
+ManaCost:3 R R
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Hand | Destination$ Battlefield | ChangeType$ Creature.Dragon | ChangeNum$ 1 | Optional$ True | RememberChanged$ True | SubAbility$ DBPump | SpellDescription$ You may put a Dragon creature card from your hand onto the battlefield. That creature gains haste until end of turn. Return it to its owner's hand at the beginning of the next end step.
+SVar:DBPump:DB$ Pump | Defined$ Remembered | KW$ Haste | SubAbility$ DBAnimate
+SVar:DBAnimate:DB$ Animate | Defined$ Remembered | AtEOT$ Hand | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:You may put a Dragon creature card from your hand onto the battlefield. That creature gains haste until end of turn. Return it to its owner's hand at the beginning of the next end step.
+
+DeckNeeds:Type$Dragon

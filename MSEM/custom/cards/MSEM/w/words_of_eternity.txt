@@ -1,0 +1,10 @@
+Name:Words of Eternity
+ManaCost:3 B B
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Card | ChangeNum$ 1 | Shuffle$ True | SpellDescription$ Search your library for a card, put that card into your hand, then shuffle.
+
+T:Mode$ SpellCast | ValidCard$ Card.cmcGE5 | ValidActivatingPlayer$ You | TriggerZones$ Graveyard | OptionalDecider$ You | Execute$ TrigPlay | TriggerDescription$ Whenever you cast a spell with mana value 5 or greater, you may cast this card from your graveyard without paying its mana cost. If you do, exile it instead of putting it into your graveyard as it resolves.
+SVar:TrigPlay:DB$ Play | Defined$ Self | ValidSA$ Spell | WithoutManaCost$ True | ReplaceGraveyard$ Exile | AILogic$ ReplaySpell
+
+Oracle:Search your library for a card, put that card into your hand, then shuffle.\nWhenever you cast a spell with mana value 5 or greater, you may cast this card from your graveyard without paying its mana cost. If you do, exile it instead of putting it into your graveyard as it resolves.

@@ -1,0 +1,15 @@
+Name:Warden of the Dead
+ManaCost:2 B B
+Types:Creature Demon
+PT:4/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this creature enters, you draw a card and you lose 1 life.
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigDie | TriggerDescription$ When this creature dies, conjure three cards named CARDNAME and shuffle them into your main library. For the rest of the game, you may cast spells named CARDNAME without paying their mana costs.
+SVar:TrigDie:DB$ MakeCard | Conjure$ True | Name$ Warden of the Dead | Zone$ Library | Amount$ 3 | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | StaticAbilities$ STFreeCast | Duration$ Permanent | Stackable$ False
+SVar:STFreeCast:Mode$ Continuous | Affected$ Card.namedWarden of the Dead+YouOwn | MayPlay$ True | MayPlayWithoutManaCost$ True | AffectedZone$ Hand,Graveyard,Library,Exile | Description$ For the rest of the game, you may cast spells named Warden of the Dead without paying their mana costs.
+
+Oracle:When this creature enters, you draw a card and you lose 1 life.\nWhen this creature dies, conjure three cards named Warden of the Dead and shuffle them into your main library. For the rest of the game, you may cast spells named Warden of the Dead without paying their mana costs.

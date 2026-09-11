@@ -1,0 +1,9 @@
+Name:Welcome Return
+ManaCost:B B
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Graveyard | Destination$ Battlefield | TriggerZones$ Battlefield | ValidCard$ Creature.YouCtrl | Execute$ TrigDrain | TriggerDescription$ Whenever a creature you control enters from a graveyard, target opponent loses life equal to its power.
+SVar:TrigDrain:DB$ LoseLife | ValidTgts$ Opponent | TgtPrompt$ Select target opponent | LifeAmount$ X
+SVar:X:TriggeredCard$CardPower
+
+Oracle:Whenever a creature you control enters from a graveyard, target opponent loses life equal to its power.
