@@ -1,0 +1,10 @@
+Name:Daisy, the Heart of Chasmek
+ManaCost:G
+Types:Legendary Creature Human
+PT:1/1
+
+S:Mode$ Continuous | Affected$ Creature.Other+YouCtrl | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Land.YouCtrl | PresentCompare$ GE4 | Description$ Other creatures you control get +1/+1 as long as you control four or more lands.
+
+A:AB$ PumpAll | Cost$ G Sac<1/CARDNAME/NICKNAME> | ValidCards$ Creature.YouCtrl+basePowerLE1 | KW$ Indestructible | SpellDescription$ Creatures you control with base power 1 or less gain indestructible until end of turn.
+
+Oracle:Other creatures you control get +1/+1 as long as you control four or more lands.\n{G}, Sacrifice Daisy: Creatures you control with base power 1 or less gain indestructible until end of turn.

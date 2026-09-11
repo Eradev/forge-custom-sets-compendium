@@ -1,0 +1,11 @@
+Name:Daring Skythief
+ManaCost:W
+Types:Creature Human Pirate
+PT:2/1
+
+T:Mode$ Crewed | ValidCrew$ Card.Self | Execute$ TrigFlying | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature crews a Vehicle, that Vehicle gains flying until end of turn.
+SVar:TrigFlying:DB$ Pump | Defined$ TriggeredCardLKICopy | KW$ Flying
+
+Oracle:Whenever this creature crews a Vehicle, that Vehicle gains flying until end of turn.
+
+DeckHints:Type$Vehicle
