@@ -3,7 +3,7 @@ ManaCost:U B R
 Types:Enchantment
 
 T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ Player | TriggerZones$ Battlefield | CheckSVar$ HateFlag | SVarCompare$ GE1 | Execute$ TrigEffect | TriggerDescription$ Hate — At the beginning of each end step, if an opponent lost life from a source other than combat damage this turn, you gain 2 life and create a 2/2 red Soldier creature token with first strike named Royal Guard.
-SVar:TrigEffect:DB$ GainLife | Defined$ You | LifeAmount$ 2 | SubAbility$ DBToken
+SVar:TrigEffect:DB$ GainLife | LifeAmount$ 2 | SubAbility$ DBToken
 SVar:DBToken:DB$ Token | TokenScript$ royal_guard | LockTokenScript$ True
 
 SVar:HateFlag:PlayerCountRegisteredOpponents$LifeLostThisTurn/Minus.OppCombatDmg

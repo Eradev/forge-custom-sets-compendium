@@ -4,7 +4,7 @@ Types:Enchantment Saga
 
 K:Chapter:4:DBI,DBII,DBIII,DBIV
 
-SVar:DBI:DB$ GainLife | Defined$ You | LifeAmount$ X | SpellDescription$ You gain 3 life. If you have two or more opponents, intead you gain 3 life for each opponent.
+SVar:DBI:DB$ GainLife | LifeAmount$ X | SpellDescription$ You gain 3 life. If you have two or more opponents, intead you gain 3 life for each opponent.
 SVar:X:SVar$NumOpps/Times.3
 SVar:NumOpps:PlayerCountOpponents$Amount
 

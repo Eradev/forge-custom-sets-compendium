@@ -6,7 +6,7 @@ PT:2/3
 K:Lifelink
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigLife | TriggerDescription$ When this creature enters, you gain 3 life.
-SVar:TrigLife:DB$ GainLife | Defined$ You | LifeAmount$ 3
+SVar:TrigLife:DB$ GainLife | LifeAmount$ 3
 
 A:AB$ ChangeZone | Named$ Meditate | Cost$ 1 W | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
 

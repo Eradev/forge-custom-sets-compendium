@@ -8,6 +8,6 @@ SVar:DBToken:DB$ Token | TokenScript$ w_1_1_spirit_flying | SpellDescription$ Cr
 
 SVar:DBExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | TgtPrompt$ Choose target nonland permanent with mana value 1 or less | ValidTgts$ Permanent.nonLand+cmcLE1 | SpellDescription$ Exile target nonland permanent with mana value 1 or less.
 
-SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 3 | SpellDescription$ You gain 3 life.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 3 | SpellDescription$ You gain 3 life.
 
 Oracle:Choose three. You may choose the same mode more than once.\n• Create a 1/1 white Spirit creature token with flying.\n• Exile target nonland permanent with mana value 1 or less.\n• You gain 3 life.

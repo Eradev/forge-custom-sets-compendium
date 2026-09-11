@@ -6,7 +6,7 @@ PT:4/4
 T:Mode$ CounterRemoved | TriggerZones$ Battlefield | ValidCard$ Creature.YouOwn.inGraveyard | CounterType$ REPAIR | Execute$ TrigPay | TriggerDescription$ Whenever a repair counter is removed from a creature card in your graveyard, you may pay {WB}. If you do, target player loses 1 life and you gain 1 life.
 SVar:TrigPay:DB$ ImmediateTrigger | UnlessCost$ WB | UnlessPayer$ You | UnlessSwitched$ True | Execute$ TrigDrain
 SVar:TrigDrain:DB$ LoseLife | Defined$ Targeted | LifeAmount$ 1 | SubAbility$ DBGainLife | ValidTgts$ Player | TgtPrompt$ Choose target player
-SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 1
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 1
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigRepair | TriggerDescription$ When CARDNAME dies, put four repair counters on it.
 SVar:TrigRepair:DB$ PutCounter | Defined$ TriggeredCard | CounterType$ REPAIR | CounterNum$ 4

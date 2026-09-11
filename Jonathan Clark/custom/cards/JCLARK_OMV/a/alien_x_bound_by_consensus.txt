@@ -19,6 +19,6 @@ SVar:TrigVote:DB$ Vote | Defined$ Player | Choices$ DBBellicus,DBSerena | VoteTi
 SVar:DBBellicus:DB$ Effect | Duration$ UntilEndOfTurn | StaticAbilities$ STCanAttack | SpellDescription$ Bellicus
 SVar:STCanAttack:Mode$ CanAttackDefender | ValidCard$ Card.EffectSource | Description$ NICKNAME can attack this turn as though it didn't have defender.
 
-SVar:DBSerena:DB$ GainLife | Defined$ You | LifeAmount$ 5 | SpellDescription$ Serena
+SVar:DBSerena:DB$ GainLife | LifeAmount$ 5 | SpellDescription$ Serena
 
 Oracle:Defender, flying, hexproof, omnishuffle 5 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 5 life.)\nWill of the Council — At the beginning of your upkeep, starting with you, each player votes for Bellicus or Serena. If Bellicus gets more votes, Alien X can attack this turn as though it didn't have defender. If Serena gets more votes or the vote is tied, gain 5 life.

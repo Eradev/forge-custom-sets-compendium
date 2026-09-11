@@ -3,7 +3,7 @@ ManaCost:1 W W
 Types:Creature Human Soldier
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigLife | TriggerDescription$ When this creature enters, you gain 3 life.
-SVar:TrigLife:DB$ GainLife | Defined$ You | LifeAmount$ 3
+SVar:TrigLife:DB$ GainLife | LifeAmount$ 3
 
 K:Persist
 

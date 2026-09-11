@@ -12,7 +12,7 @@ SVar:DBDownload:DB$ ChangeZone | Defined$ Self | Hidden$ True | Origin$ Exile | 
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.OppCtrl | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ Whenever a creature enters under an opponent's control, they lose 1 life and you gain 1 life.
 SVar:TrigLoseLife:DB$ LoseLife | Defined$ TriggeredCardController | LifeAmount$ 1 | SubAbility$ DBGainLife
-SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 1
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 1
 
 Oracle:When this creature enters, you may upload another target creature. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)\nWhenever a creature enters under an opponent's control, they lose 1 life and you gain 1 life.
 

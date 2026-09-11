@@ -4,6 +4,6 @@ Types:Creature Wookiee Hunter
 PT:4/5
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.OppCtrl+counters_GE1_BOUNTY | TriggerZones$ Battlefield | Execute$ TrigGainLife | TriggerDescription$ Bounty — Whenever a creature an opponent controls with a bounty counter on it dies, you gain 3 life.
-SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 3 | Defined$ You
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 3
 
 Oracle:Bounty — Whenever a creature an opponent controls with a bounty counter on it dies, you gain 3 life.

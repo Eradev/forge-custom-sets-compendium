@@ -10,7 +10,7 @@ SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ CardsThem | ConditionSVarCompare$ GTC
 SVar:CardsThem:PlayerCountOpponents$HighestCardsInHand
 SVar:CardsYou:Count$CardsInYourHand
 
-SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 4 | ConditionCheckSVar$ LifeThem | ConditionSVarCompare$ GTLifeYou
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 4 | ConditionCheckSVar$ LifeThem | ConditionSVarCompare$ GTLifeYou
 SVar:LifeThem:PlayerCountOpponents$HighestLifeTotal
 SVar:LifeYou:Count$YourLifeTotal
 

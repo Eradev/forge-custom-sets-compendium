@@ -10,6 +10,6 @@ SVar:DBDestroy1:DB$ Destroy | ValidTgts$ Planeswalker | TgtPrompt$ Select target
 
 SVar:DBDestroy2:DB$ Destroy | ValidTgts$ Creature.nonArtifact | TgtPrompt$ Select target nonartifact creature | SpellDescription$ Destroy target nonartifact creature.
 
-SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 5 | SpellDescription$ Gain 5 life.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 5 | SpellDescription$ Gain 5 life.
 
 Oracle:Choose two -\n• Counter target spell unless its controller pays 5 life.\n• Destroy target planeswalker.\n• Destroy target nonartifact creature.\n• Gain 5 life.
