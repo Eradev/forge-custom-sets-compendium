@@ -1,0 +1,10 @@
+Name:Crystal Garden
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ Any | RestrictValid$ nonSpell,Spell.nonCreature | SpellDescription$ Add one mana of any color. You can't spend this mana to cast a creature spell.
+
+Oracle:This land enters tapped.\n{T}: Add one mana of any color. You can't spend this mana to cast a creature spell.
