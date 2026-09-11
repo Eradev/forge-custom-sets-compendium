@@ -1,0 +1,10 @@
+Name:Embrace Madness
+ManaCost:B
+Types:Sorcery
+
+A:SP$ Effect | Triggers$ DiscardTrig | SpellDescription$ Whenever you discard a card this turn, add {B}. Then you may cast that card. (You still pay its costs.)
+SVar:DiscardTrig:Mode$ Discarded | ValidPlayer$ You | ValidCard$ Card | TriggerZones$ Command | Execute$ TrigMana | TriggerDescription$ Whenever you discard a card this turn, add {B}. Then you may cast that card.
+SVar:TrigMana:DB$ Mana | Produced$ B | SubAbility$ DBPlay
+SVar:DBPlay:DB$ Play | Defined$ TriggeredCard | ValidSA$ Spell | Optional$ True | Amount$ All
+
+Oracle:Whenever you discard a card this turn, add {B}. Then you may cast that card. (You still pay its costs.)

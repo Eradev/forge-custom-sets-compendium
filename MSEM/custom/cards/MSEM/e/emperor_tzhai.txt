@@ -1,0 +1,13 @@
+Name:Emperor Tzhai
+ManaCost:B R G W
+Types:Legendary Planeswalker Tzhai
+Loyalty:4
+
+A:AB$ DamageAll | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | ValidCards$ Creature.!YouCtrl,Planeswalker.!YouCtrl | ValidPlayers$ Player.Opponent | NumDmg$ 1 | ValidDescription$ each creature, planeswalker, and opponent you don't control | SpellDescription$ CARDNAME deals 1 damage to each creature, planeswalker, and opponent you don't control.
+
+A:AB$ Effect | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | TgtPrompt$ Select target creature | RememberObjects$ Targeted | ForgetOnMoved$ Battlefield | StaticAbilities$ STCantAttack | Duration$ UntilHostLeavesPlay | IsCurse$ True | SpellDescription$ Target creature can't attack you or CARDNAME until CARDNAME leaves the battlefield.
+SVar:STCantAttack:Mode$ CantAttack | ValidCard$ Card.IsRemembered | Target$ You,Card.EffectSource | Description$ That creature can't attack you or EFFECTSOURCE.
+
+A:AB$ ControlPlayer | Cost$ SubCounter<10/LOYALTY> | Planeswalker$ True | Ultimate$ True | ValidTgts$ Player | TgtPrompt$ Select target player | SpellDescription$ You control target player.
+
+Oracle:[+1]: Emperor Tzhai deals 1 damage to each creature, planeswalker, and opponent you don't control.\n[0]: Target creature can't attack you or Emperor Tzhai until Emperor Tzhai leaves the battlefield.\n[-10]: You control target player.
