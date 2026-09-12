@@ -7,7 +7,7 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.S
 SVar:TrigDamage:DB$ DamageAll | ValidCards$ Creature | NumDmg$ 3
 
 A:AB$ Sacrifice | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | SacValid$ Land | Optional$ True | RememberSacrificed$ True | SubAbility$ DBToken | SpellDescription$ You may sacrifice a land. If you do, create an X/X red Hellion creature token, where X is NICKNAME's loyalty.
-SVar:DBToken:DB$ Token | TokenAmount$ 1 | TokenOwner$ You | TokenName$ Hellion | TokenTypes$ Creature,Hellion | TokenColors$ Red | TokenPower$ X | TokenToughness$ X | ConditionDefined$ Remembered | ConditionPresent$ Card | SubAbility$ DBCleanup
+SVar:DBToken:DB$ Token | TokenName$ r_x_x_hellion | TokenColors$ Red | TokenPower$ X | TokenToughness$ X | ConditionDefined$ Remembered | ConditionPresent$ Card | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:X:Count$CardLoyalty
 
