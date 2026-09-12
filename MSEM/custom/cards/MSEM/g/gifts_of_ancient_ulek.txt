@@ -4,8 +4,6 @@ Types:Enchantment Aura
 
 K:Enchant:Creature
 
-SVar:AttachAILogic:Pump
-
 S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 2 | AddToughness$ 2 | Description$ Enchanted creature gets +2/+2.
 
 T:Mode$ DamageDone | ValidSource$ Creature.YouCtrl+enchanted | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigChange | OptionalDecider$ You | TriggerDescription$ Whenever an enchanted creature you control deals combat damage to a player, you may put a permanent card from your graveyard on top of your library.
@@ -13,6 +11,6 @@ SVar:TrigChange:DB$ ChangeZone | ValidTgts$ Permanent | TargetsWithDefinedContro
 
 DeckHints:Type$Aura
 
-Oracle:Enchant creature\n
-Enchanted creature gets +2/+2.\n
-Whenever an enchanted creature you control deals combat damage to a player, you may put a permanent card from your graveyard on top of your library.
+Oracle:Enchant creature\nEnchanted creature gets +2/+2.\nWhenever an enchanted creature you control deals combat damage to a player, you may put a permanent card from your graveyard on top of your library.
+
+SVar:AttachAILogic:Pump

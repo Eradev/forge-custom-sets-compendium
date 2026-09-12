@@ -3,6 +3,6 @@ ManaCost:1 G
 Types:Creature Elf Shaman
 PT:1/3
 
-S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Deathtouch | IsPresent$ Card.YouOwn | PresentZone$ Graveyard | PresentCompare$ GE5 | ValidPlayer$ You | Description$ CARDNAME has deathtouch as long as five or more cards are in your graveyard.
+S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Deathtouch | IsPresent$ Card.YouOwn | PresentZone$ Graveyard | PresentCompare$ GE5 | ValidPlayer$ You | Description$ This creature has deathtouch as long as five or more cards are in your graveyard.
 
-Oracle:Nightshade Cultivator has deathtouch as long as five or more cards are in your graveyard.
+Oracle:This creature has deathtouch as long as five or more cards are in your graveyard.
