@@ -1,0 +1,14 @@
+Name:Vedalken Reshaper
+ManaCost:4 U U
+Types:Creature Vedalken Wizard
+PT:2/3
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ X | EffectZone$ All | Description$ This spell costs {1} less to cast for each instant and sorcery card in your graveyard.
+SVar:X:Count$ValidGraveyard Instant.YouOwn,Sorcery.YouOwn
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReturn | TriggerDescription$ When CARDNAME enters, return target instant or sorcery card from your graveyard to your hand.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Instant.YouOwn,Sorcery.YouOwn | TgtPrompt$ Select target instant or sorcery card in your graveyard
+
+Oracle:This spell costs {1} less to cast for each instant and sorcery card in your graveyard.\nWhen this creature enters, return target instant or sorcery card from your graveyard to your hand.
+
+DeckHints:Type$Instant|Sorcery & Ability$Graveyard

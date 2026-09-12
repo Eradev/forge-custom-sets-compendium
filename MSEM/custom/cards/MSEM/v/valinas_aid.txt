@@ -1,0 +1,7 @@
+Name:Valina's Aid
+ManaCost:5 W
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Creature.cmcLE2 | ChangeNum$ 3 | SpellDescription$ Search your library for up to three creature cards with mana value 2 or less, put them onto the battlefield, then shuffle.
+
+Oracle:Search your library for up to three creature cards with mana value 2 or less, put them onto the battlefield, then shuffle.

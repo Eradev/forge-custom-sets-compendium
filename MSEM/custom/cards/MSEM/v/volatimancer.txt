@@ -1,0 +1,13 @@
+Name:Volatimancer
+ManaCost:3 U
+Types:Creature Human Wizard
+PT:1/4
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigAnimate | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may have target creature have base power and toughness 1/1 until end of turn.
+SVar:TrigAnimate:DB$ Animate | ValidTgts$ Creature | Power$ 1 | Toughness$ 1 | IsCurse$ True
+
+Oracle:Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, you may have target creature have base power and toughness 1/1 until end of turn.
+
+SVar:AmbushAI:True

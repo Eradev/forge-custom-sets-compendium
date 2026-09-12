@@ -1,0 +1,11 @@
+Name:Vengeful Ferocity
+ManaCost:2 G G
+Types:Instant
+
+A:SP$ PutCounter | Cost$ Sac<1/Creature> | ValidTgts$ Creature.YouCtrl | CounterType$ P1P1 | CounterNum$ X | SubAbility$ DBGainLife | SpellDescription$ Put X +1/+1 counters on target creature you control, where X is the sacrificed creature's power. You gain X life.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ X
+SVar:X:Sacrificed$CardPower
+
+Oracle:As an additional cost to cast this spell, sacrifice a creature.\nPut X +1/+1 counters on target creature you control, where X is the sacrificed creature's power. You gain X life.
+
+DeckHas:Ability$Counters|LifeGain

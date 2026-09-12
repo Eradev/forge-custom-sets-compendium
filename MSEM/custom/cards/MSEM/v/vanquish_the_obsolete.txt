@@ -1,0 +1,10 @@
+Name:Vanquish the Obsolete
+ManaCost:1 R
+Types:Sorcery
+
+A:SP$ Destroy | ValidTgts$ Artifact | SubAbility$ DBDamageAll | SpellDescription$ Destroy target artifact. CARDNAME deals 1 damage to each creature that artifact's controller controls.
+SVar:DBDamageAll:DB$ DamageAll | ValidCards$ Creature.ControlledBy TargetedController | NumDmg$ 1
+
+Oracle:Destroy target artifact. Vanquish the Obsolete deals 1 damage to each creature that artifact's controller controls.
+
+DeckHints:Type$Artifact
