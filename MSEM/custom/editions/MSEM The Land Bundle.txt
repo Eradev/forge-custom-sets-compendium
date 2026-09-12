@@ -86,3 +86,6 @@ Type=Custom
 83 R Basin Fortress @Mathieu Lauffray
 84 R Spinerock Canyon @Kevin Hou
 85 R Thawing Valley @Tin Trung
+
+[tokens]
+1 c_a_clue_draw @Tiana Maros
