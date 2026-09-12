@@ -9,7 +9,7 @@ SVar:EachLose:DB$ LoseLife | Defined$ Remembered | LifeAmount$ D | SubAbility$ D
 SVar:DBCleanup:DB$ Cleanup | ClearImprinted$ True | ClearRemembered$ True
 SVar:D:Imprinted$CardManaCost
 
-A:AB$ Discard | Cost$ SubCounter<2/LOYALTY> | ValidTgts$ Opponent | Mode$ RevealYouChoose | DiscardValid$ Card.nonLand | NumCards$ 1 | Planeswalker$ True | SpellDescription$ Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.
+A:AB$ Discard | Cost$ SubCounter<2/LOYALTY> | ValidTgts$ Opponent | Mode$ RevealYouChoose | DiscardValid$ Card.nonLand | Planeswalker$ True | SpellDescription$ Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.
 
 A:AB$ LoseLife | Cost$ SubCounter<7/LOYALTY> | ValidTgts$ Opponent | LifeAmount$ Difference | TgtPrompt$ Select target opponent | Planeswalker$ True | Ultimate$ True | SpellDescription$ Target opponent loses life equal to the difference between their life total and their starting life total.
 SVar:X:TargetedPlayer$LifeTotal

@@ -5,11 +5,11 @@ Loyalty:4
 
 A:AB$ LoseLife | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Defined$ Player.Opponent | LifeAmount$ 1 | SubAbility$ DBGain | SpellDescription$ Each opponent loses 1 life and you gain 1 life. Mill a card. If you do, you may shuffle a card from your graveyard into your library.
 SVar:DBGain:DB$ GainLife | LifeAmount$ 1 | SubAbility$ DBMill
-SVar:DBMill:DB$ Mill | NumCards$ 1 | RememberMilled$ True | SubAbility$ DBShuffle
+SVar:DBMill:DB$ Mill | RememberMilled$ True | SubAbility$ DBShuffle
 SVar:DBShuffle:DB$ ChangeZone | Origin$ Graveyard | Destination$ Library | Hidden$ True | Optional$ True | ChangeType$ Card.YouOwn | ChangeNum$ 1 | Shuffle$ True | ConditionDefined$ Remembered | ConditionPresent$ Card | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
-A:AB$ Discard | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | ValidTgts$ Player | TargetMin$ 0 | TargetMax$ MaxTgt | NumCards$ 1 | Mode$ TgtChoose | SubAbility$ DBReturn | SpellDescription$ Any number of target players each discard a card. If you have an insight counter, return up to one creature card from your graveyard to your hand.
+A:AB$ Discard | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | ValidTgts$ Player | TargetMin$ 0 | TargetMax$ MaxTgt | Mode$ TgtChoose | SubAbility$ DBReturn | SpellDescription$ Any number of target players each discard a card. If you have an insight counter, return up to one creature card from your graveyard to your hand.
 SVar:DBReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Creature.YouOwn | TgtPrompt$ Select up to one target creature card in your graveyard | TargetMin$ 0 | TargetMax$ 1 | ConditionCheckSVar$ Insight | ConditionSVarCompare$ GE1
 SVar:Insight:Count$YourCountersInsight
 SVar:MaxTgt:PlayerCountPlayers$Amount

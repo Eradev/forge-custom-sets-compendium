@@ -3,10 +3,8 @@ ManaCost:2 R
 Types:Sorcery
 
 A:SP$ Effect | Triggers$ TrigSpellCast | SpellDescription$ Until end of turn, whenever you cast an instant or sorcery spell, you may discard a card. If you do, draw a card.
-
 SVar:TrigSpellCast:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Command | OptionalDecider$ You | Execute$ TrigLoot | TriggerDescription$ Whenever you cast an instant or sorcery spell, you may discard a card. If you do, draw a card.
-
-SVar:TrigLoot:AB$ Draw | Cost$ Discard<1/Card> | Defined$ You | NumCards$ 1
+SVar:TrigLoot:AB$ Draw | Cost$ Discard<1/Card>
 
 Oracle:Until end of turn, whenever you cast an instant or sorcery spell, you may discard a card. If you do, draw a card.
 

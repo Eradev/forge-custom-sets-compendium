@@ -5,7 +5,7 @@ PT:2/2
 
 K:Haste
 
-A:AB$ Discard | Cost$ T | Defined$ You | NumCards$ 1 | Mode$ TgtChoose | SubAbility$ DBDraw | SpellDescription$ Discard a card, then draw a card.
+A:AB$ Discard | Cost$ T | Mode$ TgtChoose | SubAbility$ DBDraw | SpellDescription$ Discard a card, then draw a card.
 SVar:DBDraw:DB$ Draw
 
 T:Mode$ ChangesZone | TriggerZones$ Hand | ValidCard$ Permanent.YouCtrl | Origin$ Battlefield | Destination$ Any | Execute$ PayParanoia | TriggerDescription$ Paranoia 2 R (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)

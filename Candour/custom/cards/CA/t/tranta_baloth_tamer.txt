@@ -4,7 +4,7 @@ Types:Legendary Creature Human Shaman
 PT:3/5
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When NICKNAME enters, create a Goss, a 5/3 green Beast creature token with trample.
-SVar:TrigToken:DB$ Token | TokenScript$ goss | TokenOwner$ You
+SVar:TrigToken:DB$ Token | TokenScript$ goss
 
 A:AB$ Draw | Cost$ Sac<1/Creature> | NumCards$ X | SubAbility$ DBDiscard | SpellDescription$ Draw cards equal to the sacrificed creature's power, then discard three cards.
 SVar:DBDiscard:DB$ Discard | NumCards$ 3 | Mode$ TgtChoose

@@ -10,6 +10,6 @@ A:AB$ ChangeZone | Cost$ 1 U | Defined$ Self | Origin$ Battlefield | Destination
 
 A:AB$ Scry | Cost$ 2 U | ScryNum$ 2 | SpellDescription$ Scry 2.
 
-A:AB$ Draw | Cost$ 3 U | NumCards$ 1 | Defined$ You | SpellDescription$ Draw a card.
+A:AB$ Draw | Cost$ 3 U | SpellDescription$ Draw a card.
 
 Oracle:{U}: This creature can't be blocked this turn.\n{1}{U}: Return this creature to its owner's hand.\n{2}{U}: Scry 2.\n{3}{U}: Draw a card.

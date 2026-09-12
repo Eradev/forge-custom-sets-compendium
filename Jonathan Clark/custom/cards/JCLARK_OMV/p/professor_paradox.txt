@@ -3,7 +3,7 @@ ManaCost:1 U R
 Types:Legendary Planeswalker Paradox
 Loyalty:3
 
-A:AB$ Draw | Cost$ AddCounter<2/LOYALTY> | Planeswalker$ True | NumCards$ 1 | SubAbility$ DBDealDamage | SpellDescription$ Draw a card, CARDNAME deals 1 damage to you.
+A:AB$ Draw | Cost$ AddCounter<2/LOYALTY> | Planeswalker$ True | SubAbility$ DBDealDamage | SpellDescription$ Draw a card, CARDNAME deals 1 damage to you.
 SVar:DBDealDamage:DB$ DealDamage | Defined$ You | NumDmg$ 1
 
 A:AB$ Tap | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature | SubAbility$ DBPutCounter | SpellDescription$ Tap up to one target creature and put a stun counter on it.
