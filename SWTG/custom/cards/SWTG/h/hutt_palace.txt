@@ -2,12 +2,12 @@ Name:Hutt Palace
 ManaCost:no cost
 Types:Land
 
-R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ CARDNAME enters tapped.
-SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | ETB$ True
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMana | TriggerDescription$ When CARDNAME enters, add {R}.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMana | TriggerDescription$ When this land enters, add {R}.
 SVar:TrigMana:DB$ Mana | Produced$ R
 
 A:AB$ Mana | Cost$ T | Produced$ Combo B G | SpellDescription$ Add {B} or {G}.
 
-Oracle:Hutt Palace enters tapped.\nWhen Hutt Palace enters, add {R}.\n{T}: Add {B} or {G}.
+Oracle:This land enters tapped.\nWhen this land enters, add {R}.\n{T}: Add {B} or {G}.

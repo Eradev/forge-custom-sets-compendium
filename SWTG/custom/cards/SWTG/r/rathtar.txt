@@ -5,9 +5,9 @@ PT:4/4
 
 A:AB$ PutCounter | Cost$ 5 G G | Monstrosity$ 2
 
-T:Mode$ BecomeMonstrous | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigMustBlock | TriggerDescription$ When CARDNAME becomes monstrous, any number of target creatures must block it this turn if able.
+T:Mode$ BecomeMonstrous | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigMustBlock | TriggerDescription$ When this creature becomes monstrous, any number of target creatures must block it this turn if able.
 SVar:TrigMustBlock:DB$ MustBlock | DefinedAttacker$ TriggeredCardLKICopy | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 99 | TgtPrompt$ Select any number of target creatures | BlockAllDefined$ True | Duration$ UntilEndOfCombat
 
-Oracle:{5}{G}{G}: Monstrosity 2. (If this creature isn't monstrous, put two +1/+1 counters on it and it becomes monstrous.)\nWhen Rathtar becomes monstrous, any number of target creatures must block it this turn if able.
+Oracle:{5}{G}{G}: Monstrosity 2. (If this creature isn't monstrous, put two +1/+1 counters on it and it becomes monstrous.)\nWhen this creature becomes monstrous, any number of target creatures must block it this turn if able.
 
 DeckHas:Ability$Counters

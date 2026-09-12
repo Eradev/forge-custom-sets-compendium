@@ -2,7 +2,7 @@ Name:Jedi Holocron
 ManaCost:2
 Types:Artifact
 
-A:AB$ PutCounter | Cost$ T | CounterType$ CHARGE | SpellDescription$ Put a charge counter on CARDNAME.
+A:AB$ PutCounter | Cost$ T | CounterType$ CHARGE | SpellDescription$ Put a charge counter on this artifact.
 
 A:AB$ Mana | Cost$ T SubCounter<1/CHARGE> | Produced$ Combo G W U | SpellDescription$ Add {G}, {W}, or {U}.
 
@@ -10,4 +10,4 @@ A:AB$ Charm | Cost$ T SubCounter<2/CHARGE> | Choices$ ManaGW,ManaWU | CharmNum$ 
 SVar:ManaGW:DB$ Mana | Produced$ G W | SpellDescription$ Add {G}{W}
 SVar:ManaWU:DB$ Mana | Produced$ W U | SpellDescription$ Add {W}{U}
 
-Oracle:{T}: Put a charge counter on Jedi Holocron.\n{T}, Remove a charge counter from Jedi Holocron: Add {G}, {W}, or {U}.\n{T}, Remove two charge counters from Jedi Holocron: Add {G}{W} or {W}{U}.
+Oracle:{T}: Put a charge counter on this artifact.\n{T}, Remove a charge counter from this artifact: Add {G}, {W}, or {U}.\n{T}, Remove two charge counters from this artifact: Add {G}{W} or {W}{U}.

@@ -3,9 +3,9 @@ ManaCost:2 G
 Types:Creature Ithorian Jedi
 PT:2/1
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | TriggerZones$ Battlefield | Execute$ TrigSearch | TriggerDescription$ When CARDNAME enters, you may search your library for a basic land card, reveal it, and put it into your hand. If you do, shuffle your library.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | TriggerZones$ Battlefield | Execute$ TrigSearch | TriggerDescription$ When this creature enters, you may search your library for a basic land card, reveal it, and put it into your hand. If you do, shuffle your library.
 SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Land.Basic | ChangeNum$ 1 | Reveal$ True | ShuffleNonMandatory$ True
 
 A:AB$ ChangeZone | Named$ Meditate | Cost$ 1 G | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
 
-Oracle:When Ithorian Initiate enters, you may search your library for a basic land card, reveal it, and put it into your hand. If you do, shuffle your library.\nMeditate {1}{G} (Return this creature to its owner's hand. Meditate only as a sorcery.)
+Oracle:When this creature enters, you may search your library for a basic land card, reveal it, and put it into your hand. If you do, shuffle your library.\nMeditate {1}{G} (Return this creature to its owner's hand. Meditate only as a sorcery.)

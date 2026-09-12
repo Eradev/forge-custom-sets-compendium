@@ -5,9 +5,9 @@ PT:4/4
 
 A:AB$ PutCounter | Cost$ 5 G G | Monstrosity$ 2
 
-S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | ValidBlocker$ Creature.powerLTX | Description$ Creatures with power less than CARDNAME's power can't block it.
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | ValidBlocker$ Creature.powerLTX | Description$ Creatures with power less than this creature's power can't block it.
 SVar:X:Count$CardPower
 
-Oracle:{5}{G}{G}: Monstrosity 2. (If this creature isn't monstrous, put two +1/+1 counters on it and it becomes monstrous.)\nCreatures with power less than Mantellian Savrip's power can't block it.
+Oracle:{5}{G}{G}: Monstrosity 2. (If this creature isn't monstrous, put two +1/+1 counters on it and it becomes monstrous.)\nCreatures with power less than this creature's power can't block it.
 
 DeckHas:Ability$Counters

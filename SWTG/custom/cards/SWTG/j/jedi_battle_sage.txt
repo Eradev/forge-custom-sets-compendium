@@ -5,9 +5,9 @@ PT:3/3
 
 K:Flash
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ When CARDNAME enters, target creature gets +2/+2 until end of turn.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ When this creature enters, target creature gets +2/+2 until end of turn.
 SVar:TrigPump:DB$ Pump | NumAtt$ +2 | NumDef$ +2 | Defined$ Target | ValidTgts$ Creature | TgtPrompt$ Select target creature
 
 A:AB$ ChangeZone | Named$ Meditate | Cost$ 1 G | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
 
-Oracle:Flash\nWhen Jedi Battle Sage enters, target creature gets +2/+2 until end of turn.\nMeditate {1}{G} (Return this creature to its owner's hand. Meditate only as a sorcery.)
+Oracle:Flash\nWhen this creature enters, target creature gets +2/+2 until end of turn.\nMeditate {1}{G} (Return this creature to its owner's hand. Meditate only as a sorcery.)

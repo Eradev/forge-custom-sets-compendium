@@ -9,7 +9,6 @@ SVar:BlockSpaceflight:Mode$ CantBlockBy | ValidAttacker$ Creature.withoutSpacefl
 SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpaceflight+withoutSpacereach | ValidAttacker$ Creature.Self
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | TriggerDescription$ When this creature enters, destroy target creature.
-
 SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Creature | TgtPrompt$ Select target creature.
 
 Oracle:Spaceflight (This creature can only block or be blocked by creatures with spaceflight.)\nWhen this creature enters, destroy target creature.

@@ -3,16 +3,16 @@ ManaCost:4 W U B
 Types:Artifact Creature Droid
 PT:5/5
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 1/1 colorless Droid artifact creature token.
-T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever this creature attacks, create a 1/1 colorless Droid artifact creature token.
-T:Mode$ Blocks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever this creature blocks, create a 1/1 colorless Droid artifact creature token.
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ When this creature dies, create a 1/1 colorless Droid artifact creature token.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ Whenever this creature enters, attacks, blocks or dies, create a 1/1 colorless Droid artifact creature token.
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | Secondary$ True | TriggerDescription$ Whenever this creature enters, attacks, blocks or dies, create a 1/1 colorless Droid artifact creature token.
+T:Mode$ Blocks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | Secondary$ True | TriggerDescription$ Whenever this creature enters, attacks, blocks or dies, create a 1/1 colorless Droid artifact creature token.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | Secondary | True TriggerDescription$ Whenever this creature enters, attacks, blocks or dies, create a 1/1 colorless Droid artifact creature token.
 SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_a_droid
 
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigRepair | TriggerDescription$ When this creature dies, put three repair counters on it.
-SVar:TrigRepair:DB$ PutCounter | Defined$ TriggeredCard | CounterType$ REPAIR | CounterNum$ 3
-T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | IsPresent$ Card.Self+counters_GE1_REPAIR | PresentZone$ Graveyard | Execute$ TrigRemoveRepair | TriggerDescription$ At the beginning of your upkeep, if this creature is in your graveyard with repair counters, remove a repair counter.
-SVar:TrigRemoveRepair:DB$ RemoveCounter | CounterType$ REPAIR | Defined$ Self
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigRepair | OptionalDecider$ You | TriggerDescription$ When this creature dies, you may put three repair counters on it.
+SVar:TrigRepair:DB$ PutCounter | CounterType$ REPAIR | CounterNum$ 3 | Defined$ TriggeredCard
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | IsPresent$ Card.Self+counters_GE1_REPAIR | PresentZone$ Graveyard | Execute$ TrigRemoveRepair | TriggerDescription$ At the beginning of your upkeep, if this card is in your graveyard with repair counters, remove a repair counter.
+SVar:TrigRemoveRepair:DB$ RemoveCounter | CounterType$ REPAIR
 T:Mode$ CounterRemoved | TriggerZones$ Graveyard | ValidCard$ Card.Self | CounterType$ REPAIR | NewCounterAmount$ 0 | Execute$ DBCast | TriggerDescription$ When the last repair counter is removed from this card, you may cast it until end of turn.
 SVar:DBCast:DB$ Effect | StaticAbilities$ STPlay | ForgetOnMoved$ Graveyard | RememberObjects$ Self | Duration$ EndOfTurn
 SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Graveyard | Description$ Until the end of turn, you may play EFFECTSOURCE.

@@ -13,6 +13,6 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.S
 SVar:TrigMark:DB$ PutCounter | CounterType$ BOUNTY | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | IsCurse$ True
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.OppCtrl+counters_GE1_BOUNTY | TriggerZones$ Battlefield | Execute$ TrigLoot | OptionalDecider$ You | TriggerDescription$ Bounty — Whenever a creature an opponent controls with a bounty counter on it dies, you may draw two cards. If you do, discard two cards.
-SVar:TrigLoot:AB$ Discard | Defined$ You | NumCards$ 2 | Mode$ TgtChoose | Cost$ Draw<2/You>
+SVar:TrigLoot:AB$ Discard | NumCards$ 2 | Mode$ TgtChoose | Cost$ Draw<2/You>
 
 Oracle:Menace, deathtouch, haste\nWhen Boba Fett enters, put a bounty counter on target creature an opponent controls.\nBounty — Whenever a creature an opponent controls with a bounty counter on it dies, you may draw two cards. If you do, discard two cards.

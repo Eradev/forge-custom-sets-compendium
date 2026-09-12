@@ -4,8 +4,8 @@ Types:Land
 
 A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
 
-A:AB$ PutCounter | Cost$ T | CounterType$ CHARGE | SpellDescription$ Put a charge counter on CARDNAME.
+A:AB$ PutCounter | Cost$ T | CounterType$ CHARGE | SpellDescription$ Put a charge counter on this land.
 
 A:AB$ Mana | Cost$ T SubCounter<1/CHARGE> | Produced$ Any | SpellDescription$ Add one mana of any color.
 
-Oracle:{T}: Add {C}.\n{T}: Put a charge counter on Moisture Farm.\n{T}, Remove a charge counter from Moisture Farm: Add one mana of any color.
+Oracle:{T}: Add {C}.\n{T}: Put a charge counter on this land.\n{T}, Remove a charge counter from this land: Add one mana of any color.

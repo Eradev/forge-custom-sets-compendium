@@ -8,4 +8,4 @@ SVar:TrigDraw:DB$ Draw
 
 A:AB$ ChangeZone | Named$ Meditate | Cost$ 1 U | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
 
-Oracle:When this creature enters, draw a card.\nMeditate 1U (Return this creature to its owner's hand. Meditate only as a sorcery.)
+Oracle:When this creature enters, draw a card.\nMeditate {1}{U} (Return this creature to its owner's hand. Meditate only as a sorcery.)

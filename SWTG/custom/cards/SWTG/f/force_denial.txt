@@ -2,9 +2,9 @@ Name:Force Denial
 ManaCost:1 U
 Types:Instant
 
-A:SP$ Branch | BranchConditionSVar$ HateFlag | TargetType$ Spell | TgtZone$ Stack | ValidTgts$ Card | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ Counter | FalseSubAbility$ CounterUnless
-SVar:CounterUnless:DB$ Counter | Defined$ Targeted | UnlessCost$ 1 | SubAbility$ DBScry | SpellDescription$ Counter target spell unless its controller pays {1}.
-SVar:Counter:DB$ Counter | Defined$ Targeted | SubAbility$ DBScry | SpellDescription$ Hate — If an opponent lost life from a source other than combat damage this turn, counter that spell instead.
+A:SP$ Branch | BranchConditionSVar$ HateFlag | TargetType$ Spell | TgtZone$ Stack | ValidTgts$ Card | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ Counter | FalseSubAbility$ CounterUnless | SpellDescription$ Counter target spell unless its controller pays {1}. Hate — If an opponent lost life from a source other than combat damage this turn, counter that spell instead. Scry 1.
+SVar:CounterUnless:DB$ Counter | Defined$ Targeted | UnlessCost$ 1 | SubAbility$ DBScry
+SVar:Counter:DB$ Counter | Defined$ Targeted | SubAbility$ DBScry
 SVar:DBScry:DB$ Scry
 SVar:HateFlag:PlayerCountRegisteredOpponents$LifeLostThisTurn/Minus.OppCombatDmg
 SVar:OppCombatDmg:PlayerCountRegisteredOpponents$DamageThisTurn/Minus.PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn

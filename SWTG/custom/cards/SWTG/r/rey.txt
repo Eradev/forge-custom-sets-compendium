@@ -4,6 +4,7 @@ Types:Legendary Creature Human Knight
 PT:3/3
 
 K:Vigilance
+
 K:First Strike
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReveal | TriggerDescription$ Whenever CARDNAME enters or leaves the battlefield, reveal the top card of target player's library. You gain life equal to that card's mana value.

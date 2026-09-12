@@ -3,7 +3,7 @@ ManaCost:2 GW GW
 Types:Creature Human Rebel
 PT:3/3
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigDestroy | TriggerDescription$ When CARDNAME enters, you may destroy target artifact without spaceflight.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigDestroy | TriggerDescription$ When this creature enters, you may destroy target artifact without spaceflight.
 SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Artifact.withoutSpaceflight | TgtPrompt$ Select target artifact without spaceflight
 
-Oracle:When Strike Team Commando enters, you may destroy target artifact without spaceflight.
+Oracle:When this creature enters, you may destroy target artifact without spaceflight.

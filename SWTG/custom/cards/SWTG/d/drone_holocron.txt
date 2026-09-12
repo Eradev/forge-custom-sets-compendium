@@ -10,4 +10,4 @@ A:AB$ Charm | Cost$ T SubCounter<2/CHARGE> | Choices$ ManaWU,ManaUB | CharmNum$ 
 SVar:ManaWU:DB$ Mana | Produced$ W U | SpellDescription$ Add {W}{U}
 SVar:ManaUB:DB$ Mana | Produced$ U B | SpellDescription$ Add {U}{B}
 
-Oracle:{T}: Put a charge counter on Drone Holocron.\n{T}, Remove a charge counter from Drone Holocron: Add {W}, {U}, or {B}.\n{T}, Remove two charge counters from Drone Holocron: Add {WU} or {UB}.
+Oracle:{T}: Put a charge counter on this artifact.\n{T}, Remove a charge counter from tis artifact: Add {W}, {U}, or {B}.\n{T}, Remove two charge counters from this artifact: Add {WU} or {UB}.

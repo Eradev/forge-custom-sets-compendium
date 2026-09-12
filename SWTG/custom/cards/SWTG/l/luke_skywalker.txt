@@ -7,10 +7,10 @@ K:Lifelink
 
 K:Vigilance
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ Whenever another creature enters under your control, put a +1/+1 counter on Luke Skywalker.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ Whenever another creature enters under your control, put a +1/+1 counter on CARDNAME.
 SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1
 
-A:AB$ Pump | Cost$ SubCounter<All/P1P1/CARDNAME> | Defined$ Self | KW$ Hexproof | CheckSVar$ X | SVarCompare$ GE1
+A:AB$ Pump | Cost$ SubCounter<All/P1P1/CARDNAME> | Defined$ Self | KW$ Hexproof | CheckSVar$ X | SVarCompare$ GE1 | SpellDescription$ He gains hexproof until end of turn. Activate this ability only if at least one +1/+1 counter is removed this way.
 SVar:X:Count$CardCounters.P1P1
 
-Oracle:Lifelink, vigilance\nWhenever another creature enters under your control, put a +1/+1 counter on Luke Skywalker.\nRemove all +1/+1 counters from Luke Skywalker: Luke Skywalker gains hexproof until end of turn. Activate this ability only if at least one +1/+1 counter is removed this way.
+Oracle:Lifelink, vigilance\nWhenever another creature enters under your control, put a +1/+1 counter on Luke Skywalker.\nRemove all +1/+1 counters from Luke Skywalker: He gains hexproof until end of turn. Activate this ability only if at least one +1/+1 counter is removed this way.

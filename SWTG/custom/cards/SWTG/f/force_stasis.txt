@@ -3,6 +3,7 @@ ManaCost:1 U
 Types:Instant
 
 A:SP$ Charm | Choices$ TapFreeze,ReturnSpell
+
 SVar:TapFreeze:DB$ Tap | ValidTgts$ Creature | TgtPrompt$ Select target creature | SubAbility$ DBNoUntap | SpellDescription$ Tap target creature. It doesn't untap during its controller's next untap step.
 SVar:DBNoUntap:DB$ Pump | Defined$ Targeted | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent
 

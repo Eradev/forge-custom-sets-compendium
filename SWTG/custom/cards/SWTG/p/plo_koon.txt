@@ -7,4 +7,4 @@ S:Mode$ CastWithFlash | ValidSA$ Activated.NamedAbilityMeditate | Caster$ You | 
 
 A:AB$ ChangeZone | Named$ Meditate | Cost$ 1 W | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
 
-Oracle:You may activate meditate abilities any time you could cast an instant.\nMeditate 1W (Return this creature to its owner's hand. Meditate only as a sorcery.)
+Oracle:You may activate meditate abilities any time you could cast an instant.\nMeditate {1}{W} (Return this creature to its owner's hand. Meditate only as a sorcery.)

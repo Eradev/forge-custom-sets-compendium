@@ -3,15 +3,15 @@ ManaCost:1 U
 Types:Artifact Creature Droid Scout
 PT:1/1
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReveal | TriggerDescription$ When CARDNAME enters, target player reveals their hand.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReveal | TriggerDescription$ When this creature enters, target player reveals their hand.
 SVar:TrigReveal:DB$ RevealHand | ValidTgts$ Player | TgtPrompt$ Select a player | Defined$ Targeted
 
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigRepair | TriggerDescription$ When CARDNAME dies, put three repair counters on it.
-SVar:TrigRepair:DB$ PutCounter | Defined$ TriggeredCard | CounterType$ REPAIR | CounterNum$ 3
-T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | IsPresent$ Card.Self+counters_GE1_REPAIR | PresentZone$ Graveyard | Execute$ TrigRemoveRepair | TriggerDescription$ At the beginning of your upkeep, if CARDNAME is in your graveyard with repair counters, remove a repair counter.
-SVar:TrigRemoveRepair:DB$ RemoveCounter | CounterType$ REPAIR | Defined$ Self
-T:Mode$ CounterRemoved | TriggerZones$ Graveyard | ValidCard$ Card.Self | CounterType$ REPAIR | NewCounterAmount$ 0 | Execute$ DBCast | TriggerDescription$ When the last repair counter is removed, you may cast CARDNAME until end of turn.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigRepair | OptionalDecider$ You | TriggerDescription$ When this creature dies, you may put three repair counters on it.
+SVar:TrigRepair:DB$ PutCounter | CounterType$ REPAIR | CounterNum$ 3 | Defined$ TriggeredCard
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | IsPresent$ Card.Self+counters_GE1_REPAIR | PresentZone$ Graveyard | Execute$ TrigRemoveRepair | TriggerDescription$ At the beginning of your upkeep, if this card is in your graveyard with repair counters, remove a repair counter.
+SVar:TrigRemoveRepair:DB$ RemoveCounter | CounterType$ REPAIR
+T:Mode$ CounterRemoved | TriggerZones$ Graveyard | ValidCard$ Card.Self | CounterType$ REPAIR | NewCounterAmount$ 0 | Execute$ DBCast | TriggerDescription$ When the last repair counter is removed from this card, you may cast it until end of turn.
 SVar:DBCast:DB$ Effect | StaticAbilities$ STPlay | ForgetOnMoved$ Graveyard | RememberObjects$ Self | Duration$ EndOfTurn
-SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Graveyard | Description$ Until end of turn, you may play EFFECTSOURCE.
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Graveyard | Description$ Until the end of turn, you may play EFFECTSOURCE.
 
-Oracle:When Probe Droid enters, target player reveals their hand.\nRepair 3 (When this creature dies, put three repair counters on it. At the beginning of your upkeep, remove a repair counter. Whenever the last is removed, you may cast it from your graveyard until end of turn.)
+Oracle:When this creature enters, target player reveals their hand.\nRepair 3 (When this creature dies, put three repair counters on it. At the beginning of your upkeep, remove a repair counter. Whenever the last is removed, you may cast it from your graveyard until end of turn.)

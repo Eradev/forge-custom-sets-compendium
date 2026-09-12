@@ -10,10 +10,10 @@ K:Haste
 T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigBounty | TriggerDescription$ Whenever CARDNAME attacks, put a bounty counter on target creature an opponent controls.
 SVar:TrigBounty:DB$ PutCounter | CounterType$ BOUNTY | ValidTgts$ Creature.OppCtrl | IsCurse$ True | TgtPrompt$ Select target creature an opponent controls
 
-T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever CARDNAME attacks, it gets +X/+0 until end of turn, where X is the number of creatures defending player controls with a bounty counter on them.
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever CARDNAME attacks, he gets +X/+0 until end of turn, where X is the number of creatures defending player controls with a bounty counter on them.
 SVar:TrigPump:DB$ Pump | NumAtt$ +X
 SVar:X:Count$Valid Creature.counters_GE1_BOUNTY+ControlledBy DefendingPlayer
 
-Oracle:Menace, haste\nWhenever Jango Fett attacks, put a bounty counter on target creature an opponent controls.\nWhenever Jango Fett attacks, it gets +X/+0 until end of turn, where X is the number of creatures defending player controls with a bounty counter on them.
+Oracle:Menace, haste\nWhenever Jango Fett attacks, put a bounty counter on target creature an opponent controls.\nWhenever Jango Fett attacks, he gets +X/+0 until end of turn, where X is the number of creatures defending player controls with a bounty counter on them.
 
 SVar:HasAttackEffect:TRUE

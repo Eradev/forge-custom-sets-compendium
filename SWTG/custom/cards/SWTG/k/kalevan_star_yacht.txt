@@ -10,7 +10,7 @@ SVar:BlockBySpaceflight:Mode$ CantBlockBy | ValidBlocker$ Creature.withoutSpacef
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigLoseLife | TriggerZones$ Battlefield | TriggerDescription$ When this creature enters, lose 1 life, draw a card, and put a bounty counter on up to one target creature.
 
-SVar:TrigLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1 | SubAbility$ DBDraw
+SVar:TrigLoseLife:DB$ LoseLife | LifeAmount$ 1 | SubAbility$ DBDraw
 SVar:DBDraw:DB$ Draw | SubAbility$ DBPutCounter
 SVar:DBPutCounter:DB$ PutCounter | CounterType$ BOUNTY | ValidTgts$ Creature | TgtPrompt$ Select up to one target creature | TargetMin$ 0 | TargetMax$ 1 | IsCurse$ True
 
