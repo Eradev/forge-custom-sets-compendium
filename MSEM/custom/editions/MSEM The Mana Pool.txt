@@ -112,3 +112,7 @@ Type=Custom
 158 R Nomad's Township @Imad Awan
 159 R Forgotten Steppe @Xavier Ward
 160 R Shifting Glade @Balasz Ketyi
+
+[tokens]
+1 c_1_1_spirit @Elizabeth Sherry
+2 c_a_treasure_sac @Mauro dal Bo
