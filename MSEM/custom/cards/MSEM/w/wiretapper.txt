@@ -1,0 +1,21 @@
+Name:Wiretapper
+ManaCost:1 U U
+Types:Creature Horror
+PT:3/1
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChoose | TriggerDescription$ When this creature enters, ABILITY
+SVar:TrigChoose:DB$ Charm | Choices$ DBExile,DBCopy
+
+SVar:DBExile:DB$ ChangeZone | TargetType$ Spell | ValidTgts$ Card | TgtZone$ Stack | TgtPrompt$ Select target spell | Origin$ Stack | Destination$ Exile | RememberChanged$ True | SubAbility$ DBExileEffect | SpellDescription$ Exile target spell. For as long as that card remains exiled, its owner may play it. A spell cast this way costs {2} more to cast.
+SVar:DBExileEffect:DB$ Effect | StaticAbilities$ STPlay,STTax | RememberObjects$ Remembered | Duration$ Permanent | ExileOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered+nonLand | AffectedZone$ Exile | MayPlayPlayer$ CardOwner | Description$ For as long as that card remains exiled, its owner may play it.
+SVar:STTax:Mode$ RaiseCost | ValidCard$ Card.IsRemembered+CastSa Spell.MayPlaySource | AffectedZone$ Exile | Type$ Spell | Amount$ 2 | Description$ A spell cast this way costs {2} more to cast.
+
+SVar:DBCopy:DB$ MakeCard | TargetType$ Spell | ValidTgts$ Card.inZoneStack | TgtZone$ Stack | TgtPrompt$ Select target spell | DefinedName$ TargetedSource | Zone$ None | RememberMade$ True | SubAbility$ DBCastCopy | SpellDescription$ Create a copy of the card with target spell's name. You may cast the copy. (You still pay its costs.)
+SVar:DBCastCopy:DB$ Play | Defined$ Remembered | ZoneRegardless$ True | ValidSA$ Spell | Optional$ True | SubAbility$ DBCleanup
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Flash\nWhen this creature enters, choose one —\n• Exile target spell. For as long as that card remains exiled, its owner may play it. A spell cast this way costs {2} more to cast.\n• Create a copy of the card with target spell's name. You may cast the copy. (You still pay its costs.)
