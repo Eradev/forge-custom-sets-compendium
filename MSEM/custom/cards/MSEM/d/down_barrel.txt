@@ -1,0 +1,11 @@
+Name:Down Barrel
+ManaCost:3 B
+Types:Sorcery
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ 2 | EffectZone$ All | IsPresent$ Rogue.YouCtrl | Description$ This spell costs {2} less to cast if you control a Rogue.
+
+A:SP$ Discard | ValidTgts$ Opponent | NumCards$ 2 | Mode$ TgtChoose | SpellDescription$ Target opponent discards two cards.
+
+Oracle:This spell costs {2} less to cast if you control a Rogue.\nTarget opponent discards two cards.
+
+DeckNeeds:Type$Rogue
