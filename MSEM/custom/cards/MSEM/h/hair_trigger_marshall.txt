@@ -1,0 +1,12 @@
+Name:Hair-Trigger Marshall
+ManaCost:1 R
+Types:Creature Human Soldier
+PT:1/1
+
+K:Haste
+
+A:AB$ DealDamage | Cost$ 2 W T | ValidTgts$ Creature.blocking | TgtPrompt$ Select target blocking creature | NumDmg$ 2 | SpellDescription$ This creature deals 2 damage to target blocking creature.
+
+Oracle:Haste\n{2}{W}, {T}: This creature deals 2 damage to target blocking creature.
+
+DeckHints:Color$White
