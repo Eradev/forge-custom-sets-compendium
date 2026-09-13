@@ -34,11 +34,10 @@ Toll Midnight (TMI)                   -  95% (120/126)
     * Rattlecage Terror
     * Shed the Corporeal Form
     * What Remains of Samuel Quinn
-Video Horror System (VHS)             -  97% (83/86)
+Video Horror System (VHS)             -  98% (84/86)
   Missing cards:
     * Maddened Preacher
     * Snowfield Doppelganger
-    * Wiretapper
 Nangjiao In Bloom (NJB)               -  42% (126/297)
   Missing cards:
     * Diao of the Opal Infantry
