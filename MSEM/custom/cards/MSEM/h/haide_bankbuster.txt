@@ -1,0 +1,12 @@
+Name:Haide Bankbuster
+ManaCost:3 R R
+Types:Legendary Planeswalker Haide
+Loyalty:5
+
+A:AB$ DealDamage | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | ValidTgts$ Any | TgtPrompt$ Select any target to distribute damage to | NumDmg$ 2 | TargetMin$ 1 | TargetMax$ 2 | DividedAsYouChoose$ 2 | SpellDescription$ This planeswalker deals 2 damage divided as you choose among one or two targets.
+
+A:AB$ Draw | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | NumCards$ 2 | UnlessCost$ DamageYou<3> | UnlessPayer$ Player | UnlessAI$ Never | SpellDescription$ Draw two cards unless a player has this planeswalker deal 3 damage to them.
+
+A:AB$ GainControl | Cost$ SubCounter<9/LOYALTY> | Planeswalker$ True | Ultimate$ True | ValidTgts$ Opponent | AllValid$ Permanent.TargetedPlayerCtrl | NewController$ You | LoseControl$ EOT | Untap$ True | AddKWs$ Haste | SpellDescription$ Gain control of all permanents target opponent controls until end of turn. Untap those permanents. They gain haste until end of turn.
+
+Oracle:[+1]: This planeswalker deals 2 damage divided as you choose among one or two targets.\n[+1]: Draw two cards unless a player has this planeswalker deal 3 damage to them.\n[-9]: Gain control of all permanents target opponent controls until end of turn. Untap those permanents. They gain haste until end of turn.
