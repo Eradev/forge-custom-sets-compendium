@@ -1,0 +1,12 @@
+Name:Hard Knocks
+ManaCost:B
+Types:Enchantment
+
+T:Mode$ AttackersDeclaredOneTarget | AttackedTarget$ Player | ValidAttackers$ Creature.Rogue+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDraw | Optional$ True | TriggerDescription$ Whenever one or more Rogues you control attack a player, you may pay 1 life. If you do, draw a card.
+SVar:TrigDraw:AB$ Draw | Cost$ PayLife<1> | Defined$ You | NumCards$ 1
+
+Oracle: Whenever one or more Rogues you control attack a player, you may pay 1 life. If you do, draw a card.
+
+SVar:PlayMain1:TRUE
+
+DeckHints:Type$Rogue
