@@ -14,3 +14,5 @@ T:Mode$ AbilityResolves | ValidSource$ Card.Self | ValidSpellAbility$ Ability.Na
 SVar:TrigDraw:DB$ Draw
 
 Oracle:Vision (Whenever this or another creature you control enters, reveal the top card of your library. Then you may put that card into your graveyard.)\nWhenever this creature envisions an instant or sorcery card, draw a card.
+
+DeckHints:Type$Instant|Sorcery
