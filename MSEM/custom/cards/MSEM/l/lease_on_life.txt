@@ -1,0 +1,8 @@
+Name:Lease on Life
+ManaCost:3 R W
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl+nonSpirit | TriggerZones$ Battlefield | Execute$ DBCopy | OptionalDecider$ You | TriggerDescription$ Whenever a non-Spirit creature you control dies, you may create a token that's a copy of that creature, except it's a Spirit in addition to its other types and has haste.
+SVar:DBCopy:DB$ CopyPermanent | Defined$ TriggeredCardLKICopy | AddTypes$ Spirit | PumpKeywords$ Haste
+
+Oracle:Whenever a non-Spirit creature you control dies, you may create a token that's a copy of that creature, except it's a Spirit in addition to its other types and has haste.
