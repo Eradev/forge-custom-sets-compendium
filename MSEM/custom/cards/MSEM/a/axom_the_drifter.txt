@@ -1,0 +1,15 @@
+Name:Axom, the Drifter
+ManaCost:3 B
+Types:Legendary Creature Human Wizard
+PT:3/3
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigRemoveCounter | TriggerDescription$ When this creature enters, remove up to three counters from target permanent.
+SVar:TrigRemoveCounter:DB$ RemoveCounter | ValidTgts$ Permanent | ValidTgtsDesc$ permanent | CounterType$ Any | CounterNum$ 3 | UpTo$ True
+
+A:AB$ ChangeZone | Cost$ 2 U | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Return this creature to it's owner's hand.
+
+Oracle:Flash\nWhen this creature enters, remove up to three counters from target permanent.\n{2}{U}: Return this creature to its owner's hand.
+
+DeckHints:Color$Blue
