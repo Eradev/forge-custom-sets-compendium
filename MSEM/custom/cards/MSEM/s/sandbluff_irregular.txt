@@ -7,3 +7,5 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Soldie
 SVar:TrigUntap:DB$ Untap | Defined$ Self
 
 Oracle:Whenever a Soldier you control enters, you may untap this creature.
+
+DeckHints:Type$Soldier
