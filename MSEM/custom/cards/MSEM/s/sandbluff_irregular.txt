@@ -1,0 +1,9 @@
+Name:Sandbluff Irregular
+ManaCost:1 W
+Types:Creature Dog Soldier
+PT:3/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Soldier.YouCtrl | OptionalDecider$ You | TriggerZones$ Battlefield | Execute$ TrigUntap | TriggerDescription$ Whenever a Soldier you control enters, you may untap this creature.
+SVar:TrigUntap:DB$ Untap | Defined$ Self
+
+Oracle:Whenever a Soldier you control enters, you may untap this creature.
