@@ -1,0 +1,276 @@
+[metadata]
+Code=MSEM_ZER
+Name=Zero
+Date=2017-10-01
+Type=Custom
+Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
+
+[cards]
+1 R Aegis Champion @Tsrodriguez
+2 C Audacious Knight @nkmr8
+3 U Backup Forces @QuintusCassius
+4 C Battle Tactics @redpeggy
+5 C Battlefield Priest @Tomasz Chisztowski
+6 C Captain's Call @jasonnt
+7 U Dauntless Piker @Asahisupurdy
+8 U Daybreak Justicar @Ogilviel
+9 C Divine Ascension @Asur Misoa
+10 C Due Judgement @nightmaregk
+11 R Fell the Haughty @amidarosa
+12 M Gavis the Stalwart @arivekao
+13 R Gavis's Dragoons @artnothearts
+14 C Goldhill Enforcer @chevesy
+15 R Goldhill Guardian @rushn
+16 U Harm's Way @alatamox
+17 C Harrier's Falcon @rien (Sonidori)
+18 C Healer's Knack @Drewsil
+19 U In Arms @wlop
+20 R Kotis, Promised General @rav89
+21 M Life's Will @dolphinboy2000
+22 U Maelstrom Griffin @sandara
+23 R Magister of Impotence @chaotic muffin
+24 R Might of All @Chromancer
+25 C Natia Nomad @fluxen
+26 C Natia Shaman @reminery
+27 M Radiant Justicar @gefarlich
+28 C Runic Wall @mrnpea
+29 C Sanctum @Jeff Chen
+30 C Shieldmaster's Blessing @one vox
+31 U Soulight Captain @tsabo6
+32 C Spirit Drain @carolina eade
+33 R Stalwart Angel @janemere
+34 C Steeled Resolve @Arsenal21
+35 C Stillness @miserycat
+36 R Sudden Ambush @MatesLariteu
+37 U Vanishing Stroke @CobaltPlasma
+38 C Whitetail Sparrow @spirit in space
+39 C Whitetusk Charger @sugarsart
+40 C Zephyr Rider @keiske0719
+41 C Adept of Waves @gorillilau
+42 C Aeon's Hand Cutthroat @RaV89
+43 U Anurafication @Dhuj
+44 C Arcanum Owl @jubjubjedi
+45 R Arden, Mirrormage @alvinhew
+46 C Brain Static @bogdanmrk
+47 R Concenter @kelogsloops
+48 M Daril, Agent of Time @look
+49 R Daril's Timewalker @icewolfelemental
+50 C Depths of Solitude @Aikurusu
+51 C Exclude @BenGoodspeed
+52 U Fates Foretold @Ironshod
+53 C Focus Thoughts @jasontn
+54 U Freezing Maelstrom @katemax
+55 C Galeforce @maddendd
+56 C Gossamer Veil @corviday
+57 C Heavens Above @cryslara
+58 C Illusionary Steed @smolderbone
+59 C Library Specter @mocknot
+60 M Master Spellwright @Irina Nordsol
+61 R Mindbreaker Sphinx @nathanrosario
+62 C Move Unseen @Andis Reinbergs
+63 U Nimbus Fae @Telthona
+64 C Northwind Master @wenxerroa
+65 C Oracle Crab @ivanev
+66 C Pull the Strings @Artofedge
+67 R Puppetize @enmi
+68 U Recall to Mind @elentori
+69 U Redo @badbadbogg
+70 C Sea Strider @tsabo6
+71 R Seabreen Nullmage @pkyo
+72 C Seabreen Protector @thegryph
+73 C Sleight of Hand @harpyqueen
+74 R Spell Shackle @Alexanderexorcist
+75 U Sphinx Mentor @sanadara
+76 M Thought Siphon @shadowtuga
+77 R Travian Archsage @gerezeo
+78 U Wailing Soul @folda
+79 R Waketide Serpent @Danielgovar
+80 C Wispbreath Drake @Kdelvans
+81 M Abyssal Stalker @chevesy
+82 R Aldrane, Insane Necromancer @jasontn
+83 C Assassinate @Alexandrov
+84 R Blood Fiend @saifrygo
+85 C Bloodrage Gladiator @hampsterfly
+86 C Caustic Lurker @grayhues
+87 U Consort of Blood @Packo-MX
+88 C Corrupted Strength @Projecthybrid
+89 C Damned Deal @Andreas Rocha
+90 R Death Strike @nanfdaippu
+91 C Edge of Madness @el-grimlock
+92 R Erase From Existence @smcnonnhas
+93 C Festering Shambler @henkkab
+94 U Forbidden Truths @(Angevere) Ona Naumaviciute
+95 C Leech Soul @grypwolf
+96 U Lord of Swarms @alendro-miribal
+97 U Mausoleum Revenant @marharhuna-Bachi
+98 R Mind Crash @Fenris31
+99 C Monstrous Guise @helmuttt
+100 C Morbid Plunder @jonasjensenart
+101 U Murderous Rampage @JasonEngle
+102 C Ophelia's Neophyte @moraka rdfc
+103 C Palloren Vulture @Antonio J Manzanedo
+104 U Priest of Profanities @spinebender
+105 C Revenant Shade @obocic
+106 U Rise from the Grave @canadian_rainwater
+107 C Rouse From Below @rrabystyke
+108 M Sagi Aysan @shaman2000
+109 R Sagi's Revenant @hgjart
+110 R Sanguine Mortifier @elgrimlock
+111 C Sink into Despair @shiverness
+112 R Spawn of Nazgur @cheyvsy
+113 U Tainted Grounds @Rambled
+114 C Twice-Lived Dead @tsabo6
+115 M Unhallowed Concordat @artbycarlos
+116 C Vampiric Thirst @agarthanguide
+117 R Venomous Assault @benjamingalley
+118 C Voracious Ghoul @Mitch Mueller
+119 C Whispernight Assassin @behnkestudio
+120 C Young Tempter @Lisa Parfenova
+121 M Aiel Tazan @Jason Nguyen
+122 R Aiel's Fury @skullio
+123 R Aspect of Rage @arcipello
+124 C Bladesinger @maulina
+125 R Bloodfire Phoenix @grypwolf
+126 U Channel Enmity @billcreative
+127 C Charbelcher @klasmasterflex
+128 M Convergent Might @longai
+129 U Dracosoul @marakes
+130 U Elegant Fireslinger @pennett
+131 C Ember Salvo @tanthiel
+132 C Goblin Cutpurses @Tsabo6
+133 C Goblin Squire @elderscroller
+134 R Hav'za, Itavan Warchief @everen Ince
+135 R Infernal Invocation @tn3h
+136 C Inferno Forerunner @Aaron Miller
+137 C Ironsmash Wrecker @Armandeo64
+138 C Itava Outrider @conceptart.org
+139 C Itava Warshrieker @ropart
+140 C Lightning Strike @ferania
+141 C Magma Hoof Giant @etheralfeather
+142 U Magmatic Ravager @meteorskies
+143 U Maligned Brute @artisitcphenominon
+144 C Meteorain @txvirus
+145 C Mighty Swing @mzag
+146 C Prophetic Flame @rusandelv
+147 C Pummel @vegasmike
+148 R Pyrostorm @tristanbernandart
+149 R Roar of War @Abend86
+150 U Rush of Thought @aphextal
+151 M Scourge of the Skies @blacktalons
+152 R Searshot Dragon @rodanmenedez
+153 C Seismic Spike @relajavo
+154 R Shifting Allegiances @Hamsterfly
+155 U Soul Flame @lucife66
+156 C Speculate @auronaronkit
+157 C Surging Charge @nemanja
+158 C Swordmaster's Blessing @demitrigrebenov
+159 C Tactical Maneuvers @Cg_Warrior
+160 U Vengeant Souls @jcbarquet
+161 C Ancient Grizzly @IvanLaliashvili
+162 R Apprentice Summoner @ProdigyBombay
+163 U Atdrik Ravager @thylacin
+164 C Brave the Frontier @Andreas Rocha
+165 C Commune With Nature @owll
+166 C Copse Watcher @alexandra kritova
+167 C Ensnaring Vines @lucahsaroling
+168 C Envoy of Growth @BrandonCrawford2002
+169 M Eternal Oak @malverro
+170 C Feral Atdrik @Thinodor
+171 C Forced Sprouting @surthur
+172 U Harvest Moon @jjnass
+173 C Kalime Charger @Felipe Escobar
+174 R Kusore, Essence Spinner @larabesta
+175 C Life's Harbinger @gootipparjonu
+176 C Lifespinner Spider @dreamlandcody
+177 M Mavisa, Wayfinder @kremembrit
+178 R Mavisa's Familar @irishblackberry
+179 U Mindwinder @jessicanuey
+180 R Mistwake Hydra @anritco
+181 R Overwhelming Force @sandara
+182 C Predatory Feast @yty2000
+183 C Prey Upon @sandaradam
+184 M Primal Evocation @totmortsstudio
+185 R Rejuvenation @xfatedestinyx
+186 U Rot Rebirth @oro p
+187 R Rule of Nature @lsvoc
+188 C Scaled Wurm @psi(spearbirds)
+189 C Shredding Gale @strogi
+190 R Skavi Behemoth @unded
+191 U Spider Broodmother @markusthebarabrian
+192 C Stoneskin (MSEM) @jjcanvas ${"flavorName": "Stoneskin"}
+193 U Trail of Rebirth @japjap
+194 C Valley Mists @ani-r
+195 U Verendas Brawler @nathanrosario
+196 C Verendas Spiritwalker @Moshyoung
+197 U Wellspring of Life @hunquert
+#tsabo6?
+198 C Wild Fervor @tasbo6
+199 C Wildwood Keeper @edli
+200 R Wyrmwood Enchantress @jolakotturinn
+201 U Bloodfont Ritualist @anotherwanderer
+202 U Fervent Sergeant @chevest
+203 U Grave Revenant @furiossa
+204 U Itava Scourge @diegogisbertlorrens
+205 U Living Fissures @Svitlin Velinov
+206 U Magus Aspirant @artangelo
+207 U Mist Lurker @sivestris
+208 U Skysovereign Griffin @jojoesart
+209 U Sunwright Scion @inerduki
+210 U Thought Grifter @ruskull
+211 R Adaptive Servitor @den321
+212 R Ancient Saber @fesaba-Daobm
+213 C Ancient Statue @maxd
+214 R Astral Dynamo @xistianceimagiantions
+215 U Automated Blademaster @VincetVanHoof
+216 M Blade of the Many @ironshod
+217 C Carved Dagger @feuryl
+218 M Convergence Colossus @jdillon82
+219 U Crude Tablet @reneaiger
+220 R Dominion Crown @ingostan
+221 U Javelin @Mark Tarrise
+222 U Mana Prism @igreeny
+223 U Paladin's Blade @leesmith
+224 R Planar Processor @Dustier132
+225 U Scrapper Construct @onishade
+226 U Skeleton Shield @neoartcore
+227 U Spirit Pendant @wolfnoon
+228 U Steel Swarmer @Dmitry Burmak
+229 U Unstable Borer @njoo
+230 C Wayfarer's Lantern @harkill
+231 R Bloodstone Halls @miina(pixiv)
+232 C Crumbling Vestige @jjpeabody
+233 U Hill of Souls @ryky
+234 R Moonlit Shore @,rribby
+235 R Valley Falls @kingcloud
+236 R Verdant Sanctum @noshi
+237 R Wild Ravine @TomEdwards
+238 L Plains @narandel
+239 L Plains @Ezekielepharcelis
+240 L Plains @brollonks
+241 L Island @UnidColor
+242 L Island @takeru-san
+243 L Island @takerusan
+244 L Swamp @snowskadi
+245 L Swamp @wanbao
+246 L Swamp @blinck-d2
+247 L Mountain @ponponxu
+248 L Mountain @marcodalidingo
+249 L Mountain @artcobain
+250 L Forest @grrroch
+251 L Forest @joediepstraten
+252 L Forest @tatchit
+
+[tokens]
+1 w_1_1_soldier @takeyuki15
+2 w_0_0_spirit @tsabo6
+3 b_2_1_horror @dantijimustid
+4 b_2_2_zombie @standalone_compleux
+5 r_x_1_elemental_trample_haste @odinor
+6 g_1_1_saproling @chiller17
+7 g_1_2_spider_reach @ortheza
+8 rg_3_3_elemental @stevegoad
+# WoTC counterpart has equip 2
+9 sword_msem @sarafiel
+
+[other]
+10 emblem_gavis_the_stalwart @araviekao

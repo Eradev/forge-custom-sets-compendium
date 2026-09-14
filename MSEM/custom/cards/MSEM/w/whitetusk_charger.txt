@@ -1,0 +1,5 @@
+Name:Whitetusk Charger
+ManaCost:3 W W
+Types:Creature Elephant
+PT:4/5
+Oracle:

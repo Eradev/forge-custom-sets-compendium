@@ -1,0 +1,8 @@
+Name:Wispbreath Drake
+ManaCost:3 U U
+Types:Creature Drake Elemental
+PT:4/2
+
+K:Flying
+
+Oracle:Flying

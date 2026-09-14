@@ -1,0 +1,11 @@
+Name:Seabreen Nullmage
+ManaCost:1 U
+Types:Creature Human Wizard
+PT:1/1
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounter | TriggerDescription$ When this creature enters, counter target activated or triggered ability. (A triggered ability uses the words "when," "whenever," or "at." Mana abilities can't be targeted.)
+SVar:TrigCounter:DB$ Counter | TargetType$ Activated,Triggered | TgtPrompt$ Select target activated or triggered ability | ValidTgts$ Permanent
+
+Oracle:Flash\nWhen this creature enters, counter target activated or triggered ability. (A triggered ability uses the words "when," "whenever," or "at." Mana abilities can't be targeted.)

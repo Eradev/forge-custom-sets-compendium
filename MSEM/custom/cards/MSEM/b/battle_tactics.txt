@@ -1,0 +1,8 @@
+Name:Battle Tactics
+ManaCost:3 W
+Types:Sorcery
+
+A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +2 | NumDef$ +1 | SubAbility$ DBScry | SpellDescription$ Creatures you control get +2/+1 until end of turn. Scry 1.
+SVar:DBScry:DB$ Scry | ScryNum$ 1
+
+Oracle:Creatures you control get +2/+1 until end of turn. Scry 1.

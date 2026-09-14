@@ -1,0 +1,8 @@
+Name:Fervent Sergeant
+ManaCost:1 R W
+Types:Creature Human Soldier
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+attacking | AddPower$ 1 | Description$ Attacking creatures you control get +1/+0.
+
+Oracle:Attacking creatures you control get +1/+0.

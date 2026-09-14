@@ -1,0 +1,9 @@
+Name:Oracle Crab
+ManaCost:U
+Types:Creature Crab
+PT:0/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigScry | TriggerDescription$ When this creature enters, scry 2.
+SVar:TrigScry:DB$ Scry | ScryNum$ 2
+
+Oracle:When this creature enters, scry 2.

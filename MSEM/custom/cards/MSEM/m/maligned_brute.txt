@@ -1,0 +1,10 @@
+Name:Maligned Brute
+ManaCost:4 R R
+Types:Creature Giant Warrior
+PT:3/3
+
+K:Haste
+
+K:Double Strike
+
+Oracle:Haste, double strike

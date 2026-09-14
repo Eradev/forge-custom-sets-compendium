@@ -1,0 +1,13 @@
+Name:Anurafication
+ManaCost:2 U
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | SetPower$ 1 | SetToughness$ 1 | SetColor$ Blue | RemoveAllAbilities$ True | AddType$ Creature & Frog | RemoveCardTypes$ True | RemoveCreatureTypes$ True | Description$ Enchanted creature loses all abilities and is a blue Frog creature with base power and toughness 1/1.
+
+Oracle:Enchant creature\nEnchanted creature loses all abilities and is a blue Frog creature with base power and toughness 1/1. (It loses all other card types and creature types.)
+
+SVar:AttachAILogic:Curse
+
+SVar:NonStackingAttachEffect:True

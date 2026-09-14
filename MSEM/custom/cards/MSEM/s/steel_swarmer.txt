@@ -1,0 +1,8 @@
+Name:Steel Swarmer
+ManaCost:5
+Types:Artifact Creature Insect
+PT:4/2
+
+K:Flying
+
+Oracle:Flying

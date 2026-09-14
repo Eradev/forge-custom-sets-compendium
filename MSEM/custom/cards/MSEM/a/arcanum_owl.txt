@@ -1,0 +1,11 @@
+Name:Arcanum Owl
+ManaCost:3 U U
+Types:Creature Bird
+PT:2/2
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChangeZone | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may return target instant or sorcery card from your graveyard to your hand.
+SVar:TrigChangeZone:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Instant.YouCtrl,Sorcery.YouCtrl
+
+Oracle:Flying\nWhen this creature enters, you may return target instant or sorcery card from your graveyard to your hand.

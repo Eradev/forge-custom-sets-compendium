@@ -1,0 +1,8 @@
+Name:Redo
+ManaCost:U U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | UnlessCost$ X | SpellDescription$ Counter target spell unless its controller pays its mana cost.
+SVar:X:Targeted$CardManaCost
+
+Oracle:Counter target spell unless its controller pays its mana cost.

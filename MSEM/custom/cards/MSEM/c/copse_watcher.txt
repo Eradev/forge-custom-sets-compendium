@@ -1,0 +1,8 @@
+Name:Copse Watcher
+ManaCost:1 G
+Types:Creature Spirit
+PT:2/1
+
+K:Hexproof
+
+Oracle:Hexproof

@@ -1,0 +1,12 @@
+Name:Gossamer Veil
+ManaCost:1 U
+Types:Creature Wall
+PT:0/3
+
+K:Defender
+
+K:Flying
+
+K:Hexproof
+
+Oracle:Defender, flying, hexproof

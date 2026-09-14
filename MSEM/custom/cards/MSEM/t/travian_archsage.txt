@@ -1,0 +1,13 @@
+Name:Travian Archsage
+ManaCost:3 U U
+Types:Creature Human Wizard
+PT:3/3
+
+K:Prowess
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | ActivatorThisTurnCast$ EQ1 | Execute$ TrigCopy | TriggerZones$ Battlefield | TriggerDescription$ Whenever you cast your first instant or sorcery spell each turn, copy that spell. You may choose new targets for the copy.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | AILogic$ Always | MayChooseTarget$ True
+
+Oracle:Prowess\nWhenever you cast your first instant or sorcery spell each turn, copy that spell. You may choose new targets for the copy.
+
+DeckHints:Type$Instant|Sorcery

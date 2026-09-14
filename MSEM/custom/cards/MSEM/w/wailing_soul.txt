@@ -1,0 +1,10 @@
+Name:Wailing Soul
+ManaCost:2 U
+Types:Creature Spirit
+PT:3/1
+
+K:Flying
+
+S:Mode$ Continuous | Affected$ Card.Self+!attacking+!blocking | AddKeyword$ Hexproof | Description$ This creature has hexproof unless it's attacking or blocking.
+
+Oracle:Flying\nThis creature has hexproof unless it's attacking or blocking.
