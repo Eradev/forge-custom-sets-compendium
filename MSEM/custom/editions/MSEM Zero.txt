@@ -203,8 +203,7 @@ Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 195 U Verendas Brawler @nathanrosario
 196 C Verendas Spiritwalker @Moshyoung
 197 U Wellspring of Life @hunquert
-#tsabo6?
-198 C Wild Fervor @tasbo6
+198 C Wild Fervor @tsabo6
 199 C Wildwood Keeper @edli
 200 R Wyrmwood Enchantress @jolakotturinn
 201 U Bloodfont Ritualist @anotherwanderer
