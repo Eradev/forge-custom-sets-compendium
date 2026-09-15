@@ -1,0 +1,8 @@
+Name:Whispernight Assassin
+ManaCost:1 B B
+Types:Creature Spirit Rogue
+PT:4/1
+
+K:Menace
+
+Oracle:Menace

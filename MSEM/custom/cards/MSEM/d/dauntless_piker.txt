@@ -1,0 +1,5 @@
+Name:Dauntless Piker
+ManaCost:W
+Types:Creature Human Soldier
+PT:2/1
+Oracle:

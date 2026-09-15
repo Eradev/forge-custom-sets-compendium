@@ -1,0 +1,17 @@
+Name:Gavis's Dragoons
+ManaCost:3 W W
+Types:Creature Human Knight
+PT:3/3
+
+K:First Strike
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this creature enters, exile another target creature.
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Creature.Other | TgtZone$ Stack | Origin$ Stack | Destination$ Exile | IsCurse$ True | TgtPrompt$ Choose target creature | RememberChanged$ True
+
+S:Mode$ CantBeCast | ValidCard$ Card.nonLand+sharesNameWith Remembered.ExiledWithSource | Caster$ Any | Description$ Spells with the same name as the card exiled by this creature can't be cast.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigReturn | TriggerDescription$ When this creature leaves the battlefield, return the exiled card to the battlefield under its owner's control.
+SVar:TrigReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:First strike\nWhen this creature enters, exile another target creature until this creature leaves the battlefield.\nSpells with the same name as the exiled card can't be cast (as long as this creature is on the battlefield).

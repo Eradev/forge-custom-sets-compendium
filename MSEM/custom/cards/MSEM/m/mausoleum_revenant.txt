@@ -1,0 +1,11 @@
+Name:Mausoleum Revenant
+ManaCost:3 B
+Types:Creature Zombie
+PT:3/3
+
+K:Menace
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | Execute$ TrigToken | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature deals damage to a player, create a 2/2 black Zombie creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ b_2_2_zombie | TokenOwner$ You
+
+Oracle:Menace\nWhenever this creature deals damage to a player, create a 2/2 black Zombie creature token.

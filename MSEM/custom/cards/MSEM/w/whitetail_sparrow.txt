@@ -1,0 +1,10 @@
+Name:Whitetail Sparrow
+ManaCost:1 W W
+Types:Creature Bird
+PT:2/2
+
+K:Flying
+
+K:Lifelink
+
+Oracle:Flying, lifelink

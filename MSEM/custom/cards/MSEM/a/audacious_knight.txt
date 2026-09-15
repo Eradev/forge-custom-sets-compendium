@@ -1,0 +1,8 @@
+Name:Audacious Knight
+ManaCost:3 W
+Types:Creature Human Soldier
+PT:4/2
+
+A:AB$ Pump | Cost$ 2 W | KW$ First Strike & Vigilance | Defined$ Self | SpellDescription$ This creature gains first strike and vigilance until end of turn.
+
+Oracle:{2}{W}: This creature gains first strike and vigilance until end of turn.

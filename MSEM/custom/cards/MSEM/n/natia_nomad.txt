@@ -1,0 +1,8 @@
+Name:Natia Nomad
+ManaCost:3 W
+Types:Creature Human Warrior
+PT:1/4
+
+K:Vigilance
+
+Oracle:Vigilance

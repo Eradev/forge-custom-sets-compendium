@@ -1,0 +1,5 @@
+Name:Natia Shaman
+ManaCost:1 W
+Types:Creature Cat Shaman
+PT:3/1
+Oracle:

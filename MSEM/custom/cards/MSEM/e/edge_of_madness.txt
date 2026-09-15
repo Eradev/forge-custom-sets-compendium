@@ -1,0 +1,9 @@
+Name:Edge of Madness
+ManaCost:B
+Types:Sorcery
+
+A:SP$ Discard | NumCards$ 1 | ValidTgts$ Player | Mode$ TgtChoose | RememberDiscarded$ True | SubAbility$ DBLoseLife | SpellDescription$ Target player discards a card. If that player discards a land card this way, they lose 3 life.
+SVar:DBLoseLife:DB$ LoseLife | Defined$ Targeted | LifeAmount$ 3 | ConditionDefined$ Remembered | ConditionPresent$ Land | ConditionCompare$ GE1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Target player discards a card. If that player discards a land card this way, they lose 3 life.
