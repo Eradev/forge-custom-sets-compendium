@@ -1,0 +1,14 @@
+Name:Sphinx Mentor
+ManaCost:4 U U
+Types:Creature Sphinx
+PT:3/4
+
+K:Flying
+
+K:Prowess
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this creature enters or dies, draw a card.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this creature dies, draw a card.
+SVar:TrigDraw:DB$ Draw | Defined$ TriggeredCardController
+
+Oracle:Flying, prowess\nWhen this creature enters or dies, draw a card.

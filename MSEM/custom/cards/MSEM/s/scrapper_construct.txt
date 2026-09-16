@@ -1,0 +1,10 @@
+Name:Scrapper Construct
+ManaCost:2
+Types:Artifact Creature Construct
+PT:2/1
+
+K:Vigilance
+
+K:Trample
+
+Oracle:Vigilance, trample

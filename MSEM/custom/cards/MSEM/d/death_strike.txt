@@ -1,0 +1,7 @@
+Name:Death Strike
+ManaCost:2 B B
+Types:Sorcery
+
+A:SP$ Destroy | TargetMin$ 4 | TargetMax$ 4 | ValidTgts$ Creature | SpellDescription$ Destroy four target creatures.
+
+Oracle:Destroy four target creatures.

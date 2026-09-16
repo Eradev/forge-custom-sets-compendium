@@ -1,0 +1,14 @@
+Name:Tainted Grounds
+ManaCost:1 B
+Types:Enchantment Aura
+
+K:Enchant:Land
+
+S:Mode$ Continuous | Affected$ Land.EnchantedBy | RemoveLandTypes$ True | RemoveAllAbilities$ True | AddAbility$ ABManaC | Description$ Enchanted land loses all land types and abilities and has "{T}: Add {C}"
+SVar:ABManaC:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+Oracle:Enchant land\nEnchanted land loses all land types and abilities and has "{T}: Add {C}".
+
+SVar:AttachAITgts:Land.nonBasic
+
+SVar:AttachAILogic:Curse

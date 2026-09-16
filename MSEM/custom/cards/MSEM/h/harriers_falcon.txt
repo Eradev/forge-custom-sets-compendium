@@ -1,0 +1,10 @@
+Name:Harrier's Falcon
+ManaCost:W
+Types:Creature Bird
+PT:2/1
+
+K:Flying
+
+K:CARDNAME can't attack or block alone.
+
+Oracle:Flying\nThis creature can't attack or block alone.

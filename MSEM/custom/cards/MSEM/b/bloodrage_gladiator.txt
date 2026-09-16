@@ -1,0 +1,5 @@
+Name:Bloodrage Gladiator
+ManaCost:2 B
+Types:Creature Human Berserker
+PT:3/2
+Oracle:

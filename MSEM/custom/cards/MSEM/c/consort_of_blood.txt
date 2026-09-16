@@ -1,0 +1,10 @@
+Name:Consort of Blood
+ManaCost:1 B B
+Types:Creature Vampire
+PT:2/2
+
+K:Menace
+
+K:Lifelink
+
+Oracle:Menace, lifelink

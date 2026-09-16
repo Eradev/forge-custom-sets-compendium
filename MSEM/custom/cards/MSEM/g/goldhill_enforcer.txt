@@ -1,0 +1,10 @@
+Name:Goldhill Enforcer
+ManaCost:1 W
+Types:Creature Human Knight
+PT:1/3
+
+A:AB$ Tap | Cost$ W T | ValidTgts$ Creature | SpellDescription$ Tap target creature.
+
+Oracle:{W}, {T}: Tap target creature.
+
+SVar:NonCombatPriority:10

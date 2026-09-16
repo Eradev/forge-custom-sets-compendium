@@ -1,0 +1,8 @@
+Name:Aegis Champion
+ManaCost:W
+Types:Creature Human Soldier
+PT:0/2
+
+A:AB$ Pump | Cost$ 1 W | Defined$ Self | KW$ Indestructible | SpellDescription$ This creature gains indestructible until end of turn. (Damage and effects that say "destroy" don't destroy it. If its toughness is 0 or less, it still dies.)
+
+Oracle:{1}{W}: This creature gains indestructible until end of turn. (Damage and effects that say "destroy" don't destroy it. If its toughness is 0 or less, it still dies.)

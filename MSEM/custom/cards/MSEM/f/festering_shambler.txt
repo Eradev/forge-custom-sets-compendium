@@ -1,0 +1,8 @@
+Name:Festering Shambler
+ManaCost:1 B
+Types:Creature Rat
+PT:1/2
+
+K:Deathtouch
+
+Oracle:Deathtouch

@@ -1,0 +1,5 @@
+Name:Ancient Statue
+ManaCost:3
+Types:Artifact Creature Golem
+PT:2/2
+Oracle:

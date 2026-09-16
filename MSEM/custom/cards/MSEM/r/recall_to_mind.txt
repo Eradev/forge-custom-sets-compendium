@@ -1,0 +1,8 @@
+Name:Recall to Mind
+ManaCost:2 U U
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Hand | TgtPrompt$ Choose target instant or sorcery card in your graveyard | ValidTgts$ Instant.YouCtrl,Sorcery.YouCtrl | SubAbility$ DBDraw | SpellDescription$ Return target instant or sorcery card from your graveyard to your hand. Draw a card.
+SVar:DBDraw:DB$ Draw
+
+Oracle:Return target instant or sorcery card from your graveyard to your hand.\nDraw a card.

@@ -64,10 +64,11 @@ Storytime (101)                       -  98% (99/101)
     * Arpechian Champion
     * Jara Champion
 High Noon (HI12)                      -  48% (136/279)
-Kaleidoscope (KLC)                    -  100%
+Zero (ZER)                            -  37% (92/252)
 Path of Shadows (PSA)                 -  99% (208/209)
   Missing cards:
      * The Sacred Gate
+Kaleidoscope (KLC)                    -  100%
 A Tourney at Whiterun (TWR)           -  100%
 Tides of War (TOW)                    -  37% (102/271)
 Pyramids of Atuum (POA)               -  98% (126/128)

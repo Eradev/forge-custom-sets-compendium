@@ -1,0 +1,11 @@
+Name:Kotis, Promised General
+ManaCost:2 W W
+Types:Legendary Creature Spirit Soldier
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Creature.Other+YouCtrl | AddPower$ 1 | AddToughness$ 1 | Description$ Other creatures you control get +1/+1.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigChangeZone | OptionalDecider$ You | TriggerDescription$ When NICKNAME dies, you may return it to its owner's hand.
+SVar:TrigChangeZone:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | Defined$ TriggeredNewCardLKICopy
+
+Oracle:Other creatures you control get +1/+1.\nWhen Kotis dies, you may return it to its owner's hand.
