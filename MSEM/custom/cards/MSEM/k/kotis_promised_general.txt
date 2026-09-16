@@ -8,4 +8,4 @@ S:Mode$ Continuous | Affected$ Creature.Other+YouCtrl | AddPower$ 1 | AddToughne
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigChangeZone | OptionalDecider$ You | TriggerDescription$ When this creature dies, you may return it to its owner's hand.
 SVar:TrigChangeZone:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | Defined$ TriggeredNewCardLKICopy
 
-Oracle:Other creatures you control get +1/+1.\nWhen this creature dies, you may return it to its owner's hand.
+Oracle:Other creatures you control get +1/+1.\nWhen Kotis dies, you may return it to its owner's hand.
