@@ -1,0 +1,11 @@
+Name:Unpredictable Blizzard
+ManaCost:1 U
+Types:Instant
+
+K:Kicker:1 U
+
+A:SP$ Tap | TargetMin$ 0 | TargetMax$ 3 | ValidTgts$ Creature | SubAbility$ TrigPump | SpellDescription$ Tap up to three target creatures. If this spell was kicked, those creatures don't untap during their controller's next untap step.
+SVar:TrigPump:DB$ Pump | Defined$ Targeted | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent | ConditionCheck$ WasKicked | ConditionSVarCompare$ GE1
+SVar:WasKicked:Count$Kicked.1.0
+
+Oracle:Kicker {1}{U} (You may pay an additional {1}{U} as you cast this spell.)\nTap up to three target creatures. If this spell was kicked, those creatures don't untap during their controller's next untap step.
