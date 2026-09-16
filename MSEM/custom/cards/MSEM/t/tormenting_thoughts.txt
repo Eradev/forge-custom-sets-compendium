@@ -1,0 +1,11 @@
+Name:Tormenting Thoughts
+ManaCost:R R
+Types:Sorcery
+
+A:SP$ Draw | Cost$ Discard<1/Card> | NumCards$ 2 | SubAbility$ DBDraw | SpellDescription$ Draw two cards. Then if you cast another instant or sorcery spell this turn, draw a card.
+SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ InstSorcCast | ConditionSVarCompare$ GE1
+SVar:InstSorcCast:Count$ThisTurnCast_Card.!CastSaSource+Instant+YouCtrl,Card.!CastSaSource+Sorcery+YouCtrl
+
+Oracle:As an additional cost to cast this spell, discard a card.\nDraw two cards. Then if you cast another instant or sorcery spell this turn, draw a card.
+
+DeckHints:Type$Instant|Sorcery

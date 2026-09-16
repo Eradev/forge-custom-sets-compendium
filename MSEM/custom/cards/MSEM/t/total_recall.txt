@@ -1,0 +1,13 @@
+Name:Total Recall
+ManaCost:X U U U
+Types:Instant
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Exile | TargetMin$ 0 | TargetMax$ X | MaxTotalTargetCMC$ X | ValidTgts$ Instant.YouOwn,Sorcery.YouOwn | TgtPrompt$ Select up to X target instant and/or sorcery cards with total mana value X or less from your graveyard | RememberChanged$ True | SubAbility$ DBCopyCast | SpellDescription$ Exile up to X target instant and/or sorcery cards with total mana value X or less from your graveyard. You may cast a copy of each card exiled this way without paying its mana cost.
+SVar:DBCopyCast:DB$ Play | Valid$ Card.IsRemembered | ValidZone$ Exile | Controller$ You | CopyCard$ True | WithoutManaCost$ True | ValidSA$ Spell | Optional$ True | Amount$ All | SubAbility$ DBExileSelf
+SVar:DBExileSelf:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Count$xPaid
+
+Oracle:Exile up to X target instant and/or sorcery cards with total mana value X or less from your graveyard. You may cast a copy of each card exiled this way without paying its mana cost. Exile Total Recall.
+
+DeckHints:Type$Instant|Sorcery & Ability$Graveyard
