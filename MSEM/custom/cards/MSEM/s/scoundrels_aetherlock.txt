@@ -1,0 +1,13 @@
+Name:Scoundrel's Aetherlock
+ManaCost:2
+Types:Artifact Equipment
+
+K:Equip:2
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | Description$ Equipped creature gets +2/+2.
+
+A:AB$ Attach | Cost$ 1 | ValidTgts$ Rogue | TgtPrompt$ Select target Rogue | SpellDescription$ Attach this equipment to target Rogue.
+
+Oracle:Equipped creature gets +2/+2.\n{1}: Attach this equipment to target Rogue.\nEquip {2}
+
+DeckNeeds:Type$Rogue
