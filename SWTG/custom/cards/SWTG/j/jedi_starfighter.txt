@@ -14,4 +14,4 @@ SVar:GrantSpaceflight:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Car
 
 A:AB$ ChangeZone | Named$ Meditate | Cost$ 1 W | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
 
-Oracle:Spaceflight (This creature can only block or be blocked by creatures with spaceflight.)\nWhen this creature enters, up to two target Jedi creatures you control gain spaceflight until end of turn.\nMeditate 1W (Return this creature to its owner's hand. Meditate only as a sorcery.)
+Oracle:Spaceflight (This creature can only block or be blocked by creatures with spaceflight.)\nWhen this creature enters, up to two target Jedi creatures you control gain spaceflight until end of turn.\nMeditate {1}{W} (Return this creature to its owner's hand. Meditate only as a sorcery.)
