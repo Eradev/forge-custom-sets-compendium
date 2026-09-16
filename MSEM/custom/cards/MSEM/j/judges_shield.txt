@@ -1,0 +1,9 @@
+Name:Judges' Shield
+ManaCost:W
+Types:Instant
+
+A:SP$ Detain | ValidTgts$ Creature | ValidTgtsDesc$ creature | SubAbility$ DBScry | SpellDescription$ Detain target creature. (Until your next turn, that creature can't attack or block and its activated abilities can't be activated.)
+
+SVar:DBScry:DB$ Scry | ScryNum$ 1
+
+Oracle:Detain target creature. (Until your next turn, that creature can't attack or block and its activated abilities can't be activated.)\nScry 1.
