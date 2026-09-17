@@ -1,0 +1,13 @@
+Name:Aven Warmonger
+ManaCost:5 W
+Types:Creature Bird Soldier
+PT:5/5
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.!token+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever a nontoken creature you control enters, you may pay {1}{W}. If you do, create a 1/1 white Bird creature token with flying.
+SVar:TrigToken:AB$ Token | Cost$ 1 W | TokenScript$ w_1_1_bird_flying
+
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever a nontoken creature you control enters, you may pay {1}{W}. If you do, create a 1/1 white Bird creature token with flying.
+
+DeckHas:Ability$Token

@@ -1,0 +1,11 @@
+Name:Arbiter of Silence
+ManaCost:6 W W
+Types:Creature Angel
+PT:5/5
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this creature enters, exile all other creatures until it leaves the battlefield. (They return to the battlefield under their owners' control.)
+SVar:TrigExile:DB$ ChangeZoneAll | Origin$ Battlefield | Destination$ Exile | ChangeType$ Creature.Other | Duration$ UntilHostLeavesPlay
+
+Oracle:Flying\nWhen this creature enters, exile all other creatures until it leaves the battlefield. (They return to the battlefield under their owners' control.)

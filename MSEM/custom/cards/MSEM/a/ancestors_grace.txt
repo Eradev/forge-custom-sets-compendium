@@ -1,0 +1,14 @@
+Name:Ancestors' Grace
+ManaCost:4 W
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChange | OptionalDecider$ You | TriggerDescription$ When CARDNAME enters, you may search your library for an enchantment card, reveal it, put it into your hand, then shuffle.
+SVar:TrigChange:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Enchantment | ChangeNum$ 1 | Shuffle$ True
+
+S:Mode$ Continuous | Affected$ Enchantment.YouCtrl+!namedAncestors' Grace | AddKeyword$ Indestructible | Description$ Enchantments you control not named CARDNAME have indestructible.
+
+S:Mode$ Continuous | Affected$ Card.EnchantedBy+YouCtrl | AddKeyword$ Indestructible | Description$ Enchanted permanents you control have indestructible.
+
+Oracle:When Ancestors' Grace enters, you may search your library for an enchantment card, reveal it, put it into your hand, then shuffle.\nEnchantments you control not named Ancestors' Grace have indestructible.\nEnchanted permanents you control have indestructible.
+
+DeckHints:Type$Enchantment

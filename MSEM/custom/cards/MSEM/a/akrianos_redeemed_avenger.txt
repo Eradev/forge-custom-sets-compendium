@@ -1,0 +1,17 @@
+Name:Akrianos, Redeemed Avenger
+ManaCost:2 G W
+Types:Legendary Planeswalker Akrianos
+Loyalty:4
+
+A:AB$ Token | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | TokenScript$ w_1_1_soldier | SpellDescription$ Create a 1/1 white Soldier creature token.
+
+A:AB$ Pump | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | NumAtt$ +3 | NumDef$ +3 | SubAbility$ DBPumpAll | SpellDescription$ Until end of turn, target creature you control gets +3/+3 and other creatures you control get +1/+1.
+SVar:DBPumpAll:DB$ PumpAll | ValidCards$ Targeted.Other+YouCtrl+Creature | NumAtt$ +1 | NumDef$ +1
+
+A:AB$ Effect | Cost$ SubCounter<8/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Akrianos, Redeemed Avenger | Duration$ Permanent | StaticAbilities$ STPump | SpellDescription$ You get an emblem with "Each creature you control gets +1/+1 for each other creature you control."
+SVar:STPump:Mode$ Continuous | EffectZone$ Command | AffectedZone$ Battlefield | Affected$ Creature.YouCtrl | AddPower$ X | AddToughness$ X | Description$ Each creature you control gets +1/+1 for each other creature you control.
+SVar:X:Count$Valid Creature.YouCtrl+Other
+
+Oracle:[+1]: Create a 1/1 white Soldier creature token.\n[-2]: Until end of turn, target creature you control gets +3/+3 and other creatures you control get +1/+1.\n[-8]: You get an emblem with "Each creature you control gets +1/+1 for each other creature you control."
+
+DeckHas:Ability$Token & Type$Soldier
