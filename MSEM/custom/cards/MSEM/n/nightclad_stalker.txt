@@ -1,0 +1,12 @@
+Name:Nightclad Stalker
+ManaCost:3 B
+Types:Creature Vampire
+PT:2/3
+
+K:Flying
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddKeyword$ Deathtouch & Lifelink | IsPresent$ Card.EnchantedBy | Description$ As long as this creature is enchanted, it gets +1/+0 and has deathtouch and lifelink.
+
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nAs long as this creature is enchanted, it gets +1/+0 and has deathtouch and lifelink.
+
+SVar:EnchantMe:Once

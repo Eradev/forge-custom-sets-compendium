@@ -1,0 +1,10 @@
+Name:Norn's Ultimatum
+ManaCost:5 W W
+Types:Sorcery
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ X | EffectZone$ All | Description$ This spell costs {X} less to cast, where X is half the number of creatures on the battlefield, rounded down.
+SVar:X:Count$Valid Creature/HalfDown
+
+A:SP$ DestroyAll | ValidCards$ Creature | SpellDescription$ Destroy all creatures.
+
+Oracle:This spell costs {X} less to cast, where X is half the number of creatures on the battlefield, rounded down.\nDestroy all creatures.

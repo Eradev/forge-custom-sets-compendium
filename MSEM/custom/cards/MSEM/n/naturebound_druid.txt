@@ -1,0 +1,11 @@
+Name:Naturebound Druid
+ManaCost:G
+Types:Creature Human Druid
+PT:0/3
+
+K:Defender
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSearch | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may search your library for a basic land card, reveal it, then shuffle and put that card on top.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Library | LibraryPosition$ 0 | ChangeType$ Land.Basic | Optional$ True
+
+Oracle:Defender (This creature can't attack.)\nWhen this creature enters, you may search your library for a basic land card, reveal it, then shuffle and put that card on top.

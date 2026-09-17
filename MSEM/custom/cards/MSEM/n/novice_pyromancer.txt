@@ -1,0 +1,9 @@
+Name:Novice Pyromancer
+ManaCost:2 R
+Types:Creature Human Shaman
+PT:2/2
+
+T:Mode$ SpellCast | ValidCard$ Card.nonCreature | ValidActivatingPlayer$ You | Execute$ TrigDamage | TriggerDescription$ Whenever you cast a noncreature spell, this creature deals 1 damage to target player or planeswalker.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Player,Planeswalker | NumDmg$ 1
+
+Oracle:Whenever you cast a noncreature spell, this creature deals 1 damage to target player or planeswalker.

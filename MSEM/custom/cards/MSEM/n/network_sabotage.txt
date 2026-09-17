@@ -1,0 +1,9 @@
+Name:Network Sabotage
+ManaCost:1 B
+Types:Sorcery
+
+A:SP$ Discard | Cost$ tapXType<1/Artifact.untapped/untapped artifact you control> | ValidTgts$ Player | NumCards$ 2 | Mode$ TgtChoose | SpellDescription$ As an additional cost to cast this spell, tap an untapped artifact you control.\nTarget player discards two cards.
+
+Oracle:As an additional cost to cast this spell, tap an untapped artifact you control.\nTarget player discards two cards.
+
+DeckHints:Type$Artifact
