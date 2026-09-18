@@ -1,0 +1,12 @@
+Name:Azun's Play
+ManaCost:2 R
+Types:Sorcery
+
+A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ X | SpellDescription$ This spell deals damage to any target equal to the number of cards in your hand.
+SVar:X:Count$ValidHand Card.YouOwn
+
+T:Mode$ Blocks | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ PayQuickdraw | TriggerDescription$ Quickdraw {R}{R} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)
+T:Mode$ AttackerBlocked | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ PayQuickdraw | TriggerDescription$ Quickdraw {R}{R} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)
+SVar:PayQuickdraw:DB$ Play | Named$ Quickdraw | PlayCost$ R R | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
+
+Oracle:This spell deals damage to any target equal to the number of cards in your hand.\nQuickdraw {R}{R} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)
