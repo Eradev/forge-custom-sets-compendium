@@ -1,0 +1,12 @@
+Name:Graygulch Howler
+ManaCost:2 W
+Types:Creature Dog Spirit
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigGainLife | TriggerDescription$ When this creature dies, you gain 1 life for each Spirit you control.
+SVar:TrigGainLife:DB$ GainLife | Defined$ You | LifeAmount$ X
+SVar:X:Count$Valid Spirit.YouCtrl
+
+Oracle:When this creature dies, you gain 1 life for each Spirit you control.
+
+DeckHints:Type$Spirit
