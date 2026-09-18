@@ -115,6 +115,7 @@ Examples on how to implement custom keywords and mechanisms.
 * [Mirage](#mirage)
 * [Motivate](#motivate)
 * [Paranoia](#paranoia)
+* [Quickdraw](#quickdraw)
 * [Rerun](#rerun)
 * [Showcase](#showcase)
 * [Storied](#storied)
@@ -504,6 +505,24 @@ Implementation:
 ```text
 T:Mode$ ChangesZone | TriggerZones$ Hand | ValidCard$ Permanent.YouCtrl | Origin$ Battlefield | Destination$ Any | Execute$ PayParanoia | TriggerDescription$ Paranoia {G} (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)
 SVar:PayParanoia:DB$ Play | Named$ Paranoia | PlayCost$ G | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Quickdraw
+
+Quickdraw is designed as:
+
+```text
+Quickdraw {2}{R} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)
+```
+
+Implementation:
+
+```text
+T:Mode$ Blocks | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ PayQuickdraw | TriggerDescription$ Quickdraw {2}{R} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)
+T:Mode$ AttackerBlocked | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ PayQuickdraw | TriggerDescription$ Quickdraw {2}{R} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)
+SVar:PayQuickdraw:DB$ Play | Named$ Quickdraw | PlayCost$ 2 R | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
