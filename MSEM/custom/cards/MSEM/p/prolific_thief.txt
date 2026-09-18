@@ -9,4 +9,4 @@ T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | Execute$ Tri
 SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1 | SubAbility$ DBDiscard
 SVar:DBDiscard:DB$ Discard | Defined$ You | NumCards$ 1 | Mode$ TgtChoose
 
-Oracle:his creature can't be blocked as long as another creature you control is attacking.\nWhenever this creature deals combat damage to a player, draw a card then discard a card.
+Oracle:This creature can't be blocked as long as another creature you control is attacking.\nWhenever this creature deals combat damage to a player, draw a card then discard a card.
