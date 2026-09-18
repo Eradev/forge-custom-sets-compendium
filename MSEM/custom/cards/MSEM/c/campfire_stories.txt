@@ -1,0 +1,11 @@
+Name:Campfire Stories
+ManaCost:2 R
+Types:Sorcery
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ +3 | NumDef$ +2 | KW$ Menace | SpellDescription$ Target creature gets +3/+2 and gains menace until end of turn.
+
+T:Mode$ Blocks | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ PayQuickdraw | TriggerDescription$ Quickdraw {1}{R} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)
+T:Mode$ AttackerBlocked | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ PayQuickdraw | TriggerDescription$ Quickdraw {1}{R} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)
+SVar:PayQuickdraw:DB$ Play | Named$ Quickdraw | PlayCost$ 1 R | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
+
+Oracle:Target creature gets +3/+2 and gains menace until end of turn.\nQuickdraw {1}{R} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)
