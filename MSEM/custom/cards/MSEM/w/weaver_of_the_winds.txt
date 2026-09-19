@@ -1,0 +1,18 @@
+Name:Weaver of the Winds
+ManaCost:4 U
+Types:Creature Elf Shaman
+PT:2/5
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigVision | TriggerDescription$ Vision (Whenever this or another creature you control enters, reveal the top card of your library. Then you may put that card into your graveyard.)
+SVar:TrigVision:DB$ Dig | DigNum$ 1 | Reveal$ True | RememberRevealed$ True | ChangeNum$ All | DestinationZone$ Library | LibraryPosition$ 0 | SubAbility$ DBMayGrave
+SVar:DBMayGrave:DB$ ChangeZone | Defined$ Remembered | Origin$ Library | Destination$ Graveyard | Optional$ True | SubAbility$ DBEnvision
+SVar:DBEnvision:DB$ ImmediateTrigger | Static$ True | ConditionDefined$ Remembered | ConditionPresent$ Instant,Sorcery | ConditionCompare$ GE1 | Execute$ DBEnvisionSignal | SubAbility$ DBCleanup
+SVar:DBEnvisionSignal:DB$ Cleanup | Named$ Envision
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+T:Mode$ AbilityResolves | ValidSource$ Card.Self | ValidSpellAbility$ Ability.NamedAbilityEnvision | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever this creature envisions an instant or sorcery card, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Vision (Whenever this or another creature you control enters, reveal the top card of your library. Then you may put that card into your graveyard.)\nWhenever this creature envisions an instant or sorcery card, draw a card.
+
+DeckHints:Type$Instant|Sorcery

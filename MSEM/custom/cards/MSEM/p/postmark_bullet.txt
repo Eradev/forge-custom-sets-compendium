@@ -1,0 +1,9 @@
+Name:Postmark Bullet
+ManaCost:2 R
+Types:Instant
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ 2 | EffectZone$ All | IsPresent$ Creature.OppCtrl+counters_GE1_BOUNTY | Description$ This spell costs {2} less to cast if an opponent controls a creature with a bounty counter on it.
+
+A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ 3 | SpellDescription$ This spell deals 3 damage to any target.
+
+Oracle:This spell costs {2} less to cast if an opponent controls a creature with a bounty counter on it.\nThis spell deals 3 damage to any target.

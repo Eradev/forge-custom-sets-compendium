@@ -1,0 +1,12 @@
+Name:Whirling Thoughts
+ManaCost:2 U
+Types:Sorcery
+
+A:SP$ Draw | Defined$ You | NumCards$ 2 | SubAbility$ TrigDiscard | SpellDescription$ Draw two cards, then discard two cards if this spell was cast during combat.
+SVar:TrigDiscard:DB$ Discard | Defined$ You | NumCards$ 2 | Mode$ TgtChoose | Phase$ BeginCombat->EndCombat
+
+T:Mode$ Blocks | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ PayQuickdraw | TriggerDescription$ Quickdraw {U} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)
+T:Mode$ AttackerBlocked | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ PayQuickdraw | TriggerDescription$ Quickdraw {U} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)
+SVar:PayQuickdraw:DB$ Play | Named$ Quickdraw | PlayCost$ U | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
+
+Oracle:Draw two cards, then discard two cards if this spell was cast during combat.\nQuickdraw {U} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)

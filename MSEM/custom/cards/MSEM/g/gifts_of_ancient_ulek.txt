@@ -1,0 +1,16 @@
+Name:Gifts of Ancient Ulek
+ManaCost:2 G
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 2 | AddToughness$ 2 | Description$ Enchanted creature gets +2/+2.
+
+T:Mode$ DamageDone | ValidSource$ Creature.YouCtrl+enchanted | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigChange | OptionalDecider$ You | TriggerDescription$ Whenever an enchanted creature you control deals combat damage to a player, you may put a permanent card from your graveyard on top of your library.
+SVar:TrigChange:DB$ ChangeZone | ValidTgts$ Permanent | TargetsWithDefinedController$ TriggeredCardController | Origin$ Graveyard | Destination$ Library | TgtPrompt$ Choose target permanent card in your graveyard
+
+DeckHints:Type$Aura
+
+Oracle:Enchant creature\nEnchanted creature gets +2/+2.\nWhenever an enchanted creature you control deals combat damage to a player, you may put a permanent card from your graveyard on top of your library.
+
+SVar:AttachAILogic:Pump

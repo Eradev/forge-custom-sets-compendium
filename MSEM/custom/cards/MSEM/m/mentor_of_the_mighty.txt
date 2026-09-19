@@ -1,0 +1,9 @@
+Name:Mentor of the Mighty
+ManaCost:2 G
+Types:Creature Elf Druid
+PT:2/2
+
+T:Mode$ ChangesZone | ValidCard$ Creature.Other+YouCtrl+powerGE4 | Origin$ Any | Destination$ Battlefield | OptionalDecider$ You | Execute$ TrigDraw | TriggerZones$ Battlefield | TriggerDescription$ Whenever another creature with power 4 or greater you control enters, you may draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Whenever another creature with power 4 or greater you control enters, you may draw a card.
