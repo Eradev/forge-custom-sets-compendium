@@ -1,0 +1,8 @@
+Name:Lonely Return
+ManaCost:1 B
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Hand | TgtPrompt$ Choose target creature card in your graveyard | ValidTgts$ Creature.YouOwn | SubAbility$ DBDraw | SpellDescription$ Return target creature card from your graveyard to your hand. If you control a Spirit, draw a card.
+SVar:DBDraw:DB$ Draw | ConditionPresent$ Spirit.YouCtrl | ConditionCompare$ GE1
+
+Oracle:Return target creature card from your graveyard to your hand. If you control a Spirit, draw a card.
