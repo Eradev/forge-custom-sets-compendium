@@ -1,0 +1,15 @@
+Name:Spirit of the Falls
+ManaCost:6 U U
+Types:Creature Spirit
+PT:7/5
+
+K:ETBReplacement:Other:ChooseCT
+SVar:ChooseCT:DB$ ChooseType | Defined$ You | Type$ Card | InvalidTypes$ Instant,Sorcery,Kindred | AILogic$ MostProminentComputerControls | SpellDescription$ As this creature enters, choose a permanent type.
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | Execute$ TrigReturnAll | TriggerDescription$ When this creature enters, return all other cards of the chosen type from the battlefield to their owners' hand.
+SVar:TrigReturnAll:DB$ ChangeZoneAll | Origin$ Battlefield | Destination$ Hand | ChangeType$ Card.ChosenType+Other
+
+A:AB$ Pump | Cost$ Discard<2/Land> | Defined$ Self | KW$ Hexproof | SpellDescription$ This creature gains hexproof until end of turn.
+
+Oracle:When this creature enters, choose a permanent type. Return all other cards of the chosen type from the battlefield to their owners' hand.\nDiscard two land cards: This creature gains hexproof until end of turn.
+
+SVar:AIPreference:DiscardCost$Land.Basic
