@@ -5,8 +5,8 @@ PT:3/3
 
 K:Haste
 
-S:Mode$ Continuous | Affected$ Card.Self | EffectZone$ Battlefield | GainsAbilitiesOf$ Land.YouCtrl+Other | GainsValidAbilities$ Activated | Description$ NICKNAME has all activated abilities of other lands you control.
+S:Mode$ Continuous | AffectedDefined$ Self | EffectZone$ Battlefield | GainsAbilitiesOf$ Land.YouCtrl+Other | GainsValidAbilities$ Activated | Description$ NICKNAME has all activated abilities of other lands you control.
 
-S:Mode$ Continuous | Affected$ Card.Self | AddType$ Land | AffectedZone$ Battlefield,Graveyard | Description$ As long as NICKNAME is on the battlefield or in your graveyard, it's a land in addition to its other types.
+S:Mode$ Continuous | AffectedDefined$ Self | AddType$ Land | AffectedZone$ Battlefield,Graveyard | Description$ As long as NICKNAME is on the battlefield or in your graveyard, it's a land in addition to its other types.
 
 Oracle:Haste\nGyr has all activated abilities of other lands you control.\nAs long as Gyr is on the battlefield or in your graveyard, it's a land in addition to its other types.

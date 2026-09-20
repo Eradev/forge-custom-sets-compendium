@@ -3,7 +3,7 @@ ManaCost:B B
 Types:Creature Zombie Samurai
 PT:2/2
 
-S:Mode$ Continuous | Affected$ Card.Self | AffectedZone$ Graveyard | EffectZone$ Graveyard | MayPlay$ True | CheckSVar$ X | SVarCompare$ GE1 | Description$ You may cast this creature from your graveyard as long as a creature an opponent controls died this turn.
+S:Mode$ Continuous | AffectedDefined$ Self | AffectedZone$ Graveyard | EffectZone$ Graveyard | MayPlay$ True | CheckSVar$ X | SVarCompare$ GE1 | Description$ You may cast this creature from your graveyard as long as a creature an opponent controls died this turn.
 SVar:X:Count$ThisTurnEntered_Graveyard_from_Battlefield_Card.Creature+OppCtrl
 
 Oracle:You may cast this creature from your graveyard as long as a creature an opponent controls died this turn.

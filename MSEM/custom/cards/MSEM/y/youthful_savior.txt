@@ -5,7 +5,7 @@ PT:2/2
 
 S:Mode$ Continuous | Affected$ You | AddKeyword$ Hexproof | Description$ You have hexproof. (You can't be the target of spells or abilities your opponents control.)
 
-S:Mode$ Continuous | Affected$ Card.Self+enchanted,Card.Self+equipped | AddKeyword$ Hexproof | Description$ Adorned — This creature has hexproof as long as it's equipped and/or enchanted.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.enchanted,Card.Self+equipped | AddKeyword$ Hexproof | Description$ Adorned — This creature has hexproof as long as it's equipped and/or enchanted.
 
 Oracle:You have hexproof.\nAdorned — This creature has hexproof as long as it's equipped and/or enchanted.
 

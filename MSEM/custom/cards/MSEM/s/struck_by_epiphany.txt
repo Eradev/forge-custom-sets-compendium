@@ -6,7 +6,7 @@ K:Flash
 
 K:Enchant:Creature
 
-S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 1 | AddToughness$ 1 | AddTrigger$ Curiosity | Description$ Enchanted creature gets +1/+1 and has "Whenever this creature deals combat damage to an opponent, draw a card."
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddPower$ 1 | AddToughness$ 1 | AddTrigger$ Curiosity | Description$ Enchanted creature gets +1/+1 and has "Whenever this creature deals combat damage to an opponent, draw a card."
 SVar:Curiosity:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Opponent | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever this creature deals combat damage to an opponent, draw a card.
 SVar:TrigDraw:DB$ Draw
 

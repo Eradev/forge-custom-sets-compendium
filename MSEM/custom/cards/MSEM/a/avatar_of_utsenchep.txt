@@ -5,7 +5,7 @@ PT:4/7
 
 K:Vigilance
 
-S:Mode$ Continuous | Affected$ Card.Self | CanBlockAny$ True | Description$ This creature can block any number of creatures.
+S:Mode$ Continuous | AffectedDefined$ Self | CanBlockAny$ True | Description$ This creature can block any number of creatures.
 
 K:All creatures able to block CARDNAME do so.
 

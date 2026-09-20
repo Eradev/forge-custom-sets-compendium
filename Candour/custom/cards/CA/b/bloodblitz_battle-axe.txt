@@ -2,7 +2,7 @@ Name:Bloodblitz Battle-Axe
 ManaCost:2
 Types:Artifact Equipment
 
-S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddKeyword$ Haste | AddPower$ 1 | Description$ Equipped creature gets +1/+0 and has haste.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddKeyword$ Haste | AddPower$ 1 | Description$ Equipped creature gets +1/+0 and has haste.
 
 K:Equip:PayLife<3>
 

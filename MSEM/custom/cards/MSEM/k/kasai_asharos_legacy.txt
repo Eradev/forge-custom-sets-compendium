@@ -2,7 +2,7 @@ Name:Kasai, Asharo's Legacy
 ManaCost:R R
 Types:Legendary Artifact Equipment
 
-S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | AddSVar$ AE | Description$ Equipped creature gets +2/+2.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddPower$ 2 | AddToughness$ 2 | AddSVar$ AE | Description$ Equipped creature gets +2/+2.
 SVar:AE:SVar:HasAttackEffect:TRUE
 
 T:Mode$ Attacks | ValidCard$ Card.EquippedBy | Execute$ TrigEffect | TriggerDescription$ Whenever equipped creature attacks, the next time an instant or sorcery source you control would deal damage to a creature, player, or planeswalker this turn, it deals that much damage plus 2 instead.

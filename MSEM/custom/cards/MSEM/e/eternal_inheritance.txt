@@ -8,7 +8,7 @@ SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_samurai | RememberTokens$ True | S
 SVar:DBAttach:DB$ Attach | Defined$ Remembered | Optional$ You | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
-S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 1 | AddToughness$ 1 | Description$ Equipped creature gets +1/+1.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddPower$ 1 | AddToughness$ 1 | Description$ Equipped creature gets +1/+1.
 
 K:Equip:1
 

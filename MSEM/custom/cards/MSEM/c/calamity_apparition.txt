@@ -8,12 +8,12 @@ SVar:ApparitionChoice:DB$ GenericChoice | Choices$ Fade,Linger | Defined$ You | 
 SVar:Fade:DB$ Pump | SpellDescription$ Fade
 SVar:Linger:DB$ Pump | SpellDescription$ Linger
 
-S:Mode$ Continuous | Affected$ Card.Self+ChosenModeFade | AddTrigger$ FadeDeathTrigger | Description$ Fade — When this creature dies, you gain 2 life and scry 2.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeFade | AddTrigger$ FadeDeathTrigger | Description$ Fade — When this creature dies, you gain 2 life and scry 2.
 SVar:FadeDeathTrigger:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigFadeDeath | TriggerDescription$ When this creature dies, you gain 2 life and scry 2.
 SVar:TrigFadeDeath:DB$ GainLife | LifeAmount$ 2 | SubAbility$ DBScry
 SVar:DBScry:DB$ Scry | ScryNum$ 2
 
-S:Mode$ Continuous | Affected$ Card.Self+ChosenModeLinger | AddTrigger$ LingerDeathTrigger | Description$ Linger — When this creature dies, put a +1/+1 counter on target creature you control.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeLinger | AddTrigger$ LingerDeathTrigger | Description$ Linger — When this creature dies, put a +1/+1 counter on target creature you control.
 SVar:LingerDeathTrigger:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigLingerDeath | TriggerDescription$ When this creature dies, put a +1/+1 counter on target creature you control.
 SVar:TrigLingerDeath:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control
 

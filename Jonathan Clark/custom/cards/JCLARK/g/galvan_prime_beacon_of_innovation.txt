@@ -1,4 +1,4 @@
-Name:Galvan Prime, Beacon of Innovation 
+Name:Galvan Prime, Beacon of Innovation
 ManaCost:no cost
 Types:Legendary Land Planet
 
@@ -9,7 +9,7 @@ A:AB$ Mana | Cost$ T | Produced$ U | SpellDescription$ Add {U}.
 
 K:Station:12
 
-S:Mode$ Continuous | Affected$ Card.Self+counters_GE12_CHARGE | AddAbility$ GainHexproof | Description$ STATION 12+ {U}, {T}: You and permanents you control gain hexproof until the end of turn.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.counters_GE12_CHARGE | AddAbility$ GainHexproof | Description$ STATION 12+ {U}, {T}: You and permanents you control gain hexproof until the end of turn.
 SVar:GainHexproof:AB$ Pump | Cost$ U T | Defined$ You | KW$ Hexproof | SubAbility$ DBPumpAll | SpellDescription$ You and permanents you control gain hexproof until the end of turn.
 SVar:DBPumpAll:DB$ PumpAll | ValidCards$ Permanent.YouCtrl | KW$ Hexproof
 

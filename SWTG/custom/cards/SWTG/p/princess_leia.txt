@@ -6,7 +6,7 @@ PT:2/2
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When CARDNAME enters, create three 1/1 white Rebel creature tokens.
 SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_rebel | TokenAmount$ 3
 
-S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ CARDNAME gets +1/+1 for each other Rebel creature you control.
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ X | AddToughness$ X | Description$ CARDNAME gets +1/+1 for each other Rebel creature you control.
 SVar:X:Count$Valid Creature.Rebel+Other+YouCtrl
 
 S:Mode$ Continuous | Affected$ Creature.Rebel+Other+YouCtrl | AddPower$ 1 | AddToughness$ 1 | Description$ Other Rebel creatures you control get +1/+1.

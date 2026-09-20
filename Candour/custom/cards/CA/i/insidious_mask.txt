@@ -2,7 +2,7 @@ Name:Insidious Mask
 ManaCost:1
 Types:Artifact Equipment
 
-S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddKeyword$ Shroud | Description$ Equipped creature has shroud. (It can't be the target of spells or abilities.)
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddKeyword$ Shroud | Description$ Equipped creature has shroud. (It can't be the target of spells or abilities.)
 
 A:AB$ Effect | Cost$ 2 | RememberObjects$ Equipped | ExileOnMoved$ Battlefield | StaticAbilities$ Unblockable | SpellDescription$ Equipped creature can't be blocked this turn.
 SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ This creature can't be blocked this turn.

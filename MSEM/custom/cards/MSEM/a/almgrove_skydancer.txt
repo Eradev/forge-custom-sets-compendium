@@ -25,7 +25,7 @@ SVar:GoldenCheck1:SVar$GoldenAgeSpell/Plus.GoldenAgeAbility
 SVar:GoldenCheckFinal:SVar$GoldenCheck1/Plus.GoldenAgeAttack
 #-------------------
 
-S:Mode$ Continuous | Affected$ Card.Self | AffectedZone$ Graveyard | EffectZone$ Graveyard | MayPlay$ True | CheckSVar$ IsRenaissance | SVarCompare$ EQ1 | Description$ You may cast this card from your graveyard as long as you're in a renaissance.
+S:Mode$ Continuous | AffectedDefined$ Self | AffectedZone$ Graveyard | EffectZone$ Graveyard | MayPlay$ True | CheckSVar$ IsRenaissance | SVarCompare$ EQ1 | Description$ You may cast this card from your graveyard as long as you're in a renaissance.
 SVar:IsRenaissance:Count$ValidCommand Effect.YouCtrl+namedGolden Age/LimitMax.1
 
 Oracle:Flying, lifelink\nGolden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)\nYou may cast this card from your graveyard as long as you're in a renaissance.

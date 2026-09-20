@@ -5,7 +5,7 @@ PT:3/1
 
 K:Mentor
 
-S:Mode$ Continuous | Affected$ Card.Self+attacking | AddKeyword$ First Strike | Description$ This creature has first strike as long as it's attacking.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.attacking | AddKeyword$ First Strike | Description$ This creature has first strike as long as it's attacking.
 
 T:Mode$ Mentored | ValidSource$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever this creature mentors a creature, that creature gains first strike until end of turn.
 SVar:TrigPump:DB$ Pump | Defined$ TriggeredTargetLKICopy | KW$ First Strike

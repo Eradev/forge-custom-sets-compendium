@@ -3,7 +3,7 @@ ManaCost:3
 Types:Legendary Artifact Equipment
 K:Equip:2
 
-S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddAbility$ OmnitrixActivate | AddTrigger$ OmniPhaseOut | Description$ Equipped creature has "{3}, {T} For each color of mana spent to activate this ability, you get that many experience counters. Then search your library for an Alien creature card with mana value less than or equal to the number of experience counters you have. You may cast it without paying its mana cost. Whenever a creature enters this way, this creature phases out until it leaves the battlefield."
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddAbility$ OmnitrixActivate | AddTrigger$ OmniPhaseOut | Description$ Equipped creature has "{3}, {T} For each color of mana spent to activate this ability, you get that many experience counters. Then search your library for an Alien creature card with mana value less than or equal to the number of experience counters you have. You may cast it without paying its mana cost. Whenever a creature enters this way, this creature phases out until it leaves the battlefield."
 SVar:OmnitrixActivate:AB$ Effect | Cost$ 3 T | Named$ OmniActivate | SubAbility$ DBGainExp | SpellDescription$ For each color of mana spent to activate this ability, you get that many experience counters. Then search your library for an Alien creature card with mana value less than or equal to the number of experience counters you have. You may cast it without paying its mana cost. Whenever a creature enters this way, this creature phases out until it leaves the battlefield.
 SVar:Y:Count$ManaColorsPaid
 SVar:DBGainExp:DB$ PutCounter | Defined$ You | CounterType$ Experience | CounterNum$ Y | SubAbility$ DBSearchAndCast

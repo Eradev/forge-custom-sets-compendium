@@ -6,7 +6,7 @@ PT:3/4
 K:Menace
 
 A:AB$ Pump | Cost$ 1 U B T | ValidTgts$ Creature | TgtPrompt$ Select target creature | RememberPumped$ True | PrecostDesc$ Absorption — | SpellDescription$ NICKNAME gains all abilities of target creature until end of turn.
-S:Mode$ Continuous | Affected$ Card.Self | EffectZone$ Battlefield | GainsAbilitiesOf$ Card.IsRemembered | GainsTriggerAbsOf$ Card.IsRemembered | GainsAbilitiesOfZones$ Battlefield
+S:Mode$ Continuous | AffectedDefined$ Self | EffectZone$ Battlefield | GainsAbilitiesOf$ Card.IsRemembered | GainsTriggerAbsOf$ Card.IsRemembered | GainsAbilitiesOfZones$ Battlefield
 T:Mode$ Phase | Phase$ End of Turn | Static$ True | Execute$ DBCleanup
 
 T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Equipment+YouOwn+namedThe Omnitrix+AttachedTo Card.Self | Execute$ TrigTransform | TriggerDescription$ At the beginning of your end step, if NICKNAME is equipped with the Omnitrix, exile NICKNAME then return him to the battlefield transformed under his owner's control.
@@ -32,7 +32,7 @@ K:First Strike
 
 T:Mode$ ChangesZone | ValidCard$ Creature.OppCtrl | Origin$ Battlefield | Destination$ Graveyard | OptionalDecider$ You | Execute$ TrigExile | TriggerZones$ Battlefield | TriggerDescription$ Frenzied Absorption — Whenever a creature an opponent controls dies, you may exile it. If you do, NICKNAME gains all abilities of that card for as long as it remains exiled.
 SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | Defined$ TriggeredNewCardLKICopy
-S:Mode$ Continuous | Affected$ Card.Self | GainsAbilitiesOf$ Card.ExiledWithSource | GainsTriggerAbsOf$ Card.ExiledWithSource | GainsAbilitiesOfZones$ Exile
+S:Mode$ Continuous | AffectedDefined$ Self | GainsAbilitiesOf$ Card.ExiledWithSource | GainsTriggerAbsOf$ Card.ExiledWithSource | GainsAbilitiesOfZones$ Exile
 
 T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigDealDamage | TriggerZones$ Battlefield | TriggerDescription$ When NICKNAME attacks, he deals damage equal to his power to up to one target creature or planeswalker.
 SVar:TrigDealDamage:DB$ DealDamage | ValidTgts$ Creature,Planeswalker | TargetMin$ 0 | TargetMax$ 1 | NumDmg$ X | DamageSource$ Self
