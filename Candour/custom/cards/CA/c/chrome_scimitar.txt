@@ -5,7 +5,7 @@ Types:Artifact Equipment
 T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Any | Destination$ Battlefield | OptionalDecider$ You | Execute$ TrigExile | TriggerDescription$ Imprint — When this Equipment enters, you may exile a card from your hand.
 SVar:TrigExile:DB$ ChangeZone | Imprint$ True | Origin$ Hand | Destination$ Exile | ChangeType$ Card | ChangeNum$ 1
 
-S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddPower$ X | AddToughness$ X | Description$ Equipped creature gets +2/+2 for each of the exiled card's colors.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddPower$ X | AddToughness$ X | Description$ Equipped creature gets +2/+2 for each of the exiled card's colors.
 SVar:X:Imprinted$CardNumColors/Times.2
 
 K:Equip:PayLife<3>

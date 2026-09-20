@@ -8,7 +8,7 @@ SVar:TrigAttach:DB$ Attach | ValidTgts$ Creature | TgtPrompt$ Select target crea
 T:Mode$ Attached | ValidSource$ Card.Self | ValidTarget$ Creature | TriggerZones$ Battlefield | Execute$ TrigDealDamage | TriggerDescription$ Whenever this Equipment becomes attached to a creature, it deals 2 damage to that creature.
 SVar:TrigDealDamage:DB$ DealDamage | Defined$ TriggeredTargetLKICopy | NumDmg$ 2
 
-S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddPower$ 3 | Description$ Equipped creature gets +3/+0.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddPower$ 3 | Description$ Equipped creature gets +3/+0.
 
 K:Equip:0:::ActivationLimit$ 1:Activate only once each turn
 

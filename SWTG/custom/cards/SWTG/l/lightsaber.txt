@@ -2,7 +2,7 @@ Name:Lightsaber
 ManaCost:1
 Types:Artifact Equipment
 
-S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddPower$ 1 | AddKeyword$ First Strike | Description$ Equipped creature gets +1/+0 and has first strike.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddPower$ 1 | AddKeyword$ First Strike | Description$ Equipped creature gets +1/+0 and has first strike.
 
 K:Equip:3
 

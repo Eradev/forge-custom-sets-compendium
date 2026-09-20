@@ -4,6 +4,6 @@ Types:Artifact Equipment
 
 K:Equip:1
 
-S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddPower$ 1 | AddToughness$ 1 | Description$ Equipped creature gets +1/+1.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddPower$ 1 | AddToughness$ 1 | Description$ Equipped creature gets +1/+1.
 
 Oracle:Equipped creature gets +1/+1.\nEquip {1}

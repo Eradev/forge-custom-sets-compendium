@@ -8,7 +8,7 @@ SVar:DBSearch:DB$ ChangeZone | Origin$ Hand,Library,Graveyard | Destination$ Bat
 SVar:DBExile:DB$ ChangeZone | Defined$ Self | Origin$ Battlefield | Destination$ Exile | ConditionDefined$ Remembered | ConditionPresent$ Card | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
-S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddPower$ 1 | Description$ Equipped creature gets +1/+0.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddPower$ 1 | Description$ Equipped creature gets +1/+0.
 
 K:Equip:1
 

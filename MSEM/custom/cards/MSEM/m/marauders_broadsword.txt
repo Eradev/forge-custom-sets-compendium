@@ -7,7 +7,7 @@ SVar:TrigToken:AB$ Token | Cost$ 1 | TokenScript$ w_1_1_soldier | RememberTokens
 SVar:DBAttach:DB$ Attach | Defined$ Remembered | Object$ TriggeredCard | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
-S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddPower$ 2 | Description$ Equipped creature gets +2/+0.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddPower$ 2 | Description$ Equipped creature gets +2/+0.
 
 K:Equip:2
 

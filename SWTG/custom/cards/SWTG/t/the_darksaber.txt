@@ -7,7 +7,7 @@ SVar:TrigAttachMonarch:DB$ Attach | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Sel
 SVar:DBMonarch:DB$ BecomeMonarch | Defined$ You | ConditionDefined$ Remembered | ConditionPresent$ Card.Equipment | ConditionCompare$ GE1 | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
-S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Menace & First Strike & Trample | Description$ Equipped creature gets +1/+1 and has menace, first strike, and trample.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Menace & First Strike & Trample | Description$ Equipped creature gets +1/+1 and has menace, first strike, and trample.
 
 K:Equip:3
 

@@ -2,7 +2,7 @@ Name:Ketsueki, Kiyomi's Legacy
 ManaCost:B B
 Types:Legendary Artifact Equipment
 
-S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddPower$ 2 | AddToughness$ 2 | AddSVar$ AE | Description$ Equipped creature gets +2/+2.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddPower$ 2 | AddToughness$ 2 | AddSVar$ AE | Description$ Equipped creature gets +2/+2.
 SVar:AE:SVar:HasAttackEffect:TRUE
 
 T:Mode$ Attacks | ValidCard$ Card.AttachedBy | Execute$ TrigChangeZone | OptionalDecider$ You | TriggerDescription$ Whenever equipped creature attacks, you may return target creature card with mana value 2 or less from your graveyard to the battlefield.

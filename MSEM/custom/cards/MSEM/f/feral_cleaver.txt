@@ -2,7 +2,7 @@ Name:Feral Cleaver
 ManaCost:3
 Types:Artifact Equipment
 
-S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddPower$ 3 | Description$ Equipped creature gets +3/+0.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddPower$ 3 | Description$ Equipped creature gets +3/+0.
 
 T:Mode$ AttackerUnblocked | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPay | TriggerDescription$ Whenever a creature you control attacks and isn't blocked, you may pay {4}. If you do, attach this Equipment to that creature.
 

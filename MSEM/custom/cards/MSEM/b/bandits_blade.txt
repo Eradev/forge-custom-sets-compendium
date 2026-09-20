@@ -2,7 +2,7 @@ Name:Bandit's Blade
 ManaCost:4
 Types:Artifact Equipment
 
-S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddPower$ 3 | AddKeyword$ Vigilance | Description$ Equipped creature gets +3/+0 and has vigilance.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddPower$ 3 | AddKeyword$ Vigilance | Description$ Equipped creature gets +3/+0 and has vigilance.
 
 K:Equip:3
 

@@ -20,9 +20,9 @@ SVar:GoldenCheck1:SVar$GoldenAgeSpell/Plus.GoldenAgeAbility
 SVar:GoldenCheckFinal:SVar$GoldenCheck1/Plus.GoldenAgeAttack
 #-------------------
 
-S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Card | AddPower$ 2 | Description$ Equipped creature gets +2/+0.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Card | AddPower$ 2 | Description$ Equipped creature gets +2/+0.
 
-S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Card | AddKeyword$ First Strike | CheckSVar$ IsRenaissance | SVarCompare$ EQ1 | Description$ As long as you're in a renaissance, equipped creature has first strike.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Card | AddKeyword$ First Strike | CheckSVar$ IsRenaissance | SVarCompare$ EQ1 | Description$ As long as you're in a renaissance, equipped creature has first strike.
 SVar:IsRenaissance:Count$ValidCommand Effect.YouCtrl+namedGolden Age/LimitMax.1
 
 K:Equip:3

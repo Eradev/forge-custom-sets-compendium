@@ -2,7 +2,7 @@ Name:Sentinel's Longbow
 ManaCost:2
 Types:Artifact Equipment
 
-S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddKeyword$ Vigilance & Reach | Description$ Equipped creature has vigilance and reach.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddKeyword$ Vigilance & Reach | Description$ Equipped creature has vigilance and reach.
 
 K:Equip:3
 

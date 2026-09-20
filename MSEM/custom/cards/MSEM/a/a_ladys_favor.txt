@@ -4,6 +4,6 @@ Types:Artifact Equipment
 
 K:Equip:1
 
-S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddKeyword$ Vigilance | Description$ Equipped creature has vigilance.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddKeyword$ Vigilance | Description$ Equipped creature has vigilance.
 
 Oracle:Equipped creature has vigilance.\nEquip {1}

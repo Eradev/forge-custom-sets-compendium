@@ -4,7 +4,7 @@ Types:Artifact Equipment
 
 K:Vanishing:4
 
-S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddPower$ 3 | AddToughness$ 3 | Description$ Equipped creature gets +3/+3.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddPower$ 3 | AddToughness$ 3 | Description$ Equipped creature gets +3/+3.
 
 K:Equip:2
 

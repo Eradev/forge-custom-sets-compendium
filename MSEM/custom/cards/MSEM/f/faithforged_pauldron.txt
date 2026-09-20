@@ -2,7 +2,7 @@ Name:Faithforged Pauldron
 ManaCost:2
 Types:Artifact Equipment
 
-S:Mode$ Continuous | AffectedDefined$ Equipped | Affected Creature | AddKeyword$ Hexproof | AddAbility$ Improve | Description$ Equipped creature has hexproof and improve {1}. ({1}: Put a +1/+1 counter on that creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddKeyword$ Hexproof | AddAbility$ Improve | Description$ Equipped creature has hexproof and improve {1}. ({1}: Put a +1/+1 counter on that creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
 SVar:Improve:AB$ PutCounter | Cost$ 1 | RaiseCost$ X | CounterType$ P1P1 | SorcerySpeed$ True | PrecostDesc$ Improve | SpellDescription$ ({1}: Put a +1/+1 counter on this creature. This costs {1} more to activate for each +1/+1 counter on it. Improve only as a sorcery.)
 SVar:X:Count$CardCounters.P1P1
 
