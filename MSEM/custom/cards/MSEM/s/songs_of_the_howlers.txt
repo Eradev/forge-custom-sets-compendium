@@ -4,7 +4,7 @@ Types:Enchantment Aura
 
 K:Enchant:Creature
 
-S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ X | AddToughness$ X | Description$ Enchanted creature gets +1/+1 for each creature you control.
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddPower$ X | AddToughness$ X | Description$ Enchanted creature gets +1/+1 for each creature you control.
 SVar:X:Count$Valid Creature.YouCtrl
 
 Oracle:Enchant creature\nEnchanted creature gets +1/+1 for each creature you control.
