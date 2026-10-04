@@ -1,4 +1,4 @@
-Name:Battle Tactics
+Name:Battle Tactics (SWTG)
 ManaCost:2 W W
 Types:Sorcery
 

@@ -1,4 +1,4 @@
-Name:Show of Dominance
+Name:Show of Dominance (SWTG)
 ManaCost:3 G
 Types:Sorcery
 
