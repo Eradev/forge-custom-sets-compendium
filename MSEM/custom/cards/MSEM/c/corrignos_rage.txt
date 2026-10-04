@@ -1,0 +1,12 @@
+Name:Corrignos' Rage
+ManaCost:3 R
+Types:Creature Elemental
+PT:4/1
+
+K:First Strike
+
+K:Trample
+
+A:AB$ Pump | Cost$ 2 R Sac<1/Land/land> | NumAtt$ +3 | SpellDescription$ This creature gets +3/+0 until end of turn.
+
+Oracle:First strike, trample\n{2}{R}, Sacrifice a land: This creature gets +3/+0 until end of turn.

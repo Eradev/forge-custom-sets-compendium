@@ -1,0 +1,13 @@
+Name:Centipede Engine
+ManaCost:7
+Types:Artifact Creature Insect Construct
+PT:6/4
+
+K:Trample
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigMustBlock | TriggerDescription$ Whenever this creature attacks, you may have target creature block it this turn if able.
+SVar:TrigMustBlock:DB$ MustBlock | ValidTgts$ Creature | OptionalDecider$ You
+
+Oracle:Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nWhenever this creature attacks, you may have target creature block it this turn if able.
+
+SVar:HasAttackEffect:TRUE

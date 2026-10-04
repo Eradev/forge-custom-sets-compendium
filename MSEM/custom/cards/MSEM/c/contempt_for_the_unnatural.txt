@@ -1,0 +1,10 @@
+Name:Contempt for the Unnatural
+ManaCost:2 G
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Artifact,Enchantment | SubAbility$ DBToken | SpellDescription$ Destroy target artifact or enchantment. Create a 1/1 green Saproling creature token.
+SVar:DBToken:DB$ Token | TokenScript$ g_1_1_saproling
+
+Oracle:Destroy target artifact or enchantment. Create a 1/1 green Saproling creature token.
+
+DeckHas:Ability$Token & Type$Saproling

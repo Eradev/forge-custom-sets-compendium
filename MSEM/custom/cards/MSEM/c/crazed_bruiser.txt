@@ -1,0 +1,13 @@
+Name:Crazed Bruiser
+ManaCost:3 R
+Types:Creature Human Barbarian Warrior
+PT:2/3
+
+K:Menace
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ Whenever this creature attacks, it gets +2/+0 until end of turn.
+SVar:TrigPump:DB$ Pump | NumAtt$ +2
+
+Oracle:Menace (This creature can't be blocked except by two or more creatures.)\nWhenever this creature attacks, it gets +2/+0 until end of turn.
+
+SVar:HasAttackEffect:TRUE
