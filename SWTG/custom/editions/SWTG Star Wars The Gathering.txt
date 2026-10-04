@@ -140,7 +140,7 @@ Foil=NotSupported
 129 C Bathe in Bacta
 130 M The Battle of Endor
 131 R Bossk
-132 U Bounty Collector
+132 U Bounty Collector (SWTG)
 133 U Corellian Corvette
 134 C Ewok Ambush
 135 C Ewok Firedancers

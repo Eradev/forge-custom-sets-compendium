@@ -1,4 +1,4 @@
-Name:Bounty Collector
+Name:Bounty Collector (SWTG)
 ManaCost:1 G
 Types:Creature Quarren Hunter
 PT:2/1
