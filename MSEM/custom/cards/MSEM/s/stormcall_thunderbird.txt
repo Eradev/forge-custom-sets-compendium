@@ -1,0 +1,13 @@
+Name:Stormcall Thunderbird
+ManaCost:4 U R
+Types:Creature Elemental Bird
+PT:3/3
+
+K:Flying
+
+K:Haste
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCopy | TriggerDescription$ Whenever you cast an instant or sorcery spell, create a token that's a copy of this creature.
+SVar:TrigCopy:DB$ CopyPermanent | Defined$ Self
+
+Oracle:Flying, haste\nWhenever you cast an instant or sorcery spell, create a token that's a copy of this creature.

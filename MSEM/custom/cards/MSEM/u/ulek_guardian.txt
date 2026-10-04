@@ -1,0 +1,12 @@
+Name:Ulek Guardian
+ManaCost:7
+Types:Artifact Creature Scarecrow
+PT:4/5
+
+K:Affinity:Scarecrow
+
+S:Mode$ Continuous | Affected$ Creature.Other+YouCtrl | AddToughness$ 2 | AddKeyword$ Vigilance | Description$ Other creatures you control get +0/+2 and have vigilance.
+
+Oracle:Affinity for Scarecrows (This spell costs {1} less to cast for each Scarecrow you control.)\nOther creatures you control get +0/+2 and have vigilance.
+
+DeckHints:Type$Scarecrow

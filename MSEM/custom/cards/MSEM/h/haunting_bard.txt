@@ -1,0 +1,8 @@
+Name:Haunting Bard
+ManaCost:2 W
+Types:Creature Spirit Scout Bard
+PT:3/2
+
+A:AB$ Destroy | Cost$ W Sac<1/CARDNAME/this creature> | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment | AILogic$ AtEOTIfNotAttacking | SpellDescription$ Destroy target artifact or enchantment.
+
+Oracle:{W}, Sacrifice this creature: Destroy target artifact or enchantment.

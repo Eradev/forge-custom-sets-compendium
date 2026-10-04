@@ -1,0 +1,13 @@
+Name:Moonlit Lurker
+ManaCost:3
+Types:Artifact Creature Scarecrow
+PT:0/2
+
+T:Mode$ Blocks | ValidCard$ Card.Self | Execute$ TrigPutCounter | TriggerDescription$ Whenever this creature blocks, put a +1/+1 counter on it.
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1
+
+Oracle:Whenever this creature blocks, put a +1/+1 counter on it.
+
+SVar:HasBlockEffect:TRUE
+
+DeckHas:Ability$Counters

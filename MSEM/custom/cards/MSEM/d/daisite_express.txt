@@ -1,0 +1,12 @@
+Name:Daisite Express
+ManaCost:2 U
+Types:Creature Human Rogue
+PT:2/2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ Whenever this creature attacks, draw a card.
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | Execute$ TrigDiscard | CombatDamage$ True | TriggerDescription$ Whenever this creature deals combat damage to a player, discard a card.
+SVar:TrigDiscard:DB$ Discard | Defined$ You | NumCards$ 1 | Mode$ TgtChoose
+
+Oracle:Whenever this creature attacks, draw a card.\nWhenever this creature deals combat damage to a player, discard a card.
