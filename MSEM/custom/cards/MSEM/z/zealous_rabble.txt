@@ -7,7 +7,7 @@ S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Descr
 SVar:X:Count$Valid Creature.token+YouCtrl
 
 T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigFood | TriggerDescription$ At the beginning of your end step, create a Food token. If you're horrific, instead create a token that's a copy of this creature, except it doesn't have this ability. (You're horrific as long as you've sacrificed a permanent or discarded a card this turn.)
-SVar:TrigFood:DB$ Token | TokenScript$ c_a_food_sac | TokenOwner$ You | ConditionCheckSVar$ Horrific | ConditionSVarCompare$ EQ0 | SubAbility$ TrigCopy
+SVar:TrigFood:DB$ Token | TokenScript$ c_a_food_sac | ConditionCheckSVar$ Horrific | ConditionSVarCompare$ EQ0 | SubAbility$ TrigCopy
 SVar:TrigCopy:DB$ CopyPermanent | Defined$ Self | NumCopies$ 1 | DoesntHaveThisAbility$ True | ConditionCheckSVar$ Horrific | ConditionSVarCompare$ GE1
 SVar:Horrific:PlayerCountPropertyYou$SacrificedThisTurn Permanent/Plus.PlayerCountPropertyYou$CardsDiscardedThisTurn
 
