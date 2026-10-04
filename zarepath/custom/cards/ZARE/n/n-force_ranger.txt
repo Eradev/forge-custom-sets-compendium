@@ -5,7 +5,7 @@ PT:1/1
 
 S:Mode$ CantBlockBy | ValidAttacker$ Card.Self | ValidBlocker$ Creature.powerLE2 | Description$ This creature can't be blocked by creatures with power 2 or less.
 
-S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Hexproof | CheckSVar$ X | SVarCompare$ GTY | Description$ As long as you have more life than an opponent, this creature has hexproof.
+S:Mode$ Continuous | AffectedDefined$ Self | AddKeyword$ Hexproof | CheckSVar$ X | SVarCompare$ GTY | Description$ As long as you have more life than an opponent, this creature has hexproof.
 SVar:X:Count$YourLifeTotal
 SVar:Y:PlayerCountOpponents$LowestLifeTotal
 

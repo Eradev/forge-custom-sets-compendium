@@ -3,7 +3,7 @@ ManaCost:3
 Types:Artifact Creature Construct
 PT:3/2
 
-S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Artifact.YouCtrl+Other | Description$ As long as you control another artifact, this creature gets +1/+1.
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Artifact.YouCtrl+Other | Description$ As long as you control another artifact, this creature gets +1/+1.
 
 Oracle:As long as you control another artifact, this creature gets +1/+1.
 

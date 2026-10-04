@@ -9,7 +9,7 @@ A:AB$ Mana | Cost$ T | Produced$ B | SpellDescription$ Add {B}.
 
 K:Station:12
 
-S:Mode$ Continuous | Affected$ Card.Self+counters_GE12_CHARGE | AddAbility$ SacrificeCreature | Description$ STATION 12+ {2}{B}, {T}: Each player sacrifices a creature, then choose up to one target face u exiled card. Its owner shuffles it into their library.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.counters_GE12_CHARGE | AddAbility$ SacrificeCreature | Description$ STATION 12+ {2}{B}, {T}: Each player sacrifices a creature, then choose up to one target face u exiled card. Its owner shuffles it into their library.
 SVar:SacrificeCreature:AB$ Sacrifice | Cost$ 2 B T | SacValid$ Creature | Defined$ Player | SubAbility$ CardExile | SpellDescription$ Each player sacrifices a creature, then choose up to one target face up exiled card. Its owner shuffles it into their library.
 SVar:CardExile:DB$ ChangeZone | Defined$ Player | Origin$ Exile | Destination$ Library | ValidTgts$ Card.faceUp | TargetMin$ 0 | TargetMax$ 1 | ChangeNum$ 1 | Shuffle$ True
 

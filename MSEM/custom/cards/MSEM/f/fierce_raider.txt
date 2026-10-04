@@ -5,7 +5,7 @@ PT:2/3
 
 K:Menace
 
-S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Double Strike | CheckSVar$ CrypticGY | SVarCompare$ GE2 | Description$ As long as there are two or more cryptic cards in your graveyard, this creature has double strike.
+S:Mode$ Continuous | AffectedDefined$ Self | AddKeyword$ Double Strike | CheckSVar$ CrypticGY | SVarCompare$ GE2 | Description$ As long as there are two or more cryptic cards in your graveyard, this creature has double strike.
 SVar:CrypticGY:Count$ValidGraveyard Artifact.YouOwn,Enchantment.YouOwn,Card.YouOwn+hasAbility Spell.Modal
 
 R:Event$ Counter | ValidSA$ Spell.Artifact+YouCtrl,Spell.Enchantment+YouCtrl,Spell.Modal+YouCtrl | Layer$ CantHappen | Description$ Cryptic spells you cast can't be countered.

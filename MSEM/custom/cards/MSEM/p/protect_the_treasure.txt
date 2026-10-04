@@ -7,11 +7,11 @@ SVar:TreasureChoice:DB$ GenericChoice | Choices$ Offense,Defense | Defined$ You 
 SVar:Offense:DB$ Pump | SpellDescription$ Offense
 SVar:Defense:DB$ Pump | SpellDescription$ Defense
 
-S:Mode$ Continuous | Affected$ Card.Self+ChosenModeOffense | AddTrigger$ OffenseTrig | Description$ Offense — Whenever an artifact you control enters for the first time each turn, this enchantment deals 2 damage to each opponent.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeOffense | AddTrigger$ OffenseTrig | Description$ Offense — Whenever an artifact you control enters for the first time each turn, this enchantment deals 2 damage to each opponent.
 SVar:OffenseTrig:Mode$ ChangesZone | ValidCard$ Artifact.YouCtrl | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | FirstTime$ True | Execute$ TrigDamage | Secondary$ True | TriggerDescription$ Whenever an artifact you control enters for the first time each turn, this enchantment deals 2 damage to each opponent.
 SVar:TrigDamage:DB$ DamageAll | ValidPlayers$ Player.Opponent | NumDmg$ 2
 
-S:Mode$ Continuous | Affected$ Card.Self+ChosenModeDefense | AddTrigger$ DefenseTrig | Description$ Defense — Whenever an artifact you control enters for the first time each turn, add {R}{R}.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeDefense | AddTrigger$ DefenseTrig | Description$ Defense — Whenever an artifact you control enters for the first time each turn, add {R}{R}.
 SVar:DefenseTrig:Mode$ ChangesZone | ValidCard$ Artifact.YouCtrl | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | FirstTime$ True | Execute$ TrigMana | Secondary$ True | TriggerDescription$ Whenever an artifact you control enters for the first time each turn, Add {R}{R}.
 SVar:TrigMana:DB$ Mana | Produced$ R | Amount$ 2
 

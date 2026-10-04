@@ -3,7 +3,7 @@ ManaCost:2 R
 Types:Creature Human Wizard
 PT:2/3
 
-S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ First Strike | Condition$ PlayerTurn | Description$ This creature has first strike as long as it's your turn.
+S:Mode$ Continuous | AffectedDefined$ Self | AddKeyword$ First Strike | Condition$ PlayerTurn | Description$ This creature has first strike as long as it's your turn.
 
 T:Mode$ SpellCast | ValidActivatingPlayer$ You | ValidSA$ Spell.Artifact,Spell.Enchantment,Spell.Modal | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever you cast a cryptic spell, this creature deals 1 damage to each opponent.
 SVar:TrigDamage:DB$ DealDamage | Defined$ Player.Opponent | NumDmg$ 1

@@ -4,7 +4,7 @@ Types:Enchantment Aura
 
 K:Enchant:Creature
 
-S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Flying & Prowess | Description$ Enchanted creature gets +1/+1 and has flying and prowess.
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Flying & Prowess | Description$ Enchanted creature gets +1/+1 and has flying and prowess.
 
 Oracle:Enchant creature\nEnchanted creature gets +1/+1 and has flying and prowess.
 

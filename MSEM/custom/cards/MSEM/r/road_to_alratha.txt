@@ -7,11 +7,11 @@ SVar:RoadChoice:DB$ GenericChoice | Choices$ Near,Far | Defined$ You | SetChosen
 SVar:Near:DB$ Pump | SpellDescription$ Near
 SVar:Far:DB$ Pump | SpellDescription$ Far
 
-S:Mode$ Continuous | Affected$ Card.Self+ChosenModeNear | AddTrigger$ NearAttack | Description$ Near — Whenever you attack, creatures you control get +1/+1 until end of turn.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeNear | AddTrigger$ NearAttack | Description$ Near — Whenever you attack, creatures you control get +1/+1 until end of turn.
 SVar:NearAttack:Mode$ AttackersDeclared | AttackingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPumpAll | TriggerDescription$ Whenever you attack, creatures you control get +1/+1 until end of turn.
 SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1
 
-S:Mode$ Continuous | Affected$ Card.Self+ChosenModeFar | AddTrigger$ FarAttack | Description$ Far — Whenever you attack, put a +1/+1 counter on target creature you control. Untap it.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeFar | AddTrigger$ FarAttack | Description$ Far — Whenever you attack, put a +1/+1 counter on target creature you control. Untap it.
 SVar:FarAttack:Mode$ AttackersDeclared | AttackingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCounterUntap | TriggerDescription$ Whenever you attack, put a +1/+1 counter on target creature you control. Untap it.
 SVar:TrigCounterUntap:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature.YouCtrl | SubAbility$ DBUntap
 SVar:DBUntap:DB$ Untap | Defined$ Targeted

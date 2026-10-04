@@ -5,7 +5,7 @@ PT:4/4
 
 K:Flying
 
-S:Mode$ Continuous | Affected$ Card.Self+untapped | AddKeyword$ Hexproof | Description$ This creature has hexproof as long as it's untapped.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.untapped | AddKeyword$ Hexproof | Description$ This creature has hexproof as long as it's untapped.
 
 T:Mode$ Taps | ValidCard$ Card.Self | Execute$ TrigScry | TriggerDescription$ Whenever this creature becomes tapped, scry 2. (Look at the top card of your library. You may put that card on the bottom.)
 SVar:TrigScry:DB$ Scry | ScryNum$ 2

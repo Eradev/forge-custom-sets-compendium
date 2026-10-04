@@ -4,7 +4,7 @@ Types:Enchantment Aura
 
 K:Enchant:Permanent.nonCreature:noncreature permanent
 
-S:Mode$ Continuous | Affected$ Card.EnchantedBy | SetColor$ Colorless | AddType$ Land & Forest | RemoveCardTypes$ True | RemoveLandTypes$ True | Description$ Enchanted permanent is a colorless Forest land.
+S:Mode$ Continuous | AffectedDefined$ Enchanted | SetColor$ Colorless | AddType$ Land & Forest | RemoveCardTypes$ True | RemoveLandTypes$ True | Description$ Enchanted permanent is a colorless Forest land.
 
 Oracle:Enchant noncreature permanent\nEnchanted permanent is a colorless Forest land.
 

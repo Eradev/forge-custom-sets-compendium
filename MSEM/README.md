@@ -279,7 +279,7 @@ Fleeting {U} (You may cast this spell for its fleeting cost. If you do, sacrific
 Implementation:
 
 ```text
-S:Mode$ Continuous | Affected$ Card.Self | MayPlay$ True | MayPlayAltManaCost$ U | AffectedZone$ Hand | EffectZone$ Hand | Description$ Fleeting {U} (You may cast this spell for its fleeting cost. If you do, sacrifice it at the beginning of the next end step.)
+S:Mode$ Continuous | AffectedDefined$ Self | MayPlay$ True | MayPlayAltManaCost$ U | AffectedZone$ Hand | EffectZone$ Hand | Description$ Fleeting {U} (You may cast this spell for its fleeting cost. If you do, sacrifice it at the beginning of the next end step.)
 T:Mode$ SpellCast | ValidCard$ Card.Self | ValidSA$ Spell.MayPlaySource | Static$ True | Execute$  FleetingEndStep
 SVar:FleetingEndStep:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | RememberObjects$ Self | TriggerDescription$ At the beginning of the next end step, sacrifice it. | Execute$ TrigSacrifice
 SVar:TrigSacrifice:DB$ SacrificeAll | Defined$ DelayTriggerRememberedLKI
@@ -449,7 +449,7 @@ Mirage {1}{W} (You may cast this spell as though it had flash for its mirage cos
 Implementation:
 
 ```text
-S:Mode$ Continuous | Affected$ Card.Self | MayPlay$ True | MayPlayAltManaCost$ 1 W | MayPlayWithFlash$ True | AffectedZone$ Hand | EffectZone$ Hand | Description$ Mirage {1}{W} (You may cast this spell as though it had flash for its mirage cost. If you do, sacrifice it at the beginning of the next cleanup step.)
+S:Mode$ Continuous | AffectedDefined$ Self | MayPlay$ True | MayPlayAltManaCost$ 1 W | MayPlayWithFlash$ True | AffectedZone$ Hand | EffectZone$ Hand | Description$ Mirage {1}{W} (You may cast this spell as though it had flash for its mirage cost. If you do, sacrifice it at the beginning of the next cleanup step.)
 T:Mode$ SpellCast | ValidCard$ Card.Self | ValidSA$ Spell.MayPlaySource | Static$ True | Execute$ MirageCleanup
 SVar:MirageCleanup:DB$ DelayedTrigger | Mode$ Phase | Phase$ Cleanup | RememberObjects$ Self | TriggerDescription$ At the beginning of the next cleanup step, sacrifice it. | Execute$ TrigSacrifice
 SVar:TrigSacrifice:DB$ SacrificeAll | Defined$ DelayTriggerRememberedLKI

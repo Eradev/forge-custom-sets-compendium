@@ -3,6 +3,6 @@ ManaCost:1 W
 Types:Creature Human Barbarian Warrior
 PT:1/1
 
-S:Mode$ Continuous | Affected$ Card.Self+equipped | AddKeyword$ Double Strike | Description$ Armed — This creature has double strike as long as it's equipped.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.equipped | AddKeyword$ Double Strike | Description$ Armed — This creature has double strike as long as it's equipped.
 
 Oracle:Armed — This creature has double strike as long as it's equipped.

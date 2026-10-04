@@ -5,7 +5,7 @@ PT:2/1
 
 K:ETBReplacement:Other:ChooseCT
 SVar:ChooseCT:DB$ ChooseType | Type$ Creature | AILogic$ MostProminentInComputerDeck | SpellDescription$ As this creature enters, choose a creature type.
-S:Mode$ Continuous | Affected$ Card.Self | AddType$ ChosenType | Description$ This creature is the chosen type in addition to its other types.
+S:Mode$ Continuous | AffectedDefined$ Self | AddType$ ChosenType | Description$ This creature is the chosen type in addition to its other types.
 
 T:Mode$ DamageDone | ValidSource$ Creature.YouCtrl+ChosenType | ValidTarget$ Opponent | CombatDamage$ True | Execute$ DBDig | TriggerZones$ Battlefield
 SVar:DBDig:DB$ Dig | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBAnimate | StackDescription$ {p:You} uploads the top card of their library. | SpellDescription$ Upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)

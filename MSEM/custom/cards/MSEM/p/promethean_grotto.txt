@@ -2,7 +2,7 @@ Name:Promethean Grotto
 ManaCost:no cost
 Types:Land
 
-S:Mode$ Continuous | Affected$ Card.Self | MayPlay$ True | AffectedZone$ Graveyard | Description$ You may play this card from your graveyard.
+S:Mode$ Continuous | AffectedDefined$ Self | MayPlay$ True | AffectedZone$ Graveyard | Description$ You may play this card from your graveyard.
 
 A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
 

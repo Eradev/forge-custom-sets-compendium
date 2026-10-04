@@ -8,7 +8,7 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.S
 SVar:TrigSacrifice:DB$ Sacrifice | Defined$ You | Amount$ SacX | SacValid$ Land | SacMessage$ any number of lands | Optional$ True
 SVar:SacX:Count$Valid Land.YouCtrl
 
-S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +1/+1 for each land card in your graveyard.
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +1/+1 for each land card in your graveyard.
 SVar:X:Count$ValidGraveyard Land.YouOwn
 
 A:AB$ Destroy | Cost$ B G Sac<1/Land/land> | ValidTgts$ Creature,Land | TgtPrompt$ Select target creature or land | SpellDescription$ Destroy target creature or land.

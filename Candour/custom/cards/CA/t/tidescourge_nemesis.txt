@@ -5,7 +5,7 @@ PT:1/1
 
 S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | Description$ This creature can't be blocked.
 
-S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 2 | Condition$ Hellbent | Description$ Hellbent — This creature gets +2/+0 as long as you have no cards in hand.
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ 2 | Condition$ Hellbent | Description$ Hellbent — This creature gets +2/+0 as long as you have no cards in hand.
 
 A:AB$ Pump | Cost$ Discard<1/Card> | Defined$ Self | KW$ Hexproof | SpellDescription$ Discard a card: This creature gains hexproof until end of turn.
 

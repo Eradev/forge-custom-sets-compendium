@@ -9,7 +9,7 @@ T:Mode$ SpellCast | ValidActivatingPlayer$ Opponent | TargetsValid$ You,Spell.Yo
 SVar:TrigDealDamage:DB$ DealDamage | Defined$ TriggeredPlayer | NumDmg$ Y
 SVar:Y:Count$CardPower/Twice
 
-S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +1/+1 for each Aura and Equipment you control.
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +1/+1 for each Aura and Equipment you control.
 SVar:X:Count$Valid Aura.YouCtrl,Equipment.YouCtrl
 
 Oracle:Double strike\nWhenever an opponent casts a spell that targets you or a spell or permanent you control, this creature deals damage equal to twice its power to that player.\nThis creature gets +1/+1 for each Aura and Equipment you control.

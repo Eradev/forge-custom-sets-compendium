@@ -9,7 +9,7 @@ A:AB$ Mana | Cost$ T | Produced$ Any | RestrictValid$ Spell.Alien,Activated.Alie
 
 K:Station:12
 
-S:Mode$ Continuous | Affected$ Card.Self+counters_GE12_CHARGE | AddAbility$ EvendoMana | Description$ STATION 12+ {T}: Gain life equal to the creatures you control.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.counters_GE12_CHARGE | AddAbility$ EvendoMana | Description$ STATION 12+ {T}: Gain life equal to the creatures you control.
 SVar:EvendoMana:AB$ GainLife | Cost$ T | Defined$ You | LifeAmount$ X | SpellDescription$ Gain life equal to the creatures you control.
 SVar:X:Count$Valid Creature.YouCtrl
 

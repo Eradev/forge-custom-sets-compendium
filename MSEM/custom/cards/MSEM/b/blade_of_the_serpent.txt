@@ -5,7 +5,7 @@ PT:1/1
 
 K:Poisonous:1
 
-S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | CheckSVar$ X | Description$ This creature gets +1/+1 as long as an opponent is poisoned.
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ 1 | AddToughness$ 1 | CheckSVar$ X | Description$ This creature gets +1/+1 as long as an opponent is poisoned.
 SVar:X:Count$TotalOppPoisonCounters
 
 Oracle:Poisonous 1 (Whenever this creature deals combat damage to a player, that player gets a poison counter. A player with ten or more poison counters loses the game.)\nThis creature gets +1/+1 as long as an opponent is poisoned.

@@ -3,6 +3,6 @@ ManaCost:3 R
 Types:Creature Human Barbarian Warrior
 PT:3/3
 
-S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 2 | AddToughness$ 2 | IsPresent$ Card.Self+equipped | PresentCompare$ GE1 | Description$ Armed — This creature gets +2/+2 as long as it's equipped.
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ 2 | AddToughness$ 2 | IsPresent$ Card.Self+equipped | PresentCompare$ GE1 | Description$ Armed — This creature gets +2/+2 as long as it's equipped.
 
 Oracle:Armed — This creature gets +2/+2 as long as it's equipped.

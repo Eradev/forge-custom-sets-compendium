@@ -5,7 +5,7 @@ PT:2/4
 
 A:AB$ PutCounter | Cost$ 3 W W | Monstrosity$ 2
 
-S:Mode$ Continuous | Affected$ Card.Self+IsMonstrous | AddKeyword$ Vigilance | Description$ As long as this creature is monstrous, it has vigilance.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.IsMonstrous | AddKeyword$ Vigilance | Description$ As long as this creature is monstrous, it has vigilance.
 
 Oracle:{3}{W}{W}: Monstrosity 2. (If this creature isn't monstrous, put two +1/+1 counters on it and it becomes monstrous.)\nAs long as this creature is monstrous, it has vigilance.
 

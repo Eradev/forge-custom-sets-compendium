@@ -9,7 +9,7 @@ A:AB$ Mana | Cost$ T | Produced$ G | SpellDescription$ Add {G}.
 
 K:Station:12
 
-S:Mode$ Continuous | Affected$ Card.Self+counters_GE12_CHARGE | AddAbility$ EvendoMana | Description$ STATION 12+ {1}{G}, {T}: Draw a card for each Alien you control.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.counters_GE12_CHARGE | AddAbility$ EvendoMana | Description$ STATION 12+ {1}{G}, {T}: Draw a card for each Alien you control.
 SVar:EvendoMana:AB$ Draw | Cost$ 1 G T | NumCards$ X | SpellDescription$ Draw a card for each Alien you control.
 SVar:X:Count$Valid Alien.YouCtrl
 

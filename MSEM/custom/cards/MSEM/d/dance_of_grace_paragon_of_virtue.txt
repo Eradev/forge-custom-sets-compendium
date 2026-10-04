@@ -25,7 +25,7 @@ Types:Enchantment Aura
 
 K:Enchant:Creature
 
-S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 1 | AddToughness$ 1 | AddTrigger$ GainLifeTrigger | Description$ Enchanted creature gets +1/+1 and has "At the beginning of each end step, you gain 1 life."
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddPower$ 1 | AddToughness$ 1 | AddTrigger$ GainLifeTrigger | Description$ Enchanted creature gets +1/+1 and has "At the beginning of each end step, you gain 1 life."
 SVar:GainLifeTrigger:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | Execute$ TrigGainLife | TriggerDescription$ At the beginning of each end step, you gain 1 life.
 SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 1 | Description$ At the beginning of each end step, you gain 1 life.
 

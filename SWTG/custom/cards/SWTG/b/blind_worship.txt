@@ -4,7 +4,7 @@ Types:Enchantment Aura
 
 K:Enchant:Creature
 
-S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddTrigger$ AttackTrig | AddSVar$ BlindWorship | Description$ Enchanted creature has "Whenever this creature attacks, each other creature you control gets +X/+X until end of turn, where X is this creature's power."
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddTrigger$ AttackTrig | AddSVar$ BlindWorship | Description$ Enchanted creature has "Whenever this creature attacks, each other creature you control gets +X/+X until end of turn, where X is this creature's power."
 SVar:AttackTrig:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPumpAll | TriggerDescription$ Whenever this creature attacks, each other creature you control gets +X/+X until end of turn, where X is this creature's power.
 SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.YouCtrl+Other | NumAtt$ +BlindWorship | NumDef$ +BlindWorship
 SVar:BlindWorship:Count$CardPower

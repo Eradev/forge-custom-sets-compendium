@@ -3,6 +3,6 @@ ManaCost:1 B
 Types:Creature Elf Warrior
 PT:2/2
 
-S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | IsPresent$ Card.YouOwn | PresentZone$ Graveyard | PresentCompare$ GE5 | AddKeyword$ Deathtouch | Description$ As long as there are five or more cards in your graveyard, this creature gets +1/+0 and has deathtouch.
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ 1 | IsPresent$ Card.YouOwn | PresentZone$ Graveyard | PresentCompare$ GE5 | AddKeyword$ Deathtouch | Description$ As long as there are five or more cards in your graveyard, this creature gets +1/+0 and has deathtouch.
 
 Oracle:As long as there are five or more cards in your graveyard, this creature gets +1/+0 and has deathtouch.

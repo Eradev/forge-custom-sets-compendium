@@ -35,6 +35,6 @@ A:AB$ Pump | Cost$ T | Defined$ Self | AILogic$ SwitchPT | KW$ HIDDEN CARDNAME's
 
 S:Mode$ BlockTapped | ValidCard$ Card.Self | Description$ NICKNAME may block as though he were untapped.
 
-S:Mode$ Continuous | Affected$ Card.Self+tapped | AddKeyword$ Deathtouch & Hexproof | Description$ As long as NICKNAME is tapped, he has deathtouch and hexproof.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.tapped | AddKeyword$ Deathtouch & Hexproof | Description$ As long as NICKNAME is tapped, he has deathtouch and hexproof.
 
 Oracle:Vigilance, omnishuffle 4 (If this card would be put into a graveyard from anywhere, reveal it, then shuffle it into its owner's library instead. Its owner loses 4 life.)\n{T}: Switch Ultimate Cannonbolt's power and toughness until your next untap step.\nUltimate Cannonbolt may block as though he were untapped.\nAs long as Ultimate Cannonbolt is tapped, he has deathtouch and hexproof.
