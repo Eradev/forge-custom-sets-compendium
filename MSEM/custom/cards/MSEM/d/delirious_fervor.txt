@@ -1,0 +1,7 @@
+Name:Delirious Fervor
+ManaCost:B
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ +2 | KW$ Lifelink | SpellDescription$ Target creature gets +2/+0 and gains lifelink until end of turn.
+
+Oracle:Target creature gets +2/+0 and gains lifelink until end of turn.

@@ -1,0 +1,12 @@
+Name:Death's Sentry
+ManaCost:3 B
+Types:Creature Human Cleric
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ Morbid | Execute$ TrigToken | TriggerDescription$ When this creature enters, if a creature died this turn, create a 2/2 black Zombie creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ b_2_2_zombie
+SVar:Morbid:Count$Morbid.1.0
+
+Oracle:When this creature enters, if a creature died this turn, create a 2/2 black Zombie creature token.
+
+DeckHas:Ability$Token & Type$Zombie
