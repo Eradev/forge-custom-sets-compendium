@@ -2,8 +2,8 @@ Name:Imperial Power Play
 ManaCost:2 U B B
 Types:Instant
 
-S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ 2 | EffectZone$ All | CheckSVar$ X | SVarCompare$ GE1 | Description$ This spell costs {2} less to cast if a creature died this turn.
-SVar:X:Count$ThisTurnEntered_Graveyard_from_Battlefield_Creature
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ 2 | EffectZone$ All | CheckSVar$ Morbid | Description$ This spell costs {2} less to cast if a creature died this turn.
+SVar:Morbid:Count$Morbid.1.0
 
 A:SP$ PumpAll | ValidCards$ Creature | NumAtt$ -2 | NumDef$ -2 | IsCurse$ True | SubAbility$ DBDraw | SpellDescription$ All creatures get -2/-2 until end of turn. Draw a card.
 SVar:DBDraw:DB$ Draw
