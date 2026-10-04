@@ -1,0 +1,6 @@
+Name:Imp Token
+ManaCost:no cost
+Colors:black
+Types:Creature Imp
+PT:1/1
+Oracle:
