@@ -1,0 +1,8 @@
+Name:Brace for Battle
+ManaCost:3 G
+Types:Instant
+
+A:SP$ Untap | ValidTgts$ Creature.YouCtrl | SubAbility$ DBPump | SpellDescription$ Untap target creature you control. It gets +4/+4 and gains reach until end of turn.
+SVar:DBPump:DB$ Pump | Defined$ Targeted | NumAtt$ +4 | NumDef$ +4 | KW$ Reach
+
+Oracle:Untap target creature you control. It gets +4/+4 and gains reach until end of turn.

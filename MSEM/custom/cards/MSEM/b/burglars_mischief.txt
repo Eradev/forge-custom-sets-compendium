@@ -1,0 +1,14 @@
+Name:Burglar's Mischief
+ManaCost:1 U
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 1 | Description$ Enchanted creature gets +1/+0.
+
+T:Mode$ DamageDone | ValidSource$ Card.EnchantedBy | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigDraw | OptionalDecider$ You | TriggerDescription$ Whenever enchanted creature deals combat damage to a player, you may draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Enchant creature (Target a creature as you cast this. This card enters attached to that creature.)\nEnchanted creature gets +1/+0.\nWhenever enchanted creature deals combat damage to a player, you may draw a card.
+
+DeckHas:Ability$Draw

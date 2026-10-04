@@ -1,0 +1,11 @@
+Name:Burn with Demonfire
+ManaCost:4 B B
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Creature | SubAbility$ DBGainLife | SpellDescription$ Destroy target creature. You gain 1 life for each card in its controller's graveyard.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ X
+SVar:X:Count$ValidGraveyard Card.TargetedControllerCtrl
+
+Oracle:Destroy target creature. You gain 1 life for each card in its controller's graveyard.
+
+DeckHas:Ability$LifeGain
