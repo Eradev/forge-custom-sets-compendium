@@ -3,6 +3,6 @@ ManaCost:no cost
 Types:Land Plains Swamp
 
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
-SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+SVar:ETBTapped:DB$ Tap | ETB$ True
 
 Oracle:({T}: Add {W} or {B}.)\nThis land enters tapped.

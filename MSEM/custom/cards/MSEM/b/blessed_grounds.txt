@@ -3,7 +3,7 @@ ManaCost:no cost
 Types:Land
 
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
-SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+SVar:ETBTapped:DB$ Tap | ETB$ True
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSurveil | TriggerDescription$ When this land enters, surveil 1.
 SVar:TrigSurveil:DB$ Surveil

@@ -20,7 +20,7 @@ Colors:blue
 Types:Land
 
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land tapped.
-SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+SVar:ETBTapped:DB$ Tap | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ U | SpellDescription$ Add {U}.
 

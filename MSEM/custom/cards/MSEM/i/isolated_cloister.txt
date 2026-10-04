@@ -3,7 +3,7 @@ ManaCost:no cost
 Types:Land Forest
 
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
-SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+SVar:ETBTapped:DB$ Tap | ETB$ True
 
 A:AB$ Untap | Cost$ G T Reveal<1/Card.Green/green card> | ValidTgts$ Creature | SpellDescription$ Untap target creature.
 
