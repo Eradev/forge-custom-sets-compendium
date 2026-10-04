@@ -7,6 +7,7 @@ K:Flash
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ Morbid | Execute$ TrigInvestigate | TriggerDescription$ When this creature enters, if a creature died this turn, investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")
 SVar:TrigInvestigate:DB$ Investigate
+SVar:Morbid:Count$Morbid.1.0
 
 Oracle:Flash\nWhen this creature enters, if a creature died this turn, investigate. (Create a Clue token. It's an artifact with "{2}, Sacrifice this artifact: Draw a card.")
 
