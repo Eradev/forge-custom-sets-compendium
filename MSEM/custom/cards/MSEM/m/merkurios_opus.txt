@@ -1,0 +1,15 @@
+Name:Merkurio's Opus
+ManaCost:1 U R
+Types:Creature Elemental Wizard
+PT:2/3
+
+K:Kicker:2
+K:Prowess
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self+kicked | Execute$ TrigDraw | TriggerDescription$ When this creature enters, if it was kicked, draw two cards, then discard two cards.
+SVar:TrigDraw:DB$ Draw | NumCards$ 2 | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | NumCards$ 2 | Mode$ TgtChoose
+
+Oracle:Kicker {2} (You may pay an additional {2} as you cast this spell.)\nProwess\nWhen this creature enters, if it was kicked, draw two cards, then discard two cards.
+
+DeckHints:Type$Instant|Sorcery

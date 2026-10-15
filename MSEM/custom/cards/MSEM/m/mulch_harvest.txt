@@ -1,0 +1,8 @@
+Name:Mulch Harvest
+ManaCost:4 G
+Types:Enchantment
+
+A:AB$ Mana | Cost$ ExileFromGrave<1/Card.nonLand> | Produced$ Special EachColoredManaSymbol_Exiled | ActivationLimit$ 1 | SpellDescription$ For each colored mana symbol in that card's mana cost, add one mana of that color. Activate only once each turn.
+Oracle:Exile a nonland card from your graveyard: For each colored mana symbol in that card's mana cost, add one mana of that color. Activate only once each turn. (For example, if the card's mana cost is {3}{G}{G}{W}, you add {G}{G}{W}.)
+
+DeckHas:Ability$Graveyard

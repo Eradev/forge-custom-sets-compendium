@@ -1,0 +1,16 @@
+Name:Mindbreak Artisan
+ManaCost:3 U
+Types:Artifact Creature Artificer Horror
+PT:1/5
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigSearch | TriggerDescription$ When this creature enters, you may search your library for an artifact card, reveal it, shuffle, then put that card on top.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Library | ChangeType$ Artifact | ChangeNum$ 1 | Reveal$ True | RememberChanged$ True | SubAbility$ DBToTop
+SVar:DBToTop:DB$ ChangeZone | Defined$ Remembered | Origin$ Library | Destination$ Library | LibraryPosition$ 0 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+S:Mode$ Continuous | Affected$ Artifact.Other+YouCtrl | AddKeyword$ You may choose not to untap this artifact during your untap step. | AddAbility$ MindbreakSteal | Description$ Other artifacts you control have "You may choose not to untap this artifact during your untap step" and "{3}{U}{U}, {T}: Gain control of target creature for as long as you control this artifact and it remains tapped."
+SVar:MindbreakSteal:AB$ GainControl | Cost$ 3 U U T | ValidTgts$ Creature | LoseControl$ Untap,LeavesPlay,LoseControl | SpellDescription$ Gain control of target creature for as long as you control this artifact and it remains tapped.
+
+Oracle:When this creature enters, you may search your library for an artifact card, reveal it, shuffle, then put that card on top.\nOther artifacts you control have "You may choose not to untap this artifact during your untap step" and "{3}{U}{U}, {T}: Gain control of target creature for as long as you control this artifact and it remains tapped."
+
+DeckHints:Type$Artifact

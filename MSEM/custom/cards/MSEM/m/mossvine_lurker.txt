@@ -1,0 +1,10 @@
+Name:Mossvine Lurker
+ManaCost:2 G
+Types:Creature Treefolk
+PT:3/2
+
+S:Mode$ Continuous | Affected$ Card.Self+counters_GE1_P1P1 | AddKeyword$ Trample | Description$ This creature has trample as long as it has a +1/+1 counter on it.
+
+Oracle:This creature has trample as long as it has a +1/+1 counter on it.
+
+DeckHints:Ability$Counters

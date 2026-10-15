@@ -1,0 +1,14 @@
+Name:Magistrate of Eras
+ManaCost:5 U U
+Types:Creature Sphinx
+PT:4/7
+
+K:Flying
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ X | SVarCompare$ EQ0 | Execute$ TrigCounter | TriggerDescription$ At the beginning of your upkeep, if it isn't an extra turn, put a sage counter on this creature.
+SVar:TrigCounter:DB$ PutCounter | CounterType$ SAGE
+SVar:X:Count$ExtraTurn
+
+A:AB$ AddTurn | Cost$ SubCounter<5/SAGE> | NumTurns$ 1 | SpellDescription$ Take an extra turn after this one.
+
+Oracle:Flying\nAt the beginning of your upkeep, if it isn't an extra turn, put a sage counter on this creature.\nRemove five sage counters from this creature: Take an extra turn after this one.
