@@ -1,0 +1,15 @@
+Name:Graygulch Turncoat
+ManaCost:3 B
+Types:Creature Spirit Rogue
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigBounty | TriggerDescription$ When this creature enters, you may post a bounty on target creature. If you do, each opponent loses life equal to the number of bounty counters on creatures.
+SVar:TrigBounty:DB$ PutCounter | CounterType$ BOUNTY | IsCurse$ True | ValidTgts$ Creature | SubAbility$ DBLoseLife | SpellDescription$ Put a bounty counter on target creature.
+
+SVar:DBLoseLife:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ X | SpellDescription$ Each opponent loses life equal to the number of bounty counters on creatures.
+SVar:X:Count$Valid Creature$CardCounters.BOUNTY
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.counters_GE1_BOUNTY | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever a creature with a bounty counter on it dies, each of its controller's opponents draws a card.
+SVar:TrigDraw:DB$ Draw | Defined$ Player.OpponentOf TriggeredCardController
+
+Oracle:When this creature enters, you may post a bounty on target creature. If you do, each opponent loses life equal to the number of bounty counters on creatures. (Put a bounty counter on target creature. Whenever a creature with a bounty counter on it dies, each of its controller's opponents draws a card.)

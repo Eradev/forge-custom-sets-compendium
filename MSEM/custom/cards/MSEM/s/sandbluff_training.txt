@@ -1,0 +1,10 @@
+Name:Sandbluff Training
+ManaCost:1 W
+Types:Sorcery
+
+A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef +1 | SubAbility$ DBPumpAll | SpellDescription$ Creatures you control get +1/+1 until end of turn.
+SVar:DBPumpAll:DB$ PumpAll | ValidCards$ Soldier.YouCtrl | KW$ First Strike | SpellDescription$ Soldiers you control gain first strike until end of turn.
+
+Oracle:Creatures you control get +1/+1 until end of turn. Soldiers you control also gain first strike until end of turn.
+
+DeckHints:Type$Soldier
