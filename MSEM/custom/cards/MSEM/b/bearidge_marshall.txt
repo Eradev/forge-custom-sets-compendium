@@ -3,12 +3,12 @@ ManaCost:4 W W
 Types:Creature Human Soldier
 PT:3/6
 
-S:Mode$ Continuous | Affected$ Aura.YouCtrl,Equipment.YouCtrl | AddKeyword$ Indestructible | Description$ Auras and Equipments you control have indestructible.
+S:Mode$ Continuous | Affected$ Aura.YouCtrl,Equipment.YouCtrl | AddKeyword$ Indestructible | Description$ Auras and Equipment you control have indestructible.
 
-T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigArrest | TriggerDescription$ Whenever this attacks, create a white Aura enchantment token named Arrest attached to target creature an opponent controls. The token has enchant creature and "Enchanted creature can't attack or block, and it's activated abilities can't be activated."
-SVar:TrigArrest:DB$ CopyPermanent | DefinedName$ Arrest | AttachAfter$ True | AttachedTo$ Targeted | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls
+T:Mode$ Attacks | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigArrest | TriggerDescription$ Whenever this creature attacks, you may create a white Aura enchantment token named Arrest attached to target creature. It has enchant creature and "Enchanted creature can't attack or block, and its activated abilities can't be activated."
+SVar:TrigArrest:DB$ CopyPermanent | DefinedName$ Arrest | AttachAfter$ True | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature
 
-Oracle:Auras and Equipments you control have indestructible.\nWhenever this creature attacks, create a white Aura enchantment token named Arrest attached to target creature an opponent controls. The token has enchant creature and "Enchanted creature can't attack or block, and it's activated abilities can't be activated."
+Oracle:Auras and Equipment you control have indestructible.\nWhenever this creature attacks, you may create a white Aura enchantment token named Arrest attached to target creature. It has enchant creature and "Enchanted creature can't attack or block, and its activated abilities can't be activated."
 
 SVar:HasAttackEffect:TRUE
-DeckHas:Ability$Token
+DeckHas:Ability$Token & Type$Aura|Enchantment
