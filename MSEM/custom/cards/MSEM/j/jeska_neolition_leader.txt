@@ -1,0 +1,17 @@
+Name:Jeska, Neolition Leader
+ManaCost:3 R R
+Types:Legendary Planeswalker Jeska
+Loyalty:5
+
+A:AB$ Pump | Cost$ AddCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 1 | NumAtt$ +1 | KW$ First Strike & Haste | SpellDescription$ Up to one target creature gets +1/+0 and gains first strike and haste until end of turn.
+
+A:AB$ DealDamage | Cost$ SubCounter<3/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | NumDmg$ Y | SpellDescription$ NICKNAME deals 3 damage to target creature. If that creature is an artifact, she deals 5 damage instead.
+SVar:Y:Targeted$Valid Artifact.5.3
+
+A:AB$ Effect | Cost$ SubCounter<10/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Jeska, Neolition Leader | StaticAbilities$ STJeska1,STJeska2 | Duration$ Permanent | AILogic$ Always | SpellDescription$ You get an emblem with "Creatures you control get +2/+0." and "All creatures have haste and can't block."
+SVar:STJeska1:Mode$ Continuous | Affected$ Creature.YouCtrl | AffectedZone$ Battlefield | AddPower$ 2 | Description$ Creatures you control get +2/+0.
+SVar:STJeska2:Mode$ Continuous | Affected$ Creature | AffectedZone$ Battlefield | AddKeyword$ Haste | AddHiddenKeyword$ CARDNAME can't block. | Description$ All creatures have haste and can't block.
+
+Oracle:[+2]: Up to one target creature gets +1/+0 and gains first strike and haste until end of turn.\n[-3]: Jeska deals 3 damage to target creature. If that creature is an artifact, she deals 5 damage instead.\n[-10]: You get an emblem with "Creatures you control get +2/+0." and "All creatures have haste and can't block."
+
+SVar:PlayMain1:TRUE
