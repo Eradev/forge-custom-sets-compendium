@@ -1,0 +1,18 @@
+Name:Bond, Borf of Destiny
+ManaCost:W B G
+Types:Legendary Creature Dog
+PT:3/3
+
+K:Partner with:Anya Forger, Stellar Student
+K:Lifelink
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ TrigChoose | TriggerDescription$ Precognition — At the beginning of each opponent's upkeep, choose a card type. Whenever an opponent casts a spell of the chosen type this turn, you gain 2 life and draw a card.
+SVar:TrigChoose:DB$ ChooseType | Defined$ You | Type$ Card | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | Triggers$ TrigSpellCast | SpellDescription$ Whenever an opponent casts a spell of the chosen type this turn, you gain 2 life and draw a card.
+SVar:TrigSpellCast:Mode$ SpellCast | ValidCard$ Card.ChosenType | ValidActivatingPlayer$ Opponent | TriggerZones$ Command | Execute$ TrigLifeDraw | TriggerDescription$ Whenever an opponent casts a spell of the chosen type this turn, you gain 2 life and draw a card.
+SVar:TrigLifeDraw:DB$ GainLife | LifeAmount$ 2 | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw
+
+Oracle:Lifelink\nPrecognition — At the beginning of each opponent's upkeep, choose a card type. Whenever an opponent casts a spell of the chosen type this turn, you gain 2 life and draw a card.\nPartner with Anya Forger, Stellar Student (When this creature enters, target player may put Anya Forger, Stellar Student into their hand from their library, then shuffle.)
+
+DeckHas:Ability$LifeGain

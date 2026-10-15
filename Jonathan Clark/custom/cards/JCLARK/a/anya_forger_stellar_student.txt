@@ -1,0 +1,15 @@
+Name:Anya Forger, Stellar Student
+ManaCost:1 U R W
+Types:Legendary Creature Human Ally
+PT:2/2
+
+K:Partner with:Bond, Borf of Destiny
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ TrigTelepathy | TriggerZones$ Battlefield | TriggerDescription$ Telepathy — At the beginning of your upkeep, choose target opponent. This turn, that player plays with their hand revealed.
+SVar:TrigTelepathy:DB$ Effect | ValidTgts$ Opponent | TgtPrompt$ Select target opponent | StaticAbilities$ STHandRevealed | RememberObjects$ Targeted | SpellDescription$ This turn, that player plays with their hand revealed.
+SVar:STHandRevealed:Mode$ Continuous | AffectedZone$ Hand | Affected$ Card.RememberedPlayerOwn | MayLookAt$ Player | Description$ That player plays with their hand revealed.
+
+A:AB$ Mana | Cost$ T | Produced$ Any | Amount$ X | SpellDescription$ Choose a color. Add one mana of that color for each opponent you have.
+SVar:X:PlayerCountOpponents$Amount
+
+Oracle:Telepathy — At the beginning of your upkeep, choose target opponent. This turn, that player plays with their hand revealed.\n{T}: Choose a color. Add one mana of that color for each opponent you have.\nPartner with Bond, Borf of Destiny (When this creature enters, target player may put Bond, Borf of Destiny into their hand from their library, then shuffle.)
