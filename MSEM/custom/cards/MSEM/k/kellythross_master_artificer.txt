@@ -1,0 +1,18 @@
+Name:Kellythross, Master Artificer
+ManaCost:3 U B
+Types:Legendary Planeswalker Kellythross
+Loyalty:3
+
+A:AB$ Token | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | TokenScript$ c_1_1_a_thopter_flying | RememberTokens$ True | SubAbility$ DBPump | SpellDescription$ Create a 1/1 colorless Thopter artifact creature token with flying. It gains lifelink until your next turn.
+SVar:DBPump:DB$ Pump | Defined$ Remembered | KW$ Lifelink | Duration$ UntilYourNextTurn | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+A:AB$ Draw | Cost$ SubCounter<1/LOYALTY> Sac<1/Artifact> | Planeswalker$ True | NumCards$ 2 | SpellDescription$ Sacrifice an artifact. If you do, draw two cards.
+
+A:AB$ Draw | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | NumCards$ 7 | SubAbility$ DBEffect | SpellDescription$ Draw seven cards. Artifact spells you cast this turn cost {2} less to cast.
+SVar:DBEffect:DB$ Effect | StaticAbilities$ ReduceArtifactCost
+SVar:ReduceArtifactCost:Mode$ ReduceCost | ValidCard$ Artifact | Type$ Spell | Activator$ You | Amount$ 2 | Description$ Artifact spells you cast this turn cost {2} less to cast.
+
+Oracle:[+1]: Create a 1/1 colorless Thopter artifact creature token with flying. It gains lifelink until your next turn.\n[-1]: Sacrifice an artifact. If you do, draw two cards.\n[-6]: Draw seven cards. Artifact spells you cast this turn cost {2} less to cast.
+
+DeckHas:Ability$Token|Sacrifice
