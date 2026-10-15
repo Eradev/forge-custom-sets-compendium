@@ -1,0 +1,10 @@
+Name:Steel Hunter
+ManaCost:5 U
+Types:Artifact Creature Serpent
+PT:7/6
+
+S:Mode$ CantAttack | ValidCard$ Card.Self | IsPresent$ Artifact.Other+YouCtrl | PresentCompare$ LT3 | Description$ This creature can't attack unless you control three or more other artifacts.
+
+Oracle:This creature can't attack unless you control three or more other artifacts.
+
+DeckNeeds:Type$Artifact

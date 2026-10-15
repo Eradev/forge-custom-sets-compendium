@@ -1,0 +1,12 @@
+Name:Skittering Swarm
+ManaCost:3 G
+Types:Creature Spider
+PT:2/4
+
+K:Reach
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | FirstTime$ True | Execute$ TrigUntapPump | TriggerDescription$ Whenever a creature you control enters for the first time each turn, untap CARDNAME. It gets +1/+1 until end of turn.
+SVar:TrigUntapPump:DB$ Untap | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | NumAtt$ +1 | NumDef$ +1
+
+Oracle:Reach (This creature can block creatures with flying.)\nWhenever a creature you control enters for the first time each turn, untap Skittering Swarm. It gets +1/+1 until end of turn.

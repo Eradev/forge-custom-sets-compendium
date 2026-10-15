@@ -1,0 +1,10 @@
+Name:Scorchland Vandal
+ManaCost:2 R
+Types:Creature Human Rogue
+PT:3/2
+
+K:Prowess
+
+S:Mode$ MustAttack | ValidCreature$ Card.Self | Description$ This creature attacks each combat if able.
+
+Oracle:Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nThis creature attacks each combat if able.

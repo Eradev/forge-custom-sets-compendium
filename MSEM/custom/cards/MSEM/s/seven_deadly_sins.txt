@@ -1,0 +1,12 @@
+Name:Seven Deadly Sins
+ManaCost:1 B B
+Types:Enchantment
+
+T:Mode$ CounterAdded | ValidCard$ Card.Self | TriggerZones$ Battlefield | CounterType$ SIN | CounterAmount$ EQ7 | Execute$ TrigSac | TriggerDescription$ When this enchantment has seven or more sin counters on it, sacrifice it.
+SVar:TrigSac:DB$ Sacrifice | SacValid$ Self
+
+A:AB$ PutCounter | Cost$ B B | RaiseCost$ X | CounterType$ SIN | SubAbility$ DBDestroy | SpellDescription$ Put a sin counter on this enchantment. Destroy target creature. This ability costs {1} more to activate for each sin counter on it.
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Creature
+SVar:X:Count$CardCounters.SIN
+
+Oracle:When this enchantment has seven or more sin counters on it, sacrifice it.\n{B}{B}, Put a sin counter on this enchantment: Destroy target creature. This ability costs {1} more to activate for each sin counter on it.

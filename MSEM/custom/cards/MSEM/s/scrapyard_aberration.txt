@@ -1,0 +1,11 @@
+Name:Scrapyard Aberration
+ManaCost:3 B
+Types:Artifact Creature Horror
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSacPump | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may sacrifice another artifact. If you do, target creature gets -2/-2 until end of turn.
+SVar:TrigSacPump:AB$ Pump | Cost$ Sac<1/Artifact.Other/another artifact> | ValidTgts$ Creature | NumAtt$ -2 | NumDef$ -2 | IsCurse$ True
+
+Oracle:When this creature enters, you may sacrifice another artifact. If you do, target creature gets -2/-2 until end of turn.
+
+DeckHints:Type$Artifact

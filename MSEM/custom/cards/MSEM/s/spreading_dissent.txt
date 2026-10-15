@@ -1,0 +1,10 @@
+Name:Spreading Dissent
+ManaCost:3 R R
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this enchantment enters, exile all creatures until it leaves the battlefield.
+SVar:TrigExile:DB$ ChangeZoneAll | ChangeType$ Creature | Origin$ Battlefield | Destination$ Exile | Duration$ UntilHostLeavesPlay
+
+A:AB$ ChangeZone | Cost$ X | Origin$ Exile | Destination$ Battlefield | AtRandom$ True | Hidden$ True | ChangeType$ Creature.cmcEQX+ExiledWithSource | Activator$ Player | SpellDescription$ Put a random creature card with mana value X exiled with this enchantment onto the battlefield. Any player may activate this ability.
+
+Oracle:When this enchantment enters, exile all creatures until it leaves the battlefield.\n{X}: Put a random creature card with mana value X exiled with this enchantment onto the battlefield. Any player may activate this ability.
