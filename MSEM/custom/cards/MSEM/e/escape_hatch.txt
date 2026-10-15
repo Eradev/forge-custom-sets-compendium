@@ -1,0 +1,7 @@
+Name:Escape Hatch
+ManaCost:2
+Types:Artifact
+
+A:AB$ ChangeZone | Cost$ T Sac<1/CARDNAME/this artifact> | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | Origin$ Battlefield | Destination$ Hand | SpellDescription$ Return target creature you control to its owner's hand.
+
+Oracle:{T}, Sacrifice this artifact: Return target creature you control to its owner's hand.

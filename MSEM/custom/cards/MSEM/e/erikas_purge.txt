@@ -1,0 +1,14 @@
+Name:Erika's Purge
+ManaCost:1 W
+Types:Instant
+
+K:Kicker:W
+
+A:SP$ Sacrifice | ValidTgts$ Player | SacValid$ Creature.attacking | SacMessage$ attacking creature | RememberSacrificed$ True | SubAbility$ DBGainLife | SpellDescription$ Target player sacrifices an attacking creature. If this spell was kicked, you gain life equal to the sacrificed creature's power.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ Y | Condition$ Kicked | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:Y:RememberedLKI$CardPower
+
+Oracle:Kicker {W} (You may pay an additional {W} as you cast this spell.)\nTarget player sacrifices an attacking creature. If this spell was kicked, you gain life equal to the sacrificed creature's power.
+
+DeckHas:Ability$LifeGain

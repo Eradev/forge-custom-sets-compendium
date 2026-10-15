@@ -1,0 +1,8 @@
+Name:Earthenlore Blessing
+ManaCost:G
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ +2 | NumDef$ +2 | SubAbility$ DBExtra | SpellDescription$ Target creature gets +2/+2 until end of turn. If you control four or more lands, that creature gets an additional +2/+2 until end of turn.
+SVar:DBExtra:DB$ Pump | Defined$ Targeted | NumAtt$ +2 | NumDef$ +2 | ConditionPresent$ Land.YouCtrl | PresentCompare$ GE4
+
+Oracle:Target creature gets +2/+2 until end of turn. If you control four or more lands, that creature gets an additional +2/+2 until end of turn.
