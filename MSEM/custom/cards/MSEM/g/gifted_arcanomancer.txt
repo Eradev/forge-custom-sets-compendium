@@ -1,0 +1,16 @@
+Name:Gifted Arcanomancer
+ManaCost:1 U
+Types:Artifact Creature Human Wizard
+PT:1/2
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Mountain.YouCtrl | Description$ This creature gets +1/+1 as long as you control a Mountain.
+
+A:AB$ Dig | Cost$ 3 R | Defined$ You | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBEffect | AILogic$ ExileAndPlayUntilEOT | SpellDescription$ Exile the top card of your library. Until end of turn, you may play that card.
+SVar:DBEffect:DB$ Effect | RememberObjects$ RememberedCard | StaticAbilities$ Play | SubAbility$ DBCleanup | ExileOnMoved$ Exile
+SVar:Play:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ You may play remembered card.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:This creature gets +1/+1 as long as you control a Mountain.\n{3}{R}: Exile the top card of your library. Until end of turn, you may play that card.
+
+DeckNeeds:Type$Mountain
+SVar:BuffedBy:Mountain

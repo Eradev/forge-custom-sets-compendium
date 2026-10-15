@@ -1,0 +1,11 @@
+Name:Gorandu's Majesty
+ManaCost:5 G
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ +2 | NumDef$ +2 | SubAbility$ DBAnimate | SpellDescription$ Target creature gets +2/+2 until end of turn. Whenever that creature deals combat damage to a player or planeswalker this turn, draw that many cards.
+SVar:DBAnimate:DB$ Animate | Defined$ Targeted | Triggers$ DamageDrawTrig
+SVar:DamageDrawTrig:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player,Planeswalker | CombatDamage$ True | Execute$ TrigDraw | TriggerDescription$ Whenever this creature deals combat damage to a player or planeswalker this turn, draw that many cards.
+SVar:TrigDraw:DB$ Draw | NumCards$ X
+SVar:X:TriggerCount$DamageAmount
+
+Oracle:Target creature gets +2/+2 until end of turn. Whenever that creature deals combat damage to a player or planeswalker this turn, draw that many cards.
