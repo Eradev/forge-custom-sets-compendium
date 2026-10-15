@@ -1,0 +1,11 @@
+Name:Phyrexian Illbearer
+ManaCost:4 B
+Types:Artifact Creature Phyrexian Horror
+PT:4/3
+
+K:Menace
+
+T:Mode$ Blocks | ValidCard$ Creature | TriggerZones$ Battlefield | Execute$ TrigDrain | TriggerDescription$ Whenever a creature blocks, its controller loses 1 life.
+SVar:TrigDrain:DB$ LoseLife | Defined$ TriggeredCardController | LifeAmount$ 1
+
+Oracle:Menace (This creature can't be blocked except by two or more creatures.)\nWhenever a creature blocks, its controller loses 1 life.

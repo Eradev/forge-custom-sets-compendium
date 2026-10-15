@@ -1,0 +1,9 @@
+Name:Phyrexian Scraphandler
+ManaCost:3
+Types:Artifact
+
+A:AB$ Draw | Cost$ 2 T ExileFromGrave<1/Card> | SpellDescription$ Draw a card.
+
+Oracle:{2}, {T}, Exile a card from your graveyard: Draw a card.
+
+DeckHas:Ability$Graveyard
