@@ -1,0 +1,10 @@
+Name:Reorganized Thoughts
+ManaCost:1 U U
+Types:Instant
+
+K:Kicker:U
+
+A:SP$ Counter | TargetType$ Spell | ValidTgts$ Card | SubAbility$ DBReorder | SpellDescription$ Counter target spell. If this spell was kicked, look at the top three cards of your library, then put them back in any order.
+SVar:DBReorder:DB$ RearrangeTopOfLibrary | Defined$ You | NumCards$ 3 | Condition$ Kicked
+
+Oracle:Kicker {U} (You may pay an additional {U} as you cast this spell.)\nCounter target spell. If this spell was kicked, look at the top three cards of your library, then put them back in any order.

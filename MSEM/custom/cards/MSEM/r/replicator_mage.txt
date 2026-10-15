@@ -1,0 +1,11 @@
+Name:Replicator Mage
+ManaCost:2 U
+Types:Creature Human Wizard
+PT:2/2
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCopy | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may create a token that's a copy of target creature that's attacking you. Exile that token at end of combat.
+SVar:TrigCopy:DB$ CopyPermanent | ValidTgts$ Creature.attackingYou | AtEOT$ Exile
+
+Oracle:Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, you may create a token that's a copy of target creature that's attacking you. Exile that token at end of combat.
