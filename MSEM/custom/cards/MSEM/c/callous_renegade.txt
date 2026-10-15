@@ -1,0 +1,13 @@
+Name:Callous Renegade
+ManaCost:3 R W
+Types:Creature Human Rebel Soldier
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReturn | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may return target Rebel creature card with mana value 4 or less from your graveyard to the battlefield. It gains haste until end of turn.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature.Rebel+YouCtrl+cmcLE4 | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | Defined$ Targeted | KW$ Haste
+
+Oracle:When this creature enters, you may return target Rebel creature card with mana value 4 or less from your graveyard to the battlefield. It gains haste until end of turn.
+
+DeckHints:Type$Rebel
+SVar:PlayMain1:TRUE

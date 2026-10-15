@@ -1,0 +1,11 @@
+Name:Sense of Loss
+ManaCost:2 B
+Types:Sorcery
+
+A:SP$ Discard | ValidTgts$ Player | NumCards$ 2 | Mode$ TgtChoose | SubAbility$ DBLoseLife | SpellDescription$ Target player discards two cards. If a creature you control died this turn, that player loses 2 life.
+SVar:DBLoseLife:DB$ LoseLife | Defined$ ParentTarget | LifeAmount$ 2 | ConditionCheckSVar$ CreatureDied | ConditionSVarCompare$ GE1
+SVar:CreatureDied:Count$ThisTurnEntered_Graveyard Creature.YouCtrl
+
+Oracle:Target player discards two cards. If a creature you control died this turn, that player loses 2 life.
+
+DeckHints:Ability$Graveyard

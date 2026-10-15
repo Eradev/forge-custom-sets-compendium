@@ -1,0 +1,11 @@
+Name:Crystalline Golem
+ManaCost:6
+Types:Artifact Creature Golem
+PT:5/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChoose | TriggerDescription$ When this creature enters, choose a color. You gain 1 life for each permanent of that color you control.
+SVar:TrigChoose:DB$ ChooseColor | Defined$ You | AILogic$ MostProminentPermanent | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ X
+SVar:X:Count$Valid Card.ChosenColor+YouCtrl
+
+Oracle:When this creature enters, choose a color. You gain 1 life for each permanent of that color you control.

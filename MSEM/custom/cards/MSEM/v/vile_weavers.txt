@@ -1,0 +1,11 @@
+Name:Vile Weavers
+ManaCost:1 B
+Types:Creature Nightmare
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | IsPresent$ Enchantment.YouCtrl | Execute$ TrigDrain | TriggerDescription$ When this creature enters, if you control an enchantment, target player loses 3 life.
+SVar:TrigDrain:DB$ LoseLife | ValidTgts$ Player | TgtPrompt$ Select a player | LifeAmount$ 3
+
+Oracle:When this creature enters, if you control an enchantment, target player loses 3 life.
+
+DeckHints:Type$Enchantment

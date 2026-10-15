@@ -1,0 +1,8 @@
+Name:Pinpoint Accuracy
+ManaCost:2 G
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature.YouCtrl | NumAtt$ +2 | NumDef$ +2 | SubAbility$ DBFight | SpellDescription$ Target creature you control gets +2/+2 until end of turn. It fights target creature with flying you don't control.
+SVar:DBFight:DB$ Fight | Defined$ ParentTarget | ValidTgts$ Creature.withFlying+OppCtrl
+
+Oracle:Target creature you control gets +2/+2 until end of turn. It fights target creature with flying you don't control.

@@ -1,0 +1,12 @@
+Name:Symbiotic Sprout
+ManaCost:2 G
+Types:Creature Plant
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature dies, create two 1/1 green Saproling creature tokens.
+SVar:TrigToken:DB$ Token | TokenScript$ g_1_1_saproling | TokenAmount$ 2
+
+Oracle:When this creature dies, create two 1/1 green Saproling creature tokens.
+
+DeckHas:Ability$Token
+SVar:SacMe:1

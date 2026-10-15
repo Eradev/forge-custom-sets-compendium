@@ -1,0 +1,10 @@
+Name:Vestige of Skithiryx
+ManaCost:5 B B
+Types:Creature Dragon Skeleton
+PT:5/5
+
+K:Flying
+
+A:AB$ Pump | Cost$ 2 B Sac<1/Creature.Other/another creature> | ValidTgts$ Creature | NumAtt$ -3 | NumDef$ -3 | IsCurse$ True | SpellDescription$ Target creature gets -3/-3 until end of turn.
+
+Oracle:Flying\n{2}{B}, Sacrifice another creature: Target creature gets -3/-3 until end of turn.

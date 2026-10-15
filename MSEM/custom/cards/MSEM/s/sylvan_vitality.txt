@@ -1,0 +1,10 @@
+Name:Sylvan Vitality
+ManaCost:1 G
+Types:Sorcery
+
+A:SP$ Scry | ScryNum$ 2 | SubAbility$ DBDig | SpellDescription$ Scry 2, then reveal the top card of your library. If it's a basic land card, put it onto the battlefield tapped.
+SVar:DBDig:DB$ Dig | DigNum$ 1 | Reveal$ True | ChangeNum$ All | ChangeValid$ Land.Basic | Tapped$ True | DestinationZone$ Battlefield | LibraryPosition2$ 0
+
+Oracle:Scry 2, then reveal the top card of your library. If it's a basic land card, put it onto the battlefield tapped. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)
+
+DeckHas:Ability$Landfall

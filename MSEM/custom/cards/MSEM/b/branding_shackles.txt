@@ -1,0 +1,10 @@
+Name:Branding Shackles
+ManaCost:2 B
+Types:Instant
+
+A:SP$ Sacrifice | ValidTgts$ Player | SacValid$ Creature | SubAbility$ DBDraw | SpellDescription$ Target player sacrifices a creature. If you control an artifact, draw a card.
+SVar:DBDraw:DB$ Draw | ConditionPresent$ Artifact.YouCtrl
+
+Oracle:Target player sacrifices a creature. If you control an artifact, draw a card.
+
+DeckHints:Type$Artifact

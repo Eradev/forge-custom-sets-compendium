@@ -1,0 +1,13 @@
+Name:Consuming Doom
+ManaCost:4 B
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self,Enchantment.Other+YouCtrl | Execute$ TrigPump | OptionalDecider$ You | TriggerDescription$ Whenever this or another enchantment you control enters, you may have target creature get -1/-1 until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | NumAtt$ -1 | NumDef$ -1 | IsCurse$ True
+
+T:Mode$ Destroyed | ValidCauser$ Player.Opponent | ValidCard$ Enchantment.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigSacrifice | TriggerDescription$ Whenever a source an opponent controls destroys an enchantment you control, that player sacrifices a creature.
+SVar:TrigSacrifice:DB$ Sacrifice | Defined$ TriggeredCauser | SacValid$ Creature
+
+Oracle:Whenever this or another enchantment you control enters, you may have target creature get -1/-1 until end of turn.\nWhenever a source an opponent controls destroys an enchantment you control, that player sacrifices a creature.
+
+DeckHas:Type$Enchantment

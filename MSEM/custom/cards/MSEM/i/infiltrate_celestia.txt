@@ -1,0 +1,8 @@
+Name:Infiltrate Celestia
+ManaCost:2 W
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPump | OptionalDecider$ You | TriggerDescription$ Whenever a creature you control enters, you may have target creature get +1/+1 and gain flying until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | NumAtt$ +1 | NumDef$ +1 | KW$ Flying
+
+Oracle:Whenever a creature you control enters, you may have target creature get +1/+1 and gain flying until end of turn.

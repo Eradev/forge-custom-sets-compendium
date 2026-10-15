@@ -1,0 +1,14 @@
+Name:Carrion Gourmet
+ManaCost:2 B B
+Types:Creature Zombie
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSac | TriggerDescription$ When this creature enters, each player sacrifices a creature.
+SVar:TrigSac:DB$ Sacrifice | Defined$ Player | SacValid$ Creature
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.Other | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever another creature dies, put a +1/+1 counter on this creature.
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1
+
+Oracle:When this creature enters, each player sacrifices a creature.\nWhenever another creature dies, put a +1/+1 counter on this creature.
+
+DeckHas:Ability$Counters

@@ -1,0 +1,11 @@
+Name:Bomb Juggler
+ManaCost:2 R
+Types:Creature Goblin
+PT:2/2
+
+S:Mode$ CantPreventDamage | Description$ Damage can't be prevented.
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ At the beginning of your upkeep, this creature deals 3 damage to target player chosen at random.
+SVar:TrigDamage:DB$ DealDamage | NumDmg$ 3 | ValidTgts$ Player | Random$ True
+
+Oracle:Damage can't be prevented.\nAt the beginning of your upkeep, this creature deals 3 damage to target player chosen at random.

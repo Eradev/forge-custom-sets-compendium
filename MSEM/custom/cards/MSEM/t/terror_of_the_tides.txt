@@ -1,0 +1,12 @@
+Name:Terror of the Tides
+ManaCost:1 U
+Types:Sorcery
+
+K:Kicker:4 U U
+
+A:SP$ ChangeZone | ValidTgts$ Permanent.nonLand | TgtPrompt$ Select target nonland permanent | Origin$ Battlefield | Destination$ Hand | SubAbility$ DBToken | SpellDescription$ Return target nonland permanent to its owner's hand. If this spell was kicked, create an 8/8 blue Kraken creature token with trample.
+SVar:DBToken:DB$ Token | TokenScript$ u_8_8_kraken_trample | Condition$ Kicked
+
+Oracle:Kicker {4}{U}{U} (You may pay an additional {4}{U}{U} as you cast this spell.)\nReturn target nonland permanent to its owner's hand. If this spell was kicked, create an 8/8 blue Kraken creature token with trample.
+
+DeckHas:Ability$Token & Type$Kraken

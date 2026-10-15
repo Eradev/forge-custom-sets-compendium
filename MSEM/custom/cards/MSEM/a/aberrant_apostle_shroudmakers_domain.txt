@@ -22,7 +22,7 @@ Colors:white
 Types:Land
 
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
-SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+SVar:ETBTapped:DB$ Tap | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ W | SpellDescription$ Add {W}.
 

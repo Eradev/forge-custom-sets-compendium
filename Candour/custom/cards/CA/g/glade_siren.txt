@@ -5,9 +5,9 @@ PT:1/2
 
 K:Deathtouch
 
-T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | CheckSVar$ X | SVarCompare$ GE1 | Execute$ TrigPrepare | TriggerDescription$ Morbid — At the beginning of each end step, if a creature died this turn, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)
-SVar:X:Count$ThisTurnEntered_Graveyard_from_Battlefield_Creature
+T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | CheckSVar$ Morbid | Execute$ TrigPrepare | TriggerDescription$ Morbid — At the beginning of each end step, if a creature died this turn, this creature becomes prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)
 SVar:TrigPrepare:DB$ AlterAttribute | Attributes$ Prepared
+SVar:Morbid:Count$Morbid.1.0
 
 AlternateMode:Prepare
 

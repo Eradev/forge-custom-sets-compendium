@@ -1,0 +1,13 @@
+Name:Battlefield Catastrophe
+ManaCost:1 B
+Types:Sorcery
+
+K:Kicker:1 B
+
+A:SP$ PumpAll | ValidCards$ Creature | NumAtt$ -1 | NumDef$ -1 | IsCurse$ True | SubAbility$ DBExtra | SpellDescription$ All creatures get -1/-1 until end of turn. If this spell was kicked, creatures your opponents control get an additional -1/-1 until end of turn.
+
+SVar:DBExtra:DB$ PumpAll | ValidCards$ Creature.OppCtrl | NumAtt$ -1 | NumDef$ -1 | IsCurse$ True | ConditionCheck$ WasKicked | ConditionSVarCompare$ GE1
+
+SVar:WasKicked:Count$Kicked.1.0
+
+Oracle:Kicker {1}{B} (You may pay an additional {1}{B} as you cast this spell.)\nAll creatures get -1/-1 until end of turn. If this spell was kicked, creatures your opponents control get an additional -1/-1 until end of turn.

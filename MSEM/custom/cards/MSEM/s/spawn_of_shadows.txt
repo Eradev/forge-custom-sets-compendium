@@ -1,0 +1,11 @@
+Name:Spawn of Shadows
+ManaCost:4 B B
+Types:Creature Horror
+PT:4/4
+
+K:Menace
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigLoseLife | TriggerDescription$ When this creature enters, each player loses 4 life.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ Player | LifeAmount$ 4
+
+Oracle:Menace (This creature can't be blocked except by two or more creatures.)\nWhen this creature enters, each player loses 4 life.

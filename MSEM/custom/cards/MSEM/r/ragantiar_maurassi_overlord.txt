@@ -1,0 +1,14 @@
+Name:Ragantiar, Maurassi Overlord
+ManaCost:3 B B
+Types:Legendary Creature Mutant Rogue
+PT:5/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ When NICKNAME enters, mill five cards.
+SVar:TrigMill:DB$ Mill | NumCards$ 5
+
+A:AB$ ChangeZone | Cost$ 3 B Sac<1/Creature> | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature.YouOwn+powerLEX | TgtPrompt$ Select target creature card with power X or less from your graveyard | SpellDescription$ Return target creature card with power X or less from your graveyard to the battlefield, where X is 1 plus the sacrificed creature's power.
+SVar:X:Sacrificed$CardPower/Plus.1
+
+Oracle:When Ragantiar enters, mill five cards.\n{3}{B}, Sacrifice a creature: Return target creature card with power X or less from your graveyard to the battlefield, where X is 1 plus the sacrificed creature's power.
+
+DeckHas:Ability$Graveyard|Sacrifice

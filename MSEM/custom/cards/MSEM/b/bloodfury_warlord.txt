@@ -1,0 +1,12 @@
+Name:Bloodfury Warlord
+ManaCost:1 B R
+Types:Creature Devil
+PT:3/1
+
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDamage | TriggerDescription$ When this creature enters or dies, it deals 2 damage to each player.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigDamage | Secondary$ True | TriggerDescription$ When this creature enters or dies, it deals 2 damage to each player.
+SVar:TrigDamage:DB$ DealDamage | Defined$ Player | NumDmg$ 2
+
+Oracle:Haste\nWhen this creature enters or dies, it deals 2 damage to each player.

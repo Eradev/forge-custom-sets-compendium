@@ -1,0 +1,14 @@
+Name:Youthful Renegade
+ManaCost:3 R
+Types:Creature Human Rebel Soldier
+PT:3/2
+
+S:Mode$ Continuous | Affected$ Creature.Rebel+Other+YouCtrl | AddPower$ 1 | Description$ Other Rebel creatures you control get +1/+0.
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 1/1 white Rebel creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_rebel
+
+Oracle:Other Rebel creatures you control get +1/+0.\nWhen this creature enters, create a 1/1 white Rebel creature token.
+
+DeckHas:Ability$Token
+DeckHints:Type$Rebel

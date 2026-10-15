@@ -1,0 +1,12 @@
+Name:Rammanethi Hydroshaper
+ManaCost:1 G
+Types:Creature Human Shaman
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Island.YouCtrl | Description$ This creature gets +1/+1 as long as you control an Island.
+
+A:AB$ Pump | Cost$ 2 U | ValidTgts$ Creature.blockingSource,Creature.blockedBySource | NumAtt$ -1 | IsCurse$ True | SpellDescription$ Target creature blocking or blocked by this creature gets -1/-0 until end of turn.
+
+Oracle:This creature gets +1/+1 as long as you control an Island.\n{2}{U}: Target creature blocking or blocked by this creature gets -1/-0 until end of turn.
+
+SVar:BuffedBy:Island

@@ -295,3 +295,11 @@ Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 11 emblem_fatresya_protector_of_the_people @lacliliac
 12 emblem_akrianos_redeemed_avenger @hgjart
 13 emblem_jeska_neolition_leader @merkymerx
+
+[WalkerTypes]
+Akrianos
+Erika
+Fatresya
+Jeska
+Kellythross
+Merkurio

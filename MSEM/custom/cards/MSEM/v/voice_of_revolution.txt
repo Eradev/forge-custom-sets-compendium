@@ -1,0 +1,11 @@
+Name:Voice of Revolution
+ManaCost:2 R
+Types:Creature Human Rebel Soldier
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When this creature enters, Rebel creatures you control get +1/+0 and gain haste until end of turn.
+SVar:TrigPump:DB$ PumpAll | ValidCards$ Creature.Rebel+YouCtrl | NumAtt$ +1 | KW$ Haste
+
+Oracle:When this creature enters, Rebel creatures you control get +1/+0 and gain haste until end of turn.
+
+DeckHints:Type$Rebel

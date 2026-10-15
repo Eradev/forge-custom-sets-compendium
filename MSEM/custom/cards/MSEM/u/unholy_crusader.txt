@@ -1,0 +1,5 @@
+Name:Unholy Crusader
+ManaCost:4 B
+Types:Creature Zombie Knight
+PT:4/5
+Oracle:

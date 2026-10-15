@@ -1,0 +1,11 @@
+Name:Glintfeather Sage
+ManaCost:2 W U
+Types:Creature Bird Cleric
+PT:3/3
+
+K:Flying
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self,Creature.Other+withFlying+YouCtrl | Origin$ Battlefield | Destination$ Graveyard | Execute$ TrigDraw | TriggerDescription$ Whenever this creature or another creature with flying you control dies, you may pay {1}. If you do, draw a card.
+SVar:TrigDraw:AB$ Draw | Cost$ 1
+
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever this creature or another creature with flying you control dies, you may pay {1}. If you do, draw a card.

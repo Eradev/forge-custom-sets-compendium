@@ -3,7 +3,7 @@ ManaCost:no cost
 Types:Land
 
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
-SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+SVar:ETBTapped:DB$ Tap | ETB$ True
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigETB | TriggerDescription$ When this land enters, you choose a nonbasic land card name other than CARDNAME, then each player chooses a color.
 SVar:TrigETB:DB$ NameCard | Defined$ You | ValidCards$ Card.Land+nonBasic | ValidDescription$ nonbasic land other than CARDNAME | SubAbility$ DBChooseColors

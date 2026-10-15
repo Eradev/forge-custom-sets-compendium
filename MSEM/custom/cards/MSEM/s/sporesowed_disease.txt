@@ -1,0 +1,8 @@
+Name:Sporesowed Disease
+ManaCost:2 B
+Types:Sorcery
+
+A:SP$ DealDamage | Cost$ Sac<1/Permanent> | ValidTgts$ Any | NumDmg$ 3 | SubAbility$ DBGainLife | SpellDescription$ CARDNAME deals 3 damage to any target and you gain 3 life.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 3
+
+Oracle:As an additional cost to cast this spell, sacrifice a permanent.\nSporesowed Disease deals 3 damage to any target and you gain 3 life.

@@ -1,0 +1,10 @@
+Name:Soulsorrow Shade
+ManaCost:2 B
+Types:Creature Shade
+PT:3/1
+
+A:AB$ Pump | Cost$ Sac<1/Creature> | Defined$ Self | NumAtt$ +2 | NumDef$ +2 | SpellDescription$ This creature gets +2/+2 until end of turn.
+
+Oracle:Sacrifice a creature: This creature gets +2/+2 until end of turn.
+
+DeckHas:Ability$Sacrifice

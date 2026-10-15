@@ -4,9 +4,9 @@ Types:Enchantment
 
 K:Flash
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this enchantment enters, exile target nonland permanent until it leaves the battlefield.
-SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Permanent.nonLand | TgtPrompt$ Select target nonland permanent | Duration$ UntilHostLeavesPlay
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this enchantment enters, exile another target nonland permanent until it leaves the battlefield.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Permanent.nonLand+Other | TgtPrompt$ Select another target nonland permanent | Duration$ UntilHostLeavesPlay
 
-Oracle:Flash\nWhen this enchantment enters, exile target nonland permanent until it leaves the battlefield.
+Oracle:Flash\nWhen this enchantment enters, exile another target nonland permanent until it leaves the battlefield.
 
 SVar:OblivionRing:TRUE

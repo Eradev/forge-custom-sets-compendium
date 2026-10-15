@@ -1,0 +1,12 @@
+Name:Soul of Misery
+ManaCost:1 W
+Types:Creature Spirit
+PT:2/1
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Swamp.YouCtrl | Description$ CARDNAME gets +1/+1 as long as you control a Swamp.
+
+A:AB$ Discard | Cost$ 4 B | ValidTgts$ Player |  Mode$ TgtChoose | SorcerySpeed$ True | SpellDescription$ Target player discards a card. Activate only as a sorcery.
+
+Oracle:This creature gets +1/+1 as long as you control a Swamp.\n{4}{B}: Target player discards a card. Activate only as a sorcery.
+
+SVar:BuffedBy:Swamp

@@ -1,0 +1,7 @@
+Name:Molten Ritual
+ManaCost:R R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Creature | NumDmg$ 3 | ReplaceDyingDefined$ Targeted | SpellDescription$ CARDNAME deals 3 damage to target creature. If that creature would die this turn, exile it instead.
+
+Oracle:Molten Ritual deals 3 damage to target creature. If that creature would die this turn, exile it instead.

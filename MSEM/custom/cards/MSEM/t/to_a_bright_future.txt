@@ -1,0 +1,12 @@
+Name:To a Bright Future
+ManaCost:2 W W
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl | AddPower$ 1 | AddToughness$ 1 | Description$ Creatures you control get +1/+1.
+
+A:AB$ PutCounterAll | Cost$ 3 W W Sac<1/CARDNAME/this enchantment> | CounterType$ P1P1 | ValidCards$ Creature.YouCtrl | SpellDescription$ Put a +1/+1 counter on each creature you control.
+
+Oracle:Creatures you control get +1/+1.\n{3}{W}{W}, Sacrifice this enchantment: Put a +1/+1 counter on each creature you control.
+
+SVar:PlayMain1:TRUE
+DeckHas:Ability$Counters

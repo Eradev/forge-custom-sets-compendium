@@ -3,10 +3,16 @@ ManaCost:1 B
 Types:Creature Human Rogue
 PT:2/1
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Optional$ True | Execute$ TrigBounty | TriggerDescription$ When this creature enters, you may put a bounty counter on target creature.
-SVar:TrigBounty:DB$ PutCounter | CounterType$ BOUNTY | ValidTgts$ Creature | IsCurse$ True
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigBounty | TriggerDescription$ When this creature enters, you may post a bounty on target creature. (Put a bounty counter on that creature. It has "When this creature dies, each opponent draws a card" as long as it has a bounty counter on it.)
+SVar:TrigBounty:DB$ PutCounter | CounterType$ BOUNTY | ValidTgts$ Creature | TgtPrompt$ Select target creature | IsCurse$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ Targeted | Duration$ Permanent | StaticAbilities$ BountyStatic | Triggers$ TrigForget | ForgetCounter$ BOUNTY
+SVar:BountyStatic:Mode$ Continuous | Affected$ Card.IsRemembered | AddTrigger$ BountyDeath | Description$ For as long as that creature has a bounty counter on it, it has "When this creature dies, each opponent draws a card."
+SVar:BountyDeath:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ BountyPayoff | TriggerDescription$ When this creature dies, each opponent draws a card.
+SVar:BountyPayoff:DB$ Draw | Defined$ Player.Opponent | SubAbility$ ExileEff
+SVar:TrigForget:Mode$ ChangesZone | ValidCard$ Card.IsRemembered | Origin$ Battlefield | ExcludedDestinations$ Graveyard | Destination$ Any | TriggerZones$ Command | Static$ True | Execute$ ExileSelf
+SVar:ExileSelf:DB$ ChangeZone | Origin$ Command | Destination$ Exile | Defined$ Self
+SVar:ExileEff:DB$ ChangeZone | Origin$ Command | Destination$ Exile | Defined$ OriginalHost
 
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.counters_GE1_BOUNTY | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever a creature with a bounty counter on it dies, each of its controller's opponents draws a card.
-SVar:TrigDraw:DB$ Draw | Defined$ Player.OpponentOf TriggeredCardController
+Oracle:When this creature enters, you may post a bounty on target creature. (Put a bounty counter on that creature. It has "When this creature dies, each opponent draws a card" as long as it has a bounty counter on it.)
 
-Oracle:When this creature enters, you may put a bounty counter on target creature.\nWhenever a creature with a bounty counter on it dies, each of its controller's opponents draws a card.
+DeckHas:Ability$Counters

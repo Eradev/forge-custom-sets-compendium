@@ -1,0 +1,12 @@
+Name:Camouflaged Sprareos
+ManaCost:8 G G
+Types:Creature Beast
+PT:8/7
+
+K:Affinity:Creature
+
+K:Trample
+
+K:While you're searching your library, you may cast CARDNAME from your library.
+
+Oracle:This spell costs {1} less to cast for each creature you control.\nTrample\nWhile you're searching your library, you may cast this creature from your library.

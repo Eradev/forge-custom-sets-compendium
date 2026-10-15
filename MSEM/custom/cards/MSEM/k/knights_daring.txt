@@ -1,0 +1,17 @@
+Name:Knight's Daring
+ManaCost:2 G
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounters | TriggerDescription$ When this Aura enters, put two +1/+1 counters on enchanted creature.
+SVar:TrigCounters:DB$ PutCounter | Defined$ Enchanted | CounterType$ P1P1 | CounterNum$ 2
+
+T:Mode$ DamageDone | ValidSource$ Card.EnchantedBy | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigPutCounters | TriggerDescription$ Whenever enchanted creature deals combat damage to a player, put a +1/+1 counter on each creature you control with a +1/+1 counter on it.
+SVar:TrigPutCounters:DB$ PutCounterAll | ValidCards$ Creature.YouCtrl+counters_GE1_P1P1 | CounterType$ P1P1
+
+Oracle:Enchant creature\nWhen this Aura enters, put two +1/+1 counters on enchanted creature.\nWhenever enchanted creature deals combat damage to a player, put a +1/+1 counter on each creature you control with a +1/+1 counter on it.
+
+SVar:AttachAITgts:Creature
+SVar:AttachAILogic:Pump
+DeckHas:Ability$Counters

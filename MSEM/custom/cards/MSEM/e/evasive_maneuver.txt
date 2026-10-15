@@ -1,0 +1,11 @@
+Name:Evasive Maneuver
+ManaCost:2 W
+Types:Instant
+
+A:SP$ PutCounter | ValidTgts$ Creature | CounterType$ P1P1 | SubAbility$ DBPump | SpellDescription$ Put a +1/+1 counter on target creature. That creature gains flying until end of turn. Untap it.
+SVar:DBPump:DB$ Pump | Defined$ Targeted | KW$ Flying | SubAbility$ DBUntap
+SVar:DBUntap:DB$ Untap | Defined$ Targeted
+
+Oracle:Put a +1/+1 counter on target creature. That creature gains flying until end of turn. Untap it.
+
+DeckHas:Ability$Counters

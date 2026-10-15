@@ -1,0 +1,10 @@
+Name:Walking Platform
+ManaCost:1
+Types:Artifact Creature Construct
+PT:1/1
+
+A:AB$ Token | Cost$ 2 Sac<1/CARDNAME/this creature> | TokenScript$ c_1_1_a_thopter_flying | SpellDescription$ Create a 1/1 colorless Thopter artifact creature token with flying.
+
+Oracle:{2}, Sacrifice this creature: Create a 1/1 colorless Thopter artifact creature token with flying.
+
+DeckHas:Ability$Token & Type$Thopter|Artifact

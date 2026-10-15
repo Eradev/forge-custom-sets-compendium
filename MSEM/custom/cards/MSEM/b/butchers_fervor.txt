@@ -1,0 +1,12 @@
+Name:Butcher's Fervor
+ManaCost:3 B
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ -2 | AddToughness$ -2 | Description$ Enchanted creature gets -2/-2.
+
+T:Mode$ Blocks | ValidCard$ Card.EnchantedBy | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ Whenever enchanted creature blocks, its controller loses 2 life.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ TriggeredCardController | LifeAmount$ 2
+
+Oracle:Enchant creature (Target a creature as you cast this. This card enters attached to that creature.)\nEnchanted creature gets -2/-2.\nWhenever enchanted creature blocks, its controller loses 2 life.

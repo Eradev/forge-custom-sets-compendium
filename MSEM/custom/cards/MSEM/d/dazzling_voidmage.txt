@@ -1,0 +1,11 @@
+Name:Dazzling Voidmage
+ManaCost:3 U
+Types:Creature Human Wizard
+PT:2/2
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigBounce | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may return target attacking creature to its owner's hand.
+SVar:TrigBounce:DB$ ChangeZone | ValidTgts$ Creature.attacking | Origin$ Battlefield | Destination$ Hand
+
+Oracle:Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, you may return target attacking creature to its owner's hand.

@@ -12,7 +12,7 @@ Foil=NotSupported
 2 C Arrest
 3 R Bantha Herd
 4 M The Battle of Hoth
-5 U Battle Tactics
+5 U Battle Tactics (SWTG)
 6 C Cantina Band
 7 U Condemn
 8 U Deploy The Troops
@@ -140,7 +140,7 @@ Foil=NotSupported
 129 C Bathe in Bacta
 130 M The Battle of Endor
 131 R Bossk
-132 U Bounty Collector
+132 U Bounty Collector (SWTG)
 133 U Corellian Corvette
 134 C Ewok Ambush
 135 C Ewok Firedancers
@@ -164,7 +164,7 @@ Foil=NotSupported
 153 C Scout the Perimeter
 154 C Scout Trooper
 155 C Shaak Herd
-156 U Show of Dominance
+156 U Show of Dominance (SWTG)
 157 U Trooper Commando
 158 C Twi'lek Seductress
 159 C Wookiee Bounty Hunter

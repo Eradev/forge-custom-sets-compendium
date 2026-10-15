@@ -1,0 +1,11 @@
+Name:Stampede Instigator
+ManaCost:2 G G
+Types:Creature Elf Warrior
+PT:2/2
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When this creature enters, target creature gets +2/+3 until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | NumAtt$ +2 | NumDef$ +3
+
+Oracle:Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, target creature gets +2/+3 until end of turn.

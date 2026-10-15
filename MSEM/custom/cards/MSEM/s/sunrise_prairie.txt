@@ -7,8 +7,8 @@ SVar:ETBTapped:DB$ Tap | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ W | SpellDescription$ Add {W}.
 
-T:Mode$ Phase | Phase$ UntapOtherPlayer | ValidPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigUntap | TriggerDescription$ At the beginning of each other player's untap step, you may untap this land. Whenever you do, you lose 1 life.
+T:Mode$ Phase | Phase$ UntapOtherPlayer | ValidPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigUntap | TriggerDescription$ You may untap this land during each other player's untap step. Whenever you do, you lose 1 life.
 SVar:TrigUntap:DB$ Untap | SubAbility$ DBLoseLife
 SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
 
-Oracle:This land enters tapped.\n{T}: Add {W}.\nAt the beginning of each other player's untap step, you may untap this land. Whenever you do, you lose 1 life.
+Oracle:This land enters tapped.\n{T}: Add {W}.\nYou may untap this land during each other player's untap step. Whenever you do, you lose 1 life.

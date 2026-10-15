@@ -1,0 +1,10 @@
+Name:Timely Commander
+ManaCost:3 W W
+Types:Creature Human Knight
+PT:3/2
+
+K:Double Strike
+
+S:Mode$ CastWithFlash | ValidCard$ Card.Self | ValidSA$ Spell | EffectZone$ All | Caster$ You | IsPresent$ Creature.attackingYou | PresentCompare$ GE3 | Description$ If three or more creatures are attacking you, you may cast this creature as though it had flash.
+
+Oracle:Double strike (This creature deals both first-strike and regular combat damage.)\nIf three or more creatures are attacking you, you may cast this creature as though it had flash.

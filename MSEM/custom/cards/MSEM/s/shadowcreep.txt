@@ -1,0 +1,15 @@
+Name:Shadowcreep
+ManaCost:3 G
+Types:Creature Spider
+PT:2/3
+
+K:Kicker:2
+
+K:Reach
+
+K:etbCounter:P1P1:2:CheckSVar$ WasKicked:If this creature was kicked, it enters with two +1/+1 counters on it.
+SVar:WasKicked:Count$Kicked.1.0
+
+Oracle:Kicker {2} (You may pay an additional {2} as you cast this spell.)\nReach (This creature can block creatures with flying.)\nIf this creature was kicked, it enters with two +1/+1 counters on it.
+
+DeckHas:Ability$Counters

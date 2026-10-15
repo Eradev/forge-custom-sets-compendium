@@ -1,0 +1,19 @@
+Name:Merkurio, Volatile Elementalist
+ManaCost:4 U R
+Types:Legendary Planeswalker Merkurio
+Loyalty:5
+
+A:AB$ Effect | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | StaticAbilities$ ReduceCost | ForgetOnCast$ Instant.YouCtrl,Sorcery.YouCtrl | SpellDescription$ The next instant or sorcery spell you cast this turn costs {1} less to cast.
+SVar:ReduceCost:Mode$ ReduceCost | ValidCard$ Instant,Sorcery | Type$ Spell | Activator$ You | Amount$ 1 | Description$ The next instant or sorcery spell you cast this turn costs {1} less to cast.
+
+A:AB$ Effect | Cost$ SubCounter<4/LOYALTY> | Planeswalker$ True | Triggers$ TrigSpell | SpellDescription$ Until end of turn, whenever you cast an instant or sorcery spell, NICKNAME deals 2 damage to any target.
+SVar:TrigSpell:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | Execute$ TrigDeal | TriggerDescription$ Whenever you cast an instant or sorcery spell, NICKNAME deals 2 damage to any target.
+SVar:TrigDeal:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 2
+
+A:AB$ Dig | Cost$ SubCounter<8/LOYALTY> | Planeswalker$ True | Ultimate$ True | Defined$ You | DigNum$ 7 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBPlay | SpellDescription$ Exile the top seven cards of your library. You may cast any number of instant and sorcery cards from among them without paying their mana costs.
+SVar:DBPlay:DB$ Play | WithoutManaCost$ True | ValidZone$ Exile | Valid$ Card.Instant+IsRemembered,Card.Sorcery+IsRemembered | ValidSA$ Spell | Amount$ All | Optional$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:[+1]: The next instant or sorcery spell you cast this turn costs {1} less to cast.\n[-4]: Until end of turn, whenever you cast an instant or sorcery spell, Merkurio deals 2 damage to any target.\n[-8]: Exile the top seven cards of your library. You may cast any number of instant and sorcery cards from among them without paying their mana costs.
+
+DeckHints:Type$Instant|Sorcery

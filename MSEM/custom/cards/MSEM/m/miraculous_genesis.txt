@@ -1,0 +1,12 @@
+Name:Miraculous Genesis
+ManaCost:3 G G
+Types:Sorcery
+
+A:SP$ RepeatEach | StartingWith$ You | RepeatPlayers$ Player | RepeatSubAbility$ DBPutHand | SubAbility$ DBRepeatChoose | SpellDescription$ Starting with you, each player may put a permanent card from their hand onto the battlefield. Then each player may choose a noncreature, nonland permanent. Destroy those permanents.
+SVar:DBPutHand:DB$ ChangeZone | DefinedPlayer$ Player.IsRemembered | Origin$ Hand | Destination$ Battlefield | ChangeType$ Permanent | ChangeNum$ 1 | Optional$ True
+
+SVar:DBRepeatChoose:DB$ RepeatEach | StartingWith$ You | RepeatPlayers$ Player | RepeatSubAbility$ DBChoose | SubAbility$ DBDestroy
+SVar:DBChoose:DB$ ChooseCard | Defined$ Remembered | Choices$ Permanent.nonCreature+nonLand | MinAmount$ 0 | Amount$ 1 | RememberChosen$ True | Optional$ True
+SVar:DBDestroy:DB$ DestroyAll | ValidCards$ Permanent.ChosenCard
+
+Oracle:Starting with you, each player may put a permanent card from their hand onto the battlefield. Then each player may choose a noncreature, nonland permanent. Destroy those permanents.

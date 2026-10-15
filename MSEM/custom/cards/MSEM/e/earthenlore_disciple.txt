@@ -1,0 +1,9 @@
+Name:Earthenlore Disciple
+ManaCost:4 G
+Types:Creature Elf Druid
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may destroy target artifact, enchantment, or land.
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Artifact,Enchantment,Land | TgtPrompt$ Select target artifact, enchantment, or land
+
+Oracle:When this creature enters, you may destroy target artifact, enchantment, or land.

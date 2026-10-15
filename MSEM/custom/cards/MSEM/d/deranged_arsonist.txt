@@ -1,0 +1,13 @@
+Name:Deranged Arsonist
+ManaCost:2 R
+Types:Creature Human Wizard
+PT:2/2
+
+K:Prowess
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCantBlock | TriggerDescription$ Whenever you cast a noncreature spell, target creature can't block this turn.
+SVar:TrigCantBlock:DB$ Pump | ValidTgts$ Creature | KW$ HIDDEN CARDNAME can't block. | IsCurse$ True
+
+Oracle:Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhenever you cast a noncreature spell, target creature can't block this turn.
+
+DeckHints:Type$Instant|Sorcery

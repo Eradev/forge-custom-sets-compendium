@@ -1,0 +1,5 @@
+Name:Tidemaster's Loyalist
+ManaCost:U
+Types:Creature Merfolk
+PT:1/2
+Oracle:

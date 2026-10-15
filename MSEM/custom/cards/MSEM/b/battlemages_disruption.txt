@@ -1,0 +1,10 @@
+Name:Battlemage's Disruption
+ManaCost:U
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigBounce | OptionalDecider$ You | TriggerDescription$ When this enchantment enters, you may return target creature to its owner's hand.
+SVar:TrigBounce:DB$ ChangeZone | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Hand
+
+A:AB$ ChangeZone | Cost$ 3 U Sac<1/CARDNAME> | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Hand | SpellDescription$ Return target creature to its owner's hand.
+
+Oracle:When this enchantment enters, you may return target creature to its owner's hand.\n{3}{U}, Sacrifice Battlemage's Disruption: Return target creature to its owner's hand.

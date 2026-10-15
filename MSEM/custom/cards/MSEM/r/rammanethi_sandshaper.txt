@@ -1,0 +1,11 @@
+Name:Rammanethi Sandshaper
+ManaCost:2 R
+Types:Creature Human Shaman
+PT:1/4
+
+K:Reach
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever a land you control enters, this creature deals 1 damage to target creature with flying.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Creature.withFlying | NumDmg$ 1
+
+Oracle:Reach (This creature can block creatures with flying.)\nWhenever a land you control enters, this creature deals 1 damage to target creature with flying.

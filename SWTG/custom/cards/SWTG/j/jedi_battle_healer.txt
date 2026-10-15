@@ -10,4 +10,4 @@ SVar:TrigLife:DB$ GainLife | LifeAmount$ 3
 
 A:AB$ ChangeZone | Named$ Meditate | Cost$ 1 W | ActivationZone$ Battlefield | SorcerySpeed$ True | Origin$ Battlefield | Destination$ Hand | Defined$ Self | SpellDescription$ Meditate (Return this creature to its owner's hand. Meditate only as a sorcery.)
 
-Oracle:Lifelink\nWhen this creature enters, you gain 3 life.\nMeditate 1W (Return this creature to its owner's hand. Meditate only as a sorcery.)
+Oracle:Lifelink\nWhen this creature enters, you gain 3 life.\nMeditate {1}{W} (Return this creature to its owner's hand. Meditate only as a sorcery.)

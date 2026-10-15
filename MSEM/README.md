@@ -70,7 +70,10 @@ Path of Shadows (PSA)                 -  99% (208/209)
      * The Sacred Gate
 Kaleidoscope (KLC)                    -  100%
 A Tourney at Whiterun (TWR)           -  100%
-Tides of War (TOW)                    -  37% (102/271)
+Tides of War (TOW)                    -   99% (270/272)
+  Missing cards:
+    * Grafted Physician
+    * Ill Winds Blow
 Pyramids of Atuum (POA)               -  98% (126/128)
   Missing cards:
     * Righteous Priestess
@@ -88,6 +91,7 @@ MSEM Champions (CHAMPIONS)
 MSEM Champions: Masterpiece (MPS_MSE)
 MSEM Secret Lair Drops (LAIR)
 The Land Bundle (L)
+The Mana Pool (L2)
 From the Vault: Wayfarer's Shrine (SHRINE)
 ```
 

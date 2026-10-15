@@ -1,0 +1,12 @@
+Name:Bloodblade Mercenary
+ManaCost:1 B G
+Types:Creature Elf Rogue
+PT:3/3
+
+T:Mode$ Sacrificed | ValidPlayer$ You | ValidCard$ Creature | TriggerZones$ Battlefield | Execute$ TrigOptional | TriggerDescription$ Whenever you sacrifice a creature, you may pay {B}{G}. If you do, put a +1/+1 counter on this creature and draw a card.
+SVar:TrigOptional:AB$ PutCounter | Cost$ B G | CounterType$ P1P1 | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw
+
+Oracle:Whenever you sacrifice a creature, you may pay {B}{G}. If you do, put a +1/+1 counter on this creature and draw a card.
+
+DeckHas:Ability$Sacrifice|Counters

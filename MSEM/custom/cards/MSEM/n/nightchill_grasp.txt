@@ -1,0 +1,8 @@
+Name:Nightchill Grasp
+ManaCost:4 U
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Permanent.nonLand | Origin$ Battlefield | Destination$ Library | LibraryPosition$ 0 | SubAbility$ DBDraw | SpellDescription$ Put target nonland permanent on top of its owner's library.\nDraw a card.
+SVar:DBDraw:DB$ Draw
+
+Oracle:Put target nonland permanent on top of its owner's library.\nDraw a card.

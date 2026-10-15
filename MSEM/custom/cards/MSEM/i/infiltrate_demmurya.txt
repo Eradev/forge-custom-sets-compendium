@@ -1,0 +1,10 @@
+Name:Infiltrate Demmurya
+ManaCost:2 U
+Types:Enchantment
+
+T:Mode$ SpellCast | ValidCard$ Artifact | ValidActivatingPlayer$ You | Execute$ TrigScry | TriggerZones$ Battlefield | TriggerDescription$ Whenever you cast an artifact spell, scry 2.
+SVar:TrigScry:DB$ Scry | ScryNum$ 2
+
+Oracle:Whenever you cast an artifact spell, scry 2.
+
+DeckNeeds:Type$Artifact

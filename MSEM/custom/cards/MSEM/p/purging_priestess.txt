@@ -1,0 +1,16 @@
+Name:Purging Priestess
+ManaCost:1 W
+Types:Creature Cat Cleric
+PT:1/1
+
+K:Kicker:W
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | TriggerDescription$ When this creature enters, you may destroy target enchantment. If it was kicked, you gain life equal to that enchantment's mana value.
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Enchantment | Optional$ True | RememberTargets$ True | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ X | Condition$ Kicked
+SVar:X:Remembered$CardManaCost
+
+Oracle:Kicker {W} (You may pay an additional {W} as you cast this spell.)\nWhen this creature enters, you may destroy target enchantment. If it was kicked, you gain life equal to that enchantment's mana value.
+
+DeckHas:Ability$LifeGain
+DeckHints:Type$Enchantment

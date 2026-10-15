@@ -1,0 +1,12 @@
+Name:Kevthra's Will
+ManaCost:2 B
+Types:Sorcery
+
+A:SP$ Effect | ReplacementEffects$ GraveToExile | StaticAbilities$ STPlay | SpellDescription$ Until end of turn, you may play cards from your graveyard by paying 2 life in addition to those cards' costs.\nIf a card would be put into your graveyard from anywhere this turn, exile that card instead.
+SVar:STPlay:Mode$ Continuous | Affected$ Card.YouCtrl | AffectedZone$ Graveyard | MayPlay$ True | RaiseCost$ PayLife<2> | Description$ You may play cards from your graveyard by paying 2 life in addition to those cards' costs.
+SVar:GraveToExile:Event$ Moved | ActiveZones$ Command | Destination$ Graveyard | ValidCard$ Card.!token+YouOwn | ReplaceWith$ Exile | Description$ If a card would be put into your graveyard from anywhere this turn, exile that card instead.
+SVar:Exile:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Exile | Defined$ ReplacedCard
+
+Oracle:Until end of turn, you may play cards from your graveyard by paying 2 life in addition to those cards' costs.\nIf a card would be put into your graveyard from anywhere this turn, exile that card instead.
+
+DeckHas:Ability$Graveyard

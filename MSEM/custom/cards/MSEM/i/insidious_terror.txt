@@ -1,0 +1,9 @@
+Name:Insidious Terror
+ManaCost:4 B
+Types:Artifact Creature Horror
+PT:4/3
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever a creature you control dies, this creature gets +1/+0 and gains menace until end of turn.
+SVar:TrigPump:DB$ Pump | NumAtt$ +1 | KW$ Menace
+
+Oracle:Whenever a creature you control dies, this creature gets +1/+0 and gains menace until end of turn.

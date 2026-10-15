@@ -1,0 +1,13 @@
+Name:Griffin Skycaller
+ManaCost:4 W
+Types:Creature Griffin
+PT:3/3
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When this creature enters, target creature you control gets +1/+1 and gains flying until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1 | KW$ Flying
+
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhen this creature enters, target creature you control gets +1/+1 and gains flying until end of turn.
+
+SVar:PlayMain1:TRUE

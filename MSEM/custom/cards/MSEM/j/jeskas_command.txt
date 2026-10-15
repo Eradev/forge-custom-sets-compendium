@@ -1,0 +1,19 @@
+Name:Jeska's Command
+ManaCost:3 R R
+Types:Instant
+
+A:SP$ Charm | CharmNum$ 2 | Choices$ DBPumpAttackers,DBDamage,DBCantBlock,DBExile
+
+SVar:DBPumpAttackers:DB$ PumpAll | ValidTgts$ Player | ValidCards$ Creature.TargetedPlayerCtrl+attacking | NumAtt$ +2 | KW$ First Strike | TgtPrompt$ Select target player | SpellDescription$ Attacking creatures target player controls get +2/+0 and gain first strike until end of turn.
+
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Creature | NumDmg$ 3 | SpellDescription$ CARDNAME deals 3 damage to target creature.
+
+SVar:DBCantBlock:DB$ Effect | ValidTgts$ Player | RememberObjects$ TargetedPlayer | StaticAbilities$ NoBlock | SpellDescription$ Creatures target player controls without flying can't block this turn.
+SVar:NoBlock:Mode$ CantBlockBy | ValidAttacker$ Creature | ValidBlocker$ Creature.withoutFlying+RememberedPlayerCtrl | Description$ Creatures target player controls without flying can't block this turn.
+
+SVar:DBExile:DB$ Dig | ValidTgts$ Player | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Target player exiles the top card of their library. Until the end of their next turn, they may play that card.
+SVar:DBEffect:DB$ Effect | RememberObjects$ Remembered | Duration$ UntilTheEndOfTheirNextTurn | ExileOnMoved$ Exile | StaticAbilities$ MayPlayExiled | SubAbility$ DBCleanup
+SVar:MayPlayExiled:Mode$ Continuous | Affected$ Card.IsRemembered | MayPlay$ True | MayPlayPlayer$ CardOwner | AffectedZone$ Exile | Description$ Until the end of their next turn, they may play that card.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Choose two —\n• Attacking creatures target player controls get +2/+0 and gain first strike until end of turn.\n• Jeska's Command deals 3 damage to target creature.\n• Creatures target player controls without flying can't block this turn.\n• Target player exiles the top card of their library. Until the end of their next turn, they may play that card.

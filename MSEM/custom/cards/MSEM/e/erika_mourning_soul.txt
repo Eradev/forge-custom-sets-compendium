@@ -1,0 +1,15 @@
+Name:Erika, Mourning Soul
+ManaCost:3 W B
+Types:Legendary Planeswalker Erika
+Loyalty:4
+
+A:AB$ GainLife | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | LifeAmount$ X | SpellDescription$ You gain 1 life for each creature card in your graveyard.
+SVar:X:Count$ValidGraveyard Creature.YouOwn
+
+A:AB$ ChangeZone | Cost$ SubCounter<4/LOYALTY> | Planeswalker$ True | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Permanent.nonLand+Other | TgtPrompt$ Select another target nonland permanent | SpellDescription$ Exile another target nonland permanent.
+
+A:AB$ ChangeZone | Cost$ SubCounter<X/LOYALTY> | Planeswalker$ True | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Permanent.YouOwn+cmcLEX | TgtPrompt$ Select target permanent card with mana value X or less in your graveyard | SpellDescription$ Return target permanent card with mana value X or less from your graveyard to the battlefield.
+
+Oracle:[+1]: You gain 1 life for each creature card in your graveyard.\n[-4]: Exile another target nonland permanent.\n[-X]: Return target permanent card with mana value X or less from your graveyard to the battlefield.
+
+DeckHas:Ability$LifeGain

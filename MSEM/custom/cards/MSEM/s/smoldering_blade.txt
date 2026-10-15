@@ -1,0 +1,10 @@
+Name:Smoldering Blade
+ManaCost:3
+Types:Artifact Equipment
+
+T:Mode$ Attacks | ValidCard$ Card.AttachedBy | Execute$ TrigPump | TriggerDescription$ Whenever equipped creature attacks, it gets +3/+3 until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredAttackerLKICopy | NumAtt$ +3 | NumDef$ +3
+
+K:Equip:3
+
+Oracle:Whenever equipped creature attacks, it gets +3/+3 until end of turn.\nEquip {3} ({3}: Attach to target creature you control. Equip only as a sorcery.)

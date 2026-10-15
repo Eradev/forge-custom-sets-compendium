@@ -1,0 +1,11 @@
+Name:Psychic Grid
+ManaCost:U
+Types:Artifact Creature Wall
+PT:0/3
+
+K:Defender
+
+T:Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | OpponentTurn$ True | Execute$ TrigScry | TriggerDescription$ Whenever you cast a spell during an opponent's turn, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)
+SVar:TrigScry:DB$ Scry
+
+Oracle:Defender (This creature can't attack.)\nWhenever you cast a spell during an opponent's turn, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)

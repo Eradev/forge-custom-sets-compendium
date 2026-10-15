@@ -1,0 +1,8 @@
+Name:Spinegraft Disabler
+ManaCost:5
+Types:Artifact
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this creature enters, exile target creature until it leaves the battlefield.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Creature | Duration$ UntilHostLeavesPlay
+
+Oracle:When this creature enters, exile target creature until it leaves the battlefield.

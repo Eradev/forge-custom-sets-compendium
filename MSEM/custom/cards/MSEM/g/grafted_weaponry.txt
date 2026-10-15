@@ -1,0 +1,12 @@
+Name:Grafted Weaponry
+ManaCost:4
+Types:Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddAbility$ ABDamage | Description$ Equipped creature has "{2}, {T}: This creature deals 1 damage to any target."
+SVar:ABDamage:AB$ DealDamage | Cost$ 2 T | ValidTgts$ Any | NumDmg$ 1 | Defined$ Self | SpellDescription$ This creature deals 1 damage to any target.
+
+A:AB$ Untap | Cost$ 4 | Defined$ Equipped | IsPresent$ Card.EquippedBy | SpellDescription$ Untap equipped creature.
+
+K:Equip:3
+
+Oracle:Equipped creature has "{2}, {T}: This creature deals 1 damage to any target."\n{4}: Untap equipped creature.\nEquip {3} ({3}: Attach to target creature you control. Equip only as a sorcery.)
