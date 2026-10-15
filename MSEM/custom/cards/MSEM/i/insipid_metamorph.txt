@@ -1,0 +1,9 @@
+Name:Insipid Metamorph
+ManaCost:1 U
+Types:Creature Shapeshifter
+PT:0/0
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ DBCopy | TriggerDescription$ You may have this creature enter as a copy of any other creature on the battlefield, except it's 1/1.
+SVar:DBCopy:DB$ Clone | Choices$ Creature.Other | SetPower$ 1 | SetToughness$ 1 | Optional$ True
+
+Oracle:You may have this creature enter as a copy of any other creature on the battlefield, except it's 1/1.

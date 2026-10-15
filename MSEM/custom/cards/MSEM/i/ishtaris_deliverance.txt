@@ -1,0 +1,8 @@
+Name:Ishtari's Deliverance
+ManaCost:4 U
+Types:Instant
+
+A:SP$ PumpAll | ValidCards$ Creature.OppCtrl | NumAtt$ -4 | IsCurse$ True | SubAbility$ DBScry | SpellDescription$ Creatures your opponents control get -4/-0 until end of turn. Scry 1.
+SVar:DBScry:DB$ Scry
+
+Oracle:Creatures your opponents control get -4/-0 until end of turn. Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)

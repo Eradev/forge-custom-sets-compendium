@@ -1,0 +1,13 @@
+Name:Ishtari, Oasis Warden
+ManaCost:2 U U
+Types:Legendary Creature Human Shaman
+PT:2/4
+
+T:Mode$ SpellCast | ValidCard$ Card.nonCreature | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigScry | TriggerDescription$ Whenever you cast a noncreature spell, scry 1.
+SVar:TrigScry:DB$ Scry
+
+A:AB$ Draw | Cost$ 3 U ExileFromGrave<1/Instant;Sorcery/instant or sorcery card> | SpellDescription$ Draw a card.
+
+Oracle:Whenever you cast a noncreature spell, scry 1.\n{3}{U}, Exile an instant or sorcery card from your graveyard: Draw a card.
+
+DeckHas:Ability$Graveyard

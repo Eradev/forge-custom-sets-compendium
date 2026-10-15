@@ -1,0 +1,10 @@
+Name:Infiltrate Nimunot
+ManaCost:2 B
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPutCounter | OptionalDecider$ You | TriggerDescription$ Whenever a creature you control dies, you may put a +1/+1 counter on target creature you control.
+SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | CounterType$ P1P1
+
+Oracle:Whenever a creature you control dies, you may put a +1/+1 counter on target creature you control.
+
+DeckHas:Ability$Counters

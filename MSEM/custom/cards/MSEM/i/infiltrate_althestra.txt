@@ -1,0 +1,8 @@
+Name:Infiltrate Althestra
+ManaCost:2 G
+Types:Enchantment
+
+T:Mode$ DamageDone | ValidSource$ Creature.powerGE4+YouCtrl | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigDraw | OptionalDecider$ You | TriggerZones$ Battlefield | TriggerDescription$ Whenever a creature you control with power 4 or greater deals combat damage to a player, you may draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Whenever a creature you control with power 4 or greater deals combat damage to a player, you may draw a card.

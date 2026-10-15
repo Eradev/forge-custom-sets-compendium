@@ -1,0 +1,11 @@
+Name:Iridescent Familiar
+ManaCost:1 U
+Types:Creature Bird
+PT:1/2
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDraw | TriggerDescription$ When this creature enters, if you control another creature with flying, draw a card.
+SVar:TrigDraw:DB$ Draw | ConditionPresent$ Creature.withFlying+YouCtrl+Other | ConditionCompare$ GE1
+
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenthis creature enters, if you control another creature with flying, draw a card.
