@@ -1,0 +1,11 @@
+Name:Loot Hoarder Dragon
+ManaCost:5 R R
+Types:Creature Dragon
+PT:5/5
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainControl | TriggerDescription$ When this creature enters, gain control of target artifact.
+SVar:TrigGainControl:DB$ GainControl | ValidTgts$ Artifact
+
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhen this creature enters, gain control of target artifact.

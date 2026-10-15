@@ -1,0 +1,14 @@
+Name:Leader of Resistance
+ManaCost:4 W
+Types:Creature Human Rebel Soldier
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSearch | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may search your library for a Rebel creature card, reveal it, put it into your hand, then shuffle.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Creature.Rebel | ChangeNum$ 1
+
+S:Mode$ Continuous | Affected$ Creature.Rebel+Other+YouCtrl | AddPower$ 1 | AddToughness$ 1 | Description$ Other Rebel creatures you control get +1/+1.
+
+Oracle:When this creature enters, you may search your library for a Rebel creature card, reveal it, put it into your hand, then shuffle.\nOther Rebel creatures you control get +1/+1.
+
+DeckHints:Type$Rebel
+SVar:PlayMain1:TRUE
