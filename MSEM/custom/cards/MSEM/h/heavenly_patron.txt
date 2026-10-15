@@ -1,0 +1,13 @@
+Name:Heavenly Patron
+ManaCost:3 W
+Types:Creature Angel
+PT:2/3
+
+K:Flying
+
+T:Mode$ Attacks | ValidCard$ Creature.YouCtrl+withFlying | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever a creature you control with flying attacks, it gets +1/+1 until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredAttacker | NumAtt$ +1 | NumDef$ +1
+
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever a creature you control with flying attacks, it gets +1/+1 until end of turn.
+
+SVar:HasAttackEffect:TRUE

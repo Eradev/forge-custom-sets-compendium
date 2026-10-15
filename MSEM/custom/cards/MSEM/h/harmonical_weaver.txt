@@ -1,0 +1,12 @@
+Name:Harmonical Weaver
+ManaCost:W
+Types:Creature Nymph Cleric
+PT:1/1
+
+T:Mode$ SpellCast | ValidCard$ Enchantment | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever you cast an enchantment spell, you may pay {W}. If you do, put a +1/+1 counter on target creature.
+SVar:TrigPutCounter:AB$ PutCounter | Cost$ W | ValidTgts$ Creature | CounterType$ P1P1
+
+Oracle:Whenever you cast an enchantment spell, you may pay {W}. If you do, put a +1/+1 counter on target creature.
+
+DeckHas:Ability$Counters
+DeckHints:Type$Enchantment
