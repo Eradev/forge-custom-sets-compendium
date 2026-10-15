@@ -8,6 +8,7 @@ More information can be found on their [Facebook Group](https://www.facebook.com
 
 ```text
 Ben 10 Commander - Hero Time! (OMV) - 100%
+Spy x Family (SPY)                  - 100%
 ```
 
 ## How to install?

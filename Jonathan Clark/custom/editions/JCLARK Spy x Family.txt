@@ -1,0 +1,9 @@
+[metadata]
+Code=JCLARK_SPY
+Name=Spy x Family
+Date=2025-12-01
+Type=Custom
+
+[cards]
+1 M Anya Forger, Stellar Student @Wit Studio & CloverWorks
+2 M Bond, Borf of Destiny @Wit Studio & CloverWorks
