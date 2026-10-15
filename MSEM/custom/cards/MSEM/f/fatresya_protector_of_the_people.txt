@@ -1,0 +1,14 @@
+Name:Fatresya, Protector of the People
+ManaCost:1 R G
+Types:Legendary Planeswalker Fatresya
+Loyalty:2
+
+A:AB$ Mana | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Produced$ Combo R G | Amount$ 1 | SpellDescription$ Add {R} or {G}.
+
+A:AB$ DealDamage | Cost$ SubCounter<1/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | NumDmg$ 2 | SubAbility$ DBPumpCurse | SpellDescription$ NICKNAME deals 2 damage to target creature. That creature can't block this turn.
+SVar:DBPumpCurse:DB$ Pump | Defined$ Targeted | IsCurse$ True | KW$ HIDDEN CARDNAME can't block.
+
+A:AB$ Effect | Cost$ SubCounter<5/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Fatresya, Protector of the People | StaticAbilities$ STFatresya | Duration$ Permanent | AILogic$ Always | SpellDescription$ You get an emblem with "Creatures you control get +2/+2 and have haste and trample."
+SVar:STFatresya:Mode$ Continuous | Affected$ Creature.YouCtrl | AffectedZone$ Battlefield | AddPower$ 2 | AddToughness$ 2 | AddKeyword$ Haste & Trample | Description$ Creatures you control get +2/+2 and have haste and trample.
+
+Oracle:[+1]: Add {R} or {G}.\n[-1]: Fatresya deals 2 damage to target creature. That creature can't block this turn.\n[-5]: You get an emblem with "Creatures you control get +2/+2 and have haste and trample."

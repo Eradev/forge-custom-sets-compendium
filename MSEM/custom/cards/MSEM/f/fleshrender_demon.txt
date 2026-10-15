@@ -1,0 +1,14 @@
+Name:Fleshrender Demon
+ManaCost:2 B B
+Types:Creature Demon
+PT:3/3
+
+K:Flying
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ At the beginning of your upkeep, put a +1/+1 counter on this creature and you lose 1 life.
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1 | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nAt the beginning of your upkeep, put a +1/+1 counter on this creature and you lose 1 life.
+
+DeckHas:Ability$Counters

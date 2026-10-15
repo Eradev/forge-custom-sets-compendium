@@ -1,0 +1,15 @@
+Name:Form of the Phoenix
+ManaCost:2 R R
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 2 | AddToughness$ 2 | AddKeyword$ Flying & Haste | Description$ Enchanted creature gets +2/+2 and has flying and haste.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.EnchantedBy | Execute$ TrigReturn | TriggerDescription$ When enchanted creature dies, return it to the battlefield under its owner's control.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | Defined$ TriggeredNewCardLKICopy
+
+Oracle:Enchant creature\nEnchanted creature gets +2/+2 and has flying and haste.\nWhen enchanted creature dies, return it to the battlefield under its owner's control.
+
+SVar:AttachAITgts:Creature
+SVar:AttachAILogic:Pump

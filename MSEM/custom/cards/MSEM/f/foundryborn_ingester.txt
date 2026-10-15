@@ -1,0 +1,14 @@
+Name:Foundryborn Ingester
+ManaCost:2
+Types:Artifact Creature Construct
+PT:1/1
+
+A:AB$ PutCounter | Cost$ 3 Sac<1/Artifact.Other/another artifact> | CounterType$ P1P1 | CounterNum$ 2 | SpellDescription$ Put two +1/+1 counters on this creature.
+
+T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Battlefield | Destination$ Graveyard | Execute$ TrigImmediateTrig | TriggerDescription$ When this creature dies, you may exile it. When you do, return target artifact card from your graveyard to your hand.
+SVar:TrigImmediateTrig:AB$ ImmediateTrigger | Cost$ ExileAnyGrave<1/Card.TriggeredNewCard> | Execute$ TrigReturn | TriggerDescription$ When you do, return target artifact card from your graveyard to your hand.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Artifact.YouOwn | TgtPrompt$ Select target artifact card in your graveyard
+
+Oracle:{3}, Sacrifice another artifact: Put two +1/+1 counters on this creature.\nWhen this creature dies, you may exile it. If you do, return target artifact card from your graveyard to your hand.
+
+DeckHas:Ability$Counters|Graveyard
