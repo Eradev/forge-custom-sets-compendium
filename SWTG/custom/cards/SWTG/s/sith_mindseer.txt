@@ -8,4 +8,4 @@ SVar:TrigGainControl:DB$ GainControl | ValidTgts$ Creature | TgtPrompt$ Select t
 SVar:HateFlag:PlayerCountRegisteredOpponents$LifeLostThisTurn/Minus.OppCombatDmg
 SVar:OppCombatDmg:PlayerCountRegisteredOpponents$DamageThisTurn/Minus.PlayerCountRegisteredOpponents$NonCombatDamageDealtThisTurn
 
-Oracle:Hate — Whenthis creature enters, if an opponent lost life from a source other than combat damage this turn, gain control of target creature for as long as it remains on the battlefield.
+Oracle:Hate — When this creature enters, if an opponent lost life from a source other than combat damage this turn, gain control of target creature for as long as it remains on the battlefield.
