@@ -1,0 +1,13 @@
+Name:Curio Pavilion
+ManaCost:2 R R
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigTreasure | TriggerDescription$ When this enchantment enters, create two Treasure tokens. (They're artifacts with "{T}, Sacrifice this artifact: Add one mana of any color.")
+SVar:TrigTreasure:DB$ Token | TokenScript$ c_a_treasure_sac | TokenAmount$ 2
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Artifact.YouCtrl | Execute$ TrigLoot | OptionalDecider$ You | TriggerDescription$ Whenever an artifact you control leaves the battlefield, you may discard a card. If you do, draw a card.
+SVar:TrigLoot:DB$ Draw | UnlessCost$ Discard<1/Card> | UnlessPayer$ You | UnlessSwitched$ True
+
+Oracle:When this enchantment enters, create two Treasure tokens. (They're artifacts with "{T}, Sacrifice this artifact: Add one mana of any color.")\nWhenever an artifact you control leaves the battlefield, you may discard a card. If you do, draw a card.
+
+DeckHas:Ability$Token|Sacrifice & Type$Treasure|Artifact

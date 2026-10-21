@@ -1,0 +1,8 @@
+Name:Calcified Dunes
+ManaCost:no cost
+Types:Land Plains Desert
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ DBTap | ReplacementResult$ Updated | Description$ As this land enters, you may pay 1 life. If you don't, it enters tapped.
+SVar:DBTap:DB$ Tap | ETB$ True | Defined$ Self | UnlessCost$ PayLife<1> | UnlessPayer$ You | StackDescription$ enters tapped.
+
+Oracle:({T}: Add {W}.)\nAs this land enters, you may pay 1 life. If you don't, it enters tapped.
