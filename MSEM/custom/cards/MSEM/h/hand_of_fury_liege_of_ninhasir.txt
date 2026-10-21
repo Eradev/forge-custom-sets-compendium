@@ -1,0 +1,30 @@
+Name:Hand of Fury
+ManaCost:1 R R
+Types:Creature Human Warrior
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When this creature enters, it gets +2/+2 and gains haste until end of turn.
+SVar:TrigPump:DB$ Pump | NumAtt$ +2 | NumDef$ +2 | KW$ Haste
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ FealtyMountains | SVarCompare$ GE5 | Execute$ TrigTransform | TriggerDescription$ At the beginning of your upkeep, if your fealty to Mountains is five or greater, transform this creature. (Each Mountain you control counts towards your fealty to Mountains.)
+SVar:TrigTransform:DB$ SetState | Defined$ Self | Mode$ Transform
+SVar:FealtyMountains:Count$Valid Mountain.YouCtrl
+
+Oracle:When this creature enters, it gets +2/+2 and gains haste until end of turn.\nAt the beginning of your upkeep, if your fealty to Mountains is five or greater, transform this creature. (Each Mountain you control counts towards your fealty to Mountains.)
+
+SVar:BuffedBy:Mountain
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Liege of Ninhasir
+ManaCost:no cost
+Colors:red
+Types:Creature Human Warrior
+PT:3/3
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ At the beginning of combat on your turn, target creature gets +1/+1 and gains haste until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ +1 | NumDef$ +1 | KW$ Haste
+
+Oracle:At the beginning of combat on your turn, target creature gets +1/+1 and gains haste until end of turn.

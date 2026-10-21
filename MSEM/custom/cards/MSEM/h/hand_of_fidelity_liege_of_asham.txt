@@ -1,0 +1,33 @@
+Name:Hand of Fidelity
+ManaCost:1 W W
+Types:Creature Human
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When this creature enters, creatures you control get +1/+1 until end of turn.
+SVar:TrigPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ FealtyPlains | SVarCompare$ GE5 | Execute$ TrigTransform | TriggerDescription$ At the beginning of your upkeep, if your fealty to Plains is five or greater, transform this creature. (Each Plains you control counts towards your fealty to Plains.)
+SVar:TrigTransform:DB$ SetState | Defined$ Self | Mode$ Transform
+SVar:FealtyPlains:Count$Valid Plains.YouCtrl
+
+Oracle:When this creature enters, creatures you control get +1/+1 until end of turn.\nAt the beginning of your upkeep, if your fealty to Plains is five or greater, transform this creature. (Each Plains you control counts towards your fealty to Plains.)
+
+SVar:BuffedBy:Plains
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Liege of Asham
+ManaCost:no cost
+Colors:white
+Types:Creature Human Warrior
+PT:3/3
+
+K:Vigilance
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ Whenever this creature attacks or blocks, other attacking or blocking creatures you control get +1/+1 until end of turn.
+T:Mode$ Blocks | ValidCard$ Card.Self | Execute$ TrigPump | Secondary$ True | TriggerDescription$ Whenever this creature attacks or blocks, other attacking or blocking creatures you control get +1/+1 until end of turn.
+SVar:TrigPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl+Other+attacking,Creature.YouCtrl+Other+blocking | NumAtt$ +1 | NumDef$ +1
+
+Oracle:Vigilance\nWhenever this creature attacks or blocks, other attacking or blocking creatures you control get +1/+1 until end of turn.

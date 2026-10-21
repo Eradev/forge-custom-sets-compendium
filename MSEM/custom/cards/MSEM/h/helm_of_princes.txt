@@ -1,0 +1,14 @@
+Name:Helm of Princes
+ManaCost:2
+Types:Artifact Equipment
+
+K:Equip:2
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddKeyword$ Hexproof | Description$ Equipped creature has hexproof.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.EquippedBy | Execute$ TrigDraw | TriggerDescription$ Whenever equipped creature dies, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Equipped creature has hexproof.\nWhenever equipped creature dies, draw a card.\nEquip {2}
+
+DeckHas:Ability$Equip
