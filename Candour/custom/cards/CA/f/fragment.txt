@@ -1,0 +1,9 @@
+Name:Fragment
+ManaCost:U
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Card | TargetType$ Spell | TgtZone$ Stack | Origin$ Stack | Destination$ Exile | TgtPrompt$ Choose target spell | SubAbility$ DBPlay | SpellDescription$ Exile target spell. Its controller may cast a spell from their hand with mana value less than the exiled spell without paying its mana cost.
+SVar:DBPlay:DB$ Play | Valid$ Card.nonLand+YouOwn | ValidSA$ Spell.cmcLTX | ValidZone$ Hand | WithoutManaCost$ True | Optional$ True | Amount$ 1 | Controller$ TargetedController
+SVar:X:SpellTargeted$CardManaCostLKI
+
+Oracle:Exile target spell. Its controller may cast a spell from their hand with mana value less than the exiled spell without paying its mana cost.
