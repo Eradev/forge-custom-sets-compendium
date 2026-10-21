@@ -1,0 +1,18 @@
+Name:Reinforcement Flagship
+ManaCost:2
+Types:Artifact Vehicle
+PT:3/3
+
+K:Flying
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigRecruit | TriggerDescription$ Whenever this Vehicle attacks or blocks, recruit. (Draw a card, then discard a card. If you discarded a nonland card, create a 1/1 white Human Soldier creature token.)
+T:Mode$ Blocks | ValidCard$ Card.Self | Execute$ TrigRecruit | Secondary$ True | TriggerDescription$ Whenever this Vehicle attacks or blocks, recruit. (Draw a card, then discard a card. If you discarded a nonland card, create a 1/1 white Human Soldier creature token.)
+SVar:TrigRecruit:DB$ Recruit
+
+K:Crew:1
+
+Oracle:Flying\nWhenever this Vehicle attacks or blocks, recruit. (Draw a card, then discard a card. If you discarded a nonland card, create a 1/1 white Human Soldier creature token.)\nCrew 1
+
+DeckHas:Ability$Token|Discard & Type$Human|Soldier
+SVar:HasAttackEffect:TRUE
+SVar:HasBlockEffect:TRUE
