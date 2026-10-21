@@ -4,7 +4,7 @@ Types:Legendary Creature Calamari Rebel
 PT:2/3
 
 T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When you cast CARDNAME, create two 2/3 blue Rebel Starship artifact creature tokens with spaceflight named B-Wing.
-SVar:TrigToken:DB$ Token | TokenAmount$ 2 | TokenScript$ u_2_3_a_b-wing_spaceflight
+SVar:TrigToken:DB$ Token | TokenScript$ u_2_3_a_b-wing_spaceflight | TokenAmount$ 2
 
 T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Player | TriggerZones$ Battlefield | Execute$ TrigUntap | TriggerDescription$ At the beginning of each upkeep, untap all Starships you control.
 SVar:TrigUntap:DB$ UntapAll | ValidCards$ Creature.Starship+YouCtrl

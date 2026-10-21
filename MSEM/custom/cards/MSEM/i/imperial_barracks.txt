@@ -3,7 +3,7 @@ ManaCost:no cost
 Types:Land
 
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ DBTap | ReplacementResult$ Updated | Description$ As this land enters, you may reveal a Mountain or Plains card from your hand. If you don't, it enters tapped.
-SVar:DBTap:DB$ Tap | ETB$ True | Defined$ Self | UnlessCost$ Reveal<1/Mountain;Plains/Mountain or Plains> | UnlessPayer$ You | StackDescription$ enters tapped.
+SVar:DBTap:DB$ Tap | ETB$ True | UnlessCost$ Reveal<1/Mountain;Plains/Mountain or Plains> | UnlessPayer$ You | StackDescription$ enters tapped.
 
 A:AB$ Mana | Cost$ T | Produced$ Combo R W | SpellDescription$ Add {R} or {W}.
 
