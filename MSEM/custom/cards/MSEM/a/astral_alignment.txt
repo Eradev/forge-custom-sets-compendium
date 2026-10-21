@@ -1,0 +1,11 @@
+Name:Astral Alignment
+ManaCost:2 U U
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ TrigWin | TriggerZones$ Battlefield | CheckSVar$ PermCount | SVarCompare$ EQHandCount | TriggerDescription$ At the beginning of your upkeep, if the number of permanents you control, the number of cards in your hand, and the number of cards in your graveyard are all equal, you win the game.
+SVar:TrigWin:DB$ WinsGame | Defined$ You | ConditionCheckSVar$ PermCount | ConditionSVarCompare$ EQGraveCount
+SVar:PermCount:Count$Valid Permanent.YouCtrl
+SVar:HandCount:Count$CardsInYourHand
+SVar:GraveCount:Count$ValidGraveyard Card.YouOwn
+
+Oracle:At the beginning of your upkeep, if the number of permanents you control, the number of cards in your hand, and the number of cards in your graveyard are all equal, you win the game.

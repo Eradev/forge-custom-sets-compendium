@@ -1,0 +1,7 @@
+Name:Atrophy
+ManaCost:B B B
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Creature | TgtPrompt$ Select target creature | SpellDescription$ Destroy target creature.
+
+Oracle:Destroy target creature.
