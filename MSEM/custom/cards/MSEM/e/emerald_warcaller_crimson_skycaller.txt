@@ -1,0 +1,36 @@
+Name:Emerald Warcaller
+ManaCost:2 R
+Types:Creature Human Warrior
+PT:2/2
+
+A:AB$ SetState | Cost$ W U B R G | Defined$ Self | Mode$ Transform | SpellDescription$ Chosen one ({W}{U}{B}{R}{G}: Transform this permanent.)
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigWarrior | TriggerDescription$ At the beginning of combat on your turn, create a 1/1 red Warrior creature token with haste. That token attacks this combat if able.
+SVar:TrigWarrior:DB$ Token | TokenScript$ r_1_1_warrior_haste | RememberTokens$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ Remembered | StaticAbilities$ MustAttack | Duration$ UntilEndOfCombat | SubAbility$ DBCleanup
+SVar:MustAttack:Mode$ MustAttack | ValidCreature$ Card.IsRemembered | Description$ This creature attacks this combat if able.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Chosen one ({W}{U}{B}{R}{G}: Transform this permanent.)\nAt the beginning of combat on your turn, create a 1/1 red Warrior creature token with haste. That token attacks this combat if able.
+
+DeckHas:Ability$Token
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Crimson Skycaller
+ManaCost:no cost
+Types:Creature Archon Warrior
+PT:5/5
+
+K:Flying
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDragon | TriggerDescription$ At the beginning of combat on your turn, create a 5/5 red Dragon creature token with flying and haste. That token attacks this combat if able.
+
+SVar:TrigDragon:DB$ Token | TokenScript$ r_5_5_dragon_flying_haste | RememberTokens$ True | SubAbility$ DBEffectBack
+SVar:DBEffectBack:DB$ Effect | RememberObjects$ Remembered | StaticAbilities$ MustAttackBack | Duration$ UntilEndOfCombat | SubAbility$ DBCleanupBack
+SVar:MustAttackBack:Mode$ MustAttack | ValidCreature$ Card.IsRemembered | Description$ This creature attacks this combat if able.
+SVar:DBCleanupBack:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Flying\nAt the beginning of combat on your turn, create a 5/5 red Dragon creature token with flying and haste. That token attacks this combat if able.

@@ -1,0 +1,13 @@
+Name:Effigy of Destiny
+ManaCost:3
+Types:Artifact Creature Golem
+PT:2/2
+
+K:Menace
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | CheckSVar$ FealtySwamps | SVarCompare$ GE4 | Description$ This creature gets +1/+1 as long as your fealty to Swamps is four or greater. (Each Swamp you control counts towards your fealty to Swamps.)
+SVar:FealtySwamps:Count$Valid Swamp.YouCtrl
+
+Oracle:Menace\nThis creature gets +1/+1 as long as your fealty to Swamps is four or greater. (Each Swamp you control counts towards your fealty to Swamps.)
+
+SVar:BuffedBy:Swamp

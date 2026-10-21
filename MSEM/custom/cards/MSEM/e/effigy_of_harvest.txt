@@ -1,0 +1,13 @@
+Name:Effigy of Harvest
+ManaCost:3
+Types:Artifact Creature Golem
+PT:3/2
+
+K:Trample
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | CheckSVar$ FealtyForests | SVarCompare$ GE4 | Description$ This creature gets +1/+1 as long as your fealty to Forests is four or greater. (Each Forest you control counts towards your fealty to Forests.)
+SVar:FealtyForests:Count$Valid Forest.YouCtrl
+
+Oracle:Trample\nThis creature gets +1/+1 as long as your fealty to Forests is four or greater. (Each Forest you control counts towards your fealty to Forests.)
+
+SVar:BuffedBy:Forest
