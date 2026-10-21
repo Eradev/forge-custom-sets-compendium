@@ -1,0 +1,15 @@
+Name:Bazaar Informant
+ManaCost:1 U U
+Types:Creature Human Rogue
+PT:2/2
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigReveal | TriggerDescription$ Whenever this creature deals combat damage to a player, reveal the top card of that player's library. If it's a nonland card, put a +1/+1 counter on this creature, then that player puts that card into their graveyard.
+
+SVar:TrigReveal:DB$ Dig | DigNum$ 1 | Defined$ TriggeredTarget | Reveal$ True | ChangeNum$ 0 | RememberChanged$ True | SubAbility$ TrigBranch
+SVar:TrigBranch:DB$ Branch | BranchConditionSVar$ IsNonLand | BranchConditionSVarCompare$ EQ1 | TrueSubAbility$ TrigCounterAndGrave | FalseSubAbility$ DBCleanup
+SVar:TrigCounterAndGrave:DB$ PutCounter | CounterType$ P1P1 | SubAbility$ TrigToGrave
+SVar:TrigToGrave:DB$ ChangeZone | Defined$ Remembered | Origin$ Library | Destination$ Graveyard | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:IsNonLand:Remembered$Valid Card nonLand
+
+Oracle:Whenever this creature deals combat damage to a player, reveal the top card of that player's library. If it's a nonland card, put a +1/+1 counter on this creature, then that player puts that card into their graveyard.

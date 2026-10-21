@@ -1,0 +1,10 @@
+Name:Beetleback Forager
+ManaCost:2 G G
+Types:Creature Mutant Scout
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReturn | CheckSVar$ ConcordCount | SVarCompare$ GE4 | TriggerDescription$ Concord — When this creature enters, if there are four or more card types among permanents you control, return target card from your graveyard to your hand.
+SVar:TrigReturn:DB$ ChangeZone | ValidTgts$ Card.YouOwn | TgtPrompt$ Select target card from your graveyard | Origin$ Graveyard | Destination$ Hand
+SVar:ConcordCount:Count$Valid Permanent.nonLand+YouCtrl$CardTypes
+
+Oracle:Concord — When this creature enters, if there are four or more card types among permanents you control, return target card from your graveyard to your hand.

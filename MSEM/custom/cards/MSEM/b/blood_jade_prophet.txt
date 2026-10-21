@@ -1,0 +1,13 @@
+Name:Blood Jade Prophet
+ManaCost:B B B
+Types:Creature Human Shaman
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReveal | TriggerDescription$ When this creature enters, reveal the top three cards of your library. For each card revealed this way, you may pay 3 life. If you do, put that card into your hand. Otherwise, put it into your graveyard.
+SVar:TrigReveal:DB$ PeekAndReveal | PeekAmount$ 3 | NoPeek$ True | RememberRevealed$ True | SubAbility$ DBRepeat
+SVar:DBRepeat:DB$ RepeatEach | RepeatSubAbility$ DBChangeZone | RepeatCards$ Card.IsRemembered | ChooseOrder$ True | Zone$ Library | UseImprinted$ True | SubAbility$ PutInGraveyard
+SVar:DBChangeZone:DB$ ChangeZone | Defined$ Imprinted | Origin$ Library | Destination$ Hand | UnlessCost$ PayLife<3> | UnlessPayer$ You | UnlessSwitched$ True | ForgetChanged$ True
+SVar:PutInGraveyard:DB$ ChangeZoneAll | ChangeType$ Card.IsRemembered | Origin$ Library | Destination$ Graveyard | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When this creature enters, reveal the top three cards of your library. For each card revealed this way, you may pay 3 life. If you do, put that card into your hand. Otherwise, put it into your graveyard.

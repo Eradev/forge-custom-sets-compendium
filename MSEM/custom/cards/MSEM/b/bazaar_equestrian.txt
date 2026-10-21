@@ -1,0 +1,10 @@
+Name:Bazaar Equestrian
+ManaCost:2 W W
+Types:Creature Mutant Citizen
+PT:3/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainLife | CheckSVar$ ConcordCount | SVarCompare$ GE4 | TriggerDescription$ Concord — When this creature enters, if there are four or more card types among permanents you control, you gain 4 life.
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 4
+SVar:ConcordCount:Count$Valid Permanent.nonLand+YouCtrl$CardTypes
+
+Oracle:Concord — When this creature enters, if there are four or more card types among permanents you control, you gain 4 life.
