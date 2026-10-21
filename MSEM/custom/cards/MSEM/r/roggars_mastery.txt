@@ -8,7 +8,7 @@ SVar:DBDestroy:DB$ Destroy | ValidTgts$ Artifact | SpellDescription$ Destroy tar
 
 SVar:DBPump:DB$ Pump | ValidTgts$ Creature | NumAtt$ +2 | NumDef$ +1 | KW$ First Strike | SpellDescription$ Target creature gets +2/+1 and gains first strike until end of turn.
 
-A:AB$ Token | TokenAmount$ 2 | TokenScript$ c_1_1_elemental | PrecostDesc$ Kindle 2 — | Cost$ 3 R ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create two 1/1 colorless Elemental creature tokens.
+A:AB$ Token | Cost$ 3 R ExileFromGrave<1/CARDNAME/this card> | TokenScript$ c_1_1_elemental | TokenAmount$ 2 | PrecostDesc$ Kindle 2 — | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create two 1/1 colorless Elemental creature tokens.
 
 Oracle:Choose one —\n• Destroy target artifact.\n• Target creature gets +2/+1 and gains first strike until end of turn.\nKindle 2—{3}{R} ({3}{R}, Exile this card from your graveyard: Create two 1/1 colorless Elemental creature tokens. Kindle only as a sorcery.)
 
