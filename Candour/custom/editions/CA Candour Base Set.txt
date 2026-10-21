@@ -19,6 +19,7 @@ Type=Custom
 11 R Riverside Citadel @Andreas Rocha
 12 R Trephine Revoker @Benedick Bana
 13 M Ensnaring Throne @Lino Drieghe
+14 R Reinforcement Flagship @Phuoc Quan
 # COLORLESS - OLD CODES
 1001 R Bloodblitz Battle-Axe @Dominik Mayer
 1003 R Vivacious Ridgeline @Sandara Park
@@ -125,6 +126,7 @@ Type=Custom
 217 U Swindle @PINDURSKI
 218 R Suspended Megaliths @Geoffrey Ernault
 219 R Frenzied Stormwing @Alex Heath
+220 R Fragment @Marko Drazic
 ## BLUE - OLD CODE
 1251 U Maddening Revelation @Carl Van Laguun
 1252 U Fleeting Rootwalla @Guillermo Redondo
@@ -238,6 +240,7 @@ Type=Custom
 413 U Incendiummingbird @Alannah Rose
 414 R Death-Greeter's Charger @Anato Finnstark
 415 M Rallying Recruiter @Timi Honkanen
+416 R Skullcrack Ambusher @JohnnyD
 # RED - OLD CODES
 1451 U Spellbomb Detonation @Romain Kurdi
 1452 U Glitterfowl Curio @Valentin Gloaguen & Alessandro Poli
