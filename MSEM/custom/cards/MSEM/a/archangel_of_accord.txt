@@ -7,6 +7,6 @@ K:Flying
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | CheckSVar$ ConcordCount | SVarCompare$ GE4 | TriggerDescription$ Concord — When this creature enters, if there are four or more card types among permanents you control, destroy all other creatures.
 SVar:TrigDestroy:DB$ DestroyAll | ValidCards$ Creature.StrictlyOther
-SVar:ConcordCount:Count$Valid Permanent.nonLand+YouCtrl$CardTypes
+SVar:ConcordCount:Count$Valid Permanent.YouCtrl$CardTypes
 
 Oracle:Flying\nConcord — When this creature enters, if there are four or more card types among permanents you control, destroy all other creatures.
