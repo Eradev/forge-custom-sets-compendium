@@ -6,7 +6,7 @@ Loyalty:4
 A:AB$ PumpAll | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | KW$ Haste | SpellDescription$ Creatures you control get +1/+0 and gain haste until end of turn.
 
 A:AB$ DealDamage | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | Defined$ Player.Opponent | NumDmg$ 2 | SubAbility$ DBTreasure | SpellDescription$ CARDNAME deals 2 damage to each opponent. If you have an insight counter, create two Treasure tokens.
-SVar:DBTreasure:DB$ Token | TokenAmount$ 2 | TokenScript$ c_a_treasure_sac | ConditionCheckSVar$ Insight | ConditionSVarCompare$ GE1
+SVar:DBTreasure:DB$ Token | TokenScript$ c_a_treasure_sac | TokenAmount$ 2 | ConditionCheckSVar$ Insight | ConditionSVarCompare$ GE1
 SVar:Insight:Count$YourCountersInsight
 
 A:AB$ PutCounter | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | Defined$ You | CounterType$ Insight | SpellDescription$ You get an insight counter.
