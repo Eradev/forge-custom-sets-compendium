@@ -1,0 +1,11 @@
+Name:Dutiful Camel
+ManaCost:1 G
+Types:Creature Camel
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounter | TriggerDescription$ When this creature enters, put a +1/+1 counter on target creature you control.
+SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature.YouCtrl
+
+Oracle:When this creature enters, put a +1/+1 counter on target creature you control.
+
+DeckHas:Ability$Counters
