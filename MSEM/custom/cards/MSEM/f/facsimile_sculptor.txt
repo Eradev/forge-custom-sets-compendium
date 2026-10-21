@@ -1,0 +1,15 @@
+Name:Facsimile Sculptor
+ManaCost:5
+Types:Artifact Creature Golem
+PT:4/5
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDesecrate | TriggerDescription$ Desecrate (When this creature enters, you may sacrifice an artifact or land.)
+SVar:TrigDesecrate:AB$ ImmediateTrigger | Cost$ Sac<1/Artifact;Land/artifact or land> | Execute$ DBDesecrateSignal
+SVar:DBDesecrateSignal:DB$ Cleanup | Named$ Desecrate
+
+T:Mode$ AbilityTriggered | ValidMode$ Immediate | ValidSource$ Card.Self | ValidSpellAbility$ Ability.NamedAbilityDesecrate | Execute$ TrigCopy | TriggerDescription$ When this creature desecrates a permanent, create a token that's a copy of another target creature you control, except it's an artifact (not a creature).
+SVar:TrigCopy:DB$ CopyPermanent | ValidTgts$ Creature.Other+YouCtrl | TgtPrompt$ Select another target creature you control | AddTypes$ Artifact | RemoveCardTypes$ True
+
+Oracle:Desecrate (When this creature enters, you may sacrifice an artifact or land.)\nWhen this creature desecrates a permanent, create a token that's a copy of another target creature you control, except it's an artifact (not a creature).
+
+DeckHas:Ability$Sacrifice

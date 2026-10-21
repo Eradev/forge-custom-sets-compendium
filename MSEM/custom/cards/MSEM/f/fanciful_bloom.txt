@@ -1,0 +1,10 @@
+Name:Fanciful Bloom
+ManaCost:1 R
+Types:Sorcery
+
+A:SP$ Token | TokenScript$ c_a_treasure_sac | SubAbility$ DBDraw | SpellDescription$ Create a Treasure token. (It's an artifact with "{T}, Sacrifice this artifact: Add one mana of any color.") Draw a card.
+SVar:DBDraw:DB$ Draw
+
+Oracle:Create a Treasure token. (It's an artifact with "{T}, Sacrifice this artifact: Add one mana of any color.")\nDraw a card.
+
+DeckHas:Ability$Token|Sacrifice & Type$Treasure|Artifact
