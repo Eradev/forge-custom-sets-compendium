@@ -1,0 +1,13 @@
+Name:Gaunt Abnormality
+ManaCost:1 B B
+Types:Creature Mutant Shapeshifter
+PT:3/3
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigMill | TriggerDescription$ At the beginning of your upkeep, mill two cards.
+SVar:TrigMill:DB$ Mill | NumCards$ 2
+
+A:AB$ Clone | Cost$ 1 B B | ValidTgts$ Creature.YouOwn | TgtZone$ Graveyard | TgtPrompt$ Select target creature card in your graveyard | Duration$ UntilEndOfTurn | SetPower$ 3 | SetToughness$ 3 | SpellDescription$ Until end of turn, this creature becomes a copy of target creature card in your graveyard, except it's 3/3.
+
+Oracle:At the beginning of your upkeep, mill two cards.\n{1}{B}{B}: Until end of turn, this creature becomes a copy of target creature card in your graveyard, except it's 3/3.
+
+DeckHas:Ability$Graveyard

@@ -1,0 +1,13 @@
+Name:Globule of Agony
+ManaCost:2/B
+Types:Artifact
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigLoseLife | TriggerDescription$ When this artifact enters or leaves the battlefield, target player loses 1 life.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigLoseLife | Secondary$ True | TriggerDescription$ When this artifact enters or leaves the battlefield, target player loses 1 life.
+SVar:TrigLoseLife:DB$ LoseLife | LifeAmount$ 1 | ValidTgts$ Player | TgtPrompt$ Select target player 
+
+A:AB$ Draw | Cost$ 2/B T Sac<1/CARDNAME/this artifact> | SpellDescription$ Draw a card.
+
+Oracle:When this artifact enters or leaves the battlefield, target player loses 1 life.\n{2/B}, {T}, Sacrifice this artifact: Draw a card.
+
+DeckHas:Ability$Sacrifice

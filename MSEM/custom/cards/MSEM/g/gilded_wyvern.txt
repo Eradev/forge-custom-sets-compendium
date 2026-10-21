@@ -1,0 +1,11 @@
+Name:Gilded Wyvern
+ManaCost:3
+Types:Artifact Creature Construct
+PT:2/1
+
+K:Flying
+
+T:Mode$ Shuffled | ValidPlayer$ Player | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever a player shuffles their library, this creature deals 2 damage to that player.
+SVar:TrigDamage:DB$ DealDamage | Defined$ TriggeredPlayer | NumDmg$ 2
+
+Oracle:Flying\nWhenever a player shuffles their library, this creature deals 2 damage to that player.
