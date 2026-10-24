@@ -1,0 +1,17 @@
+Name:Mukhif the Grim
+ManaCost:1 B B
+Types:Legendary Planeswalker Mukhif
+Loyalty:4
+
+A:AB$ Pump | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 1 | NumAtt$ +2 | SubAbility$ DBLoseLife | SpellDescription$ [+1]: Up to one target creature gets +2/+0 until end of turn. Each player loses 1 life.
+SVar:DBLoseLife:DB$ LoseLife | Defined$ Player | LifeAmount$ 1
+
+A:AB$ ChangeZone | Cost$ SubCounter<X/LOYALTY> | Planeswalker$ True | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature.YouOwn+cmcEQX | TgtPrompt$ Select target creature card with mana value X from your graveyard | SubAbility$ DBAnimate | SpellDescription$ [-X]: Return target creature card with mana value X from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield.
+SVar:DBAnimate:DB$ Animate | Defined$ Targeted | Keywords$ Haste | AtEOT$ Exile | LeaveBattlefield$ Exile
+
+A:AB$ Token | Cost$ SubCounter<7/LOYALTY> | Planeswalker$ True | Ultimate$ True | TokenScript$ b_1_1_bird_flying_deathtouch | TokenAmount$ BirdCount | ValidTgts$ Player | SpellDescription$ [-7]: For each 1 life target player has less than their starting life total, create a 1/1 black Bird creature token with flying and deathtouch.
+SVar:BirdCount:TargetedPlayer$StartingLife/Minus.TargetedPlayer$LifeTotal
+
+Oracle:[+1]: Up to one target creature gets +2/+0 until end of turn. Each player loses 1 life.\n[-X]: Return target creature card with mana value X from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield.\n[-7]: For each 1 life target player has less than their starting life total, create a 1/1 black Bird creature token with flying and deathtouch.
+
+DeckHas:Ability$Token
