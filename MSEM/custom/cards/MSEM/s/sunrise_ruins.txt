@@ -7,7 +7,7 @@ SVar:ETBTapped:DB$ Tap | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ B | SpellDescription$ Add {B}.
 
-T:Mode$ Phase | Phase$ UntapOtherPlayer | ValidPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigUntap | TriggerDescription$ You may untap this land during each other player's untap step. Whenever you do, you lose 1 life.
+T:Mode$ Phase | Phase$ Untap | ValidPlayer$ Opponent | TriggerZones$ Battlefield | Static$ True | PresentDefined$ Self | IsPresent$ Card.tapped | OptionalDecider$ You | Execute$ TrigUntap | TriggerDescription$ You may untap this land during each other player's untap step. Whenever you do, you lose 1 life.
 SVar:TrigUntap:DB$ Untap | SubAbility$ DBLoseLife
 SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
 
