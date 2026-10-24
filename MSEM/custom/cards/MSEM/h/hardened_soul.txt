@@ -1,0 +1,14 @@
+Name:Hardened Soul
+ManaCost:3 W
+Types:Creature Spirit Soldier
+PT:3/2
+
+K:Lifelink
+
+A:AB$ Pump | Cost$ 2 B | ValidTgts$ Spirit | NumAtt$ +1 | KW$ Lifelink | SpellDescription$ Target Spirit gets +1/+0 and gains lifelink until end of turn.
+
+Oracle:Lifelink\n{2}{B}:Target Spirit gets +1/+0 and gains lifelink until end of turn.
+
+DeckHas:Color$Black
+
+DeckHints:Type$Spirit
