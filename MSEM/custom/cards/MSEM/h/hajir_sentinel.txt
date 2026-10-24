@@ -8,3 +8,4 @@ S:Mode$ Continuous | Affected$ Survivor.YouCtrl | AddKeyword$ Vigilance | Descri
 Oracle:Survivors you control have vigilance.
 
 SVar:PlayMain1:TRUE
+DeckHints:Type$Survivor
