@@ -1,0 +1,14 @@
+Name:Admirer of the Lost
+ManaCost:2 B
+Types:Creature Human Rogue
+PT:3/2
+
+K:Menace
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.OppCtrl | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever a creature an opponent controls dies, create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+SVar:TrigToken:DB$ Token | TokenScript$ c_a_idol_sac
+
+DeckHas:Ability$Token|Sacrifice|Counters
+DeckHints:Type$Idol
+
+Oracle:Menace\nWhenever a creature an opponent controls dies, create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")

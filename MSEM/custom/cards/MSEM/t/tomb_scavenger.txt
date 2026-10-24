@@ -1,0 +1,12 @@
+Name:Tomb Scavenger
+ManaCost:2 B
+Types:Creature Demon
+PT:1/3
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Graveyard | Destination$ Battlefield | ValidCard$ Creature.YouCtrl+Other | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever another creature you control enters from a graveyard or you revive a creature token, this creature gets +2/+0 until end of turn.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.token+YouCtrl | ValidCause$ Activated.NamedAbilityRevive | TriggerZones$ Battlefield | Execute$ TrigPump | Secondary$ True | TriggerDescription$ Whenever another creature you control enters from a graveyard or you revive a creature token, this creature gets +2/+0 until end of turn.
+SVar:TrigPump:DB$ Pump | NumAtt$ +2
+
+Oracle:Flying\nWhenever another creature you control enters from a graveyard or you revive a creature token, this creature gets +2/+0 until end of turn.

@@ -1,0 +1,10 @@
+Name:Reverent Flame
+ManaCost:2 R
+Types:Sorcery
+
+A:SP$ DealDamage | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ 3 | SubAbility$ DBToken | SpellDescription$ CARDNAME deals 3 damage to target creature.
+SVar:DBToken:DB$ Token | TokenAmount$ 3 | TokenScript$ c_a_idol_sac | TokenOwner$ You | SpellDescription$ Create three Idol tokens. (They're artifacts with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+
+Oracle:Reverent Flame deals 3 damage to target creature. Create three Idol tokens. (They're artifacts with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+
+DeckHas:Ability$Token|Sacrifice & Type$Artifact

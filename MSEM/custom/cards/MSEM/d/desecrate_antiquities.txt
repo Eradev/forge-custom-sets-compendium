@@ -1,0 +1,13 @@
+Name:Desecrate Antiquities
+ManaCost:X R R
+Types:Instant
+
+A:SP$ DestroyAll | ValidCards$ Artifact.cmcLEX | RememberDestroyed$ True | SubAbility$ DBToken | SpellDescription$ Destroy each artifact with mana value X or less.
+SVar:DBToken:DB$ Token | TokenScript$ c_a_idol_sac | TokenAmount$ Y | TokenOwner$ You | SubAbility$ DBCleanup | SpellDescription$ Then create an Idol token for each artifact destroyed this way. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Count$xPaid
+SVar:Y:Remembered$Amount
+
+Oracle:Destroy each artifact with mana value X or less, then create an Idol token for each artifact destroyed this way. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+
+DeckHas:Ability$Token|Sacrifice & Type$Artifact

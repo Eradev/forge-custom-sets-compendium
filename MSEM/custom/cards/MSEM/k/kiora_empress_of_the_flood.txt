@@ -1,0 +1,14 @@
+Name:Kiora, Empress of the Flood
+ManaCost:2 G U
+Types:Legendary Planeswalker Kiora
+Loyalty:3
+
+A:AB$ Pump | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature | NumAtt$ -9 | IsCurse$ True | Duration$ UntilYourNextTurn | SpellDescription$ Until your next turn, up to one target creature gets -9/-0.
+
+A:AB$ Dig | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | DigNum$ 4 | Reveal$ True | ChangeNum$ Any | ChangeValid$ Card.hasManaAbility | SpellDescription$ Reveal the top four cards of your library. Put any number of cards with mana abilities from among them into your hand, then put the rest on the bottom of your library in any order.
+
+A:AB$ Effect | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Kiora, Empress of the Flood | Image$ emblem_kiora_empress_of_the_flood | Triggers$ TrigEndStep | Duration$ Permanent | AILogic$ Always | SpellDescription$ You get an emblem with "At the beginning of each opponent's end step, gain control of target creature that player controls."
+SVar:TrigEndStep:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ Player.Opponent | TriggerZones$ Command | Execute$ TrigGainControl | TriggerDescription$ At the beginning of each opponent's end step, gain control of target creature that player controls.
+SVar:TrigGainControl:DB$ GainControl | ValidTgts$ Creature.ControlledBy TriggeredPlayer | TgtPrompt$ Select target creature that player controls
+
+Oracle:[+1]: Until your next turn, up to one target creature gets -9/-0.\n[-2]: Reveal the top four cards of your library. Put any number of cards with mana abilities from among them into your hand, then put the rest on the bottom of your library in any order.\n[-6]: You get an emblem with "At the beginning of each opponent's end step, gain control of target creature that player controls."

@@ -1,0 +1,8 @@
+Name:Spitfire
+ManaCost:1 R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ 2 | SubAbility$ DBPump | SpellDescription$ CARDNAME deals 2 damage to target creature.
+SVar:DBPump:DB$ Pump | ValidTgts$ Creature.YouCtrl | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature you control | NumAtt$ +2 | SpellDescription$ Up to one target creature you control gets +2/+0 until end of turn.
+
+Oracle:Spitfire deals 2 damage to target creature. Up to one target creature you control gets +2/+0 until end of turn.

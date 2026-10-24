@@ -1,0 +1,13 @@
+Name:Sanguine Oracle
+ManaCost:B
+Types:Creature Demon Wizard
+PT:2/1
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This creature enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Discard | Cost$ 4 B T Sac<1/CARDNAME/this creature> | ValidTgts$ Player | TgtPrompt$ Select target player | NumCards$ 2 | Mode$ TgtChoose | SorcerySpeed$ True | SpellDescription$ Target player discards two cards. Activate only as a sorcery.
+
+Oracle:This creature enters tapped.\n{4}{B}, {T}, Sacrifice this creature: Target player discards two cards. Activate only as a sorcery.
+
+DeckHas:Ability$Discard|Sacrifice

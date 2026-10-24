@@ -1,0 +1,13 @@
+Name:Forlorn Murklurker
+ManaCost:1 B
+Types:Creature Zombie
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigSubmerge | TriggerDescription$ When this creature dies, submerge the top card of your library. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
+SVar:TrigSubmerge:DB$ Dig | Defined$ TriggeredCardController | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | FaceDown$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When this creature dies, submerge the top card of your library. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
+
+DeckHas:Ability$Graveyard|Token

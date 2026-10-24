@@ -1,0 +1,11 @@
+Name:Pecking Order
+ManaCost:1 G
+Types:Enchantment
+
+A:AB$ Dig | Cost$ G Discard<1/Card.nonCreature/noncreature card> | DigNum$ 5 | Reveal$ True | ChangeNum$ 1 | Optional$ True | ChangeValid$ Creature.cmcLEX | DestinationZone$ Hand | SpellDescription$ Reveal the top five cards of your library. You may put a creature card with mana value X or less from among them into your hand, where X is the discarded card's mana value plus one. Put the rest on the bottom of your library in any order.
+SVar:X:Discarded$CardManaCost/Plus.1
+
+Oracle:{G}, Discard a noncreature card: Reveal the top five cards of your library. You may put a creature card with mana value X or less from among them into your hand, where X is the discarded card's mana value plus one. Put the rest on the bottom of your library in any order.
+
+DeckHas:Ability$Discard
+DeckHints:Type$Creature

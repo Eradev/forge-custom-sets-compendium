@@ -1,0 +1,16 @@
+Name:An and En, Destined Souls
+ManaCost:1 W U
+Types:Legendary Creature Spirit
+PT:2/2
+
+K:Flying
+
+A:AB$ ChangeZone | Cost$ 1 W U | ValidTgts$ Creature.Other | TgtPrompt$ Select another target creature | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn | SpellDescription$ Submerge another target creature. When NICKNAME leaves the battlefield, turn that creature face up. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | FaceDown$ True | ForgetOtherRemembered$ True | RememberChanged$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ Remembered | ImprintCards$ Self | Triggers$ TrigLeaves | Duration$ Permanent | SubAbility$ DBCleanup
+SVar:TrigLeaves:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.IsImprinted | TriggerZones$ Command | TriggerController$ TriggeredCardController | Static$ True | Execute$ DBTurnFaceUp | TriggerDescription$ When EFFECTSOURCE leaves the battlefield, turn that creature face up.
+SVar:DBTurnFaceUp:DB$ SetState | Defined$ Remembered | Mode$ TurnFaceUp | SubAbility$ DBExileEffect
+SVar:DBExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Flying\n{1}{W}{U}: Submerge another target creature. When An and En leaves the battlefield, turn that creature face up. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)

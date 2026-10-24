@@ -1,0 +1,9 @@
+Name:Undead Banneret
+ManaCost:3 B
+Types:Creature Zombie Warrior
+PT:4/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | IsPresent$ Creature.Legendary+YouCtrl | Execute$ TrigLoseLife | TriggerDescription$ When this creature enters, if you control a legendary creature, each opponent loses 4 life.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ Opponent | LifeAmount$ 4
+
+Oracle:When Undead Banneret enters, if you control a legendary creature, each opponent loses 4 life.

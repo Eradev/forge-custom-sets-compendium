@@ -1,0 +1,15 @@
+Name:Shadow Infestation
+ManaCost:1 B
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigLoseLife | TriggerDescription$ When this Aura enters, enchanted creature's controller loses 2 life.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ EnchantedController | LifeAmount$ 2
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddPower$ -1 | AddToughness$ -1 | Description$ Enchanted creature gets -1/-1 and can't block.
+S:Mode$ CantBlock | ValidCard$ Creature.EnchantedBy | Secondary$ True | Description$ Enchanted creature gets -1/-1 and can't block.
+
+Oracle:Enchant creature\nWhen this Aura enters, enchanted creature's controller loses 2 life.\nEnchanted creature gets -1/-1 and can't block.
+
+SVar:AttachAILogic:Curse

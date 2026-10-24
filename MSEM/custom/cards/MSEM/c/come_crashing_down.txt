@@ -1,0 +1,11 @@
+Name:Come Crashing Down
+ManaCost:2 G
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Creature.withFlying | TgtPrompt$ Select target creature with flying | RememberLKI$ True | AlwaysRemember$ True | SubAbility$ DBGainLife | SpellDescription$ Destroy target creature with flying.
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 4 | ConditionDefined$ RememberedLKI | ConditionPresent$ Creature.powerGE4 | ConditionCompare$ GE1 | SubAbility$ DBCleanup | SpellDescription$ If that creature had power 4 or greater, you gain 4 life.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Destroy target creature with flying. If that creature had power 4 or greater, you gain 4 life.
+
+DeckHas:Ability$LifeGain

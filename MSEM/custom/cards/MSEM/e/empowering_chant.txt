@@ -1,0 +1,10 @@
+Name:Empowering Chant
+ManaCost:G
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | NumAtt$ +X | NumDef$ +X | SpellDescription$ Target creature you control gets +X/+X until end of turn, where X is the number of +1/+1 counters among creatures you control.
+SVar:X:Count$Valid Creature.YouCtrl$CardCounters.P1P1
+
+Oracle:Target creature you control gets +X/+X until end of turn, where X is the number of +1/+1 counters among creatures you control.
+
+DeckHints:Ability$Counters

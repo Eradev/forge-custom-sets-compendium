@@ -1,0 +1,9 @@
+Name:Slicing Legion
+ManaCost:2 R
+Types:Instant
+
+A:SP$ Token | TokenAmount$ 2 | TokenScript$ rw_1_1_warrior | TokenOwner$ You | PumpKeywords$ First Strike | PumpDuration$ EOT | SpellDescription$ Create two 1/1 red and white Warrior creature tokens. Those tokens gain first strike until end of turn.
+
+DeckHas:Ability$Token & Type$Warrior
+
+Oracle:Create two 1/1 red and white Warrior creature tokens. Those tokens gain first strike until end of turn.

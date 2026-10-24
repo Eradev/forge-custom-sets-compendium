@@ -1,0 +1,12 @@
+Name:Battle Acumen
+ManaCost:1 W
+Types:Sorcery
+
+A:SP$ Repeat | RepeatSubAbility$ DBInvigorate | MaxRepeat$ 3 | StackDescription$ SpellDescription | SpellDescription$ Invigorate 1 three times. (Choose a creature with the least power among creatures you control and put a +1/+1 counter on it.)
+SVar:DBInvigorate:DB$ ChooseCard | Choices$ Creature.leastPowerControlledByYou | Mandatory$ True | ChoiceTitle$ Choose a creature with the least power among creatures you control | SubAbility$ DBPutCounter | SpellDescription$ Invigorate 1 three times. (Choose a creature with the least power among creatures you control and put a +1/+1 counter on it.)
+SVar:DBPutCounter:DB$ PutCounter | Defined$ ChosenCard | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
+
+Oracle:Invigorate 1 three times. (Choose a creature with the least power among creatures you control and put a +1/+1 counter on it.)
+
+DeckHas:Ability$Counters

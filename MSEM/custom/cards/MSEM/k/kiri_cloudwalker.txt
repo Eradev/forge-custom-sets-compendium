@@ -1,0 +1,14 @@
+Name:Kiri, Cloudwalker
+ManaCost:1 W W
+Types:Legendary Creature Fox Spirit
+PT:2/3
+
+K:Lifelink
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl+powerLTCount$CardPower | TriggerZones$ Battlefield | Execute$ TrigReward | TriggerDescription$ Whenever a creature with power less than NICKNAME's power you control enters, you may pay {W}. If you do, you gain 2 life and draw a card.
+SVar:TrigReward:AB$ GainLife | Cost$ W | Defined$ You | LifeAmount$ 2 | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+Oracle:Lifelink\nWhenever a creature with power less than Kiri's power you control enters, you may pay {W}. If you do, you gain 2 life and draw a card.
+
+DeckHas:Ability$LifeGain

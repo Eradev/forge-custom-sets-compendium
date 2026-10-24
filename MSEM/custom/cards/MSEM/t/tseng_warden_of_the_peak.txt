@@ -1,0 +1,15 @@
+Name:Tseng, Warden of the Peak
+ManaCost:4 R R
+Types:Legendary Creature Dragon
+PT:4/3
+
+K:Flying
+
+T:Mode$ TapsForMana | ValidCard$ Mountain | Activator$ You | TriggerZones$ Battlefield | Execute$ TrigMountainMana | Static$ True | TriggerDescription$ Whenever you tap a Mountain for mana, add {R} and that land deals 1 damage to you.
+SVar:TrigMountainMana:DB$ Mana | Produced$ R | Defined$ You | SubAbility$ DBMountainDamage
+SVar:DBMountainDamage:DB$ DealDamage | Defined$ You | NumDmg$ 1 | DamageSource$ TriggeredCard
+
+T:Mode$ TapsForMana | ValidCard$ Land.nonMountain | Activator$ You | TriggerZones$ Battlefield | Execute$ TrigLandDamage | TriggerDescription$ Whenever you tap a non-Mountain land for mana, that land deals 1 damage to NICKNAME.
+SVar:TrigLandDamage:DB$ DealDamage | Defined$ Self | NumDmg$ 1 | DamageSource$ TriggeredCard
+
+Oracle:Flying\nWhenever you tap a Mountain for mana, add {R} and that land deals 1 damage to you.\nWhenever you tap a non-Mountain land for mana, that land deals 1 damage to Tseng.

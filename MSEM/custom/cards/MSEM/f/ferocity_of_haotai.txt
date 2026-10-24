@@ -1,0 +1,7 @@
+Name:Ferocity of Hao'Tai
+ManaCost:2 R
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature.YouCtrl | NumAtt$ +4 | KW$ Trample | SpellDescription$ Target creature you control gets +4/+0 and gains trample until end of turn.
+
+Oracle:Target creature you control gets +4/+0 and gains trample until end of turn.

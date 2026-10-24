@@ -1,0 +1,12 @@
+Name:Artful Coercion
+ManaCost:2 U U
+Types:Sorcery
+
+A:SP$ GainControl | ValidTgts$ Creature.leastPower | SubAbility$ DBInvigorate | SpellDescription$ Gain control of target creature with the least power among creatures on the battlefield, then invigorate 2. (Choose a creature with the least power among creatures you control and put two +1/+1 counters on it.)
+SVar:DBInvigorate:DB$ ChooseCard | Choices$ Creature.leastPowerControlledByYou | Mandatory$ True | ChoiceTitle$ Choose a creature with the least power among creatures you control | SubAbility$ DBPutCounter
+SVar:DBPutCounter:DB$ PutCounter | Defined$ ChosenCard | CounterType$ P1P1 | CounterNum$ 2 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
+
+Oracle:Gain control of target creature with the least power among creatures on the battlefield, then invigorate 2. (Choose a creature with the least power among creatures you control and put two +1/+1 counters on it.)
+
+DeckHas:Ability$Counters

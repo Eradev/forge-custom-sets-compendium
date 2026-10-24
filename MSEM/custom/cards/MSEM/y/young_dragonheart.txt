@@ -1,0 +1,10 @@
+Name:Young Dragonheart
+ManaCost:2 R
+Types:Creature Human Shaman
+PT:3/2
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ 1 | AddKeyword$ First Strike | IsPresent$ Creature.Legendary+YouCtrl | PresentCompare$ GE1 | Description$ CARDNAME gets +1/+0 and has first strike as long as you control a legendary creature.
+
+Oracle:Young Dragonheart gets +1/+0 and has first strike as long as you control a legendary creature.
+
+DeckHints:Type$Legendary & Type$Creature

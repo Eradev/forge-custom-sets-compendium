@@ -1,0 +1,15 @@
+Name:Coax Under
+ManaCost:2 U
+Types:Instant
+
+A:SP$ ChangeZoneAll | ChangeType$ Creature.YouCtrl | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn | SpellDescription$ Submerge each creature you control. At the beginning of the next end step, you may turn any number of face-down creatures you control face up. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
+SVar:DBReturn:DB$ ChangeZoneAll | ChangeType$ Card.IsRemembered+!token | Origin$ Exile | Destination$ Battlefield | FaceDown$ True | SubAbility$ DBDelayedTrigger
+
+SVar:DBDelayedTrigger:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | Execute$ TrigTurnFaceUp | SubAbility$ DBCleanup | TriggerDescription$ At the beginning of the next end step, you may turn any number of face-down creatures you control face up.
+SVar:TrigTurnFaceUp:DB$ SetState | MinAmount$ 0 | Amount$ X | Choices$ Creature.faceDown+YouCtrl | ChoiceTitle$ Choose any number of face-down creatures you control to turn face up | Mode$ TurnFaceUp
+
+SVar:X:Count$Valid Creature.faceDown+YouCtrl
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Submerge each creature you control. At the beginning of the next end step, you may turn any number of face-down creatures you control face up. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)

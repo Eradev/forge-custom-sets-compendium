@@ -1,0 +1,7 @@
+Name:Unsettled Rivalry
+ManaCost:3 R R
+Types:Instant
+
+A:SP$ Fight | ValidTgts$ Creature.attacking | TgtPrompt$ Select two target attacking creatures | TargetMin$ 2 | TargetMax$ 2 | SpellDescription$ Target attacking creature fights another target attacking creature.
+
+Oracle:Target attacking creature fights another target attacking creature.

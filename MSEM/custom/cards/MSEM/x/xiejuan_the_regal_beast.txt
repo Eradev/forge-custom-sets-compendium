@@ -1,0 +1,18 @@
+Name:Xiejuan, the Regal Beast
+ManaCost:4 G G
+Types:Legendary Creature Cat
+PT:6/6
+
+K:ETBReplacement:Other:DBAlpha:Optional
+
+SVar:DBAlpha:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | ETB$ True | SubAbility$ DBBecomeAlpha | SpellDescription$ Alpha (You may have this creature enter with an additional +1/+1 counter on it. If you do, it becomes alpha and can only attack alone.)
+SVar:DBBecomeAlpha:DB$ Animate | Defined$ Self | ConditionDefined$ Self | ConditionPresent$ Card.Self+HasSVar Alpha | ConditionCompare$ EQ0 | HiddenKeywords$ CARDNAME can only attack alone. | sVars$ AlphaMarker | Duration$ Permanent | SubAbility$ DBAlphaTrigger
+SVar:DBAlphaTrigger:DB$ ImmediateTrigger | Execute$ TrigDraw | TriggerDescription$ When NICKNAME becomes alpha, draw a card for each other creature you control.
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ X
+
+SVar:AlphaMarker:SVar:Alpha:True
+SVar:X:Count$Valid Creature.Other+YouCtrl
+
+Oracle:Alpha (You may have this creature enter with a +1/+1 counter on it. If you do, it becomes alpha and can only attack alone.)\nWhen Xiejuan becomes alpha, draw a card for each other creature you control.
+
+DeckHas:Ability$Counters

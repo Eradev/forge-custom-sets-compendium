@@ -1,0 +1,9 @@
+Name:Anointed General
+ManaCost:2 R
+Types:Creature Human Warrior
+PT:4/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | IsPresent$ Creature.Legendary+YouCtrl | Execute$ TrigDamage | TriggerDescription$ When this creature enters, if you control a legendary creature, this creature deals 4 damage to target creature you don't control.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you don't control | NumDmg$ 4
+
+Oracle:When this creature enters, if you control a legendary creature, this creature deals 4 damage to target creature you don't control.

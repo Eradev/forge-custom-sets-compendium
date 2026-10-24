@@ -1,0 +1,11 @@
+Name:The Charmer's Curse
+ManaCost:1 W
+Types:Enchantment Aura
+
+K:Enchant:Creature
+SVar:AttachAILogic:Curse
+
+S:Mode$ Continuous | Affected$ Card.EnchantedBy | SetPower$ 1 | SetToughness$ 1 | Description$ Enchanted creature has base power and toughness 1/1, and its activated abilities can't be activated.
+S:Mode$ CantBeActivated | ValidCard$ Creature.EnchantedBy | Secondary$ True
+
+Oracle:Enchant creature\nEnchanted creature has base power and toughness 1/1, and its activated abilities can't be activated.

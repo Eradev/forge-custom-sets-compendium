@@ -1,0 +1,13 @@
+Name:Blades of the Many
+ManaCost:2 G
+Types:Instant
+
+A:SP$ ChooseCard | Choices$ Creature.leastPowerControlledByYou | Mandatory$ True | ChoiceTitle$ Choose a creature with the least power among creatures you control | SubAbility$ DBPutCounter | SpellDescription$ Invigorate X, where X is the number of creatures you control. (Choose a creature with the least power among creatures you control and put X +1/+1 counters on it.)
+SVar:DBPutCounter:DB$ PutCounter | Defined$ ChosenCard | CounterType$ P1P1 | CounterNum$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
+
+SVar:X:Count$Valid Creature.YouCtrl
+
+Oracle:Invigorate X, where X is the number of creatures you control. (Choose a creature with the least power among creatures you control and put X +1/+1 counters on it.)
+
+DeckHas:Ability$Counters

@@ -1,0 +1,8 @@
+Name:Lumbering Stoneshell
+ManaCost:5 U
+Types:Creature Turtle
+PT:4/6
+
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.untapped | AddKeyword$ Hexproof | Description$ This creature has hexproof as long as it's untapped.
+
+Oracle:This creature has hexproof as long as it's untapped.

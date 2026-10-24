@@ -1,0 +1,8 @@
+Name:Vanishing Memory
+ManaCost:1 W
+Types:Creature Spirit
+PT:0/1
+
+A:AB$ ChangeZone | Cost$ 3 W | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | ThisDefinedAndTgts$ Self | Origin$ Battlefield | Destination$ Exile | SpellDescription$ Exile this creature and target creature an opponent controls.
+
+Oracle:{3}{W}: Exile this creature and target creature an opponent controls.

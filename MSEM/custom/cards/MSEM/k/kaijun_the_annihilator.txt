@@ -1,0 +1,17 @@
+Name:Kai'Jun, the Annihilator
+ManaCost:2 B B
+Types:Legendary Creature Demon
+PT:5/5
+
+K:Flying
+
+K:Trample
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ TrigSac | TriggerZones$ Battlefield | TriggerDescription$ At the beginning of your upkeep, sacrifice a non-Demon creature.
+SVar:TrigSac:DB$ Sacrifice | SacValid$ Creature.nonDemon | SacMessage$ non-Demon creature
+
+A:AB$ CopyPermanent | Named$ Revive | Cost$ 2 B B ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | SorcerySpeed$ True | Defined$ Self | RemoveCost$ True | PrecostDesc$ Revive — | SpellDescription$ Create a token that's a copy of this card except it has no mana cost. Revive only as a sorcery.
+
+Oracle:Flying, trample\nAt the beginning of your upkeep, sacrifice a non-Demon creature.\nRevive {2}{B}{B} ({2}{B}{B}, Exile this card from your graveyard: Create a token that's a copy of it except it has no mana cost. Revive only as a sorcery.)
+
+DeckHas:Ability$Graveyard|Token|Sacrifice

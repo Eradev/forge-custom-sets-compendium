@@ -1,0 +1,15 @@
+Name:Whitepeak Predator
+ManaCost:4 W
+Types:Creature Cat
+PT:4/4
+
+K:ETBReplacement:Other:DBAlpha:Optional
+
+SVar:DBAlpha:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | ETB$ True | SubAbility$ DBBecomeAlpha | SpellDescription$ Alpha (You may have this creature enter with an additional +1/+1 counter on it. If you do, it becomes alpha and can only attack alone.)
+SVar:DBBecomeAlpha:DB$ Animate | Defined$ Self | ConditionDefined$ Self | ConditionPresent$ Card.Self+HasSVar Alpha | ConditionCompare$ EQ0 | HiddenKeywords$ CARDNAME can only attack alone. | sVars$ AlphaMarker | Duration$ Permanent
+
+SVar:AlphaMarker:SVar:Alpha:True
+
+Oracle:Alpha (You may have this creature enter with a +1/+1 counter on it. If you do, it becomes alpha and can only attack alone.)
+
+DeckHas:Ability$Counters

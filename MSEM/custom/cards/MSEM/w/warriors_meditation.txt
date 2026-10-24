@@ -1,0 +1,12 @@
+Name:Warrior's Meditation
+ManaCost:1 U
+Types:Instant
+
+A:SP$ ChooseCard | Choices$ Creature.leastPowerControlledByYou | Mandatory$ True | ChoiceTitle$ Choose a creature with the least power among creatures you control | SubAbility$ DBPutCounter | SpellDescription$ Invigorate 1, then untap each creature you control with a +1/+1 counter on it. (Choose a creature with the least power among creatures you control and put a +1/+1 counter on it.)
+SVar:DBPutCounter:DB$ PutCounter | Defined$ ChosenCard | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True | SubAbility$ DBUntapAll
+SVar:DBUntapAll:DB$ UntapAll | ValidCards$ Creature.YouCtrl+counters_GE1_P1P1
+
+Oracle:Invigorate 1, then untap each creature you control with a +1/+1 counter on it. (Choose a creature with the least power among creatures you control and put a +1/+1 counter on it.)
+
+DeckHas:Ability$Counters

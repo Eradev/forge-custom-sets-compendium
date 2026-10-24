@@ -1,0 +1,12 @@
+Name:Miasma Spewer
+ManaCost:2 R R
+Types:Creature Lizard Beast
+PT:4/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSac | TriggerDescription$ When this creature enters, you may sacrifice a permanent. When you do, this creature deals 1 damage to each opponent and each creature and planeswalker they control.
+SVar:TrigSac:AB$ ImmediateTrigger | Cost$ Sac<1/Permanent> | Execute$ TrigDamage | TriggerDescription$ When you do, this creature deals 1 damage to each opponent and each creature and planeswalker they control.
+SVar:TrigDamage:DB$ DamageAll | ValidPlayers$ Player.Opponent | ValidCards$ Creature.OppCtrl,Planeswalker.OppCtrl | NumDmg$ 1 | ValidDescription$ each opponent and each creature and planeswalker they control.
+
+Oracle:When this creature enters, you may sacrifice a permanent. When you do, this creature deals 1 damage to each opponent and each creature and planeswalker they control.
+
+DeckHas:Ability$Sacrifice

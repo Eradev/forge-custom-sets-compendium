@@ -1,0 +1,7 @@
+Name:Form of the Demon
+ManaCost:2 B
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | NumAtt$ +3 | KW$ Lifelink & Indestructible | SpellDescription$ Target creature you control gets +3/+0 and gains lifelink and indestructible until end of turn.
+
+Oracle:Target creature you control gets +3/+0 and gains lifelink and indestructible until end of turn.

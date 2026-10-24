@@ -1,0 +1,11 @@
+Name:Jiayin, the Harmonious
+ManaCost:1 G G
+Types:Legendary Creature Dryad
+PT:3/3
+
+K:Reach
+
+T:Mode$ BecomesTarget | ValidTarget$ Creature.Other+YouCtrl+inZoneBattlefield | ValidSource$ Instant,Sorcery | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever another creature you control becomes the target of an instant or sorcery spell, that creature gets +3/+3 until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredTarget | NumAtt$ +3 | NumDef$ +3
+
+Oracle:Reach\nWhenever another creature you control becomes the target of an instant or sorcery spell, that creature gets +3/+3 until end of turn.

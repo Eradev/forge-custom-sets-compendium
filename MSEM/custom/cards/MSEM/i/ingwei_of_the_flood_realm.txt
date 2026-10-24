@@ -1,0 +1,15 @@
+Name:Ing'Wei of the Flood Realm
+ManaCost:1 U U
+Types:Legendary Creature Human Wizard
+PT:2/2
+K:Hexproof
+
+T:Mode$ BecomesTarget | ValidTarget$ Creature.Other+YouCtrl+inZoneBattlefield | ValidSource$ Spell.OppCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigSubmerge | TriggerDescription$ Whenever another creature you control becomes the target of a spell an opponent controls, you may submerge that creature. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
+
+SVar:TrigSubmerge:DB$ ChangeZone | Defined$ TriggeredTargetLKICopy | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | FaceDown$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+A:AB$ SetState | Cost$ 1 U U | ValidTgts$ Creature.faceDown+YouCtrl | TgtPrompt$ Select target face-down creature you control | Mode$ TurnFaceUp | SpellDescription$ Turn target face-down creature you control face up.
+
+Oracle:Hexproof\nWhenever another creature you control becomes the target of a spell an opponent controls, you may submerge that creature. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)\n{1}{U}{U}: Turn target face-down creature you control face up.

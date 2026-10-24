@@ -1,0 +1,11 @@
+Name:Leafmantle Dryad
+ManaCost:2 G
+Types:Creature Dryad
+PT:2/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | IsPresent$ Creature.Legendary+YouCtrl | PresentCompare$ GE1 | OptionalDecider$ You | TriggerZones$ Battlefield | Execute$ TrigSearch | TriggerDescription$ When CARDNAME enters, if you control a legendary creature, you may search your library for a basic land card and put it onto the battlefield tapped, then shuffle.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Land.Basic | ChangeTypeDesc$ basic land | ChangeNum$ 1 | Tapped$ True | ShuffleNonMandatory$ True
+
+Oracle:When Leafmantle Dryad enters, if you control a legendary creature, you may search your library for a basic land card and put it onto the battlefield tapped, then shuffle.
+
+DeckHints:Type$Legendary & Type$Creature

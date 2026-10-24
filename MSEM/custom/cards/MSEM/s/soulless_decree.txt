@@ -1,0 +1,12 @@
+Name:Soulless Decree
+ManaCost:2 B B
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Creature | TgtPrompt$ Select target creature | SubAbility$ DBLoseLife | SpellDescription$ Destroy target creature. Then if you control a Wizard, that creature's controller loses 1 life for each creature card in their graveyard.
+SVar:DBLoseLife:DB$ LoseLife | Defined$ TargetedController | LifeAmount$ X | ConditionPresent$ Wizard.YouCtrl | ConditionCompare$ GE1
+SVar:X:Count$ValidGraveyard Creature.OwnedBy TargetedController
+
+DeckHas:Ability$Graveyard
+DeckHints:Type$Wizard
+
+Oracle:Destroy target creature. Then if you control a Wizard, that creature's controller loses 1 life for each creature card in their graveyard.

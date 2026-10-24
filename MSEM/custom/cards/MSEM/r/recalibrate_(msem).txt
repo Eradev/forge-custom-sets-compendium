@@ -1,0 +1,14 @@
+Name:Recalibrate (MSEM)
+ManaCost:1 R R
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Instant.YouCtrl,Sorcery.YouCtrl | TargetType$ Spell | TgtZone$ Stack | TgtPrompt$ Select target instant or sorcery spell you control | Origin$ Stack | Destination$ Exile | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Exile target instant or sorcery spell you control.
+SVar:DBEffect:DB$ Effect | RememberObjects$ Remembered | StaticAbilities$ STPlay | Triggers$ TrigCopy | SubAbility$ DBCleanup | SpellDescription$ Until end of turn, you may cast that card from exile without paying its mana cost. When you do, copy it. You may choose new targets for the copy.
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | MayPlayWithoutManaCost$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ Until end of turn, you may cast that card from exile without paying its mana cost.
+SVar:TrigCopy:Mode$ SpellCast | ValidCard$ Card.IsRemembered | ValidSA$ Spell.MayPlaySource | ValidActivatingPlayer$ You | TriggerZones$ Command | Static$ True | OneOff$ True | Execute$ DBCopy | TriggerDescription$ When you do, copy it. You may choose new targets for the copy.
+SVar:DBCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | MayChooseTarget$ True
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+DeckHints:Type$Instant|Sorcery
+
+Oracle:Exile target instant or sorcery spell you control. Until end of turn, you may cast that card from exile without paying its mana cost. When you do, copy it. You may choose new targets for the copy.

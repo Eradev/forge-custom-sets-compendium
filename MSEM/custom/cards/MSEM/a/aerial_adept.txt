@@ -1,0 +1,10 @@
+Name:Aerial Adept
+ManaCost:W W
+Types:Creature Human Warrior
+PT:1/2
+
+K:Flying
+
+K:Double Strike
+
+Oracle:Flying, double strike

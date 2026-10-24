@@ -1,0 +1,6 @@
+Name:Fox Spirit Token
+ManaCost:no cost
+Colors:white
+Types:Creature Fox Spirit
+PT:1/1
+Oracle:

@@ -1,0 +1,10 @@
+Name:Nurturing Knowledge
+ManaCost:3 U U
+Types:Sorcery
+
+A:SP$ Draw | NumCards$ 3 | SubAbility$ DBUntap | SpellDescription$ Draw three cards. If you control a Wizard, untap up to three lands.
+SVar:DBUntap:DB$ Untap | ValidTgts$ Land | TgtPrompt$ Select up to three target lands | TargetMin$ 0 | TargetMax$ 3 | ConditionPresent$ Wizard.YouCtrl | ConditionCompare$ GE1 | ConditionDescription$ If you control a Wizard,
+
+Oracle:Draw three cards. If you control a Wizard, untap up to three lands.
+
+DeckHints:Type$Wizard

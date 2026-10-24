@@ -1,0 +1,9 @@
+Name:Lord's Call
+ManaCost:2 R R
+Types:Sorcery
+
+A:SP$ Token | TokenAmount$ 4 | TokenScript$ rw_1_1_warrior | SpellDescription$ Create four 1/1 red and white Warrior creature tokens.
+
+Oracle:Create four 1/1 red and white Warrior creature tokens.
+
+DeckHas:Ability$Token

@@ -1,0 +1,13 @@
+Name:Warrior of the Folded Fan
+ManaCost:2 W
+Types:Creature Human Warrior
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigInvigorate | TriggerDescription$ When this creature dies, invigorate 2. (Choose a creature with the least power among creatures you control and put two +1/+1 counters on it.)
+SVar:TrigInvigorate:DB$ ChooseCard | Choices$ Creature.leastPowerControlledByYou | Mandatory$ True | ChoiceTitle$ Choose a creature with the least power among creatures you control | SubAbility$ DBPutCounter
+SVar:DBPutCounter:DB$ PutCounter | Defined$ ChosenCard | CounterType$ P1P1 | CounterNum$ 2 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
+
+Oracle:When this creature dies, invigorate 2. (Choose a creature with the least power among creatures you control and put two +1/+1 counters on it.)
+
+DeckHas:Ability$Counters

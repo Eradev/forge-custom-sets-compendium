@@ -1,0 +1,11 @@
+Name:Chian, Augury Adept
+ManaCost:U U
+Types:Legendary Creature Human Wizard
+PT:2/2
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ Player | ValidSAonCard$ Spell.IsTargeting Valid Creature.YouDontCtrl | IsSingleTarget$ True | TriggerZones$ Battlefield | Execute$ TrigCopy | TriggerDescription$ Whenever a player casts an instant or sorcery spell that targets exactly one creature they don't control, you may copy that spell. If you do, you may choose new targets for the copy.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | Controller$ You | Optional$ True | MayChooseTarget$ True
+
+Oracle:Whenever a player casts an instant or sorcery spell that targets exactly one creature they don't control, you may copy that spell. If you do, you may choose new targets for the copy.
+
+DeckHints:Type$Instant|Sorcery

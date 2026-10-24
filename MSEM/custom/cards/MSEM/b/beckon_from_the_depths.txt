@@ -1,0 +1,9 @@
+Name:Beckon from the Depths
+ManaCost:2 U
+Types:Sorcery
+
+A:SP$ Dig | DigNum$ 2 | ChangeNum$ 1 | DestinationZone$ Hand | DestinationZone2$ Exile | RememberMovedToZone$ 2 | NoReveal$ True | SubAbility$ DBReturn | SpellDescription$ Look at the top two cards of your library. Put one of them into your hand, then submerge the other. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | FaceDown$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Look at the top two cards of your library. Put one of them into your hand, then submerge the other. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)

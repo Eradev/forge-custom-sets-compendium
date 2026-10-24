@@ -1,0 +1,8 @@
+Name:Moonlight Stag
+ManaCost:3 W
+Types:Creature Elk Spirit
+PT:2/5
+
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.counters_GE1_P1P1 | AddKeyword$ Vigilance | Description$ This creature has vigilance as long as it has a +1/+1 counter on it.
+
+Oracle:This creature has vigilance as long as it has a +1/+1 counter on it.

@@ -1,0 +1,15 @@
+Name:Warchief of the Folded Fan
+ManaCost:3 W W
+Types:Creature Human Warrior
+PT:3/4
+
+K:Vigilance
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigInvigorate | TriggerDescription$ Whenever this creature attacks, invigorate 2. (Choose a creature with the least power among creatures you control and put two +1/+1 counters on it.)
+SVar:TrigInvigorate:DB$ ChooseCard | Choices$ Creature.leastPowerControlledByYou | Mandatory$ True | ChoiceTitle$ Choose a creature with the least power among creatures you control | SubAbility$ DBPutCounter
+SVar:DBPutCounter:DB$ PutCounter | Defined$ ChosenCard | CounterType$ P1P1 | CounterNum$ 2 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
+
+Oracle:Vigilance\nWhenever this creature attacks, invigorate 2. (Choose a creature with the least power among creatures you control and put two +1/+1 counters on it.)
+
+DeckHas:Ability$Counters

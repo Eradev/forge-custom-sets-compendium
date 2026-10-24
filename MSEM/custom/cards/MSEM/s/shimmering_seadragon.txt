@@ -1,0 +1,11 @@
+Name:Shimmering Seadragon
+ManaCost:1 U
+Types:Creature Fish
+PT:1/3
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ 1 | IsPresent$ Creature.Legendary+YouCtrl | Description$ This creature gets +1/+0 and can't be blocked as long as you control a legendary creature.
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | IsPresent$ Creature.Legendary+YouCtrl | Secondary$ True
+
+Oracle:This creature gets +1/+0 and can't be blocked as long as you control a legendary creature.
+
+DeckHints:Type$Legendary

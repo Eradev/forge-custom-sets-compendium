@@ -1,0 +1,15 @@
+Name:Infuse the Apparatus
+ManaCost:5 U R
+Types:Sorcery
+
+A:SP$ ChangeZoneAll | Origin$ Graveyard | Destination$ Exile | ChangeType$ Card.YouOwn | Imprint$ True | SubAbility$ DBSearch | SpellDescription$ Exile all cards from your graveyard. You may search your library for any number of instant and/or sorcery cards with different names that share a name with one or more cards exiled this way and cast them without paying their mana costs, then shuffle. Exile CARDNAME.
+SVar:DBSearch:DB$ ChangeZone | Origin$ Library | Destination$ Library | Hidden$ True | ChangeType$ Instant.YouOwn+sharesNameWith Imprinted,Sorcery.YouOwn+sharesNameWith Imprinted | ChangeNum$ X | DifferentNames$ True | RememberChanged$ True | Shuffle$ False | SubAbility$ DBPlay
+SVar:DBPlay:DB$ Play | Valid$ Card.IsRemembered | ValidZone$ Library | ValidSA$ Instant,Sorcery | Controller$ You | WithoutManaCost$ True | Amount$ All | SubAbility$ DBShuffle
+SVar:DBShuffle:DB$ Shuffle | Defined$ You | SubAbility$ DBExileSelf
+SVar:DBExileSelf:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearImprinted$ True
+SVar:X:Count$ValidLibrary Instant.YouOwn+sharesNameWith Imprinted,Sorcery.YouOwn+sharesNameWith Imprinted
+
+Oracle:Exile all cards from your graveyard. You may search your library for any number of instant and/or sorcery cards with different names that share a name with one or more cards exiled this way and cast them without paying their mana costs, then shuffle. Exile Infuse the Apparatus.
+
+DeckHints:Type$Instant|Sorcery & Ability$Graveyard

@@ -1,0 +1,11 @@
+Name:Yawning Crane
+ManaCost:1 U
+Types:Creature Bird
+PT:1/2
+
+K:Flying
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Opponent | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever this creature deals combat damage to an opponent, target tapped creature that player controls doesn't untap during its controller's next untap step.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.tapped | TargetsWithDefinedController$ TriggeredTarget | TgtPrompt$ Select target tapped creature that player controls | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent
+
+Oracle:Flying\nWhenever this creature deals combat damage to an opponent, target tapped creature that player controls doesn't untap during its controller's next untap step.
