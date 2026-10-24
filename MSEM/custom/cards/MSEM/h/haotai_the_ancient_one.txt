@@ -1,0 +1,15 @@
+Name:Hao'Tai, the Ancient One
+ManaCost:2 R R
+Types:Legendary Creature Dragon
+PT:4/4
+
+K:Flying
+K:Trample
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigExile | TriggerDescription$ Whenever NICKNAME deals combat damage to a player, exile the top four cards of that player's library. Until end of turn, you may cast instant, sorcery, and creature cards from among those exiled cards, and you may spend mana as though it were mana of any color to cast them.
+SVar:TrigExile:DB$ Dig | Defined$ TriggeredTarget | DigNum$ 4 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ Remembered | StaticAbilities$ STPlay | ForgetOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | MayPlayIgnoreColor$ True | Affected$ Instant.IsRemembered,Sorcery.IsRemembered,Creature.IsRemembered | AffectedZone$ Exile | Description$ Until end of turn, you may cast instant, sorcery, and creature cards from among those exiled cards, and you may spend mana as though it were mana of any color to cast them.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Flying, trample\nWhenever Hao'Tai deals combat damage to a player, exile the top four cards of that player's library. Until end of turn, you may cast instant, sorcery, and creature cards from among those exiled cards, and you may spend mana as though it were mana of any color to cast them.

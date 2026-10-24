@@ -1,0 +1,13 @@
+Name:Mastery of the Silken Strand
+ManaCost:1 W
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddPower$ 1 | AddToughness$ 1 | Description$ Enchanted creature gets +1/+1.
+
+A:AB$ Pump | Cost$ W | Defined$ Enchanted | KW$ Vigilance | SpellDescription$ Enchanted creature gains vigilance until end of turn.
+
+A:AB$ Pump | Cost$ 1 W | Defined$ Enchanted | KW$ First Strike | SpellDescription$ Enchanted creature gains first strike until end of turn.
+
+Oracle:Enchant creature\nEnchanted creature gets +1/+1.\n{W}: Enchanted creature gains vigilance until end of turn.\n{1} {W}: Enchanted creature gains first strike until end of turn.

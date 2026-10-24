@@ -1,0 +1,10 @@
+Name:Nightcloak Ritualist
+ManaCost:1 B
+Types:Creature Human Wizard
+PT:2/1
+
+A:AB$ Dig | Cost$ Sac<1/Creature> | ValidTgts$ Player | TgtPrompt$ Select target player | DigNum$ 1 | ChangeNum$ Any | DestinationZone$ Graveyard | LibraryPosition2$ 0 | SpellDescription$ Look at the top card of target player's library. You may have that player put that card into their graveyard.
+
+DeckHas:Ability$Sacrifice|Graveyard
+
+Oracle:Sacrifice a creature: Look at the top card of target player's library. You may have that player put that card into their graveyard.

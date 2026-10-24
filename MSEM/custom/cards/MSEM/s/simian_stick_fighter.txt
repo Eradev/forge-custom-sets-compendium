@@ -1,0 +1,8 @@
+Name:Simian Stick Fighter
+ManaCost:3 R
+Types:Creature Monkey Warrior
+PT:3/3
+
+K:First Strike
+
+Oracle:First strike

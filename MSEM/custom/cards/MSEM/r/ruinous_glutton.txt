@@ -1,0 +1,11 @@
+Name:Ruinous Glutton
+ManaCost:4 G G
+Types:Creature Zombie Beast
+PT:7/5
+
+K:Trample
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigDestroy | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature deals combat damage to a player, destroy target artifact or enchantment that player controls.
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Artifact.ControlledBy TriggeredTarget,Enchantment.ControlledBy TriggeredTarget | TgtPrompt$ Select target artifact or enchantment damaged player controls
+
+Oracle:Trample\nWhenever this creature deals combat damage to a player, destroy target artifact or enchantment that player controls.

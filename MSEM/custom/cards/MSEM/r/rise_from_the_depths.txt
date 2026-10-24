@@ -1,0 +1,11 @@
+Name:Rise from the Depths
+ManaCost:3 B B
+Types:Sorcery
+
+A:SP$ ChangeZoneAll | ChangeType$ Creature | Origin$ Graveyard | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn | SpellDescription$ Submerge all creature cards in graveyards. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
+SVar:DBReturn:DB$ ChangeZoneAll | ChangeType$ Card.IsRemembered | Origin$ Exile | Destination$ Battlefield | FaceDown$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Submerge all creature cards in graveyards. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
+
+DeckHas:Ability$Graveyard

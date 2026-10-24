@@ -1,0 +1,10 @@
+Name:Puppet Token
+ManaCost:no cost
+Colors:black
+Types:Creature Puppet
+PT:1/1
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ At the beginning of your upkeep, you lose 1 life.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1
+
+Oracle:At the beginning of your upkeep, you lose 1 life.

@@ -1,0 +1,314 @@
+[metadata]
+Code=MSEM_GNJ
+Name=Goliaths of Nangjiao
+Date=2017-06-08
+Type=Custom
+Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
+
+[cards]
+1 R Achieve Greatness @Mario Wibisono
+2 U Aerial Adept @Hoang Lap
+3 U Battle Acumen @Stanton Feng
+4 R Call to Attention @War of Legends
+5 C Charmer of the Folded Fan @Jian Guo
+6 U The Charmer's Curse @shiny-shadows-Art (DA)
+7 U Chords of Order @Barbara C Rowe
+8 C Collared Kugsha @Ben Wootten
+9 R Cou Ling of Many Tails @Sangsoo Jeong
+10 U Crane Legionnaire @Dominic Barrios
+11 C Demystifying Tide @Anna B
+12 R Diao, Dragoon Captain @Donne Guerriere
+13 C Ethereal Guidance @WoW TCG
+14 U Fell the Beast @ElDangerrible (DA)
+15 C Folded Fan Recruit @Yang Fan
+16 C Fox of the Fallen Forest @Noxypia (DA)
+17 C Fox of the Orange Orchard @Sylar113 (DA)
+18 U Fox of the Sunset Legion @Safiru (DA)
+19 R Gao'Wu, Master Soothsayer @Wenjun Lin
+20 C Gaze of the Golden Fox @MariLucia (DA)
+21 R General of the Folded Fan @Three Kingdoms
+22 M Heping, Master Arbitrator @Berker Yuceer
+23 U Hostile Hermit @wlop (DA)
+24 U Join the Flock @Kana Kanade
+25 C Kicking Crane Technique @Daniel Eskridge
+26 R Kiri, Cloudwalker @NezuPanda
+27 M Lijing, the True Divinity @Murayama Ryota
+28 C Mastery of the Silken Strand @Phoenix Lu
+29 C Moonlight Stag @Lukas Linden
+30 C Mother of Cranes @Blizzard
+31 C Pious Flutist @Jandice Barov
+32 C Put to Rest @Anastasia Borzykh
+33 R Quell Mutiny @Dragon Eternity
+34 U Spear of the Folded Fan @Ignatius Tan
+35 C Student of the Crane @Lang Nhuoc Han
+36 U Surging Stream @sandara (DA)
+37 U Temperate Gazebo @Joey-B (DA)
+38 C Temple Cranes @Vincent I
+39 C Test the Winds @Sean Sevestre
+40 M Twin Lis of the Divine Realm @Guangjian Huang
+41 U Vanishing Memory @hiliuyun (DA)
+42 U Warchief of the Folded Fan @Rene Hoornweg
+43 C Warrior of the Folded Fan @Trung Le
+44 C Whitepeak Predator @Carol Cavalaris
+45 R Yujei, Crane Companion @hiliuyun (DA)
+46 U Albino Drake @Xiaodi Jin
+47 C Ancient Crab @Steve Prescott
+48 R Artful Coercion @Wei Guan
+49 U Barterer of Passage @Arvalis (DA)
+50 C Bathophobia @Elena Dudina
+51 C Beckon from the Depths @Sandara (DA)
+52 R Chian, Augury Adept @Alon Chou
+53 R Coax Under @Teddy Uchiha
+54 C Consult the Dewdrops @Yingxi Chu
+55 C Contort Reality @Co Trang
+56 U Deep in Thought @Maria Jose
+57 C Gliding Serpent @Kendree McLean
+58 M Ing'Wei of the Flood Realm @Lee Wi
+59 U Isle Conservator @Lee Wi
+60 C Keeper of Blue Incense @Markus Stadlober
+61 U Lost Among the Lilies @Jian Shu
+62 C Lumbering Stoneshell @yonaz (DA)
+63 C The Mad Sage's Scroll @ArtofTy (DA)
+64 C Magnificent Liturgy @Alex Lei Sheng
+65 U Master of Tranquility @rodg-art (DA)
+66 U Mother of Owls @SanguisGelidus (DA)
+67 R Mull Over @R.A. Salvatore
+68 C Negate @Alena Krasnova
+69 U Neutralize (MSEM) @Maeva Cortinovis
+70 U Nurturing Knowledge @Chen Wei
+71 U Obscure Apostle @Petr Donat
+72 R Oshin, Keeper of the Shoal @Jian-Hong Guo
+73 C Peddler of Commonwares @Shawli Chen
+74 R Pon, Twister of Forms @Anastasia Stolyarova
+75 M Shigurei, the Floodbringer @LozanoX (DA)
+76 C Shimmering Seadragon @Carolina Eade
+77 R Shojiro, the Wavewaker @timens (DA)
+78 C Shredskin Sky Horror @Mateusz Ozminski
+79 R Sun Yun, Master of Self @Timothy Kong
+80 U Twisted Mist @Kevin Kwong
+81 U Undead Archivist @Roman Tishenin
+82 C Unyielding Presence @LozanoX (DA)
+83 C Wander Ashore @WaterDragon5741 (DA)
+84 C Warrior's Meditation @Madmatik (DA)
+85 U Warrior's Perspective @Lasahido
+86 R Way of Kindred Mind @Lucas Torquato
+87 C Welkin Tern @Austin Hsu
+88 C Whitepeak Channeler @Lucia Aselecia
+89 U Yawning Crane @thefoxisblack (DA)
+90 R Admirer of the Lost @James Wolf
+91 C Allure of the Dark Grove @Rahmatozz (DA)
+92 C Apothecary's Remedy @Maciej Laszkiewicz
+93 R Bane of the Folded Fan @Kunyo Jo
+94 C Deranged Apothecary @Jesper Ejsing
+95 U Descend Into Insanity @Jennifer Sawicki
+96 C Diseased Prophet @John Wu
+97 U Disinter @Vebjorn Strommen
+98 C The Dragon's Madness @Kytru (DA)
+99 C Dragon's Twisted Shadow @Ruth Taylor
+100 U Emissary of the Wicked @Artofleoli
+101 U Engulfing Incubus @Anna Dittmann
+102 C Fetid Nibbler @TmoeGee (DA)
+103 U Fleshwrithe Ghoul @Alex Negrea
+104 C Forlorn Murklurker @Stungeon (DA)
+105 C Form of the Demon @John Kearney
+106 C Gilded Figurehead @Khim Nongladda
+107 R Kai'Jun, the Annihilator @Luffie (DA)
+108 R Kai'Long, Dark Immolator @Deryl Braun
+109 R Kugoja, Perished Conduit @Yuriy Chemezov
+110 M Lizhao, Lord of the Yaogu @Lee Wi
+111 U Nightcloak Ritualist @Robin Olausson
+112 U Pitiless Judgment @sakimichan (DA)
+113 C Preacher of the Yenzu @Mohamed Yamin
+114 U Rabid Rodent @Markus Neidel
+115 U Radiant Maleficence @Liz Sun
+116 C Ravaging Ghoul @Grzegorz Rutkowski
+117 C Read the Bones @Lars Grant-West
+118 C Resurrection Plea @Kim Bum
+119 R Rise from the Depths @Conor Burke
+120 R Rummage Through Remains @kanartist (DA)
+121 U Sanguine Oracle @Ruben Mocho
+122 U Scribal Puppeteer @Shyguyz
+123 R Seng, Fevered Fanatic @Tianhua Xu
+124 C Shadow Infestation @Vitaliy Smyk
+125 C Sightless Blight @Po Wen
+126 U Soulless Decree @Diablo II
+127 C Succumb @Applibot, Inc.
+128 C Tomb Scavenger @OrmIrian (DA)
+129 C Trophy Collector @Javier Arnaldo Santiago
+130 M Tzelin of the Demon Realm @RanyaBloom (DA)
+131 U Undead Banneret @Michal Kolakowski
+132 R Undeath Comes @Anthony Francisco
+133 U Wicked Rites @Tomb Raider
+134 U Anointed General @Derrick Song
+135 C Ash Breather @Brent Hollower
+136 C Battering Swine @Hamsterfly (DA)
+137 U Bone Pit Raptor @Chun Lo
+138 U Brazen Chimera @giovannag (DA)
+139 C Breath of Hao'Tai @T SWCK
+140 U Brothers in Arms @Feimof (DA)
+141 R Brutal Descent @bayardwu (DA)
+142 C Caress the Fleets @TRYLEA
+143 C Consuming Flame @Eric Baret
+144 R Crimson Hellmaw @Bogdan Marica
+145 R Desecrate Antiquities @Joshua Carlos
+146 U Dragon Grip @Artur Sadlos
+147 C Ferocity of Hao'Tai @Hinh Rong
+148 U Firebelly Toad @Llyncis (DA)
+149 C Flame Ascetic @Cynthia Sheppard
+150 C Four-Headed Shredder @elshazazm (DA)
+151 C Frilled Drakeling @Blue-Hearts (DA)
+152 M Hao'Tai, the Ancient One @Dongjun Lu
+153 R Hatsuo, Honored General @Phoenix Lu
+154 U Lavatongue Lizard @CosmicUnicorn (DA)
+155 U Lord's Call @Shogun 2: Total War
+156 U Manic Illusionist @Tim Lochner
+157 U Miasma Spewer @Joakim Hellstedt
+158 R Mieng, Who Dances With Dragons @Anne Stokes
+159 R Overzealous Tutor @Wayne Reynolds
+160 U Peakblazer Dragon @michaelhardcore13 (DA)
+161 R Recalibrate (MSEM) @Steve Argyle
+162 U Reverent Flame @Fantasy Flight Games
+163 C Roaring Dracowyrm @Alector Fencer
+164 U Shock Blast @Diablo III
+165 C Simian Stick Fighter @Legend of the Cryptids
+166 C Skeletal Shredwing @Catherine-OC (DA)
+167 C Slicing Legion @Lin Xin
+168 C Spitfire @GENZOMAN (DA)
+169 C Technique of Hao'Tai @Magno Matias
+170 R Tseng, Warden of the Peak @Alector Fencer
+171 U Unsettled Rivalry @Steve Goad
+172 C Volcanic Whelp @CLB-Raveneye (DA)
+173 C Wisdom of Hao'Tai @Randy Vargas
+174 R Wun Su, Guru of the Staff @Carlos Wang
+175 M Xiusheng of the Dragon Realm @ConceptArtHouse
+176 C Xiusheng's Teachings @Umit Yasar Kalkan
+177 C Young Dragonheart @Marc Simonetti
+178 C Ambush Viper @Alan Pollack
+179 U Blades of the Many @artistmef (DA)
+180 C Blooming Future @Chen Wei
+181 C Branch Prowler @Luke Phillips
+182 C Breath of Fresh Air @Art Jjung
+183 U Bringer of the Pack @na-v (DA)
+184 M Chiu of the Wild Realm @pegasusknight
+185 C Come Crashing Down @Raymond Swanland
+186 U Courageous Charge @Nicholas Jiang
+187 C Empowering Chant @XxHuntmanxX1000
+188 C Endangered Rhino @Davesrightmind (DA)
+189 U Entangled Roots @yonaz
+190 U Fallen Forest Wolf @blackmystica (DA)
+191 C For Glory @hiliuyun (DA)
+192 C Foraging Chipmunk @Rebecca Latham
+193 U Invoke the Wild @Alex Pardee
+194 R Jiayin, the Harmonious @Okha (DA)
+195 R Jindao, the Coiled Prophet @The-SixthLeafClover (DA)
+196 C Juvenile Boa @glazyrin (DA)
+197 U Kiss of the Dryad @CeruleanRaven (DA)
+198 R Kou, Primal Shepherd @Legend of the Cryptids
+199 U Leafmantle Dryad @Amy Leary
+200 R Loamwrecker @DSIllustration (DA)
+201 U Lurking Hippo @Michelle Caitens
+202 C Maiden of the Daffodils @Chen Wei
+203 C Meadow Macaque @Maryline Garbe
+204 U Midnight Predator @Alexandre Cabanel
+205 U Orchard Botanist @lorlandchain (DA)
+206 R Pecking Order @Sandara (DA)
+207 C Plodding Moose @JoachimB (DA)
+208 M Qiyan, Serpent of Seven Heads @God of War
+209 U Ruinous Glutton @W. Blake
+210 C Runewart Hog @ivelin (DA)
+211 C Ruthless Predator @Marru Ferreira
+212 R Savage Congregation @JasonTN (DA)
+213 C Silken Spinner @velinov (DA)
+214 R Sonwu, the Mighty @Timi Hankimaa
+215 C Spidery Grasp @James Ryman
+216 C Superiority Complex @runi154 (DA)
+217 U Unleash the Beasts @Thomas Gianni
+218 U Vigorous Stag @littlewing2 (DA)
+219 C Walk the Traveled Path @Chen Wei
+220 R Wild Germination @Sky93
+221 R Xiejuan, the Regal Beast @Jonathan Tonello
+222 U Guawu the Untamed @Xiao Bo Tong
+223 U An and En, Destined Souls @Lee Min Ho
+224 U Merciless Xun Huang @Jojo So
+225 M Infuse the Apparatus @James Ng
+226 M Kiora, Empress of the Flood @Aaron Lovett
+227 U Kai'Shi, Anguished One @Cloud Quinot
+228 M Tyrannic Judgment @Age of Empires III
+229 M Xiong Mao, Survivalist @Grosnez (DA)
+230 U Lei, Yak Herder @Beli Murah
+231 R Assassin's Shuriken @Sean O'Daniels
+232 C Brass Dragon @Iarlla O'Neill
+233 C Dancing Blades @Mario Wibisono
+234 C Draconic Bulwark @AnchoraGames (DA)
+235 R The First Idol @Applibot
+236 R Inspiring Effigy @Barbara Pozzi
+237 C Statuary Forge @Scribble Pad Studios
+238 C Vial of Dragonfire @Franz Vohwinkel
+239 C Abandoned Sanctuary @Lowo Ijo
+# 240-242 Removed
+243 R Inundated Sanctuary @artcobain (DA)
+# 244 Removed
+245 R Sacred Sanctuary @Vincent I
+246 R Savage Sanctuary @MIUI (DA)
+247 R Spire Sanctuary @jasonycc (DA)
+# 248 Removed
+249 R Wretched Sanctuary @artcobain (DA)
+250 L Plains @Kevin Briggs
+251 L Island @Fantasy Flight Games
+252 L Swamp @helthorne (DA)
+253 L Mountain @Greg Stanforth
+254 L Forest @Baltana (DA)
+255 U Zhehan, the Mediator @Xiao Bo Tong
+256 U Da'Lang, Forest Guardian @Anna Kowalczewska
+257 U Fei'Xing the Marvelous @Edvige Faini
+258 U Foolhardy Huo @Xiao Bo Tong
+259 U Pan, Honored Sergeant @Wenjun Lin
+
+[tokens]
+1 submerge_reminder
+2 w_1_1_bird_flying
+3 w_1_1_fox_spirit
+4 pacifism
+5 u_1_1_bird_flying_draw
+6 shredskin_sky_horror
+7 undead_archivist
+8 b_5_5_demon_flying
+9 diseased_prophet
+10 emissary_of_the_wicked
+11 fleshwrithe_ghoul
+12 kaijun_the_annihilator
+13 lizhao_lord_of_the_yaogu
+14 b_1_1_puppet_loselife
+15 b_1_1_rat
+16 ravaging_ghoul
+17 sightless_blight
+18 b_2_2_zombie
+19 b_x_x_zombie
+20 bone_pit_raptor
+21 crimson_hellmaw
+22 r_4_4_dragon_flying
+23 skeletal_shredwing
+24 g_0_1_plant
+25 shimaru_the_white_wolf
+26 g_1_1_snake
+27 g_2_2_wolf
+28 rw_1_1_warrior
+29 kaishi_anguished_one
+30 c_a_idol_sac
+31 wun_sus_staff
+
+
+[other]
+32 emblem_xiong_mao_survivalist
+33 emblem_kiora_empress_of_the_flood
+34 emblem_heping_master_arbitrator
+
+[CreatureTypes]
+Chipmunk:Chipmunks
+
+[ArtifactTypes]
+Idol:Idols
+
+[WalkerTypes]
+Heping
+Xiong Mao

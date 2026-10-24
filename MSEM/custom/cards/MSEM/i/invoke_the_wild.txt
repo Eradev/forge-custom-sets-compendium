@@ -1,0 +1,12 @@
+Name:Invoke the Wild
+ManaCost:3 G
+Types:Instant
+
+A:SP$ ChangeZone | Origin$ Hand | Destination$ Battlefield | ChangeType$ Creature.Green+cmcLE4 | ChangeNum$ 1 | Optional$ True | WithCountersType$ P1P1 | WithCountersAmount$ Y | SpellDescription$ You may put a green creature card with mana value 4 or less from your hand onto the battlefield. Ferocious — If you control a creature with power 4 or greater, that creature enters with two +1/+1 counters on it.
+SVar:X:Count$Valid Creature.YouCtrl+powerGE4
+SVar:Y:Count$Compare X GE1.2.0
+
+Oracle:You may put a green creature card with mana value 4 or less from your hand onto the battlefield.\nFerocious — If you control a creature with power 4 or greater, that creature enters with two +1/+1 counters on it.
+
+DeckHas:Ability$Counters
+DeckHints:Type$Creature

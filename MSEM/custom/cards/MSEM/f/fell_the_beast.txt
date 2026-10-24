@@ -1,0 +1,8 @@
+Name:Fell the Beast
+ManaCost:4 W
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Creature.powerGE4 | TgtPrompt$ Select target creature with power 4 or greater | SubAbility$ DBToken | SpellDescription$ Destroy target creature with power 4 or greater. Create two Idol tokens. (They're artifacts with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+SVar:DBToken:DB$ Token | TokenScript$ c_a_idol_sac | TokenAmount$ 2
+
+Oracle:Destroy target creature with power 4 or greater.\nCreate two Idol tokens. (They're artifacts with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")

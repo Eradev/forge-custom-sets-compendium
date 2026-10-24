@@ -1,0 +1,12 @@
+Name:Walk the Traveled Path
+ManaCost:1 G
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Library | ChangeType$ Land.Basic,Forest | ChangeTypeDesc$ basic land card or a Forest card | ChangeNum$ 1 | RememberChanged$ True | Reveal$ True | Shuffle$ False | SubAbility$ DBBranch | StackDescription$ SpellDescription | SpellDescription$ Search your library for a basic land card or a Forest card, reveal it, and put it into your hand, then shuffle. Ferocious — Put the revealed card onto the battlefield instead if you control a creature with power 4 or greater.
+SVar:DBBranch:DB$ Branch | BranchConditionSVar$ X | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBBattlefield | FalseSubAbility$ DBHand | SubAbility$ DBCleanup
+SVar:DBBattlefield:DB$ ChangeZone | Defined$ Remembered | Origin$ Library | Destination$ Battlefield | Shuffle$ True
+SVar:DBHand:DB$ ChangeZone | Defined$ Remembered | Origin$ Library | Destination$ Hand | Shuffle$ True
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Count$Valid Creature.YouCtrl+powerGE4
+
+Oracle:Search your library for a basic land card or a Forest card, reveal it, and put it into your hand, then shuffle.\nFerocious — Put the revealed card onto the battlefield instead if you control a creature with power 4 or greater.

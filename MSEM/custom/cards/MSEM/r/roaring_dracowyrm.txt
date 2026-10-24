@@ -1,0 +1,8 @@
+Name:Roaring Dracowyrm
+ManaCost:2 R
+Types:Creature Wurm
+PT:2/2
+
+A:AB$ Pump | Cost$ 1 R | Defined$ Self | NumAtt$ +2 | ActivationLimit$ 1 | SpellDescription$ This creature gets +2/+0 until end of turn. Activate only once each turn.
+
+Oracle:{1}{R}: This creature gets +2/+0 until end of turn. Activate only once each turn.

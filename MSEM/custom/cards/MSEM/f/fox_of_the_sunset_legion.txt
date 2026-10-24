@@ -1,0 +1,9 @@
+Name:Fox of the Sunset Legion
+ManaCost:2 W W
+Types:Creature Fox Spirit
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create two 1/1 white Fox Spirit creature tokens.
+SVar:TrigToken:DB$ Token | TokenAmount$ 2 | TokenScript$ w_1_1_fox_spirit
+
+Oracle:When this creature enters, create two 1/1 white Fox Spirit creature tokens.

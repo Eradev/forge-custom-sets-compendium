@@ -1,0 +1,10 @@
+Name:Juvenile Boa
+ManaCost:1 G
+Types:Creature Snake
+PT:2/2
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ 2 | IsPresent$ Creature.Legendary+YouCtrl | PresentCompare$ GE1 | Description$ This creature gets +2/+0 as long as you control a legendary creature.
+
+Oracle:This creature gets +2/+0 as long as you control a legendary creature.
+
+DeckHints:Type$Legendary & Type$Creature

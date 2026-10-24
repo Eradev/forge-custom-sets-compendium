@@ -1,0 +1,14 @@
+Name:Keeper of Blue Incense
+ManaCost:3 U U
+Types:Creature Human Wizard
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSubmerge | TriggerDescription$ When this creature enters, submerge target card from your graveyard. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
+
+SVar:TrigSubmerge:DB$ ChangeZone | ValidTgts$ Card.YouOwn | TgtZone$ Graveyard | TgtPrompt$ Select target card from your graveyard | Origin$ Graveyard | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | FaceDown$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+DeckHas:Ability$Graveyard
+
+Oracle:When this creature enters, submerge target card from your graveyard. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)

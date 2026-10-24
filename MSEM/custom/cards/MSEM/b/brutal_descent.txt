@@ -1,0 +1,11 @@
+Name:Brutal Descent
+ManaCost:1 R R
+Types:Sorcery
+
+A:SP$ Pump | ValidTgts$ Creature | TgtPrompt$ Choose target creature | RememberTargets$ True | SubAbility$ DBDamage | StackDescription$ SpellDescription | SpellDescription$ Choose target creature. CARDNAME deals 2 damage to each creature other than the chosen creature. Ferocious — If the chosen creature has power 4 or greater, CARDNAME deals 4 damage to each creature other than the chosen creature instead.
+SVar:DBDamage:DB$ DamageAll | ValidCards$ Creature.!IsRemembered | NumDmg$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Count$Compare Y GE4.4.2
+SVar:Y:Targeted$CardPower
+
+Oracle:Choose target creature. Brutal Descent deals 2 damage to each creature other than the chosen creature.\nFerocious — If the chosen creature has power 4 or greater, Brutal Descent deals 4 damage to each creature other than the chosen creature instead.

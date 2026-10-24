@@ -1,0 +1,10 @@
+Name:Achieve Greatness
+ManaCost:2 W
+Types:Sorcery
+
+A:SP$ ChooseCard | Choices$ Creature.leastPowerControlledByYou | Mandatory$ True | ChoiceTitle$ Choose a creature with the least power among creatures you control | SubAbility$ DBPutCounter | SpellDescription$ Invigorate 5. (Choose a creature with the least power among creatures you control and put five +1/+1 counters on it.)
+SVar:DBPutCounter:DB$ PutCounter | Defined$ ChosenCard | CounterType$ P1P1 | CounterNum$ 5
+
+Oracle:Invigorate 5. (Choose a creature with the least power among creatures you control and put five +1/+1 counters on it.)
+
+DeckHas:Ability$Counters

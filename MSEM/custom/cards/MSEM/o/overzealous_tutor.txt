@@ -1,0 +1,11 @@
+Name:Overzealous Tutor
+ManaCost:2 R R
+Types:Sorcery
+
+A:SP$ DigUntil | Valid$ Instant,Sorcery | ValidDescription$ instant or sorcery | FoundDestination$ Exile | RevealedDestination$ Exile | RememberFound$ True | SubAbility$ DBToHand | SpellDescription$ Exile cards from the top of your library until you exile an instant or sorcery card.
+SVar:DBToHand:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Hand | SubAbility$ DBDamage | StackDescription$ Put that card into your hand.
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature | NumDmg$ X | SubAbility$ DBCleanup | SpellDescription$ Then CARDNAME deals damage to up to one target creature equal to the number of cards you own in exile.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Count$ValidExile Card.YouOwn
+
+Oracle:Exile cards from the top of your library until you exile an instant or sorcery card. Put that card into your hand, then Overzealous Tutor deals damage to up to one target creature equal to the number of cards you own in exile.

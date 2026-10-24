@@ -1,0 +1,9 @@
+Name:Volcanic Whelp
+ManaCost:1 R
+Types:Creature Lizard
+PT:1/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | IsPresent$ Creature.YouCtrl+powerGE4 | PresentCompare$ GE1 | Execute$ TrigPump | TriggerDescription$ Ferocious — When this creature enters, if you control a creature with power 4 or greater, this creature gets +3/+0 and gains haste until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +3 | KW$ Haste
+
+Oracle:Ferocious — When this creature enters, if you control a creature with power 4 or greater, this creature gets +3/+0 and gains haste until end of turn.

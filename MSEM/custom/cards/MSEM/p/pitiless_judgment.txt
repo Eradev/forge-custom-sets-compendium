@@ -1,0 +1,11 @@
+Name:Pitiless Judgment
+ManaCost:B
+Types:Sorcery
+
+A:SP$ RevealHand | ValidTgts$ Opponent | SubAbility$ DBBranch | SpellDescription$ Target opponent reveals their hand. You choose a creature card from it and exile that card. Ferocious — If you control a creature with power 4 or greater, instead choose a nonland card from their hand and exile that card.
+SVar:DBBranch:DB$ Branch | BranchConditionSVar$ Ferocious | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBExileNonland | FalseSubAbility$ DBExileCreature
+SVar:DBExileCreature:DB$ ChangeZone | Origin$ Hand | Destination$ Exile | DefinedPlayer$ Targeted | Chooser$ You | ChangeType$ Creature
+SVar:DBExileNonland:DB$ ChangeZone | Origin$ Hand | Destination$ Exile | DefinedPlayer$ Targeted | Chooser$ You | ChangeType$ Card.nonLand
+SVar:Ferocious:Count$Valid Creature.YouCtrl+powerGE4
+
+Oracle:Target opponent reveals their hand. You choose a creature card from it and exile that card.\nFerocious — If you control a creature with power 4 or greater, instead choose a nonland card from their hand and exile that card.

@@ -1,0 +1,11 @@
+Name:Tyrannic Judgment
+ManaCost:3 W B
+Types:Sorcery
+
+A:SP$ ChooseCard | Defined$ Player | Choices$ Permanent | ChooseEach$ Artifact & Battle & Creature & Enchantment & Land & Planeswalker | ControlledByPlayer$ Chooser | Reveal$ True | SubAbility$ SacAllOthers | StackDescription$ SpellDescription | SpellDescription$ Each player chooses up to one permanent they control of each permanent type, then sacrifices the rest. (Artifact, battle, creature, enchantment, land, and planeswalker are permanent types.)
+SVar:SacAllOthers:DB$ SacrificeAll | ValidCards$ Permanent.nonChosenCard | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
+
+Oracle:Each player chooses up to one permanent they control of each permanent type, then sacrifices the rest. (Artifact, battle, creature, enchantment, land, and planeswalker are permanent types.)
+
+DeckHas:Ability$Sacrifice

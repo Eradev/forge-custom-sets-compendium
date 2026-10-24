@@ -80,6 +80,7 @@ Pyramids of Atuum (POA)               -  98% (126/128)
     * Sphinx of Riddles
 Imperial Legacies (IMP)               -  99% (141/142)
     * Bind in Jade
+Goliaths of Nangjiao (GNJ)            -  100% (254/254)
 Aftermath (AFM)                       -  90% (228/254)
   Missing cards:
     * Every card with Reprise, or referencing it.
@@ -100,6 +101,7 @@ From the Vault: Wayfarer's Shrine (SHRINE)
 Examples on how to implement custom keywords and mechanisms.
 
 * [Aetherize](#aetherize)
+* [Alpha] (#alpha)
 * [Ascend](#ascend)
 * [Art of War](#art-of-war)
 * [Bleed](#bleed)
@@ -114,14 +116,17 @@ Examples on how to implement custom keywords and mechanisms.
 * [Improve](#improve)
 * [Infiltrate](#infiltrate)
 * [Inscribe](#inscribe)
+* [Invigorate] (#invigorate)
 * [Kindle](#kindle)
 * [Menagerie](#menagerie)
 * [Mirage](#mirage)
 * [Motivate](#motivate)
 * [Paranoia](#paranoia)
 * [Rerun](#rerun)
+* [Revive] (#revive)
 * [Showcase](#showcase)
 * [Storied](#storied)
+* [Submerge] (#submerge)
 * [Torment](#torment)
 * [Vision](#vision)
 * [Wanderlust](#wanderlust)
@@ -140,6 +145,27 @@ Implementation:
 A:AB$ CopyPermanent | Cost$ 3 U Sac<1/CARDNAME/this creature> | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | RememberTokens$ True | SpellDescription$ Aetherize target creature you control. (To aetherize, create a token that's a copy of it, then exile that token.) | SubAbility$ DBExileToken
 SVar:DBExileToken:DB$ ChangeZone | Named$ Aetherize | Defined$ Remembered | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Alpha
+
+Alpha is defined as:
+
+```text
+You may have this permanent enter the battlefield with an additional +1/+1 counter on it. If you do, it becomes alpha and can only attack alone.
+```
+
+Implementation:
+
+```text
+K:ETBReplacement:Other:DBAlpha:Optional
+
+SVar:DBAlpha:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | ETB$ True | SubAbility$ DBBecomeAlpha | SpellDescription$ Alpha (You may have this creature enter with an additional +1/+1 counter on it. If you do, it becomes alpha and can only attack alone.)
+SVar:DBBecomeAlpha:DB$ Animate | Defined$ Self | ConditionDefined$ Self | ConditionPresent$ Card.Self+HasSVar Alpha | ConditionCompare$ EQ0 | HiddenKeywords$ CARDNAME can only attack alone. | sVars$ AlphaMarker | Duration$ Permanent
+
+SVar:AlphaMarker:SVar:Alpha:True
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
@@ -426,6 +452,23 @@ The effect ends if either the inscribed creature leaves the battlefield or the i
 
 [Jump to top](#keywords-and-mechanisms-implementation)
 
+### Invigorate
+
+Invigorate N is defined as:
+
+```text
+Choose a creature you control with the least power or tied for the least power among creatures you control. Put N +1/+1 counters on that creature.
+```
+
+Implementation:
+
+```text
+A:SP$ ChooseCard | Choices$ Creature.leastPowerControlledByYou | Mandatory$ True | ChoiceTitle$ Choose a creature with the least power among creatures you control | SubAbility$ DBPutCounter | SpellDescription$ Invigorate 2, then untap each creature you control with a +1/+1 counter on it. (Choose a creature with the least power among creatures you control and put two +1/+1 counters on it.)
+SVar:DBPutCounter:DB$ PutCounter | Defined$ ChosenCard | CounterType$ P1P1 | CounterNum$ 2
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
 ### Kindle
 
 Kindle is defined as:
@@ -531,6 +574,22 @@ SVar:CastRerun:DB$ Play | Defined$ Remembered | WithoutManaCost$ True
 
 [Jump to top](#keywords-and-mechanisms-implementation)
 
+### Revive
+
+Revive is defined as:
+
+```text
+(cost), Exile this card from your graveyard: Create a token that’s a copy of this card, except it has no mana cost. Activate this ability only any time you could cast a sorcery.
+```
+
+Implementation:
+
+```text
+A:AB$ CopyPermanent | Named$ Revive | Cost$ 5 R ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | SorcerySpeed$ True | Defined$ Self | RemoveCost$ True | PrecostDesc$ Revive — | SpellDescription$ Create a token that's a copy of this card except it has no mana cost. Revive only as a sorcery.
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
 ### Showcase
 
 Showcase is defined as:
@@ -570,6 +629,23 @@ Implementation:
 
 ```text
 SVar:Storied:Count$Valid Enchantment.YouCtrl,Permanent.Legendary+YouCtrl
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Submerge
+
+Submerge is defined as:
+
+```text
+To submerge a card, exile it face up, then put it onto the battlefield face down under its owner's control as a 2/2 face-down creature card with no text, no name, no subtypes, and no mana cost.
+```
+
+Implementaion:
+```text
+A:SP$ ChangeZone | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn | SpellDescription$ Submerge target artifact or enchantment. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | FaceDown$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)

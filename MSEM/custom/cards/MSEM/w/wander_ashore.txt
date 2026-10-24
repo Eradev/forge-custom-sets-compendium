@@ -1,0 +1,12 @@
+Name:Wander Ashore
+ManaCost:2 U
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Creature | TgtPrompt$ Select target creature | Origin$ Battlefield | Destination$ Hand | RememberLKI$ True | SubAbility$ DBNextTurn | SpellDescription$ Return target creature to its owner's hand. That player can't cast spells with the same name as that creature during their next turn.
+
+SVar:DBNextTurn:DB$ RepeatEach | RepeatPlayers$ TargetedOwner | NextTurnForEachPlayer$ True | RepeatSubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | EffectOwner$ Remembered | RememberObjects$ RememberedLKI | StaticAbilities$ CantCast | SubAbility$ DBCleanup
+SVar:CantCast:Mode$ CantBeCast | ValidCard$ Card.nonLand+sharesNameWith RememberedLKI | Caster$ You | Description$ You can't cast spells with the same name as that creature during your next turn.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Return target creature to its owner's hand. That player can't cast spells with the same name as that creature during their next turn.

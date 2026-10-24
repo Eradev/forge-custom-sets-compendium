@@ -1,0 +1,8 @@
+Name:Silken Spinner
+ManaCost:2 G G
+Types:Creature — Spider
+PT:3/4
+
+K:Reach
+
+Oracle:Reach

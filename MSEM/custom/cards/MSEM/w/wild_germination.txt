@@ -1,0 +1,7 @@
+Name:Wild Germination
+ManaCost:2 G G
+Types:Sorcery
+
+A:SP$ GainControl | ValidTgts$ Land | SpellDescription$ Gain control of target land. (This effect lasts indefinitely.)
+
+Oracle:Gain control of target land.

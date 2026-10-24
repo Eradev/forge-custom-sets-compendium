@@ -1,0 +1,10 @@
+Name:Shock Blast
+ManaCost:R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ X | SpellDescription$ CARDNAME deals X damage to target creature, where X is the number of instant and sorcery cards in your graveyard.
+SVar:X:Count$ValidGraveyard Instant.YouOwn,Sorcery.YouOwn
+
+DeckHints:Ability$Graveyard & Type$Instant|Sorcery
+
+Oracle:Shock Blast deals X damage to target creature, where X is the number of instant and sorcery cards in your graveyard.

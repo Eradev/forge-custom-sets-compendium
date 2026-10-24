@@ -1,0 +1,12 @@
+Name:Hatsuo, Honored General
+ManaCost:2 R R
+Types:Legendary Creature Human Warrior
+PT:3/2
+
+K:First Strike
+
+A:AB$ PumpAll | Cost$ 1 R | ValidCards$ Card.Self,Creature.Warrior+Other+YouCtrl | NumAtt$ +1 | SpellDescription$ NICKNAME and other Warrior creatures you control get +1/+0 until end of turn.
+
+Oracle:First strike\n{1}{R}: Hatsuo and other Warrior creatures you control get +1/+0 until end of turn.
+
+DeckHints:Type$Warrior

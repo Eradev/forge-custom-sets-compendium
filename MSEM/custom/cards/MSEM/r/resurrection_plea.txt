@@ -1,0 +1,10 @@
+Name:Resurrection Plea
+ManaCost:B
+Types:Instant
+
+A:SP$ ChooseCard | ValidTgts$ Opponent | ChoiceZone$ Graveyard | Choices$ Creature.YouOwn | Mandatory$ True | AILogic$ WorstCard | SubAbility$ DBReturn | SpellDescription$ Target opponent chooses a creature card in your graveyard. Return the chosen card from your graveyard to your hand.
+SVar:DBReturn:DB$ ChangeZone | Defined$ ChosenCard | Origin$ Graveyard | Destination$ Hand
+
+Oracle:Target opponent chooses a creature card in your graveyard. Return the chosen card from your graveyard to your hand.
+
+DeckHas:Ability$Graveyard

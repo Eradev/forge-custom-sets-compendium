@@ -1,0 +1,13 @@
+Name:Inundated Sanctuary
+ManaCost:no cost
+Types:Land Island
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ LandTapped | ReplacementResult$ Updated | Description$ This land enters tapped with two sanctum counters on it.
+SVar:LandTapped:DB$ Tap | Defined$ Self | ETB$ True | SubAbility$ DBAddCounter
+SVar:DBAddCounter:DB$ PutCounter | ETB$ True | Defined$ Self | CounterType$ SANCTUM | CounterNum$ 2
+
+A:AB$ Mana | Cost$ T SubCounter<1/SANCTUM> | Produced$ Combo W B | SpellDescription$ Add {W} or {B}.
+
+Oracle:({T}: Add {U}.)\nThis land enters tapped with two sanctum counters on it.\n{T}, Remove a sanctum counter from this land: Add {W} or {B}.
+
+DeckHas:Ability$Counters

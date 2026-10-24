@@ -1,0 +1,11 @@
+Name:Courageous Charge
+ManaCost:1 G
+Types:Sorcery
+
+A:SP$ MoveCounter | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | ValidSource$ Creature.YouCtrl | CounterType$ P1P1 | CounterNum$ Any | SubAbility$ DBDamage | StackDescription$ SpellDescription | SpellDescription$ Move any number of +1/+1 counters from creatures you control onto target creature you control, then that creature deals damage equal to its power to target creature you don't control.
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you don't control | NumDmg$ X | DamageSource$ ParentTarget
+SVar:X:ParentTargeted$CardPower
+
+Oracle:Move any number of +1/+1 counters from creatures you control onto target creature you control, then that creature deals damage equal to its power to target creature you don't control.
+
+DeckHas:Ability$Counters

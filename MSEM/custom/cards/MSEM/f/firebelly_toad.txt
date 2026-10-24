@@ -1,0 +1,10 @@
+Name:Firebelly Toad
+ManaCost:R
+Types:Creature Frog
+PT:1/2
+
+A:AB$ DealDamage | Cost$ R Sac<1/CARDNAME/this creature> | ValidTgts$ Player,Planeswalker | TgtPrompt$ Select target player or planeswalker | NumDmg$ 3 | SpellDescription$ This creature deals 3 damage to target player or planeswalker.
+
+DeckHas:Ability$Sacrifice
+
+Oracle:{R}, Sacrifice this creature: It deals 3 damage to target player or planeswalker.

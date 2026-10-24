@@ -1,0 +1,15 @@
+Name:Emissary of the Wicked
+ManaCost:3 B B
+Types:Creature Demon
+PT:4/4
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigLoseLife | TriggerDescription$ When this creature enters, you lose 4 life.
+SVar:TrigLoseLife:DB$ LoseLife | LifeAmount$ 4
+
+A:AB$ CopyPermanent | Named$ Revive | Cost$ 2 B B ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | SorcerySpeed$ True | Defined$ Self | RemoveCost$ True | PrecostDesc$ Revive — | SpellDescription$ Create a token that's a copy of this card except it has no mana cost. Revive only as a sorcery.
+
+Oracle:Flying\nWhen this creature enters, you lose 4 life.\nRevive {2}{B}{B} ({2}{B}{B}, Exile this card from your graveyard: Create a token that's a copy of it except it has no mana cost. Revive only as a sorcery.)
+
+DeckHas:Ability$Graveyard|Token

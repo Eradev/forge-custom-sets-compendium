@@ -1,0 +1,17 @@
+Name:Kiss of the Dryad
+ManaCost:1 G
+Types:Enchantment Aura
+
+K:Enchant:Forest
+SVar:AttachAILogic:Pump
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainLife | TriggerDescription$ When this Aura enters, you gain 3 life and draw a card.
+SVar:TrigGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 3 | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | AddAbility$ AnyMana | Description$ Enchanted land has "{T}: Add one mana of any color."
+SVar:AnyMana:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+Oracle:Enchant Forest\nWhen this Aura enters, you gain 3 life and draw a card.\nEnchanted land has "{T}: Add one mana of any color."
+
+DeckHas:Ability$LifeGain

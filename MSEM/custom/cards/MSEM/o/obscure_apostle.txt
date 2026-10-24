@@ -1,0 +1,15 @@
+Name:Obscure Apostle
+ManaCost:2 U
+Types:Creature Human Wizard
+PT:3/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+SVar:TrigToken:DB$ Token | TokenScript$ c_a_idol_sac
+
+T:Mode$ Sacrificed | ValidPlayer$ You | ValidCard$ Idol.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigUnblockable | TriggerDescription$ Whenever you sacrifice an Idol, this creature can't be blocked this turn.
+SVar:TrigUnblockable:DB$ Effect | RememberObjects$ Self | ExileOnMoved$ Battlefield | StaticAbilities$ Unblockable
+SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ EFFECTSOURCE can't be blocked this turn.
+
+Oracle:When this creature enters, create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")\nWhenever you sacrifice an Idol, this creature can't be blocked this turn.
+
+DeckHas:Ability$Token|Sacrifice

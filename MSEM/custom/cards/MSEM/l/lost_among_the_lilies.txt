@@ -1,0 +1,10 @@
+Name:Lost Among the Lilies
+ManaCost:1 U
+Types:Instant
+
+A:SP$ ChangeZone | TargetType$ Spell | ValidTgts$ Card | TgtZone$ Stack | TgtPrompt$ Select target spell | Origin$ Stack | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn | SpellDescription$ Submerge target spell. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
+
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | FaceDown$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Submerge target spell. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)

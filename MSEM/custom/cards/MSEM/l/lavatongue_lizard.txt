@@ -1,0 +1,11 @@
+Name:Lavatongue Lizard
+ManaCost:1 R
+Types:Creature Lizard
+PT:2/1
+
+A:AB$ Pump | Cost$ 1 R | Defined$ Self | NumAtt$ +1 | SpellDescription$ This creature gets +1/+0 until end of turn.
+
+T:Mode$ Attacks | ValidCard$ Card.Self | IsPresent$ Creature.YouCtrl+powerGE4 | Execute$ TrigFirstStrike | TriggerDescription$ Ferocious — Whenever this creature attacks, if you control a creature with power 4 or greater, this creature gains first strike until end of turn.
+SVar:TrigFirstStrike:DB$ Pump | Defined$ Self | KW$ First Strike
+
+Oracle:{1}{R}: This creature gets +1/+0 until end of turn.\nFerocious — Whenever this creature attacks, if you control a creature with power 4 or greater, this creature gains first strike until end of turn.

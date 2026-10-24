@@ -1,0 +1,11 @@
+Name:Mieng, Who Dances With Dragons
+ManaCost:R
+Types:Legendary Creature Human
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl+powerGE4 | TriggerZones$ Battlefield | Execute$ TrigAnimate | TriggerDescription$ Ferocious — Whenever a creature with power 4 or greater you control enters, CARDNAME becomes a 4/4 Dragon creature with flying until end of turn.
+SVar:TrigAnimate:DB$ Animate | Defined$ Self | Power$ 4 | Toughness$ 4 | Types$ Dragon | RemoveCreatureTypes$ True | Keywords$ Flying
+
+Oracle:Ferocious — Whenever a creature with power 4 or greater you control enters, Mieng, Who Dances With Dragons becomes a 4/4 Dragon creature with flying until end of turn.
+
+DeckHints:Type$Creature

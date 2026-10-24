@@ -1,0 +1,14 @@
+Name:Assassin's Shuriken
+ManaCost:1
+Types:Artifact Equipment
+
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddPower$ 1 | AddKeyword$ Deathtouch | AddAbility$ ShurikenDamage | Description$ Equipped creature gets +1/+0 and has deathtouch and "{T}: This creature deals 1 damage to target creature you don't control. Sacrifice CARDNAME."
+SVar:ShurikenDamage:AB$ DealDamage | Cost$ T | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you don't control | NumDmg$ 1 | SubAbility$ DBSacrifice | SpellDescription$ This creature deals 1 damage to target creature you don't control. Sacrifice ORIGINALHOST.
+SVar:DBSacrifice:DB$ SacrificeAll | Defined$ OriginalHost
+
+K:Equip:2
+
+Oracle:Equipped creature gets +1/+0 and has deathtouch and "{T}: This creature deals 1 damage to target creature you don't control. Sacrifice Assassin's Shuriken."\nEquip {2}
+
+SVar:NonStackingAttachEffect:True
+DeckHas:Ability$Sacrifice

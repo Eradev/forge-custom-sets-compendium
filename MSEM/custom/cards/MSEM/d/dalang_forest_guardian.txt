@@ -1,0 +1,11 @@
+Name:Da'Lang, Forest Guardian
+ManaCost:2 B G
+Types:Legendary Creature Wolf
+PT:4/3
+
+A:AB$ Pump | Cost$ 1 B | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | KW$ HIDDEN CARDNAME must be blocked if able. | SpellDescription$ Target creature you control must be blocked this turn if able.
+
+A:AB$ Effect | Cost$ 1 G | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | RememberObjects$ Targeted | ExileOnMoved$ Battlefield | StaticAbilities$ MaxOneBlocker | SpellDescription$ Target creature you control can't be blocked by more than one creature this turn.
+SVar:MaxOneBlocker:Mode$ MinMaxBlocker | ValidCard$ Card.IsRemembered | Max$ 1 | Description$ This creature can't be blocked by more than one creature this turn.
+
+Oracle:{1}{B}: Target creature you control must be blocked this turn if able.\n{1}{G}: Target creature you control can't be blocked by more than one creature this turn.

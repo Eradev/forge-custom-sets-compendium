@@ -1,0 +1,15 @@
+Name:Contort Reality
+ManaCost:4 U
+Types:Sorcery
+
+A:SP$ Pump | ValidTgts$ Permanent.nonLand | TgtPrompt$ Select target nonland permanent | SubAbility$ DBDefaultAction | StackDescription$ SpellDescription | SpellDescription$ Put target nonland permanent on top of its owner's library. If you control a Wizard, you may put that permanent on the bottom of its owner's library instead.
+
+SVar:DBDefaultAction:DB$ ChangeZone | Defined$ Targeted | Origin$ Battlefield | Destination$ Library | LibraryPosition$ 0 | ConditionCheckSVar$ X | ConditionSVarCompare$ EQ0 | SubAbility$ DBChoose
+SVar:DBChoose:DB$ GenericChoice | Choices$ DBBottomLibChoice,DBTopLibChoice | Defined$ You | ConditionCheckSVar$ X | ConditionSVarCompare$ GE1
+SVar:DBTopLibChoice:DB$ ChangeZone | Defined$ Targeted | Origin$ Battlefield | Destination$ Library | LibraryPosition$ 0 | SpellDescription$ Put target nonland permanent on top of its owner's library.
+SVar:DBBottomLibChoice:DB$ ChangeZone | Defined$ Targeted | Origin$ Battlefield | Destination$ Library | LibraryPosition$ -1 | SpellDescription$ Put target nonland permanent on the bottom of its owner's library instead.
+SVar:X:Count$Valid Wizard.YouCtrl
+
+DeckHints:Type$Wizard
+
+Oracle:Put target nonland permanent on top of its owner's library. If you control a Wizard, you may put that permanent on the bottom of its owner's library instead.

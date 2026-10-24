@@ -1,0 +1,7 @@
+Name:Blooming Future
+ManaCost:1 G
+Types:Sorcery
+
+A:SP$ Dig | DigNum$ 4 | ChangeNum$ 1 | Optional$ True | ChangeValid$ Permanent | SpellDescription$ Look at the top four cards of your library. You may reveal a permanent card from among them and put it into your hand. Put the rest on the bottom of your library in any order.
+
+Oracle:Look at the top four cards of your library. You may reveal a permanent card from among them and put it into your hand. Put the rest on the bottom of your library in any order.

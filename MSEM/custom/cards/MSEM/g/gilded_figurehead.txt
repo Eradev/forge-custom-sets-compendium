@@ -1,0 +1,8 @@
+Name:Gilded Figurehead
+ManaCost:1 B
+Types:Creature Human Wizard
+PT:2/1
+
+K:Lifelink
+
+Oracle:Lifelink
