@@ -3,14 +3,14 @@ ManaCost:2 R
 Types:Creature Human Wizard
 PT:1/2
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When CARDNAME enters, you may exile up to one instant card and up to one sorcery card from your graveyard. Put a +1/+1 counter on CARDNAME for each card exiled this way.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this creature enters, you may exile up to one instant card and up to one sorcery card from your graveyard. Put a +1/+1 counter on this creature for each card exiled this way.
 SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ChangeType$ Instant.YouOwn | ChangeTypeDesc$ instant card | ChangeNum$ 1 | Hidden$ True | RememberChanged$ True | SubAbility$ DBExileSorcery
 SVar:DBExileSorcery:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ChangeType$ Sorcery.YouOwn | ChangeTypeDesc$ sorcery card | ChangeNum$ 1 | Hidden$ True | RememberChanged$ True | SubAbility$ DBPutCounter
 SVar:DBPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ X | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:X:Remembered$Amount
 
-Oracle:When Flame Ascetic enters, you may exile up to one instant card and up to one sorcery card from your graveyard. Put a +1/+1 counter on Flame Ascetic for each card exiled this way.
+Oracle:When this creature enters, you may exile up to one instant card and up to one sorcery card from your graveyard. Put a +1/+1 counter on this creature for each card exiled this way.
 
 DeckHas:Ability$Counters
 DeckHints:Type$Instant|Sorcery & Ability$Graveyard
