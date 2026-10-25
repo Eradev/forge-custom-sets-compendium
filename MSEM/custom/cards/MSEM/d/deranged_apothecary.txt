@@ -3,6 +3,6 @@ ManaCost:2 B
 Types:Creature Zombie Wizard
 PT:3/2
 
-A:AB$ Pump | Cost$ B Sac<1/Creature> | KW$ Indestructible | Defined$ Self | SpellDescription$ This creature gains indestructible until end of turn. (Damage and effects that say "destroy" don't destroy it.)
+A:AB$ Pump | Cost$ B Sac<1/Creature.Other/another creature> | KW$ Indestructible | Defined$ Self | SpellDescription$ This creature gains indestructible until end of turn. (Damage and effects that say "destroy" don't destroy it.)
 
 Oracle:{B}, Sacrifice another creature: This creature gains indestructible until end of turn.
