@@ -13,4 +13,4 @@ T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.S
 SVar:TrigTurnFaceUp:DB$ SetState | Defined$ Remembered | Mode$ TurnFaceUp | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
-Oracle:First strike\nWhen Engulfing Incubus enters, you may submerge target nontoken creature an opponent controls. When Engulfing Incubus is no longer on the battlefield, turn that card face up. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
+Oracle:First strike\nWhen this creature enters, you may submerge target nontoken creature an opponent controls. When this creature is no longer on the battlefield, turn that card face up. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
