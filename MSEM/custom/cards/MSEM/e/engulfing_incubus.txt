@@ -7,10 +7,11 @@ K:First Strike
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigSubmerge | TriggerDescription$ When this creature enters, you may submerge target nontoken creature an opponent controls. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
 SVar:TrigSubmerge:DB$ ChangeZone | ValidTgts$ Creature.OppCtrl+!token | TgtPrompt$ Select target nontoken creature an opponent controls | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn
-SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | FaceDown$ True | ForgetOtherRemembered$ True | RememberChanged$ True
-
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigTurnFaceUp | Secondary$ True | TriggerDescription$ When this creature is no longer on the battlefield, turn that card face up.
-SVar:TrigTurnFaceUp:DB$ SetState | Defined$ Remembered | Mode$ TurnFaceUp | SubAbility$ DBCleanup
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | FaceDown$ True | ForgetOtherRemembered$ True | RememberChanged$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ Remembered | ImprintCards$ Self | ForgetOnMoved$ Battlefield | Triggers$ TrigLeaves | Duration$ Permanent | SubAbility$ DBCleanup
+SVar:TrigLeaves:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.IsImprinted | TriggerZones$ Command | TriggerController$ TriggeredCardController | Execute$ DBTurnFaceUp | TriggerDescription$ When EFFECTSOURCE leaves the battlefield, turn that creature face up.
+SVar:DBTurnFaceUp:DB$ SetState | Defined$ Remembered | Mode$ TurnFaceUp | SubAbility$ DBExileEffect
+SVar:DBExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
 Oracle:First strike\nWhen this creature enters, you may submerge target nontoken creature an opponent controls. When this creature is no longer on the battlefield, turn that card face up. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
