@@ -2,9 +2,9 @@ Name:Mull Over
 ManaCost:1 U U
 Types:Sorcery
 
-A:SP$ Surveil | Amount$ 3 | SubAbility$ DBDraw | SpellDescription$ Surveil 3, then draw two cards. (To surveil 3, look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)
+A:SP$ Surveil | Amount$ 3 | SubAbility$ DBDraw | SpellDescription$ Surveil 3, then draw two cards. (To surveil 3, look at the top three cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)
 SVar:DBDraw:DB$ Draw | NumCards$ 2 | SpellDescription$ Draw two cards.
 
 DeckHas:Ability$Surveil|Graveyard
 
-Oracle:Surveil 3, then draw two cards. (To surveil 3, look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)
+Oracle:Surveil 3, then draw two cards. (To surveil 3, look at the top three cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)
