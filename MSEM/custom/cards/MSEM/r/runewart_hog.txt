@@ -3,8 +3,8 @@ ManaCost:4 G
 Types:Creature Boar
 PT:4/4
 
-S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.counters_GE1_P1P1 | AddKeyword$ Hexproof | Description$ CARDNAME has hexproof as long as it has a +1/+1 counter on it.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.counters_GE1_P1P1 | AddKeyword$ Hexproof | Description$ This creature has hexproof as long as it has a +1/+1 counter on it.
 
-Oracle:Runewart Hog has hexproof as long as it has a +1/+1 counter on it.
+Oracle:This creature has hexproof as long as it has a +1/+1 counter on it.
 
 DeckNeeds:Ability$Counters
