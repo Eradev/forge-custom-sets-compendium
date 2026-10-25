@@ -5,13 +5,13 @@ Types:Enchantment Aura
 K:Enchant:Creature
 SVar:AttachAILogic:Pump
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPutCounter | TriggerDescription$ When CARDNAME enters, put a +1/+1 counter on enchanted creature.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPutCounter | TriggerDescription$ When this Aura enters, put a +1/+1 counter on enchanted creature.
 SVar:TrigPutCounter:DB$ PutCounter | Defined$ Enchanted | CounterType$ P1P1 | CounterNum$ 1
 
 T:Mode$ Attacks | ValidCard$ Creature.EnchantedBy | TriggerZones$ Battlefield | Execute$ TrigTap | TriggerDescription$ Whenever enchanted creature attacks, tap up to one target creature without a +1/+1 counter on it, then untap up to one target creature with a +1/+1 counter on it.
 SVar:TrigTap:DB$ Tap | ValidTgts$ Creature.counters_EQ0_P1P1 | TgtPrompt$ Select up to one target creature without a +1/+1 counter on it | TargetMin$ 0 | TargetMax$ 1 | SubAbility$ DBUntap
 SVar:DBUntap:DB$ Untap | ValidTgts$ Creature.counters_GE1_P1P1 | TgtPrompt$ Select up to one target creature with a +1/+1 counter on it | TargetMin$ 0 | TargetMax$ 1
 
-Oracle:Enchant creature\nWhen Chords of Order enters, put a +1/+1 counter on enchanted creature.\nWhenever enchanted creature attacks, tap up to one target creature without a +1/+1 counter on it, then untap up to one target creature with a +1/+1 counter on it.
+Oracle:Enchant creature\nWhen this Aura enters, put a +1/+1 counter on enchanted creature.\nWhenever enchanted creature attacks, tap up to one target creature without a +1/+1 counter on it, then untap up to one target creature with a +1/+1 counter on it.
 
 DeckHas:Ability$Counters
