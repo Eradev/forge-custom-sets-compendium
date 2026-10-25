@@ -8,7 +8,7 @@ SVar:RPreventDamage:Event$ DamageDone | ValidTarget$ Card.IsRemembered | Replace
 SVar:PreventDmg:DB$ ReplaceDamage | Amount$ ShieldAmount
 SVar:ShieldAmount:ReplaceCount$DamageAmount/Minus.1
 
-A:AB$ Token | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | TokenScript$ pacifism | TokenOwner$ You | LockTokenScript$ True | AttachedTo$ Targeted | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | SpellDescription$ Create a white Aura enchantment token named Pacifism attached to target creature an opponent controls. It has enchant creature and "Enchanted creature can't attack or block."
+A:AB$ CopyPermanent | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | DefinedName$ Pacifism | AttachedTo$ Targeted | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | SpellDescription$ Create a token that's a copy of a card named Pacifism attached to target creature an opponent controls.
 
 A:AB$ Effect | Cost$ SubCounter<8/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Heping, Master Arbitrator | Image$ emblem_heping_master_arbitrator | Triggers$ EffPhase | Duration$ Permanent | SpellDescription$ You get an emblem with "At the beginning of your end step, your life total becomes 20."
 SVar:EffPhase:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | Execute$ EmblemSetLife | TriggerDescription$ At the beginning of your end step, your life total becomes 20.
