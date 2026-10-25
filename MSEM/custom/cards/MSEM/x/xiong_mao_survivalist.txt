@@ -12,11 +12,12 @@ SVar:X:TriggerRemembered$CardPower
 SVar:Y:TriggerRemembered$CardToughness
 
 A:AB$ ChangeZone | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Creature.YouOwn | TargetMin$ 0 | TargetMax$ 2 | TgtPrompt$ Select up to two target creature cards in your graveyard | SpellDescription$ Return up to two target creature cards from your graveyard to your hand.
+
 A:AB$ Effect | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Xiong Mao, Survivalist | Triggers$ TrigDies | Duration$ Permanent | AILogic$ Always | SpellDescription$ You get an emblem with "Whenever a creature you control dies, you may draw cards equal to its power, then you may gain life equal to its toughness."
 SVar:TrigDies:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Command | Execute$ TrigDraw | TriggerDescription$ Whenever a creature you control dies, you may draw cards equal to its power, then you may gain life equal to its toughness.
-SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ X | OptionalDecider$ You | SubAbility$ DBChooseLife
+SVar:TrigDraw:DB$ Draw | NumCards$ Z | OptionalDecider$ You | SubAbility$ DBChooseLife
 SVar:DBChooseLife:DB$ GenericChoice | Defined$ You | Choices$ DBGainLife,DBNoLife
-SVar:DBGainLife:DB$ GainLife | LifeAmount$ Y | OptionalDecider$ You | SpellDescription$ Gain life equal to that creature's toughness.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ T | OptionalDecider$ You | SpellDescription$ Gain life equal to that creature's toughness.
 SVar:DBNoLife:DB$ Cleanup | SpellDescription$ Don't gain life.
 SVar:Z:TriggeredCard$CardPower
 SVar:T:TriggeredCard$CardToughness
