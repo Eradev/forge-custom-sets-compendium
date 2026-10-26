@@ -1,0 +1,13 @@
+Name:Folded Fan Recruit
+ManaCost:1 W
+Types:Creature Human Warrior
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigInvigorate | TriggerDescription$ When this creature enters, invigorate 1. (Choose a creature with the least power among creatures you control and put a +1/+1 counter on it.)
+SVar:TrigInvigorate:DB$ ChooseCard | Choices$ Creature.leastPowerControlledByYou | Mandatory$ True | ChoiceTitle$ Choose a creature with the least power among creatures you control | SubAbility$ DBPutCounter
+SVar:DBPutCounter:DB$ PutCounter | Defined$ ChosenCard | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
+
+Oracle:When this creature enters, invigorate 1. (Choose a creature with the least power among creatures you control and put a +1/+1 counter on it.)
+
+DeckHas:Ability$Counters

@@ -1,0 +1,12 @@
+Name:Rummage Through Remains
+ManaCost:2 B
+Types:Sorcery
+
+A:SP$ Sacrifice | ValidTgts$ Opponent | SacValid$ Creature | Amount$ 1 | RememberSacrificed$ True | SubAbility$ DBToken | SpellDescription$ Target opponent sacrifices a creature. Create an X/X black Zombie creature token, where X is the sacrificed creature's power.
+SVar:DBToken:DB$ Token | TokenScript$ b_x_x_zombie | TokenPower$ X | TokenToughness$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:RememberedLKI$CardPower
+
+DeckHas:Ability$Sacrifice|Token
+
+Oracle:Target opponent sacrifices a creature. Create an X/X black Zombie creature token, where X is the sacrificed creature's power.

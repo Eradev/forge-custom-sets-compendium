@@ -1,0 +1,23 @@
+Name:Qiyan, Serpent of Seven Heads
+ManaCost:4 G G
+Types:Legendary Creature Hydra
+PT:7/7
+
+K:Vigilance
+
+K:Reach
+
+K:Trample
+
+K:ETBReplacement:Other:DBAlpha:Optional
+
+SVar:DBAlpha:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | ETB$ True | SubAbility$ DBBecomeAlpha | SpellDescription$ Alpha (You may have this creature enter with an additional +1/+1 counter on it. If you do, it becomes alpha and can only attack alone.)
+SVar:DBBecomeAlpha:DB$ Animate | Defined$ Self | ConditionDefined$ Self | ConditionPresent$ Card.Self+HasSVar Alpha | ConditionCompare$ EQ0 | HiddenKeywords$ CARDNAME can only attack alone. | sVars$ AlphaMarker | Duration$ Permanent
+
+SVar:AlphaMarker:SVar:Alpha:True
+
+A:AB$ Token | Cost$ 4 G G ExileFromGrave<1/CARDNAME> | ActivationZone$ Graveyard | TokenAmount$ 7 | TokenScript$ g_1_1_snake | SorcerySpeed$ True | SpellDescription$ Create seven 1/1 green Snake creature tokens. Activate only as a sorcery.
+
+Oracle:Alpha (You may have this creature enter with a +1/+1 counter on it. If you do, it becomes alpha and can only attack alone.)\nVigilance, reach, trample\n{4}{G}{G}, Exile this card from your graveyard: Create seven 1/1 green Snake creature tokens. Activate only as a sorcery.
+
+DeckHas:Ability$Counters|Token|Graveyard & Type$Snake

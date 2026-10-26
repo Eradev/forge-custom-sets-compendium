@@ -1,0 +1,11 @@
+Name:Undeath Comes
+ManaCost:2 B B
+Types:Enchantment
+
+S:Mode$ Continuous | EffectZone$ Battlefield | AffectedZone$ Graveyard | Affected$ Creature.YouOwn | AddAbility$ ABRevive | Description$ Creature cards in your graveyard have revive {2}{B}{B}. ({2}{B}{B}, Exile this card from your graveyard: Create a token that's a copy of it except it has no mana cost. Revive only as a sorcery.)
+
+SVar:ABRevive:AB$ CopyPermanent | Named$ Revive | Cost$ 2 B B ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | SorcerySpeed$ True | Defined$ Self | RemoveCost$ True | PrecostDesc$ Revive — | SpellDescription$ Create a token that's a copy of this card except it has no mana cost. Revive only as a sorcery.
+
+DeckHas:Ability$Graveyard|Token
+
+Oracle:Creature cards in your graveyard have revive {2}{B}{B}. ({2}{B}{B}, Exile this card from your graveyard: Create a token that's a copy of it except it has no mana cost. Revive only as a sorcery.)

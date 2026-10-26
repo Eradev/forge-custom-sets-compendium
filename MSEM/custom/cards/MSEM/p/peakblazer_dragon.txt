@@ -1,0 +1,8 @@
+Name:Peakblazer Dragon
+ManaCost:3 R R
+Types:Creature Dragon
+PT:4/3
+
+K:Flying
+
+Oracle:Flying

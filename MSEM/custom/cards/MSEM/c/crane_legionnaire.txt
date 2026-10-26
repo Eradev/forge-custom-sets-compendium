@@ -1,0 +1,13 @@
+Name:Crane Legionnaire
+ManaCost:3 W
+Types:Creature Bird
+PT:2/3
+
+K:Flying
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigTap | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature attacks, tap target creature defending player controls.
+SVar:TrigTap:DB$ Tap | ValidTgts$ Creature.ControlledBy TriggeredDefendingPlayer | TgtPrompt$ Select target creature defending player controls
+
+Oracle:Flying\nWhenever this creature attacks, tap target creature defending player controls.
+
+SVar:HasAttackEffect:TRUE

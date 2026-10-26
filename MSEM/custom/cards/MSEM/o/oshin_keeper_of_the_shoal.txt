@@ -1,0 +1,11 @@
+Name:Oshin, Keeper of the Shoal
+ManaCost:2 U
+Types:Legendary Creature Drake
+PT:3/1
+K:Flying
+
+T:Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ Whenever an opponent casts a spell, counter it unless that player pays {1} for each spell cast before it this turn.
+SVar:TrigCounter:DB$ Counter | Defined$ TriggeredSpellAbility | UnlessCost$ X | UnlessPayer$ TriggeredActivator
+SVar:X:Count$ThisTurnCast_Card/Minus.1
+
+Oracle:Flying\nWhenever an opponent casts a spell, counter it unless that player pays {1} for each spell cast before it this turn.

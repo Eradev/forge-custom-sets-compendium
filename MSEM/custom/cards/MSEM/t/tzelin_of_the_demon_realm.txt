@@ -1,0 +1,14 @@
+Name:Tzelin of the Demon Realm
+ManaCost:B
+Types:Legendary Creature Human Wizard
+PT:2/1
+
+S:Mode$ CantBlock | ValidCard$ Card.Self | Description$ NICKNAME can't block.
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Demon.YouCtrl | TriggerZones$ Graveyard | OptionalDecider$ You | Execute$ TrigReturn | TriggerDescription$ Whenever a Demon you control enters, you may pay {B}. If you do, return NICKNAME from your graveyard to the battlefield with a +1/+1 counter on it.
+SVar:TrigReturn:AB$ ChangeZone | Cost$ B | Defined$ Self | Origin$ Graveyard | Destination$ Battlefield | WithCountersType$ P1P1 | WithCountersAmount$ 1
+
+Oracle:Tzelin can't block.\nWhenever a Demon you control enters, you may pay {B}. If you do, return Tzelin from your graveyard to the battlefield with a +1/+1 counter on it.
+
+DeckHas:Ability$Graveyard|Counters
+DeckHints:Type$Demon

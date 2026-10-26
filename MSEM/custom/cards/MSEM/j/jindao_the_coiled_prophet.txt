@@ -1,0 +1,15 @@
+Name:Jindao, the Coiled Prophet
+ManaCost:2 G G
+Types:Legendary Creature Snake
+PT:2/3
+
+S:Mode$ Continuous | Affected$ Card.TopLibrary | AffectedZone$ Library | MayLookAt$ Player | Description$ Players play with the top card of their libraries revealed.
+
+T:Mode$ Phase | Phase$ Main1 | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigMana | TriggerDescription$ At the beginning of your first main phase, add {G}{G} for each land card among cards on top of libraries.
+SVar:TrigMana:DB$ Mana | Produced$ G | Amount$ X
+SVar:X:Count$ValidLibrary Land.TopLibrary/Times.2
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ Y | AddToughness$ Y | Description$ NICKNAME gets +2/+2 for each creature card among cards on top of libraries.
+SVar:Y:Count$ValidLibrary Creature.TopLibrary/Times.2
+
+Oracle:Players play with the top card of their libraries revealed.\nAt the beginning of your first main phase, add {G}{G} for each land card among cards on top of libraries.\nJindao gets +2/+2 for each creature card among cards on top of libraries.

@@ -1,0 +1,13 @@
+Name:Allure of the Dark Grove
+ManaCost:1 B
+Types:Sorcery
+
+A:SP$ LoseLife | ValidTgts$ Opponent | TgtPrompt$ Select target opponent | LifeAmount$ X | SubAbility$ DBGainLife | SpellDescription$ Target opponent loses 2 life and you gain 2 life. If you control a Wizard, instead that player loses 4 life and you gain 4 life.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ X
+SVar:X:Count$Compare Y GE1.4.2
+SVar:Y:Count$Valid Wizard.YouCtrl
+
+Oracle:Target opponent loses 2 life and you gain 2 life. If you control a Wizard, instead that player loses 4 life and you gain 4 life.
+
+DeckHas:Ability$LifeGain
+DeckHints:Type$Wizard

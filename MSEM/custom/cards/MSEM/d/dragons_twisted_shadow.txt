@@ -1,0 +1,11 @@
+Name:Dragon's Twisted Shadow
+ManaCost:3 B
+Types:Creature Horror
+PT:0/4
+
+K:Menace
+
+T:Mode$ AttackerUnblocked | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever this creature attacks and isn't blocked, it gets +4/+0 until end of turn.
+SVar:TrigPump:DB$ Pump | NumAtt$ +4
+
+Oracle:Menace\nWhenever this creature attacks and isn't blocked, it gets +4/+0 until end of turn.

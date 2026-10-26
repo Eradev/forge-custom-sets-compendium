@@ -1,0 +1,8 @@
+Name:Branch Prowler
+ManaCost:3 G
+Types:Creature Cat
+PT:3/2
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | ValidBlocker$ Creature.withoutFlying | Description$ This creature can't be blocked except by creatures with flying.
+
+Oracle:This creature can't be blocked except by creatures with flying.

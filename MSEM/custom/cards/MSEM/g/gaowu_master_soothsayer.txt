@@ -1,0 +1,11 @@
+Name:Gao'Wu, Master Soothsayer
+ManaCost:1 W
+Types:Legendary Creature Human
+PT:2/1
+
+K:First Strike
+
+S:Mode$ CantAttack | ValidCard$ Creature.powerGTX | Description$ Creatures with power greater than NICKNAME's power can't attack.
+SVar:X:Count$CardPower
+
+Oracle:First strike\nCreatures with power greater than Gao'Wu's power can't attack.

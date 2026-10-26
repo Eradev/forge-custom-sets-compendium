@@ -1,0 +1,14 @@
+Name:Isle Conservator
+ManaCost:4 U
+Types:Creature Drake
+PT:2/5
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | IsPresent$ Creature.Legendary+YouCtrl | Execute$ TrigSubmerge | TriggerDescription$ When this creature enters, if you control a legendary creature, submerge target creature an opponent controls. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
+
+SVar:TrigSubmerge:DB$ ChangeZone | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | FaceDown$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+DeckHints:Type$Legendary
+
+Oracle:When this creature enters, if you control a legendary creature, submerge target creature an opponent controls. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)

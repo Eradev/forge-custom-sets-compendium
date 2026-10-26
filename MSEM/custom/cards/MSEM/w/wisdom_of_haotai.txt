@@ -1,0 +1,12 @@
+Name:Wisdom of Hao'Tai
+ManaCost:2 R
+Types:Sorcery
+
+A:SP$ Dig | Defined$ You | DigNum$ 4 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Exile the top four cards of your library. You may cast instant and/or sorcery cards exiled this way until the end of your next turn.
+SVar:DBEffect:DB$ Effect | RememberObjects$ RememberedCard | StaticAbilities$ STPlay | ForgetOnMoved$ Exile | Duration$ UntilTheEndOfYourNextTurn | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Instant.IsRemembered,Sorcery.IsRemembered | AffectedZone$ Exile | Description$ You may cast instant and/or sorcery cards exiled this way until the end of your next turn.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Exile the top four cards of your library. You may cast instant and/or sorcery cards exiled this way until the end of your next turn.
+
+DeckHints:Type$Instant|Sorcery

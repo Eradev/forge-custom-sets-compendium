@@ -1,0 +1,14 @@
+Name:Put to Rest
+ManaCost:2 W
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+SVar:AttachAILogic:Curse
+
+S:Mode$ CantAttack,CantBlock | ValidCard$ Creature.EnchantedBy | Description$ Enchanted creature can't attack or block.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.AttachedBy | Execute$ TrigGainLife | TriggerDescription$ When enchanted creature leaves the battlefield, you gain 4 life.
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 4
+
+Oracle:Enchant creature\nEnchanted creature can't attack or block.\nWhen enchanted creature leaves the battlefield, you gain 4 life.

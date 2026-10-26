@@ -1,0 +1,19 @@
+Name:Disinter
+ManaCost:1 B
+Types:Sorcery
+
+S:Mode$ CantBeCast | ValidCard$ Card.Self | EffectZone$ All | CheckSVar$ X | SVarCompare$ LTTotalPlayers | Description$ Cast this spell only if each graveyard has a creature card in it.
+
+A:SP$ RepeatEach | RepeatPlayers$ Player | RepeatSubAbility$ DBChooseOpponent | SubAbility$ DBReturn | SpellDescription$ Each player puts a creature card in their graveyard of an opponent's choice onto the battlefield.
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Defined$ Remembered | Choices$ Player.OpponentOf Remembered | AILogic$ Curse | SubAbility$ DBChooseCreature
+SVar:DBChooseCreature:DB$ ChooseCard | Defined$ ChosenPlayer | Choices$ Creature.RememberedPlayerCtrl | ChoiceZone$ Graveyard | Amount$ 1 | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose a creature card in that player's graveyard | SubAbility$ DBClearChosenPlayer
+SVar:DBClearChosenPlayer:DB$ Cleanup | ClearChosenPlayer$ True
+SVar:DBReturn:DB$ ChangeZoneAll | ChangeType$ Card.IsRemembered | Origin$ Graveyard | Destination$ Battlefield | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+
+SVar:X:PlayerCountPlayers$HasPropertyHasCardsInGraveyard_Creature_GE1
+SVar:TotalPlayers:PlayerCountPlayers$Amount
+
+Oracle:Cast this spell only if each graveyard has a creature card in it.\nEach player puts a creature card in their graveyard of an opponent's choice onto the battlefield.
+
+DeckHas:Ability$Graveyard

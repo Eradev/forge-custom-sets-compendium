@@ -1,0 +1,13 @@
+Name:Deep in Thought
+ManaCost:2 U
+Types:Sorcery
+
+A:SP$ ChangeZone | ValidTgts$ Creature | TgtPrompt$ Select target creature | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBDelayedTrigger | SpellDescription$ Exile target creature. Return that card to its owner's hand at the beginning of its owner's next end step.
+
+SVar:DBDelayedTrigger:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | ValidPlayer$ Player.IsTriggerRemembered | Execute$ TrigReturn | RememberObjects$ TargetedOwner & RememberedLKI | SubAbility$ DBCleanup | TriggerDescription$ Return that card to its owner's hand at the beginning of its owner's next end step.
+
+SVar:TrigReturn:DB$ ChangeZone | Defined$ DelayTriggerRememberedLKI | Origin$ Exile | Destination$ Hand
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Exile target creature. Return that card to its owner's hand at the beginning of its owner's next end step.

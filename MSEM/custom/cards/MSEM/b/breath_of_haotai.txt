@@ -1,0 +1,7 @@
+Name:Breath of Hao'Tai
+ManaCost:3 R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ 4 | SpellDescription$ CARDNAME deals 4 damage to any target.
+
+Oracle:Breath of Hao'Tai deals 4 damage to any target.

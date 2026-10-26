@@ -1,0 +1,12 @@
+Name:Kai'Long, Dark Immolator
+ManaCost:3 B B
+Types:Legendary Creature Demon
+PT:3/3
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ Whenever a creature you control dies, each opponent loses life equal to its power.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ X
+SVar:X:TriggeredCard$CardPower
+
+Oracle:Flying\nWhenever a creature you control dies, each opponent loses life equal to its power.

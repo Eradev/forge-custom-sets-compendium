@@ -1,0 +1,9 @@
+Name:Surging Stream
+ManaCost:3 W
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Creature.!token+attacking+OppCtrl | TgtPrompt$ Select target attacking nontoken creature | TargetMin$ 0 | TargetMax$ 2 | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn | SpellDescription$ Submerge up to two target attacking nontoken creatures an opponent controls. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | FaceDown$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Submerge up to two target attacking nontoken creatures an opponent controls. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)

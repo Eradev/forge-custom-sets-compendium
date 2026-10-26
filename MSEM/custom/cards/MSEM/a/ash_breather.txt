@@ -1,0 +1,11 @@
+Name:Ash Breather
+ManaCost:3 R
+Types:Creature Lizard
+PT:2/3
+
+K:Menace
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | Execute$ TrigDiscard | CombatDamage$ True | OptionalDecider$ You | TriggerDescription$ Whenever this creature deals combat damage to a player, you may discard a card. If you do, draw a card.
+SVar:TrigDiscard:AB$ Draw | Cost$ Discard<1/Card>
+
+Oracle:Menace (This creature can't be blocked except by two or more creatures.)\nWhenever this creature deals combat damage to a player, you may discard a card. If you do, draw a card.

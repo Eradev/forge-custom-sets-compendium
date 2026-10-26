@@ -1,0 +1,16 @@
+Name:Barterer of Passage
+ManaCost:2 U
+Types:Creature Human Wizard
+PT:2/3
+
+A:AB$ Effect | Cost$ 1 U | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | RememberObjects$ Targeted | ExileOnMoved$ Battlefield | StaticAbilities$ CantBlockLess | SpellDescription$ Target creature you control can't be blocked this turn by creatures with less power.
+
+A:AB$ Effect | Cost$ 1 U | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | RememberObjects$ Targeted | ExileOnMoved$ Battlefield | StaticAbilities$ CantBlockGreater | SpellDescription$ Target creature you control can't be blocked this turn by creatures with greater power.
+
+SVar:CantBlockLess:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | ValidBlocker$ Creature.powerLTX | Description$ This creature can't be blocked this turn by creatures with less power.
+
+SVar:CantBlockGreater:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | ValidBlocker$ Creature.powerGTX | Description$ This creature can't be blocked this turn by creatures with greater power.
+
+SVar:X:Remembered$CardPower
+
+Oracle:{1}{U}: Target creature you control can't be blocked this turn by creatures with less power.\n{1}{U}: Target creature you control can't be blocked this turn by creatures with greater power.

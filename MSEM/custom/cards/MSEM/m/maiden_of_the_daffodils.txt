@@ -1,0 +1,11 @@
+Name:Maiden of the Daffodils
+ManaCost:2 G
+Types:Creature Dryad
+PT:2/3
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigReturn | OptionalDecider$ You | TriggerDescription$ When this creature dies, you may return target land card from your graveyard to the battlefield.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Land.YouOwn | TgtPrompt$ Select target land card in your graveyard
+
+Oracle:When this creature dies, you may return target land card from your graveyard to the battlefield.
+
+DeckHas:Ability$Graveyard

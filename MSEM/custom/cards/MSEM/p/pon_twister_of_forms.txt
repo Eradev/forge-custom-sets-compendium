@@ -1,0 +1,13 @@
+Name:Pon, Twister of Forms
+ManaCost:1 U U
+Types:Legendary Creature Human Wizard
+PT:0/2
+
+K:Prowess
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigAnimate | TriggerDescription$ Whenever you cast an instant or sorcery spell, up to one other target creature has base power and toughness 0/2 until end of turn.
+SVar:TrigAnimate:DB$ Animate | ValidTgts$ Creature.Other | TgtPrompt$ Select up to one other target creature | TargetMin$ 0 | TargetMax$ 1 | Power$ 0 | Toughness$ 2
+
+Oracle:Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhenever you cast an instant or sorcery spell, up to one other target creature has base power and toughness 0/2 until end of turn.
+
+DeckHints:Type$Instant|Sorcery

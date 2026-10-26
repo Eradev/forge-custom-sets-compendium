@@ -1,0 +1,14 @@
+Name:Chiu of the Wild Realm
+ManaCost:3 G G
+Types:Legendary Creature Human Druid
+PT:2/2
+
+A:AB$ Token | Cost$ G G | TokenScript$ g_2_2_wolf | TokenOwner$ You | SpellDescription$ Create a 2/2 green Wolf creature token.
+
+A:AB$ Token | Cost$ 1 G G | TokenScript$ shimaru_the_white_wolf | TokenOwner$ You | SpellDescription$ Create Shimaru, the White Wolf, a legendary 3/3 green Wolf creature token with hexproof.
+
+A:AB$ PumpAll | Cost$ 2 G G | ValidCards$ Creature.YouCtrl | NumAtt$ +2 | NumDef$ +2 | KW$ Trample | SpellDescription$ Creatures you control get +2/+2 and gain trample until end of turn.
+
+Oracle:{G}{G}: Create a 2/2 green Wolf creature token.\n{1}{G}{G}: Create Shimaru, the White Wolf, a legendary 3/3 green Wolf creature token with hexproof.\n{2}{G}{G}: Creatures you control get +2/+2 and gain trample until end of turn.
+
+DeckHas:Ability$Token & Type$Wolf

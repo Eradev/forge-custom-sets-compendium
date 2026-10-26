@@ -1,0 +1,8 @@
+Name:Fox of the Fallen Forest
+ManaCost:2 W
+Types:Creature Fox Spirit
+PT:0/4
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 4 | IsPresent$ Creature.Legendary+YouCtrl | Description$ This creature gets +4/+0 as long as you control a legendary creature.
+
+Oracle:This creature gets +4/+0 as long as you control a legendary creature.

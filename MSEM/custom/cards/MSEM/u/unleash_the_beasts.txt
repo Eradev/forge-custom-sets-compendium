@@ -1,0 +1,7 @@
+Name:Unleash the Beasts
+ManaCost:2 G G
+Types:Sorcery
+
+A:SP$ AnimateAll | ValidCards$ Creature.YouCtrl | Power$ 4 | Keywords$ Trample | SpellDescription$ Creatures you control have base power 4 and gain trample until end of turn.
+
+Oracle:Creatures you control have base power 4 and gain trample until end of turn.

@@ -1,0 +1,9 @@
+Name:Charmer of the Folded Fan
+ManaCost:1 W
+Types:Creature Human
+PT:1/2
+
+A:AB$ Tap | Cost$ T | ValidTgts$ Creature.powerLEX | TgtPrompt$ Select target creature with power less than or equal to CARDNAME's toughness | SpellDescription$ Tap target creature with power less than or equal to this creature's toughness.
+SVar:X:Count$CardToughness
+
+Oracle:{T}: Tap target creature with power less than or equal to this creature's toughness.

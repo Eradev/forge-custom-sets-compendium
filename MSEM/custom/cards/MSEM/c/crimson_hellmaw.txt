@@ -1,0 +1,17 @@
+Name:Crimson Hellmaw
+ManaCost:3 R R
+Types:Creature Zombie Dragon
+PT:3/3
+
+K:Flying
+
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDamage | TriggerDescription$ When this creature enters, it deals 3 damage to any target.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 3
+
+A:AB$ CopyPermanent | Named$ Revive | Cost$ 5 R R ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | SorcerySpeed$ True | Defined$ Self | RemoveCost$ True | PrecostDesc$ Revive — | SpellDescription$ Create a token that's a copy of this card except it has no mana cost. Revive only as a sorcery.
+
+Oracle:Flying, haste\nWhen this creature enters, it deals 3 damage to any target.\nRevive {5}{R}{R} ({5}{R}{R}, Exile this card from your graveyard: Create a token that's a copy of it except it has no mana cost. Revive only as a sorcery.)
+
+DeckHas:Ability$Graveyard|Token

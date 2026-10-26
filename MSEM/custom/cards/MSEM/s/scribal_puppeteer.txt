@@ -1,0 +1,11 @@
+Name:Scribal Puppeteer
+ManaCost:3 B
+Types:Creature Zombie Wizard
+PT:4/5
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create two 1/1 black Puppet creature tokens with "At the beginning of your upkeep, you lose 1 life."
+SVar:TrigToken:DB$ Token | TokenAmount$ 2 | TokenScript$ b_1_1_puppet_loselife
+
+Oracle:When this creature enters, create two 1/1 black Puppet creature tokens with "At the beginning of your upkeep, you lose 1 life."
+
+DeckHas:Ability$Token

@@ -1,0 +1,15 @@
+Name:Kugoja, Perished Conduit
+ManaCost:1 B B
+Types:Legendary Creature Zombie Wizard
+PT:2/2
+
+A:AB$ ChangeZone | Cost$ 3 B B | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Zombie.YouOwn | TgtPrompt$ Select target Zombie creature card in your graveyard | SpellDescription$ Return target Zombie creature card from your graveyard to the battlefield.
+
+T:Mode$ ChangesZone | Origin$ Graveyard | Destination$ Battlefield | ValidCard$ Creature.YouCtrl+Other | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever another creature you control enters from a graveyard or you revive a creature token, that creature gets +2/+0 and gains haste and menace until end of turn.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.token+YouCtrl | ValidCause$ Activated.NamedAbilityRevive | TriggerZones$ Battlefield | Execute$ TrigPump | Secondary$ True | TriggerDescription$ Whenever another creature you control enters from a graveyard or you revive a creature token, that creature gets +2/+0 and gains haste and menace until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredCardLKICopy | NumAtt$ +2 | KW$ Haste & Menace
+
+Oracle:{3}{B}{B}: Return target Zombie creature card from your graveyard to the battlefield.\nWhenever another creature you control enters from a graveyard or you revive a creature token, that creature gets +2/+0 and gains haste and menace until end of turn.
+
+DeckHas:Ability$Graveyard
+DeckHints:Type$Zombie

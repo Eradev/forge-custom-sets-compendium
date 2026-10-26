@@ -1,0 +1,7 @@
+Name:Quell Mutiny
+ManaCost:3 W W
+Types:Sorcery
+
+A:SP$ DestroyAll | ValidCards$ Creature.nonLegendary | SpellDescription$ Destroy all nonlegendary creatures.
+
+Oracle:Destroy all nonlegendary creatures.

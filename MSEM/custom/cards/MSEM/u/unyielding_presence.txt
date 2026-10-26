@@ -1,0 +1,10 @@
+Name:Unyielding Presence
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ -9 | IsCurse$ True | SubAbility$ DBToken | SpellDescription$ Target creature gets -9/-0 until end of turn. Create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+SVar:DBToken:DB$ Token | TokenScript$ c_a_idol_sac
+
+DeckHas:Ability$Token|Counters
+
+Oracle:Target creature gets -9/-0 until end of turn.\nCreate an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")

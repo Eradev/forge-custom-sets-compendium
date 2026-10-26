@@ -1,0 +1,11 @@
+Name:Magnificent Liturgy
+ManaCost:3 U
+Types:Sorcery
+
+A:SP$ Tap | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select up to two target creatures an opponent controls | TargetMin$ 0 | TargetMax$ 2 | SubAbility$ DBNoUntap | SpellDescription$ Tap up to two target creatures an opponent controls. Those creatures don't untap during their controller's next untap step.
+SVar:DBNoUntap:DB$ Pump | Defined$ Targeted | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ c_a_idol_sac | SpellDescription$ Create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+
+DeckHas:Ability$Token|Counters
+
+Oracle:Tap up to two target creatures an opponent controls. Those creatures don't untap during their controller's next untap step.\nCreate an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")

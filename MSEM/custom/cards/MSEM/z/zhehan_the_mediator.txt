@@ -1,0 +1,13 @@
+Name:Zhehan, the Mediator
+ManaCost:1 W B
+Types:Legendary Creature Human Wizard
+PT:2/3
+
+K:Lifelink
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigAura | TriggerDescription$ When NICKNAME enters, you may put an Aura card with mana value 3 or less from your hand onto the battlefield attached to a creature it could enchant.
+SVar:TrigAura:DB$ ChangeZone | Origin$ Hand | Destination$ Battlefield | ChangeType$ Aura.cmcLE3 | ChangeNum$ 1 | AttachedTo$ Creature | Optional$ True
+
+Oracle:Lifelink\nWhen Zhehan enters, you may put an Aura card with mana value 3 or less from your hand onto the battlefield attached to a creature it could enchant.
+
+DeckNeeds:Type$Aura

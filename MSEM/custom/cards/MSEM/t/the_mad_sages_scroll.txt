@@ -1,0 +1,10 @@
+Name:The Mad Sage's Scroll
+ManaCost:2 U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | UnlessCost$ 3 | UnlessPayer$ TargetedController | SubAbility$ DBMill | SpellDescription$ Counter target spell unless its controller pays {3}. That spell's controller mills three cards.
+SVar:DBMill:DB$ Mill | Defined$ TargetedController | NumCards$ 3
+
+DeckHas:Ability$Mill
+
+Oracle:Counter target spell unless its controller pays {3}. That spell's controller mills three cards.

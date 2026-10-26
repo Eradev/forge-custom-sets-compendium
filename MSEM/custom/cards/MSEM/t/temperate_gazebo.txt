@@ -1,0 +1,15 @@
+Name:Temperate Gazebo
+ManaCost:2 W
+Types:Creature Wall
+PT:0/6
+
+K:Defender
+
+T:Mode$ DamageDone | ValidSource$ Creature.Other | ValidTarget$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigGainLife | TriggerDescription$ Whenever another creature deals damage to this creature, you gain 3 life.
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 3
+
+SVar:HasCombatEffect:TRUE
+
+DeckHas:Ability$LifeGain
+
+Oracle:Defender\nWhenever another creature deals damage to this creature, you gain 3 life.

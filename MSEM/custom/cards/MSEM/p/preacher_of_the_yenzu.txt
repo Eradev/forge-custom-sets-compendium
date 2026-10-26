@@ -1,0 +1,10 @@
+Name:Preacher of the Yenzu
+ManaCost:3 B
+Types:Creature Demon Wizard
+PT:3/3
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ 2 | AddKeyword$ Flying | IsPresent$ Creature.Legendary+YouCtrl | Description$ This creature gets +2/+0 and has flying as long as you control a legendary creature.
+
+DeckHints:Type$Legendary
+
+Oracle:This creature gets +2/+0 and has flying as long as you control a legendary creature.

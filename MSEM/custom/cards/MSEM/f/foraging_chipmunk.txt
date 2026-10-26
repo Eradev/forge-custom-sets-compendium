@@ -1,0 +1,8 @@
+Name:Foraging Chipmunk
+ManaCost:G
+Types:Creature Chipmunk
+PT:1/1
+
+A:AB$ Mana | Cost$ G T | Produced$ C | Amount$ 2 | SpellDescription$ Add {C}{C}.
+
+Oracle:{G}, {T}: Add {C}{C}.

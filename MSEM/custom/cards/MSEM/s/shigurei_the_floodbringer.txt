@@ -1,0 +1,11 @@
+Name:Shigurei, the Floodbringer
+ManaCost:7 U U
+Types:Legendary Creature Kraken
+PT:9/9
+
+K:Trample
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigAnimate | TriggerDescription$ When NICKNAME enters, up to three target permanents become colorless Island lands.
+SVar:TrigAnimate:DB$ Animate | ValidTgts$ Permanent | TgtPrompt$ Select up to three target permanents | TargetMin$ 0 | TargetMax$ 3 | Types$ Land,Island | RemoveCardTypes$ True | RemoveLandTypes$ True | Colors$ Colorless | OverwriteColors$ True | Duration$ Permanent
+
+Oracle:Trample\nWhen Shigurei enters, up to three target permanents become colorless Island lands.

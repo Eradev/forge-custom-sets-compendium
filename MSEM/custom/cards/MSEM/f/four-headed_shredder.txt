@@ -1,0 +1,8 @@
+Name:Four-Headed Shredder
+ManaCost:2 R R
+Types:Creature Chimera
+PT:4/2
+
+K:Haste
+
+Oracle:Haste

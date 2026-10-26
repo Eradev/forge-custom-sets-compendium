@@ -1,0 +1,19 @@
+Name:Heping, Master Arbitrator
+ManaCost:3 W W
+Types:Legendary Planeswalker Heping
+Loyalty:4
+
+A:AB$ Effect | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | RememberObjects$ Self | ReplacementEffects$ RPreventDamage | ExileOnMoved$ Battlefield | Duration$ UntilYourNextTurn | SpellDescription$ Until your next turn, if a source would deal damage to NICKNAME, prevent all but 1 of that damage.
+SVar:RPreventDamage:Event$ DamageDone | ValidTarget$ Card.IsRemembered | ReplaceWith$ PreventDmg | PreventionEffect$ True | Description$ Until your next turn, if a source would deal damage to NICKNAME, prevent all but 1 of that damage.
+SVar:PreventDmg:DB$ ReplaceDamage | Amount$ ShieldAmount
+SVar:ShieldAmount:ReplaceCount$DamageAmount/Minus.1
+
+A:AB$ CopyPermanent | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | DefinedName$ Pacifism | AttachedTo$ Targeted | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | SpellDescription$ Create a white Aura enchantment token named Pacifism attached to target creature an opponent controls. It has enchant creature and "Enchanted creature can't attack or block."
+
+A:AB$ Effect | Cost$ SubCounter<8/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Heping, Master Arbitrator | Image$ emblem_heping_master_arbitrator | Triggers$ EffPhase | Duration$ Permanent | SpellDescription$ You get an emblem with "At the beginning of your end step, your life total becomes 20."
+SVar:EffPhase:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | Execute$ EmblemSetLife | TriggerDescription$ At the beginning of your end step, your life total becomes 20.
+SVar:EmblemSetLife:DB$ SetLife | Defined$ You | LifeAmount$ 20
+
+Oracle:[+1]: Until your next turn, if a source would deal damage to Heping, Master Arbitrator, prevent all but 1 of that damage.\n[-2]: Create a white Aura enchantment token named Pacifism attached to target creature an opponent controls. It has enchant creature and "Enchanted creature can't attack or block."\n[-8]: You get an emblem with "At the beginning of your end step, your life total becomes 20."
+
+DeckHas:Ability$Token

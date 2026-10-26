@@ -1,0 +1,14 @@
+Name:Merciless Xun Huang
+ManaCost:1 B R
+Types:Legendary Creature Monkey Warrior
+PT:3/3
+
+K:Menace
+
+T:Mode$ Attacks | ValidCard$ Card.Self | IsPresent$ Creature.YouCtrl+powerGE4 | PresentCompare$ GE1 | TriggerZones$ Battlefield | Execute$ TrigSacrifice | TriggerDescription$ Ferocious — Whenever CARDNAME attacks, if you control a creature with power 4 or greater, defending player sacrifices a permanent.
+SVar:TrigSacrifice:DB$ Sacrifice | Defined$ TriggeredDefendingPlayer | SacValid$ Permanent | Amount$ 1
+
+Oracle:Menace\nFerocious — Whenever Merciless Xun Huang attacks, if you control a creature with power 4 or greater, defending player sacrifices a permanent.
+
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Sacrifice

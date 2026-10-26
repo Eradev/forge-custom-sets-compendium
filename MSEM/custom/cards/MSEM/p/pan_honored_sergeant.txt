@@ -1,0 +1,12 @@
+Name:Pan, Honored Sergeant
+ManaCost:1 R W
+Types:Legendary Creature Human Warrior
+PT:3/2
+
+S:Mode$ Continuous | Affected$ Creature.Other+YouCtrl | AddPower$ 1 | Description$ Other creatures you control get +1/+0.
+
+A:AB$ Token | Cost$ R W | TokenScript$ rw_1_1_warrior | TokenOwner$ You | PumpKeywords$ Haste | PumpDuration$ EOT | AtEOT$ Exile | SorcerySpeed$ True | SpellDescription$ Create a 1/1 red and white Warrior creature token. That token gains haste. Exile it at the beginning of the next end step. Activate only as a sorcery.
+
+Oracle:Other creatures you control get +1/+0.\n{R}{W}: Create a 1/1 red and white Warrior creature token. That token gains haste. Exile it at the beginning of the next end step. Activate only as a sorcery.
+
+DeckHas:Ability$Token

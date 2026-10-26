@@ -1,0 +1,12 @@
+Name:Shojiro, the Wavewaker
+ManaCost:6 U U
+Types:Legendary Creature Octopus
+PT:8/8
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSubmerge | TriggerDescription$ When NICKNAME enters, submerge up to eight target creatures your opponents control. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)
+
+SVar:TrigSubmerge:DB$ ChangeZone | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select up to eight target creatures your opponents control | TargetMin$ 0 | TargetMax$ 8 | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | FaceDown$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When Shojiro enters, submerge up to eight target creatures your opponents control. (To submerge a card, exile it, then put it on the battlefield face down under its owner's control as a 2/2 creature.)

@@ -1,0 +1,12 @@
+Name:Bringer of the Pack
+ManaCost:3 G G
+Types:Creature Wolf Spirit
+PT:3/3
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDiscard | TriggerDescription$ At the beginning of your upkeep, you may discard a land card. When you do, create a 2/2 green Wolf creature token.
+SVar:TrigDiscard:AB$ ImmediateTrigger | Cost$ Discard<1/Land> | Execute$ TrigToken | TriggerDescription$ When you do, create a 2/2 green Wolf creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ g_2_2_wolf
+
+Oracle:At the beginning of your upkeep, you may discard a land card. When you do, create a 2/2 green Wolf creature token.
+
+DeckHas:Ability$Discard|Token & Type$Wolf

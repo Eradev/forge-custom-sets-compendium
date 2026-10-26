@@ -1,0 +1,16 @@
+Name:Xiusheng's Teachings
+ManaCost:3 R
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+SVar:AttachAILogic:Pump
+
+A:AB$ Pump | Cost$ R | Defined$ Enchanted | NumAtt$ +1 | SpellDescription$ Enchanted creature gets +1/+0 until end of turn.
+
+T:Mode$ Attacks | ValidCard$ Card.AttachedBy | IsPresent$ Creature.YouCtrl+powerGE4 | PresentCompare$ GE1 | TriggerZones$ Battlefield | Execute$ TrigDoubleStrike | TriggerDescription$ Ferocious — Whenever enchanted creature attacks, if you control a creature with power 4 or greater, enchanted creature gains double strike until end of turn.
+SVar:TrigDoubleStrike:DB$ Pump | Defined$ TriggeredAttackerLKICopy | KW$ Double Strike
+
+Oracle:Enchant creature\n{R}: Enchanted creature gets +1/+0 until end of turn.\nFerocious — Whenever enchanted creature attacks, if you control a creature with power 4 or greater, enchanted creature gains double strike until end of turn.
+
+SVar:NonStackingAttachEffect:True

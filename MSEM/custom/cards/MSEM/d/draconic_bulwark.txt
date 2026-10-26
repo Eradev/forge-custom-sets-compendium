@@ -1,0 +1,9 @@
+Name:Draconic Bulwark
+ManaCost:3
+Types:Artifact Equipment
+
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddToughness$ 4 | AddKeyword$ Vigilance & Reach | Description$ Equipped creature gets +0/+4 and has vigilance and reach.
+
+K:Equip:3
+
+Oracle:Equipped creature gets +0/+4 and has vigilance and reach.\nEquip {3}

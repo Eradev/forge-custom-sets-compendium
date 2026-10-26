@@ -1,0 +1,12 @@
+Name:The Dragon's Madness
+ManaCost:1 B B
+Types:Sorcery
+
+A:SP$ Branch | ValidTgts$ Player | TgtPrompt$ Select target player | BranchConditionSVar$ X | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBRandomDiscard | FalseSubAbility$ DBDiscard | SpellDescription$ Target player discards two cards. Ferocious — That player discards two cards at random instead if you control a creature with power 4 or greater.
+SVar:DBDiscard:DB$ Discard | Defined$ Targeted | NumCards$ 2 | Mode$ TgtChoose
+SVar:DBRandomDiscard:DB$ Discard | Defined$ Targeted | NumCards$ 2 | Mode$ Random
+SVar:X:Count$Valid Creature.YouCtrl+powerGE4
+
+Oracle:Target player discards two cards.\nFerocious — That player discards two cards at random instead if you control a creature with power 4 or greater.
+
+DeckHas:Ability$Discard
