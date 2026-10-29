@@ -1,0 +1,7 @@
+Name:Raise a Ruckus
+ManaCost:G
+Types:Sorcery
+
+A:SP$ Pump | ValidTgts$ Creature.YouCtrl | NumAtt$ +2 | NumDef$ +2 | KW$ HIDDEN CARDNAME must be blocked if able. | SpellDescription$ Target creature you control gets +2/+2 until end of turn and must be blocked this turn if able.
+
+Oracle:Target creature you control gets +2/+2 until end of turn and must be blocked this turn if able.

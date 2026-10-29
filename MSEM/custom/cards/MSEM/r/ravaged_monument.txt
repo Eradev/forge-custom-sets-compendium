@@ -1,0 +1,12 @@
+Name:Ravaged Monument
+ManaCost:no cost
+Types:Land Desert
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ G | SpellDescription$ Add {G}.
+
+A:AB$ Animate | Cost$ 2G 2G | Defined$ Self | Power$ 4 | Toughness$ 4 | Types$ Creature,Elemental | Colors$ Green | OverwriteColors$ True | SpellDescription$ This land becomes a 4/4 green Elemental creature until end of turn. It's still a land.
+
+Oracle:This land enters tapped.\n{T}: Add {G}.\n{2/G}{2/G}: This land becomes a 4/4 green Elemental creature until end of turn. It's still a land.
