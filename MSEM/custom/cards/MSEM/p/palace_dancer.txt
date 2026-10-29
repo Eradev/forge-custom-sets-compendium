@@ -1,0 +1,8 @@
+Name:Palace Dancer
+ManaCost:1 W
+Types:Creature Human
+PT:1/3
+
+A:AB$ Tap | Cost$ 2/W T | ValidTgts$ Creature | SpellDescription$ Tap target creature.
+
+Oracle:{2/W}, {T}: Tap target creature.
