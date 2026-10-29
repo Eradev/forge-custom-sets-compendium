@@ -1,0 +1,13 @@
+Name:Oasis Glutton
+ManaCost:3 U U
+Types:Creature Beast
+PT:5/6
+
+K:Defender
+
+S:Mode$ CanAttackDefender | ValidCard$ Card.Self | CheckSVar$ FealtyIslands | SVarCompare$ GE6 | Description$ As long as your fealty to Islands is six or greater, this creature can attack as though it didn't have defender. (Each Island you control counts towards your fealty to Islands.)
+SVar:FealtyIslands:Count$Valid Island.YouCtrl
+
+Oracle:Defender\nAs long as your fealty to Islands is six or greater, this creature can attack as though it didn't have defender. (Each Island you control counts towards your fealty to Islands.)
+
+SVar:BuffedBy:Island
