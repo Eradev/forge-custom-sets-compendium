@@ -1,0 +1,20 @@
+Name:Sword of the Brave
+ManaCost:2
+Types:Artifact Equipment
+
+K:Equip:3
+
+S:Mode$ Continuous | AffectedDefined$ Equipped | AddPower$ 2 | AddToughness$ 1 | Description$ Equipped creature gets +2/+1.
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigChoose | OptionalDecider$ You | TriggerDescription$ Whenever a creature you control enters, you may have equipped creature gain your choice of flying, vigilance, first strike, or trample until end of turn.
+SVar:TrigChoose:DB$ GenericChoice | Defined$ You | Choices$ DBFlying,DBVigilance,DBFirstStrike,DBTrample
+
+SVar:DBFlying:DB$ Pump | Defined$ Equipped | KW$ Flying | SpellDescription$ Equipped creature gains flying until end of turn.
+
+SVar:DBVigilance:DB$ Pump | Defined$ Equipped | KW$ Vigilance | SpellDescription$ Equipped creature gains vigilance until end of turn.
+
+SVar:DBFirstStrike:DB$ Pump | Defined$ Equipped | KW$ First Strike | SpellDescription$ Equipped creature gains first strike until end of turn.
+
+SVar:DBTrample:DB$ Pump | Defined$ Equipped | KW$ Trample | SpellDescription$ Equipped creature gains trample until end of turn.
+
+Oracle:Equipped creature gets +2/+1.\nWhenever a creature you control enters, you may have equipped creature gain your choice of flying, vigilance, first strike, or trample until end of turn.\nEquip {3} ({3}: Attach to target creature you control. Equip only as a sorcery.)

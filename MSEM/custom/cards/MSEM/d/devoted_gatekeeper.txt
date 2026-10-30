@@ -1,0 +1,8 @@
+Name:Devoted Gatekeeper
+ManaCost:3 W
+Types:Creature Giant Soldier
+PT:2/4
+
+K:Vigilance
+
+Oracle:Vigilance (Attacking doesn't cause this creature to tap.)

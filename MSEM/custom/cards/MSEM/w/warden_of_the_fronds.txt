@@ -1,0 +1,14 @@
+Name:Warden of the Fronds
+ManaCost:2 G
+Types:Creature Elemental Spirit
+PT:*/*
+
+S:Mode$ Continuous | CharacteristicDefining$ True | SetPower$ X | SetToughness$ X | Description$ This creature's power and toughness are each equal to the number of Forests you control.
+SVar:X:Count$Valid Forest.YouCtrl
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddKeyword$ Indestructible | IsPresent$ Land.YouCtrl | PresentCompare$ GE5 | Description$ This creature has indestructible as long as you control five or more lands.
+
+Oracle:This creature's power and toughness are each equal to the number of Forests you control.\nThis creature has indestructible as long as you control five or more lands.
+
+SVar:BuffedBy:Forest
+SVar:NoZeroToughnessAI:True

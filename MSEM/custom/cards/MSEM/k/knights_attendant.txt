@@ -1,0 +1,9 @@
+Name:Knight's Attendant
+ManaCost:2 W
+Types:Creature Human Soldier
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 2/2 white Knight creature token with vigilance.
+SVar:TrigToken:DB$ Token | TokenScript$ w_2_2_knight_vigilance
+
+Oracle:When this creature enters, create a 2/2 white Knight creature token with vigilance.

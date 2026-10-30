@@ -1,0 +1,7 @@
+Name:Plan Ahead
+ManaCost:U
+Types:Sorcery
+
+A:SP$ Dig | DigNum$ 3 | ChangeNum$ 1 | Optional$ True | ChangeValid$ Instant,Sorcery | SpellDescription$ Look at the top three cards of your library. You may reveal an instant or sorcery card from among them and put it into your hand. Put the rest on the bottom of your library in any order.
+
+Oracle:Look at the top three cards of your library. You may reveal an instant or sorcery card from among them and put it into your hand. Put the rest on the bottom of your library in any order.

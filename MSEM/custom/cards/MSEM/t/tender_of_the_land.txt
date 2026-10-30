@@ -1,0 +1,9 @@
+Name:Tender of the Land
+ManaCost:1 G
+Types:Creature Elf Druid
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | IsPresent$ Land.YouCtrl | PresentCompare$ GE4 | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ When this creature enters, if you control four or more lands, draw a card.
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+Oracle:When this creature enters, if you control four or more lands, draw a card.

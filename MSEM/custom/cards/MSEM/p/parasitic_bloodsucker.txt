@@ -1,0 +1,14 @@
+Name:Parasitic Bloodsucker
+ManaCost:3 G
+Types:Creature Insect Horror
+PT:3/4
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Swamp.YouCtrl | Description$ This creature gets +1/+1 as long as you control a Swamp.
+
+A:AB$ Pump | Cost$ 2 B | KW$ Lifelink | SpellDescription$ This creature gains lifelink until end of turn.
+
+Oracle:This creature gets +1/+1 as long as you control a Swamp.\n{2}{B}: This creature gains lifelink until end of turn
+
+SVar:BuffedBy:Swamp
+DeckNeeds:Color$Black
+DeckHas:Ability$LifeGain

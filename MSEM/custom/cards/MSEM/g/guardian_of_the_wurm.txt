@@ -1,0 +1,11 @@
+Name:Guardian of the Wurm
+ManaCost:5 G G
+Types:Creature Elf Druid
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 6/6 green Wurm creature token with trample.
+SVar:TrigToken:DB$ Token | TokenScript$ g_6_6_wurm_trample
+
+Oracle:When this creature enters, create a 6/6 green Wurm creature token with trample.
+
+DeckHas:Ability$Token

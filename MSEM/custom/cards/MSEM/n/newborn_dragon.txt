@@ -1,0 +1,10 @@
+Name:Newborn Dragon
+ManaCost:1 R R
+Types:Creature Dragon
+PT:1/1
+
+K:Flying
+
+A:AB$ Pump | Cost$ R | NumAtt$ +1 | SpellDescription$ This creature gets +1/+0 until end of turn.
+
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\n{R}: This creature gets +1/+0 until end of turn.

@@ -1,0 +1,10 @@
+Name:Ward Shatter
+ManaCost:1 W
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Enchantment | SubAbility$ DBToken | SpellDescription$ Destroy target enchantment, then create a 1/1 white Soldier creature token.
+SVar:DBToken:DB$ Token | TokenScript$ w_1_1_soldier
+
+Oracle:Destroy target enchantment, then create a 1/1 white Soldier creature token.
+
+DeckHas:Ability$Token

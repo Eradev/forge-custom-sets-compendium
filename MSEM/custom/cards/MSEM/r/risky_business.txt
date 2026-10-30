@@ -1,0 +1,14 @@
+Name:Risky Business
+ManaCost:3 R
+Types:Enchantment
+
+S:Mode$ CantDraw | ValidPlayer$ You | Description$ You can't draw cards.
+
+A:AB$ Dig | Cost$ 2 R | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | Defined$ You | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Exile the top card of your library. You may play it this turn.
+SVar:DBEffect:DB$ Effect | StaticAbilities$ EffSModeContinuous | ExileOnMoved$ Exile | RememberObjects$ Remembered | SubAbility$ DBCleanup
+
+SVar:EffSModeContinuous:Mode$ Continuous | Affected$ Card.IsRemembered | MayPlay$ True | AffectedZone$ Exile | Description$ You may play it this turn.
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:You can't draw cards.\n{2}{R}: Exile the top card of your library. You may play it this turn.

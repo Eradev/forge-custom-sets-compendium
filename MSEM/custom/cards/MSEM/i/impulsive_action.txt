@@ -1,0 +1,15 @@
+Name:Impulsive Action
+ManaCost:4 R
+Types:Instant
+
+A:SP$ Dig | Defined$ You | ValidTgts$ Any | TgtPrompt$ Select any target | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBDamage | SpellDescription$ Exile the top card of your library. CARDNAME deals damage to any target equal to that card's mana value plus one. Until end of turn, you may play that card.
+SVar:DBDamage:DB$ DealDamage | Defined$ Targeted | NumDmg$ X | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ RememberedCard | StaticAbilities$ Play | ExileOnMoved$ Exile | SubAbility$ DBCleanup
+
+SVar:Play:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ You may play the exiled card until end of turn.
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:X:Remembered$CardManaCost/Plus.1
+
+Oracle:Exile the top card of your library. Impulsive Action deals damage to any target equal to that card's mana value plus one. Until end of turn, you may play that card.

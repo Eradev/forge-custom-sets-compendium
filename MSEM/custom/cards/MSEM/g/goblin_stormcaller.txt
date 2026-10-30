@@ -1,0 +1,9 @@
+Name:Goblin Stormcaller
+ManaCost:3 R
+Types:Creature Goblin
+PT:2/2
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever you cast an instant or sorcery spell, target creature can't block this turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | KW$ HIDDEN CARDNAME can't block. | IsCurse$ True
+
+Oracle:Whenever you cast an instant or sorcery spell, target creature can't block this turn.

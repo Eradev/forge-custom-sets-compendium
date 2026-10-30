@@ -1,0 +1,18 @@
+Name:Malextros, Deathlord
+ManaCost:3 B B
+Types:Legendary Planeswalker Malextros
+Loyalty:4
+
+A:AB$ Pump | Cost$ AddCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature | KW$ Deathtouch | Duration$ UntilYourNextUpkeep | SpellDescription$ Up to one target creature gains deathtouch until your next upkeep.
+
+A:AB$ Sacrifice | Cost$ SubCounter<3/LOYALTY> | Planeswalker$ True | ValidTgts$ Player | TgtPrompt$ Select target player | SacValid$ Creature | Amount$ 1 | SubAbility$ DBDiscard | SpellDescription$ Target player sacrifices a creature and discards a card.
+SVar:DBDiscard:DB$ Discard | Defined$ Targeted | Mode$ TgtChoose | NumCards$ 1
+
+A:AB$ ChangeZoneAll | Cost$ SubCounter<8/LOYALTY> | Planeswalker$ True | Ultimate$ True | ChangeType$ Creature | Origin$ Graveyard | Destination$ Exile | RememberChanged$ True | SubAbility$ DBToken | SpellDescription$ Exile all creature cards from all graveyards, then create an X/X black Horror creature token with indestructible, where X is the total power of creatures exiled this way.
+SVar:DBToken:DB$ Token | TokenScript$ b_x_x_horror_indestructible | TokenPower$ X | TokenToughness$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$CardPower
+
+Oracle:[+2]: Up to one target creature gains deathtouch until your next upkeep.\n[-3]: Target player sacrifices a creature and discards a card.\n[-8]: Exile all creature cards from all graveyards, then create an X/X black Horror creature token with indestructible, where X is the total power of creatures exiled this way.
+
+DeckHas:Ability$Token

@@ -1,0 +1,12 @@
+Name:Laia's Intervention
+ManaCost:2 W
+Types:Instant
+
+A:SP$ Effect | ReplacementEffects$ RPrevent | SubAbility$ DBGainLife | SpellDescription$ Prevent all damage that would be dealt to you this turn. You gain 1 life for each creature you control.
+SVar:RPrevent:Event$ DamageDone | Prevent$ True | ActiveZones$ Command | ValidTarget$ You | Description$ Prevent all damage that would be dealt to you this turn.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ X
+SVar:X:Count$Valid Creature.YouCtrl
+
+Oracle:Prevent all damage that would be dealt to you this turn. You gain 1 life for each creature you control.
+
+DeckHas:Ability$LifeGain

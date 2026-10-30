@@ -1,0 +1,13 @@
+Name:Ingenious Trickster
+ManaCost:2 U
+Types:Creature Faerie
+PT:2/1
+
+K:Flying
+
+K:Prowess
+
+T:Mode$ SpellCast | ValidCard$ Card.nonCreature | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigUntap | TriggerDescription$ Whenever you cast a noncreature spell, untap CARDNAME.
+SVar:TrigUntap:DB$ Untap | Defined$ Self
+
+Oracle:Flying, prowess\nWhenever you cast a noncreature spell, untap Ingenious Trickster.

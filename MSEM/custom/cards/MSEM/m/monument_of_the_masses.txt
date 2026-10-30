@@ -1,0 +1,11 @@
+Name:Monument of the Masses
+ManaCost:5
+Types:Artifact
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever a creature you control enters, put a devotion counter on CARDNAME.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ DEVOTION | CounterNum$ 1
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+counters_GE35_DEVOTION | Execute$ TrigWin | TriggerDescription$ At the beginning of your upkeep, if CARDNAME has thirty-five or more devotion counters on it, you win the game.
+SVar:TrigWin:DB$ WinsGame | Defined$ You
+
+Oracle:Whenever a creature you control enters, put a devotion counter on Monument of the Masses.\nAt the beginning of your upkeep, if Monument of the Masses has thirty-five or more devotion counters on it, you win the game.

@@ -1,0 +1,7 @@
+Name:Suicidal Impulse
+ManaCost:1 B
+Types:Instant
+
+A:SP$ Destroy | Cost$ 1 B Sac<1/Creature> | ValidTgts$ Creature | SpellDescription$ Destroy target creature.
+
+Oracle:As an additional cost to cast this spell, sacrifice a creature.\nDestroy target creature.

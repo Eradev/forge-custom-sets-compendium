@@ -1,0 +1,15 @@
+Name:Bonespitting Monstrosity
+ManaCost:1 B
+Types:Creature Zombie Warrior
+PT:2/2
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ 2 | AddToughness$ 2 | AddKeyword$ Menace | AddTrigger$ TrigUnblocked | AddSVar$ TrigToken | CheckSVar$ X | SVarCompare$ LE2 | Description$ As long as an opponent has two or fewer cards in their hand, CARDNAME gets +2/+2 and has menace and "Whenever CARDNAME attacks and isn't blocked, create a 1/1 black Skeleton creature token."
+SVar:X:PlayerCountOpponents$LowestCardsInHand
+
+SVar:TrigUnblocked:Mode$ AttackerUnblocked | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever CARDNAME attacks and isn't blocked, create a 1/1 black Skeleton creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ b_1_1_skeleton
+
+Oracle:As long as an opponent has two or fewer cards in their hand, Bonespitting Monstrosity gets +2/+2 and has menace and "Whenever Bonespitting Monstrosity attacks and isn't blocked, create a 1/1 black Skeleton creature token."
+
+DeckHas:Ability$Token & Type$Skeleton
+DeckHints:Ability$Discard

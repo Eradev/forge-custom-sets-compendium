@@ -1,0 +1,10 @@
+Name:Inspiring Personality
+ManaCost:1 W W
+Types:Instant
+
+A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1 | SubAbility$ DBTokenPump | SpellDescription$ Creatures you control get +1/+1 until end of turn. Token creatures you control get an additional +1/+1 until end of turn.
+SVar:DBTokenPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl+token | NumAtt$ +1 | NumDef$ +1
+
+Oracle:Creatures you control get +1/+1 until end of turn. Token creatures you control get an additional +1/+1 until end of turn.
+
+DeckHints:Ability$Token

@@ -1,0 +1,10 @@
+Name:Night Screecher
+ManaCost:1 B
+Types:Creature Bat
+PT:1/1
+
+K:Flying
+
+A:AB$ Pump | Cost$ B | KW$ Deathtouch | SpellDescription$ This creature gains deathtouch until end of turn.
+
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\n{B}: This creature gains deathtouch until end of turn. (Any amount of damage this deals to a creature is enough to destroy it.)

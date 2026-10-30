@@ -1,0 +1,19 @@
+Name:Kragnoss, Rebellion Commander
+ManaCost:2 R R
+Types:Legendary Creature Goblin Warrior
+PT:3/3
+
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ When NICKNAME enters, create a 1/1 red Goblin creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ r_1_1_goblin
+
+T:Mode$ Attacks | ValidCard$ Goblin.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever a Goblin you control attacks, NICKNAME deals 1 damage to target creature defending player controls.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Creature.ControlledBy TriggeredDefendingPlayer | TgtPrompt$ Select target creature defending player controls | NumDmg$ 1
+
+Oracle:Haste\nWhen Kragnoss enters, create a 1/1 red Goblin creature token.\nWhenever a Goblin you control attacks, Kragnoss deals 1 damage to target creature defending player controls.
+
+SVar:HasAttackEffect:TRUE
+
+DeckHas:Ability$Token
+DeckHints:Type$Goblin

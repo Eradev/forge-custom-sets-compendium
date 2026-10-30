@@ -1,0 +1,16 @@
+Name:Seluriel's Blessing
+ManaCost:4 W W
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPutCounter | TriggerDescription$ When this enchantment enters, put a +1/+1 counter on each creature you control.
+SVar:TrigPutCounter:DB$ PutCounterAll | ValidCards$ Creature.YouCtrl | CounterType$ P1P1 | CounterNum$ 1
+
+K:ETBReplacement:Other:AddExtraCounter:Mandatory:Battlefield:Creature.YouCtrl
+SVar:AddExtraCounter:DB$ PutCounter | ETB$ True | Defined$ ReplacedCard | CounterType$ P1P1 | CounterNum$ 1 | SpellDescription$ Creatures you control enter with an additional +1/+1 counter on them.
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+HasCounters | AddKeyword$ Vigilance & Indestructible | Description$ Creatures you control with counters on them have vigilance and indestructible.
+
+Oracle:When this enchantment enters, put a +1/+1 counter on each creature you control.\nCreatures you control enter with an additional +1/+1 counter on them.\nCreatures you control with counters on them have vigilance and indestructible.
+
+DeckHas:Ability$Counters
+DeckHints:Ability$Counters

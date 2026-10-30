@@ -1,0 +1,19 @@
+Name:Seluriel, Danuri Leader
+ManaCost:3 W W
+Types:Legendary Planeswalker Seluriel
+Loyalty:5
+
+A:AB$ GainLife | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | LifeAmount$ 1 | SubAbility$ DBPutCounter | SpellDescription$ You gain 1 life. Put a +1/+1 counter on up to one target creature.
+SVar:DBPutCounter:DB$ PutCounter | ValidTgts$ Creature | TgtPrompt$ Select up to one target creature | TargetMin$ 0 | TargetMax$ 1 | CounterType$ P1P1 | CounterNum$ 1
+
+A:AB$ ChangeZone | Cost$ SubCounter<3/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | TgtPrompt$ Select target creature | Origin$ Battlefield | Destination$ Exile | RememberLKI$ True | SubAbility$ DBGainLife | SpellDescription$ Exile target creature. Its controller gains life equal to its power.
+SVar:DBGainLife:DB$ GainLife | Defined$ RememberedController | LifeAmount$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:RememberedLKI$CardPower
+
+A:AB$ Effect | Cost$ SubCounter<8/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Seluriel, Danuri Leader | Image$ emblem_seluriel_danuri_leader | StaticAbilities$ STEmblem | Duration$ Permanent | SpellDescription$ You get an emblem with "Creatures you control get +1/+1 and have double strike and lifelink."
+SVar:STEmblem:Mode$ Continuous | Affected$ Creature.YouCtrl | AffectedZone$ Battlefield | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Double Strike & Lifelink | Description$ Creatures you control get +1/+1 and have double strike and lifelink.
+
+Oracle:[+1]: You gain 1 life. Put a +1/+1 counter on up to one target creature.\n[-3]: Exile target creature. Its controller gains life equal to its power.\n[-8]: You get an emblem with "Creatures you control get +1/+1 and have double strike and lifelink."
+
+DeckHas:Ability$LifeGain|Counters

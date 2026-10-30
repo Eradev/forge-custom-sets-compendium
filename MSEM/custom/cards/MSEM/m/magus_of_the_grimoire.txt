@@ -1,0 +1,9 @@
+Name:Magus of the Grimoire
+ManaCost:2 B B
+Types:Creature Human Wizard
+PT:3/5
+
+T:Mode$ Discarded | ValidCard$ Card.OppOwn | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigDraw | TriggerDescription$ Whenever an opponent discards a card, you may draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Whenever an opponent discards a card, you may draw a card.

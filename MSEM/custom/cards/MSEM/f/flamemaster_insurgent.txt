@@ -1,0 +1,15 @@
+Name:Flamemaster Insurgent
+ManaCost:3 R
+Types:Creature Human Warrior
+PT:2/1
+
+K:First Strike
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever you cast an instant or sorcery spell, this creature gets +X/+0 until end of turn, where X is that spell's mana value.
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +X
+SVar:X:TriggeredSpellAbility$CardManaCostLKI
+
+Oracle:First strike (This creature deals combat damage before creatures without first strike.)\nWhenever you cast an instant or sorcery spell, this creature gets +X/+0 until end of turn, where X is that spell's mana value.
+
+SVar:BuffedBy:Instant,Sorcery
+DeckHints:Type$Instant|Sorcery

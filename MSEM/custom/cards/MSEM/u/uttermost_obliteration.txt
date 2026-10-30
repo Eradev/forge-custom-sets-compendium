@@ -1,0 +1,10 @@
+Name:Uttermost Obliteration
+ManaCost:4 R R R
+Types:Sorcery
+
+A:SP$ ChangeZoneAll | Origin$ Battlefield | Destination$ Exile | ChangeType$ Land | RememberLKI$ True | SubAbility$ DBRepeat | SpellDescription$ Exile all lands. For each land card exiled this way, CARDNAME deals 1 damage to that land's controller.
+SVar:DBRepeat:DB$ RepeatEach | DefinedCards$ DirectRemembered | UseImprinted$ True | RepeatSubAbility$ DBDamage | SubAbility$ DBCleanup
+SVar:DBDamage:DB$ DealDamage | Defined$ ImprintedController | NumDmg$ 1 | ConditionDefined$ Imprinted | ConditionPresent$ Card.!token | ConditionCompare$ GE1
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Exile all lands. For each land card exiled this way, Uttermost Obliteration deals 1 damage to that land's controller.

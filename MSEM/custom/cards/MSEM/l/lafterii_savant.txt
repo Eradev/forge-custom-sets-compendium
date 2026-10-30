@@ -1,0 +1,6 @@
+Name:Lafterii Savant
+ManaCost:U
+Types:Creature Human Wizard
+PT:1/1
+
+Oracle:

@@ -1,0 +1,20 @@
+Name:Arcane Might
+ManaCost:4 U
+Types:Enchantment
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCharm | TriggerDescription$ Whenever you cast an instant or sorcery spell, you may pay {1}. If you do, choose one — draw a card, then discard a card; tap target creature; target creature gains flying until end of turn; or target player mills two cards.
+SVar:TrigCharm:AB$ Charm | Cost$ 1 | Choices$ DBLoot,DBTap,DBFlying,DBMill
+
+SVar:DBLoot:DB$ Draw | NumCards$ 1 | SubAbility$ DBDiscard | SpellDescription$ Draw a card, then discard a card.
+SVar:DBDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 1
+
+SVar:DBTap:DB$ Tap | ValidTgts$ Creature | TgtPrompt$ Select target creature to tap | SpellDescription$ Tap target creature.
+
+SVar:DBFlying:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature to gain flying | KW$ Flying | SpellDescription$ Target creature gains flying until end of turn.
+
+SVar:DBMill:DB$ Mill | ValidTgts$ Player | TgtPrompt$ Select target player | NumCards$ 2 | SpellDescription$ Target player mills two cards.
+
+Oracle:Whenever you cast an instant or sorcery spell, you may pay {1}. If you do, choose one —\n• Draw a card, then discard a card.\n• Tap target creature.\n• Target creature gains flying until end of turn.\n• Target player mills two cards.
+
+DeckHints:Type$Instant|Sorcery
+DeckHas:Ability$Discard|Mill

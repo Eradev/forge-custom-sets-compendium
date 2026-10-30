@@ -1,0 +1,15 @@
+Name:Vorreia, Farseer
+ManaCost:1 G G
+Types:Legendary Planeswalker Vorreia
+Loyalty:3
+
+A:AB$ ChangeZone | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Origin$ Library | Destination$ Hand | ChangeType$ Land.Basic | ChangeTypeDesc$ basic land | ChangeNum$ 1 | SpellDescription$ Search your library for a basic land card, reveal it, put it into your hand, then shuffle.
+
+A:AB$ Effect | Cost$ SubCounter<3/LOYALTY> | Planeswalker$ True | Name$ Emblem — Vorreia, Farseer | Image$ emblem_vorreia_farseer | Abilities$ EmblemLand | Duration$ Permanent | SpellDescription$ You get an emblem with "{1}{G}: You may play an additional land this turn."
+SVar:EmblemLand:AB$ Effect | Cost$ 1 G | ActivationZone$ Command | StaticAbilities$ ExtraLand | SpellDescription$ You may play an additional land this turn.
+SVar:ExtraLand:Mode$ Continuous | Affected$ You | AdjustLandPlays$ 1 | Description$ You may play an additional land this turn.
+
+A:AB$ AnimateAll | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | ValidCards$ Creature.YouCtrl | Power$ X | Toughness$ X | Keywords$ Trample | SpellDescription$ Creatures you control gain trample and have base power and toughness X/X until end of turn, where X is the number of lands you control.
+SVar:X:Count$Valid Land.YouCtrl
+
+Oracle:[+1]: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.\n[-3]: You get an emblem with "{1}{G}: You may play an additional land this turn."\n[-6]: Creatures you control gain trample and have base power and toughness X/X until end of turn, where X is the number of lands you control.

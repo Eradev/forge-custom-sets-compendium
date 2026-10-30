@@ -1,0 +1,11 @@
+Name:Mindblaze Pyromancer
+ManaCost:2 R
+Types:Creature Human Wizard
+PT:1/1
+
+T:Mode$ DamageDone | ValidSource$ Card.YouCtrl,Emblem.YouCtrl | ValidTarget$ Player | CombatDamage$ False | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever a source you control deals noncombat damage to a player, put a +1/+1 counter on CARDNAME.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1
+
+Oracle:Whenever a source you control deals noncombat damage to a player, put a +1/+1 counter on Mindblaze Pyromancer.
+
+DeckHas:Ability$Counters

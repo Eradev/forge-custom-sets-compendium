@@ -1,0 +1,14 @@
+Name:Rageborn Phoenix
+ManaCost:1 R R
+Types:Creature Phoenix
+PT:3/1
+
+K:Flying
+
+K:Haste
+
+A:AB$ ChangeZone | Cost$ 3 R R | Origin$ Graveyard | Destination$ Hand | ActivationZone$ Graveyard | RememberChanged$ True | SubAbility$ DBDamage | SpellDescription$ Return this card from your graveyard to your hand. If you do, it deals 1 damage to any target.
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Any | TgtPrompt$ Select any target | NumDmg$ 1 | ConditionDefined$ Remembered | ConditionPresent$ Card.inZoneHand | ConditionCompare$ GE1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Flying, haste\n{3}{R}{R}: Return this card from your graveyard to your hand. If you do, it deals 1 damage to any target.

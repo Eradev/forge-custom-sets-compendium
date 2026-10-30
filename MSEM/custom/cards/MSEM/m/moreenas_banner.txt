@@ -1,0 +1,9 @@
+Name:Moreena's Banner
+ManaCost:3
+Types:Artifact
+
+A:AB$ Mana | Cost$ T | Produced$ W | SpellDescription$ Add {W}.
+
+A:AB$ Pump | Cost$ W T | ValidTgts$ Creature | KW$ Vigilance | SpellDescription$ Target creature gains vigilance until end of turn.
+
+Oracle:{T}: Add {W}.\n{W}, {T}: Target creature gains vigilance until end of turn.

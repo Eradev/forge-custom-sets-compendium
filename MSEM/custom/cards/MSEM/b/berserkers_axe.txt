@@ -1,0 +1,11 @@
+Name:Berserker's Axe
+ManaCost:3
+Types:Artifact Equipment
+
+K:Equip:3
+
+T:Mode$ Attacks | ValidCard$ Creature.EquippedBy | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever equipped creature attacks, it gets +X/+0 until end of turn, where X is its power.
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredAttackerLKICopy | NumAtt$ +X
+SVar:X:TriggeredAttacker$CardPower
+
+Oracle:Whenever equipped creature attacks, it gets +X/+0 until end of turn, where X is its power.\nEquip {3} ({3}: Attach to target creature you control. Equip only as a sorcery.)

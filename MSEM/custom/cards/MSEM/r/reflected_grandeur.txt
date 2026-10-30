@@ -1,0 +1,8 @@
+Name:Reflected Grandeur
+ManaCost:3 G
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl | AddPower$ AffectedX | AddToughness$ AffectedX | Description$ Each creature you control gets +1/+1 for each other creature you control with the same name.
+SVar:AffectedX:Count$Valid Creature.Other+sharesNameWith+YouCtrl
+
+Oracle:Each creature you control gets +1/+1 for each other creature you control with the same name.
