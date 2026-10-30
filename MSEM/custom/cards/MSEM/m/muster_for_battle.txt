@@ -2,7 +2,7 @@ Name:Muster for Battle
 ManaCost:2 W
 Types:Instant
 
-A:SP$ Token | TokenAmount$ 2 | TokenScript$ w_1_1_soldier | RememberTokens$ True | SubAbility$ DBEffect | SpellDescription$ Create two 1/1 white Soldier creature tokens. Prevent all damage that would be dealt to them this turn.
+A:SP$ Token | TokenScript$ w_1_1_soldier | TokenAmount$ 2 | RememberTokens$ True | SubAbility$ DBEffect | SpellDescription$ Create two 1/1 white Soldier creature tokens. Prevent all damage that would be dealt to them this turn.
 SVar:DBEffect:DB$ Effect | ReplacementEffects$ RPrevent | RememberObjects$ Remembered | SubAbility$ DBCleanup
 SVar:RPrevent:Event$ DamageDone | Prevent$ True | ValidTarget$ Card.IsRemembered | Description$ Prevent all damage that would be dealt to them this turn.
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True

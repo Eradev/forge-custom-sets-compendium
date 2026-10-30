@@ -6,8 +6,8 @@ PT:3/3
 K:Flying
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Wizard.YouCtrl+Other | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever another Wizard you control enters, you draw a card and each opponent discards a card.
-SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1 | SubAbility$ DBDiscard
-SVar:DBDiscard:DB$ Discard | Defined$ Player.Opponent | NumCards$ 1 | Mode$ TgtChoose
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ Player.Opponent | Mode$ TgtChoose
 
 A:AB$ CopyPermanent | Named$ Revive | Cost$ 5 U B ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | SorcerySpeed$ True | Defined$ Self | RemoveCost$ True | PrecostDesc$ Revive — | SpellDescription$ Create a token that's a copy of this card except it has no mana cost. Revive only as a sorcery.
 

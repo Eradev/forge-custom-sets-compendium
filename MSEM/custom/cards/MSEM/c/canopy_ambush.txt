@@ -2,7 +2,7 @@ Name:Canopy Ambush
 ManaCost:2 G
 Types:Instant
 
-A:SP$ Token | TokenAmount$ 2 | TokenScript$ g_1_1_elf_scout | PumpKeywords$ Reach | PumpDuration$ EOT | SpellDescription$ Create two 1/1 green Elf Scout creature tokens. They gain reach until end of turn.
+A:SP$ Token | TokenScript$ g_1_1_elf_scout | TokenAmount$ 2 | PumpKeywords$ Reach | PumpDuration$ EOT | SpellDescription$ Create two 1/1 green Elf Scout creature tokens. They gain reach until end of turn.
 
 Oracle:Create two 1/1 green Elf Scout creature tokens. They gain reach until end of turn.
 

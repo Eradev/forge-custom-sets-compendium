@@ -2,7 +2,7 @@ Name:Way of Kindred Mind
 ManaCost:1 U U
 Types:Instant
 
-A:SP$ Token | TokenAmount$ 2 | TokenScript$ c_a_idol_sac | SubAbility$ DBCounter | SpellDescription$ Create two Idol tokens, then counter target spell unless its controller pays {1} for each Idol you control. (They're artifacts with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+A:SP$ Token | TokenScript$ c_a_idol_sac | TokenAmount$ 2 | SubAbility$ DBCounter | SpellDescription$ Create two Idol tokens, then counter target spell unless its controller pays {1} for each Idol you control. (They're artifacts with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
 SVar:DBCounter:DB$ Counter | TargetType$ Spell | TgtZone$ Stack | ValidTgts$ Card | TgtPrompt$ Select target spell | UnlessCost$ X | UnlessPayer$ TargetedController
 SVar:X:Count$Valid Idol.YouCtrl
 
