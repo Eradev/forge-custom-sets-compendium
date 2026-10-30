@@ -1,0 +1,15 @@
+Name:Veiled Virtuoso
+ManaCost:2 U U U
+Types:Creature Djinn
+PT:4/4
+
+K:Flying
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ ConcordCount | SVarCompare$ GE4 | Execute$ TrigExile | TriggerDescription$ Concord — At the beginning of your upkeep, if there are four or more card types among permanents you control, exile the top card of your library. You may cast that card this turn without paying its mana cost.
+SVar:TrigExile:DB$ Dig | DigNum$ 1 | ChangeNum$ 1 | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ Remembered | StaticAbilities$ STPlay | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | Affected$ Card.IsRemembered | AffectedZone$ Exile | MayPlay$ True | MayPlayWithoutManaCost$ True | Description$ You may cast that card this turn without paying its mana cost.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:ConcordCount:Count$Valid Permanent.YouCtrl$CardTypes
+
+Oracle:Flying\nConcord — At the beginning of your upkeep, if there are four or more card types among permanents you control, exile the top card of your library. You may cast that card this turn without paying its mana cost.

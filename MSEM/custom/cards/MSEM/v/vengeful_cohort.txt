@@ -1,0 +1,12 @@
+Name:Vengeful Cohort
+ManaCost:1 B
+Types:Creature Human Survivor
+PT:1/2
+
+T:Mode$ ChangesZone | ValidCard$ Survivor.Other+YouCtrl | Origin$ Battlefield | Destination$ Graveyard | Execute$ TrigDrain | TriggerZones$ Battlefield | TriggerDescription$ Whenever a Survivor you control dies, each opponent loses 1 life and you gain 1 life.
+SVar:TrigDrain:DB$ LoseLife | Defined$ Opponent | LifeAmount$ 1 | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 1
+
+Oracle:Whenever a Survivor you control dies, each opponent loses 1 life and you gain 1 life.
+
+DeckHints:Type$Survivor
