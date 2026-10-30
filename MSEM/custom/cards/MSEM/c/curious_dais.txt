@@ -1,0 +1,14 @@
+Name:Curious Dais
+ManaCost:3
+Types:Artifact
+
+T:Mode$ Phase | Phase$ Upkeep | FirstUpkeep$ True | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCharm | TriggerDescription$ At the beginning of your first upkeep each turn, choose one —
+SVar:TrigCharm:DB$ Charm | Choices$ DBReplaceMain1,DBReplaceMain2
+
+SVar:DBReplaceMain1:DB$ SkipPhase | Defined$ You | Phase$ Main1 | Duration$ EndOfTurn | SubAbility$ DBAddUpkeep | SpellDescription$ Replace your first main phase this turn with an additional upkeep step.
+SVar:DBAddUpkeep:DB$ AddPhase | ExtraPhase$ Upkeep | AfterPhase$ Draw
+
+SVar:DBReplaceMain2:DB$ SkipPhase | Defined$ You | Phase$ Main2 | Duration$ EndOfTurn | SubAbility$ DBAddCombat | SpellDescription$ Replace your second main phase this turn with an additional combat phase.
+SVar:DBAddCombat:DB$ AddPhase | ExtraPhase$ Combat | AfterPhase$ EndCombat
+
+Oracle:At the beginning of your first upkeep each turn, choose one —\n• Replace your first main phase this turn with an additional upkeep step.\n• Replace your second main phase this turn with an additional combat phase.
