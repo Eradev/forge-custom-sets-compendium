@@ -1,0 +1,15 @@
+Name:Warrior's Discipline
+ManaCost:1 G
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounter | TriggerDescription$ When this Aura enters, put a +1/+1 counter on enchanted creature.
+SVar:TrigCounter:DB$ PutCounter | Defined$ Enchanted | CounterType$ P1P1
+
+T:Mode$ DamageDone | ValidSource$ Creature.EnchantedBy | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigDouble | TriggerZones$ Battlefield | TriggerDescription$ Whenever enchanted creature deals combat damage to a player, double the number of +1/+1 counters on it.
+SVar:TrigDouble:DB$ MultiplyCounter | Defined$ TriggeredSource | CounterType$ P1P1
+
+Oracle:Enchant creature\nWhen this Aura enters, put a +1/+1 counter on enchanted creature.\nWhenever enchanted creature deals combat damage to a player, double the number of +1/+1 counters on it.
+
+DeckHas:Ability$Counters
