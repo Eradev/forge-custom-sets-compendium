@@ -1,0 +1,279 @@
+[metadata]
+Code=MSEM_ATB
+Name=Al Tabaq
+Date=2019-05-01
+Type=Custom
+Booster=7 Common, 5 Uncommon, 2 RareMythic
+
+[cards]
+1 R Archangel of Accord @Caelan Stokkermans
+2a M Asham's Path @Jeffrey Smith & Peter Mohrbacher
+3 C Bazaar Equestrian @Matt Lau
+4 R Bewitching Vapors @Alexandra Volkova
+5 U Brittle Bequest @Matchack
+6 C Buried by Time @Sara Gilardi
+7 U Cass-o'-Warrior @Ewa Krzyzewska
+8 C Djinni Imprisonment @Keja Blank
+9 C Dune Wraith @Heroes of Newerth
+10 C Ephemeral Soultender @Mahea Rodrigues
+11 C Globule of Sanctuary @ScribblePadStudios
+12 R Guiding Light @Brett Macdonald
+13 C Hajir Sentinel @Alexandr Elichev
+14 C Hall of Remembrance @Allison Chin
+15a U Hand of Fidelity @Reyna Rochin & Shen Fei
+16a R Keeper of Holy Lands @Katja Skorjanc & Nele Diel
+17 C Lurking Lahasia @Maksym Harahulin
+18 C Masabh Legionnaire @Damian Audino
+19 M Mercantile Accords @Christian Auer
+20 U Mortal Pilgrimage @Florent Llamas
+21 C Outflank @Alex Peryan
+22 C Palace Dancer @Candice Li
+23 C Patron of Asham @Yujin Choo
+24 U Pristine Duelist @Philipp Kruse
+25 R Ridge Warden @Alexis Somes
+26 U Roving Chaplains @Ryan Groskamp
+27a C Sandbank Guardian @Russell Dongjun Lu
+28 R Sandstreamer @Remton
+29 C Scimitar Techniques @Jeremy Wilson
+30 U Seraph of Renewal @Arthur Lira
+31 M Seto San, Summer Blossom @Luc Tuyet Ky
+32 U Shawlbinder @Aaron Miller
+33 R Skyline Tracer @Candice Broersma
+34 U Sleepless Spirit @Anthony Trager
+35 U Stasis Snare @Teejay Villahermosa
+36 U Suraj Militant @Angela Sasser
+37 U Venerable Judgment @Waiji Choo
+38 C Apt Countermeasure @Cindy Avelino
+39 R Astral Alignment @Shellz — art
+40a C Bashful Drake @Jean-Michel Trauscht
+41 C Bazaar Informant @Ryan Teo
+42 C Canyon Mystic @Jerome Lalande
+43 U Carpet Racers @William Smith
+44 C Chart the Stars @Asim Steckel
+45 U Crested Crustacean @Thomas Chamberlain-Keen
+46 R Decree of Bias @Cristina Lavina
+47 C Dilapidate @Vito Salamone
+48 U Dissipate @Timi Honkanen
+49 U Djinni of Whispers @Martin de Diego
+50 C Eccentric Musings @Aliya Chen
+51 U Follow the Light @Thorkild Skov
+52 R Gentry Infiltrator @Francesca Resta
+53 C Globule of Intuition @Anne Stokes
+54 M Hafiq the Wise @Mohamed Taaeb
+55 R Hajir Soothsayer @Elvira Shatunova
+56a U Hand of Dominion @Allen Morris
+57a R Horizon Augur @Paul Ray & Werecat Way
+58a M Iekin's Portal @Nele Diel & Peter Mohrbacher
+59 C Judicious Djinni @Benjamin Goutte
+60 U Meat Puppet @AyyaSAP
+61 U Memoria Thief @Lorenzo Massaro
+62 M Mischievous Romish @Cristian Montes Lynch
+63 R Morrow Probe @Cristina Lavina
+64 C Oasis Glutton @Anna Pacewicz
+65 C Obscuring Sandstorm @Markus Just
+66 C One With the Wind @Efflam Mercier
+67 U Outspoken Seminar @Asim Steckel
+68 U Raving Rover @Anthony Pismarov
+69 C Sage of the Sands @Florian Salomez
+70 C Sensory Gouger @Raymond Minnaar
+71 U Sights Beyond @Amir Levi
+72 C Stabilize @Blake Davis
+73 U Sticky Fingers (MSEM) @Ryan Hong
+74 R Veiled Virtuoso @Jessica Oyhenart
+75 C Atrophy @Mattias 2
+76 U Back-Alley Vandal @Grant Griffin
+77a M Bal's Descent @Gal Or & Peter Mohrbacher
+78 C Bitter Wanderer @Martin GAO
+79 C Bleak Condor @juanco
+80 U Blood Jade Prophet @Ibrahem Swaid
+81 C Chosen of Bal @Grant Griffin
+82 U Cruel Consultation @Michael Berube
+83 M Deathless Siege @Bayard Wu
+84 R Depravity @Carlos Asenjo
+85 C Due Judgment @Simon Sweetman
+86 C Exemplar of Disdain @Krzysztof Bieniawski
+87 U Flayed Dunerazer @Jarrett Kelly
+88 R Gaunt Abnormality @Simon Fetscher
+89 C Globule of Agony @homoseptimus
+90a U Hand of Consequence @Grant Griffin & Alexander IV
+91 R Liege of Luxury @Xavier Ribiero
+92 U Liturgic Tutor @Steven Howard
+93 C Loose Threads @Mateusz Dabrowski
+94 M Mukhif the Grim @Daria Rashev
+95 C Princely Mettle @Ubisoft
+96 U Ruthless Vagrant @Grant Griffin
+97 R Selfish Journeyman @Eduardo Vargas
+98 C Shadow Ambusher @Aaron Joseph
+99 U Shadowband Consul @Hyeon Gwan Nam
+100 U Sink into the Floor @Conjuror the Game
+101 C Slum Scrounger @David Alvarez
+102 U Strangulate @Dimitri Neron
+103 R Sultan of Avarice @HELMUTTT
+104 U Tip the Scales @Farsya Bangsart
+105a R Tomb Steward @Katerina Karamalikova & Wayne Wu
+106a C Twisted Gladiator @Artem Khorchev
+107 C Umbral Stalker @Blake Davis
+108 U Unfettered Atrocity @Wayne Parker
+109 C Vengeful Cohort @Davood Diba
+110 R Violent Collapse @Nathan Elmer
+111 C Warpblade Warrior @Davood Diba
+112 U Badland Zealot @Kory Hubbell
+113 R Beastback Raider @Narendra B. Adi
+114 U Bizarre Bazaar @Yuwei Li
+115 U Bloodboil Harlequin @Michele Giorgi
+116 R Brazen Sacrilege @Joel Chaim Holtzman
+117 R Curio Pavilion @Stephen Stark
+118 C Dreamchaser Djinni @Emile Denis
+119a R Emerald Warcaller @Tiago Silverio & Jorge Saldana
+120 M Emissary of Antiquity @Simon Urban
+121 C Encampment Raid @Anthony Avon
+122 C Encrusted Sahalia @Edwin van den Heuvel
+123 C Fanciful Bloom @Sanjin Halimic
+124a C Fervent Ensign @Autumn Rain Turkel
+125 U Fierce Contempt @Diana Franco
+126 C Globule of Turmoil @TeraNova
+127a U Hand of Fury @Kaj Kasprzyk & Donovan Valdes
+128 C Harsh Erosion @Damian Audino
+129 C Heat Ray @Francois Coutu
+130 R Herald of the Humble @Applibot, Inc.
+131 U Hostile Atmosphere @Attila Varga
+132 C Impish Delights @Alexander Smolyakov
+133 U Madcap Mercenary @Meros Will
+134 M Menna Al-Mejjat @Annika Maar
+135a M Ninhasir's March @Pablo Gomez & Peter Mohrbacher
+136 C Nurtured Sandwolf @Rostyslav Zagornov
+137 U Rapacious Rattler @Alex Ander
+138 U Rubble Scavenger @Alexandre Pinto
+139 C Rush of Adrenaline @Faraz Shanyar
+140 C Scorned Figurant @Casondra Logan
+141 C Siltsplitter @Travis Fam
+142 C Skin from Bone @Bruno Henriques
+143 U Smoldering Djinni @Petar Penev
+144 C Suraj Outrider @Gordon Napier
+145 R Trove Tyrant @Piero Vettori
+146 U Venom Infusion @Vicki Pangestu
+147 U Wandering Hussar @Nathan Colot
+148 R Wayfaring Falconer @Anna Fehr
+149 U Beetleback Forager @Tiago Sousa
+150 U Bleak Gorge Convoy @Allen Morris
+151 R Broadened Horizons @Jeffrey Smith
+152 C Colossal Camouflage @Michal Matczak
+153 C Court Beastmaster @Jerome Lalande
+154 U Crossridge Commerce @Alexey Rudikov
+155 C Dromedary Packbeast @Mateusz Majewski
+156 C Dutiful Camel @TSRodgriguez
+157 U Flora Acolyte @Kassandra Vasquez
+158 C Globule of Vigor @homoseptimus
+159 C Hajir Allegiant @William Veillon
+160a U Hand of the Harvest @Ryan Chu & Serina Mo
+161 R Hero of the Stained Blade @SunsetAgain
+162 C Highland Hermit @Peter Gregory
+163 R Kalib Kabir @Jakob Vogel
+164 M Magnific Wilderkin @Michelle Tolo
+165 R Menagerie Expo @Anthony Hutchings
+166 R Mesa Brute @Domen Kozelj
+167 C Oasis Cartography @Bruno Gentile
+168 U Petal Scatterer @Donovan Valdes
+169 U Plated Crusher @Marco Gorlei
+170 U Promised Land @Carson Marlow
+171 U Raise a Ruckus @Basith Ibrahim
+172 C Rift Prowler @Steve Shi
+173a C Roaming Falconer @Adrian Jacques & Aldi Abujan
+174 C Ruins Monitor @Piero Vettori
+175a M Sabne's Autumn @Quentin Mabille & Peter Mohrbacher
+176 U Sahalia Dragoons @Alejandro Arevalo
+177 U Salt Flat Survivors @Klaus Wittmann
+178 R Scaleback Steed @Asim Steckel
+179a R Sower of Wishes @Will Gist & ArtVorteX Holopainen
+180 C Strike Down @Konstantinos Skenteridis
+181 C Sultan's Strength @Romain Leguay
+182 M Thriving Hydra @Dennis Wong
+183 C Verdant Haven @Calder Moore
+184 C Visceral Assault @Daren Bader
+185 U Warrior's Discipline @Batu Ince
+186 U Aeriform Remnant @Pedro Lopes
+187 C Alquyut Mount @Guild Wars 2
+188 R Ash-Withered Cloak @James Zapata
+189 C Bearer of Old Growth @Shane Taylor
+190 C Blade of Burning Sand @Matt Hansen
+191 U Blighted Dagger @Blake Davis
+192 R Chromatic Lantern @Stephane Gaudette
+193 U Churning Rough-Roller @Deiv Calviz
+194 C Congruous Simulacrum @TyphonArt
+195 R Curious Dais @Amisman666
+196 R Dancing Mirrorblade @Paige McIntosh
+197 C Drift Tracer @Gianluca Rolli
+198 C Effigy of Creation @Ooki Draws
+199 C Effigy of Destiny @Nuare Studio
+200 C Effigy of Harvest @Jun Seong Park
+201 C Effigy of Morality @Svetlin Velinov
+202 C Effigy of Wisdom @Petra Nikolic
+203 R Egg of Avarice @Leesha Hannigan
+204 R Facsimile Sculptor @Paul Nong
+205 C Furnace Golem @Nuare Studio
+206 C Gateway Statues @Timi Honkanen
+207 C Gemplate Golem @Yutthaphong Kaewsuk
+208 R Gilded Wyvern @Steve Argyle
+209 C Granite Plating @CristianAC
+210 U Gulch Custodian @Norris Lin
+211 U Helm of Princes @Bruno Machado
+212 C Idol of the Dead God @Oliver Guiney
+213 U Igneous Pulverizer @Ekaterina Zolotilina
+214 C Kaleidostone @Chippy
+215 U Laden Bruiser @Nuare Studio
+216 C Macabre Ruins @Blaz Porenta
+217 U Meddling Gargoyle @Thomas Chamberlain-Keen
+218 C Palace Gargoyle @Alina Siriachenko
+219 U Plumed Carpet @Tomislav Jagnjic
+220 R Prismatic Basilisk @Joan Maldonado
+221 U Promenade Banner @Meteorskies
+222 R Proselytic Shrine @Sean Samuels
+223 C Runed Servitor @Mike Bierek
+224 R Saber of Defiled Rites @Dean Spencer
+225 U Scabrous Automaton @Miguel Roig-Gironella
+226 U Secluded Monument @Josh Norman
+227 R Seismic Colossus @Alexander Ovchinnikov
+228 U Shrapnel Golem @Seungjin Woo
+229 C Silt Conduit @In Chun Park
+230 C Silt-Trench Brute @Brody Bellon
+231 C Soul Chalice @Esao Andrews
+232 C Strider Harness @Mariusz Kozik
+233 U Temple Attendant @Wonwoo Cho
+234 R Volatile Stonework @Markus Neidel
+235 U Zoetic Tomb @Mark Akopov
+236 R Barren Boneyard @Yongsub Noh
+237 U Calcified Dunes @Martin Deschambault
+238 R El-Mazar, Wayward Palace @Gabriel Yeganyan
+239 U Flourishing Dunes @Jonathan Dufresne
+240 U Highland Dunes @Jason Scheier
+241 R Immolated Grave @David Ko
+242 C Painted Bluffs @Dominick Critelli
+243 R Ravaged Monument @Gabriel Romero
+244 C Sandswept Bazaar @Artur Sadlos
+245 U Saturated Dunes @Martin Deschambault
+246 C Skeletal Oasis @Ricardo Lima
+247 U Stygian Dunes @Jon Gregerson
+248 R Sunrazed Ruins @Anthony Pismarov
+249 R Tomb of Great Drakes @Connor Fischer
+
+[token]
+1 c_2_2_spirit_flying @elbardo
+2 scimitar_techniques @Lilith-the-5th
+3 w_1_1_spirit_flying @tsabo6
+4 w_1_1_warrior_lifelink @Malte J. Zirbel
+5 b_1_1_bird_flying_deathtouch @Thierry Doizon
+6 b_x_x_djinn_horror @elgama
+7 r_5_5_dragon_flying_haste @LucasGraciano
+8 r_1_1_warrior_haste @GreyHues
+9 g_4_4_beast_trample @VincentVanHoot
+10 blossom @AquaSixio
+11 c_a_treasure_sac @Mauro Dal Bo
+
+[other]
+12 emblem_mischievous_romish @Cristian Montes Lynch
+
+[WalkerTypes]
+Menna
+Mukhif
+Romish
+Seto
