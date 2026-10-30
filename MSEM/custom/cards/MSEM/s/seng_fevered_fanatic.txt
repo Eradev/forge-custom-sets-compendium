@@ -4,7 +4,7 @@ Types:Legendary Creature Zombie Wizard
 PT:2/1
 
 T:Mode$ Phase | Phase$ Draw | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ At the beginning of your draw step, draw an additional card and you lose 1 life. Then if you have six or fewer cards in hand, sacrifice a creature.
-SVar:TrigDraw:DB$ Draw | Defined$ You | SubAbility$ DBLoseLife
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBLoseLife
 SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1 | SubAbility$ DBSacrifice
 SVar:DBSacrifice:DB$ Sacrifice | Defined$ You | SacValid$ Creature | ConditionCheckSVar$ HandSize | ConditionSVarCompare$ LE6
 SVar:HandSize:Count$ValidHand Card.YouOwn

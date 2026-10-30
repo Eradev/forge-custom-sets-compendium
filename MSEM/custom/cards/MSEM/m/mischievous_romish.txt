@@ -5,7 +5,7 @@ Loyalty:3
 
 A:AB$ Scry | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | ScryNum$ 3 | SpellDescription$ Scry 3.
 
-A:AB$ NameCard | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | Defined$ You | SubAbility$ DBMill | SpellDescription$ Choose a card name, then mill a card. If that card has the chosen name, you draw three cards. Otherwise, you draw a card.
+A:AB$ NameCard | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | SubAbility$ DBMill | SpellDescription$ Choose a card name, then mill a card. If that card has the chosen name, you draw three cards. Otherwise, you draw a card.
 SVar:DBMill:DB$ Mill | RememberMilled$ True | SubAbility$ DBDraw
 SVar:DBDraw:DB$ Draw | NumCards$ X
 SVar:X:Count$Compare Y GE1.3.1
