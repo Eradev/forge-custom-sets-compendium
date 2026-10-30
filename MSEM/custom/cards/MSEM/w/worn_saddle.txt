@@ -1,0 +1,10 @@
+Name:Worn Saddle
+ManaCost:2
+Types:Artifact Equipment
+
+K:Equip:2
+
+T:Mode$ Attacks | ValidCard$ Card.AttachedBy | Execute$ TrigPump | TriggerDescription$ Whenever equipped creature attacks, it gets +2/+2 and gains trample until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +2 | NumDef$ +2 | KW$ Trample
+
+Oracle:Whenever equipped creature attacks, it gets +2/+2 and gains trample until end of turn.\nEquip {2}

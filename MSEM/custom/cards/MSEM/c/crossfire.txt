@@ -1,0 +1,11 @@
+Name:Crossfire
+ManaCost:R
+Types:Sorcery
+
+A:SP$ DamageAll | ValidCards$ Creature | NumDmg$ 1 | SpellDescription$ This spell deals 1 damage to each creature.
+
+T:Mode$ Blocks | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ PayQuickdraw | TriggerDescription$ Quickdraw {2}{R} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)
+T:Mode$ AttackerBlocked | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ PayQuickdraw | TriggerDescription$ Quickdraw {2}{R} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)
+SVar:PayQuickdraw:DB$ Play | Named$ Quickdraw | PlayCost$ 2 R | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
+
+Oracle:This spell deals 1 damage to each creature.\nQuickdraw {2}{R} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)

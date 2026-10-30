@@ -1,0 +1,13 @@
+Name:Patron of the Ancients
+ManaCost:3 G G
+Types:Creature Centaur Spirit
+PT:4/4
+
+K:Hexproof
+
+S:Mode$ ReduceCost | ValidCard$ Card | Type$ Spell | Activator$ You | Amount$ X | EffectZone$ Battlefield | Description$ Spells you cast cost {1} less to cast for each creature you control that shares a creature type with that spell.
+SVar:X:Count$Valid Creature.YouCtrl+sharesCreatureTypeWith
+
+Oracle:Hexproof\nSpells you cast cost {1} less to cast for each creature you control that shares a creature type with that spell.
+
+DeckHints:Type$Centaur|Spirit
