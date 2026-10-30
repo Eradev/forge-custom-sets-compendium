@@ -1,4 +1,4 @@
-Name:Scimitar Techniques
+Name:Aura token
 ManaCost:no cost
 Colors:white
 Types:Enchantment Aura

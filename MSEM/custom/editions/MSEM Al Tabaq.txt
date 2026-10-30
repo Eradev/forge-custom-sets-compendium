@@ -258,7 +258,7 @@ Booster=7 Common, 5 Uncommon, 2 RareMythic
 
 [token]
 1 c_2_2_spirit_flying @elbardo
-2 scimitar_techniques @Lilith-the-5th
+2 w_aura_first_strike @Lilith-the-5th
 3 w_1_1_spirit_flying @tsabo6
 4 w_1_1_warrior_lifelink @Malte J. Zirbel
 5 b_1_1_bird_flying_deathtouch @Thierry Doizon
