@@ -1,0 +1,10 @@
+Name:Prophetic Flames
+ManaCost:3 R
+Types:Sorcery
+
+A:SP$ DealDamage | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ 3 | SubAbility$ DBScry | SpellDescription$ CARDNAME deals 3 damage to target creature. If you control a Goblin, scry 2.
+SVar:DBScry:DB$ Scry | ScryNum$ 2 | ConditionPresent$ Goblin.YouCtrl | ConditionCompare$ GE1 | ConditionDescription$ If you control a Goblin,
+
+Oracle:Prophetic Flames deals 3 damage to target creature. If you control a Goblin, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)
+
+DeckHints:Type$Goblin

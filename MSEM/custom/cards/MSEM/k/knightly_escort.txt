@@ -1,0 +1,10 @@
+Name:Knightly Escort
+ManaCost:4 W
+Types:Sorcery
+
+A:SP$ Token | TokenScript$ w_2_2_knight_vigilance | SubAbility$ DBPopulate | SpellDescription$ Create a 2/2 white Knight creature token with vigilance, then populate. (Create a token that's a copy of a creature token you control.)
+SVar:DBPopulate:DB$ CopyPermanent | Populate$ True
+
+Oracle:Create a 2/2 white Knight creature token with vigilance, then populate. (Create a token that's a copy of a creature token you control.)
+
+DeckHas:Ability$Token

@@ -1,0 +1,11 @@
+Name:Twinforged Golem
+ManaCost:5
+Types:Artifact Creature Golem
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 3/3 colorless Golem artifact creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ c_3_3_a_golem
+
+Oracle:When this creature enters, create a 3/3 colorless Golem artifact creature token.
+
+DeckHas:Ability$Token

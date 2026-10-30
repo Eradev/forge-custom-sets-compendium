@@ -1,0 +1,17 @@
+Name:Dark Desire
+ManaCost:3 B
+Types:Enchantment Aura
+
+K:Enchant:Creature
+SVar:AttachAILogic:Curiosity
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDiscard | TriggerDescription$ When this Aura enters, target player discards a card.
+SVar:TrigDiscard:DB$ Discard | ValidTgts$ Player | TgtPrompt$ Select target player | NumCards$ 1 | Mode$ TgtChoose
+
+T:Mode$ DamageDone | ValidSource$ Creature.EnchantedBy | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever enchanted creature deals combat damage to a player, you draw a card and you lose 1 life.
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1 | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 1
+
+Oracle:Enchant creature\nWhen this Aura enters, target player discards a card.\nWhenever enchanted creature deals combat damage to a player, you draw a card and you lose 1 life.
+
+DeckHas:Ability$Discard

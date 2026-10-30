@@ -1,0 +1,11 @@
+Name:Resourceful Impersonator
+ManaCost:3 U
+Types:Creature Shapeshifter
+PT:0/0
+
+K:MayFlashCost:2
+
+K:ETBReplacement:Copy:DBCopy:Optional
+SVar:DBCopy:DB$ Clone | Choices$ Creature.Other | SpellDescription$ You may have CARDNAME enter as a copy of any creature on the battlefield.
+
+Oracle:You may cast this spell as though it had flash if you pay an additional {2} to cast it.\nYou may have Resourceful Impersonator enter as a copy of any creature on the battlefield.

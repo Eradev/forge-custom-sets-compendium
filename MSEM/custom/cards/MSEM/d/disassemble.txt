@@ -1,0 +1,7 @@
+Name:Disassemble
+ManaCost:U
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Creature,Artifact | Origin$ Battlefield | Destination$ Hand | SpellDescription$ Return target artifact or creature to its owner's hand.
+
+Oracle:Return target artifact or creature to its owner's hand.

@@ -1,0 +1,14 @@
+Name:Well of Eternity
+ManaCost:X X 2
+Types:Artifact
+
+K:etbCounter:CHARGE:X
+SVar:X:Count$xPaid
+
+T:Mode$ Phase | Phase$ Main1 | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigMana | TriggerDescription$ At the beginning of your first main phase, choose a color, then add one mana of that color for each charge counter on this artifact.
+SVar:TrigMana:DB$ Mana | Produced$ Any | Amount$ Y
+SVar:Y:Count$CardCounters.CHARGE
+
+Oracle:This artifact enters with X charge counters on it.\nAt the beginning of your first main phase, choose a color, then add one mana of that color for each charge counter on this artifact.
+
+DeckHas:Ability$Counters

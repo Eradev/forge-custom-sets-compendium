@@ -1,0 +1,18 @@
+Name:Soul of Iscathia
+ManaCost:W U B R G
+Types:Creature Avatar
+PT:5/5
+
+K:Flying
+
+K:Trample
+
+K:Haste
+
+A:AB$ CopyPermanent | Cost$ W U B R G | ValidTgts$ Creature.Other | TgtPrompt$ Select another target creature | SetColor$ all | AddKeywords$ Haste | SpellDescription$ Create a token that's a copy of another target creature except it's all colors and has haste.
+
+A:AB$ CopyPermanent | Cost$ W U B R G ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | ValidTgts$ Creature | TgtPrompt$ Select target creature | SetColor$ all | AddKeywords$ Haste | SpellDescription$ Create a token that's a copy of target creature except it's all colors and has haste.
+
+Oracle:Flying, trample, haste\n{W}{U}{B}{R}{G}: Create a token that's a copy of another target creature except it's all colors and has haste.\n{W}{U}{B}{R}{G}, Exile this card from your graveyard: Create a token that's a copy of target creature except it's all colors and has haste.
+
+DeckHas:Ability$Token

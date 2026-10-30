@@ -1,0 +1,11 @@
+Name:Spreading Disease
+ManaCost:2 B
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ -2 | NumDef$ -2 | IsCurse$ True | SubAbility$ DBDelayedTrigger | SpellDescription$ Target creature gets -2/-2 until end of turn.
+SVar:DBDelayedTrigger:DB$ DelayedTrigger | Mode$ ChangesZone | RememberObjects$ Targeted | ValidCard$ Card.IsTriggerRemembered | Origin$ Battlefield | Destination$ Graveyard | ThisTurn$ True | Execute$ DBToken | SpellDescription$ When that creature dies this turn, create a tapped 2/2 black Zombie creature token.
+SVar:DBToken:DB$ Token | TokenScript$ b_2_2_zombie | TokenTapped$ True
+
+Oracle:Target creature gets -2/-2 until end of turn. When that creature dies this turn, create a tapped 2/2 black Zombie creature token.
+
+DeckHas:Ability$Token

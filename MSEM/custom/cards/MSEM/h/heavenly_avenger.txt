@@ -1,0 +1,10 @@
+Name:Heavenly Avenger
+ManaCost:3 W
+Types:Creature Angel
+PT:3/4
+
+K:Flying
+
+K:Lifelink
+
+Oracle:Flying, lifelink

@@ -1,0 +1,6 @@
+Name:Vinecreeper
+ManaCost:2 G
+Types:Creature Elemental
+PT:4/2
+
+Oracle:

@@ -1,0 +1,9 @@
+Name:Cutthroat Spy
+ManaCost:1 U
+Types:Creature Human Rogue
+PT:1/2
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player.Opponent | CombatDamage$ True | OptionalDecider$ You | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever this creature deals combat damage to a player, you may draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Whenever this creature deals combat damage to a player, you may draw a card.

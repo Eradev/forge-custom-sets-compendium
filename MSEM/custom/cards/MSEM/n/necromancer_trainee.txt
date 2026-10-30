@@ -1,0 +1,6 @@
+Name:Necromancer Trainee
+ManaCost:1 B
+Types:Creature Human Wizard
+PT:2/2
+
+Oracle:

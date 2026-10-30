@@ -1,0 +1,14 @@
+Name:Bloodstained Knife
+ManaCost:2
+Types:Artifact Equipment
+
+K:Equip:2
+
+S:Mode$ Continuous | AffectedDefined$ Equipped | AddPower$ X | AddToughness$ X | Description$ Equipped creature gets +1/+1 for each charge counter on this Equipment.
+SVar:X:Count$CardCounters.CHARGE
+
+A:AB$ PutCounter | Cost$ 2 Sac<1/Creature> | Defined$ Self | CounterType$ CHARGE | SpellDescription$ Put a charge counter on this Equipment.
+
+Oracle:Equipped creature gets +1/+1 for each charge counter on this Equipment.\n{2}, Sacrifice a creature: Put a charge counter on this Equipment.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)
+
+DeckHas:Ability$Counters

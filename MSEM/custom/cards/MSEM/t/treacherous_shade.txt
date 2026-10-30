@@ -1,0 +1,10 @@
+Name:Treacherous Shade
+ManaCost:3 B
+Types:Creature Shade
+PT:2/2
+
+A:AB$ Pump | Cost$ B | NumAtt$ +1 | NumDef$ +1 | SpellDescription$ This creature gets +1/+1 until end of turn.
+
+A:AB$ Pump | Cost$ 1 B B | NumAtt$ +3 | NumDef$ +3 | SpellDescription$ This creature gets +3/+3 until end of turn.
+
+Oracle:{B}: This creature gets +1/+1 until end of turn.\n{1}{B}{B}: This creature gets +3/+3 until end of turn.

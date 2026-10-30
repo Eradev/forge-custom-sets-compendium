@@ -1,0 +1,12 @@
+Name:Saproling Genesis
+ManaCost:X G G
+Types:Sorcery
+
+A:SP$ Token | TokenAmount$ X | TokenScript$ g_1_1_saproling | SubAbility$ DBPopulate | SpellDescription$ Create X 1/1 green Saproling creature tokens, then populate. (Create a token that's a copy of a creature token you control.)
+SVar:DBPopulate:DB$ CopyPermanent | Populate$ True
+
+SVar:X:Count$xPaid
+
+Oracle:Create X 1/1 green Saproling creature tokens, then populate. (Create a token that's a copy of a creature token you control.)
+
+DeckHas:Ability$Token

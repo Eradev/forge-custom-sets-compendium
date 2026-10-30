@@ -1,0 +1,13 @@
+Name:Vollta Patrician
+ManaCost:1 U
+Types:Creature Human Wizard
+PT:1/2
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Forest.YouCtrl | Description$ This creature gets +1/+1 as long as you control a Forest.
+
+A:AB$ Regenerate | Cost$ 1 G | SpellDescription$ Regenerate this creature.
+
+Oracle:This creature gets +1/+1 as long as you control a Forest.\n{1}{G}: Regenerate this creature. (The next time this creature would be destroyed this turn, it isn't. Instead tap it, remove all damage from it, and remove it from combat.)
+
+SVar:BuffedBy:Forest
+DeckNeeds:Color$Green

@@ -1,0 +1,9 @@
+Name:Explosion Fanatic
+ManaCost:1 R
+Types:Creature Goblin
+PT:3/3
+
+S:Mode$ CantAttack | ValidCard$ Card.Self | CheckSVar$ X | SVarCompare$ LT1 | Description$ This creature can't attack unless an opponent was dealt damage this turn.
+SVar:X:PlayerCountPropertyYou$DamageToOppsThisTurn
+
+Oracle:This creature can't attack unless an opponent was dealt damage this turn.

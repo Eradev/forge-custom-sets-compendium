@@ -1,0 +1,11 @@
+Name:Led by Fury
+ManaCost:2 R
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ Creature | AddKeyword$ Haste | Description$ All creatures have haste and attack each combat if able.
+
+S:Mode$ MustAttack | ValidCreature$ Creature | Secondary$ True
+
+A:AB$ DealDamage | Cost$ 1 R | ValidTgts$ Creature.attacking | TgtPrompt$ Select target attacking creature | NumDmg$ 1 | SpellDescription$ CARDNAME deals 1 damage to target attacking creature.
+
+Oracle:All creatures have haste and attack each combat if able.\n{1}{R}: Led by Fury deals 1 damage to target attacking creature.

@@ -1,0 +1,7 @@
+Name:Brew of Undeath
+ManaCost:2 B
+Types:Sorcery
+
+A:SP$ ChangeZone | AnnounceType$ CreatureType | ValidTgts$ Creature.YouOwn+ChosenType | TargetMin$ 0 | TargetMax$ 2 | Origin$ Graveyard | Destination$ Hand | TgtPrompt$ Select up to two target creature cards of the chosen type from your graveyard | AILogic$ MostProminentInComputerGraveyard | SpellDescription$ Choose a creature type. Return up to two target creature cards of the chosen type from your graveyard to your hand.
+
+Oracle:Choose a creature type. Return up to two target creature cards of the chosen type from your graveyard to your hand.

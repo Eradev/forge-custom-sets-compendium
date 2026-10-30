@@ -1,0 +1,9 @@
+Name:Vorreia's Farsight
+ManaCost:4 G G
+Types:Sorcery
+
+A:SP$ Dig | DigNum$ 7 | Reveal$ True | WithTotalCMC$ X | ChangeNum$ Any | ChangeValid$ Card.Permanent | DestinationZone$ Battlefield | DestinationZone2$ Library | SubAbility$ DBShuffle | SpellDescription$ Reveal the top seven cards of your library. You may put any number of permanent cards with total mana value X or less from among them onto the battlefield, where X is the number of lands you control. Shuffle the rest into your library.
+SVar:DBShuffle:DB$ Shuffle | Defined$ You
+SVar:X:Count$Valid Land.YouCtrl
+
+Oracle:Reveal the top seven cards of your library. You may put any number of permanent cards with total mana value X or less from among them onto the battlefield, where X is the number of lands you control. Shuffle the rest into your library.

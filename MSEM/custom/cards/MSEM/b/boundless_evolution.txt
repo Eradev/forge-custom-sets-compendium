@@ -1,0 +1,9 @@
+Name:Boundless Evolution
+ManaCost:1 G G
+Types:Sorcery
+
+A:SP$ CopyPermanent | AILogic$ DuplicatePerms | Defined$ Valid Creature.token+YouCtrl | SpellDescription$ For each creature token you control, create a token that's a copy of that creature.
+
+Oracle:For each creature token you control, create a token that's a copy of that creature.
+
+DeckHints:Ability$Token

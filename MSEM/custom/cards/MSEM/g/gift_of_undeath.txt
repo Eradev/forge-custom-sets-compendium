@@ -1,0 +1,7 @@
+Name:Gift of Undeath
+ManaCost:B
+Types:Instant
+
+A:SP$ Regenerate | ValidTgts$ Creature | SpellDescription$ Regenerate target creature.
+
+Oracle:Regenerate target creature. (The next time that creature would be destroyed this turn, it isn't. Instead tap it.)

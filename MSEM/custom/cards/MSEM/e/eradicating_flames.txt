@@ -1,0 +1,12 @@
+Name:Eradicating Flames
+ManaCost:X 1 R R
+Types:Instant
+
+A:SP$ DamageAll | NumDmg$ X | ValidCards$ Creature | ValidPlayers$ Player | ValidDescription$ each creature and each player. | SpellDescription$ CARDNAME deals X damage to each creature and each player.
+
+S:Mode$ CantPreventDamage | ValidSource$ Spell.Self | EffectZone$ Stack | CheckSVar$ X | SVarCompare$ GE5 | Description$ If X is 5 or more, CARDNAME can't be countered and the damage can't be prevented.
+R:Event$ Counter | ValidCard$ Card.Self | ValidSA$ Spell | Layer$ CantHappen | CheckSVar$ X | SVarCompare$ GE5 | Secondary$ True
+
+SVar:X:Count$xPaid
+
+Oracle:Eradicating Flames deals X damage to each creature and each player.\nIf X is 5 or more, Eradicating Flames can't be countered and the damage can't be prevented.

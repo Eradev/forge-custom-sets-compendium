@@ -1,0 +1,22 @@
+Name:Vaertris, Mindmelder
+ManaCost:2 U U
+Types:Legendary Planeswalker Vaertris
+Loyalty:3
+
+A:AB$ Animate | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | TgtPrompt$ Select target creature | Triggers$ DamageMill | SpellDescription$ Until end of turn, whenever target creature deals combat damage to a player, that player mills two cards.
+SVar:DamageMill:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ DBMill | TriggerDescription$ Whenever this creature deals combat damage to a player, that player mills two cards.
+SVar:DBMill:DB$ Mill | Defined$ TriggeredTarget | NumCards$ 2
+
+A:AB$ Tap | Cost$ SubCounter<1/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | TgtPrompt$ Select target creature | IsCurse$ True | SubAbility$ DBEffect | SpellDescription$ Tap target creature. It can't become untapped for as long as you control CARDNAME.
+SVar:DBEffect:DB$ Effect | RememberObjects$ Targeted | ForgetOnMoved$ Battlefield | ReplacementEffects$ DontUntap | Duration$ AsLongAsControl | IsCurse$ True
+SVar:DontUntap:Event$ Untap | ValidCard$ Card.IsRemembered | Layer$ CantHappen | Description$ That creature can't become untapped for as long as you control EFFECTSOURCE.
+
+A:AB$ Effect | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Vaertris, Mindmelder | Image$ emblem_vaertris_mindmelder | Triggers$ EmblemDrawTrigger | Abilities$ EmblemDraw | Duration$ Permanent | SpellDescription$ You get an emblem with "Whenever you draw a card, target player mills three cards" and "{2}{U}: Draw a card."
+SVar:EmblemDrawTrigger:Mode$ Drawn | ValidCard$ Card.YouCtrl | TriggerZones$ Command | Execute$ EmblemMill | TriggerDescription$ Whenever you draw a card, target player mills three cards.
+SVar:EmblemMill:DB$ Mill | ValidTgts$ Player | TgtPrompt$ Select target player to mill three cards | NumCards$ 3
+SVar:EmblemDraw:AB$ Draw | Cost$ 2 U | ActivationZone$ Command | Defined$ You | NumCards$ 1 | SpellDescription$ Draw a card.
+
+DeckHas:Ability$Mill
+DeckHints:Ability$Mill
+
+Oracle:[+1]: Until end of turn, whenever target creature deals combat damage to a player, that player mills two cards.\n[-1]: Tap target creature. It can't become untapped for as long as you control Vaertris, Mindmelder.\n[-6]: You get an emblem with "Whenever you draw a card, target player mills three cards" and "{2}{U}: Draw a card."

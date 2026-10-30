@@ -1,0 +1,14 @@
+Name:Vythraktos, Master Necromancer
+ManaCost:1 B B
+Types:Legendary Creature Human Wizard
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.Other+YouCtrl+nonZombie | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever another non-Zombie creature you control dies, create a tapped 2/2 black Zombie creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ b_2_2_zombie | TokenTapped$ True
+
+A:AB$ Pump | Cost$ B Sac<1/Creature> | ValidTgts$ Creature | TgtPrompt$ Select target creature to gain deathtouch | KW$ Deathtouch | SpellDescription$ Target creature gains deathtouch until end of turn.
+
+Oracle:Whenever another non-Zombie creature you control dies, create a tapped 2/2 black Zombie creature token.\n{B}, Sacrifice a creature: Target creature gains deathtouch until end of turn.
+
+DeckHas:Ability$Token|Sacrifice
+DeckHints:Type$Creature

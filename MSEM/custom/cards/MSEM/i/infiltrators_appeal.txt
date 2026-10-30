@@ -1,0 +1,12 @@
+Name:Infiltrator's Appeal
+ManaCost:1 U
+Types:Enchantment Aura
+
+K:Enchant:Creature
+SVar:AttachAILogic:Pump
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.EnchantedBy | Description$ Enchanted creature can't be blocked.
+
+A:AB$ Pump | Cost$ 1 U | Defined$ Enchanted | KW$ Hexproof | SpellDescription$ Enchanted creature gains hexproof until end of turn.
+
+Oracle:Enchant creature (Target a creature as you cast this. This card enters attached to that creature.)\nEnchanted creature can't be blocked.\n{1}{U}: Enchanted creature gains hexproof until end of turn.
