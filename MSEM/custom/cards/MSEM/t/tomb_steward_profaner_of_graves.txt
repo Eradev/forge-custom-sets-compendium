@@ -1,0 +1,28 @@
+Name:Tomb Steward
+ManaCost:2 B
+Types:Creature Mutant Rogue
+PT:2/2
+
+A:AB$ SetState | Cost$ W U B R G | Defined$ Self | Mode$ Transform | SpellDescription$ Chosen one ({W}{U}{B}{R}{G}: Transform this permanent.)
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ When this creature enters, search your library for a card and put it into your graveyard. Then shuffle.
+SVar:TrigMill:DB$ ChangeZone | Origin$ Library | Destination$ Graveyard | ChangeType$ Card | ChangeNum$ 1
+
+Oracle:Chosen one ({W}{U}{B}{R}{G}: Transform this permanent.)\nWhen this creature enters, search your library for a card and put it into your graveyard. Then shuffle.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Profaner of Graves
+ManaCost:no cost
+Types:Creature Archon Rogue
+PT:5/5
+
+K:Flying
+
+K:Lifelink
+
+A:AB$ ChangeZone | Cost$ PayLife<5> | ValidTgts$ Permanent | TgtPrompt$ Select target permanent card in a graveyard | Origin$ Graveyard | Destination$ Battlefield | GainControl$ True | SpellDescription$ Put target permanent card in a graveyard onto the battlefield under your control.
+
+Oracle:Flying, lifelink\nPay 5 life: Put target permanent card in a graveyard onto the battlefield under your control.
