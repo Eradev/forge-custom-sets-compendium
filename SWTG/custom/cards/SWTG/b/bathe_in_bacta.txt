@@ -1,8 +1,8 @@
-Name: Bathe in Bacta
+Name:Bathe in Bacta
 ManaCost:1 G
 Types:Instant
 
-A:SP$ GainLife | Defined$ You | LifeAmount$ L
+A:SP$ GainLife | LifeAmount$ L | SpellDescription$ You gain 6 life. If you lost life from a source other than combat damage this turn, you gain 9 life instead.
 SVar:X:PlayerCountPropertyYou$wasDealtNonCombatDamageThisTurn
 SVar:L:Count$Compare X GE1.9.6
 

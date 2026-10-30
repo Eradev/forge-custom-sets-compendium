@@ -10,7 +10,7 @@ A:AB$ Tap | Cost$ AddCounter<0/LOYALTY> | ValidTgts$ Creature | TgtPrompt$ Choos
 
 A:AB$ Untap | Cost$ SubCounter<1/LOYALTY> | Planeswalker$ True | ValidTgts$ Land.Basic | TgtPrompt$ Select target basic land | SpellDescription$ Untap target basic land.
 
-A:AB$ Draw | Cost$ SubCounter<7/LOYALTY> | Planeswalker$ True | Ultimate$ True | Defined$ You | Upto$ True | NumCards$ 6 | AILogic$ OptionalDraw | SpellDescription$ Draw up to six cards.
+A:AB$ Draw | Cost$ SubCounter<7/LOYALTY> | Planeswalker$ True | Ultimate$ True | Upto$ True | NumCards$ 6 | AILogic$ OptionalDraw | SpellDescription$ Draw up to six cards.
 
 Oracle:At the beginning of your upkeep, put a loyalty counter on each planeswalker you control.\n[0]: Tap target creature.\n[-1]: Untap target basic land.\n[-7]: Draw up to six cards.
 

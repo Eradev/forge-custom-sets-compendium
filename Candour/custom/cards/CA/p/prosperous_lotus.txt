@@ -4,6 +4,6 @@ Types:Artifact
 
 A:AB$ Mana | Cost$ T | Produced$ Combo Any | Amount$ 3 | SpellDescription$ Add three mana in any combination of colors.
 
-A:AB$ Draw | Cost$ 3 | Defined$ You | Draw a card.
+A:AB$ Draw | Cost$ 3 | Draw a card.
 
 Oracle:{T}: Add three mana in any combination of colors.\n{3}: Draw a card.

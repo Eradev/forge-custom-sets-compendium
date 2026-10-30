@@ -4,7 +4,7 @@ Types:Legendary Creature Human Warrior
 PT:3/3
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When NICKNAME enters, create three 1/1 red and white Warrior creature tokens.
-SVar:TrigToken:DB$ Token | TokenAmount$ 3 | TokenScript$ rw_1_1_warrior
+SVar:TrigToken:DB$ Token | TokenScript$ rw_1_1_warrior | TokenAmount$ 3
 
 T:Mode$ Attacks | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigInvigorate | TriggerDescription$ Whenever a creature you control attacks, invigorate 1. (Choose a creature with the least power among creatures you control and put a +1/+1 counter on it.)
 SVar:TrigInvigorate:DB$ ChooseCard | Choices$ Creature.leastPowerControlledByYou | Mandatory$ True | ChoiceTitle$ Choose a creature with the least power among creatures you control | SubAbility$ DBPutCounter

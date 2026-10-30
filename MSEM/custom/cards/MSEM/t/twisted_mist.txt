@@ -2,7 +2,7 @@ Name:Twisted Mist
 ManaCost:3 U
 Types:Sorcery
 
-A:SP$ Token | TokenAmount$ 2 | TokenScript$ u_1_1_bird_flying_draw | SpellDescription$ Create two 1/1 blue Bird creature tokens with flying and "When this creature dies, draw a card."
+A:SP$ Token | TokenScript$ u_1_1_bird_flying_draw | TokenAmount$ 2 | SpellDescription$ Create two 1/1 blue Bird creature tokens with flying and "When this creature dies, draw a card."
 
 Oracle:Create two 1/1 blue Bird creature tokens with flying and "When this creature dies, draw a card."
 

@@ -4,7 +4,7 @@ Types:Legendary Artifact Creature Golem
 PT:6/6
 
 T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever CARDNAME attacks, create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
-SVar:TrigToken:DB$ Token | TokenScript$ c_a_idol_sac | TokenOwner$ You
+SVar:TrigToken:DB$ Token | TokenScript$ c_a_idol_sac
 
 A:AB$ ChangeZone | Cost$ Sac<3/Idol> | Origin$ Graveyard | Destination$ Hand | ActivationZone$ Graveyard | SpellDescription$ Return this card from your graveyard to your hand.
 
