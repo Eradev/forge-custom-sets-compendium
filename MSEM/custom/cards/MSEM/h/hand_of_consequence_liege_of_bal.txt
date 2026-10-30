@@ -1,0 +1,29 @@
+Name:Hand of Consequence
+ManaCost:2 B B
+Types:Creature Mutant
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When this creature enters, creatures your opponents control get -1/-1 until end of turn.
+SVar:TrigPump:DB$ PumpAll | ValidCards$ Creature.OppCtrl | NumAtt$ -1 | NumDef$ -1
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ FealtySwamps | SVarCompare$ GE5 | Execute$ TrigTransform | TriggerDescription$ At the beginning of your upkeep, if your fealty to Swamps is five or greater, transform this creature. (Each Swamp you control counts towards your fealty to Swamps.)
+SVar:TrigTransform:DB$ SetState | Defined$ Self | Mode$ Transform
+SVar:FealtySwamps:Count$Valid Swamp.YouCtrl
+
+Oracle:When this creature enters, creatures your opponents control get -1/-1 until end of turn.\nAt the beginning of your upkeep, if your fealty to Swamps is five or greater, transform this creature. (Each Swamp you control counts towards your fealty to Swamps.)
+
+SVar:BuffedBy:Swamp
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Liege of Bal
+ManaCost:no cost
+Colors:black
+Types:Creature Mutant Shaman
+PT:4/4
+
+S:Mode$ Continuous | Affected$ Creature.YouDontCtrl | AddPower$ -1 | AddToughness$ -1 | Description$ Creatures you don't control get -1/-1.
+
+Oracle:Creatures you don't control get -1/-1.

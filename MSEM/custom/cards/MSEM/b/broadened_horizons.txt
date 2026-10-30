@@ -1,0 +1,10 @@
+Name:Broadened Horizons
+ManaCost:1 G G
+Types:Enchantment
+
+T:Mode$ LandPlayed | ValidCard$ Land.YouCtrl | ValidActivatingPlayer$ You | Execute$ TrigSearch | OptionalDecider$ You | TriggerDescription$ Whenever you play a land, you may search your library for a land card that shares a subtype with it, put it onto the battlefield tapped, then shuffle.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | Tapped$ True | ChangeType$ Land.sharesLandTypeWith TriggeredCard | ChangeNum$ 1
+
+Oracle:Whenever you play a land, you may search your library for a land card that shares a subtype with it, put it onto the battlefield tapped, then shuffle.
+
+DeckHas:Ability$Landfall

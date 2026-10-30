@@ -3,7 +3,7 @@ ManaCost:no cost
 Types:Land
 
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ DBTap | ReplacementResult$ Updated | Description$ As this land enters, you may reveal a Forest or Island card from your hand. If you don't, it enters tapped.
-SVar:DBTap:DB$ Tap | ETB$ True | Defined$ Self | UnlessCost$ Reveal<1/Forest;Island/Forest or Island> | UnlessPayer$ You | StackDescription$ Enters tapped.
+SVar:DBTap:DB$ Tap | ETB$ True | UnlessCost$ Reveal<1/Forest;Island/Forest or Island> | UnlessPayer$ You | StackDescription$ enters tapped.
 
 A:AB$ Mana | Cost$ T | Produced$ Combo G U | SpellDescription$ Add {G} or {U}.
 

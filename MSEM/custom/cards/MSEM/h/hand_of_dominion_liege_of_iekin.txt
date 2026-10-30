@@ -1,0 +1,36 @@
+Name:Hand of Dominion
+ManaCost:U U
+Types:Creature Human
+PT:1/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigTap | TriggerDescription$ When this creature enters, tap target creature an opponent controls. It doesn't untap during its controller's next untap step.
+SVar:TrigTap:DB$ Tap | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | Defined$ Targeted | KW$ HIDDEN CARDNAME doesn't untap during your next untap step. | Duration$ Permanent
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ FealtyIslands | SVarCompare$ GE5 | Execute$ TrigTransform | TriggerDescription$ At the beginning of your upkeep, if your fealty to Islands is five or greater, transform this creature. (Each Island you control counts towards your fealty to Islands.)
+SVar:TrigTransform:DB$ SetState | Defined$ Self | Mode$ Transform
+SVar:FealtyIslands:Count$Valid Island.YouCtrl
+
+Oracle:When this creature enters, tap target creature an opponent controls. It doesn't untap during its controller's next untap step.\nAt the beginning of your upkeep, if your fealty to Islands is five or greater, transform this creature. (Each Island you control counts towards your fealty to Islands.)
+
+SVar:BuffedBy:Island
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Liege of Iekin
+ManaCost:no cost
+Colors:blue
+Types:Creature Human Wizard
+PT:3/3
+
+K:Flying
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigTap | TriggerDescription$ Whenever this creature attacks, tap target permanent an opponent controls. It doesn't untap during its controller's next untap step.
+SVar:TrigTap:DB$ Tap | ValidTgts$ Permanent.OppCtrl | TgtPrompt$ Select target permanent an opponent controls | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | Defined$ Targeted | KW$ HIDDEN CARDNAME doesn't untap during your next untap step. | Duration$ Permanent
+
+Oracle:Flying\nWhenever this creature attacks, tap target permanent an opponent controls. It doesn't untap during its controller's next untap step.
+
+SVar:HasAttackEffect:TRUE

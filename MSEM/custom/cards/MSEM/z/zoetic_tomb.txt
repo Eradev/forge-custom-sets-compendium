@@ -1,0 +1,18 @@
+Name:Zoetic Tomb
+ManaCost:5
+Types:Artifact
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this artifact enters, exile target creature.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Creature | TgtPrompt$ Select target creature | Imprint$ True
+
+A:AB$ Animate | Cost$ 4 | Defined$ Self | Power$ X | Toughness$ Y | Types$ Creature,Artifact,Golem | RemoveCreatureTypes$ True | SpellDescription$ Until end of turn, this artifact becomes a Golem artifact creature with power and toughness equal to the exiled creature's base power and toughness.
+SVar:X:Imprinted$CardBasePower
+SVar:Y:Imprinted$CardBaseToughness
+
+T:Mode$ ChangesZone | Origin$ Exile | Destination$ Any | Static$ True | ValidCard$ Card.IsImprinted+ExiledWithSource | Execute$ DBForget
+SVar:DBForget:DB$ Pump | ForgetImprinted$ TriggeredCard
+
+T:Mode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.Self | Destination$ Any | Execute$ DBCleanup | Static$ True
+SVar:DBCleanup:DB$ Cleanup | ClearImprinted$ True
+
+Oracle:When this artifact enters, exile target creature.\n{4}: Until end of turn, this artifact becomes a Golem artifact creature with power and toughness equal to the exiled creature's base power and toughness.

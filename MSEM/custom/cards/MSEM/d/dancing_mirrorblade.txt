@@ -1,0 +1,12 @@
+Name:Dancing Mirrorblade
+ManaCost:2
+Types:Artifact Equipment
+
+T:Mode$ Attacks | ValidCard$ Card.EquippedBy | TriggerZones$ Battlefield | Execute$ TrigCopy | TriggerDescription$ Whenever equipped creature attacks, create a token that's a copy of it and that's tapped and attacking, except that token isn't legendary if equipped creature is legendary. Exile that token at end of combat.
+SVar:TrigCopy:DB$ CopyPermanent | Defined$ TriggeredAttackerLKICopy | TokenTapped$ True | TokenAttacking$ True | NonLegendary$ True | AtEOT$ Exile
+
+K:Equip:3
+
+Oracle:Whenever equipped creature attacks, create a token that's a copy of it and that's tapped and attacking, except that token isn't legendary if equipped creature is legendary. Exile that token at end of combat.\nEquip {3}
+
+DeckHas:Ability$Token

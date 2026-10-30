@@ -1,0 +1,12 @@
+Name:Morrow Probe
+ManaCost:1 U U
+Types:Sorcery
+
+A:SP$ Mill | ValidTgts$ Opponent | NumCards$ 5 | SubAbility$ DBExile | StackDescription$ SpellDescription | SpellDescription$ Target opponent mills five cards, then you exile up to two instant and/or sorcery cards from that player's graveyard. You may cast those cards for as long as they remain exiled, and you may spend mana as though it were mana of any type to cast them.
+
+SVar:DBExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | TargetMin$ 0 | TargetMax$ 2 | ValidTgts$ Instant.OppOwn,Sorcery.OppOwn | TgtPrompt$ Select up to two target instant and/or sorcery cards in that player's graveyard | RememberChanged$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ Remembered | StaticAbilities$ STPlay | ExileOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | MayPlayIgnoreType$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ You may cast those cards for as long as they remain exiled, and you may spend mana as though it were mana of any type to cast them.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Target opponent mills five cards, then you exile up to two instant and/or sorcery cards from that player's graveyard. You may cast those cards for as long as they remain exiled, and you may spend mana as though it were mana of any type to cast them.

@@ -1,0 +1,13 @@
+Name:Encampment Raid
+ManaCost:1 R
+Types:Sorcery
+
+A:SP$ Charm | Choices$ DBPump,DBCantBlock | CharmNum$ 1
+
+SVar:DBPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +2 | SpellDescription$ Creatures you control get +2/+0 until end of turn.
+
+SVar:DBCantBlock:DB$ Effect | StaticAbilities$ CantBlockLess | SpellDescription$ Creatures your opponents control can't block creatures with less power this turn.
+SVar:CantBlockLess:Mode$ CantBlockBy | ValidAttackerRelative$ Creature.powerLTX | ValidBlocker$ Creature.OppCtrl | Description$ Creatures your opponents control can't block creatures with less power this turn.
+SVar:X:Count$CardPower
+
+Oracle:Choose one —\n• Creatures you control get +2/+0 until end of turn.\n• Creatures your opponents control can't block creatures with less power this turn.

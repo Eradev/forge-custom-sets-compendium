@@ -1,0 +1,9 @@
+Name:Hostile Atmosphere
+ManaCost:1 R R
+Types:Enchantment
+
+A:AB$ DealDamage | Cost$ tapXType<1/Desert.untapped+YouCtrl/untapped Desert you control> | ValidTgts$ Any | NumDmg$ 1 | SpellDescription$ This enchantment deals 1 damage to any target.
+
+Oracle:Tap an untapped Desert you control: This enchantment deals 1 damage to any target.
+
+DeckNeeds:Type$Desert

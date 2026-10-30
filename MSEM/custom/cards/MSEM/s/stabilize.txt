@@ -1,0 +1,7 @@
+Name:Stabilize
+ManaCost:U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | ValidTgts$ Artifact,Sorcery | TgtPrompt$ Select target artifact or sorcery spell | SpellDescription$ Counter target artifact or sorcery spell.
+
+Oracle:Counter target artifact or sorcery spell.

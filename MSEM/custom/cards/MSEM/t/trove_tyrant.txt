@@ -1,0 +1,14 @@
+Name:Trove Tyrant
+ManaCost:3 R R R
+Types:Creature Dragon
+PT:5/5
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this creature enters, exile the top five cards of your library.
+SVar:TrigExile:DB$ Dig | Defined$ You | DigNum$ 5 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | ForgetOtherRemembered$ True
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigCast | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature deals combat damage to a player, you may cast an artifact card exiled with it without paying its mana cost.
+SVar:TrigCast:DB$ Play | ValidZone$ Exile | Valid$ Artifact.ExiledWithSource | ValidSA$ Spell | Controller$ You | WithoutManaCost$ True | Amount$ 1 | Optional$ True
+
+Oracle:Flying\nWhen this creature enters, exile the top five cards of your library.\nWhenever this creature deals combat damage to a player, you may cast an artifact card exiled with it without paying its mana cost.

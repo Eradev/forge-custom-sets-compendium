@@ -3,7 +3,7 @@ ManaCost:no cost
 Types:Land
 
 R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplaceWith$ DBTap | ReplacementResult$ Updated | Description$ As this land enters, you may reveal an Island or Mountain card from your hand. If you don't, it enters tapped.
-SVar:DBTap:DB$ Tap | ETB$ True | Defined$ Self | UnlessCost$ Reveal<1/Island;Mountain/Island or Mountain> | UnlessPayer$ You | StackDescription$ enters tapped.
+SVar:DBTap:DB$ Tap | ETB$ True | UnlessCost$ Reveal<1/Island;Mountain/Island or Mountain> | UnlessPayer$ You | StackDescription$ enters tapped.
 
 A:AB$ Mana | Cost$ T | Produced$ Combo U R | SpellDescription$ Add {U} or {R}.
 

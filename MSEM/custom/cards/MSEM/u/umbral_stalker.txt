@@ -1,0 +1,9 @@
+Name:Umbral Stalker
+ManaCost:2 B B
+Types:Creature Mutant Warrior
+PT:4/2
+
+A:AB$ Pump | Cost$ 2B | Defined$ Self | KW$ Indestructible | SubAbility$ DBTap | SpellDescription$ This creature gains indestructible until end of turn. Tap it.
+SVar:DBTap:DB$ Tap
+
+Oracle:{2/B}: This creature gains indestructible until end of turn. Tap it.

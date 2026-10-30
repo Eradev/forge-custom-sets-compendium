@@ -1,0 +1,13 @@
+Name:Shadowband Consul
+ManaCost:B
+Types:Creature Mutant Rogue
+PT:2/1
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This creature enters tapped.
+SVar:ETBTapped:DB$ Tap | ETB$ True
+
+A:AB$ ChangeZone | Cost$ B PayLife<2> | Origin$ Graveyard | Destination$ Battlefield | ActivationZone$ Graveyard | CheckSVar$ LifeOppsLostThisTurn | SVarCompare$ GE1 | SpellDescription$ Return this card from your graveyard to the battlefield. Activate only if an opponent lost life this turn.
+SVar:LifeOppsLostThisTurn:Count$LifeOppsLostThisTurn
+
+Oracle:This creature enters tapped.\n{B}, Pay 2 life: Return this card from your graveyard to the battlefield. Activate only if an opponent lost life this turn.
+

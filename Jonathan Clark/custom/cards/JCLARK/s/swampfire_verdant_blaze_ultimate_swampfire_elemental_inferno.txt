@@ -10,7 +10,7 @@ SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Li
 SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When NICKNAME enters, create a 0/1 green Plant creature token for each land you control.
-SVar:TrigToken:DB$ Token | TokenAmount$ X | TokenScript$ g_0_1_plant
+SVar:TrigToken:DB$ Token | TokenScript$ g_0_1_plant | TokenAmount$ X
 SVar:X:Count$Valid Land.YouCtrl
 
 A:AB$ Regenerate | Cost$ R G | SpellDescription$ Regenerate NICKNAME.

@@ -1,0 +1,28 @@
+Name:Hand of the Harvest
+ManaCost:G G
+Types:Creature Pangolin
+PT:3/2
+
+K:Trample
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ FealtyForests | SVarCompare$ GE5 | Execute$ TrigTransform | TriggerDescription$ At the beginning of your upkeep, if your fealty to Forests is five or greater, transform this creature. (Each Forest you control counts towards your fealty to Forests.)
+SVar:TrigTransform:DB$ SetState | Defined$ Self | Mode$ Transform
+SVar:FealtyForests:Count$Valid Forest.YouCtrl
+
+Oracle:Trample\nAt the beginning of your upkeep, if your fealty to Forests is five or greater, transform this creature. (Each Forest you control counts towards your fealty to Forests.)
+
+SVar:BuffedBy:Forest
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Liege of Sabne
+ManaCost:no cost
+Colors:green
+Types:Creature Pangolin Beast
+PT:5/4
+
+K:Trample
+
+Oracle:Trample

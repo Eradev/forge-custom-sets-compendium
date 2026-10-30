@@ -1,0 +1,14 @@
+Name:Flayed Dunerazer
+ManaCost:3 B B
+Types:Creature Mutant Warrior
+PT:6/6
+
+K:Menace
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigSac | TriggerDescription$ Whenever this creature attacks or blocks, sacrifice a permanent.
+T:Mode$ Blocks | ValidCard$ Card.Self | Execute$ TrigSac | Secondary$ True | TriggerDescription$ Whenever this creature attacks or blocks, sacrifice a permanent.
+SVar:TrigSac:DB$ Sacrifice | Defined$ You | SacValid$ Permanent | Amount$ 1
+
+Oracle:Menace\nWhenever this creature attacks or blocks, sacrifice a permanent.
+
+DeckHas:Ability$Sacrifice

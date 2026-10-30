@@ -1,0 +1,32 @@
+Name:Asham's Path
+ManaCost:2 W W
+Types:Legendary Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainLife | TriggerDescription$ When CARDNAME enters, you gain 8 life.
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 8
+
+A:AB$ SetState | Cost$ 1 W W | Defined$ Self | Mode$ Transform | CheckSVar$ FealtyPlains | SVarCompare$ GE5 | SpellDescription$ Transform CARDNAME. Activate only if your fealty to Plains is five or greater. (Each Plains you control counts towards your fealty to Plains.)
+SVar:FealtyPlains:Count$Valid Plains.YouCtrl
+
+Oracle:When Asham's Path enters, you gain 8 life.\n{1}{W}{W}: Transform Asham's Path. Activate only if your fealty to Plains is five or greater. (Each Plains you control counts towards your fealty to Plains.)
+
+SVar:BuffedBy:Plains
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Asham, God of Morality
+ManaCost:no cost
+Colors:white
+Types:Legendary Enchantment Creature God
+PT:*/6
+
+K:Indestructible
+
+S:Mode$ Continuous | CharacteristicDefining$ True | SetPower$ LifePower | Description$ NICKNAME's power is equal to your life total.
+SVar:LifePower:Count$YourLifeTotal
+
+S:Mode$ Continuous | Affected$ Creature.OppCtrl | SetPower$ 1 | Description$ Creatures you don't control have base power 1.
+
+Oracle:Indestructible\nAsham's power is equal to your life total.\nCreatures you don't control have base power 1.

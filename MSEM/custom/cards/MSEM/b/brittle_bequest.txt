@@ -1,0 +1,11 @@
+Name:Brittle Bequest
+ManaCost:1 W W
+Types:Sorcery
+
+A:SP$ PutCounter | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select up to three target creatures you control | CounterType$ P1P1 | CounterNum$ 3 | TargetMin$ 0 | TargetMax$ 3 | DividedAsYouChoose$ 3 | SubAbility$ DBPump | SpellDescription$ Distribute three +1/+1 counters among up to three target creatures you control. Those creatures gain first strike until end of turn.
+SVar:DBPump:DB$ PumpAll | ValidCards$ Creature.targetedBy | KW$ First Strike
+
+Oracle:Distribute three +1/+1 counters among up to three target creatures you control. Those creatures gain first strike until end of turn.
+
+DeckHas:Ability$Counters
+SVar:PlayMain1:TRUE

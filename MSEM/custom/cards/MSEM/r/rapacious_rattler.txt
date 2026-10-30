@@ -1,0 +1,13 @@
+Name:Rapacious Rattler
+ManaCost:R R R
+Types:Creature Snake Beast
+PT:3/3
+
+K:First Strike
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigETB | TriggerDescription$ When this creature enters, choose one or two targets you don't control. It deals 2 damage to the first and 1 damage to the second.
+SVar:TrigETB:DB$ DealDamage | ValidTgts$ Creature.YouDontCtrl,Planeswalker.YouDontCtrl,Player.Opponent | TgtPrompt$ Select target you don't control to deal 2 damage to | NumDmg$ 2 | DamageMap$ True | SubAbility$ DBDamage
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Creature.YouDontCtrl,Planeswalker.YouDontCtrl,Player.Opponent | TgtPrompt$ Select up to one other target you don't control to deal 1 damage to | TargetMin$ 0 | TargetMax$ 1 | TargetUnique$ True | NumDmg$ 1 | SubAbility$ DBDamageResolve
+SVar:DBDamageResolve:DB$ DamageResolve
+
+Oracle:First strike\nWhen this creature enters, choose one or two targets you don't control. It deals 2 damage to the first and 1 damage to the second.

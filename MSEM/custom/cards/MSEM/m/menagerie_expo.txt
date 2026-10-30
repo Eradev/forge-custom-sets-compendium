@@ -1,0 +1,9 @@
+Name:Menagerie Expo
+ManaCost:2 G G
+Types:Sorcery
+
+A:SP$ Draw | Defined$ You | NumCards$ ConcordCount | SubAbility$ DBGainLife | StackDescription$ SpellDescription | SpellDescription$ Draw X cards and you gain X life, where X is the number of card types among permanents you control.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ ConcordCount
+SVar:ConcordCount:Count$Valid Permanent.YouCtrl$CardTypes
+
+Oracle:Draw X cards and you gain X life, where X is the number of card types among permanents you control.

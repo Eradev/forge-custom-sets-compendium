@@ -1,0 +1,13 @@
+Name:Bearer of Old Growth
+ManaCost:4
+Types:Artifact Creature Golem
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChoice | TriggerDescription$ When this creature enters, choose one — • Untap up to two target artifacts. • Draw a card.
+SVar:TrigChoice:DB$ GenericChoice | Defined$ You | Choices$ DBUntap,DBDraw | AILogic$ Random
+
+SVar:DBUntap:DB$ Untap | ValidTgts$ Artifact | TargetMin$ 0 | TargetMax$ 2 | SpellDescription$ Untap up to two target artifacts.
+
+SVar:DBDraw:DB$ Draw | SpellDescription$ Draw a card.
+
+Oracle:When this creature enters, choose one —\n• Untap up to two target artifacts.\n• Draw a card.

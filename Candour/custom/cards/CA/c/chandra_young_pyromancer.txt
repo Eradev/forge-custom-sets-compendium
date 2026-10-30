@@ -6,12 +6,12 @@ Loyalty:1
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDamage | TriggerDescription$ When NICKNAME enters, it deals 2 damage to each opponent.
 SVar:TrigDamage:DB$ DealDamage | Defined$ Player.Opponent | NumDmg$ 2
 
-A:AB$ Token | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | TokenAmount$ X | TokenScript$ r_1_1_elemental | SpellDescription$ Create a 1/1 red Elemental creature token if you've cast an instant or sorcery spell this turn.
+A:AB$ Token | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | TokenScript$ r_1_1_elemental | TokenAmount$ X | SpellDescription$ Create a 1/1 red Elemental creature token if you've cast an instant or sorcery spell this turn.
 SVar:X:Count$ThisTurnCast_Instant.YouCtrl,Sorcery.YouCtrl/LimitMax.1
 
 A:AB$ Discard | Cost$ SubCounter<3/LOYALTY> | Planeswalker$ True | NumCards$ 2 | Mode$ TgtChoose | RememberDiscarded$ True | SubAbility$ DBDraw | SpellDescription$ Discard two cards, then draw two cards. For each nonland card discarded this way, create a 1/1 red Elemental creature token.
 SVar:DBDraw:DB$ Draw | NumCards$ 2 | SubAbility$ DBToken
-SVar:DBToken:DB$ Token | TokenAmount$ TokenCount | TokenScript$ r_1_1_elemental | SubAbility$ DBCleanup
+SVar:DBToken:DB$ Token | TokenScript$ r_1_1_elemental | TokenAmount$ TokenCount | SubAbility$ DBCleanup
 SVar:TokenCount:Remembered$Valid Card.nonLand
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 

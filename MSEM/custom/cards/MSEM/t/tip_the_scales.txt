@@ -1,0 +1,8 @@
+Name:Tip the Scales
+ManaCost:3 B B B
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature card in your graveyard | SubAbility$ DBDestroy | SpellDescription$ Return target creature card from your graveyard to the battlefield, then destroy target creature an opponent controls that doesn't share a creature type with it.
+SVar:DBDestroy:DB$ Destroy | ValidTgts$ Creature.OppCtrl+!sharesCreatureTypeWith Targeted | TgtPrompt$ Select target creature an opponent controls that doesn't share a creature type with the returned card
+
+Oracle:Return target creature card from your graveyard to the battlefield, then destroy target creature an opponent controls that doesn't share a creature type with it.

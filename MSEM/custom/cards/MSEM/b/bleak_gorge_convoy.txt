@@ -1,0 +1,11 @@
+Name:Bleak Gorge Convoy
+ManaCost:1 G G
+Types:Creature Human Scout
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSearch | TriggerDescription$ When this creature enters, you may search your library for a Desert card, put it onto the battlefield tapped, then shuffle.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | Tapped$ True | ChangeType$ Desert | ChangeNum$ 1 | Optional$ True | Shuffle$ True
+
+Oracle:When this creature enters, you may search your library for a Desert card, put it onto the battlefield tapped, then shuffle.
+
+DeckHints:Type$Desert

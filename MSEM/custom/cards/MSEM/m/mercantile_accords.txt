@@ -1,0 +1,14 @@
+Name:Mercantile Accords
+ManaCost:W W W
+Types:Enchantment
+
+K:ETBReplacement:Other:ChooseNumber
+SVar:ChooseNumber:DB$ ChooseNumber | Defined$ You | SpellDescription$ As This creature enters, choose a number.
+
+T:Mode$ SpellCast | ValidCard$ Card.cmcEQChosen | ValidActivatingPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ TrigDrawToken | TriggerDescription$ Whenever an opponent casts a spell with the chosen mana value, you draw a card and create a Treasure token.
+SVar:TrigDrawToken:DB$ Draw | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ c_a_treasure_sac
+
+Oracle:As this creature enters, choose a number.\nWhenever an opponent casts a spell with the chosen mana value, you draw a card and create a Treasure token.
+
+DeckHas:Ability$Token|Sacrifice & Type$Treasure

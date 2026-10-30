@@ -1,0 +1,8 @@
+Name:Ruins Monitor
+ManaCost:5 G G
+Types:Creature Lizard Beast
+PT:7/7
+
+S:Mode$ MinMaxBlocker | ValidCard$ Card.Self | Max$ 1 | Description$ This creature can't be blocked by more than one creature.
+
+Oracle:This creature can't be blocked by more than one creature.

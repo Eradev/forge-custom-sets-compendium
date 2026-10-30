@@ -1,0 +1,11 @@
+Name:Cass-o'-Warrior
+ManaCost:3 W
+Types:Creature Human Survivor
+PT:3/4
+
+S:Mode$ Continuous | Affected$ Creature.Survivor+YouCtrl | AddKeyword$ Lifelink | Description$ Survivors you control have lifelink.
+
+Oracle:Survivors you control have lifelink.
+
+SVar:PlayMain1:TRUE
+DeckHints:Type$Survivor

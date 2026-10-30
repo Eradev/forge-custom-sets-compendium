@@ -1,0 +1,13 @@
+Name:Hall of Remembrance
+ManaCost:2 W W
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this enchantment enters, create two 1/1 white Spirit creature tokens with flying.
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_spirit_flying | TokenAmount$ 2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Spirit.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigGainLife | TriggerDescription$ Whenever a Spirit you control enters, you gain 1 life.
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 1
+
+Oracle:When this enchantment enters, create two 1/1 white Spirit creature tokens with flying.\nWhenever a Spirit you control enters, you gain 1 life.
+
+DeckHas:Ability$Token|LifeGain & Type$Spirit

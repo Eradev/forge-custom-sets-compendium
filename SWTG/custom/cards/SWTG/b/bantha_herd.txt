@@ -8,7 +8,7 @@ SVar:StoreX:DB$ StoreSVar | SVar$ MonstrosityX | Type$ Calculate | Expression$ X
 SVar:X:Count$xPaid
 
 T:Mode$ BecomeMonstrous | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ When this creature becomes monstrous, create X 1/1 white Tusken Raider creature tokens.
-SVar:TrigToken:DB$ Token | TokenAmount$ MonstrosityX | TokenScript$ w_1_1_tusken_raider
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_tusken_raider | TokenAmount$ MonstrosityX
 
 Oracle:{X}{W}{W}: Monstrosity X. (If this creature isn't monstrous, put X +1/+1 counters on it and it becomes monstrous.)\nWhen this creature becomes monstrous, create X 1/1 white Tusken Raider creature tokens.
 

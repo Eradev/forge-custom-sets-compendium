@@ -1,0 +1,9 @@
+Name:Sultan's Strength
+ManaCost:1 G
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | SetPower$ 3 | SetToughness$ 3 | Description$ Enchanted creature has base power and toughness 3/3.
+
+Oracle:Enchant creature\nEnchanted creature has base power and toughness 3/3.

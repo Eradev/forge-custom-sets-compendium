@@ -1,0 +1,20 @@
+Name:Magnific Wilderkin
+ManaCost:1 G G
+Types:Creature Chimera
+PT:3/3
+
+T:Mode$ Phase | Phase$ BeginCombat | TriggerZones$ Battlefield | Execute$ TrigFlying | TriggerDescription$ At the beginning of each combat, if you control a creature with flying, this creature gets +1/+1 and gains flying until end of turn. The same is true for first strike, double strike, deathtouch, haste, hexproof, indestructible, lifelink, menace, reach, trample, and vigilance.
+SVar:TrigFlying:DB$ Pump | NumAtt$ +1 | NumDef$ +1 | KW$ Flying | ConditionPresent$ Creature.YouCtrl+withFlying | SubAbility$ TrigFirstStrike
+SVar:TrigFirstStrike:DB$ Pump | NumAtt$ +1 | NumDef$ +1 | KW$ First Strike | ConditionPresent$ Creature.YouCtrl+withFirst Strike | SubAbility$ TrigDoubleStrike
+SVar:TrigDoubleStrike:DB$ Pump | NumAtt$ +1 | NumDef$ +1 | KW$ Double Strike | ConditionPresent$ Creature.YouCtrl+withDouble Strike | SubAbility$ TrigDeathtouch
+SVar:TrigDeathtouch:DB$ Pump | NumAtt$ +1 | NumDef$ +1 | KW$ Deathtouch | ConditionPresent$ Creature.YouCtrl+withDeathtouch | SubAbility$ TrigHaste
+SVar:TrigHaste:DB$ Pump | NumAtt$ +1 | NumDef$ +1 | KW$ Haste | ConditionPresent$ Creature.YouCtrl+withHaste | SubAbility$ TrigHexproof
+SVar:TrigHexproof:DB$ Pump | NumAtt$ +1 | NumDef$ +1 | KW$ Hexproof | ConditionPresent$ Creature.YouCtrl+withHexproof | SubAbility$ TrigIndestructible
+SVar:TrigIndestructible:DB$ Pump | NumAtt$ +1 | NumDef$ +1 | KW$ Indestructible | ConditionPresent$ Creature.YouCtrl+withIndestructible | SubAbility$ TrigLifelink
+SVar:TrigLifelink:DB$ Pump | NumAtt$ +1 | NumDef$ +1 | KW$ Lifelink | ConditionPresent$ Creature.YouCtrl+withLifelink | SubAbility$ TrigMenace
+SVar:TrigMenace:DB$ Pump | NumAtt$ +1 | NumDef$ +1 | KW$ Menace | ConditionPresent$ Creature.YouCtrl+withMenace | SubAbility$ TrigReach
+SVar:TrigReach:DB$ Pump | NumAtt$ +1 | NumDef$ +1 | KW$ Reach | ConditionPresent$ Creature.YouCtrl+withReach | SubAbility$ TrigTrample
+SVar:TrigTrample:DB$ Pump | NumAtt$ +1 | NumDef$ +1 | KW$ Trample | ConditionPresent$ Creature.YouCtrl+withTrample | SubAbility$ TrigVigilance
+SVar:TrigVigilance:DB$ Pump | NumAtt$ +1 | NumDef$ +1 | KW$ Vigilance | ConditionPresent$ Creature.YouCtrl+withVigilance
+
+Oracle:At the beginning of each combat, if you control a creature with flying, this creature gets +1/+1 and gains flying until end of turn. The same is true for first strike, double strike, deathtouch, haste, hexproof, indestructible, lifelink, menace, reach, trample, and vigilance.
