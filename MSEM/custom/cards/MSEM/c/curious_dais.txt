@@ -2,7 +2,7 @@ Name:Curious Dais
 ManaCost:3
 Types:Artifact
 
-T:Mode$ Phase | Phase$ Upkeep | FirstUpkeep$ True | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCharm | TriggerDescription$ At the beginning of your first upkeep each turn, choose one —
+T:Mode$ Phase | Phase$ Upkeep | FirstUpkeep$ True | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCharm | TriggerDescription$ At the beginning of your first upkeep each turn, choose one —\n• Replace your first main phase this turn with an additional upkeep step.\n• Replace your second main phase this turn with an additional combat phase.
 SVar:TrigCharm:DB$ Charm | Choices$ DBReplaceMain1,DBReplaceMain2
 
 SVar:DBReplaceMain1:DB$ SkipPhase | Defined$ You | Phase$ Main1 | Duration$ EndOfTurn | SubAbility$ DBAddUpkeep | SpellDescription$ Replace your first main phase this turn with an additional upkeep step.
