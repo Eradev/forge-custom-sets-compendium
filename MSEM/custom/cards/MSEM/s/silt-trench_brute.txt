@@ -1,0 +1,9 @@
+Name:Silt-Trench Brute
+ManaCost:4
+Types:Artifact Creature Golem
+PT:3/3
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 3 | AddToughness$ 3 | AddKeyword$ Trample | CheckSVar$ ConcordCount | SVarCompare$ GE4 | Description$ Concord — This creature gets +3/+3 and has trample as long as there are four or more card types among permanents you control.
+SVar:ConcordCount:Count$Valid Permanent.YouCtrl$CardTypes
+
+Oracle:Concord — This creature gets +3/+3 and has trample as long as there are four or more card types among permanents you control.

@@ -1,0 +1,9 @@
+Name:Sink into the Floor
+ManaCost:B
+Types:Instant
+
+A:SP$ Mill | NumCards$ 1 | Defined$ You | SubAbility$ DBPump | SpellDescription$ Mill a card. Target creature gets -X/-X until end of turn, where X is the number of cards put into your graveyard from anywhere this turn.
+SVar:DBPump:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ -X | NumDef$ -X | IsCurse$ True
+SVar:X:Count$ThisTurnEntered_Graveyard_Card.YouOwn
+
+Oracle:Mill a card. Target creature gets -X/-X until end of turn, where X is the number of cards put into your graveyard from anywhere this turn.

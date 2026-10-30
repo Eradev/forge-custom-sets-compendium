@@ -1,0 +1,13 @@
+Name:Sandstreamer
+ManaCost:W W
+Types:Creature Spirit
+PT:2/2
+
+K:Flash
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When this creature enters, target permanent gains indestructible until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Permanent | KW$ Indestructible
+
+Oracle:Flash\nFlying\nWhen this creature enters, target permanent gains indestructible until end of turn.

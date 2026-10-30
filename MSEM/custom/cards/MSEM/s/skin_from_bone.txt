@@ -1,0 +1,10 @@
+Name:Skin from Bone
+ManaCost:R R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ FealtyMountains | SpellDescription$ CARDNAME deals damage to target creature equal to your fealty to Mountains. (Each Mountain you control counts towards your fealty to Mountains.)
+SVar:FealtyMountains:Count$Valid Mountain.YouCtrl
+
+Oracle:Skin from Bone deals damage to target creature equal to your fealty to Mountains. (Each Mountain you control counts towards your fealty to Mountains.)
+
+SVar:BuffedBy:Mountain

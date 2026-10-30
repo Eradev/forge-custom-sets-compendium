@@ -1,0 +1,12 @@
+Name:Strangulate
+ManaCost:1 B
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ -2 | NumDef$ -2 | IsCurse$ True | SubAbility$ DBDestroy | SpellDescription$ Target creature gets -2/-2 until end of turn. If you control two or more Deserts, destroy that creature instead.
+
+SVar:DBDestroy:DB$ Destroy | Defined$ Targeted | ConditionCheckSVar$ X | ConditionSVarCompare$ GE2
+SVar:X:Count$Valid Desert.YouCtrl
+
+Oracle:Target creature gets -2/-2 until end of turn. If you control two or more Deserts, destroy that creature instead.
+
+DeckHints:Type$Desert

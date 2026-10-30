@@ -1,0 +1,34 @@
+Name:Sabne's Autumn
+ManaCost:G G
+Types:Legendary Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigETB | TriggerDescription$ When CARDNAME enters, search your library for a Forest card, reveal it, put it into your hand, then shuffle. You gain 3 life.
+
+SVar:TrigETB:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Forest | ChangeNum$ 1 | SubAbility$ TrigGainLife
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 3
+
+A:AB$ SetState | Cost$ 1 G G | Defined$ Self | Mode$ Transform | CheckSVar$ FealtyForests | SVarCompare$ GE5 | SpellDescription$ Transform CARDNAME. Activate only if your fealty to Forests is five or greater. (Each Forest you control counts towards your fealty to Forests.)
+SVar:FealtyForests:Count$Valid Forest.YouCtrl
+
+Oracle:When Sabne's Autumn enters, search your library for a Forest card, reveal it, put it into your hand, then shuffle. You gain 3 life.\n{1}{G}{G}: Transform Sabne's Autumn. Activate only if your fealty to Forests is five or greater. (Each Forest you control counts towards your fealty to Forests.)
+
+SVar:BuffedBy:Forest
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Sabne, God of Harvest
+ManaCost:no cost
+Colors:green
+Types:Legendary Enchantment Creature God
+PT:4/4
+
+K:Indestructible
+
+S:Mode$ Continuous | Affected$ Land.YouCtrl | AddAbility$ ManaGG | Description$ Lands you control have "{T}: Add {G}{G}."
+SVar:ManaGG:AB$ Mana | Cost$ T | Produced$ G | Amount$ 2 | SpellDescription$ Add {G}{G}.
+
+A:AB$ Pump | Cost$ 5 G G | Defined$ Valid Creature.YouCtrl | NumAtt$ Double | NumDef$ Double | SpellDescription$ Double the power and toughness of each creature you control until end of turn.
+
+Oracle:Indestructible\nLands you control have "{T}: Add {G}{G}."\n{5}{G}{G}: Double the power and toughness of each creature you control until end of turn.

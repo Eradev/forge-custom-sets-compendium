@@ -1,0 +1,12 @@
+Name:Selfish Journeyman
+ManaCost:3 B
+Types:Creature Human Survivor
+PT:3/3
+
+T:Mode$ ChangesZone | ValidCard$ Survivor.Other+YouCtrl | Origin$ Battlefield | Destination$ Graveyard | Execute$ TrigDraw | TriggerZones$ Battlefield | TriggerDescription$ Whenever a Survivor you control dies, you draw a card and you lose 1 life.
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+Oracle:Whenever a Survivor you control dies, you draw a card and you lose 1 life.
+
+DeckHints:Type$Survivor
