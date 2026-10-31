@@ -5,7 +5,7 @@ PT:2/2
 
 K:Vigilance
 
-A:AB$ Pump | Cost$ G | Defined$ Self | NumAtt$ +2 | NumDef$ +2 | KW$ Trample | ActivationLimit$ 1 | CheckSVar$ ConcordCount | SVarCompare$ GE4 | PrecostDesc$ Concord — | SpellDescription$ This creature gets +2/+2 and gains trample until end of turn. Activate only if there are four or more card types among permanents you control and only once each turn.
+A:AB$ Pump | Cost$ G | NumAtt$ +2 | NumDef$ +2 | KW$ Trample | ActivationLimit$ 1 | CheckSVar$ ConcordCount | SVarCompare$ GE4 | PrecostDesc$ Concord — | SpellDescription$ This creature gets +2/+2 and gains trample until end of turn. Activate only if there are four or more card types among permanents you control and only once each turn.
 SVar:ConcordCount:Count$Valid Permanent.YouCtrl$CardTypes
 
 Oracle:Vigilance\nConcord — {G}: This creature gets +2/+2 and gains trample until end of turn. Activate only if there are four or more card types among permanents you control and only once each turn.

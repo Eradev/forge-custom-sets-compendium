@@ -9,7 +9,7 @@ T:Mode$ Drawn | ValidCard$ Card.YouCtrl | Number$ 2 | TriggerZones$ Battlefield 
 SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 1 | SubAbility$ DBGainLife
 SVar:DBGainLife:DB$ GainLife | LifeAmount$ 1
 
-A:AB$ Pump | Cost$ 1 B | Defined$ Self | KW$ Menace | SpellDescription$ This creature gains menace until end of turn.
+A:AB$ Pump | Cost$ 1 B | KW$ Menace | SpellDescription$ This creature gains menace until end of turn.
 
 Oracle:Deathtouch\nForesight — Whenever you draw your second card each turn, each opponent loses 1 life and you gain 1 life.\n{1}{B}: This creature gains menace until end of turn.
 

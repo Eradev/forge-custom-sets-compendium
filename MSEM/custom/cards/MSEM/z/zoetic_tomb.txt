@@ -5,7 +5,7 @@ Types:Artifact
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this artifact enters, exile target creature.
 SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Creature | TgtPrompt$ Select target creature | Imprint$ True
 
-A:AB$ Animate | Cost$ 4 | Defined$ Self | Power$ X | Toughness$ Y | Types$ Creature,Artifact,Golem | RemoveCreatureTypes$ True | SpellDescription$ Until end of turn, this artifact becomes a Golem artifact creature with power and toughness equal to the exiled creature's base power and toughness.
+A:AB$ Animate | Cost$ 4 | Power$ X | Toughness$ Y | Types$ Creature,Artifact,Golem | RemoveCreatureTypes$ True | SpellDescription$ Until end of turn, this artifact becomes a Golem artifact creature with power and toughness equal to the exiled creature's base power and toughness.
 SVar:X:Imprinted$CardBasePower
 SVar:Y:Imprinted$CardBaseToughness
 

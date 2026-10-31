@@ -7,7 +7,7 @@ K:Haste
 
 K:Ward:PayLife<3>
 
-A:AB$ Pump | Cost$ R tapXType<1/Artifact> | Defined$ Self | NumAtt$ +1 | SubAbility$ DBUnblock | SpellDescription$ This creature gets +1/+0 until end of turn. Up to one target creature can't block it this turn.
+A:AB$ Pump | Cost$ R tapXType<1/Artifact> | NumAtt$ +1 | SubAbility$ DBUnblock | SpellDescription$ This creature gets +1/+0 until end of turn. Up to one target creature can't block it this turn.
 SVar:DBUnblock:DB$ Effect | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 1 | RememberObjects$ Targeted,ParentTarget | ExileOnMoved$ Battlefield | StaticAbilities$ Unblockable | AILogic$ MakeUnblockable
 SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered+ParentTarget | ValidBlocker$ Creature.IsRemembered+Targeted | Description$ EFFECTSOURCE can't be blocked by up to one target creature this turn.
 

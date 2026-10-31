@@ -6,6 +6,6 @@ PT:2/2
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigSearch | TriggerDescription$ When this creature enters, you may search your library for a permanent card with mana value 1 or less, reveal it, put it into your hand, then shuffle.
 SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Permanent.cmcLE1 | ChangeNum$ 1 | Reveal$ True | Shuffle$ True
 
-A:AB$ Pump | Cost$ 2W 2U 2B 2R 2G | Defined$ Self | NumAtt$ +5 | NumDef$ +5 | KW$ Flying | SpellDescription$ This creature gets +5/+5 and gains flying until end of turn.
+A:AB$ Pump | Cost$ 2W 2U 2B 2R 2G | NumAtt$ +5 | NumDef$ +5 | KW$ Flying | SpellDescription$ This creature gets +5/+5 and gains flying until end of turn.
 
 Oracle:When this creature enters, you may search your library for a permanent card with mana value 1 or less, reveal it, put it into your hand, then shuffle.\n{2/W}{2/U}{2/B}{2/R}{2/G}: This creature gets +5/+5 and gains flying until end of turn.

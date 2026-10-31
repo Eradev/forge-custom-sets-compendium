@@ -10,7 +10,7 @@ SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Li
 SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 1
 
 T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | IsPresent$ Card.Self+!attackedThisTurn | Execute$ TrigTransform | TriggerDescription$ At the beginning of your end step, if NICKNAME didn't attack this turn, it becomes a Forest land until your next turn. (It's not a creature.)
-SVar:TrigTransform:DB$ Animate | Defined$ Self | Types$ Land,Forest | RemoveCardTypes$ True | RemoveCreatureTypes$ True | Duration$ UntilYourNextTurn
+SVar:TrigTransform:DB$ Animate | Types$ Land,Forest | RemoveCardTypes$ True | RemoveCreatureTypes$ True | Duration$ UntilYourNextTurn
 
 S:Mode$ Continuous | Affected$ Card.Self | AffectedZone$ Battlefield | AddTrigger$ BecomesLand | CheckSVar$ X | SVarCompare$ EQ0
 SVar:X:Count$Valid Land.Self+YouCtrl

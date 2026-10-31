@@ -6,13 +6,7 @@ K:Enchant:Creature
 
 S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 2 | AddToughness$ 2 | Description$ Enchanted creature gets +2/+2.
 
-T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCharm | TriggerDescription$ At the beginning of combat on your turn, enchanted creature gains your choice of flying, vigilance, or lifelink until end of turn.
-SVar:TrigCharm:DB$ Charm | Choices$ DBFlying,DBVigilance,DBLifelink | CharmNum$ 1
-
-SVar:DBFlying:DB$ Pump | Defined$ Enchanted | KW$ Flying | SpellDescription$ Flying
-
-SVar:DBVigilance:DB$ Pump | Defined$ Enchanted | KW$ Vigilance | SpellDescription$ Vigilance
-
-SVar:DBLifelink:DB$ Pump | Defined$ Enchanted | KW$ Lifelink | SpellDescription$ Lifelink
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ At the beginning of combat on your turn, enchanted creature gains your choice of flying, vigilance, or lifelink until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Enchanted | KWChoice$ Flying,Vigilance,Lifelink
 
 Oracle:Enchant creature\nEnchanted creature gets +2/+2.\nAt the beginning of combat on your turn, enchanted creature gains your choice of flying, vigilance, or lifelink until end of turn.

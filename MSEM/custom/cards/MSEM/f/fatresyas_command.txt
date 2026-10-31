@@ -6,7 +6,7 @@ A:SP$ Charm | CharmNum$ 2 | Choices$ DBReturn,DBCounters,DBDestroy,DBReveal
 
 SVar:DBReturn:DB$ ChangeZone | ValidTgts$ Permanent.YouOwn | Origin$ Graveyard | Destination$ Hand | TgtPrompt$ Select target permanent card in your graveyard | SpellDescription$ Return target permanent card from your graveyard to your hand.
 
-SVar:DBCounters:DB$ PutCounter | ValidTgts$ Creature | CounterType$ P1P1 | CounterNum$ 2 | SpellDescription$ Put two +1/+1 counters on target creature.
+SVar:DBCounters:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 2 | ValidTgts$ Creature | SpellDescription$ Put two +1/+1 counters on target creature.
 
 SVar:DBDestroy:DB$ Destroy | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment | SpellDescription$ Destroy target artifact or enchantment.
 

@@ -10,7 +10,7 @@ K:Lifelink
 T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigPutCounter | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature deals combat damage to a player, put a +1/+1 counter on it.
 SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1
 
-A:AB$ Pump | Cost$ PayLife<4> | Defined$ Self | KW$ Flying | SpellDescription$ This creature gains flying until end of turn.
+A:AB$ Pump | Cost$ PayLife<4> | KW$ Flying | SpellDescription$ This creature gains flying until end of turn.
 
 Oracle:Deathtouch, lifelink\nWhenever this creature deals combat damage to a player, put a +1/+1 counter on it.\nPay 4 life: This creature gains flying until end of turn.
 
