@@ -4,7 +4,7 @@ Types:Artifact Clue
 
 A:AB$ Draw | Cost$ 2 Sac<1/CARDNAME/this artifact> | SpellDescription$ Draw a card.
 
-A:AB$ Token | Cost$ 5 ExileFromGrave<1/CARDNAME/this card> | TokenScript$ b_4_4_skeleton_giant | ActivationZone$ Graveyard | SpellDescription$ Create a tapped 4/4 black Skeleton Giant artifact creature token.
+A:AB$ Token | Cost$ 5 ExileFromGrave<1/CARDNAME/this card> | TokenScript$ b_4_4_a_skeleton_giant | ActivationZone$ Graveyard | SpellDescription$ Create a tapped 4/4 black Skeleton Giant artifact creature token.
 
 Oracle:{2}, Sacrifice this artifact: Draw a card.\n{5}, Exile this card from your graveyard: Create a tapped 4/4 black Skeleton Giant artifact creature token.
 
