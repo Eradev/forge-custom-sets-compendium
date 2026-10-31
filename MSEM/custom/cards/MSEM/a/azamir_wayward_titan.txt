@@ -15,7 +15,7 @@ SVar:DBExileChosen:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | D
 SVar:DBCleanupMinus3:DB$ Cleanup | ClearChosenCard$ True
 
 A:AB$ ChangeZoneAll | Cost$ SubCounter<8/LOYALTY> | Planeswalker$ True | Ultimate$ True | Origin$ Sideboard | Destination$ Exile | ChangeType$ Card.OppOwn | SubAbility$ DBEffect | SpellDescription$ Exile all cards your opponents own from outside the game. Until end of turn, you may cast spells without paying their mana costs and you may play cards exiled with Azamir planeswalkers.
-SVar:DBEffect:DB$ Effect | StaticAbilities$ STCastFree,STPlayExile | Duration$ EndOfTurn
+SVar:DBEffect:DB$ Effect | StaticAbilities$ STCastFree,STPlayExile
 SVar:STCastFree:Mode$ Continuous | Affected$ Card.nonLand+YouOwn | MayPlay$ True | MayPlayWithoutManaCost$ True | AffectedZone$ Hand | Description$ Until end of turn, you may cast spells without paying their mana costs.
 SVar:STPlayExile:Mode$ Continuous | MayPlay$ True | MayPlayWithoutManaCost$ True | Affected$ Card.ExiledWith Planeswalker.Azamir+YouCtrl | AffectedZone$ Exile | Description$ You may play cards exiled with Azamir planeswalkers.
 
