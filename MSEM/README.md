@@ -451,7 +451,7 @@ Implementation:
 
 ```text
 T:Mode$ AttackerUnblockedOnce | ValidAttackingPlayer$ You | Execute$ TrigPump | TriggerZones$ Battlefield | TriggerDescription$ Infiltrate (Whenever one or more attacking creatures you control aren't blocked, this creature gets +1/+1 until end of turn.)
-SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +1 | NumDef$ +1
+SVar:TrigPump:DB$ Pump | NumAtt$ +1 | NumDef$ +1
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
