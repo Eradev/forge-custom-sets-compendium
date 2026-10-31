@@ -9,7 +9,7 @@ R:Event$ Moved | Destination$ Graveyard | ValidCard$ Card.Self | ReplaceWith$ DB
 SVar:DBOmniShuffle:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Library | Defined$ ReplacedCard | Reveal$ True | Shuffle$ True | SubAbility$ DBLoseLife
 SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ 2
 
-A:AB$ Animate | Cost$ W U B | Defined$ Self | Power$ 0 | Toughness$ 12 | Keywords$ Hexproof & Indestructible | SpellDescription$ Wallform — NICKNAME has base power and toughness 0/12 and gains hexproof and indestructible until end of turn.
+A:AB$ Animate | Cost$ W U B | Power$ 0 | Toughness$ 12 | Keywords$ Hexproof & Indestructible | SpellDescription$ Wallform — NICKNAME has base power and toughness 0/12 and gains hexproof and indestructible until end of turn.
 
 A:AB$ Effect | Cost$ 3 R G | StaticAbilities$ Unblockable | SpellDescription$ Bridgeform — Creatures you control can't be blocked this turn.
 SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Creature.YouCtrl | Description$ Creatures you control can't be blocked this turn.

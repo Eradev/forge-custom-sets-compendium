@@ -3,6 +3,6 @@ ManaCost:B
 Types:Creature Zombie Rat
 PT:1/2
 
-A:AB$ Pump | Cost$ B | Defined$ Self | KW$ Deathtouch | SpellDescription$ This creature gains deathtouch until end of turn.
+A:AB$ Pump | Cost$ B | KW$ Deathtouch | SpellDescription$ This creature gains deathtouch until end of turn.
 
 Oracle:{B}: This creature gains deathtouch until end of turn.

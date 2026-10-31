@@ -7,6 +7,6 @@ SVar:ETBTapped:DB$ Tap | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ U | SpellDescription$ Add {U}.
 
-A:AB$ Animate | Cost$ 2U 2U | Defined$ Self | Power$ 2 | Toughness$ 2 | Types$ Creature,Elemental | Colors$ Blue | OverwriteColors$ True | Keywords$ Flying | SpellDescription$ This land becomes a 2/2 blue Elemental creature with flying until end of turn. It's still a land.
+A:AB$ Animate | Cost$ 2U 2U | Power$ 2 | Toughness$ 2 | Types$ Creature,Elemental | Colors$ Blue | OverwriteColors$ True | Keywords$ Flying | SpellDescription$ This land becomes a 2/2 blue Elemental creature with flying until end of turn. It's still a land.
 
 Oracle:This land enters tapped.\n{T}: Add {U}.\n{2/U}{2/U}: This land becomes a 2/2 blue Elemental creature with flying until end of turn. It's still a land.

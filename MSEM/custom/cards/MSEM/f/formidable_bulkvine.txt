@@ -6,7 +6,7 @@ PT:0/8
 K:Defender
 K:Trample
 
-A:AB$ Animate | Cost$ tapXType<Any/Creature.Other+withTotalPowerGE8> | CostDesc$ Tap any number of other untapped creatures you control with total toughness 8 or greater: | Defined$ Self | Power$ 8 | Duration$ UntilEndOfTurn | SubAbility$ DBEffect | SpellDescription$ This creature's base power becomes 8 until end of turn and it can attack this turn as though it didn't have defender.
+A:AB$ Animate | Cost$ tapXType<Any/Creature.Other+withTotalPowerGE8> | CostDesc$ Tap any number of other untapped creatures you control with total toughness 8 or greater: | Power$ 8 | Duration$ UntilEndOfTurn | SubAbility$ DBEffect | SpellDescription$ This creature's base power becomes 8 until end of turn and it can attack this turn as though it didn't have defender.
 
 S:Mode$ TapPowerValue | ValidCard$ Creature.Other+YouCtrl | ValidSA$ Activated.Self | Value$ Toughness
 

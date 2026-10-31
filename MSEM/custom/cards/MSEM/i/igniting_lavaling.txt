@@ -3,7 +3,7 @@ ManaCost:1 R
 Types:Artifact Creature Lizard Beast
 PT:1/1
 
-A:AB$ Pump | Cost$ R | Defined$ Self | NumAtt$ +1 | SpellDescription$ This creature gets +1/+0 until end of turn.
+A:AB$ Pump | Cost$ R | NumAtt$ +1 | SpellDescription$ This creature gets +1/+0 until end of turn.
 
 A:AB$ DealDamage | Cost$ 4 R Sac<1/CARDNAME/this creature> | ValidTgts$ Any | NumDmg$ 3 | SpellDescription$ It deals 3 damage to any target.
 

@@ -3,6 +3,6 @@ ManaCost:2
 Types:Artifact Creature Golem
 PT:1/2
 
-A:AB$ Pump | Cost$ 2R 2R | Defined$ Self | NumAtt$ +1 | NumDef$ +1 | KW$ Double Strike | SpellDescription$ This creature gets +1/+1 and gains double strike until end of turn.
+A:AB$ Pump | Cost$ 2R 2R | NumAtt$ +1 | NumDef$ +1 | KW$ Double Strike | SpellDescription$ This creature gets +1/+1 and gains double strike until end of turn.
 
 Oracle:{2/R}{2/R}: This creature gets +1/+1 and gains double strike until end of turn.
