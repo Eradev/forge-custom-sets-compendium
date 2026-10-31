@@ -13,4 +13,4 @@ SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered+ParentTarg
 
 Oracle:Haste\nWard—Pay 3 life.\n{R}, Tap an untapped artifact you control: This creature gets +1/+0 until end of turn. Up to one target creature can't block it this turn.
 
-DeckHints$Type$Artifact
+DeckHints:Type$Artifact

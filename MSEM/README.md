@@ -166,10 +166,8 @@ Implementation:
 
 ```text
 K:ETBReplacement:Other:DBAlpha:Optional
-
-SVar:DBAlpha:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | ETB$ True | SubAbility$ DBBecomeAlpha | SpellDescription$ Alpha (You may have this creature enter with an additional +1/+1 counter on it. If you do, it becomes alpha and can only attack alone.)
-SVar:DBBecomeAlpha:DB$ Animate | Defined$ Self | ConditionDefined$ Self | ConditionPresent$ Card.Self+HasSVar Alpha | ConditionCompare$ EQ0 | HiddenKeywords$ CARDNAME can only attack alone. | sVars$ AlphaMarker | Duration$ Permanent
-
+SVar:DBAlpha:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 1 | ETB$ True | SubAbility$ DBBecomeAlpha | SpellDescription$ Alpha (You may have this creature enter with an additional +1/+1 counter on it. If you do, it becomes alpha and can only attack alone.)
+SVar:DBBecomeAlpha:DB$ Animate | ConditionDefined$ Self | ConditionPresent$ Card.Self+HasSVar Alpha | ConditionCompare$ EQ0 | HiddenKeywords$ CARDNAME can only attack alone. | sVars$ AlphaMarker | Duration$ Permanent
 SVar:AlphaMarker:SVar:Alpha:True
 ```
 
@@ -453,7 +451,7 @@ Implementation:
 
 ```text
 T:Mode$ AttackerUnblockedOnce | ValidAttackingPlayer$ You | Execute$ TrigPump | TriggerZones$ Battlefield | TriggerDescription$ Infiltrate (Whenever one or more attacking creatures you control aren't blocked, this creature gets +1/+1 until end of turn.)
-SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +1 | NumDef$ +1
+SVar:TrigPump:DB$ Pump | NumAtt$ +1 | NumDef$ +1
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)

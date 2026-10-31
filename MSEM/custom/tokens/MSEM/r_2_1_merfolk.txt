@@ -1,0 +1,6 @@
+Name:Merfolk Token
+ManaCost:no cost
+Colors:red
+Types:Creature Merfolk
+PT:2/1
+Oracle:

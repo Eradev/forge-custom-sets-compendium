@@ -7,7 +7,7 @@ K:Flying
 
 K:Ward:3
 
-T:Mode$ Untaps | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Inspired — Whenever NICKNAME becomes untapped, choose a nonbasic card name, then reveal the top five cards of your library. Put all cards with the chosen name from among them into your hand and the rest on the bottom of your library in any order.
+T:Mode$ Untaps | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigNameCard | TriggerDescription$ Inspired — Whenever NICKNAME becomes untapped, choose a nonbasic card name, then reveal the top five cards of your library. Put all cards with the chosen name from among them into your hand and the rest on the bottom of your library in any order.
 SVar:TrigNameCard:DB$ NameCard | Defined$ You | ValidCards$ Card.nonBasic | ValidDescription$ nonbasic | SubAbility$ DBDig
 SVar:DBDig:DB$ Dig | DigNum$ 5 | Reveal$ True | ChangeNum$ All | ChangeValid$ Card.NamedCard | DestinationZone2$ Library | LibraryPosition$ -1
 
