@@ -16,7 +16,7 @@ S:Mode$ Continuous | Affected$ Card.Self | AffectedZone$ Battlefield | AddTrigge
 SVar:X:Count$Valid Land.Self+YouCtrl
 
 SVar:BecomesLand:Mode$ Always | IsPresent$ Card.Self+Land | PresentCompare$ EQ1 | Execute$ TrigExile | TriggerZones$ Battlefield | ActivationLimit$ 1 | TriggerDescription$ Whenever NICKNAME becomes a land, exile up to one target creature until NICKNAME becomes a creature again.
-SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DelTrig
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True
 
 T:Mode$ Always | IsPresent$ Card.Self+Creature | PresentCompare$ EQ1 | IsPresent2$ Card.IsRemembered | PresentZone2$ Exile | Execute$ TrigReturn | TriggerZones$ Battlefield | ActivationLimit$ 1 | TriggerDescription$ Return exiled creature to the battlefield when NICKNAME becomes a creature again.
 SVar:TrigReturn:DB$ ChangeZone | Origin$ Exile | Destination$ Battlefield | Defined$ Remembered | SubAbility$ DBCleanup
