@@ -5,7 +5,7 @@ PT:2/3
 
 A:AB$ ChangeZone | Cost$ 1 | Origin$ Graveyard | Destination$ Exile | TgtPrompt$ Choose target card in a graveyard | ValidTgts$ Card | SpellDescription$ Exile target card from a graveyard.
 
-A:AB$ ChangeZone | Cost$ T | Origin$ Exile | Destination$ Graveyard | ValidTgts$ Card.ExiledWithSource | TgtZone$ Exile | TgtPrompt$ Select target card exiled with this creature | SubAbility$ DBCharm | SpellDescription$ Put target card exiled with this creature into its owner's graveyard, choose one —
+A:AB$ ChangeZone | Cost$ T | Origin$ Exile | Destination$ Graveyard | ValidTgts$ Card.ExiledWithSource | TgtZone$ Exile | TgtPrompt$ Select target card exiled with this creature | SubAbility$ DBCharm | SpellDescription$ Put target card exiled with this creature into its owner's graveyard, 
 SVar:DBCharm:DB$ Charm | Choices$ DBGainLife,DBLoseLife
 
 SVar:DBGainLife:DB$ GainLife | LifeAmount$ 2 | SpellDescription$ You gain 2 life.

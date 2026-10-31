@@ -2,15 +2,15 @@ Name:Proselytic Shrine
 ManaCost:6
 Types:Artifact
 
-T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCharm | TriggerDescription$ At the beginning of combat on your turn, choose one that hasn't been chosen —
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCharm | TriggerDescription$ At the beginning of combat on your turn, ABILITY
 SVar:TrigCharm:DB$ Charm | Choices$ DBFlying,DBLifelink,DBBigPump,DBSacrifice | ChoiceRestriction$ ThisTurn
 
-SVar:DBFlying:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1 | KW$ Flying | SpellDescription$ • Creatures you control get +1/+1 and gain flying until end of turn.
+SVar:DBFlying:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1 | KW$ Flying | SpellDescription$ Creatures you control get +1/+1 and gain flying until end of turn.
 
-SVar:DBLifelink:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1 | KW$ Lifelink | SpellDescription$ • Creatures you control get +1/+1 and gain lifelink until end of turn.
+SVar:DBLifelink:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1 | KW$ Lifelink | SpellDescription$ Creatures you control get +1/+1 and gain lifelink until end of turn.
 
-SVar:DBBigPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +3 | NumDef$ +3 | SpellDescription$ • Creatures you control get +3/+3 until end of turn.
+SVar:DBBigPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +3 | NumDef$ +3 | SpellDescription$ Creatures you control get +3/+3 until end of turn.
 
-SVar:DBSacrifice:DB$ SacrificeAll | ValidCards$ Creature.YouCtrl | SpellDescription$ • Sacrifice each creature you control.
+SVar:DBSacrifice:DB$ SacrificeAll | ValidCards$ Creature.YouCtrl | SpellDescription$ Sacrifice each creature you control.
 
 Oracle:At the beginning of combat on your turn, choose one that hasn't been chosen —\n• Creatures you control get +1/+1 and gain flying until end of turn.\n• Creatures you control get +1/+1 and gain lifelink until end of turn.\n• Creatures you control get +3/+3 until end of turn.\n• Sacrifice each creature you control.
