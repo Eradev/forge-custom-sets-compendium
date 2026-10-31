@@ -6,7 +6,7 @@ K:Fabled
 
 S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 W U | Description$ Fabled {2}{W}{U} (Then if you cast this for its fabled cost, put it onto the battlefield transformed attached to that player.)
 
-A:SP$ Effect | ValidTgts$ Player | IsCurse$ True | StaticAbilities$ STCantBeCast | RememberTargets$ True | RememberObjects$ Targeted | Duration$ UntilEOT | SubAbility$ ConditionalTransform | SpellDescription$ Target player can't cast spells this turn.
+A:SP$ Effect | ValidTgts$ Player | IsCurse$ True | StaticAbilities$ STCantBeCast | RememberTargets$ True | RememberObjects$ Targeted | Duration$ UntilEndOfTurn | SubAbility$ ConditionalTransform | SpellDescription$ Target player can't cast spells this turn.
 SVar:STCantBeCast:Mode$ CantBeCast | ValidCard$ Card | Caster$ Player.IsRemembered | Description$ Target player can't cast spells this turn.
 
 SVar:ConditionalTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1 | SubAbility$ DBCleanup1
@@ -28,9 +28,9 @@ K:Enchant:Player.IsRemembered
 
 T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Player.EnchantedBy | TriggerZones$ Battlefield | Execute$ TrigSkipPhase | TriggerDescription$ At the beginning of enchanted player's upkeep, that player chooses draw step, main phase, or combat phase. They skip each instance of the chosen step or phase this turn.
 SVar:TrigSkipPhase:DB$ GenericChoice | Defined$ TriggeredPlayer | Choices$ SkipDraw,SkipMain,SkipCombat
-SVar:SkipDraw:DB$ SkipPhase | Phase$ Draw | Duration$ UntilEOT | Defined$ TriggeredPlayer | SpellDescription$ Skip Draw Step
-SVar:SkipMain:DB$ SkipPhase | Phase$ Main1,Main2 | Duration$ UntilEOT | Defined$ TriggeredPlayer | SpellDescription$ Skip Main Phases
-SVar:SkipCombat:DB$ SkipPhase | Phase$ BeginCombat | Duration$ UntilEOT | Defined$ TriggeredPlayer | SpellDescription$ Skip Combat Phase
+SVar:SkipDraw:DB$ SkipPhase | Phase$ Draw | Duration$ UntilEndOfTurn | Defined$ TriggeredPlayer | SpellDescription$ Skip Draw Step
+SVar:SkipMain:DB$ SkipPhase | Phase$ Main1,Main2 | Duration$ UntilEndOfTurn | Defined$ TriggeredPlayer | SpellDescription$ Skip Main Phases
+SVar:SkipCombat:DB$ SkipPhase | Phase$ BeginCombat | Duration$ UntilEndOfTurn | Defined$ TriggeredPlayer | SpellDescription$ Skip Combat Phase
 
 T:Mode$ ChangesZone | ValidCard$ Card.Self | Origin$ Battlefield | Destination$ Any | Execute$ DBCleanup2 | Static$ True
 SVar:DBCleanup2:DB$ Cleanup | ClearRemembered$ True
