@@ -6,7 +6,7 @@ PT:5/5
 K:Trample
 
 T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigStaff | TriggerDescription$ Whenever NICKNAME deals combat damage to a player, you may create Wun Su's Staff, a legendary colorless Equipment artifact token with "Equipped creature gets +5/+5" and equip {5}, then attach it to NICKNAME.
-SVar:TrigStaff:DB$ Token | TokenScript$ wun_sus_staff | TokenOwner$ You | RememberTokens$ True | SubAbility$ DBAttach
+SVar:TrigStaff:DB$ Token | TokenScript$ wun_sus_staff | RememberTokens$ True | SubAbility$ DBAttach
 SVar:DBAttach:DB$ Attach | Object$ Remembered | Defined$ Self | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
