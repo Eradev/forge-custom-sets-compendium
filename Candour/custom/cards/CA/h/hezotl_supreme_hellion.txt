@@ -9,7 +9,7 @@ SVar:TrigDamage:DB$ DamageAll | ValidCards$ Creature | NumDmg$ 3
 A:AB$ Sacrifice | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | SacValid$ Land | Optional$ True | RememberSacrificed$ True | SubAbility$ DBToken | SpellDescription$ You may sacrifice a land. If you do, create an X/X red Hellion creature token, where X is NICKNAME's loyalty.
 SVar:DBToken:DB$ Token | TokenScript$ r_x_x_hellion | TokenPower$ X | TokenToughness$ X | ConditionDefined$ Remembered | ConditionPresent$ Card | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
-SVar:X:Count$CardLoyalty
+SVar:X:Count$CardCounters.LOYALTY
 
 A:AB$ Destroy | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Land | TgtPrompt$ Select target land | SubAbility$ DBDmg | SpellDescription$ Destroy target land. NICKNAME deals 3 damage to that land's controller.
 SVar:DBDmg:DB$ DealDamage | Defined$ TargetedController | NumDmg$ 3
