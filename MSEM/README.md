@@ -81,7 +81,7 @@ Pyramids of Atuum (POA)               -  98% (126/128)
   Missing cards:
     * Righteous Priestess
     * Sphinx of Riddles
-K15 Core Set (K15)                    -  100%
+K15 Core Set (K15)                    - 100%
 Imperial Legacies (IMP)               -  99% (141/142)
     * Bind in Jade
 Goliaths of Nangjiao (GNJ)            - 100%
