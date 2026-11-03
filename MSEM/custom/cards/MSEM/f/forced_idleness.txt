@@ -1,0 +1,8 @@
+Name:Forced Idleness
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Tap | TargetMin$ 0 | TargetMax$ 2 | ValidTgts$ Creature | SubAbility$ DBScry | SpellDescription$ Tap up to two target creatures. Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)
+SVar:DBScry:DB$ Scry
+
+Oracle:Tap up to two target creatures. Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)

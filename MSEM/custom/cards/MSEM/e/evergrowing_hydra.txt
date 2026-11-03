@@ -1,0 +1,17 @@
+Name:Evergrowing Hydra
+ManaCost:X G
+Types:Creature Hydra
+PT:0/0
+
+K:Trample
+K:etbCounter:P1P1:X
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever another creature you control dies, you may pay {X}, where X is less than or equal to that creature's power. If you do, put X +1/+1 counters on this creature.
+SVar:TrigPutCounter:AB$ PutCounter | Cost$ X | XMax$ Y | Defined$ Self | CounterType$ P1P1 | CounterNum$ X
+SVar:X:Count$xPaid
+SVar:Y:TriggeredCard$CardPower
+
+Oracle:Trample\nThis creature enters with X +1/+1 counters on it.\nWhenever another creature you control dies, you may pay {X}, where X is less than or equal to that creature's power. If you do, put X +1/+1 counters on this creature.
+
+DeckHas:Ability$Counters
+DeckHints:Ability$Counters

@@ -1,0 +1,13 @@
+Name:Master of Winds (MSEM)
+ManaCost:3 U U
+Types:Creature Sphinx
+PT:3/5
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self,Creature.Other+YouCtrl+withFlying | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigDraw | TriggerDescription$ Whenever this creature or another creature with flying you control enters, you may draw a card.
+SVar:TrigDraw:DB$ Draw | Defined$ You | NumCards$ 1
+
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever this creature or another creature with flying you control enters, you may draw a card.
+
+DeckHints:Keyword$Flying

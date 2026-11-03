@@ -1,0 +1,11 @@
+Name:Bonereader
+ManaCost:B
+Types:Creature Human Wizard
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigScry | OptionalDecider$ You | TriggerDescription$ Whenever another creature you control dies, you may pay {1}. If you do, scry 1.
+SVar:TrigScry:AB$ Scry | Cost$ 1 | ScryNum$ 1
+
+Oracle:Whenever another creature you control dies, you may pay {1}. If you do, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)
+
+DeckHints:Ability$Sacrifice

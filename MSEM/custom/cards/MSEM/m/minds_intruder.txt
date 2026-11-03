@@ -1,0 +1,11 @@
+Name:Mind's Intruder
+ManaCost:2 U
+Types:Creature Human Wizard
+PT:2/1
+
+T:Mode$ SpellCast | TriggerZones$ Battlefield | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | Execute$ TrigMill | TriggerDescription$ Whenever you cast an instant or sorcery spell, target player mills a card.
+SVar:TrigMill:DB$ Mill | NumCards$ 1 | ValidTgts$ Player | TgtPrompt$ Select target player
+
+Oracle:Whenever you cast an instant or sorcery spell, target player mills a card.
+
+DeckHints:Type$Instant|Sorcery

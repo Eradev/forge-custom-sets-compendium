@@ -1,0 +1,14 @@
+Name:Barracks Trainer
+ManaCost:4 W W
+Types:Creature Human Soldier
+PT:3/4
+
+K:First Strike
+
+S:Mode$ Continuous | Affected$ Creature.Soldier+Other+YouCtrl | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ First Strike | Description$ Other Soldier creatures you control get +1/+1 and have first strike.
+
+A:AB$ Token | Cost$ 3 W | TokenScript$ w_1_1_soldier
+
+Oracle:First strike (This creature deals combat damage before creatures without first strike.)\nOther Soldier creatures you control get +1/+1 and have first strike.\n{3}{W}: Create a 1/1 white Soldier creature token.
+
+DeckHas:Ability$Token

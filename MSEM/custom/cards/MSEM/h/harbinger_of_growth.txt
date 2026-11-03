@@ -1,0 +1,13 @@
+Name:Harbinger of Growth
+ManaCost:1 G
+Types:Creature Elemental
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 1/1 green Saproling creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ g_1_1_saproling
+
+A:AB$ CopyPermanent | Cost$ 1 G Sac<1/CARDNAME/this creature> | Populate$ True
+
+Oracle:When this creature enters, create a 1/1 green Saproling creature token.\n{1}{G}, Sacrifice this creature: Populate. (Create a token that's a copy of a creature token you control.)
+
+DeckHas:Ability$Token

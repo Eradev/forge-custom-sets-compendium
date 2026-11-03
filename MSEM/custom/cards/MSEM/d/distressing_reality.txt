@@ -1,0 +1,11 @@
+Name:Distressing Reality
+ManaCost:1 B
+Types:Sorcery
+
+A:SP$ Discard | ValidTgts$ Player | TgtPrompt$ Select target player | NumCards$ 1 | Mode$ TgtChoose | SubAbility$ DBDiscard | SpellDescription$ Target player discards a card. If you control a Zombie, that player discards an additional card.
+SVar:DBDiscard:DB$ Discard | Defined$ Targeted | NumCards$ 1 | Mode$ TgtChoose | ConditionPresent$ Zombie.YouCtrl | ConditionCompare$ GE1
+
+Oracle:Target player discards a card. If you control a Zombie, that player discards an additional card.
+
+DeckHas:Ability$Discard
+DeckHints:Type$Zombie

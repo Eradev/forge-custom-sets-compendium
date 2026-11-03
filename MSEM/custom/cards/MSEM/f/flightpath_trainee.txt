@@ -1,0 +1,9 @@
+Name:Flightpath Trainee
+ManaCost:3 W
+Types:Creature Human Knight
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever another creature you control enters, this creature gains flying until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | KW$ Flying
+
+Oracle:Whenever another creature you control enters, this creature gains flying until end of turn.

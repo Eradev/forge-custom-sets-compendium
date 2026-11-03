@@ -1,0 +1,11 @@
+Name:Sentient Contraption
+ManaCost:3
+Types:Artifact Creature Construct
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 1/1 colorless Thopter artifact creature token with flying.
+SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_a_thopter_flying | TokenOwner$ You
+
+Oracle:When this creature enters, create a 1/1 colorless Thopter artifact creature token with flying.
+
+DeckHas:Ability$Token

@@ -1,0 +1,10 @@
+Name:Gather Forces
+ManaCost:1 W
+Types:Instant
+
+A:SP$ CopyPermanent | Populate$ True | SubAbility$ DBGainLife | SpellDescription$ Populate, then you gain 2 life.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 2
+
+Oracle:Populate, then you gain 2 life.
+
+DeckHas:Ability$Token|LifeGain

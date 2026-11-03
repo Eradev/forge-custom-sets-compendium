@@ -1,0 +1,7 @@
+Name:Scholar's Captivation
+ManaCost:2 U
+Types:Instant
+
+A:SP$ PumpAll | ValidCards$ Creature.attacking | NumAtt$ -3 | IsCurse$ True | SpellDescription$ Attacking creatures get -3/-0 until end of turn.
+
+Oracle:Attacking creatures get -3/-0 until end of turn.

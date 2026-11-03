@@ -1,0 +1,8 @@
+Name:Repressed Potential
+ManaCost:2 U
+Types:Instant
+
+A:SP$ Animate | ValidTgts$ Creature | TgtPrompt$ Select target creature | Power$ 1 | Toughness$ 1 | RemoveAllAbilities$ True | IsCurse$ True | SubAbility$ DBScry | SpellDescription$ Until end of turn, target creature loses all abilities and has base power and toughness 1/1. Scry 1.
+SVar:DBScry:DB$ Scry | ScryNum$ 1
+
+Oracle:Until end of turn, target creature loses all abilities and has base power and toughness 1/1. Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)

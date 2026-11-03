@@ -1,0 +1,9 @@
+Name:Kragnoss' Arsenal
+ManaCost:3
+Types:Artifact
+
+A:AB$ Mana | Cost$ T | Produced$ R | SpellDescription$ Add {R}.
+
+A:AB$ Pump | Cost$ R T | ValidTgts$ Creature | KW$ Haste | SpellDescription$ Target creature gains haste until end of turn.
+
+Oracle:{T}: Add {R}.\n{R}, {T}: Target creature gains haste until end of turn.

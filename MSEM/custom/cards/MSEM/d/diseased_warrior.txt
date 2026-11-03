@@ -1,0 +1,11 @@
+Name:Diseased Warrior
+ManaCost:5 B
+Types:Creature Zombie Warrior
+PT:5/5
+
+K:Haste
+
+T:Mode$ Attacks | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ Whenever a creature you control attacks, each opponent loses 1 life.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ Opponent | LifeAmount$ 1
+
+Oracle:Haste (This creature can attack and {T} as soon as it comes under your control.)\nWhenever a creature you control attacks, each opponent loses 1 life.

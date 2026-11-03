@@ -1,0 +1,8 @@
+Name:Crafter's Mistake
+ManaCost:R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Player,Planeswalker | TgtPrompt$ Select target player or planeswalker | NumDmg$ 1 | SubAbility$ DBSacrifice | SpellDescription$ CARDNAME deals 1 damage to target player or planeswalker. That player or that planeswalker's controller sacrifices an artifact.
+SVar:DBSacrifice:DB$ Sacrifice | Defined$ TargetedOrController | SacValid$ Artifact | Amount$ 1
+
+Oracle:Crafter's Mistake deals 1 damage to target player or planeswalker. That player or that planeswalker's controller sacrifices an artifact.

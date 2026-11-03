@@ -1,0 +1,8 @@
+Name:Lay to Rest
+ManaCost:2 G
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDraw | OptionalDecider$ You | TriggerDescription$ Whenever a creature you control dies, you may pay {G}. If you do, draw a card.
+SVar:TrigDraw:AB$ Draw | Cost$ G | Defined$ You | NumCards$ 1
+
+Oracle:Whenever a creature you control dies, you may pay {G}. If you do, draw a card.

@@ -1,0 +1,16 @@
+Name:Vaertris' Master Plan
+ManaCost:3 U U U
+Types:Enchantment
+
+K:ETBReplacement:Other:DBChoosePlayer
+SVar:DBChoosePlayer:DB$ ChoosePlayer | Defined$ You | Choices$ Player | ChoiceTitle$ Choose a player whose library will be exiled | SubAbility$ DBExile | SpellDescription$ As this enchantment enters, exile the top five cards of any player's library.
+SVar:DBExile:DB$ Dig | Defined$ ChosenPlayer | DigNum$ 5 | ChangeNum$ All | DestinationZone$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenPlayer$ True
+
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.ExiledWithSource | AffectedZone$ Exile | MayPlay$ True | Description$ You may play cards exiled with this enchantment.
+
+T:Mode$ Always | TriggerZones$ Battlefield | CheckSVar$ X | SVarCompare$ EQ0 | Execute$ TrigReturn | TriggerDescription$ When there are no cards exiled with enchantment, return it to its owner's hand.
+SVar:TrigReturn:DB$ ChangeZone | Defined$ Self | Origin$ Battlefield | Destination$ Hand
+SVar:X:ExiledWith$Amount
+
+Oracle:As this enchantment enters, exile the top five cards of any player's library.\nYou may play cards exiled with this enchantment.\nWhen there are no cards exiled with this enchantment, return it to its owner's hand.

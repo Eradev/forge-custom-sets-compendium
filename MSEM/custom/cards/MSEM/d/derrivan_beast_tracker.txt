@@ -1,0 +1,10 @@
+Name:Derrivan Beast Tracker
+ManaCost:G
+Types:Creature Elf Scout
+PT:0/1
+
+A:AB$ Token | Cost$ 2 G Sac<1/CARDNAME/this creature> | TokenScript$ g_3_3_beast | SpellDescription$ Create a 3/3 green Beast creature token.
+
+Oracle:{2}{G}, Sacrifice this creature: Create a 3/3 green Beast creature token.
+
+DeckHas:Ability$Token|Sacrifice

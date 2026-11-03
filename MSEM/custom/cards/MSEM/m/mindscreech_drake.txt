@@ -1,0 +1,11 @@
+Name:Mindscreech Drake
+ManaCost:5 U
+Types:Creature Drake
+PT:3/4
+
+K:Flying
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigMill | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature deals combat damage to a player, that player mills three cards.
+SVar:TrigMill:DB$ Mill | Defined$ TriggeredTarget | NumCards$ 3
+
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever this creature deals combat damage to a player, that player mills three cards.

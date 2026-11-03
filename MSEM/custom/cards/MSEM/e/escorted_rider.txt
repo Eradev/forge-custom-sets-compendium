@@ -1,0 +1,10 @@
+Name:Escorted Rider
+ManaCost:1 W
+Types:Creature Human Knight
+PT:1/1
+
+K:Flying
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Creature.Other+YouCtrl+withFlying | Description$ This creature gets +1/+1 as long as you control another creature with flying.
+
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nThis creature gets +1/+1 as long as you control another creature with flying.

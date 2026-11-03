@@ -1,0 +1,14 @@
+Name:Mass Orator
+ManaCost:2 W W
+Types:Creature Human Cleric
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self+!token | Execute$ TrigPopulate | TriggerDescription$ When this creature enters, if it isn't a token, populate. (Create a token that's a copy of a creature token you control.)
+SVar:TrigPopulate:DB$ CopyPermanent | Populate$ True
+
+S:Mode$ Continuous | Affected$ Creature.token+YouCtrl | AddPower$ 1 | AddToughness$ 1 | Description$ Creature tokens you control get +1/+1.
+
+Oracle:When this creature enters, if it isn't a token, populate. (Create a token that's a copy of a creature token you control.)\nCreature tokens you control get +1/+1.
+
+DeckHas:Ability$Token
+DeckHints:Ability$Token

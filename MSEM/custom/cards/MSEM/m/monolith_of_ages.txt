@@ -1,0 +1,17 @@
+Name:Monolith of Ages
+ManaCost:6
+Types:Artifact
+
+A:AB$ Pump | Cost$ W U T | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ +2 | NumDef$ +2 | KW$ Flying | SpellDescription$ Target creature gets +2/+2 and gains flying until end of turn.
+
+A:AB$ Mill | Cost$ U B T | ValidTgts$ Player | TgtPrompt$ Select target player | NumCards$ 3 | SpellDescription$ Target player mills three cards.
+
+A:AB$ DealDamage | Cost$ B R T | ValidTgts$ Any | TgtPrompt$ Select any target | NumDmg$ 3 | SpellDescription$ This artifact deals 3 damage to any target.
+
+A:AB$ Pump | Cost$ R G T | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ +4 | NumDef$ +2 | KW$ Trample | SpellDescription$ Target creature gets +4/+2 and gains trample until end of turn.
+
+A:AB$ CopyPermanent | Cost$ G W T | Populate$ True | SpellDescription$ Populate. (Create a token that's a copy of a creature token you control.)
+
+Oracle:{W}{U}, {T}: Target creature gets +2/+2 and gains flying until end of turn.\n{U}{B}, {T}: Target player mills three cards.\n{B}{R}, {T}: This artifact deals 3 damage to any target.\n{R}{G}, {T}: Target creature gets +4/+2 and gains trample until end of turn.\n{G}{W}, {T}: Populate. (Create a token that's a copy of a creature token you control.)
+
+DeckHas:Ability$Token

@@ -1,0 +1,12 @@
+Name:Transcendent Priest
+ManaCost:2 W W
+Types:Creature Human Cleric
+PT:2/3
+
+A:AB$ Token | Cost$ 4 W W | TokenScript$ w_4_4_angel_flying | SpellDescription$ Create a 4/4 white Angel creature token with flying.
+
+A:AB$ CopyPermanent | Cost$ 2 W W | Populate$ True | SpellDescription$ Populate. (Create a token that's a copy of a creature token you control.)
+
+Oracle:{4}{W}{W}: Create a 4/4 white Angel creature token with flying.\n{2}{W}{W}: Populate. (Create a token that's a copy of a creature token you control.)
+
+DeckHas:Ability$Token

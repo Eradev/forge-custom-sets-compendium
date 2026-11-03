@@ -1,0 +1,7 @@
+Name:Armament Upgrade
+ManaCost:W
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | KW$ Double Strike | SpellDescription$ Target creature gains double strike until end of turn.
+
+Oracle:Target creature gains double strike until end of turn.

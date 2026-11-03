@@ -1,0 +1,12 @@
+Name:Divine Presence (MSEM)
+ManaCost:2 W
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigGainLife | TriggerDescription$ Whenever a creature you control enters, you may gain 1 life.
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 1
+
+A:AB$ CopyPermanent | Cost$ 3 W | Populate$ True
+
+Oracle:Whenever a creature you control enters, you may gain 1 life.\n{3}{W}: Populate. (Create a token that's a copy of a creature token you control.)
+
+DeckHints:Ability$Token

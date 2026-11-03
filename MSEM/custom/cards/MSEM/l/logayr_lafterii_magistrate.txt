@@ -1,0 +1,14 @@
+Name:Logayr, Lafterii Magistrate
+ManaCost:2 U U
+Types:Legendary Creature Human Wizard
+PT:1/3
+
+K:Flash
+
+S:Mode$ CastWithFlash | ValidCard$ Wizard | ValidSA$ Spell | Caster$ You | Description$ You may cast Wizard spells as though they had flash.
+
+A:AB$ CopySpellAbility | Cost$ U U tapXType<2/Wizard> | ValidTgts$ Instant,Sorcery | TargetType$ Spell | TgtPrompt$ Select target instant or sorcery spell | MayChooseTarget$ True | SpellDescription$ Copy target instant or sorcery spell. You may choose new targets for the copy.
+
+Oracle:Flash (You may cast this spell any time you could cast an instant.)\nYou may cast Wizard spells as though they had flash.\n{U}{U}, Tap two untapped Wizards you control: Copy target instant or sorcery spell. You may choose new targets for the copy.
+
+DeckHints:Type$Wizard

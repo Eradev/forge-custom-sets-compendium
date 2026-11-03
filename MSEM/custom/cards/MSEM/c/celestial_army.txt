@@ -1,0 +1,9 @@
+Name:Celestial Army
+ManaCost:6 W W
+Types:Sorcery
+
+A:SP$ Token | TokenScript$ w_1_1_soldier | TokenAmount$ 3 | SubAbility$ DBKnight
+SVar:DBKnight:DB$ Token | TokenScript$ w_2_2_knight_vigilance | TokenAmount$ 2 | SubAbility$ DBAngel
+SVar:DBAngel:DB$ Token | TokenScript$ w_4_4_angel_flying
+
+Oracle:Create three 1/1 white Soldier creature tokens, two 2/2 white Knight creature tokens with vigilance, and a 4/4 white Angel creature token with flying.

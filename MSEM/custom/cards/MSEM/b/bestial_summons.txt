@@ -1,0 +1,11 @@
+Name:Bestial Summons
+ManaCost:4 G
+Types:Sorcery
+
+A:SP$ Token | TokenScript$ g_3_3_beast | SubAbility$ DBPopulate | SpellDescription$ Create a 3/3 green Beast creature token, then populate. (Create a token that's a copy of a creature token you control.)
+SVar:DBPopulate:DB$ CopyPermanent | Populate$ True
+
+Oracle:Create a 3/3 green Beast creature token, then populate. (Create a token that's a copy of a creature token you control.)
+
+DeckHas:Ability$Token
+DeckHints:Ability$Token

@@ -1,0 +1,17 @@
+Name:Kragnoss' Battlecharger
+ManaCost:2 R
+Types:Creature Goblin Warrior
+PT:0/1
+
+K:First Strike
+
+K:Haste
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ Whenever this creature attacks, it gets +1/+0 until end of turn for each attacking creature.
+SVar:TrigPump:DB$ Pump | NumAtt$ +X
+
+SVar:X:Count$Valid Creature.attacking
+
+Oracle:First strike, haste\nWhenever this creature attacks, it gets +1/+0 until end of turn for each attacking creature.
+
+SVar:HasAttackEffect:TRUE

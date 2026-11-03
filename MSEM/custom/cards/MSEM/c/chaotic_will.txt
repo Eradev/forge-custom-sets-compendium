@@ -1,0 +1,9 @@
+Name:Chaotic Will
+ManaCost:3 R R
+Types:Sorcery
+
+A:SP$ RepeatEach | ValidTgts$ Player | TgtPrompt$ Select target player | RepeatCards$ Creature.TargetedPlayerCtrl | Zone$ Battlefield | RepeatSubAbility$ DBFlip | SpellDescription$ For each creature target player controls, that player flips a coin. If the coin comes up tails, that player shuffles that creature into its owner's library.
+SVar:DBFlip:DB$ FlipCoin | Flipper$ Targeted | NoCall$ True | TailsSubAbility$ DBShuffle
+SVar:DBShuffle:DB$ ChangeZone | Defined$ Remembered | Origin$ Battlefield | Destination$ Library | Shuffle$ True
+
+Oracle:For each creature target player controls, that player flips a coin. If the coin comes up tails, that player shuffles that creature into its owner's library.

@@ -1,0 +1,11 @@
+Name:Faint Memory
+ManaCost:4 U U U
+Types:Sorcery
+
+A:SP$ ChangeZone | ValidTgts$ Creature | TgtPrompt$ Select target creature | Origin$ Battlefield | Destination$ Library | LibraryPosition$ 0 | RememberLKI$ True | SubAbility$ DBCopy | SpellDescription$ Put target creature on top of its owner's library. You create a token that's a copy of that creature.
+SVar:DBCopy:DB$ CopyPermanent | Defined$ RememberedLKI | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Put target creature on top of its owner's library. You create a token that's a copy of that creature.
+
+DeckHas:Ability$Token

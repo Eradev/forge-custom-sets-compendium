@@ -1,0 +1,8 @@
+Name:Threatening Pikeman
+ManaCost:3 R
+Types:Creature Goblin
+PT:3/3
+
+K:Menace
+
+Oracle:Menace (This creature can't be blocked except by two or more creatures.)

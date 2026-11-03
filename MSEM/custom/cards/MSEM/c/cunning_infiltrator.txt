@@ -1,0 +1,15 @@
+Name:Cunning Infiltrator
+ManaCost:1 U
+Types:Creature Elemental
+PT:1/2
+
+K:Hexproof
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ 3 | AddToughness$ 2 | CheckSVar$ X | SVarCompare$ GE10 | Description$ As long as an opponent has ten or more cards in their graveyard, this creature gets +3/+2 and can't be blocked.
+S:Mode$ CantBlockBy | ValidAttacker$ Card.Self | CheckSVar$ X | SVarCompare$ GE10 | Description$ This creature can't be blocked as long as an opponent has ten or more cards in their graveyard.
+
+SVar:X:PlayerCountOpponents$HighestCardsInGraveyard
+
+Oracle:Hexproof (This creature can't be the target of spells or abilities your opponents control.)\nAs long as an opponent has ten or more cards in their graveyard, this creature gets +3/+2 and can't be blocked.
+
+DeckHints:Ability$Mill

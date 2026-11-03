@@ -1,0 +1,7 @@
+Name:Battle Fervor
+ManaCost:2 R
+Types:Instant
+
+A:SP$ PumpAll | ValidCards$ Creature.attacking | NumAtt$ +2 | KW$ First Strike | SpellDescription$ Attacking creatures get +2/+0 and gain first strike until end of turn.
+
+Oracle:Attacking creatures get +2/+0 and gain first strike until end of turn.

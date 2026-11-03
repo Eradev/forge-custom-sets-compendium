@@ -1,0 +1,12 @@
+Name:Eidetic Memory
+ManaCost:4 U U
+Types:Enchantment
+
+R:Event$ Moved | ActiveZones$ Battlefield | Origin$ Stack | ValidLKI$ Instant.!wasCastFromExile,Sorcery.!wasCastFromExile | Fizzle$ False | ReplaceWith$ DBExile | Description$ As an instant or sorcery spell not cast from exile resolves, exile it instead of putting it anywhere else.
+SVar:DBExile:DB$ ChangeZone | Defined$ ReplacedCard | Origin$ Stack | Destination$ Exile
+
+S:Mode$ Continuous | EffectZone$ Battlefield | Affected$ Card.ExiledWithSource+nonLand | AffectedZone$ Exile | MayPlay$ True | MayPlayLimit$ 1 | Description$ Once each turn, you may cast a card exiled with this enchantment.
+
+Oracle:As an instant or sorcery spell not cast from exile resolves, exile it instead of putting it anywhere else.\nOnce each turn, you may cast a card exiled with this enchantment.
+
+DeckHints:Type$Instant|Sorcery

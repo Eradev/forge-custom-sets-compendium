@@ -1,0 +1,13 @@
+Name:Trained Warhawk
+ManaCost:2 W
+Types:Creature Bird
+PT:1/2
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 1/1 white Soldier creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_soldier
+
+Oracle:Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhen this creature enters, create a 1/1 white Soldier creature token.
+
+DeckHas:Ability$Token

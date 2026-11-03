@@ -1,0 +1,12 @@
+Name:Sprareos Yearling
+ManaCost:G
+Types:Creature Beast
+PT:1/1
+
+K:Trample
+
+S:Mode$ Continuous | IsPresent$ Land.YouCtrl | PresentCompare$ GE5 | AffectedDefined$ Self | AddPower$ 4 | AddToughness$ 4 | Description$ This creature gets +4/+4 as long as you control five or more lands.
+
+Oracle:Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nThis creature gets +4/+4 as long as you control five or more lands.
+
+SVar:BuffedBy:Land

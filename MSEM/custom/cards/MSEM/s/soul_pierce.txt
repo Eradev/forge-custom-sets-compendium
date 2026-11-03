@@ -1,0 +1,7 @@
+Name:Soul Pierce
+ManaCost:U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | ValidTgts$ Creature | TgtPrompt$ Select target creature spell | UnlessCost$ 2 | SpellDescription$ Counter target creature spell unless its controller pays {2}.
+
+Oracle:Counter target creature spell unless its controller pays {2}.

@@ -1,0 +1,18 @@
+Name:Raidragos' Avenger
+ManaCost:5 R R
+Types:Creature Dragon
+PT:5/6
+
+K:Flying
+K:Trample
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever this creature deals combat damage to a player, create a 5/5 red Dragon creature token with flying.
+SVar:TrigToken:DB$ Token | TokenScript$ r_5_5_dragon_flying
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl | AddPower$ X | Description$ Creatures you control get +1/+0 for each Dragon you control.
+SVar:X:Count$Valid Dragon.YouCtrl
+
+Oracle:Flying, trample\nWhenever this creature deals combat damage to a player, create a 5/5 red Dragon creature token with flying.\nCreatures you control get +1/+0 for each Dragon you control.
+
+DeckHas:Ability$Token
+DeckHints:Type$Dragon

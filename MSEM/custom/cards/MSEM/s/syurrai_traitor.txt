@@ -1,0 +1,13 @@
+Name:Syurrai Traitor
+ManaCost:2 B
+Types:Creature Human Rogue
+PT:2/2
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Plains.YouCtrl | Description$ This creature gets +1/+1 as long as you control a Plains.
+
+A:AB$ Token | Cost$ 3 W | TokenScript$ w_1_1_soldier | SpellDescription$ Create a 1/1 white Soldier creature token.
+
+Oracle:This creature gets +1/+1 as long as you control a Plains.\n{3}{W}: Create a 1/1 white Soldier creature token.
+
+SVar:BuffedBy:Plains
+DeckHas:Ability$Token

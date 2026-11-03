@@ -1,0 +1,8 @@
+Name:Fervent Assault
+ManaCost:2 R
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | NumAtt$ +3 | SubAbility$ DBPumpAll | SpellDescription$ Target creature you control gets +3/+0 until end of turn. Other creatures you control get +1/+0 until end of turn.
+SVar:DBPumpAll:DB$ PumpAll | ValidCards$ Targeted.Other+YouCtrl+Creature | NumAtt$ +1
+
+Oracle:Target creature you control gets +3/+0 until end of turn. Other creatures you control get +1/+0 until end of turn.

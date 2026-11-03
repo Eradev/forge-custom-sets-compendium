@@ -1,0 +1,15 @@
+Name:Evolving Elemental
+ManaCost:5 G
+Types:Creature Elemental
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigScry | TriggerDescription$ When this creature enters, scry 3, then reveal the top card of your library. Put a number of +1/+1 counters on this creature equal to that card's mana value.
+SVar:TrigScry:DB$ Scry | ScryNum$ 3 | SubAbility$ DBReveal
+SVar:DBReveal:DB$ PeekAndReveal | NoPeek$ True | RememberRevealed$ True | SubAbility$ DBPutCounters
+SVar:DBPutCounters:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$CardManaCost
+
+Oracle:When this creature enters, scry 3, then reveal the top card of your library. Put a number of +1/+1 counters on this creature equal to that card's mana value.
+
+DeckHas:Ability$Counters

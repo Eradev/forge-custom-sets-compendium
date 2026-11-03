@@ -1,0 +1,10 @@
+Name:Hunger for Battle
+ManaCost:1 R
+Types:Enchantment Aura
+
+K:Enchant:Creature
+SVar:AttachAILogic:Pump
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddPower$ 3 | AddToughness$ 1 | AddKeyword$ Haste | Description$ Enchanted creature gets +3/+1 and has haste.
+
+Oracle:Enchant creature\nEnchanted creature gets +3/+1 and has haste.

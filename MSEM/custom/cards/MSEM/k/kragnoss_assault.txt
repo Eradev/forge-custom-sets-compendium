@@ -1,0 +1,10 @@
+Name:Kragnoss' Assault
+ManaCost:4 R
+Types:Sorcery
+
+A:SP$ Destroy | ValidTgts$ Land | SubAbility$ DBGoblin | SpellDescription$ Destroy target land. Create a 1/1 red Goblin creature token.
+SVar:DBGoblin:DB$ Token | TokenScript$ r_1_1_goblin
+
+Oracle:Destroy target land. Create a 1/1 red Goblin creature token.
+
+DeckHas:Ability$Token

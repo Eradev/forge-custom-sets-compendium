@@ -1,0 +1,11 @@
+Name:Spellcycler
+ManaCost:3 U
+Types:Creature Human Wizard
+PT:2/3
+
+K:Prowess
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | OptionalDecider$ You | Execute$ TrigLoot | TriggerZones$ Battlefield | TriggerDescription$ Whenever you cast an instant or sorcery spell, you may draw a card. If you do, discard a card.
+SVar:TrigLoot:AB$ Discard | Defined$ You | Mode$ TgtChoose | Cost$ Draw<1/You>
+
+Oracle:Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhenever you cast an instant or sorcery spell, you may draw a card. If you do, discard a card.

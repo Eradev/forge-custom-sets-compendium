@@ -1,0 +1,14 @@
+Name:Hunted Sprareos
+ManaCost:5 G G
+Types:Creature Beast
+PT:4/4
+
+K:Trample
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature dies, create a 6/6 green Wurm creature token with trample.
+SVar:TrigToken:DB$ Token | TokenScript$ g_6_6_wurm_trample
+
+Oracle:Trample\nWhen this creature dies, create a 6/6 green Wurm creature token with trample.
+
+DeckHas:Ability$Token
+SVar:SacMe:1

@@ -1,0 +1,7 @@
+Name:Gamble for Knowledge
+ManaCost:3 R
+Types:Sorcery
+
+A:SP$ Draw | Cost$ 3 R Discard<1/Card> | NumCards$ 3 | SpellDescription$ Draw three cards.
+
+Oracle:As an additional cost to cast this spell, discard a card.\nDraw three cards.

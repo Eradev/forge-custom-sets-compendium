@@ -1,0 +1,9 @@
+Name:Magus of the Sands
+ManaCost:1 U U
+Types:Creature Human Wizard
+PT:1/3
+
+A:AB$ Mill | Cost$ X T | NumCards$ X | ValidTgts$ Player | AILogic$ AtOppEOT | SpellDescription$ Target player mills X cards.
+SVar:X:Count$xPaid
+
+Oracle:{X}, {T}: Target player mills X cards.

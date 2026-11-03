@@ -1,0 +1,8 @@
+Name:Mental Dislocation
+ManaCost:2 U
+Types:Sorcery
+
+A:SP$ Mill | NumCards$ 6 | ValidTgts$ Player | SubAbility$ DBDraw | SpellDescription$ Target player mills six cards. Draw a card.
+SVar:DBDraw:DB$ Draw
+
+Oracle:Target player mills six cards.\nDraw a card.

@@ -1,0 +1,7 @@
+Name:Surprise Strike
+ManaCost:W
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ +1 | NumDef$ +1 | KW$ Lifelink | SpellDescription$ Until end of turn, target creature gets +1/+1 and gains lifelink.
+
+Oracle:Until end of turn, target creature gets +1/+1 and gains lifelink.

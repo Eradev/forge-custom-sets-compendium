@@ -1,0 +1,9 @@
+Name:Cartographer's Chart
+ManaCost:2
+Types:Artifact
+
+A:AB$ ChangeZone | Cost$ 2 T Sac<1/CARDNAME/this artifact> | Origin$ Library | Destination$ Hand | ChangeType$ Land | ChangeNum$ 1 | SpellDescription$ Search your library for a land card, reveal it, put it into your hand, then shuffle.
+
+A:AB$ Draw | Cost$ 2 T Sac<1/CARDNAME/this artifact> | NumCards$ 1 | SpellDescription$ Draw a card.
+
+Oracle:{2}, {T}, Sacrifice this artifact: Search your library for a land card, reveal it, and put it into your hand, then shuffle.\n{2}, {T}, Sacrifice this artifact: Draw a card.

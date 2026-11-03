@@ -1,0 +1,8 @@
+Name:Deserter's Disdain
+ManaCost:2 R
+Types:Sorcery
+
+A:SP$ GainControl | ValidTgts$ Creature | LoseControl$ EOT | Untap$ True | SubAbility$ DBPump | SpellDescription$ Gain control of target creature until end of turn. Untap that creature. It gains haste and menace until end of turn.
+SVar:DBPump:DB$ Pump | Defined$ Targeted | KW$ Haste & Menace
+
+Oracle:Gain control of target creature until end of turn. Untap that creature. It gains haste and menace until end of turn.

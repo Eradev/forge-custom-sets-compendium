@@ -1,0 +1,13 @@
+Name:Sorcerer's Staff
+ManaCost:3
+Types:Artifact Equipment
+
+K:Equip:2
+
+S:Mode$ Continuous | AffectedDefined$ Equipped | AddPower$ X | Description$ Equipped creature gets +1/+0 for each instant and sorcery card in your graveyard.
+SVar:X:Count$ValidGraveyard Instant.YouOwn/Plus.Y
+SVar:Y:Count$ValidGraveyard Sorcery.YouOwn
+
+Oracle:Equipped creature gets +1/+0 for each instant and sorcery card in your graveyard.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)
+
+DeckHints:Type$Instant|Sorcery

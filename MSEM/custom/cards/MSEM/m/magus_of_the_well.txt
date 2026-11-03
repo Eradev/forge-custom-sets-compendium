@@ -1,0 +1,13 @@
+Name:Magus of the Well
+ManaCost:2 W W
+Types:Creature Human Wizard
+PT:2/4
+
+T:Mode$ LifeGained | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever you gain life, you may pay {X}, where X is less than or equal to the amount of life you gained. If you do, draw X cards.
+SVar:TrigDraw:AB$ Draw | Cost$ X | XMax$ LifeGained | NumCards$ X
+SVar:X:Count$xPaid
+SVar:LifeGained:TriggerCount$LifeAmount
+
+Oracle:Whenever you gain life, you may pay {X}, where X is less than or equal to the amount of life you gained. If you do, draw X cards.
+
+DeckHas:Ability$LifeGain

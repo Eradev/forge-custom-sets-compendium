@@ -1,0 +1,287 @@
+[metadata]
+Code=MSEM_K15
+Name=K15 Core Set
+Date=2017-06-08
+Type=Custom
+Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
+
+[cards]
+1 U Armament Upgrade @Kekai Kotaki
+2 R Barracks Trainer @ml-11mk
+3 C Blessing from Above @Omuk
+4 C Cast Away @awanqi
+5 R Celestial Army @Jkuo
+6 U Confining Priest @HeadcrabeD
+7 C Devoted Gatekeeper @elbardo
+8 C Devout Protector @HBDesign
+9 U Divine Presence (MSEM) @Bogdan-MRK
+10 C Divine Verdict @jameswolf
+11 C Eager Shieldbearer @chrisnfy85
+12 C Escorted Rider @derrickSong
+13 U Faithful Acolyte @anotherwanderer
+14 R Fateful Hour @JoeSlucher
+15 U Fellor Vanguard @SARYTH
+16 C Flightpath Trainee @Grosnez
+17 C Gather Forces @Aryk8
+18 C Guardian of Heavens @iancjw
+19 R Heavenly Avenger @sandara
+20 U Heaven's Champion @TARGETE
+21 U Heavensent Emissary @Indiron
+22 C Inspiring Personality @anotherwanderer
+23 C Knightly Escort @ArtNotHearts
+24 U Knightly Valor @redpeggy
+25 C Knight's Attendant @chevsy
+26 C Laia's Intervention @Sawaof
+27 R Magus of the Well @algenpfleger
+28 U Mass Orator @TentaclesandTeeth
+29 R Moreena of the High Council @Dallas-Williams
+30 M Seluriel, Danuri Leader @theDURRRRIAN
+31 M Seluriel's Blessing @theDURRRRIAN
+32 C Soul Warden @Katchoute
+33 R Spellbane Adept @Shyguyz
+34 R Spur of the Moment @RaymondMinnaar
+35 C Surprise Strike @MarioWibisono
+36 C Syurrai Battlepriest @LASAHIDO
+37 C Trained Warhawk @scarypet
+38 M Transcendent Priest @GoldenDaniel
+39 C Wall of Hope @nilTrace
+40 C Ward Shatter @Arsenal21
+41 C Aqueous Treader @ForrestImel
+42 R Arcane Might @SirenD
+43 C Archaeomancer @madspartan013
+44 C Barge Engulfer @lithriel
+45 C Brainwave Elemental @thamchienyih
+46 C Cancel @depingo
+47 C Cuff Down @apple-sniper
+48 U Cunning Infiltrator @Leonardo Emanuel Giordano
+49 C Cutthroat Spy @bmd247
+50 C Disassemble @DiegoGisbertLlorens
+51 C Divination @ArtofTy
+52 R Eidetic Memory @Grafit-art
+53 U Erudition of the Lafterii @EdgarGomezArt
+54 R Faint Memory @totorrl
+55 U Favorable Winds @Alector Fencer
+56 C Forced Idleness @Conceptopolis
+57 C Infiltrator's Appeal @black-rose-chain
+58 R Ingenious Trickster @katiedesousa
+59 C Keeneye Drake @kerembeyit
+60 C Lafterii Savant @anndr
+61 R Logayr, Lafterii Magistrate @breathing2004
+62 R Magus of the Sands @Snowskadi
+63 R Master of Winds (MSEM) @Nikt2
+64 C Mental Dislocation @chitobein
+65 C Mind's Intruder @AnastasiaReddress
+66 U Mindscreech Drake @rawwad
+67 C Mischievous Miscreant @Ubermonster
+68 C Plan Ahead @homoseptimus
+69 U Repressed Potential @Satibalzane
+70 R Resourceful Impersonator @soft-h
+71 C Scholar's Captivation @Lucas Durham
+72 C Soul Pierce @PointLineArea
+73 U Spellcycler @anndr
+74 U Summoner's Bane @DiegoGisbertLlorens
+75 M Vaertris' Master Plan @yigitkoroglu
+76 M Vaertris, Mindmelder @alexnegrea
+77 C Vaporkin @Seb Mckinnon
+78 R Vexing Riddlemage @Tira-Owl
+79 U Vollta Patrician @anotherwanderer
+80 U Wizard's Insight @JoeSlucher
+81 C Bonereader @alexstoneart
+82 U Bonespitting Monstrosity @SARYTH
+83 C Brainless Ghoul @TyphonArt
+84 C Brew of Undeath @Ruslayer
+85 U Brutal Murder @FreShPAiNt
+86 U Carrion Gourmet @AlexanderExorcist
+87 U Dark Desire @Meteorskies
+88 M Daughter of Malextros @Maniakuk
+89 R Diabolic Sacrifice @Dmitry Burmak
+90 R Diseased Warrior @draken4o
+91 C Distressing Reality @EMGist
+92 C Feed the Horde @Sycra
+93 R Fleshmonger @ForrestImel
+94 C Gift of Undeath @ArtDeepMind
+95 C Hollowflesh Ghoul @Dave Rapoza
+96 R Impending Contagion @Bogdan-MRK
+97 C Infected Flesh @ianllanas
+98 C Insatiable Thirst @ines-ka
+99 C Lifegorging Aberration @andreiaugrai
+100 R Magus of the Grimoire @HELMUTTT
+101 M Malextros, Deathlord @namesjames
+102 C Mass of Ghouls @GammaGrey
+103 C Necromancer Trainee @HELMUTTT
+104 U Necromancer's Talent (MSEM) @Bogdan-MRK
+105 C Night Screecher @faxtar
+106 R Nightbane Specter @daRoz
+107 C Ravenous Rats @VerminGames
+108 C Sign in Blood @dekades8
+109 C Skieryg Menace @Zolaida
+110 U Spreading Disease @Allnamesinuse
+111 C Suicidal Impulse @algenpfleger
+112 U Syurrai Traitor @AlexanderLevett
+113 R Tainted Remedy @ScottPurdy
+114 C Tortured Psyche @JohnSilva
+115 U Toxic Lurker @Tokotewhero
+116 C Treacherous Shade @AustenMengler
+117 U Vampire Nighthawk @AlexAlexandrov
+118 C Vampire's Curse @Sarafiel
+119 R Vythraktos, Master Necromancer @Antichristofer
+120 U Battle Fervor @orangus
+121 C Bloodthirsty Insurgent @Dmitry Burmak
+122 R Chaotic Will @WarNick
+123 C Crafter's Mistake @artofjosevega
+124 U Deserter's Disdain @N-ossandon-Nezt
+125 R Eradicating Flames @cobaltplasma
+126 C Explosion Fanatic @GregTaylorArt
+127 C Explosive Implant @NicholasKay
+128 C Fervent Assault @Cristi-B
+129 R Flamemaster Insurgent @Aeyolscaer
+130 C Gamble for Knowledge @JGZON
+131 C Goblin Arsonist @JohnSilva
+132 C Goblin Roughrider @alanlathwell
+133 C Goblin Stormcaller @Murph3
+134 C Growing Numbers @daRoz
+135 U Hate-Driven Arsonist @Ben Wootten
+136 C Hunger for Battle @Darkcloud013
+137 U Impulsive Action @MarioWibisono
+138 C Insurgent Racketeer @Cl0ud-Nine
+139 C Kragnoss' Assault @DiegoGisbertLlorens
+140 U Kragnoss' Battlecharger @JohnSilva
+141 R Kragnoss, Rebellion Commander @Jan-ilu
+142 R Led by Fury @LieSetiawan
+143 R Magus of the Gauntlet @ArtDoge
+144 U Mindblaze Pyromancer @JoshCalloway
+145 C Newborn Dragon @LASAHIDO
+146 C Pillar of Flame @PhillterUnfiltered
+147 C Prophetic Flames @MariusBota
+148 C Pyromancer Apprentice @Jujusaurus
+149 R Rageborn Phoenix @GENZOMAN
+150 M Raidragos' Avenger @TomEdwardsConcepts
+151 M Raidragos, the Vindictive @Bogdan-MRK
+152 R Risky Business @m-hugo
+153 C Rush of Strength @Conceptopolis
+154 U Stormbred Elemental @DaveAllsop
+155 C Threatening Pikeman @chrstphrwest
+156 M Uttermost Obliteration @MartaNael
+157 U Vanguard's Assault @daRoz
+158 C Wingless Dragon @GerryArthur
+159 U Zealous Brawler @Emortal982
+160 C Abundant Panorama @Ninjatic
+161 R Ankryss, Biologist Adept @Avionetca
+162 C Armor of Vines @bayardwu
+163 C Beastly Dispute @deskridge
+164 U Bestial Summons @HappySadCorner
+165 R Boundless Evolution @sandara
+166 C Crazed Sprareos @FlammablePerson
+167 C Derrivan Beast Tracker @crow-god
+168 C Derrivan Brawnmage @h1fey
+169 C Druid's Deliverance @KateMaxpaint
+170 C Earthchannel Apprentice @exellero
+171 M Evergrowing Hydra @Yoso999
+172 U Evolving Elemental @ForrestImel
+173 C Fierce Instinct @artbycarlos
+174 C Giant Warthog @DrawingNightmare
+175 U Guardian of the Wurm @sinakasra
+176 C Harbinger of Growth @anotherwanderer
+177 R Harmonic Growth @BillCreative
+178 R Hunted Sprareos @samburley
+179 U Lay to Rest @artofjosevega
+180 R Magus of the Lantern @rennerei
+181 C Natural Growth @jaymahjad
+182 R Natural Recycling @JoeSlucher
+183 U Parasitic Bloodsucker @Akiman
+184 C Rampant Growth @FerdinandLadera
+185 U Reclamation Sage @Alayna
+186 R Reflected Grandeur @JasonTN
+187 U Saproling Genesis @jbballaran
+188 C Shoot Down (MSEM) @ChristopherStevens
+189 U Spore Vessel @FlammablePerson
+190 U Sprareos Yearling @Davesrightmind
+191 C Swiftfoot Elk @Ben Wootten
+192 C Tender of the Land @1oshuart
+193 C Venomsilk Recluse @danyiart
+194 C Vinecreeper @ISignRob
+195 C Viper's Fangs @Chadamo
+196 M Vorreia, Farseer @DigitalSashimi
+197 M Vorreia's Farsight @DigitalSashimi
+198 R Warden of the Fronds @JJCanvas
+199 C Woodtrasher Wurm @Andead
+200 M Soul of Iscathia @alexnegrea
+201 U Ankryss' Staff @arankin
+202 R Artificer's Workshop @bzartt
+203 U Berserker's Axe @ZhangQipeng
+204 U Bloodstained Knife @stickerb
+205 U Cartographer's Chart @natebarnes
+206 U Crafted Wings @TheFearMaster
+207 U Kragnoss' Arsenal @troitsky
+208 U Logayr's Tome @Tsabo6
+209 U Mighty Colossus @alexnegrea
+210 R Monolith of Ages @ReneAigner
+211 R Monument of the Masses @nilTrace
+212 U Moreena's Banner @Trefle-Rouge
+213 U Pennon Blade @alanlathwell
+214 U Sentient Contraption @Wen-JR
+215 U Sorcerer's Staff @LeeSmith
+216 U Stonework Idol @PhillterUnfiltered
+217 R Sword of the Brave @LeeSmith
+218 R Twinforged Golem @FacundoDiaz
+219 U Vythraktos' Dagger @Delta1976
+220 R Well of Eternity @Shockowaffel
+221 C Adaptive Terrains @jzoomba
+222 R Flooded Morass @ShahabAlizadeh
+223 R Flourishing Crevasse @Kiarya
+224 R Heart of the Glade @JJcanvas
+225 R Lavatorn Fields @zhangc
+226 M Planar Alignment @BonusExperiment
+227 R Pool of Light @Kiarya
+228 R Springjack Pasture @RavenseyeTravisLacey
+229 U War Golem Forge @KoTnoneKoT
+230 L Plains @FacundoDiaz
+231 L Plains @kalambo
+232 L Plains @Minionslayer
+233 L Plains @2wenty
+234 L Island @GeorgeLovesyArt
+235 L Island @Nele-Diel
+236 L Island @TylerEdlinArt
+237 L Island @Jonas De Ro
+238 L Swamp @JJCanvas
+239 L Swamp @FerdinandLadera
+240 L Swamp @mutiny-in-the-air
+241 L Swamp @jordangrimmer
+242 L Mountain @merl1ncz
+243 L Mountain @FerdinandLadera
+244 L Mountain @Titus Lunter
+245 L Mountain @Byzwa-Dher
+246 L Forest @Jonas De Ro
+247 L Forest @flaviobolla
+248 L Forest @PE-Travers
+249 L Forest @Andreas Rocha
+
+[tokens]
+1 w_4_4_angel_flying @algenpfleger
+2 w_0_1_goat @Crickatoo
+3 w_2_2_knight_vigilance @Fetsch
+4 w_1_1_soldier @MaBuArt
+5 u_2_2_illusion @jubjubjedi
+6 b_x_x_horror_indestructible @David Rapoza
+7 b_1_1_skeleton @Haridimus
+8 b_2_2_zombie @TheRafa
+9 r_5_5_dragon_flying @Sandara
+10 r_1_1_goblin @AntonZemskov
+11 g_3_3_beast @Davesrightmind
+12 g_1_1_saproling @Cyril Van Der Haegan
+13 g_6_6_wurm_trample @zoppy
+14 c_3_3_a_golem @AlexRuizArt
+15 c_1_1_a_thopter_flying @AlexRuizArt
+
+[other]
+16 emblem_raidragos_the_vindictive @Bogdan-MRK
+17 emblem_seluriel_danuri_leader @theDURRRRIAN
+18 emblem_vaertris_mindmelder @alexnegrea
+19 emblem_vorreia_farseer @DigitalSashimi
+
+[WalkerTypes]
+Malextros
+Raidragos
+Seluriel
+Vaertris
+Vorreia

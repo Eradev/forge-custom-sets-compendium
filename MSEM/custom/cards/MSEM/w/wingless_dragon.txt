@@ -1,0 +1,6 @@
+Name:Wingless Dragon
+ManaCost:2 R R
+Types:Creature Dragon
+PT:4/3
+
+Oracle:

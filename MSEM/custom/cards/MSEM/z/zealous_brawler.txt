@@ -1,0 +1,10 @@
+Name:Zealous Brawler
+ManaCost:R R
+Types:Creature Goblin Warrior
+PT:1/1
+
+K:Trample
+
+K:Prowess
+
+Oracle:Trample\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)
