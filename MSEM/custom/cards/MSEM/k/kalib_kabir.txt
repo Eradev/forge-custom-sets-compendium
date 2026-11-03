@@ -1,0 +1,15 @@
+Name:Kalib Kabir
+ManaCost:5 G G G
+Types:Creature Beast
+PT:9/9
+
+S:Mode$ Continuous | Affected$ Card.Self+counters_EQ0_P1P1 | AddKeyword$ Hexproof | Description$ This creature has hexproof as long as it has no +1/+1 counters on it.
+
+S:Mode$ Continuous | Affected$ Card.Self+counters_GE1_P1P1 | AddKeyword$ Trample | Description$ This creature has trample as long as it has a +1/+1 counter on it.
+
+A:AB$ Branch | Cost$ G | PlayerTurn$ True | ActivationLimit$ 1 | BranchConditionSVar$ HasCounter | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBRemove | FalseSubAbility$ DBAdd | SpellDescription$ If this creature has a +1/+1 counter on it, remove all +1/+1 counters from it. Otherwise, put a +1/+1 counter on it. Activate only once each turn and only during your turn.
+SVar:HasCounter:Count$CardCounters.P1P1
+SVar:DBRemove:DB$ RemoveCounterAll | ValidCards$ Card.Self | CounterType$ P1P1 | AllCounters$ True
+SVar:DBAdd:DB$ PutCounter | CounterType$ P1P1
+
+Oracle:This creature has hexproof as long as it has no +1/+1 counters on it.\nThis creature has trample as long as it has a +1/+1 counter on it.\n{G}: If this creature has a +1/+1 counter on it, remove all +1/+1 counters from it. Otherwise, put a +1/+1 counter on it. Activate only once each turn and only during your turn.

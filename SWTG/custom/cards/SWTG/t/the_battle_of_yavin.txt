@@ -8,6 +8,7 @@ SVar:DBRepeatCard:DB$ RepeatEach | RepeatCards$ Card.IsImprinted | ChooseOrder$ 
 SVar:DBChoose:DB$ GenericChoice | Defined$ RememberedPlayer | ShowCurrentCard$ Remembered | Choices$ DBSac,DBPay
 SVar:DBSac:DB$ Sacrifice | Defined$ RememberedPlayer | SacValid$ Remembered | SpellDescription$ Sacrifice
 SVar:DBPay:DB$ LoseLife | Defined$ RememberedPlayer | LifeAmount$ X | SpellDescription$ Pay {X} Life
+SVar:DBCleanup:DB$ Cleanup | ClearImprinted$ True
 SVar:X:Count$xPaid
 
 Oracle:For each nonland permanent target opponent controls, that player sacrifices it unless he or she pays X life.

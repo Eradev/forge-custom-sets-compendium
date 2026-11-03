@@ -1,0 +1,18 @@
+Name:Menna Al-Mejjat
+ManaCost:1 R R
+Types:Legendary Planeswalker Menna
+Loyalty:2
+
+A:AB$ Dig | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Defined$ You | DigNum$ 2 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBChoose | SpellDescription$ [+1]: Exile the top two cards of your library. You may play up to one card exiled this way this turn.
+SVar:DBChoose:DB$ ChooseCard | Defined$ You | Choices$ Card.IsRemembered | ChoiceZone$ Exile | Amount$ 1 | Optional$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ ChosenCard | StaticAbilities$ STPlay | ExileOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ You may play up to one card exiled this way this turn.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+
+A:AB$ DealDamage | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | NumDmg$ 3 | ReplaceDyingDefined$ Targeted | SpellDescription$ [-2]: CARDNAME deals 3 damage to target creature. If that creature would die this turn, exile it instead.
+
+A:AB$ Draw | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | NumCards$ ExileCount | SubAbility$ DBDamage | SpellDescription$ [-6]: Draw cards equal to the number of cards in exile. CARDNAME deals that much damage to any target.
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ ExileCount
+SVar:ExileCount:Count$ValidExile Card
+
+Oracle:[+1]: Exile the top two cards of your library. You may play up to one card exiled this way this turn.\n[-2]: Menna Al-Mejjat deals 3 damage to target creature. If that creature would die this turn, exile it instead.\n[-6]: Draw cards equal to the number of cards in exile. Menna Al-Mejjat deals that much damage to any target.

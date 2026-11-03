@@ -1,0 +1,9 @@
+Name:Temple Attendant
+ManaCost:2
+Types:Artifact Creature Golem
+PT:1/1
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Indestructible | CheckSVar$ ConcordCount | SVarCompare$ GE4 | Description$ Concord — This creature gets +1/+1 and has indestructible as long as there are four or more card types among permanents you control.
+SVar:ConcordCount:Count$Valid Permanent.YouCtrl$CardTypes
+
+Oracle:Concord — This creature gets +1/+1 and has indestructible as long as there are four or more card types among permanents you control.

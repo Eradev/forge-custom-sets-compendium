@@ -1,0 +1,12 @@
+Name:El-Mazar, Wayward Palace
+ManaCost:no cost
+Types:Legendary Land Desert
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Mana | Cost$ 2 T | Produced$ C | Amount$ X | SpellDescription$ Add {C} for each Desert you control.
+SVar:X:Count$Valid Desert.YouCtrl
+
+Oracle:{T}: Add {C}.\n{2}, {T}: Add {C} for each Desert you control.
+
+DeckHints:Type$Desert

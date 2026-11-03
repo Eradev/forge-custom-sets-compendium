@@ -1,0 +1,11 @@
+Name:Memoria Thief
+ManaCost:1 U U
+Types:Creature Mutant Rogue
+PT:3/1
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigPickCard | TriggerDescription$ Whenever this creature deals combat damage to a player, look at that player's hand. You may choose a nonland card from it. If you do, that player reveals the chosen card, puts it on the bottom of their library, then draws a card.
+SVar:TrigPickCard:DB$ ChangeZone | Defined$ TriggeredTarget | Origin$ Hand | Destination$ Library | LibraryPosition$ -1 | ChangeType$ Card.nonLand | ChangeNum$ 1 | Hidden$ True | RememberChanged$ True | Chooser$ You | Optional$ True | IsCurse$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | Defined$ TriggeredTarget | SubAbility$ DBCleanup | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ1
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Whenever this creature deals combat damage to a player, look at that player's hand. You may choose a nonland card from it. If you do, that player reveals the chosen card, puts it on the bottom of their library, then draws a card.

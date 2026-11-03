@@ -3,7 +3,7 @@ ManaCost:2 B
 Types:Instant
 
 A:SP$ Sacrifice | Defined$ Opponent | SacValid$ Creature | RememberSacrificed$ True | SubAbility$ DBToken | SpellDescription$ Each opponent sacrifices a creature. For each creature sacrificed this way, create an Idol token.
-SVar:DBToken:DB$ Token | TokenScript$ c_a_idol_sac | TokenAmount$ X | TokenOwner$ You | SubAbility$ DBCleanup
+SVar:DBToken:DB$ Token | TokenScript$ c_a_idol_sac | TokenAmount$ X | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:X:Remembered$Amount
 

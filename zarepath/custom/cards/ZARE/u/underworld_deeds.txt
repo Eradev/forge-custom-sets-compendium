@@ -2,7 +2,7 @@ Name:Underworld Deeds
 ManaCost:1 B G
 Types:Sorcery
 
-A:SP$ Charm | MinCharmNum$ 1 | CharmNum$ Count$Compare X GTY.2.1 | Choices$ DBDestroy,DBReturn | SpellDescription$ Superiority — If you have more life than an opponent, you may choose both. Otherwise, choose one —
+A:SP$ Charm | MinCharmNum$ 1 | CharmNum$ Count$Compare X GTY.2.1 | Choices$ DBDestroy,DBReturn | AdditionalDescription$ . Superiority — If you have more life than an opponent, you may choose both instead.
 
 SVar:DBDestroy:DB$ Destroy | ValidTgts$ Artifact,Creature | SpellDescription$ Destroy target artifact or creature.
 

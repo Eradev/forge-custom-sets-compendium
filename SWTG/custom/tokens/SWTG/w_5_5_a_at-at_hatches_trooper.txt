@@ -4,8 +4,7 @@ Colors:white
 Types:Artifact Creature AT-AT
 PT:5/5
 
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigTroopers | TriggerDescription$ When this creature dies, create two 1/1 white Trooper creature tokens.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigTroopers | TriggerDescription$ When this token dies, create two 1/1 white Trooper creature tokens.
+SVar:TrigTroopers:DB$ Token | TokenScript$ w_1_1_trooper | TokenAmount$ 2
 
-SVar:TrigTroopers:DB$ Token | TokenAmount$ 2 | TokenScript$ w_1_1_trooper
-
-Oracle:When this creature dies, create two 1/1 white Trooper creature tokens.
+Oracle:When this token dies, create two 1/1 white Trooper creature tokens.

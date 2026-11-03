@@ -1,0 +1,16 @@
+Name:Beastback Raider
+ManaCost:2 R R
+Types:Creature Mutant Warrior
+PT:4/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDesecrate | TriggerDescription$ Desecrate (When this creature enters, you may sacrifice an artifact or land.)
+SVar:TrigDesecrate:AB$ ImmediateTrigger | Cost$ Sac<1/Artifact;Land/artifact or land> | Execute$ DBDesecrateSignal
+SVar:DBDesecrateSignal:DB$ Cleanup | Named$ Desecrate
+
+T:Mode$ AbilityTriggered | ValidMode$ Immediate | ValidSource$ Card.Self | ValidSpellAbility$ Ability.NamedAbilityDesecrate | Execute$ TrigWheel | TriggerDescription$ When this creature desecrates a permanent, discard your hand, then draw three cards.
+SVar:TrigWheel:DB$ Discard | Mode$ Hand | SubAbility$ TrigDraw
+SVar:TrigDraw:DB$ Draw | NumCards$ 3
+
+Oracle:Desecrate (When this creature enters, you may sacrifice an artifact or land.)\nWhen this creature desecrates a permanent, discard your hand, then draw three cards.
+
+DeckHas:Ability$Sacrifice

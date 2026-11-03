@@ -1,0 +1,11 @@
+Name:Djinni Imprisonment
+ManaCost:W W
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ CantAttack,CantBlock | ValidCard$ Creature.EnchantedBy | Description$ Enchanted creature can't attack or block.
+
+Oracle:Enchant creature\nEnchanted creature can't attack or block.
+
+SVar:AttachAILogic:Curse

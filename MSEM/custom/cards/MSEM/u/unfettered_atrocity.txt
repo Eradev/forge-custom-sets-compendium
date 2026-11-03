@@ -1,0 +1,11 @@
+Name:Unfettered Atrocity
+ManaCost:5 B B B
+Types:Creature Djinn Horror
+PT:4/4
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDestroy | TriggerDescription$ When this creature enters, destroy target creature or planeswalker.
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Creature,Planeswalker | TgtPrompt$ Select target creature or planeswalker
+
+Oracle:Flying\nWhen this creature enters, destroy target creature or planeswalker.

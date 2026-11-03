@@ -4,7 +4,7 @@ Types:Sorcery
 
 A:SP$ Charm | Choices$ DBTokens,DBDamage,DBPump | CharmNum$ 3 | CanRepeatModes$ True
 
-SVar:DBTokens:DB$ Token | ValidTgts$ Player | TokenScript$ w_1_1_soldier | TokenAmount$ 2 | TokenOwner$ ThisTargetedPlayer | RememberTokens$ True | SubAbility$ DBPumpTokens | SpellDescription$ Target player creates two 1/1 white Soldier creature tokens. They gain haste until end of turn. Exile them at the beginning of the next end step.
+SVar:DBTokens:DB$ Token | TokenScript$ w_1_1_soldier | TokenAmount$ 2 | TokenOwner$ ThisTargetedPlayer | ValidTgts$ Player | RememberTokens$ True | SubAbility$ DBPumpTokens | SpellDescription$ Target player creates two 1/1 white Soldier creature tokens. They gain haste until end of turn. Exile them at the beginning of the next end step.
 SVar:DBPumpTokens:DB$ Pump | Defined$ Remembered | KW$ Haste | AtEOT$ Exile | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 

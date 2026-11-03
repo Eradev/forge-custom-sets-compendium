@@ -1,0 +1,11 @@
+Name:Raving Rover
+ManaCost:U
+Types:Creature Mutant Survivor
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Survivor.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigLoot | TriggerDescription$ Whenever a Survivor you control enters, you may draw a card. If you do, discard a card.
+SVar:TrigLoot:AB$ Discard | Mode$ TgtChoose | Cost$ Draw<1/You>
+
+Oracle:Whenever a Survivor you control enters, you may draw a card. If you do, discard a card.
+
+DeckHints:Type$Survivor

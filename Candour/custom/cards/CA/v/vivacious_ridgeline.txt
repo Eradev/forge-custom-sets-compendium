@@ -4,7 +4,7 @@ Types:Land
 
 A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
 
-A:AB$ Animate | Cost$ 2 | Defined$ Self | Power$ 2 | Toughness$ 2 | Types$ Elemental | SpellDescription$ This land becomes a 2/2 Elemental creature until end of turn. It's still a land.
+A:AB$ Animate | Cost$ 2 | Power$ 2 | Toughness$ 2 | Types$ Elemental | SpellDescription$ This land becomes a 2/2 Elemental creature until end of turn. It's still a land.
 
 A:AB$ PutCounter | Cost$ 2 | CounterType$ P1P1 | SpellDescription$ Put a +1/+1 counter on this land.
 

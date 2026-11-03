@@ -1,0 +1,12 @@
+Name:Winds of Chance
+ManaCost:no cost
+Colors:white,blue
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 1 | AddKeyword$ Flying & Lifelink | Description$ Enchanted creature gets +1/+0 and has flying and lifelink.
+
+Oracle:Enchant creature\nEnchanted creature gets +1/+0 and has flying and lifelink.
+
+SVar:AttachAILogic:Pump

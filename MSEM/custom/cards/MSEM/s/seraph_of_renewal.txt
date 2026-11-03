@@ -1,0 +1,11 @@
+Name:Seraph of Renewal
+ManaCost:2 W W W
+Types:Creature Angel
+PT:4/4
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigReturn | TriggerDescription$ When this creature leaves the battlefield, you may return target permanent card with mana value 3 or less from your graveyard to the battlefield.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Permanent.YouCtrl+cmcLE3 | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select target permanent card with mana value 3 or less in your graveyard | OptionalDecider$ You
+
+Oracle:Flying\nWhen this creature leaves the battlefield, you may return target permanent card with mana value 3 or less from your graveyard to the battlefield.

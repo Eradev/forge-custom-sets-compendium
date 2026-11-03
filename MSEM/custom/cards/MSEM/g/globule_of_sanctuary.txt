@@ -1,0 +1,13 @@
+Name:Globule of Sanctuary
+ManaCost:2/W
+Types:Artifact
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainLife | TriggerDescription$ When this artifact enters or leaves the battlefield, you gain 2 life.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigGainLife | Secondary$ True | TriggerDescription$ When this artifact enters or leaves the battlefield, you gain 2 life.
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 2
+
+A:AB$ Draw | Cost$ 2/W T Sac<1/CARDNAME/this artifact> | SpellDescription$ Draw a card.
+
+Oracle:When this artifact enters or leaves the battlefield, you gain 2 life.\n{2/W}, {T}, Sacrifice this artifact: Draw a card.
+
+DeckHas:Ability$Sacrifice|LifeGain

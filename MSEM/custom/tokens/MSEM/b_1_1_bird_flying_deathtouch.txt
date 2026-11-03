@@ -1,0 +1,11 @@
+Name:Bird Token
+ManaCost:no cost
+Colors:black
+Types:Creature Bird
+PT:1/1
+
+K:Flying
+
+K:Deathtouch
+
+Oracle:Flying, deathtouch

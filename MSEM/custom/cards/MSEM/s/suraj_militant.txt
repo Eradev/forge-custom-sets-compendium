@@ -1,0 +1,9 @@
+Name:Suraj Militant
+ManaCost:W
+Types:Creature Human Warrior
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When CARDNAME enters, target creature gets +1/+1 until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ +1 | NumDef$ +1
+
+Oracle:When this creature enters, target creature gets +1/+1 until end of turn.

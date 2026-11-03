@@ -1,0 +1,15 @@
+Name:Encrusted Sahalia
+ManaCost:1 R R
+Types:Creature Lizard Beast
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDesecrate | TriggerDescription$ Desecrate (When this creature enters, you may sacrifice an artifact or land.)
+SVar:TrigDesecrate:AB$ ImmediateTrigger | Cost$ Sac<1/Artifact;Land/artifact or land> | Execute$ DBDesecrateSignal
+SVar:DBDesecrateSignal:DB$ Cleanup | Named$ Desecrate
+
+T:Mode$ AbilityTriggered | ValidMode$ Immediate | ValidSource$ Card.Self | ValidSpellAbility$ Ability.NamedAbilityDesecrate | Execute$ TrigDamage | TriggerDescription$ When this creature desecrates a permanent, it deals 3 damage to target player.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Player | TgtPrompt$ Select target player | NumDmg$ 3
+
+Oracle:Desecrate (When this creature enters, you may sacrifice an artifact or land.)\nWhen this creature desecrates a permanent, it deals 3 damage to target player.
+
+DeckHas:Ability$Sacrifice

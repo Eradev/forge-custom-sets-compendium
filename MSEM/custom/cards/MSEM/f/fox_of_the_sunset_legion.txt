@@ -4,6 +4,6 @@ Types:Creature Fox Spirit
 PT:2/2
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create two 1/1 white Fox Spirit creature tokens.
-SVar:TrigToken:DB$ Token | TokenAmount$ 2 | TokenScript$ w_1_1_fox_spirit
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_fox_spirit | TokenAmount$ 2
 
 Oracle:When this creature enters, create two 1/1 white Fox Spirit creature tokens.

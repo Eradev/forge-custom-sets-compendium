@@ -1,0 +1,17 @@
+Name:Seismic Colossus
+ManaCost:8
+Types:Artifact Creature Golem
+PT:5/5
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Activator$ You | Amount$ 4 | EffectZone$ All | CheckSVar$ ConcordCount | SVarCompare$ GE4 | Description$ Concord — This spell costs {4} less to cast if there are four or more card types among permanents you control.
+SVar:ConcordCount:Count$Valid Permanent.YouCtrl$CardTypes
+
+K:Vigilance
+
+K:Trample
+
+K:Lifelink
+
+K:Haste
+
+Oracle:Concord — This spell costs {4} less to cast if there are four or more card types among permanents you control.\nVigilance, trample, lifelink, haste

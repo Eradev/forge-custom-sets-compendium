@@ -1,0 +1,11 @@
+Name:Flora Acolyte
+ManaCost:1 G
+Types:Creature Mutant Druid
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Aura.YouCtrl | Execute$ TrigDraw | TriggerZones$ Battlefield | TriggerDescription$ Whenever an Aura you control enters, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Whenever an Aura you control enters, draw a card.
+
+DeckHints:Type$Aura

@@ -1,0 +1,13 @@
+Name:Ridge Warden
+ManaCost:2 W W
+Types:Creature Human Warrior
+PT:3/3
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Activator$ You | Amount$ 2 | CheckSVar$ TrapTrigger | SVarCompare$ GE1 | Description$ This spell costs {2} less to cast and may be cast as though it had flash if an opponent searched their library this turn.
+S:Mode$ CastWithFlash | ValidCard$ Card.Self | ValidSA$ Spell | Caster$ You | CheckSVar$ TrapTrigger | SVarCompare$ GE1 | Secondary$ True | Description$ This spell costs {2} less to cast and may be cast as though it had flash if an opponent searched their library this turn.
+SVar:TrapTrigger:Count$SearchedLibrary.Opponent
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this creature enters, exile another target nonland permanent with mana value 4 or less until it leaves the battlefield.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Permanent.nonLand+Other+cmcLE4 | Duration$ UntilHostLeavesPlay
+
+Oracle:This spell costs {2} less to cast and may be cast as though it had flash if an opponent searched their library this turn.\nWhen this creature enters, exile another target nonland permanent with mana value 4 or less until it leaves the battlefield.

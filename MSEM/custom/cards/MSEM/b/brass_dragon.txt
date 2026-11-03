@@ -3,6 +3,6 @@ ManaCost:1
 Types:Artifact Creature Dragon Construct
 PT:1/1
 
-A:AB$ Pump | Cost$ 5 | Defined$ Self | NumAtt$ +3 | KW$ Flying & First Strike | SpellDescription$ This creature gets +3/+0 and gains flying and first strike until end of turn.
+A:AB$ Pump | Cost$ 5 | NumAtt$ +3 | KW$ Flying & First Strike | SpellDescription$ This creature gets +3/+0 and gains flying and first strike until end of turn.
 
 Oracle:{5}: This creature gets +3/+0 and gains flying and first strike until end of turn.

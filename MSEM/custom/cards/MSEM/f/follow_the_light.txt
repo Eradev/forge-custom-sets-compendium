@@ -1,0 +1,10 @@
+Name:Follow the Light
+ManaCost:1 U
+Types:Instant
+
+A:SP$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Creature | TgtPrompt$ Select target creature | SubAbility$ DBToken | SpellDescription$ Exile target creature. Its controller creates a 2/2 colorless Spirit creature token with flying.
+SVar:DBToken:DB$ Token | TokenScript$ c_2_2_spirit_flying | TokenOwner$ TargetedController
+
+Oracle:Exile target creature. Its controller creates a 2/2 colorless Spirit creature token with flying.
+
+DeckHas:Ability$Token & Type$Spirit

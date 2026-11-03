@@ -1,0 +1,21 @@
+Name:Liege of Luxury
+ManaCost:2 B B B
+Types:Creature Djinn
+PT:4/4
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDesecrate | TriggerDescription$ Desecrate (When this creature enters, you may sacrifice an artifact or land.)
+SVar:TrigDesecrate:AB$ ImmediateTrigger | Cost$ Sac<1/Artifact;Land/artifact or land> | Execute$ DBDesecrateSignal
+SVar:DBDesecrateSignal:DB$ Cleanup | Named$ Desecrate
+
+T:Mode$ AbilityTriggered | ValidMode$ Immediate | ValidSource$ Card.Self | ValidSpellAbility$ Ability.NamedAbilityDesecrate | Execute$ TrigExile | TriggerDescription$ When this creature desecrates a permanent, target player reveals their hand. You choose a card from it and exile it. You may cast that card for as long as it remains exiled, and you may spend mana as though it were mana of any type to cast that spell.
+SVar:TrigExile:DB$ RevealHand | ValidTgts$ Player | Look$ True | RememberRevealed$ True | SubAbility$ DBChoose
+SVar:DBChoose:DB$ ChooseCard | Defined$ You | Choices$ Card.IsRemembered | ChoiceZone$ Hand | Amount$ 1 | Mandatory$ True | SubAbility$ DBExile
+SVar:DBExile:DB$ ChangeZone | Defined$ ChosenCard | Origin$ Hand | Destination$ Exile | RememberChanged$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ Remembered | ExileOnMoved$ Exile | StaticAbilities$ STPlay | Duration$ Permanent
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | MayPlayIgnoreType$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ You may cast that card for as long as it remains exiled, and you may spend mana as though it were mana of any type to cast that spell.
+
+Oracle:Flying\nDesecrate (When this creature enters, you may sacrifice an artifact or land.)\nWhen this creature desecrates a permanent, target player reveals their hand. You choose a card from it and exile it. You may cast that card for as long as it remains exiled, and you may spend mana as though it were mana of any type to cast that spell.
+
+DeckHas:Ability$Sacrifice

@@ -1,0 +1,10 @@
+Name:Sleepless Spirit
+ManaCost:W W
+Types:Creature Spirit
+PT:2/2
+
+K:Flying
+
+K:Vigilance
+
+Oracle:Flying, vigilance

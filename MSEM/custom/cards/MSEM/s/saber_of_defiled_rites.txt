@@ -1,0 +1,16 @@
+Name:Saber of Defiled Rites
+ManaCost:1
+Types:Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 0 | Description$ Equipped creature gets +2/+0 and can't be blocked.
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.EquippedBy | Secondary$ True | Description$ Equipped creature gets +2/+0 and can't be blocked.
+
+T:Mode$ Attacks | ValidCard$ Rogue.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigImmediateTrig | TriggerDescription$ Whenever a Rogue you control attacks, you may pay {1}. If you do, attach CARDNAME to it.
+SVar:TrigImmediateTrig:AB$ ImmediateTrigger | Cost$ 1 | Execute$ TrigAttach | RememberObjects$ TriggeredAttackerLKICopy | TriggerDescription$ When you do, attach this Equipment to it.
+SVar:TrigAttach:DB$ Attach | Defined$ DelayTriggerRememberedLKI
+
+K:Equip:5
+
+Oracle:Equipped creature gets +2/+0 and can't be blocked.\nWhenever a Rogue you control attacks, you may pay {1}. If you do, attach this Equipment to it.\nEquip {5}
+
+DeckHints:Type$Rogue

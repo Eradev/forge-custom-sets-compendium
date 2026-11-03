@@ -1,0 +1,15 @@
+Name:Back-Alley Vandal
+ManaCost:B B
+Types:Creature Human Rogue
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDesecrate | TriggerDescription$ Desecrate (When this creature enters, you may sacrifice an artifact or land.)
+SVar:TrigDesecrate:AB$ ImmediateTrigger | Cost$ Sac<1/Artifact;Land/artifact or land> | Execute$ DBDesecrateSignal
+SVar:DBDesecrateSignal:DB$ Cleanup | Named$ Desecrate
+
+T:Mode$ AbilityTriggered | ValidMode$ Immediate | ValidSource$ Card.Self | ValidSpellAbility$ Ability.NamedAbilityDesecrate | Execute$ TrigCounter | TriggerDescription$ When this creature desecrates a permanent, put a +1/+1 counter on it.
+SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1
+
+Oracle:Desecrate (When this creature enters, you may sacrifice an artifact or land.)\nWhen this creature desecrates a permanent, put a +1/+1 counter on it.
+
+DeckHas:Ability$Sacrifice

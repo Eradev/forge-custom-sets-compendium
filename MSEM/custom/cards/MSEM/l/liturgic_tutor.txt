@@ -1,0 +1,14 @@
+Name:Liturgic Tutor
+ManaCost:B B
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Exile | ChangeType$ Card | ChangeNum$ 1 | Mandatory$ True | Imprint$ True | SubAbility$ DBChoose | StackDescription$ SpellDescription | SpellDescription$ Search your library for a card, then shuffle and reveal that card. Any opponent may have you put it into your graveyard. If a player does, draw a card. Otherwise, put it into your hand.
+
+SVar:DBChoose:DB$ GenericChoice | Defined$ Opponent | Choices$ DBToGrave,DoNothing | ChoicePrompt$ Have them put the card into their graveyard? | ConditionDefined$ Imprinted | ConditionZone$ Exile | ConditionPresent$ Card | ConditionCompare$ EQ1 | SubAbility$ DBToHand
+SVar:DBToGrave:DB$ ChangeZone | Origin$ Exile | Destination$ Graveyard | Defined$ Imprinted | SubAbility$ DBDraw | SpellDescription$ Yes
+SVar:DBDraw:DB$ Draw | SubAbility$ DBCleanup
+SVar:DoNothing:DB$ Cleanup | SpellDescription$ No
+SVar:DBToHand:DB$ ChangeZone | Origin$ Exile | Destination$ Hand | Defined$ Imprinted | ConditionDefined$ Imprinted | ConditionZone$ Exile | ConditionPresent$ Card | ConditionCompare$ GE1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearImprinted$ True
+
+Oracle:Search your library for a card, then shuffle and reveal that card. Any opponent may have you put it into your graveyard. If a player does, draw a card. Otherwise, put it into your hand.

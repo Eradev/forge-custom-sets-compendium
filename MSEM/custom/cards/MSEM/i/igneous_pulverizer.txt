@@ -1,0 +1,15 @@
+Name:Igneous Pulverizer
+ManaCost:7
+Types:Artifact Creature Golem
+PT:4/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDesecrate | TriggerDescription$ Desecrate (When this creature enters, you may sacrifice an artifact or land.)
+SVar:TrigDesecrate:AB$ ImmediateTrigger | Cost$ Sac<1/Artifact;Land/artifact or land> | Execute$ DBDesecrateSignal
+SVar:DBDesecrateSignal:DB$ Cleanup | Named$ Desecrate
+
+T:Mode$ AbilityTriggered | ValidMode$ Immediate | ValidSource$ Card.Self | ValidSpellAbility$ Ability.NamedAbilityDesecrate | Execute$ TrigDestroy | TriggerDescription$ When this creature desecrates a permanent, destroy target nonland permanent.
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Permanent.nonLand | TgtPrompt$ Select target nonland permanent
+
+Oracle:Desecrate (When this creature enters, you may sacrifice an artifact or land.)\nWhen this creature desecrates a permanent, destroy target nonland permanent.
+
+DeckHas:Ability$Sacrifice

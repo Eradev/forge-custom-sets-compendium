@@ -1,0 +1,13 @@
+Name:Effigy of Creation
+ManaCost:3
+Types:Artifact Creature Golem
+PT:2/2
+
+K:First Strike
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | CheckSVar$ FealtyMountains | SVarCompare$ GE4 | Description$ This greature gets +1/+1 as long as your fealty to Mountains is four or greater. (Each Mountain you control counts towards your fealty to Mountains.)
+SVar:FealtyMountains:Count$Valid Mountain.YouCtrl
+
+Oracle:First strike\nThis creature gets +1/+1 as long as your fealty to Mountains is four or greater. (Each Mountain you control counts towards your fealty to Mountains.)
+
+SVar:BuffedBy:Mountain

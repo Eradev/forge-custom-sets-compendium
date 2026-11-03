@@ -1,0 +1,12 @@
+Name:Carpet Racers
+ManaCost:U U U
+Types:Creature Human
+PT:3/2
+
+K:Flash
+
+K:Flying
+
+S:Mode$ Continuous | Affected$ Creature.tapped+YouCtrl | AddKeyword$ Hexproof | Description$ Tapped creatures you control have hexproof.
+
+Oracle:Flash (You may cast this spell any time you could cast an instant.)\nFlying\nTapped creatures you control have hexproof.

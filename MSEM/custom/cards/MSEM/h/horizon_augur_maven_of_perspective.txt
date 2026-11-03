@@ -1,0 +1,29 @@
+Name:Horizon Augur
+ManaCost:3 U
+Types:Creature Human Wizard
+PT:2/3
+
+A:AB$ SetState | Cost$ W U B R G | Defined$ Self | Mode$ Transform | SpellDescription$ Chosen one ({W}{U}{B}{R}{G}: Transform this permanent.)
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigScryPump | TriggerDescription$ Whenever you cast an instant or sorcery spell, scry 1, then this creature gets +1/+1 until end of turn.
+SVar:TrigScryPump:DB$ Scry | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | NumAtt$ +1 | NumDef$ +1
+
+Oracle:Chosen one ({W}{U}{B}{R}{G}: Transform this permanent.)\nWhenever you cast an instant or sorcery spell, scry 1, then this creature gets +1/+1 until end of turn.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Maven of Perspective
+ManaCost:no cost
+Types:Creature Archon Wizard
+PT:5/5
+
+K:Flying
+
+T:Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever you cast a spell, draw a card, then put a +1/+1 counter on this creature.
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBPutCounter
+SVar:DBPutCounter:DB$ PutCounter | CounterType$ P1P1
+
+Oracle:Flying\nWhenever you cast a spell, draw a card, then put a +1/+1 counter on this creature.

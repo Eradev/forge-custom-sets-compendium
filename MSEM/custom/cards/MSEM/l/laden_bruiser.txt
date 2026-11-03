@@ -1,0 +1,12 @@
+Name:Laden Bruiser
+ManaCost:4
+Types:Artifact Creature Golem
+PT:2/2
+
+K:Trample
+
+A:AB$ PutCounter | Cost$ 2G 2G T | CounterType$ P1P1 | CounterNum$ 2 | SpellDescription$ Put two +1/+1 counters on this creature.
+
+Oracle:Trample\n{2/G}{2/G}, {T}: Put two +1/+1 counters on this creature.
+
+DeckHas:Ability$Counters

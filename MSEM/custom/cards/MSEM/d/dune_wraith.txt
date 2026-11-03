@@ -1,0 +1,13 @@
+Name:Dune Wraith
+ManaCost:1 W W
+Types:Creature Spirit
+PT:0/1
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounter | TriggerDescription$ When this creature enters, distribute two +1/+1 counters among Spirits you control.
+SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 2 | ValidTgts$ Creature.Spirit+YouCtrl | TargetMin$ 0 | TargetMax$ 2 | DividedAsYouChoose$ 2
+
+Oracle:Flying\nWhen this creature enters, distribute two +1/+1 counters among Spirits you control.
+
+DeckHas:Ability$Counters

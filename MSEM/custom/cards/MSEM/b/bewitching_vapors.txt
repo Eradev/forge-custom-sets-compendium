@@ -1,0 +1,8 @@
+Name:Bewitching Vapors
+ManaCost:1 W W
+Types:Instant
+
+A:SP$ ChangeZone | ValidTgts$ Permanent.nonLand | Origin$ Battlefield | Destination$ Exile | SubAbility$ DBGainLife | SpellDescription$ Exile target nonland permanent. Its controller gains 5 life.
+SVar:DBGainLife:DB$ GainLife | Defined$ TargetedController | LifeAmount$ 5
+
+Oracle:Exile target nonland permanent. Its controller gains 5 life.

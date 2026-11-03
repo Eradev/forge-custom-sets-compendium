@@ -265,43 +265,28 @@ Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 259 U Pan, Honored Sergeant @Wenjun Lin
 
 [tokens]
-1 submerge_reminder
-2 w_1_1_bird_flying
-3 w_1_1_fox_spirit
-4 pacifism
-5 u_1_1_bird_flying_draw
-6 shredskin_sky_horror
-7 undead_archivist
-8 b_5_5_demon_flying
-9 diseased_prophet
-10 emissary_of_the_wicked
-11 fleshwrithe_ghoul
-12 kaijun_the_annihilator
-13 lizhao_lord_of_the_yaogu
-14 b_1_1_puppet_loselife
-15 b_1_1_rat
-16 ravaging_ghoul
-17 sightless_blight
-18 b_2_2_zombie
-19 b_x_x_zombie
-20 bone_pit_raptor
-21 crimson_hellmaw
-22 r_4_4_dragon_flying
-23 skeletal_shredwing
-24 g_0_1_plant
-25 shimaru_the_white_wolf
-26 g_1_1_snake
-27 g_2_2_wolf
-28 rw_1_1_warrior
-29 kaishi_anguished_one
-30 c_a_idol_sac
-31 wun_sus_staff
-
+2 w_1_1_bird_flying @Howard Lyon
+3 w_1_1_fox_spirit @Toujin
+5 u_1_1_bird_flying_draw @Allison o Neil
+8 b_5_5_demon_flying @Chris Cold
+14 b_1_1_puppet_loselife @Hongyue Zhang
+15 b_1_1_rat @Alex Horley
+18 b_2_2_zombie @Idrawgirls
+19 b_x_x_zombie @Josiah Herman
+22 r_4_4_dragon_flying @Daviddleonluis
+24 g_0_1_plant @Emory
+25 shimaru_the_white_wolf @Spyrale
+26 g_1_1_snake @Ketka
+27 g_2_2_wolf @EsthervanHulsen
+28 rw_1_1_warrior @Jubjubjedi
+30 c_a_idol_sac @Leeshahanigan
+31 wun_sus_staff @Jeremy BLZ
 
 [other]
-32 emblem_xiong_mao_survivalist
-33 emblem_kiora_empress_of_the_flood
-34 emblem_heping_master_arbitrator
+1 submerge @Charlie Bowater
+32 emblem_xiong_mao_survivalist @Grosnez
+33 emblem_kiora_empress_of_the_flood @Aaron Lovett
+34 emblem_heping_master_arbitrator @Berker Yuceer
 
 [CreatureTypes]
 Chipmunk:Chipmunks

@@ -2,7 +2,7 @@ Name:Daring Escapade
 ManaCost:U
 Types:Instant
 
-A:SP$ ChangeZone | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn | SpellDescription$ Exile target creature, return it to the battlefield tapped under its owner's control, then choose one —
+A:SP$ ChangeZone | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn | SpellDescription$ Exile target creature, return it to the battlefield tapped under its owner's control, then
 SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | Tapped$ True | SubAbility$ DBCharm
 SVar:DBCharm:DB$ Charm | Choices$ DBPutCounter,DBPutStun
 

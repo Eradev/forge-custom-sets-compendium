@@ -1,0 +1,15 @@
+Name:Cruel Consultation
+ManaCost:1 B B
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | Execute$ TrigMill | TriggerDescription$ At the beginning of your upkeep, mill a card.
+SVar:TrigMill:DB$ Mill
+
+A:AB$ ChangeZone | Cost$ B Sac<1/CARDNAME/this enchantment> | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Card.YouOwn | TgtPrompt$ Select any number of cards to exile from your graveyard | TargetMin$ 0 | TargetMax$ GraveyardSize | RememberChanged$ True | SubAbility$ DBToken | SpellDescription$ Exile any number of cards from your graveyard. Create an X/X black Djinn Horror creature token, where X is the number of card types among cards exiled this way.
+SVar:DBToken:DB$ Token | TokenScript$ b_x_x_horror | TokenPower$ X | TokenToughness$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$CardTypes
+
+Oracle:At the beginning of your upkeep, mill a card.\n{B}, Sacrifice this enchantment: Exile any number of cards from your graveyard. Create an X/X black Djinn Horror creature token, where X is the number of card types among cards exiled this way.
+
+DeckHas:Ability$Token|Sacrifice|Graveyard & Type$Djinn|Horror

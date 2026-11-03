@@ -1,0 +1,11 @@
+Name:Ruthless Vagrant
+ManaCost:2 B
+Types:Creature Human Survivor
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Survivor.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever a Survivor you control dies, target creature you don't control gets -1/-1 until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.OppCtrl | NumAtt$ -1 | NumDef$ -1
+
+Oracle:Whenever a Survivor you control dies, target creature you don't control gets -1/-1 until end of turn.
+
+DeckHints:Type$Survivor

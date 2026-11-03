@@ -1,0 +1,15 @@
+Name:Exemplar of Disdain
+ManaCost:3 B B
+Types:Creature Djinn
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDesecrate | TriggerDescription$ Desecrate (When this creature enters, you may sacrifice an artifact or land.)
+SVar:TrigDesecrate:AB$ ImmediateTrigger | Cost$ Sac<1/Artifact;Land/artifact or land> | Execute$ DBDesecrateSignal
+SVar:DBDesecrateSignal:DB$ Cleanup | Named$ Desecrate
+
+T:Mode$ AbilityTriggered | ValidMode$ Immediate | ValidSource$ Card.Self | ValidSpellAbility$ Ability.NamedAbilityDesecrate | Execute$ TrigPump | TriggerDescription$ When this creature desecrates a permanent, target creature you don't control gets -3/-3 until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you don't control | NumAtt$ -3 | NumDef$ -3 | IsCurse$ True
+
+Oracle:Desecrate (When this creature enters, you may sacrifice an artifact or land.)\nWhen this creature desecrates a permanent, target creature you don't control gets -3/-3 until end of turn.
+
+DeckHas:Ability$Sacrifice

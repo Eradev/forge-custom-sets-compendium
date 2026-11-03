@@ -1,0 +1,12 @@
+Name:Scaleback Steed
+ManaCost:2 G G
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 4 | AddToughness$ 4 | AddKeyword$ Trample | Description$ Enchanted creature gets +4/+4 and has trample.
+
+T:Mode$ ChangesZone | ValidCard$ Card.AttachedBy | Origin$ Battlefield | Destination$ Graveyard | Execute$ TrigToken | TriggerDescription$ When enchanted creature dies, create a 4/4 green Beast creature token with trample.
+SVar:TrigToken:DB$ Token | TokenScript$ g_4_4_beast_trample
+
+Oracle:Enchant creature\nEnchanted creature gets +4/+4 and has trample.\nWhen enchanted creature dies, create a 4/4 green Beast creature token with trample.

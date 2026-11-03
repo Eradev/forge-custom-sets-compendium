@@ -1,0 +1,8 @@
+Name:Outspoken Seminar
+ManaCost:2 U U
+Types:Instant
+
+A:SP$ Draw | NumCards$ 3 | SubAbility$ DBReveal | SpellDescription$ Draw three cards, then reveal your hand.
+SVar:DBReveal:DB$ RevealHand | Defined$ You
+
+Oracle:Draw three cards, then reveal your hand.

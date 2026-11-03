@@ -1,0 +1,15 @@
+Name:Crossridge Commerce
+ManaCost:2 G G G
+Types:Sorcery
+
+A:SP$ Dig | DigNum$ 6 | Reveal$ True | RememberRevealed$ True | SubAbility$ DBChoose | SpellDescription$ Look at the top six cards of your library. For each permanent type, you may reveal a card of that type from among them and put it into your hand. Put the rest on the bottom of your library in any order.
+
+SVar:DBChoose:DB$ ChooseCard | Defined$ You | Choices$ Card.Permanent | ChoiceZone$ Library | ChooseEach$ Artifact & Battle & Creature & Enchantment & Land & Planeswalker | ControlledByPlayer$ Chooser | MinAmount$ 0 | Amount$ 1 | Reveal$ True | RememberChosen$ True | SubAbility$ DBToHand
+
+SVar:DBToHand:DB$ ChangeZone | Defined$ Remembered | Origin$ Library | Destination$ Hand | SubAbility$ DBRest
+
+SVar:DBRest:DB$ ChangeZoneAll | ChangeType$ Card.IsRemembered | Origin$ Library | Destination$ Library | LibraryPosition$ -1 | RestRandomOrder$ True | SubAbility$ DBCleanup
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Look at the top six cards of your library. For each permanent type, you may reveal a card of that type from among them and put it into your hand. Put the rest on the bottom of your library in any order.

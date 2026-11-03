@@ -6,7 +6,7 @@ K:ETBReplacement:Other:ChooseCT
 SVar:ChooseCT:DB$ GenericChoice | DefinedPlayer$ You | Choices$ LetOpponentInvestigate,TapSelf | SpellDescription$ As this land enters, you may have an opponent investigate. If you don't, it enters tapped.
 SVar:LetOpponentInvestigate:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | SubAbility$ DBInvestigate | SpellDescription$ An opponent investigate
 SVar:DBInvestigate:DB$ Investigate | Defined$ ChosenPlayer
-SVar:TapSelf:DB$ Tap | ETB$ True | SpellDescription$ Enters tapped
+SVar:TapSelf:DB$ Tap | ETB$ True | SpellDescription$ enters tapped
 
 A:AB$ Mana | Cost$ T | Produced$ U | SpellDescription$ Add {U}.
 

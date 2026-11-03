@@ -2,7 +2,7 @@ Name:Public Broadcast
 ManaCost:1 W
 Types:Instant
 
-A:SP$ GainLife | Defined$ You | LifeAmount$ 4 | SubAbility$ DoDraw | SpellDescription$ You gain 4 life.\nSuperiority — Then if you have more life than an opponent, draw a card.
+A:SP$ GainLife | LifeAmount$ 4 | SubAbility$ DoDraw | SpellDescription$ You gain 4 life.\nSuperiority — Then if you have more life than an opponent, draw a card.
 SVar:DoDraw:DB$ Draw | ConditionCheckSVar$ X | ConditionSVarCompare$ GTY | StackDescription$ Then if {p:You} has more life than an opponent, {p:You} draws a card.
 SVar:X:Count$YourLifeTotal
 SVar:Y:PlayerCountOpponents$LowestLifeTotal

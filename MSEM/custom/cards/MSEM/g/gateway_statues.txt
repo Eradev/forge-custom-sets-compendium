@@ -1,0 +1,12 @@
+Name:Gateway Statues
+ManaCost:3
+Types:Artifact
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounter | TriggerDescription$ When this artifact enters, put a +1/+1 counter on target creature you control.
+SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature.YouCtrl
+
+A:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
+
+Oracle:When this artifact enters, put a +1/+1 counter on target creature you control.\n{T}: Add one mana of any color.
+
+DeckHas:Ability$Counters

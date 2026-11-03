@@ -3,7 +3,9 @@ ManaCost:1 G
 Types:Instant
 
 A:SP$ Charm | MinCharmNum$ 1 | CharmNum$ 2 | Choices$ TrigExileArtEnch,TrigExileGrave
+
 SVar:TrigExileArtEnch:DB$ ChangeZone | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment | Origin$ Battlefield | Destination$ Exile | SpellDescription$ Exile target artifact or enchantment.
+
 SVar:TrigExileGrave:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | TgtPrompt$ Choose target card in a graveyard | ValidTgts$ Card | SpellDescription$ Exile target card from a graveyard.
 
 K:TypeCycling:Forest:1

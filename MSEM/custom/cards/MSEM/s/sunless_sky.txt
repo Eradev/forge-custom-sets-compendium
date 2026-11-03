@@ -3,7 +3,7 @@ ManaCost:4 W B
 Types:Sorcery
 
 A:SP$ GainLife | LifeAmount$ X | SubAbility$ DBRepeatLoseLife | SpellDescription$ You gain life equal to the number of creatures you control. Each opponent loses life equal to the number of creatures they control. Destroy all creatures, then exile all graveyards.
-Var:DBRepeatLoseLife:DB$ RepeatEach | RepeatPlayers$ Player.Opponent | RepeatSubAbility$ DBLoseLife | SubAbility$ DBDestroyAll
+SVar:DBRepeatLoseLife:DB$ RepeatEach | RepeatPlayers$ Player.Opponent | RepeatSubAbility$ DBLoseLife | SubAbility$ DBDestroyAll
 SVar:DBLoseLife:DB$ LoseLife | Defined$ Player.IsRemembered | LifeAmount$ Count$Valid Creature.RememberedPlayerCtrl
 SVar:DBDestroyAll:DB$ DestroyAll | ValidCards$ Creature | SubAbility$ DBExileGY
 SVar:DBExileGY:DB$ ChangeZoneAll | Origin$ Graveyard | Destination$ Exile | ChangeType$ Card

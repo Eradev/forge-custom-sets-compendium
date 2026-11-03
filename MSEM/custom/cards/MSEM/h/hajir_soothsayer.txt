@@ -1,0 +1,9 @@
+Name:Hajir Soothsayer
+ManaCost:2 U
+Types:Creature Human Survivor
+PT:2/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Survivor.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDig | TriggerDescription$ Whenever a Survivor you control enters, look at the top card of target opponent's library. You may have them put that card into their graveyard.
+SVar:TrigDig:DB$ Dig | ValidTgts$ Opponent | TgtPrompt$ Select target opponent | DigNum$ 1 | ChangeNum$ Any | DestinationZone$ Graveyard | LibraryPosition2$ 0 | Optional$ True
+
+Oracle:Whenever a Survivor you control enters, look at the top card of target opponent's library. You may have them put that card into their graveyard.

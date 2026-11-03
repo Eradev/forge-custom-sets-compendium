@@ -4,7 +4,7 @@ Types:Instant
 
 A:SP$ Charm | CharmNum$ 2 | Choices$ DBToken,DBCounters,DBReturn,DBDestroy
 
-SVar:DBToken:DB$ Token | ValidTgts$ Player | TokenScript$ g_3_3_wurm | TokenOwner$ ThisTargetedPlayer | SpellDescription$ Target player creates a 3/3 green Wurm creature token.
+SVar:DBToken:DB$ Token | TokenScript$ g_3_3_wurm | ValidTgts$ Player | TokenOwner$ ThisTargetedPlayer | SpellDescription$ Target player creates a 3/3 green Wurm creature token.
 
 SVar:DBCounters:DB$ PutCounter | ValidTgts$ Player | TgtPrompt$ Select target player | Choices$ Creature.ControlledBy TargetedPlayer | ChoiceTitle$ Choose a creature you control | Chooser$ TargetedPlayer | Placer$ TargetedPlayer | CounterType$ P1P1 | CounterNum$ 3 | SpellDescription$ Target player puts three +1/+1 counters on a creature they control.
 

@@ -1,0 +1,12 @@
+Name:Ash-Withered Cloak
+ManaCost:3
+Types:Artifact Equipment
+
+K:Equip:4
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 2 | AddToughness$ 2 | Description$ Equipped creature gets +2/+2.
+
+T:Mode$ SpellAbilityCast | ValidSA$ Instant,Sorcery,Activated | ValidActivatingPlayer$ Player | IsSingleTarget$ True | TargetsValid$ Creature.EquippedBy | Execute$ TrigCopy | TriggerZones$ Battlefield | TriggerDescription$ Whenever a player casts a spell or activates an ability that targets only equipped creature, copy that spell or ability. You may choose new targets for the copy.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | MayChooseTarget$ True
+
+Oracle:Equipped creature gets +2/+2.\nWhenever a player casts a spell or activates an ability that targets only equipped creature, copy that spell or ability. You may choose new targets for the copy.\nEquip {4}

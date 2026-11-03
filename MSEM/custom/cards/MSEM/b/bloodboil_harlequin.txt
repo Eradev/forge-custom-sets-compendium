@@ -1,0 +1,17 @@
+Name:Bloodboil Harlequin
+ManaCost:2 R R
+Types:Creature Mutant Shaman
+PT:4/2
+
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDesecrate | TriggerDescription$ Desecrate (When this creature enters, you may sacrifice an artifact or land.)
+SVar:TrigDesecrate:AB$ ImmediateTrigger | Cost$ Sac<1/Artifact;Land/artifact or land> | Execute$ DBDesecrateSignal
+SVar:DBDesecrateSignal:DB$ Cleanup | Named$ Desecrate
+
+T:Mode$ AbilityTriggered | ValidMode$ Immediate | ValidSource$ Card.Self | ValidSpellAbility$ Ability.NamedAbilityDesecrate | Execute$ TrigPump | TriggerDescription$ When this creature desecrates a permanent, up to two target creatures can't block this turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 2 | KW$ HIDDEN CARDNAME can't block. | StackDescription$ {c:Targeted} can't block this turn.
+
+Oracle:Haste\nDesecrate (When this creature enters, you may sacrifice an artifact or land.)\nWhen this creature desecrates a permanent, up to two target creatures can't block this turn.
+
+DeckHas:Ability$Sacrifice

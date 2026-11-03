@@ -1,0 +1,13 @@
+Name:Eccentric Musings
+ManaCost:U U
+Types:Instant
+
+A:SP$ Charm | Choices$ DBScry,DBDraw,DBUntap | CharmNum$ 2
+
+SVar:DBScry:DB$ Scry | ScryNum$ 2 | SpellDescription$ Scry 2.
+
+SVar:DBDraw:DB$ Draw | SpellDescription$ Draw a card.
+
+SVar:DBUntap:DB$ Untap | ValidTgts$ Land | TargetMin$ 0 | TargetMax$ 1 | SpellDescription$ Untap up to one land.
+
+Oracle:Choose two —\n• Scry 2.\n• Draw a card.\n• Untap up to one land.

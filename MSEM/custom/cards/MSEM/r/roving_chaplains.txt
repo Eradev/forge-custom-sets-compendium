@@ -1,0 +1,13 @@
+Name:Roving Chaplains
+ManaCost:W W W
+Types:Creature Human Cleric
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create two 1/1 white Spirit creature tokens with flying.
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_spirit_flying | TokenAmount$ 2
+
+A:AB$ Tap | Cost$ W tapXType<1/Creature> | ValidTgts$ Permanent.nonLand+OppCtrl | TgtPrompt$ Select target nonland permanent an opponent controls | SpellDescription$ Tap target nonland permanent an opponent controls.
+
+Oracle:When this creature enters, create two 1/1 white Spirit creature tokens with flying.\n{W}, Tap another untapped creature you control: Tap target nonland permanent an opponent controls.
+
+DeckHas:Ability$Token & Type$Spirit

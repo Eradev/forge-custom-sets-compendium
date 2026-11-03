@@ -1,0 +1,36 @@
+Name:Ninhasir's March
+ManaCost:1 R R
+Types:Legendary Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDamage | TriggerDescription$ When CARDNAME enters, it deals 3 damage to any target.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 3
+
+A:AB$ SetState | Cost$ 1 R R | Defined$ Self | Mode$ Transform | CheckSVar$ FealtyMountains | SVarCompare$ GE5 | SpellDescription$ Transform CARDNAME. Activate only if your fealty to Mountains is five or greater. (Each Mountain you control counts towards your fealty to Mountains.)
+SVar:FealtyMountains:Count$Valid Mountain.YouCtrl
+
+Oracle:When Ninhasir's March enters, it deals 3 damage to any target.\n{1}{R}{R}: Transform Ninhasir's March. Activate only if your fealty to Mountains is five or greater. (Each Mountain you control counts towards your fealty to Mountains.)
+
+AlternateMode:DoubleFaced
+
+SVar:BuffedBy:Mountain
+
+ALTERNATE
+
+Name:Ninhasir, God of Creation
+ManaCost:no cost
+Colors:red
+Types:Legendary Enchantment Creature God
+PT:5/5
+
+K:Indestructible
+
+T:Mode$ Transformed | ValidCard$ Card.Self | Execute$ TrigDiscardDraw | TriggerDescription$ When this creature transforms into NICKNAME, discard all the cards in your hand, then draw that many cards plus one.
+SVar:TrigDiscardDraw:DB$ Discard | Mode$ Hand | RememberDiscarded$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | NumCards$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$Amount/Plus.1
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCopy | TriggerDescription$ Whenever you cast an instant or sorcery spell, copy it. You may choose new targets for the copy.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | MayChooseTarget$ True
+
+Oracle:Indestructible\nWhen this creature transforms into Ninhasir, discard all the cards in your hand, then draw that many cards plus one.\nWhenever you cast an instant or sorcery spell, copy it. You may choose new targets for the copy.

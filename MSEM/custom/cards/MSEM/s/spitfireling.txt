@@ -8,7 +8,7 @@ K:Haste
 K:Prowess
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ WanderLands | SVarCompare$ GE4 | Execute$ TrigTokens | TriggerDescription$ Wanderlust — When this creature enters, if you control four or more differently named lands, create two 1/1 red Elemental creature tokens with prowess and haste.
-SVar:TrigTokens:DB$ Token | TokenAmount$ 2 | TokenScript$ r_1_1_elemental_haste | RememberTokens$ True | SubAbility$ DBPumpTokens
+SVar:TrigTokens:DB$ Token | TokenScript$ r_1_1_elemental_haste | TokenAmount$ 2 | RememberTokens$ True | SubAbility$ DBPumpTokens
 SVar:DBPumpTokens:DB$ Pump | Defined$ Remembered | KW$ Prowess | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 SVar:WanderLands:Count$Valid Land.YouCtrl$DifferentCardNames

@@ -1,0 +1,12 @@
+Name:Meddling Gargoyle
+ManaCost:1
+Types:Artifact Creature Gargoyle
+PT:1/1
+
+K:Flying
+
+A:AB$ Discard | Cost$ 2B 2B T Sac<1/CARDNAME/this creature> | ValidTgts$ Opponent | DiscardValid$ Card.nonLand | Mode$ RevealYouChoose | SorcerySpeed$ True | SpellDescription$ Target opponent reveals their hand. You choose a nonland card from it. That player discards that card. Activate only as a sorcery.
+
+Oracle:Flying\n{2/B}{2/B}, {T}, Sacrifice this creature: Target opponent reveals their hand. You choose a nonland card from it. That player discards that card. Activate only as a sorcery.
+
+DeckHas:Ability$Discard

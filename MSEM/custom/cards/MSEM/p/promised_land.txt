@@ -1,0 +1,9 @@
+Name:Promised Land
+ManaCost:3 G
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Battlefield | Tapped$ True | Reveal$ True | ChangeType$ EACH Land.Basic & Desert | SpellDescription$ Search your library for a basic land card and a Desert card, put them onto the battlefield tapped, then shuffle.
+
+Oracle:Search your library for a basic land card and a Desert card, put them onto the battlefield tapped, then shuffle.
+
+DeckHints:Type$Desert

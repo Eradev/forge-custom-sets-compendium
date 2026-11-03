@@ -7,7 +7,7 @@ SVar:ETBTapped:DB$ Tap | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ Combo U R | SpellDescription$ Add {U} or {R}.
 
-A:AB$ Animate | Cost$ U R | Defined$ Self | Power$ 1 | Toughness$ 4 | Types$ Creature,Golem | Colors$ Blue,Red | OverwriteColors$ True | Triggers$ TrigPump,TrigAttack,TrigBlock | SpellDescription$ Until end of turn, this land becomes a 1/4 blue and red Golem creature with "Whenever this creature attacks, switch its power and toughness until end of turn" and "Whenever this creature attacks or blocks, torment yourself." It's still a land.
+A:AB$ Animate | Cost$ U R | Power$ 1 | Toughness$ 4 | Types$ Creature,Golem | Colors$ Blue,Red | OverwriteColors$ True | Triggers$ TrigPump,TrigAttack,TrigBlock | SpellDescription$ Until end of turn, this land becomes a 1/4 blue and red Golem creature with "Whenever this creature attacks, switch its power and toughness until end of turn" and "Whenever this creature attacks or blocks, torment yourself." It's still a land.
 SVar:TrigPump:Mode$ Attacks | ValidCard$ Card.Self | Execute$ DBPump | TriggerDescription$ TriggerDescription$ Whenever this creature attacks, switch its power and toughness until end of turn.
 SVar:TrigAttack:Mode$ Attacks | ValidCard$ Card.Self | Execute$ DBTorment | TriggerDescription$ Whenever this land attacks or blocks, torment yourself.
 SVar:TrigBlock:Mode$ Blocks | ValidCard$ Card.Self | Execute$ DBTorment | Secondary$ True | TriggerDescription$ Whenever this land attacks or blocks, torment yourself.

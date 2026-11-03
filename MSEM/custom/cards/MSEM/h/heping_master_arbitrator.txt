@@ -14,6 +14,6 @@ A:AB$ Effect | Cost$ SubCounter<8/LOYALTY> | Planeswalker$ True | Ultimate$ True
 SVar:EffPhase:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | Execute$ EmblemSetLife | TriggerDescription$ At the beginning of your end step, your life total becomes 20.
 SVar:EmblemSetLife:DB$ SetLife | Defined$ You | LifeAmount$ 20
 
-Oracle:[+1]: Until your next turn, if a source would deal damage to Heping, Master Arbitrator, prevent all but 1 of that damage.\n[-2]: Create a white Aura enchantment token named Pacifism attached to target creature an opponent controls. It has enchant creature and "Enchanted creature can't attack or block."\n[-8]: You get an emblem with "At the beginning of your end step, your life total becomes 20."
+Oracle:[+1]: Until your next turn, if a source would deal damage to Heping, prevent all but 1 of that damage.\n[-2]: Create a white Aura enchantment token named Pacifism attached to target creature an opponent controls. It has enchant creature and "Enchanted creature can't attack or block."\n[-8]: You get an emblem with "At the beginning of your end step, your life total becomes 20."
 
 DeckHas:Ability$Token

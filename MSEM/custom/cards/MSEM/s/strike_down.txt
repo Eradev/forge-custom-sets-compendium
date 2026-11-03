@@ -1,0 +1,11 @@
+Name:Strike Down
+ManaCost:1 G G
+Types:Instant
+
+A:SP$ Charm | Choices$ DBDestroyFlying,DBDestroyArtifact
+
+SVar:DBDestroyFlying:DB$ Destroy | ValidTgts$ Creature.withFlying | TgtPrompt$ Select target creature with flying | SpellDescription$ Destroy target creature with flying.
+
+SVar:DBDestroyArtifact:DB$ Destroy | ValidTgts$ Artifact | TgtPrompt$ Select target artifact | SpellDescription$ Destroy target artifact.
+
+Oracle:Choose one —\n• Destroy target creature with flying.\n• Destroy target artifact.

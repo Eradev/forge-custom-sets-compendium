@@ -1,0 +1,14 @@
+Name:Crested Crustacean
+ManaCost:6 U U
+Types:Creature Crab Beast
+PT:6/6
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ X | EffectZone$ All | Description$ This spell costs {1} less to cast for each Desert you control.
+SVar:X:Count$Valid Desert.YouCtrl
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigBounce | TriggerDescription$ When this creature enters, return target permanent to its owner's hand.
+SVar:TrigBounce:DB$ ChangeZone | ValidTgts$ Permanent | Origin$ Battlefield | Destination$ Hand
+
+Oracle:This spell costs {1} less to cast for each Desert you control.\nWhen this creature enters, return target permanent to its owner's hand.
+
+DeckHints:Type$Desert

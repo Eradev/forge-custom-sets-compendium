@@ -6,7 +6,7 @@ PT:2/3
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigReturn | OptionalDecider$ You | TriggerDescription$ When NICKNAME enters, you may put target Aura card that could enchant it from a graveyard onto the battlefield attached to her.
 SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Aura.CanEnchantSource | TgtPrompt$ Select target Aura card that could enchant Ralezza from a graveyard | AttachedTo$ Self
 
-A:AB$ Pump | Cost$ 1 W Sac<1/Aura> | Defined$ Self | KW$ Indestructible | SpellDescription$ NICKNAME gains indestructible until end of turn.
+A:AB$ Pump | Cost$ 1 W Sac<1/Aura> | KW$ Indestructible | SpellDescription$ NICKNAME gains indestructible until end of turn.
 
 Oracle:When Ralezza enters, you may put target Aura card that could enchant it from a graveyard onto the battlefield attached to her.\n{1}{W}, Sacrifice an Aura: Ralezza gains indestructible until end of turn.
 

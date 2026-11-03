@@ -1,0 +1,14 @@
+Name:Herald of the Humble
+ManaCost:1 R
+Types:Creature Human Warrior
+PT:3/3
+
+K:Haste
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigExile | TriggerDescription$ Whenever this creature deals combat damage to a player, they exile the top card of their library. During their next turn, they may play that card if it has mana value 3 or less. (They still pay its costs.)
+SVar:TrigExile:DB$ Dig | Defined$ TriggeredTarget | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | EffectOwner$ TriggeredTarget | Duration$ UntilTheEndOfYourNextTurn | RememberObjects$ Remembered | StaticAbilities$ STPlay | ForgetOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Condition$ PlayerTurn | Affected$ Card.IsRemembered+cmcLE3 | AffectedZone$ Exile | Description$ During your next turn, you may play that card if it has mana value 3 or less.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Haste\nWhenever this creature deals combat damage to a player, they exile the top card of their library. During their next turn, they may play that card if it has mana value 3 or less. (They still pay its costs.)

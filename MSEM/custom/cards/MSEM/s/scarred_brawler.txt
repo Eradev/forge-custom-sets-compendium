@@ -3,6 +3,6 @@ ManaCost:3 G
 Types:Creature Human Warrior
 PT:3/3
 
-A:AB$ Pump | Cost$ 2 G | Defined$ Self | NumAtt$ +2 | NumDef$ +2 | SpellDescription$ This creature gets +2/+2 until end of turn.
+A:AB$ Pump | Cost$ 2 G | NumAtt$ +2 | NumDef$ +2 | SpellDescription$ This creature gets +2/+2 until end of turn.
 
 Oracle:{2}{G}: This creature gets +2/+2 until end of turn.

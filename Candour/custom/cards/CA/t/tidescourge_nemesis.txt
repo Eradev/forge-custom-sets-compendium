@@ -7,7 +7,7 @@ S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | Description$ This creature 
 
 S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 2 | Condition$ Hellbent | Description$ Hellbent — This creature gets +2/+0 as long as you have no cards in hand.
 
-A:AB$ Pump | Cost$ Discard<1/Card> | Defined$ Self | KW$ Hexproof | SpellDescription$ Discard a card: This creature gains hexproof until end of turn.
+A:AB$ Pump | Cost$ Discard<1/Card> | KW$ Hexproof | SpellDescription$ Discard a card: This creature gains hexproof until end of turn.
 
 Oracle:This creature can't be blocked.\nHellbent — This creature gets +2/+0 as long as you have no cards in hand.\nDiscard a card: This creature gains hexproof until end of turn.
 

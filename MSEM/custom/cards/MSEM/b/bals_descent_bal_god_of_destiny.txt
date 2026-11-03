@@ -1,0 +1,38 @@
+Name:Bal's Descent
+ManaCost:2 B B
+Types:Legendary Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigETB | TriggerDescription$ When CARDNAME enters, each player sacrifices a creature, discards two cards, and mills three cards.
+
+SVar:TrigETB:DB$ Sacrifice | Defined$ Player | SacValid$ Creature | SubAbility$ DBDiscardAll
+SVar:DBDiscardAll:DB$ Discard | Defined$ Player | NumCards$ 2 | Mode$ TgtChoose | SubAbility$ DBMillAll
+SVar:DBMillAll:DB$ Mill | Defined$ Player | NumCards$ 3
+
+A:AB$ SetState | Cost$ 1 B B | Defined$ Self | Mode$ Transform | CheckSVar$ FealtySwamps | SVarCompare$ GE5 | SpellDescription$ Transform CARDNAME. Activate only if your fealty to Swamps is five or greater. (Each Swamp you control counts towards your fealty to Swamps.)
+SVar:FealtySwamps:Count$Valid Swamp.YouCtrl
+
+Oracle:When Bal's Descent enters, each player sacrifices a creature, discards two cards, and mills three cards.\n{1}{B}{B}: Transform Bal's Descent. Activate only if your fealty to Swamps is five or greater. (Each Swamp you control counts towards your fealty to Swamps.)
+
+SVar:BuffedBy:Swamp
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Bal, God of Destiny
+ManaCost:no cost
+Colors:black
+Types:Legendary Enchantment Creature God
+PT:6/6
+
+K:Indestructible
+
+S:Mode$ Continuous | Affected$ Card.YouCtrl | AffectedZone$ Graveyard | MayPlay$ True | Description$ You may play cards from your graveyard.
+
+R:Event$ DrawCards | ActiveZones$ Battlefield | ValidPlayer$ You | ReplaceWith$ MillInstead | Description$ If you would draw one or more cards, mill that many cards instead.
+SVar:MillInstead:DB$ Mill | NumCards$ ReplaceCount$Number
+
+R:Event$ Moved | ActiveZones$ Battlefield | Origin$ Battlefield,Hand,Stack,Exile,Command | Destination$ Graveyard | ValidCard$ Card.!token+YouOwn | ReplaceWith$ ExileInstead | Description$ If a card would be put into your graveyard from anywhere other than your library, exile it instead.
+SVar:ExileInstead:DB$ ChangeZone | Hidden$ True | Origin$ All | Destination$ Exile | Defined$ ReplacedCard
+
+Oracle:Indestructible\nYou may play cards from your graveyard.\nIf you would draw one or more cards, mill that many cards instead.\nIf a card would be put into your graveyard from anywhere other than your library, exile it instead.

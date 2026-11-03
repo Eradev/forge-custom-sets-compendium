@@ -8,7 +8,7 @@ SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.nonLand+IsRemember
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | SubAbility$ DBMana
 SVar:DBMana:DB$ Mana | Produced$ Combo Any | Amount$ 5 | AILogic$ ManaRitual | AINoRecursiveCheck$ True
 
-A:AB$ Token | Cost$ 1 R Discard<1/CARDNAME/this card> | ActivationZone$ Hand | TokenScript$ c_a_treasure_sac | AILogic$ AlwaysOnDiscard | SpellDescription$ Create a Treasure token.
+A:AB$ Token | Cost$ 1 R Discard<1/CARDNAME/this card> | TokenScript$ c_a_treasure_sac | ActivationZone$ Hand | AILogic$ AlwaysOnDiscard | SpellDescription$ Create a Treasure token.
 
 Oracle:Exile the top five cards of your library. Until end of turn, you may cast spells from among them.\nAdd five mana in any combination of colors.\n{1}{R}, Discard this card: Create a Treasure token.
 

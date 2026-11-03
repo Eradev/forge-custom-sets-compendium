@@ -1,0 +1,11 @@
+Name:Granite Plating
+ManaCost:1
+Types:Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddKeyword$ Vigilance | CanBlockAmount$ 1 | Description$ Equipped creature has vigilance and can block an additional creature each combat.
+
+K:Equip:2
+
+Oracle:Equipped creature has vigilance and can block an additional creature each combat.\nEquip {2}
+
+DeckHas:Ability$Equipment

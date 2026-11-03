@@ -1,0 +1,12 @@
+Name:Idol of the Dead God
+ManaCost:2
+Types:Artifact Creature Construct
+PT:1/1
+
+K:Flying
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigSearch | TriggerDescription$ Whenever this creature deals combat damage to a player, search your library for any number of creature cards named CARDNAME, reveal them, put them into your hand, then shuffle.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Creature.namedIdol of the Dead God | ChangeNum$ X | ShuffleNonMandatory$ True
+SVar:X:Count$ValidLibrary Creature.YouOwn+namedIdol of the Dead God
+
+Oracle:Flying\nWhenever this creature deals combat damage to a player, search your library for any number of creature cards named Idol of the Dead God, reveal them, put them into your hand, then shuffle.

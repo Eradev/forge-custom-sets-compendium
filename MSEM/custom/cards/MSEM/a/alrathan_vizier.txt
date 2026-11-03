@@ -8,7 +8,7 @@ K:Flying
 K:Prowess
 
 T:Mode$ ChangesZone | Destination$ Battlefield | ValidCard$ Artifact.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigLoot | TriggerDescription$ Whenever an artifact you control enters, you may draw a card. If you do, discard a card.
-SVar:TrigLoot:AB$ Discard | Cost$ Draw<1/You> | Defined$ You | Mode$ TgtChoose
+SVar:TrigLoot:AB$ Discard | Cost$ Draw<1/You> | Mode$ TgtChoose
 
 Oracle:Flying, prowess\nWhenever an artifact you control enters, you may draw a card. If you do, discard a card.
 

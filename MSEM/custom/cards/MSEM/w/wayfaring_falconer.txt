@@ -1,0 +1,11 @@
+Name:Wayfaring Falconer
+ManaCost:4 R
+Types:Creature Human Survivor
+PT:3/3
+
+S:Mode$ Continuous | Affected$ Creature.Survivor+YouCtrl | AddKeyword$ Double Strike | Description$ Survivors you control have double strike.
+
+Oracle:Survivors you control have double strike.
+
+SVar:PlayMain1:TRUE
+DeckHints:Type$Survivor

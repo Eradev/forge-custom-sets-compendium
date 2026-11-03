@@ -1,0 +1,17 @@
+Name:Seto San, Summer Blossom
+ManaCost:2 W W
+Types:Legendary Planeswalker Seto
+Loyalty:4
+
+A:AB$ Token | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | TokenScript$ w_1_1_warrior_lifelink | SubAbility$ DBGainLife | SpellDescription$ Create a 1/1 white Warrior creature token with lifelink. You gain 1 life.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 1
+
+A:AB$ PutCounter | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | CounterType$ P1P1 | CounterNum$ 2 | SubAbility$ DBPump | SpellDescription$ Put two +1/+1 counters on target creature. It gains double strike until end of turn.
+SVar:DBPump:DB$ Pump | Defined$ Targeted | KW$ Double Strike
+
+A:AB$ ChooseCard | Cost$ SubCounter<7/LOYALTY> | Planeswalker$ True | Ultimate$ True | Defined$ You | Amount$ 3 | Choices$ Creature | ChoiceTitle$ Choose up to three creatures | AILogic$ Duneblast | SubAbility$ DBDestroyAll | SpellDescription$ Choose up to three creatures, then destroy the rest.
+SVar:DBDestroyAll:DB$ DestroyAll | ValidCards$ Creature.nonChosenCard
+
+Oracle:[+1]: Create a 1/1 white Warrior creature token with lifelink. You gain 1 life.\n[-2]: Put two +1/+1 counters on target creature. It gains double strike until end of turn.\n[-7]: Choose up to three creatures, then destroy the rest.
+
+DeckHas:Ability$Token|Counters & Type$Warrior

@@ -4,11 +4,11 @@ Types:Legendary Creature Human Warrior
 PT:2/2
 
 T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDragon | TriggerDescription$ At the beginning of combat on your turn, you may pay {2}{R}{R}. If you do, create a 4/4 red Dragon creature token with flying and haste. Exile that token at end of combat.
-SVar:TrigDragon:AB$ Token | Cost$ 2 R R | TokenScript$ r_4_4_dragon_flying | TokenOwner$ You | PumpKeywords$ Haste | AtEOT$ ExileCombat
+SVar:TrigDragon:AB$ Token | Cost$ 2 R R | TokenScript$ r_4_4_dragon_flying_haste | AtEOT$ ExileCombat
 
-T:Mode$ Attacks | ValidCard$ Card.Self | IsPresent$ Creature.YouCtrl+powerGE4 | PresentCompare$ GE1 | TriggerZones$ Battlefield | Execute$ TrigDoubleStrike | TriggerDescription$ Ferocious — Whenever NICKNAME attacks, if you control a creature with power 4 or greater, NICKNAME gains double strike until end of turn.
+T:Mode$ Attacks | ValidCard$ Card.Self | IsPresent$ Creature.YouCtrl+powerGE4 | PresentCompare$ GE1 | TriggerZones$ Battlefield | Execute$ TrigDoubleStrike | TriggerDescription$ Ferocious — Whenever NICKNAME attacks, if you control a creature with power 4 or greater, he gains double strike until end of turn.
 SVar:TrigDoubleStrike:DB$ Pump | Defined$ Self | KW$ Double Strike
 
-Oracle:At the beginning of combat on your turn, you may pay {2}{R}{R}. If you do, create a 4/4 red Dragon creature token with flying and haste. Exile that token at end of combat.\nFerocious — Whenever Xiusheng attacks, if you control a creature with power 4 or greater, Xiusheng gains double strike until end of turn.
+Oracle:At the beginning of combat on your turn, you may pay {2}{R}{R}. If you do, create a 4/4 red Dragon creature token with flying and haste. Exile that token at end of combat.\nFerocious — Whenever Xiusheng attacks, if you control a creature with power 4 or greater, he gains double strike until end of turn.
 
 DeckHas:Ability$Token & Type$Dragon

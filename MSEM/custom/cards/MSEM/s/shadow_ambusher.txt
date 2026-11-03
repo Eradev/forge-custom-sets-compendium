@@ -1,0 +1,9 @@
+Name:Shadow Ambusher
+ManaCost:B
+Types:Creature Human Rogue
+PT:2/2
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ At the beginning of your upkeep, you lose 1 life.
+SVar:TrigLoseLife:DB$ LoseLife | LifeAmount$ 1
+
+Oracle:At the beginning of your upkeep, you lose 1 life.

@@ -1,0 +1,13 @@
+Name:Globule of Intuition
+ManaCost:2/U
+Types:Artifact
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigScry | TriggerDescription$ When this artifact enters or leaves the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigScry | Secondary$ True | TriggerDescription$ When this artifact enters or leaves the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)
+SVar:TrigScry:DB$ Scry
+
+A:AB$ Draw | Cost$ 2/U T Sac<1/CARDNAME/this artifact> | SpellDescription$ Draw a card.
+
+Oracle:When this artifact enters or leaves the battlefield, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)\n{2/U}, {T}, Sacrifice this artifact: Draw a card.
+
+DeckHas:Ability$Sacrifice

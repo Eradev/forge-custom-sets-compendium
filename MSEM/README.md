@@ -59,6 +59,9 @@ Worlds Away (WAY)                     -  96% (254/262)
     * Syzygy Privateer
     * Verdant Renewal
     * Zhedina Coastguard
+Al Tabaq (ATB)                        -  99% (248/249)
+  Missing cards:
+    * Congruous Simulacrum
 Storytime (101)                       -  98% (99/101)
   Missing cards:
     * Arpechian Champion
@@ -68,9 +71,9 @@ Zero (ZER)                            -  37% (92/252)
 Path of Shadows (PSA)                 -  99% (208/209)
   Missing cards:
      * The Sacred Gate
-Kaleidoscope (KLC)                    -  100%
-A Tourney at Whiterun (TWR)           -  100%
-Tides of War (TOW)                    -   99% (270/272)
+Kaleidoscope (KLC)                    - 100%
+A Tourney at Whiterun (TWR)           - 100%
+Tides of War (TOW)                    -  99% (270/272)
   Missing cards:
     * Grafted Physician
     * Ill Winds Blow
@@ -81,7 +84,7 @@ Pyramids of Atuum (POA)               -  98% (126/128)
 K15 Core Set (K15)                    -  100%
 Imperial Legacies (IMP)               -  99% (141/142)
     * Bind in Jade
-Goliaths of Nangjiao (GNJ)            -  100%
+Goliaths of Nangjiao (GNJ)            - 100%
 Aftermath (AFM)                       -  90% (228/254)
   Missing cards:
     * Every card with Reprise, or referencing it.
@@ -102,14 +105,16 @@ From the Vault: Wayfarer's Shrine (SHRINE)
 Examples on how to implement custom keywords and mechanisms.
 
 * [Aetherize](#aetherize)
-* [Alpha] (#alpha)
+* [Alpha](#alpha)
 * [Ascend](#ascend)
 * [Art of War](#art-of-war)
 * [Bleed](#bleed)
 * [Bounty](#bounty)
+* [Concord](#concord)
 * [Cryptic](#cryptic)
 * [Deception](#deception)
 * [Fabled](#fabled)
+* [Fealty](#fealty)
 * [Fleeting](#fleeting)
 * [Foresight](#foresight)
 * [Golden Age](#golden-age)
@@ -117,17 +122,17 @@ Examples on how to implement custom keywords and mechanisms.
 * [Improve](#improve)
 * [Infiltrate](#infiltrate)
 * [Inscribe](#inscribe)
-* [Invigorate] (#invigorate)
+* [Invigorate](#invigorate)
 * [Kindle](#kindle)
 * [Menagerie](#menagerie)
 * [Mirage](#mirage)
 * [Motivate](#motivate)
 * [Paranoia](#paranoia)
 * [Rerun](#rerun)
-* [Revive] (#revive)
+* [Revive](#revive)
 * [Showcase](#showcase)
 * [Storied](#storied)
-* [Submerge] (#submerge)
+* [Submerge](#submerge)
 * [Torment](#torment)
 * [Vision](#vision)
 * [Wanderlust](#wanderlust)
@@ -162,10 +167,8 @@ Implementation:
 
 ```text
 K:ETBReplacement:Other:DBAlpha:Optional
-
-SVar:DBAlpha:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | ETB$ True | SubAbility$ DBBecomeAlpha | SpellDescription$ Alpha (You may have this creature enter with an additional +1/+1 counter on it. If you do, it becomes alpha and can only attack alone.)
-SVar:DBBecomeAlpha:DB$ Animate | Defined$ Self | ConditionDefined$ Self | ConditionPresent$ Card.Self+HasSVar Alpha | ConditionCompare$ EQ0 | HiddenKeywords$ CARDNAME can only attack alone. | sVars$ AlphaMarker | Duration$ Permanent
-
+SVar:DBAlpha:DB$ PutCounter | CounterType$ P1P1 | CounterNum$ 1 | ETB$ True | SubAbility$ DBBecomeAlpha | SpellDescription$ Alpha (You may have this creature enter with an additional +1/+1 counter on it. If you do, it becomes alpha and can only attack alone.)
+SVar:DBBecomeAlpha:DB$ Animate | ConditionDefined$ Self | ConditionPresent$ Card.Self+HasSVar Alpha | ConditionCompare$ EQ0 | HiddenKeywords$ CARDNAME can only attack alone. | sVars$ AlphaMarker | Duration$ Permanent
 SVar:AlphaMarker:SVar:Alpha:True
 ```
 
@@ -242,6 +245,22 @@ SVar:TrigDraw:DB$ Draw | Defined$ Player.OpponentOf TriggeredCardController
 
 [Jump to top](#keywords-and-mechanisms-implementation)
 
+### Concord
+
+Concord is defined as:
+
+```text
+[...] if there are four or more card types among permanents you control [...]
+```
+
+To check for Concord:
+
+```text
+SVar:ConcordCount:Count$Valid Permanent.YouCtrl$CardTypes
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
 ### Cryptic
 
 Cryptic is defined as:
@@ -295,6 +314,22 @@ S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 W | De
 
 SVar:DBTransform:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Battlefield | Transformed$ True | AttachedTo$ Targeted | ConditionCheckSVar$ AltCostPaid | ConditionSVarCompare$ GE1 | SpellDescription$ If CARDNAME's fabled cost was paid, put it onto the battlefield transformed attached to that creature.
 SVar:AltCostPaid:Count$AltCost.1.0
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Fealty
+
+Fealty is defined as:
+
+```text
+(Each [TYPE] you control counts towards your fealty to [TYPES].)
+```
+
+To check for Fealty:
+
+```text
+SVar:FealtySwamps:Count$Valid Swamp.YouCtrl
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
@@ -417,7 +452,7 @@ Implementation:
 
 ```text
 T:Mode$ AttackerUnblockedOnce | ValidAttackingPlayer$ You | Execute$ TrigPump | TriggerZones$ Battlefield | TriggerDescription$ Infiltrate (Whenever one or more attacking creatures you control aren't blocked, this creature gets +1/+1 until end of turn.)
-SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +1 | NumDef$ +1
+SVar:TrigPump:DB$ Pump | NumAtt$ +1 | NumDef$ +1
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
@@ -481,7 +516,7 @@ Kindle 1—{1} ({1}, Exile this card from your graveyard: Create a 1/1 colorless
 Implementation:
 
 ```text
-A:AB$ Token | TokenScript$ c_1_1_elemental | PrecostDesc$ Kindle 1 — | Cost$ 1 ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create a 1/1 colorless Elemental creature token.
+A:AB$ Token | Cost$ 1 ExileFromGrave<1/CARDNAME/this card> | TokenScript$ c_1_1_elemental | PrecostDesc$ Kindle 1 — | ActivationZone$ Graveyard | SorcerySpeed$ True | SpellDescription$ Create a 1/1 colorless Elemental creature token.
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
@@ -605,7 +640,7 @@ Your main `A:SP$` link should have `SubAbility$ DBToken` to link with the Showca
 
 ```text
 S:Mode$ AlternativeCost | Named$ Showcase | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 2 W W | Description$ Showcase {2}{W}{W} (Then if you cast this for its showcase cost, create a 1/1 red Bard creature token that can't block and exile this. Whenever it attacks, you may cast a free copy of this.)
-SVar:DBToken:DB$ Token | ConditionCheckSVar$ AltCostPaid | TokenScript$ r_1_1_bard_cantblock | RememberTokens$ True | SubAbility$ DBEffect
+SVar:DBToken:DB$ Token | TokenScript$ r_1_1_bard_cantblock | ConditionCheckSVar$ AltCostPaid | RememberTokens$ True | SubAbility$ DBEffect
 SVar:DBEffect:DB$ Effect | ConditionCheckSVar$ AltCostPaid | RememberObjects$ Remembered | ImprintCards$ Self | Triggers$ TriggerShowcaseAttack,TriggerTokenMoved | Duration$ Permanent | SubAbility$ DBExile
 SVar:TriggerShowcaseAttack:Mode$ Attacks | ValidCard$ Card.IsRemembered | Execute$ PlayShowcase | TriggerDescription$ Whenever the showcased creature attacks, you may cast a copy of EFFECTSOURCE without paying its mana cost.
 SVar:PlayShowcase:DB$ Play | Defined$ Imprinted | WithoutManaCost$ True | CopyCard$ True | Optional$ True | OptionalDecider$ You

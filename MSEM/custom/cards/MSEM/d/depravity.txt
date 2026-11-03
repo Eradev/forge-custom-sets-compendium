@@ -1,0 +1,8 @@
+Name:Depravity
+ManaCost:1 B B B
+Types:Enchantment
+
+T:Mode$ DamageDone | ValidSource$ Card.YouCtrl,Emblem.YouCtrl | ValidTarget$ Creature.OppCtrl,Planeswalker.OppCtrl | TriggerZones$ Battlefield | Execute$ TrigExile | TriggerDescription$ Whenever a source you control deals damage to a creature or planeswalker an opponent controls, exile that creature or planeswalker.
+SVar:TrigExile:DB$ ChangeZone | Defined$ TriggeredTargetLKICopy | Origin$ Battlefield | Destination$ Exile
+
+Oracle:Whenever a source you control deals damage to a creature or planeswalker an opponent controls, exile that creature or planeswalker.

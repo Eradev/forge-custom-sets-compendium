@@ -1,0 +1,25 @@
+Name:Sandbank Guardian
+ManaCost:3 W
+Types:Creature Mutant Warrior
+PT:2/4
+
+K:Vigilance
+
+A:AB$ SetState | Cost$ W U B R G | Defined$ Self | Mode$ Transform | SpellDescription$ Chosen one ({W}{U}{B}{R}{G}: Transform this permanent.)
+
+Oracle:Vigilance\nChosen one ({W}{U}{B}{R}{G}: Transform this permanent.)
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Archon of Favor
+ManaCost:no cost
+Types:Creature Archon
+PT:5/5
+
+K:Flying
+
+K:Vigilance
+
+Oracle:Flying, vigilance

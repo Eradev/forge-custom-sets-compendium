@@ -7,7 +7,7 @@ SVar:ETBTapped:DB$ Tap | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ Combo B G | SpellDescription$ Add {B} or {G}.
 
-A:AB$ Animate | Cost$ 1 B G | Defined$ Self | Power$ 2 | Toughness$ 3 | Types$ Creature,Horror | Colors$ Black,Green | OverwriteColors$ True | Keywords$ Deathtouch | Triggers$ TrigAttack,TrigBlock | SpellDescription$ Until end of turn, this land becomes a 2/3 black and green Horror creature with deathtouch and "Whenever this creature attacks or blocks, torment yourself." It's still a land.
+A:AB$ Animate | Cost$ 1 B G | Power$ 2 | Toughness$ 3 | Types$ Creature,Horror | Colors$ Black,Green | OverwriteColors$ True | Keywords$ Deathtouch | Triggers$ TrigAttack,TrigBlock | SpellDescription$ Until end of turn, this land becomes a 2/3 black and green Horror creature with deathtouch and "Whenever this creature attacks or blocks, torment yourself." It's still a land.
 SVar:TrigAttack:Mode$ Attacks | ValidCard$ Card.Self | Execute$ DBTorment | TriggerDescription$ Whenever this land attacks or blocks, torment yourself.
 SVar:TrigBlock:Mode$ Blocks | ValidCard$ Card.Self | Execute$ DBTorment | Secondary$ True | TriggerDescription$ Whenever this land attacks or blocks, torment yourself.
 SVar:DBTorment:DB$ GenericChoice | AILogic$ PayUnlessCost | Choices$ DBPaySac,DBPayDiscard | FallbackAbility$ DBLoseLifeFallback | SpellDescription$ Lose 3 life unless you discard a card or sacrifice a nonland permanent.

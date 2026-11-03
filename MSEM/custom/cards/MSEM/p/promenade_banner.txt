@@ -1,0 +1,11 @@
+Name:Promenade Banner
+ManaCost:2
+Types:Artifact
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This artifact enters tapped.
+SVar:ETBTapped:DB$ Tap | ETB$ True
+
+A:AB$ PumpAll | Cost$ 1 T | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1 | SpellDescription$ Creatures you control get +1/+1 until end of turn.
+
+Oracle:This artifact enters tapped.\n{1}, {T}: Creatures you control get +1/+1 until end of turn.
+

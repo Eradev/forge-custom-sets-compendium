@@ -1,0 +1,13 @@
+Name:Effigy of Morality
+ManaCost:3
+Types:Artifact Creature Golem
+PT:1/3
+
+K:Lifelink
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | CheckSVar$ FealtyPlains | SVarCompare$ GE4 | Description$ This creature gets +1/+1 as long as your fealty to Plains is four or greater. (Each Plains you control counts towards your fealty to Plains.)
+SVar:FealtyPlains:Count$Valid Plains.YouCtrl
+
+Oracle:Lifelink\nThis creature gets +1/+1 as long as your fealty to Plains is four or greater. (Each Plains you control counts towards your fealty to Plains.)
+
+SVar:BuffedBy:Plains

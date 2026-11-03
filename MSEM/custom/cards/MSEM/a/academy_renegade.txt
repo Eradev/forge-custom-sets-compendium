@@ -3,7 +3,7 @@ ManaCost:2 R
 Types:Creature Human Wizard
 PT:2/2
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigETB | TriggerDescription$ When this creature enters the battlefield, it deals damage to target creature you don't control equal to the number of Wizards you control.
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigETB | TriggerDescription$ When this creature enters, it deals damage to target creature you don't control equal to the number of Wizards you control.
 SVar:TrigETB:DB$ DealDamage | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you don't control | NumDmg$ X
 SVar:X:Count$Valid Wizard.YouCtrl
 

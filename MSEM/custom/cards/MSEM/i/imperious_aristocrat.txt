@@ -21,7 +21,7 @@ SVar:GoldenCheck1:SVar$GoldenAgeSpell/Plus.GoldenAgeAbility
 SVar:GoldenCheckFinal:SVar$GoldenCheck1/Plus.GoldenAgeAttack
 #-------------------
 
-A:AB$ Pump | Cost$ 1 Sac<1/Creature.Other/another creature> | Defined$ Self | KW$ Indestructible | SubAbility$ DBDrain | SpellDescription$ This creature gains indestructible until end of turn. If you're in a renaissance, each opponent loses 2 life and you gain 2 life.
+A:AB$ Pump | Cost$ 1 Sac<1/Creature.Other/another creature> | KW$ Indestructible | SubAbility$ DBDrain | SpellDescription$ This creature gains indestructible until end of turn. If you're in a renaissance, each opponent loses 2 life and you gain 2 life.
 SVar:DBDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 2 | ConditionCheckSVar$ IsRenaissance | ConditionSVarCompare$ EQ1 | SubAbility$ DBGainLife
 SVar:DBGainLife:DB$ GainLife | LifeAmount$ 2 | ConditionCheckSVar$ IsRenaissance | ConditionSVarCompare$ EQ1
 SVar:IsRenaissance:Count$ValidCommand Effect.YouCtrl+namedGolden Age/LimitMax.1

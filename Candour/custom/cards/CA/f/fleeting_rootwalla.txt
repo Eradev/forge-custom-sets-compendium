@@ -3,7 +3,7 @@ ManaCost:U
 Types:Creature Lizard
 PT:1/2
 
-A:AB$ Pump | Cost$ U | Defined$ Self | NumAtt$ +2 | ActivationLimit$ 1 | SubAbility$ DBEffect | SpellDescription$ This creature gets +2/+0 and can't be blocked until end of turn. Activate only once each turn.
+A:AB$ Pump | Cost$ U | NumAtt$ +2 | ActivationLimit$ 1 | SubAbility$ DBEffect | SpellDescription$ This creature gets +2/+0 and can't be blocked until end of turn. Activate only once each turn.
 SVar:DBEffect:DB$ Effect | RememberObjects$ Self | ExileOnMoved$ Battlefield | StaticAbilities$ Unblockable
 SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ This creature can't be blocked this turn.
 

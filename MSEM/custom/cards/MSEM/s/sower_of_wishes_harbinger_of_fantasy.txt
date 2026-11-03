@@ -1,0 +1,32 @@
+Name:Sower of Wishes
+ManaCost:2 G
+Types:Creature Human Druid
+PT:3/3
+
+A:AB$ SetState | Cost$ W U B R G | Defined$ Self | Mode$ Transform | SpellDescription$ Chosen one ({W}{U}{B}{R}{G}: Transform this permanent.)
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDig | TriggerDescription$ When this creature enters, reveal the top three cards of your library. Put all land cards revealed this way into your hand and the rest back on top in any order.
+SVar:TrigDig:DB$ Dig | DigNum$ 3 | Reveal$ True | ChangeNum$ All | ChangeValid$ Land | DestinationZone$ Hand | DestinationZone2$ Library | LibraryPosition$ 0
+
+Oracle:Chosen one ({W}{U}{B}{R}{G}: Transform this permanent.)\nWhen this creature enters, reveal the top three cards of your library. Put all land cards revealed this way into your hand and the rest back on top in any order.
+
+AlternateMode:DoubleFaced
+
+ALTERNATE
+
+Name:Harbinger of Fantasy
+ManaCost:no cost
+Colors:green
+Types:Creature Archon Druid
+PT:5/5
+
+K:Flying
+
+T:Mode$ Phase | Phase$ Main1 | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigLand | TriggerDescription$ At the beginning of your first main phase, you may put any number of land cards from your hand onto the battlefield, then draw a card for each land put onto the battlefield this way.
+SVar:TrigLand:DB$ ChangeZone | Origin$ Hand | Destination$ Battlefield | ChangeType$ Land | ChangeNum$ X | Optional$ True | RememberChanged$ True | SubAbility$ TrigDraw
+SVar:TrigDraw:DB$ Draw | NumCards$ Y | SubAbility$ DBCleanup
+SVar:Y:Count$Valid Remembered
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Count$ValidHand Land.YouCtrl
+
+Oracle:Flying\nAt the beginning of your first main phase, you may put any number of land cards from your hand onto the battlefield, then draw a card for each land put onto the battlefield this way.

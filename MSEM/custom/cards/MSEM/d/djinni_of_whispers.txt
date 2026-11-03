@@ -1,0 +1,11 @@
+Name:Djinni of Whispers
+ManaCost:2 U U U
+Types:Creature Djinn
+PT:3/3
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigUntap | TriggerDescription$ When this creature enters, untap up to three Islands.
+SVar:TrigUntap:DB$ Untap | ValidTgts$ Island | TargetMin$ 0 | TargetMax$ 3
+
+Oracle:Flying\nWhen this creature enters, untap up to three Islands.

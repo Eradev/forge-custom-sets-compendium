@@ -1,0 +1,10 @@
+Name:Sights Beyond
+ManaCost:2 U
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Concord — At the beginning of your upkeep, draw a card. Then discard a card unless there are four or more card types among permanents you control.
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Mode$ TgtChoose | ConditionCheckSVar$ ConcordCount | ConditionSVarCompare$ LT4
+SVar:ConcordCount:Count$Valid Permanent.YouCtrl$CardTypes
+
+Oracle:Concord — At the beginning of your upkeep, draw a card. Then discard a card unless there are four or more card types among permanents you control.

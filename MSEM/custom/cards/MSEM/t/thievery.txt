@@ -2,6 +2,6 @@ Name:Thievery
 ManaCost:B
 Types:Sorcery
 
-A:SP$ Discard | ValidTgts$ Opponent | NumCards$ 1 | DiscardValid$ Permanent.nonLand | Mode$ RevealYouChoose | SpellDescription$ Target opponent reveals their hand. You choose a nonland permanent card from it. That player discards that card.
+A:SP$ Discard | ValidTgts$ Opponent | Mode$ RevealYouChoose | DiscardValid$ Permanent.nonLand | SpellDescription$ Target opponent reveals their hand. You choose a nonland permanent card from it. That player discards that card.
 
 Oracle:Target opponent reveals their hand. You choose a nonland permanent card from it. That player discards that card.
