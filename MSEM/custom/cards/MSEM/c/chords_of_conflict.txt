@@ -1,0 +1,21 @@
+Name:Chords of Conflict
+ManaCost:1 G
+Types:Sorcery
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ +3 | NumDef$ +3 | SubAbility$ DBMustBlock | SpellDescription$ Target creature gets +3/+3 until end of turn and must be blocked this turn if able.
+SVar:DBMustBlock:DB$ Pump | Defined$ Targeted | KW$ HIDDEN CARDNAME must be blocked if able. | SubAbility$ DBToken
+
+S:Mode$ AlternativeCost | Named$ Showcase | ValidSA$ Spell.Self | EffectZone$ All | Cost$ 3 G G | Description$ Showcase {3}{G}{G} (Then if you cast this for its showcase cost, create a 1/1 red Bard creature token that can't block and exile this. Whenever it attacks, you may cast a free copy of this.)
+SVar:DBToken:DB$ Token | TokenScript$ r_1_1_bard_cantblock | ConditionCheckSVar$ AltCostPaid | RememberTokens$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | ConditionCheckSVar$ AltCostPaid | RememberObjects$ Remembered | ImprintCards$ Self | Triggers$ TriggerShowcaseAttack,TriggerTokenMoved | Duration$ Permanent | SubAbility$ DBExile
+SVar:TriggerShowcaseAttack:Mode$ Attacks | ValidCard$ Card.IsRemembered | Execute$ PlayShowcase | TriggerDescription$ Whenever the showcased creature attacks, you may cast a copy of EFFECTSOURCE without paying its mana cost.
+SVar:PlayShowcase:DB$ Play | Defined$ Imprinted | WithoutManaCost$ True | CopyCard$ True | Optional$ True | OptionalDecider$ You
+SVar:TriggerTokenMoved:Mode$ ChangesZone | ValidCard$ Card.IsRemembered | ExcludedDestinations$ Battlefield | Execute$ ExileEffect | Static$ True
+SVar:ExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+SVar:DBExile:DB$ ChangeZone | ConditionCheckSVar$ AltCostPaid | Defined$ Self | Origin$ Stack | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:AltCostPaid:Count$AltCost.1.0
+
+Oracle:Target creature gets +3/+3 until end of turn and must be blocked this turn if able.\nShowcase {3}{G}{G} (Then if you cast this for its showcase cost, create a 1/1 red Bard creature token that can't block and exile this. Whenever it attacks, you may cast a free copy of this.)
+
+DeckHas:Ability$Token

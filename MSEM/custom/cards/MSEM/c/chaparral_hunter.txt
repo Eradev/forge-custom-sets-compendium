@@ -1,0 +1,13 @@
+Name:Chaparral Hunter
+ManaCost:2 G
+Types:Creature Human Archer
+PT:2/3
+
+K:Reach
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ X | SVarCompare$ GE1 | Execute$ TrigDrawGain | TriggerDescription$ When this creature enters, if a permanent you controlled died this turn, draw a card and you gain 3 life.
+SVar:TrigDrawGain:DB$ Draw | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 3
+SVar:X:Count$ThisTurnEntered_Graveyard_from_Battlefield_Permanent.YouCtrl
+
+Oracle:Reach\nWhen this creature enters, if a permanent you controlled died this turn, draw a card and you gain 3 life.

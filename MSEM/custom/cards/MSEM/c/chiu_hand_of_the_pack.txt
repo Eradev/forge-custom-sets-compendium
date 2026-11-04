@@ -1,0 +1,17 @@
+Name:Chiu, Hand of the Pack
+ManaCost:3 G G
+Types:Legendary Creature Human Druid
+PT:2/2
+
+S:Mode$ Continuous | Affected$ Wolf.YouCtrl | AddKeyword$ Hexproof | AddTrigger$ WolfDrawTrig | AddSVar$ WolfDraw | Description$ Wolves you control have hexproof and "Whenever this creature deals combat damage to a player, draw a card."
+
+SVar:WolfDrawTrig:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ WolfDraw | TriggerDescription$ Whenever this creature deals combat damage to a player, draw a card.
+SVar:WolfDraw:DB$ Draw
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Creature.YouCtrl+namedShimaru, the Unfading | PresentCompare$ EQ0 | Execute$ TrigShimaru | TriggerDescription$ At the beginning of your end step, if you don't control a creature named Shimaru, the Unfading, create Shimaru, the Unfading, a legendary 4/4 green Wolf Spirit creature token with trample.
+SVar:TrigShimaru:DB$ Token | TokenScript$ shimaru_the_unfading | LockTokenScript$ True
+
+Oracle:Wolves you control have hexproof and "Whenever this creature deals combat damage to a player, draw a card."\nAt the beginning of your end step, if you don't control a creature named Shimaru, the Unfading, create Shimaru, the Unfading, a legendary 4/4 green Wolf Spirit creature token with trample.
+
+DeckHas:Ability$Token & Type$Wolf|Spirit
+DeckHints:Type$Wolf
