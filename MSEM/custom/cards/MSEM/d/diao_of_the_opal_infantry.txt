@@ -1,0 +1,15 @@
+Name:Diao of the Opal Infantry
+ManaCost:3 W W
+Types:Legendary Creature Human Warrior
+PT:3/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When NICKNAME enters, create two 1/1 white Warrior creature tokens.
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_warrior | TokenAmount$ 2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPutCounterAll | TriggerDescription$ Whenever NICKNAME attacks, put a +1/+1 counter on each attacking creature you control with the least power among those creatures.
+SVar:TrigPutCounterAll:DB$ PutCounterAll | ValidCards$ Creature.YouCtrl+attacking+leastPowerControlledByYou | CounterType$ P1P1
+
+Oracle:When Diao enters, create two 1/1 white Warrior creature tokens.\nWhenever Diao attacks, put a +1/+1 counter on each attacking creature you control with the least power among those creatures.
+
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Token|Counters

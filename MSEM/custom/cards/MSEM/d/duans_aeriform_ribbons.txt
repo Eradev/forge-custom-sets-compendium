@@ -1,0 +1,12 @@
+Name:Duan's Aeriform Ribbons
+ManaCost:2
+Types:Legendary Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | SetPower$ 4 | SetToughness$ 4 | AddType$ Dragon | AddKeyword$ Flying | AddAbility$ ABPump | Description$ Equipped creature is a Dragon and has base power and toughness 4/4, flying, and "{2}: This creature gets +1/+0 until end of turn."
+SVar:ABPump:AB$ Pump | Cost$ 2 | Defined$ Self | NumAtt$ +1 | SpellDescription$ This creature gets +1/+0 until end of turn.
+
+K:Equip:3
+
+Oracle:Equipped creature is a Dragon and has base power and toughness 4/4, flying, and "{2}: This creature gets +1/+0 until end of turn."\nEquip {3}
+
+DeckHas:Type$Dragon

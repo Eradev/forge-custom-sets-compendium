@@ -1,0 +1,9 @@
+Name:Dewdrop Oracle
+ManaCost:3 U
+Types:Creature Human Wizard
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDig | TriggerDescription$ When this creature enters, reveal the top four cards of your library. You may put a noncreature card from among them into your hand. Put the rest on the bottom of your library in any order.
+SVar:TrigDig:DB$ Dig | DigNum$ 4 | Reveal$ True | ChangeNum$ 1 | Optional$ True | ChangeValid$ Card.nonCreature | RestRandomOrder$ True
+
+Oracle:When this creature enters, reveal the top four cards of your library. You may put a noncreature card from among them into your hand. Put the rest on the bottom of your library in any order.

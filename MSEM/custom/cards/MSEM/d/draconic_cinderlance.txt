@@ -1,0 +1,11 @@
+Name:Draconic Cinderlance
+ManaCost:1 R
+Types:Creature Human Warrior
+PT:2/1
+
+K:Menace
+
+T:Mode$ Attacks | ValidCard$ Creature.YouCtrl+powerGE4 | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever a creature you control with power 4 or greater attacks, it gains menace until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredAttacker | KW$ Menace
+
+Oracle:Menace\nWhenever a creature you control with power 4 or greater attacks, it gains menace until end of turn.
