@@ -1,0 +1,26 @@
+Name:Altar of Twisted Piety
+ManaCost:1 B R
+Types:Enchantment Gallery
+
+Text:(Choose only one work as a sorcery to add its ability.)
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigReturn | TriggerDescription$ When this Gallery enters, return target creature card with mana value 3 or less from your graveyard to the battlefield.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature.cmcLE3+YouOwn | TgtPrompt$ Select target creature card with mana value 3 or less from your graveyard
+
+A:AB$ Pump | PrecostDesc$ Shadows Bind Us | Cost$ 2 B | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteShadows | SpellDescription$ Create a 5/5 black Demon creature token. Put your choice of a flying counter or a lifelink counter on it. It can't block this turn.
+
+A:AB$ Token | Cost$ B Sac<3/Creature> | TokenScript$ b_5_5_demon | IsPresent$ Card.Self+NotedForShadowsBindUs | RememberTokens$ True | SubAbility$ DBCounterChoice | SpellDescription$ Create a 5/5 black Demon creature token. Put your choice of a flying counter or a lifelink counter on it. It can't block this turn.
+SVar:DBCounterChoice:DB$ PutCounter | Defined$ Remembered | CounterType$ Flying,Lifelink | SubAbility$ DBPump
+SVar:DBPump:DB$ PumpAll | ValidCards$ Card.IsRemembered | KW$ HIDDEN CARDNAME can't block. | SubAbility$ DBCleanupShadows
+SVar:DBCleanupShadows:DB$ Cleanup | ClearRemembered$ True
+
+A:AB$ Pump | PrecostDesc$ Hellfire Fills Us | Cost$ 2 R | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteHellfire | SpellDescription$ This Gallery deals 2 damage to any target.
+
+A:AB$ DealDamage | Cost$ R Sac<1/Creature> | IsPresent$ Card.Self+NotedForHellfireFillsUs | ValidTgts$ Any | NumDmg$ 2 | SpellDescription$ CARDNAME deals 2 damage to any target.
+
+SVar:DBNoteShadows:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ ShadowsBindUs
+SVar:DBNoteHellfire:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ HellfireFillsUs
+
+Oracle:(Choose only one work as a sorcery to add its ability.)\nWhen this Gallery enters, return target creature card with mana value 3 or less from your graveyard to the battlefield.\n{2}{B}: Shadows Bind Us\n{B}, Sacrifice three creatures: Create a 5/5 black Demon creature token. Put your choice of a flying counter or a lifelink counter on it. It can't block this turn.\n{2}{R}: Hellfire Fills Us\n{R}, Sacrifice a creature: This Gallery deals 2 damage to any target.
+
+DeckHas:Ability$Token|Sacrifice|Counters & Type$Demon

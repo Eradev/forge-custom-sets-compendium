@@ -1,0 +1,8 @@
+Name:Abandon the Past
+ManaCost:2 U U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | Destination$ BottomOfLibrary | SubAbility$ DBGraveyard | SpellDescription$ Counter target spell. If that spell is countered this way, put it on the bottom of its owner's library instead of putting it into its owner's graveyard.
+SVar:DBGraveyard:DB$ ChangeZone | Origin$ Graveyard | Destination$ Library | LibraryPosition$ -1 | ValidTgts$ Card.YouOwn | TargetMin$ 0 | TargetMax$ 3 | TgtPrompt$ Select up to three target cards from your graveyard | Optional$ True | Reorder$ True | SpellDescription$ You may put up to three target cards from your graveyard on the bottom of your library in any order.
+
+Oracle:Counter target spell. If that spell is countered this way, put it on the bottom of its owner's library instead of putting it into its owner's graveyard. You may put up to three target cards from your graveyard on the bottom of your library in any order.
