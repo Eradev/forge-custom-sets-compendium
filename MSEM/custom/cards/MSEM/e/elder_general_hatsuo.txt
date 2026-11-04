@@ -1,0 +1,19 @@
+Name:Elder General Hatsuo
+ManaCost:2 R
+Types:Legendary Creature Human Warrior
+PT:3/2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | IsPresent$ Creature.YouCtrl+attacking | PresentCompare$ GE3 | Execute$ TrigPumpAll | TriggerDescription$ Whenever NICKNAME attacks, if you control three or more attacking creatures, attacking creatures you control gain first strike until end of turn.
+SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.YouCtrl+attacking | KW$ First Strike
+
+T:Mode$ Untaps | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Inspired — Whenever NICKNAME becomes untapped, create a 1/1 white Warrior creature token. It gains haste and attacks this turn if able.
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_warrior | RememberTokens$ True | SubAbility$ DBHaste
+SVar:DBHaste:DB$ Pump | Defined$ Remembered | KW$ Haste | SubAbility$ DBMustAttack
+SVar:DBMustAttack:DB$ Effect | RememberObjects$ Remembered | StaticAbilities$ MustAttack | ExileOnMoved$ Battlefield | SubAbility$ DBCleanup
+SVar:MustAttack:Mode$ MustAttack | ValidCreature$ Card.IsRemembered | Description$ This creature attacks this turn if able.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Whenever Hatsuo attacks, if you control three or more attacking creatures, attacking creatures you control gain first strike until end of turn.\nInspired — Whenever Hatsuo becomes untapped, create a 1/1 white Warrior creature token. It gains haste and attacks this turn if able.
+
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Token

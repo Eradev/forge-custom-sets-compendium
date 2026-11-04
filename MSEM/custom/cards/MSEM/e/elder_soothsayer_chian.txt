@@ -1,0 +1,11 @@
+Name:Elder Soothsayer Chian
+ManaCost:2 U
+Types:Legendary Creature Human Wizard
+PT:3/2
+
+T:Mode$ BecomesTarget | ValidTarget$ Card.Self | ValidSource$ SpellAbility.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigToken | ActivationLimit$ 1 | TriggerDescription$ Whenever NICKNAME becomes the target of a spell or ability you control, create a 2/2 blue Drake creature token with flying. This ability triggers only once each turn.
+SVar:TrigToken:DB$ Token | TokenScript$ u_2_2_drake_flying
+
+Oracle:Whenever Chian becomes the target of a spell or ability you control, create a 2/2 blue Drake creature token with flying. This ability triggers only once each turn.
+
+DeckHas:Ability$Token & Type$Drake

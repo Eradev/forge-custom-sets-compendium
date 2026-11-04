@@ -1,0 +1,16 @@
+Name:Eaveshoppers
+ManaCost:1 B
+Types:Creature Human Rogue
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDiscard | TriggerDescription$ When  this creature enters, each opponent discards a card.
+SVar:TrigDiscard:DB$ Discard | Defined$ Player.Opponent | Mode$ TgtChoose
+
+T:Mode$ Untaps | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigExile | TriggerDescription$ Inspired — Whenever this creature becomes untapped, exile up to one target card from a graveyard. If a land card is exiled this way, put a +1/+1 counter on it.
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Card | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target card in a graveyard | Origin$ Graveyard | Destination$ Exile | RememberChanged$ True | SubAbility$ DBCounter
+SVar:DBCounter:DB$ PutCounter | CounterType$ P1P1 | ConditionDefined$ Remembered | ConditionPresent$ Land | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When this creature enters, each opponent discards a card.\nInspired — Whenever this creature becomes untapped, exile up to one target card from a graveyard. If a land card is exiled this way, put a +1/+1 counter on it.
+
+DeckHas:Ability$Counters
