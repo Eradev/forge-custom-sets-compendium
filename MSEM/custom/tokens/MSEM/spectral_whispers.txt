@@ -5,8 +5,11 @@ Types:Enchantment Aura
 
 K:Enchant:Creature
 
-S:Mode$ Continuous | Affected$ Creature.EnchantedBy+YouCtrl | AddKeyword$ Double Strike | Description$ Enchanted creature has double strike as long as you control it. Otherwise, it can't attack or block.
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddKeyword$ Double Strike | IsPresent$ Card.EnchantedBy+YouCtrl | Description$ Enchanted creature has double strike as long as you control it. Otherwise, it can't attack or block.
 
-S:Mode$ Continuous | Affected$ Creature.EnchantedBy+!YouCtrl | AddHiddenKeyword$ CARDNAME can't attack or block. | Secondary$ True | Description$ Enchanted creature has double strike as long as you control it. Otherwise, it can't attack or block.
+S:Mode$ CantAttack,CantBlock | ValidCard$ Creature.EnchantedBy | IsPresent$ Card.EnchantedBy+YouDontCtrl | Secondary$ True | Description$ Enchanted creature has double strike as long as you control it. Otherwise, it can't attack or block.
 
 Oracle:Enchant creature\nEnchanted creature has double strike as long as you control it. Otherwise, it can't attack or block.
+
+SVar:AttachAITgts:Creature.YouCtrl,Creature.OppCtrl
+SVar:AttachAILogic:Pump
