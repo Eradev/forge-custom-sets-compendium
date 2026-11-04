@@ -7,3 +7,5 @@ SVar:DBKnight:DB$ Token | TokenScript$ w_2_2_knight_vigilance | TokenAmount$ 2 |
 SVar:DBAngel:DB$ Token | TokenScript$ w_4_4_angel_flying
 
 Oracle:Create three 1/1 white Soldier creature tokens, two 2/2 white Knight creature tokens with vigilance, and a 4/4 white Angel creature token with flying.
+
+DeckHas:Ability$Token & Type$Soldier|Knight|Angel

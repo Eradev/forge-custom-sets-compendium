@@ -2,11 +2,11 @@ Name:Arcane Might
 ManaCost:4 U
 Types:Enchantment
 
-T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCharm | TriggerDescription$ Whenever you cast an instant or sorcery spell, you may pay {1}. If you do, choose one — draw a card, then discard a card; tap target creature; target creature gains flying until end of turn; or target player mills two cards.
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCharm | TriggerDescription$ Whenever you cast an instant or sorcery spell, you may pay {1}. If you do, ABILITY
 SVar:TrigCharm:AB$ Charm | Cost$ 1 | Choices$ DBLoot,DBTap,DBFlying,DBMill
 
-SVar:DBLoot:DB$ Draw | NumCards$ 1 | SubAbility$ DBDiscard | SpellDescription$ Draw a card, then discard a card.
-SVar:DBDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 1
+SVar:DBLoot:DB$ Draw | SubAbility$ DBDiscard | SpellDescription$ Draw a card, then discard a card.
+SVar:DBDiscard:DB$ Discard | Mode$ TgtChoose
 
 SVar:DBTap:DB$ Tap | ValidTgts$ Creature | TgtPrompt$ Select target creature to tap | SpellDescription$ Tap target creature.
 

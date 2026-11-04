@@ -10,4 +10,4 @@ SVar:Y:Count$Valid Creature.YouCtrl
 
 Oracle:At the beginning of each upkeep, if an opponent controls more creatures than you, create a 1/1 colorless Thopter artifact creature token with flying.
 
-DeckHas:Ability$Token
+DeckHas:Ability$Token & Type$Thopter
