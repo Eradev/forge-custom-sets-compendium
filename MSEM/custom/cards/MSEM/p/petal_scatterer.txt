@@ -4,7 +4,7 @@ Types:Creature Human
 PT:2/2
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a green Aura enchantment token named Blossom attached to target land. It has enchant land and "Whenever enchanted land is tapped for mana, add {G}."
-SVar:TrigToken:DB$ Token | TokenScript$ blossom | AttachedTo$ Targeted | ValidTgts$ Land | TgtPrompt$ Select target land
+SVar:TrigToken:DB$ Token | TokenScript$ blossom | TokenOwner$ You | AttachedTo$ Targeted | ValidTgts$ Land | TgtPrompt$ Select target land
 
 S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +1/+1 for each noncreature, nonland permanent you control.
 SVar:X:Count$Valid Permanent.nonCreature+nonLand+YouCtrl
