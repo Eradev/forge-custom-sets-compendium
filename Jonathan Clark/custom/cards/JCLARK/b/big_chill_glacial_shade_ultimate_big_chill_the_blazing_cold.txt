@@ -13,7 +13,7 @@ SVar:DBLoseLife2:DB$ LoseLife | LifeAmount$ 2
 
 T:Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigTapStun | TriggerDescription$ Whenever you cast a spell, tap up to one target creature and put a stun counter on it.
 SVar:TrigTapStun:DB$ Tap | TargetMin$ 0 | TargetMax$ 1 | ValidTgts$ Creature | TgtPrompt$ Select up to one target creature | SubAbility$ DBStun
-SVar:DBStun:DB$ PutCounter | Defined$ Targeted | CounterType$ Stun
+SVar:DBStun:DB$ PutCounter | Defined$ Targeted | CounterType$ STUN
 
 A:AB$ SetState | Cost$ 1 B R G W | Defined$ Self | Mode$ Transform | SorcerySpeed$ True | SpellDescription$ Transform NICKNAME.
 
