@@ -3,10 +3,10 @@ ManaCost:W U
 Types:Artifact Creature Droid
 PT:1/2
 
-A:AB$ ChooseCard | Cost$ T | Choices$ Card.YouOwn+counters_GE1_REPAIR | ChoiceZone$ Graveyard | TgtPrompt$ Choose a card you own with a repair counter on it | RememberChosen$ True | SubAbility$ DBChoice | SpellDescription$ Choose target card you own with a repair counter on it. You may remove a repair counter from it or put another repair counter on it.
+A:AB$ ChooseCard | Cost$ T | ValidTgts$ Card.YouOwn+counters_GE1_REPAIR | TgtZone$ Graveyard | TgtPrompt$ Choose a card you own with a repair counter on it | SubAbility$ DBChoice | SpellDescription$ Choose target card you own with a repair counter on it. You may remove a repair counter from it or put another repair counter on it.
 SVar:DBChoice:DB$ GenericChoice | Choices$ AddRepair,RemoveRepair | Defined$ You | ChoiceDescription$ You may remove a repair counter from it or put another repair counter on it.
-SVar:AddRepair:DB$ PutCounter | Defined$ Remembered | CounterType$ REPAIR | SpellDescription$ You may put another repair counter on it.
-SVar:RemoveRepair:DB$ RemoveCounter | Defined$ Remembered | CounterType$ REPAIR | SpellDescription$ You may remove a repair counter from it.
+SVar:AddRepair:DB$ PutCounter | Defined$ Targeted | CounterType$ REPAIR | SpellDescription$ You may put another repair counter on it.
+SVar:RemoveRepair:DB$ RemoveCounter | Defined$ Targeted | CounterType$ REPAIR | SpellDescription$ You may remove a repair counter from it.
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigRepair | OptionalDecider$ You | TriggerDescription$ When this creature dies, you may put four repair counters on it.
 SVar:TrigRepair:DB$ PutCounter | CounterType$ REPAIR | CounterNum$ 4 | Defined$ TriggeredCard

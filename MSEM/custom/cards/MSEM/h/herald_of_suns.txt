@@ -11,7 +11,7 @@ R:Event$ Draw | ActiveZones$ Battlefield | ValidPlayer$ You | ReplaceWith$ DBScr
 SVar:DBScryDraw:DB$ Scry | SubAbility$ DBDraw
 SVar:DBDraw:DB$ Draw
 
-T:Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ Opponent.NonActive | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever an opponent casts a spell, if it's not their turn, draw a card.
+T:Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ Opponent.!Active | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever an opponent casts a spell, if it's not their turn, draw a card.
 SVar:TrigDraw:DB$ Draw
 
 Oracle:Flying, prowess\nIf you would draw a card, scry 1, then draw a card instead.\nWhenever an opponent casts a spell, if it's not their turn, draw a card.

@@ -4,7 +4,7 @@ Types:Legendary Planeswalker Rowena
 Loyalty:4
 
 A:AB$ Tap | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | ValidTgts$ Permanent | TgtPrompt$ Select target permanent | SubAbility$ DBStun | SpellDescription$ Tap target permanent. Put a stun counter on it.
-SVar:DBStun:DB$ PutCounter | Defined$ Targeted | CounterType$ Stun
+SVar:DBStun:DB$ PutCounter | Defined$ Targeted | CounterType$ STUN
 
 A:AB$ Branch | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | BranchConditionSVar$ Insight | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBChoice | FalseSubAbility$ DBTop | SpellDescription$ Put target artifact, instant, or sorcery card from your graveyard on top of your library. If you have an insight counter, you may return that card to your hand instead.
 SVar:DBTop:DB$ ChangeZone | Origin$ Graveyard | Destination$ Library | LibraryPosition$ 0 | ValidTgts$ Artifact.YouOwn,Instant.YouOwn,Sorcery.YouOwn | TgtPrompt$ Select target artifact, instant, or sorcery card in your graveyard
