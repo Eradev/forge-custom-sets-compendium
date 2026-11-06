@@ -1,0 +1,11 @@
+Name:Fervid Dragonheart
+ManaCost:2 R
+Types:Creature Human Warrior
+PT:3/2
+
+A:AB$ Animate | Cost$ 2 R R ExileFromGrave<1/Instant;Sorcery> | Types$ Dragon | Keywords$ Flying | Duration$ UntilEndOfTurn | SubAbility$ DBPump | SpellDescription$ This creature gets +1/+2, gains flying, and becomes a Dragon until end of turn.
+SVar:DBPump:DB$ Pump | NumAtt$ +1 | NumDef$ +2
+
+Oracle:{2}{R}{R}, Exile an instant or sorcery card from your graveyard: This creature gets +1/+2, gains flying, and becomes a Dragon until end of turn.
+
+DeckHas:Ability$Graveyard & Type$Dragon

@@ -1,0 +1,14 @@
+Name:Frisky Denmates
+ManaCost:3 R
+Types:Creature Fox
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 2/1 red and white Fox creature token, then it deals damage to target creature or planeswalker an opponent controls equal to the number of Foxes you control.
+SVar:TrigToken:DB$ Token | TokenScript$ rw_2_1_fox | SubAbility$ DBDamage
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Creature.OppCtrl,Planeswalker.OppCtrl | TgtPrompt$ Select target creature or planeswalker an opponent controls | NumDmg$ X
+SVar:X:Count$Valid Fox.YouCtrl+inZoneBattlefield
+
+Oracle:When this creature enters, create a 2/1 red and white Fox creature token, then it deals damage to target creature or planeswalker an opponent controls equal to the number of Foxes you control.
+
+DeckHas:Ability$Token
+DeckHints:Type$Fox

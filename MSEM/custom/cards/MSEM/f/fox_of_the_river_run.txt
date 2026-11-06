@@ -1,0 +1,12 @@
+Name:Fox of the River Run
+ManaCost:1 R
+Types:Creature Fox
+PT:2/2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | IsPresent$ Creature.YouCtrl+powerGE4 | Execute$ TrigDiscardDraw | OptionalDecider$ You | TriggerDescription$ Whenever this creature attacks, if you control a creature with power 4 or greater, you may discard a card. If you do, draw a card.
+SVar:TrigDiscardDraw:AB$ Draw | Cost$ Discard<1/Card>
+
+Oracle:Whenever this creature attacks, if you control a creature with power 4 or greater, you may discard a card. If you do, draw a card.
+
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Discard

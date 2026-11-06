@@ -1,0 +1,15 @@
+Name:Fox of a Brisk Autumn
+ManaCost:R W
+Types:Creature Fox
+PT:2/1
+
+A:AB$ Token | Cost$ 1 R W | TokenScript$ rw_2_1_fox | PumpKeywords$ Haste | AtEOT$ Sacrifice | SpellDescription$ Create a 2/1 red and white Fox creature token. It gains haste. Sacrifice it at the beginning of the next end step.
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ Whenever this creature attacks, attacking Foxes you control get +1/+1 until end of turn.
+SVar:TrigPump:DB$ PumpAll | ValidCards$ Fox.attacking+YouCtrl | NumAtt$ +1 | NumDef$ +1
+
+Oracle:{1}{R}{W}: Create a 2/1 red and white Fox creature token. It gains haste. Sacrifice it at the beginning of the next end step.\nWhenever this creature attacks, attacking Foxes you control get +1/+1 until end of turn.
+
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Token
+DeckHints:Type$Fox

@@ -1,0 +1,14 @@
+Name:Forbidden Shiangshi Arts
+ManaCost:1 B
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ When this enchantment enters, each player mills three cards.
+SVar:TrigMill:DB$ Mill | Defined$ Player | NumCards$ 3
+
+A:AB$ CopyPermanent | Cost$ 2 B | TgtZone$ Graveyard | ValidTgts$ Creature | TokenTapped$ True | AddTriggers$ ShiangshiDamageSac | AddSVars$ TrigShiangshiSac | SpellDescription$ Exile target creature card from a graveyard. Create a tapped token that's a copy of that card, except it has "When this creature deals damage, sacrifice it."
+SVar:ShiangshiDamageSac:Mode$ DamageDone | ValidSource$ Card.Self | Execute$ TrigShiangshiSac | TriggerDescription$ When this creature deals damage, sacrifice it.
+SVar:TrigShiangshiSac:DB$ Sacrifice | SacValid$ Self
+
+Oracle:When this enchantment enters, each player mills three cards.\n{2}{B}: Exile target creature card from a graveyard. Create a tapped token that's a copy of that card, except it has "When this creature deals damage, sacrifice it."
+
+DeckHas:Ability$Token|Sacrifice|Graveyard
