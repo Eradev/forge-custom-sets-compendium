@@ -1,0 +1,19 @@
+Name:Kai'Oro, Grave Betrayer
+ManaCost:2 U B R
+Types:Legendary Creature Demon
+PT:3/4
+
+K:Flying
+
+K:Ward:Discard<1/Card>
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | OptionalDecider$ You | TriggerDescription$ Whenever NICKNAME enters or attacks, you may exile target nonland card with mana value 3 or less from your graveyard. Until end of turn, you may cast a copy of that card without paying its mana cost.
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigExile | Secondary$ True | OptionalDecider$ You | TriggerDescription$ Whenever NICKNAME enters or attacks, you may exile target nonland card with mana value 3 or less from your graveyard. Until end of turn, you may cast a copy of that card without paying its mana cost.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Card.YouOwn+nonLand+cmcLE3 | TgtPrompt$ Select target nonland card with mana value 3 or less from your graveyard | RememberChanged$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ Remembered | Abilities$ CastCopy | ForgetOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:CastCopy:ST$ Play | Cost$ 0 | Defined$ Remembered | CopyCard$ True | WithoutManaCost$ True | Optional$ True | ValidSA$ Spell | SpellDescription$ Cast a copy of the exiled card without paying its mana cost.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Flying\nWard—Discard a card.\nWhenever Kai'Oro enters or attacks, you may exile target nonland card with mana value 3 or less from your graveyard. Until end of turn, you may cast a copy of that card without paying its mana cost.
+
+DeckHints:Ability$Graveyard

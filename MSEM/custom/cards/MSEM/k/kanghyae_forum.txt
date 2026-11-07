@@ -1,0 +1,28 @@
+Name:Kanghyae Forum
+ManaCost:G W
+Types:Enchantment Gallery
+
+Text:(Choose only one work as a sorcery to add its ability.)
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigBounce | TriggerDescription$ When this Gallery enters, you may return another permanent you control to its owner's hand. If you don't, draw a card.
+SVar:TrigBounce:DB$ ChangeZone | Origin$ Battlefield | Destination$ Hand | Hidden$ True | Optional$ True | ChangeType$ Permanent.Other+YouCtrl | ChangeNum$ 1 | RememberChanged$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ0 | SubAbility$ DBCleanupETB
+SVar:DBCleanupETB:DB$ Cleanup | ClearRemembered$ True
+
+A:AB$ Pump | PrecostDesc$ A Common Good | Cost$ 2 G | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteCommonGood | SpellDescription$ If an effect would create one or more tokens under your control, it creates that many of those tokens plus one instead.
+R:Event$ CreateToken | ActiveZones$ Battlefield | ValidToken$ Card.YouCtrl | IsPresent$ Card.Self+NotedForACommonGood | ReplaceWith$ ExtraToken | EffectOnly$ True | Description$ A Common Good — If an effect would create one or more tokens under your control, it creates that many of those tokens plus one instead.
+SVar:ExtraToken:DB$ ReplaceToken | Type$ Amount | Amount$ TokenPlus
+SVar:TokenPlus:ReplaceCount$TokenNum/Plus.1
+
+A:AB$ Pump | PrecostDesc$ Rebuilding Trust | Cost$ 2 W | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteRebuildingTrust | SpellDescription$ If an effect would put one or more counters on a permanent you control, it puts that many of those counters plus one on that permanent instead.
+R:Event$ AddCounter | ActiveZones$ Battlefield | ValidCard$ Permanent.YouCtrl+inZoneBattlefield | IsPresent$ Card.Self+NotedForRebuildingTrust | EffectOnly$ True | ReplaceWith$ ExtraCounter | Description$ Rebuilding Trust — If an effect would put one or more counters on a permanent you control, it puts that many of those counters plus one on that permanent instead.
+SVar:ExtraCounter:DB$ ReplaceCounter | Amount$ CounterPlus
+SVar:CounterPlus:ReplaceCount$CounterNum/Plus.1
+
+SVar:DBNoteCommonGood:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ ACommonGood
+SVar:DBNoteRebuildingTrust:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ RebuildingTrust
+
+Oracle:(Choose only one work as a sorcery to add its ability.)\nWhen this Gallery enters, you may return another permanent you control to its owner's hand. If you don't, draw a card.\n{2}{G}: A Common Good\nIf an effect would create one or more tokens under your control, it creates that many of those tokens plus one instead.\n{2}{W}: Rebuilding Trust\nIf an effect would put one or more counters on a permanent you control, it puts that many of those counters plus one on that permanent instead.
+
+DeckHas:Ability$Token|Counters
+DeckHints:Ability$Token|Counters

@@ -1,0 +1,18 @@
+Name:Kiyoko of the Silver Mist
+ManaCost:1 U B
+Types:Legendary Planeswalker Kiyoko
+Loyalty:3
+
+A:AB$ Token | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | TokenScript$ w_1_1_warrior | RememberTokens$ True | SubAbility$ DBMenace | SpellDescription$ Create a 1/1 white Warrior creature token. Put a menace counter on it.
+SVar:DBMenace:DB$ PutCounter | Defined$ Remembered | CounterType$ Menace | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+A:AB$ Draw | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | NumCards$ X | SpellDescription$ Draw a card for each tapped creature you control.
+SVar:X:Count$Valid Creature.tapped+YouCtrl
+
+A:AB$ Effect | Cost$ SubCounter<5/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Kiyoko of the Silver Mist | Image$ emblem_kiyoko_of_the_silver_mist | StaticAbilities$ STNinjutsu | Duration$ Permanent | AILogic$ Always | SpellDescription$ You get an emblem with "Creature cards in your hand have '{1}{U}{B}, Reveal this card from your hand, Return an unblocked attacking creature you control to its owner's hand: Put this card onto the battlefield tapped and attacking.'"
+SVar:STNinjutsu:Mode$ Continuous | EffectZone$ Command | Affected$ Creature.YouOwn | AffectedZone$ Hand | AddKeyword$ Ninjutsu:1 U B | Description$ Creature cards in your hand have "{1}{U}{B}, Reveal this card from your hand, Return an unblocked attacking creature you control to its owner's hand: Put this card onto the battlefield tapped and attacking."
+
+Oracle:[+1]: Create a 1/1 white Warrior creature token. Put a menace counter on it.\n[-2]: Draw a card for each tapped creature you control.\n[-5]: You get an emblem with "Creature cards in your hand have '{1}{U}{B}, Reveal this card from your hand, Return an unblocked attacking creature you control to its owner's hand: Put this card onto the battlefield tapped and attacking.'"
+
+DeckHas:Ability$Token|Counters & Type$Warrior
