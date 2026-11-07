@@ -6,7 +6,7 @@ A:SP$ Charm | Choices$ DBLoseAbilities,DBDestroy | CharmNum$ Z | MinCharmNum$ 1 
 SVar:Z:Count$Compare Y GE3.2.1
 SVar:Y:Count$Valid Creature.tapped+OppCtrl
 
-SVar:DBLoseAbilities:DB$ Animate | ValidTgts$ Player | TgtPrompt$ Select target player | AllValid$ Creature.TargetedPlayerCtrl | RemoveAllAbilities$ True | SpellDescription$ Creatures target player controls lose all abilities until end of turn.
+SVar:DBLoseAbilities:DB$ Animate | ValidTgts$ Player | TgtPrompt$ Select target player | AllValid$ Creature.TargetedPlayerCtrl | RemoveAllAbilities$ True | IsCurse$ True | SpellDescription$ Creatures target player controls lose all abilities until end of turn.
 
 SVar:DBDestroy:DB$ Destroy | ValidTgts$ Creature.tapped | TgtPrompt$ Select target tapped creature | SpellDescription$ Destroy target tapped creature.
 

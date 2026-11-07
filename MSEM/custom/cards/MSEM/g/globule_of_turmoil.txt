@@ -4,7 +4,7 @@ Types:Artifact
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPump | TriggerDescription$ When this artifact enters or leaves the battlefield, up to one target creature can't block this turn.
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ TrigPump | Secondary$ True | TriggerDescription$ When this artifact enters or leaves the battlefield, up to one target creature can't block this turn.
-SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature | KW$ HIDDEN CARDNAME can't block.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature | KW$ HIDDEN CARDNAME can't block. | IsCurse$ True
 
 A:AB$ Draw | Cost$ 2/R T Sac<1/CARDNAME> | SpellDescription$ Draw a card.
 
