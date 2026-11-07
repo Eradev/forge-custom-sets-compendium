@@ -1,0 +1,23 @@
+Name:Juyu Offering Pool
+ManaCost:1 U
+Types:Enchantment Gallery
+
+Text:(Choose only one work as a sorcery to add its ability.)
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDig | TriggerDescription$ When this Gallery enters, reveal the top five cards of your library. You may put a noncreature card from among them into your hand. Put the rest on the bottom of your library in any order.
+SVar:TrigDig:DB$ Dig | DigNum$ 5 | Reveal$ True | ChangeNum$ 1 | Optional$ True | ChangeValid$ Card.nonCreature | DestinationZone$ Hand | DestinationZone2$ Library | LibraryPosition$ -1
+
+A:AB$ Pump | PrecostDesc$ Scales of Shara | Cost$ 1 U | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteScalesOfShara | SpellDescription$ Whenever you cast a noncreature spell, put a +1/+1 counter on target creature you control.
+T:Mode$ SpellCast | ValidCard$ Card.nonCreature | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+NotedForScalesOfShara | Execute$ TrigP1P1 | TriggerDescription$ Scales of Shara — Whenever you cast a noncreature spell, put a +1/+1 counter on target creature you control.
+SVar:TrigP1P1:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control
+
+A:AB$ Pump | PrecostDesc$ Eye of Shojiro | Cost$ 6 U U | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteEyeOfShojiro | SpellDescription$ Whenever you cast a noncreature spell, create an 8/8 blue Kraken creature token.
+T:Mode$ SpellCast | ValidCard$ Card.nonCreature | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+NotedForEyeOfShojiro | Execute$ TrigKraken | TriggerDescription$ Eye of Shojiro — Whenever you cast a noncreature spell, create an 8/8 blue Kraken creature token.
+SVar:TrigKraken:DB$ Token | TokenScript$ u_8_8_kraken
+
+SVar:DBNoteScalesOfShara:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ ScalesOfShara
+SVar:DBNoteEyeOfShojiro:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ EyeOfShojiro
+
+Oracle:(Choose only one work as a sorcery to add its ability.)\nWhen this Gallery enters, reveal the top five cards of your library. You may put a noncreature card from among them into your hand. Put the rest on the bottom of your library in any order.\n{1}{U}: Scales of Shara\nWhenever you cast a noncreature spell, put a +1/+1 counter on target creature you control.\n{6}{U}{U}: Eye of Shojiro\nWhenever you cast a noncreature spell, create an 8/8 blue Kraken creature token.
+
+DeckHas:Ability$Counters|Token & Type$Kraken

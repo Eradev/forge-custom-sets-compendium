@@ -1,0 +1,14 @@
+Name:Jiu, Daughter of the Sun
+ManaCost:1 R
+Types:Legendary Creature Fox Spirit
+PT:3/1
+
+S:Mode$ Continuous | Affected$ Fox.attacking+YouCtrl+StrictlyOther | AddPower$ 1 | Description$ Other attacking Foxes you control get +1/+0.
+
+A:AB$ Discard | Cost$ 2 R Sac<1/CARDNAME/NICKNAME> | Mode$ Hand | SubAbility$ DBDraw | SpellDescription$ Discard your hand, then draw a card for each tapped Fox you control.
+SVar:DBDraw:DB$ Draw | NumCards$ X
+SVar:X:Count$Valid Fox.tapped+YouCtrl
+
+Oracle:Other attacking Foxes you control get +1/+0.\n{2}{R}, Sacrifice Jiu: Discard your hand, then draw a card for each tapped Fox you control.
+
+DeckHints:Type$Fox
