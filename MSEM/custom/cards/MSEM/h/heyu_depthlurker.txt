@@ -1,0 +1,15 @@
+Name:Heyu, Depthlurker
+ManaCost:2 G
+Types:Legendary Creature Crocodile Turtle
+PT:2/2
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Permanent.Other | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever another permanent dies, put a +1/+1 counter on NICKNAME.
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1
+
+A:AB$ Animate | Cost$ 1 G | Types$ Island | RemoveCreatureTypes$ True | Colors$ Colorless | OverwriteColors$ True | SpellDescription$ NICKNAME becomes a colorless Island land until end of turn.
+
+Oracle:Flash\nWhenever another permanent dies, put a +1/+1 counter on Heyu.\n{1}{G}: Heyu becomes a colorless Island land until end of turn.
+
+DeckHas:Ability$Counters

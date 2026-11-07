@@ -1,0 +1,8 @@
+Name:Hydrolyze
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | DestinationChoice$ BottomOfLibrary,TopOfLibrary | SubAbility$ DBDraw | SpellDescription$ Counter target spell. If that spell is countered this way, its owner puts it on the top or bottom of their library instead of into their graveyard. Each player draws a card.
+SVar:DBDraw:DB$ Draw | Defined$ Player
+
+Oracle:Counter target spell. If that spell is countered this way, its owner puts it on the top or bottom of their library instead of into their graveyard.\nEach player draws a card.

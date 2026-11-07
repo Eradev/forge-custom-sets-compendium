@@ -1,0 +1,10 @@
+Name:Herbal Remedy
+ManaCost:G
+Types:Instant
+
+A:SP$ PutCounter | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | CounterType$ P1P1 | SubAbility$ DBPrevent | SpellDescription$ Put a +1/+1 counter on target creature you control. Prevent all damage that would be dealt to that creature this turn.
+SVar:DBPrevent:DB$ Pump | Defined$ Targeted | KW$ Prevent all damage that would be dealt to CARDNAME.
+
+Oracle:Put a +1/+1 counter on target creature you control. Prevent all damage that would be dealt to that creature this turn.
+
+DeckHas:Ability$Counters

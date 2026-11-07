@@ -1,0 +1,16 @@
+Name:Hao'Tai, the Reverent
+ManaCost:3 R R
+Types:Legendary Creature Elder Dragon
+PT:5/5
+
+K:Flying
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigExile | TriggerDescription$ Whenever NICKNAME deals combat damage to a player, that player exiles the top five cards of their library and separates them into two piles. Put an ember counter on each card in the pile of your choice.
+SVar:TrigExile:DB$ Dig | Defined$ TriggeredTarget | DigNum$ 5 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBTwoPiles
+SVar:DBTwoPiles:DB$ TwoPiles | Defined$ TriggeredTarget | DefinedCards$ Remembered | Separator$ TriggeredTarget | Chooser$ You | ChosenPile$ DBEmber | UnchosenPile$ DBCleanup
+SVar:DBEmber:DB$ PutCounter | Defined$ Remembered | CounterType$ EMBER | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+S:Mode$ Continuous | Affected$ Card.ExiledWithSource+counters_GE1_EMBER | AffectedZone$ Exile | MayPlay$ True | Description$ You may play cards from exile with ember counters for as long as they remain exiled.
+
+Oracle:Flying\nWhenever Hao'Tai deals combat damage to a player, that player exiles the top five cards of their library and separates them into two piles. Put an ember counter on each card in the pile of your choice. You may play cards from exile with ember counters for as long as they remain exiled.
