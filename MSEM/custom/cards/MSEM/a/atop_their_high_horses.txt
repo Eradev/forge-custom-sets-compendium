@@ -1,0 +1,11 @@
+Name:Atop Their High Horses
+ManaCost:1 W
+Types:Instant
+
+A:SP$ Charm | MinCharmNum$ 1 | CharmNum$ 2 | Choices$ DBFog,DBDetain
+
+SVar:DBFog:DB$ Fog | SpellDescription$ Prevent all combat damage that would be dealt this turn.
+
+SVar:DBDetain:DB$ Detain | ValidTgts$ Creature | ValidTgtsDesc$ creature | SpellDescription$ Detain target creature. (Until your next turn, that creature can't attack or block and its activated abilities can't be activated.)
+
+Oracle:Choose one or both —\n• Prevent all combat damage that would be dealt this turn.\n• Detain target creature. (Until your next turn, that creature can't attack or block and its activated abilities can't be activated.)

@@ -1,0 +1,13 @@
+Name:Graygulch Drifter
+ManaCost:2 B
+Types:Creature Spirit
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMove | TriggerDescription$ When this creature enters, return target creature card from your graveyard to your hand. If that card is a Spirit card, you may return an additional Spirit card from the graveyard to your hand.
+SVar:TrigMove:DB$ ChangeZone | Mandatory$ True | ValidTgts$ Card.Creature+YouCtrl | TgtPrompt$ Select target creature card | Origin$ Graveyard | Destination$ Hand | RememberChanged$ True | SubAbility$ DBTrigSpiritMove
+SVar:DBTrigSpiritMove:DB$ ChangeZone | ValidTgts$ Card.Spirit+YouCtrl | TgtPrompt$ Select target Spirit card | Origin$ Graveyard | Destination$ Hand | SubAbility$ DBCleanUp | ConditionPresent$ Card.Spirit+IsRemembered | ConditionDefined$ Remembered | ConditionCompare$ EQ1
+SVar:DBCleanUp:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When this creature enters, return target creature card from your graveyard to your hand. If that card is a Spirit card, you may return an additional Spirit card from the graveyard to your hand.
+
+DeckHints:Type$Spirit
