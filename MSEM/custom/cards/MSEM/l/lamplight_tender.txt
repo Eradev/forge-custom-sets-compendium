@@ -1,0 +1,8 @@
+Name:Lamplight Tender
+ManaCost:1 U
+Types:Creature Human Citizen
+PT:1/2
+
+A:AB$ Mana | Cost$ T | Produced$ U | RestrictValid$ Instant,Sorcery,Activated | SpellDescription$ Add {U}. Spend this mana only to activate an ability or cast an instant or sorcery spell.
+
+Oracle:{T}: Add {U}. Spend this mana only to activate an ability or cast an instant or sorcery spell.

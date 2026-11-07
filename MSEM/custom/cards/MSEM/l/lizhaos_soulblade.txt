@@ -1,0 +1,8 @@
+Name:Lizhao's Soulblade
+ManaCost:1 B
+Types:Creature Human Warrior
+PT:2/1
+
+A:AB$ ChangeZone | Cost$ 2 B ExileFromGrave<1/CARDNAME/this card> | ActivationZone$ Graveyard | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Creature.YouOwn | TgtPrompt$ Select target creature card in your graveyard | SorcerySpeed$ True | SpellDescription$ Return target creature card from your graveyard to your hand. Activate only as a sorcery.
+
+Oracle:{2}{B}, Exile this card from your graveyard: Return target creature card from your graveyard to your hand. Activate only as a sorcery.

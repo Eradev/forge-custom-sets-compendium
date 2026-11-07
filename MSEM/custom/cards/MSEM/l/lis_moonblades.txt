@@ -1,0 +1,18 @@
+Name:Li's Moonblades
+ManaCost:2 W
+
+Types:Legendary Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddKeyword$ Double Strike | Description$ Equipped creature has double strike.
+
+T:Mode$ Attacks | ValidCard$ Creature.EquippedBy | Execute$ TrigIdol | TriggerDescription$ Whenever equipped creature attacks, create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")
+SVar:TrigIdol:DB$ Token | TokenScript$ c_a_idol_sac
+
+S:Mode$ ReduceCost | ValidCard$ Card.Idol+YouCtrl | ValidTarget$ Creature.EquippedBy | Activator$ You | Type$ Ability | Amount$ 1 | Description$ Abilities of Idols you control that target equipped creature cost {1} less to activate.
+
+K:Equip:2 W
+
+Oracle:Equipped creature has double strike.\nWhenever equipped creature attacks, create an Idol token. (It's an artifact with "{1}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.")\nAbilities of Idols you control that target equipped creature cost {1} less to activate.\nEquip {2}{W}
+
+DeckHas:Ability$Token|Counters|Sacrifice & Type$Artifact|Idol
+DeckHints:Type$Idol
