@@ -1,0 +1,12 @@
+Name:Suitor of the Glade
+ManaCost:4 G
+Types:Creature Dryad
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounters | TriggerDescription$ When this creature enters, put two +1/+1 counters on target creature you control. It gains vigilance until end of turn.
+SVar:TrigCounters:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | CounterType$ P1P1 | CounterNum$ 2 | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | Defined$ Targeted | KW$ Vigilance
+
+Oracle:When this creature enters, put two +1/+1 counters on target creature you control. It gains vigilance until end of turn.
+
+DeckHas:Ability$Counters

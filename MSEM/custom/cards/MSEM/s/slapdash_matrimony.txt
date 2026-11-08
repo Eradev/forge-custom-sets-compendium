@@ -1,0 +1,9 @@
+Name:Slapdash Matrimony
+ManaCost:1 R
+Types:Sorcery
+
+A:SP$ Draw | Cost$ 1 R Discard<1/Card> Sac<1/Permanent.nonLand/nonland permanent> | NumCards$ 3 | SpellDescription$ As an additional cost to cast this spell, discard a card and sacrifice a nonland permanent.\nDraw three cards.
+
+Oracle:As an additional cost to cast this spell, discard a card and sacrifice a nonland permanent.\nDraw three cards.
+
+DeckHas:Ability$Discard|Sacrifice

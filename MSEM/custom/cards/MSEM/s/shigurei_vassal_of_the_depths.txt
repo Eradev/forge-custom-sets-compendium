@@ -1,0 +1,19 @@
+Name:Shigurei, Vassal of the Depths
+ManaCost:4 G U
+Types:Legendary Creature Kraken
+PT:7/7
+
+K:Flash
+
+R:Event$ Counter | ValidCard$ Card.Self | ValidSA$ Spell | Layer$ CantHappen | Description$ This spell can't be countered.
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigFreeActivate | OptionalDecider$ You | TriggerDescription$ Whenever NICKNAME attacks, you may activate an ability of a creature you control without paying its cost.
+SVar:TrigFreeActivate:DB$ Effect | StaticAbilities$ FreeActivate | Duration$ UntilEndOfTurn
+SVar:FreeActivate:Mode$ AlternativeCost | ValidSA$ Activated.!ManaAbility | ValidCard$ Creature.YouCtrl | ValidPlayer$ You | Cost$ 0 | CheckSVar$ X | SVarCompare$ LT1 | Description$ You may pay {0} rather than pay the cost of the first activated ability of a creature you control.
+SVar:X:Count$ThisTurnActivated_Activated.!ManaAbility+YouCtrl
+
+A:AB$ Animate | Cost$ 1 G U | ValidTgts$ Permanent | TgtPrompt$ Select target permanent | Defined$ Targeted | Types$ Land,Island | RemoveCreatureTypes$ True | RemoveCardTypes$ True | Colors$ Colorless | OverwriteColors$ True | SpellDescription$ Target permanent becomes a colorless Island land until end of turn.
+
+Oracle:Flash\nThis spell can't be countered.\nWhenever Shigurei attacks, you may activate an ability of a creature you control without paying its cost.\n{1}{G}{U}: Target permanent becomes a colorless Island land until end of turn.
+
+SVar:HasAttackEffect:TRUE

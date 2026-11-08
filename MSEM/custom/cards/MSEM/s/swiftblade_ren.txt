@@ -1,0 +1,20 @@
+Name:Swiftblade Ren
+ManaCost:1 B R
+Types:Legendary Creature Human Warrior
+PT:3/2
+
+K:First Strike
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigAltCost | TriggerZones$ Battlefield | TriggerDescription$ Whenever NICKNAME deals combat damage to a player, you may activate one of her abilities by paying 3 life rather than paying its cost.
+SVar:TrigAltCost:DB$ Effect | StaticAbilities$ PayLifeInstead | Duration$ UntilEndOfTurn
+SVar:PayLifeInstead:Mode$ AlternativeCost | ValidSA$ Activated.!ManaAbility | ValidCard$ Card.Self | ValidPlayer$ You | Cost$ PayLife<3> | CheckSVar$ X | SVarCompare$ LT1 | Description$ You may pay 3 life rather than pay the cost of the first activated ability of NICKNAME you activate this turn.
+SVar:X:Count$ThisTurnActivated_Activated.!ManaAbility+YouCtrl+Card.Self
+
+A:AB$ Draw | Cost$ 1 R Discard<1/Card> | SpellDescription$ Draw a card.
+
+A:AB$ Sacrifice | Cost$ 2 B Sac<1/Creature> | Defined$ Opponent | SacValid$ Creature | SpellDescription$ Each opponent sacrifices a creature.
+
+Oracle:First strike\nWhenever Ren deals combat damage to a player, you may activate one of her abilities by paying 3 life rather than paying its cost.\n{1}{R}, Discard a card: Draw a card.\n{2}{B}, Sacrifice a creature: Each opponent sacrifices a creature.
+
+DeckHas:Ability$Discard|Sacrifice
+SVar:HasAttackEffect:TRUE

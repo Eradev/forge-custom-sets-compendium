@@ -1,0 +1,27 @@
+Name:Savage Convergence
+ManaCost:3 G G
+Types:Sorcery
+
+#-------------------
+# Golden Age trigger
+#-------------------
+T:Mode$ SpellCast | ValidCard$ Card.Self | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+
+SVar:EnterGoldenAge:DB$ Effect | Name$ Golden Age | StaticAbilities$ GoldenAgeDesc | Duration$ Permanent | Unique$ True
+SVar:GoldenAgeDesc:Mode$ Continuous | Description$ You are in a renaissance.
+
+SVar:GoldenAgeSpell:Count$ThisTurnCast_Card.Instant+YouCtrl,Card.Sorcery+YouCtrl/LimitMax.1
+SVar:GoldenAgeAbility:Count$ThisTurnActivated_Activated.!ManaAbility+YouCtrl/LimitMax.1
+SVar:GoldenAgeAttack:Count$AttackersDeclared/LimitMax.1
+SVar:GoldenCheck1:SVar$GoldenAgeSpell/Plus.GoldenAgeAbility
+SVar:GoldenCheckFinal:SVar$GoldenCheck1/Plus.GoldenAgeAttack
+#-------------------
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Creature.cmcLE4 | ChangeNum$ 3 | DifferentCMC$ True | Hidden$ True | Reveal$ True | RememberChanged$ True | Shuffle$ True | SubAbility$ DBOptionalBF | SpellDescription$ Search your library for up to three creature cards with different mana values 4 or less, reveal them, put them into your hand, then shuffle. If you're in a renaissance, you may put one of those cards onto the battlefield instead of into your hand.
+SVar:DBOptionalBF:DB$ ChangeZone | Origin$ Hand | Destination$ Battlefield | ChangeType$ Card.IsRemembered | ChangeNum$ 1 | Optional$ True | ConditionCheckSVar$ IsRenaissance | ConditionSVarCompare$ EQ1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:IsRenaissance:Count$ValidCommand Effect.YouCtrl+namedGolden Age/LimitMax.1
+
+Oracle:Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)\nSearch your library for up to three creature cards with different mana values 4 or less, reveal them, put them into your hand, then shuffle. If you're in a renaissance, you may put one of those cards onto the battlefield instead of into your hand.
+
+DeckHints:Ability$Token

@@ -1,0 +1,14 @@
+Name:Scribe of the Sky Scrolls
+ManaCost:2 U
+Types:Creature Human Wizard
+PT:2/2
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ Whenever you cast an instant or sorcery spell, put a +1/+1 counter on this creature. If you spent four or more mana to cast that spell, it gains flying until end of turn.
+SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1 | SubAbility$ DBFlying
+SVar:DBFlying:DB$ Pump | KW$ Flying | ConditionCheckSVar$ X | ConditionSVarCompare$ GE4
+SVar:X:TriggeredCard$CastTotalManaSpent
+
+Oracle:Whenever you cast an instant or sorcery spell, put a +1/+1 counter on this creature. If you spent four or more mana to cast that spell, it gains flying until end of turn.
+
+DeckHas:Ability$Counters
+DeckHints:Type$Instant|Sorcery

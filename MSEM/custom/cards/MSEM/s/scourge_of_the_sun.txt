@@ -1,0 +1,15 @@
+Name:Scourge of the Sun
+ManaCost:3 R
+Types:Creature Dragon
+PT:2/3
+
+K:Flying
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever you cast an instant or sorcery spell, this creature gets +1/+0 until end of turn. If you spent four or more mana to cast that spell, it gets an additional +1/+0 until end of turn.
+SVar:TrigPump:DB$ Pump | NumAtt$ +1 | SubAbility$ DBExtraPump
+SVar:DBExtraPump:DB$ Pump | NumAtt$ +1 | ConditionCheckSVar$ X | ConditionSVarCompare$ GE4
+SVar:X:TriggeredCard$CastTotalManaSpent
+
+Oracle:Flying\nWhenever you cast an instant or sorcery spell, this creature gets +1/+0 until end of turn. If you spent four or more mana to cast that spell, it gets an additional +1/+0 until end of turn.
+
+DeckHints:Type$Instant|Sorcery

@@ -1,0 +1,14 @@
+Name:Sable Evangelist
+ManaCost:2 B
+Types:Creature Human Cleric
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature enters, create a 0/1 black Cultist creature token with "{1}{B}{B}, Sacrifice three Cultists: Create a 5/5 black Demon creature token."
+SVar:TrigToken:DB$ Token | TokenScript$ b_0_1_cultist_sac
+
+S:Mode$ Continuous | Affected$ Cultist.YouCtrl | AddPower$ 2 | AddHiddenKeyword$ CARDNAME can't block. | Description$ Cultists you control get +2/+0 and can't block.
+
+Oracle:When this creature enters, create a 0/1 black Cultist creature token with "{1}{B}{B}, Sacrifice three Cultists: Create a 5/5 black Demon creature token."\nCultists you control get +2/+0 and can't block.
+
+DeckHas:Ability$Token|Sacrifice & Type$Cultist
+DeckHints:Type$Cultist

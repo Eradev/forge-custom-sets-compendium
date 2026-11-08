@@ -1,0 +1,21 @@
+Name:Seto's Private Collection
+ManaCost:2 R W
+Types:Enchantment Gallery
+
+Text:(Choose only one work as a sorcery to add its ability.)
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPumpAll | TriggerDescription$ When this Gallery enters, creatures you control get +2/+1 until end of turn.
+SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +2 | NumDef$ +1
+
+A:AB$ Pump | PrecostDesc$ Bloodline | Cost$ 1 R | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteBloodline | SpellDescription$ Attacking creatures you control have first strike.
+S:Mode$ Continuous | Affected$ Creature.attacking+YouCtrl | AddKeyword$ First Strike | IsPresent$ Card.Self+NotedForBloodline | Description$ Bloodline — Attacking creatures you control have first strike.
+
+A:AB$ Pump | PrecostDesc$ Hope's Savior | Cost$ 2 W | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteHopesSavior | SpellDescription$ Attacking creatures you control have lifelink.
+S:Mode$ Continuous | Affected$ Creature.attacking+YouCtrl | AddKeyword$ Lifelink | IsPresent$ Card.Self+NotedForHopesSavior | Description$ Hope's Savior — Attacking creatures you control have lifelink.
+
+SVar:DBNoteBloodline:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ Bloodline
+SVar:DBNoteHopesSavior:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ HopesSavior
+
+Oracle:(Choose only one work as a sorcery to add its ability.)\nWhen this Gallery enters, creatures you control get +2/+1 until end of turn.\n{1}{R}: Bloodline\nAttacking creatures you control have first strike.\n{2}{W}: Hope's Savior\nAttacking creatures you control have lifelink.
+
+DeckHas:Keyword$First Strike|Lifelink
