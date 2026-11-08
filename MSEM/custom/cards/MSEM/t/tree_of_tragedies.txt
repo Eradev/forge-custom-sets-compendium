@@ -1,0 +1,10 @@
+Name:Tree of Tragedies
+ManaCost:B
+Types:Creature Plant
+PT:0/3
+
+A:AB$ Draw | Cost$ 2 B Sac<1/Creature> | SpellDescription$ Draw a card.
+
+Oracle:{2}{B}, Sacrifice a creature: Draw a card.
+
+DeckHas:Ability$Sacrifice

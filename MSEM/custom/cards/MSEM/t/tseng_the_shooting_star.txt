@@ -1,0 +1,19 @@
+Name:Tseng, the Shooting Star
+ManaCost:4 R R
+Types:Legendary Creature Dragon
+PT:6/6
+
+K:Flying
+
+S:Mode$ Continuous | Affected$ Land.YouCtrl | AddAbility$ TsengLandMana | Description$ Lands you control have "{T}: Add {R}{R}. This land deals 2 damage to you."
+SVar:TsengLandMana:AB$ Mana | Cost$ T | Produced$ R | Amount$ 2 | SubAbility$ DBPain | SpellDescription$ Add {R}{R}. This land deals 2 damage to you.
+SVar:DBPain:DB$ DealDamage | NumDmg$ 2 | Defined$ You
+
+A:AB$ Shuffle | Cost$ R R R R R R | Defined$ You | SubAbility$ DBExile | SpellDescription$ Shuffle your library, then exile the top three cards. You may cast one of them without paying its mana cost.
+SVar:DBExile:DB$ Dig | DigNum$ 3 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBPlay
+SVar:DBPlay:DB$ Play | Valid$ Card.IsRemembered+YouOwn | ValidZone$ Exile | ValidSA$ Spell | Controller$ You | WithoutManaCost$ True | Optional$ True | Amount$ 1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Flying\nLands you control have "{T}: Add {R}{R}. This land deals 2 damage to you."\n{R}{R}{R}{R}{R}{R}: Shuffle your library, then exile the top three cards. You may cast one of them without paying its mana cost.
+
+SVar:PlayMain1:TRUE

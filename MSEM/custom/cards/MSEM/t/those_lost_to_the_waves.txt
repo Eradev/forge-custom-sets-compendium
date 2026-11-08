@@ -1,0 +1,22 @@
+Name:Those Lost to the Waves
+ManaCost:W U
+Types:Enchantment Gallery
+
+Text:(Choose only one work as a sorcery to add its ability.)
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigSearch | TriggerDescription$ When this Gallery enters, search your library for an artifact card with mana value 3 or less, reveal it, put it into your hand, then shuffle.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Artifact.cmcLE3 | ChangeNum$ 1 | Shuffle$ True
+
+A:AB$ Pump | PrecostDesc$ Fight the Current | Cost$ 1 W | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteFightTheCurrent | SpellDescription$ Equipped creatures you control get +1/+1.
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+Equipped | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Card.Self+NotedForFightTheCurrent | Description$ Fight the Current — Equipped creatures you control get +1/+1.
+
+A:AB$ Pump | PrecostDesc$ Soul of the Sea | Cost$ 3 U | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteSoulOfTheSea | SpellDescription$ At the beginning of combat on your turn, you may have target noncreature artifact become a 3/3 artifact creature until end of turn.
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+NotedForSoulOfTheSea | Execute$ TrigAnimate | TriggerDescription$ Soul of the Sea — At the beginning of combat on your turn, you may have target noncreature artifact become a 3/3 artifact creature until end of turn.
+SVar:TrigAnimate:DB$ Animate | ValidTgts$ Artifact.nonCreature+YouCtrl | TgtPrompt$ Select target noncreature artifact you control | Power$ 3 | Toughness$ 3 | Types$ Artifact,Creature | Optional$ True
+
+SVar:DBNoteFightTheCurrent:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ FightTheCurrent
+SVar:DBNoteSoulOfTheSea:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ SoulOfTheSea
+
+Oracle:(Choose only one work as a sorcery to add its ability.)\nWhen this Gallery enters, search your library for an artifact card with mana value 3 or less, reveal it, put it into your hand, then shuffle.\n{1}{W}: Fight the Current\nEquipped creatures you control get +1/+1.\n{3}{U}: Soul of the Sea\nAt the beginning of combat on your turn, you may have target noncreature artifact become a 3/3 artifact creature until end of turn.
+
+DeckHints:Type$Equipment|Artifact
