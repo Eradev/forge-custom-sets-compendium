@@ -1,0 +1,11 @@
+Name:Pup of a Marigold Burrow
+ManaCost:R
+Types:Creature Fox
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Fox.Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever another Fox you control enters, this creature deals 1 damage to each opponent.
+SVar:TrigDamage:DB$ DamageAll | ValidPlayers$ Opponent | NumDmg$ 1
+
+Oracle:Whenever another Fox you control enters, this creature deals 1 damage to each opponent.
+
+DeckHints:Type$Fox

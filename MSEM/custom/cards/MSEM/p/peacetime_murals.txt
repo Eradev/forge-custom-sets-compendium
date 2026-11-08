@@ -1,0 +1,28 @@
+Name:Peacetime Murals
+ManaCost:3 G U
+Types:Enchantment Gallery
+
+Text:(Choose only one work as a sorcery to add its ability.)
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigETB | TriggerDescription$ When this Gallery enters, draw three cards and you gain 3 life.
+SVar:TrigETB:DB$ Draw | NumCards$ 3 | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 3
+
+A:AB$ Pump | PrecostDesc$ Grow as Two | Cost$ 2 G | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteGrowAsTwo | SpellDescription$ Whenever you activate an ability of a creature you control, create a token that's a copy of that creature except it isn't legendary. This ability triggers only once each turn.
+
+T:Mode$ AbilityCast | ValidCard$ Creature.YouCtrl+inZoneBattlefield | ValidActivatingPlayer$ You | ValidSA$ Activated | TriggerZones$ Battlefield | IsPresent$ Card.Self+NotedForGrowAsTwo | ActivationLimit$ 1 | Execute$ TrigCopy | TriggerDescription$ Grow as Two — Whenever you activate an ability of a creature you control, create a token that's a copy of that creature except it isn't legendary. This ability triggers only once each turn.
+SVar:TrigCopy:DB$ CopyPermanent | Defined$ TriggeredCardLKICopy | NonLegendary$ True
+
+A:AB$ Pump | PrecostDesc$ A Better Mankind | Cost$ 2 U | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteABetterMankind | SpellDescription$ Whenever a creature you control enters, you may activate one of its abilities without paying its costs. This ability triggers only once each turn.
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | IsPresent$ Card.Self+NotedForABetterMankind | ActivationLimit$ 1 | Execute$ TrigFreeActivate | TriggerDescription$ A Better Mankind — Whenever a creature you control enters, you may activate one of its abilities without paying its costs. This ability triggers only once each turn.
+SVar:TrigFreeActivate:DB$ Effect | RememberObjects$ TriggeredCardLKICopy | StaticAbilities$ FreeActivate | Duration$ UntilEndOfTurn
+SVar:FreeActivate:Mode$ AlternativeCost | ValidSA$ Activated.!ManaAbility | ValidCard$ Card.IsRemembered | ValidPlayer$ You | Cost$ 0 | CheckSVar$ X | SVarCompare$ LT1 | Description$ You may pay {0} rather than pay the cost of the first activated ability of this creature.
+SVar:X:Count$ThisTurnActivated_Activated.!ManaAbility+YouCtrl+IsRemembered
+
+SVar:DBNoteGrowAsTwo:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ GrowAsTwo
+SVar:DBNoteABetterMankind:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ ABetterMankind
+
+Oracle:(Choose only one work as a sorcery to add its ability.)\nWhen this Gallery enters, draw three cards and you gain 3 life.\n{2}{G}: Grow as Two\nWhenever you activate an ability of a creature you control, create a token that's a copy of that creature except it isn't legendary. This ability triggers only once each turn.\n{2}{U}: A Better Mankind\nWhenever a creature you control enters, you may activate one of its abilities without paying its costs. This ability triggers only once each turn.
+
+DeckHas:Ability$Token|LifeGain
