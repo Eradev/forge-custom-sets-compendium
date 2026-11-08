@@ -1,0 +1,25 @@
+Name:Memorial Plaza
+ManaCost:1 W B
+Types:Enchantment Gallery
+
+Text:(Choose only one work as a sorcery to add its ability.)
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ When this Gallery enters, create two 1/1 colorless Spirit creature tokens with flying.
+SVar:TrigToken:DB$ Token | TokenScript$ c_1_1_spirit_flying | TokenAmount$ 2
+
+A:AB$ Pump | PrecostDesc$ The Warrior | Cost$ 2 W | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteWarrior | SpellDescription$ At the beginning of combat on your turn, put a +1/+1 counter on target creature you control.
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+NotedForTheWarrior | Execute$ TrigCounter | TriggerDescription$ The Warrior — At the beginning of combat on your turn, put a +1/+1 counter on target creature you control.
+SVar:TrigCounter:DB$ PutCounter | CounterType$ P1P1 | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control
+
+A:AB$ Pump | PrecostDesc$ Rhapsody in Black | Cost$ 1 B | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteRhapsody | SpellDescription$ At the beginning of your end step, you may sacrifice a creature. If you do, draw a card.
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+NotedForRhapsodyInBlack | Execute$ TrigSacDraw | TriggerDescription$ Rhapsody in Black — At the beginning of your end step, you may sacrifice a creature. If you do, draw a card.
+SVar:TrigSacDraw:DB$ Sacrifice | SacValid$ Creature | Optional$ True | RememberSacrificed$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | ConditionDefined$ Remembered | ConditionPresent$ Card | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:DBNoteWarrior:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ TheWarrior
+SVar:DBNoteRhapsody:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ RhapsodyInBlack
+
+Oracle:(Choose only one work as a sorcery to add its ability.)\nWhen this Gallery enters, create two 1/1 colorless Spirit creature tokens with flying.\n{2}{W}: The Warrior\nAt the beginning of combat on your turn, put a +1/+1 counter on target creature you control.\n{1}{B}: Rhapsody in Black\nAt the beginning of your end step, you may sacrifice a creature. If you do, draw a card.
+
+DeckHas:Ability$Token|Counters|Sacrifice & Type$Spirit
