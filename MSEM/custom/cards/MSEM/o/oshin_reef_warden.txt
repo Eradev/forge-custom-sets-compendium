@@ -1,0 +1,15 @@
+Name:Oshin, Reef Warden
+ManaCost:1 U
+Types:Legendary Creature Drake
+PT:2/1
+
+K:Flash
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounter | TriggerDescription$ When NICKNAME enters, counter target spell if its mana value is less than or equal to the number of spells you've cast this turn.
+SVar:TrigCounter:DB$ Counter | TargetType$ Spell | ValidTgts$ Card | ConditionCheckSVar$ X | ConditionSVarCompare$ LEY
+SVar:X:Targeted$CardManaCost
+SVar:Y:Count$ThisTurnCast_Card.YouCtrl
+
+Oracle:Flash\nFlying\nWhen Oshin enters, counter target spell if its mana value is less than or equal to the number of spells you've cast this turn.

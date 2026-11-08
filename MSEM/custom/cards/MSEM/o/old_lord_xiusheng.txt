@@ -1,0 +1,15 @@
+Name:Old Lord Xiusheng
+ManaCost:R G
+Types:Legendary Creature Human Warrior
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.powerGE4+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever a creature with power 4 or greater you control enters, it gains haste until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ TriggeredCardLKICopy | KW$ Haste
+
+A:AB$ Mana | Cost$ T | Produced$ Combo R G | SpellDescription$ Add {R} or {G}.
+
+A:AB$ Token | Cost$ 4 R G | TokenScript$ r_4_4_dragon_flying | SpellDescription$ Create a 4/4 red Dragon creature token with flying.
+
+Oracle:Whenever a creature with power 4 or greater you control enters, it gains haste until end of turn.\n{T}: Add {R} or {G}.\n{4}{R}{G}: Create a 4/4 red Dragon creature token with flying.
+
+DeckHas:Ability$Token & Type$Dragon
