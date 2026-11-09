@@ -67,7 +67,9 @@ Storytime (101)                       -  98% (99/101)
   Missing cards:
     * Arpechian Champion
     * Jara Champion
-High Noon (HI12)                      -  64% (180/279)
+High Noon (HI12)                      -  64% (179/279)
+  Missing cards:
+    * Aether Leak
 Zero (ZER)                            -  37% (92/252)
 Path of Shadows (PSA)                 -  99% (208/209)
   Missing cards:
