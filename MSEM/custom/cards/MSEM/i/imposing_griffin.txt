@@ -1,0 +1,13 @@
+Name:Imposing Griffin
+ManaCost:2 W U
+Types:Creature Griffin
+PT:3/3
+
+K:Flying
+
+R:Event$ Moved | ValidCard$ Permanent.nonLand+OppCtrl | Destination$ Battlefield | ReplaceWith$ ETBTapped | ReplacementResult$ Updated | ActiveZones$ Battlefield | Description$ Nonland permanents your opponents control enter tapped.
+SVar:ETBTapped:DB$ Tap | ETB$ True | Defined$ ReplacedCard
+
+S:Mode$ CantBeActivated | ValidCard$ Permanent.OppCtrl+ThisTurnEntered | ValidSA$ Activated.!ManaAbility | Description$ Activated abilities of permanents your opponents control that entered this turn can't be activated unless they're mana abilities.
+
+Oracle:Flying\nNonland permanents your opponents control enter tapped.\nActivated abilities of permanents your opponents control that entered this turn can't be activated unless they're mana abilities.
