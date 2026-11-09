@@ -38,9 +38,10 @@ Video Horror System (VHS)             -  98% (84/86)
   Missing cards:
     * Maddened Preacher
     * Snowfield Doppelganger
-Nangjiao In Bloom (NJB)               -  42% (126/297)
+Nangjiao In Bloom (NJB)               -  99% (295/297)
   Missing cards:
-    * Diao of the Opal Infantry
+    * Ma'Long, the Skystorm
+    * Wun Su, War's Muse
 Riddles of Revio (RVO)                -  88% (242/272)
   Missing cards:
     * Every card that references the supertype Riddle.
