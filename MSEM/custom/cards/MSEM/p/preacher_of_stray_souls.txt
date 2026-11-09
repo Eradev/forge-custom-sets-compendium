@@ -6,7 +6,7 @@ PT:2/1
 K:First Strike
 
 T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Creature.YouCtrl+!token | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever a nontoken creature you control leaves the battlefield, you may pay {W}. If you do, create a 1/1 colorless Spirit creature token.
-SVar:TrigToken:DB$ Token | Cost$ W | TokenScript$ c_1_1_spirit
+SVar:TrigToken:AB$ Token | Cost$ W | TokenScript$ c_1_1_spirit
 
 Oracle:First strike\nWhenever a nontoken creature you control leaves the battlefield, you may pay {W}. If you do, create a 1/1 colorless Spirit creature token.
 
