@@ -265,7 +265,7 @@ Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 6 b_x_x_horror_indestructible @David Rapoza
 7 b_1_1_skeleton @Haridimus
 8 b_2_2_zombie @TheRafa
-9 r_5_5_dragon_flying @Sandara
+9 r_5_5_dragon_flying @sandara
 10 r_1_1_goblin @AntonZemskov
 11 g_3_3_beast @Davesrightmind
 12 g_1_1_saproling @Cyril Van Der Haegan
