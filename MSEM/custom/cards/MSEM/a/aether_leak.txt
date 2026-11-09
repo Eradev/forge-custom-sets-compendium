@@ -1,8 +1,0 @@
-Name:Aether Leak
-ManaCost:1 U
-Types:Enchantment
-
-T:Mode$ AbilityTriggered | TriggerZones$ Battlefield | ValidDestination$ Battlefield | ValidMode$ ChangesZone,ChangesZoneAll | ValidSource$ Creature.YouCtrl | TriggeredOwnAbility$ True | Execute$ TrigCopy | TriggerDescription$ If a creature entering the battlefield under your control causes a triggered ability of that creature to trigger, you may exile it. If you do, that ability triggers an additional time.
-SVar:TrigCopy:AB$ CopySpellAbility | Cost$ Exile<1/Card.TriggeredSource/that creature> | Defined$ TriggeredSpellAbility | MayChooseTarget$ True
-
-Oracle:If a creature entering the battlefield under your control causes a triggered ability of that creature to trigger, you may exile it. If you do, that ability triggers an additional time.
