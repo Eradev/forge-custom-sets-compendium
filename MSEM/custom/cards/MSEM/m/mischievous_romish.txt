@@ -11,7 +11,7 @@ SVar:DBDraw:DB$ Draw | NumCards$ X
 SVar:X:Count$Compare Y GE1.3.1
 SVar:Y:Remembered$Valid Card.NamedCard
 
-A:AB$ Effect | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Mischevious Romish | Image$ emblem_mischevious_romish | StaticAbilities$ STReveal,STPlay | Duration$ Permanent | SpellDescription$ You get an emblem with "Play with the top card of your library revealed" and "You may play the top card of your library."
+A:AB$ Effect | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Mischievous Romish | Image$ emblem_mischievous_romish | StaticAbilities$ STReveal,STPlay | Duration$ Permanent | SpellDescription$ You get an emblem with "Play with the top card of your library revealed" and "You may play the top card of your library."
 SVar:STReveal:Mode$ Continuous | Affected$ Card.TopLibrary+YouCtrl | AffectedZone$ Library | MayLookAt$ You | Description$ Play with the top card of your library revealed.
 SVar:STPlay:Mode$ Continuous | Affected$ Card.TopLibrary+YouCtrl | AffectedZone$ Library | MayPlay$ True | Description$ You may play the top card of your library.
 

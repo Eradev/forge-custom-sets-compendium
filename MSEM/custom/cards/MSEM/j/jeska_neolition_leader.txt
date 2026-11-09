@@ -8,7 +8,7 @@ A:AB$ Pump | Cost$ AddCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Creat
 A:AB$ DealDamage | Cost$ SubCounter<3/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature | NumDmg$ Y | SpellDescription$ NICKNAME deals 3 damage to target creature. If that creature is an artifact, she deals 5 damage instead.
 SVar:Y:Targeted$Valid Artifact.5.3
 
-A:AB$ Effect | Cost$ SubCounter<10/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Jeska, Neolition Leader | StaticAbilities$ STJeska1,STJeska2 | Duration$ Permanent | AILogic$ Always | SpellDescription$ You get an emblem with "Creatures you control get +2/+0." and "All creatures have haste and can't block."
+A:AB$ Effect | Cost$ SubCounter<10/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Jeska, Neolition Leader | Image$ emblem_jeska_neolition_leader | StaticAbilities$ STJeska1,STJeska2 | Duration$ Permanent | AILogic$ Always | SpellDescription$ You get an emblem with "Creatures you control get +2/+0." and "All creatures have haste and can't block."
 SVar:STJeska1:Mode$ Continuous | Affected$ Creature.YouCtrl | AffectedZone$ Battlefield | AddPower$ 2 | Description$ Creatures you control get +2/+0.
 SVar:STJeska2:Mode$ Continuous | Affected$ Creature | AffectedZone$ Battlefield | AddKeyword$ Haste | AddHiddenKeyword$ CARDNAME can't block. | Description$ All creatures have haste and can't block.
 

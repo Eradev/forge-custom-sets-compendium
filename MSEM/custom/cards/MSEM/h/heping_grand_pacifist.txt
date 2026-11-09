@@ -13,7 +13,7 @@ SVar:DBRansom:DB$ Effect | Duration$ Permanent | Abilities$ PayReturn | Remember
 SVar:PayReturn:ST$ ChangeZone | Cost$ 2 | Defined$ Remembered | Origin$ Exile | Destination$ Hand | Activator$ RememberedOwner | ActivationZone$ Command | SorcerySpeed$ True | SpellDescription$ Pay {2} to return this card to your hand. Activate only as a sorcery.
 SVar:DBCleanupExile:DB$ Cleanup | ClearRemembered$ True
 
-A:AB$ Effect | Cost$ SubCounter<8/LOYALTY> | Planeswalker$ True | Ultimate$ True | ValidTgts$ Opponent | EffectOwner$ Targeted | Name$ Emblem — Heping, Grand Pacifist | StaticAbilities$ STEmblem | Duration$ Permanent | SpellDescription$ Target opponent gets an emblem with "Creatures you control lose all abilities and have base power and toughness 1/1."
+A:AB$ Effect | Cost$ SubCounter<8/LOYALTY> | Planeswalker$ True | Ultimate$ True | ValidTgts$ Opponent | EffectOwner$ Targeted | Name$ Emblem — Heping, Grand Pacifist | Image$ emblem_heping_grand_pacifist | StaticAbilities$ STEmblem | Duration$ Permanent | SpellDescription$ Target opponent gets an emblem with "Creatures you control lose all abilities and have base power and toughness 1/1."
 SVar:STEmblem:Mode$ Continuous | Affected$ Creature.YouCtrl | SetPower$ 1 | SetToughness$ 1 | RemoveAllAbilities$ True | Description$ Creatures you control lose all abilities and have base power and toughness 1/1.
 
 Oracle:[+1]: Each player may draw a card. For each opponent who does, you gain 4 life.\n[-3]: Exile target nonland permanent. As long as that card remains exiled, its owner may pay {2} any time they could cast a sorcery. If they do, they return that card to their hand.\n[-8]: Target opponent gets an emblem with "Creatures you control lose all abilities and have base power and toughness 1/1."
