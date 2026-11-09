@@ -1,0 +1,11 @@
+Name:Chief Striking Dawn
+ManaCost:2 B G
+Types:Legendary Creature Elf Warrior
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Graveyard | ValidCard$ Card.!token | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ Whenever a card is put into a graveyard from anywhere, put a +1/+1 counter on CARDNAME.
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ P1P1
+
+A:AB$ ChangeZone | Cost$ 1 B G SubCounter<3/Any> | Origin$ Graveyard | Destination$ Battlefield | ChangeType$ Permanent.YouOwn | ChangeNum$ 1 | Hidden$ True | SpellDescription$ Return a permanent card from your graveyard to the battlefield.
+
+Oracle:Whenever a card is put into a graveyard from anywhere, put a +1/+1 counter on Chief Striking Dawn.\n{1}{B}{G}, Remove three counters from Chief Striking Dawn: Return a permanent card from your graveyard to the battlefield.
