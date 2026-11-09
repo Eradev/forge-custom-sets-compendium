@@ -1,0 +1,11 @@
+Name:Forgotten Haunt
+ManaCost:no cost
+Types:Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ Token | Cost$ 1 T Sac<1/Creature> | TokenScript$ c_1_1_spirit | SpellDescription$ Create a 1/1 colorless Spirit creature token.
+
+Oracle:{T}: Add {C}.\n{1}, {T}, Sacrifice a creature: Create a 1/1 colorless Spirit creature token.
+
+DeckHas:Ability$Token|Sacrifice & Type$Spirit
