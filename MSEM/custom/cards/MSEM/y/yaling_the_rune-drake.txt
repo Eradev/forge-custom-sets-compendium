@@ -1,0 +1,16 @@
+Name:Ya'Ling, the Rune-Drake
+ManaCost:1 G W U
+Types:Legendary Creature Drake
+PT:2/2
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigIdol | TriggerDescription$ Whenever another creature you control enters, create an Idol token.
+SVar:TrigIdol:DB$ Token | TokenScript$ c_a_idol_sac
+
+T:Mode$ CounterAddedOnce | CounterType$ P1P1 | ValidSource$ You | ValidCard$ Card.Self | TriggerZones$ Battlefield | ActivationLimit$ 1 | Execute$ TrigPutCounterAll | TriggerDescription$ Whenever you put a +1/+1 counter on NICKNAME, put a +1/+1 on each other creature you control. This ability triggers only once each turn.
+SVar:TrigPutCounterAll:DB$ PutCounterAll | ValidCards$ Creature.YouCtrl+StrictlyOther | CounterType$ P1P1 | CounterNum$ 1
+
+Oracle:Flying\nWhenever another creature you control enters, create an Idol token.\nWhenever you put a +1/+1 counter on Ya'Ling, put a +1/+1 on each other creature you control. This ability triggers only once each turn.
+
+DeckHas:Ability$Token|Counters & Type$Idol|Artifact

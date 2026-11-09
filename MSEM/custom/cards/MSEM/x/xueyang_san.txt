@@ -1,0 +1,20 @@
+Name:Xueyang San
+ManaCost:1
+Types:Legendary Artifact Equipment
+
+S:Mode$ Continuous | Affected$ Creature.EquippedBy | AddPower$ 1 | AddToughness$ -1 | AddTrigger$ TrigDies | Description$ Equipped creature gets +1/-1 and has "When this creature dies, put a fate counter on CARDNAME."
+SVar:TrigDies:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigFate | TriggerDescription$ When this creature dies, put a fate counter on ORIGINALHOST.
+SVar:TrigFate:DB$ PutCounter | Defined$ OriginalHost | CounterType$ FATE | CounterNum$ 1
+
+A:AB$ Charm | Cost$ 1 SubCounter<1/FATE> | Choices$ DBDraw,DBDamage
+
+SVar:DBDraw:DB$ Draw | SpellDescription$ Draw a card.
+
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 2 | DamageSource$ Self | SubAbility$ DBGainLife | SpellDescription$ CARDNAME deals 2 damage to any target and you gain 2 life.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 2
+
+K:Equip:1
+
+Oracle:Equipped creature gets +1/-1 and has "When this creature dies, put a fate counter on Xueyang San."\n{1}, Remove a fate counter from Xueyang San: Choose one -\n• Draw a card.\n• Xueyang San deals 2 damage to any target and you gain 2 life.\nEquip {1}
+
+DeckHas:Ability$Counters|LifeGain
