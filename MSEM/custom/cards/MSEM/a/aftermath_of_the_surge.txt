@@ -1,0 +1,17 @@
+Name:Aftermath of the Surge
+ManaCost:3 U
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigTreasure | TriggerDescription$ When this enchantment enters, create two Treasure tokens.
+SVar:TrigTreasure:DB$ Token | TokenScript$ c_a_treasure_sac | TokenAmount$ 2
+
+A:AB$ Draw | Cost$ 1 U Sac<2/Artifact> | NumCards$ 2 | SpellDescription$ Draw two cards.
+
+A:AB$ Token | Cost$ 3 U Sac<4/Artifact> | TokenScript$ u_8_8_kraken | RememberTokens$ True | SubAbility$ DBPump | SpellDescription$ Create an 8/8 blue Kraken creature token. It can't block this turn.
+SVar:DBPump:DB$ PumpAll | ValidCards$ Card.IsRemembered | KW$ HIDDEN CARDNAME can't block. | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When this enchantment enters, create two Treasure tokens.\n{1}{U}, Sacrifice two artifacts: Draw two cards.\n{3}{U}, Sacrifice four artifacts: Create an 8/8 blue Kraken creature token. It can't block this turn.
+
+DeckHas:Ability$Token|Sacrifice & Type$Kraken|Treasure
+DeckHints:Type$Artifact

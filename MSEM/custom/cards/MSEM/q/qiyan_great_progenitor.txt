@@ -1,0 +1,23 @@
+Name:Qiyan, Great Progenitor
+ManaCost:X G G G
+Types:Legendary Creature Elder Hydra
+PT:0/0
+
+K:Trample
+
+K:etbCounter:P1P1:Y:no Condition:NICKNAME enters with twice X +1/+1 counters on them.
+SVar:X:Count$xPaid
+SVar:Y:SVar$X/Twice
+
+R:Event$ DamageDone | ActiveZones$ Battlefield | ValidTarget$ Card.Self+counters_GE1_P1P1 | ReplaceWith$ DBRemoveAndToken | PreventionEffect$ True | AlwaysReplace$ True | Description$ If damage would be dealt to NICKNAME while they have a +1/+1 counter on them, prevent that damage, remove that many +1/+1 counters from NICKNAME, then create a 0/0 green Hydra creature token and put twice that many +1/+1 counters on it.
+SVar:DBRemoveAndToken:DB$ RemoveCounter | Defined$ ReplacedTarget | CounterType$ P1P1 | CounterNum$ DmgAmt | RememberRemoved$ True | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ g_0_0_hydra | RememberTokens$ True | SubAbility$ DBPutCounter
+SVar:DBPutCounter:DB$ PutCounter | Defined$ Remembered | CounterType$ P1P1 | CounterNum$ Z | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:DmgAmt:ReplaceCount$DamageAmount
+SVar:Z:SVar$Removed/Twice
+SVar:Removed:Count$RememberedSize
+
+Oracle:Trample\nQiyan enters with twice X +1/+1 counters on them.\nIf damage would be dealt to Qiyan while they have a +1/+1 counter on them, prevent that damage, remove that many +1/+1 counters from Qiyan, then create a 0/0 green Hydra creature token and put twice that many +1/+1 counters on it.
+
+DeckHas:Ability$Counters|Token & Type$Hydra

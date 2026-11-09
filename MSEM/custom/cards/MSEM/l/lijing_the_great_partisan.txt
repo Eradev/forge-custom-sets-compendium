@@ -1,0 +1,18 @@
+Name:Lijing, the Great Partisan
+ManaCost:2 W W
+Types:Legendary Creature Elder Fox Spirit
+PT:3/4
+
+K:Vigilance
+
+S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Indestructible | IsPresent$ Fox.YouCtrl+ThisTurnEntered | Description$ NICKNAME has indestructible as long as a Fox you control entered this turn.
+
+T:Mode$ Drawn | ValidCard$ Card.OppOwn | TriggerZones$ Battlefield | Execute$ TrigChoice | TriggerDescription$ Whenever an opponent draws a card, draw a card unless that player has you create a 2/1 red and white Fox creature token.
+SVar:TrigChoice:DB$ GenericChoice | Choices$ OppCreateFox,YouDraw | Defined$ TriggeredCardController | AILogic$ PayUnlessCost
+SVar:OppCreateFox:DB$ Token | TokenScript$ rw_2_1_fox | SpellDescription$ Have {p:You} create a 2/1 red and white Fox creature token.
+SVar:YouDraw:DB$ Draw | SpellDescription$ {p:You} draws a card.
+
+Oracle:Vigilance\nLijing has indestructible as long as a Fox you control entered this turn.\nWhenever an opponent draws a card, draw a card unless that player has you create a 2/1 red and white Fox creature token.
+
+DeckHas:Ability$Token & Type$Fox
+DeckHints:Type$Fox

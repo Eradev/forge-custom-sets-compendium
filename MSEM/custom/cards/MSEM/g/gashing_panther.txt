@@ -1,0 +1,11 @@
+Name:Gashing Panther
+ManaCost:2 G
+Types:Creature Cat
+PT:4/2
+
+A:AB$ Pump | Cost$ 2 G Sac<1/Land> | KW$ Indestructible | SubAbility$ DBTap | SpellDescription$ This creature gains indestructible until end of turn. Tap it.
+SVar:DBTap:DB$ Tap
+
+Oracle:{2}{G}, Sacrifice a land: This creature gains indestructible until end of turn. Tap it.
+
+DeckHas:Ability$Sacrifice

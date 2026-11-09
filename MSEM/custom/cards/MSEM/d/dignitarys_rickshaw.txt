@@ -1,0 +1,15 @@
+Name:Dignitary's Rickshaw
+ManaCost:1
+Types:Artifact Vehicle
+PT:2/3
+
+A:AB$ Animate | Cost$ tapXType<1/Human.Human+YouCtrl+untapped> | Types$ Artifact,Creature | Duration$ UntilEndOfTurn | SpellDescription$ This Vehicle becomes an artifact creature until end of turn.
+
+T:Mode$ Untaps | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Inspired — Whenever this Vehicle becomes untapped, create a 2/1 red and white Fox creature token. It gains haste. Sacrifice the token at the beginning of the next end step.
+SVar:TrigToken:DB$ Token | TokenScript$ rw_2_1_fox | RememberTokens$ True | SubAbility$ DBHaste
+SVar:DBHaste:DB$ Animate | Defined$ Remembered | Keywords$ Haste | AtEOT$ Sacrifice | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Tap an untapped Human you control: This Vehicle becomes an artifact creature until end of turn.\nInspired — Whenever this Vehicle becomes untapped, create a 2/1 red and white Fox creature token. It gains haste. Sacrifice the token at the beginning of the next end step.
+
+DeckHas:Ability$Token & Type$Fox

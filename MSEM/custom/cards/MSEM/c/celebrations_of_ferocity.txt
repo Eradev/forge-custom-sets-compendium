@@ -1,0 +1,23 @@
+Name:Celebrations of Ferocity
+ManaCost:R G
+Types:Enchantment Gallery
+
+Text:(Choose only one work as a sorcery to add its ability.)
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigMana | TriggerDescription$ When this Gallery enters, add {R}{G}. Spend this mana only to cast creature spells.
+SVar:TrigMana:DB$ Mana | Produced$ R G | RestrictValid$ Spell.Creature
+
+A:AB$ Pump | PrecostDesc$ Hao'Tai's Wake | Cost$ 4 R R | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteHaoTaisWake | SpellDescription$ At the beginning of combat on your turn, target creature you control becomes a 4/4 red Dragon with flying until end of turn.
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+NotedForHaoTaisWake | Execute$ TrigAnimate | TriggerDescription$ Hao'Tai's Wake — At the beginning of combat on your turn, target creature you control becomes a 4/4 red Dragon with flying until end of turn.
+SVar:TrigAnimate:DB$ Animate | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | Power$ 4 | Toughness$ 4 | Types$ Dragon | Colors$ Red | OverwriteColors$ True | RemoveAllAbilities$ True | Keywords$ Flying | Duration$ UntilEndOfTurn
+
+A:AB$ Pump | PrecostDesc$ Portrait of Qiyan | Cost$ 1 G | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNotePortraitOfQiyan | SpellDescription$ Creatures you control enter with an additional +1/+1 counter on them.
+R:Event$ Moved | ActiveZones$ Battlefield | ValidCard$ Creature.YouCtrl | Destination$ Battlefield | IsPresent$ Card.Self+NotedForPortraitOfQiyan | ReplaceWith$ EnterWithP1P1 | ReplacementResult$ Updated | Description$ Portrait of Qiyan — Creatures you control enter with an additional +1/+1 counter on them.
+SVar:EnterWithP1P1:DB$ PutCounter | Defined$ ReplacedCard | CounterType$ P1P1 | ETB$ True
+
+SVar:DBNoteHaoTaisWake:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ HaoTaisWake
+SVar:DBNotePortraitOfQiyan:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ PortraitOfQiyan
+
+Oracle:(Choose only one work as a sorcery to add its ability.)\nWhen this Gallery enters, add {R}{G}. Spend this mana only to cast creature spells.\n{4}{R}{R}: Hao'Tai's Wake\nAt the beginning of combat on your turn, target creature you control becomes a 4/4 red Dragon with flying until end of turn.\n{1}{G}: Portrait of Qiyan\nCreatures you control enter with an additional +1/+1 counter on them.
+
+DeckHas:Ability$Counters & Type$Dragon

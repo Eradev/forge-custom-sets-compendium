@@ -1,0 +1,10 @@
+Name:Theatre of Cruelty
+ManaCost:1 B B
+Types:Sorcery
+
+A:SP$ Discard | ValidTgts$ Opponent | NumCards$ 2 | Mode$ TgtChoose | SubAbility$ DBToken | SpellDescription$ Target opponent discards two cards.
+SVar:DBToken:DB$ Token | TokenScript$ b_0_1_cultist_sac | SpellDescription$ You create a 0/1 black Cultist creature token with "{1}{B}{B}, Sacrifice three Cultists: Create a 5/5 black Demon creature token."
+
+Oracle:Target opponent discards two cards. You create a 0/1 black Cultist creature token with "{1}{B}{B}, Sacrifice three Cultists: Create a 5/5 black Demon creature token."
+
+DeckHas:Ability$Token|Discard|Sacrifice & Type$Cultist

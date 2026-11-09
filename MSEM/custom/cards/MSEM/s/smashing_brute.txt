@@ -4,7 +4,7 @@ Types:Artifact Creature Construct
 PT:2/3
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigAnimate | TriggerDescription$ When this creature enters, target nonbasic permanent loses all abilities until your next turn.
-SVar:TrigAnimate:DB$ Animate | ValidTgts$ Permanent.nonBasic | TgtPrompt$ Select target nonbasic permanent | RemoveAllAbilities$ True | Duration$ UntilYourNextTurn
+SVar:TrigAnimate:DB$ Animate | ValidTgts$ Permanent.nonBasic | TgtPrompt$ Select target nonbasic permanent | RemoveAllAbilities$ True | Duration$ UntilYourNextTurn | IsCurse$ True
 
 T:Mode$ Drawn | ValidCard$ Card.YouCtrl | Number$ 2 | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigBlink | TriggerDescription$ Foresight — Whenever you draw your second card each turn, you may exile this creature. If you do, return it to the battlefield.
 SVar:TrigBlink:DB$ ChangeZone | Defined$ Self | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn

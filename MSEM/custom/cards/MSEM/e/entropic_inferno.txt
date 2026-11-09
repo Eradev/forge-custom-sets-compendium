@@ -1,0 +1,12 @@
+Name:Entropic Inferno
+ManaCost:3 R R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Any | TgtPrompt$ Select any number of targets to distribute damage to | NumDmg$ 5 | TargetMin$ 0 | TargetMax$ 5 | DividedAsYouChoose$ 5 | RememberDamaged$ True | SubAbility$ DBDelTrig | SpellDescription$ CARDNAME deals 5 damage divided as you choose among any number of targets. At the beginning of the next end step, for each permanent dealt damage this way, its owner puts it on the bottom of their library, then reveals cards from the top until they reveal a nonland permanent card. They put that card onto the battlefield, then shuffle.
+SVar:DBDelTrig:DB$ DelayedTrigger | RememberObjects$ Permanent.IsRemembered | Mode$ Phase | Phase$ End of Turn | Execute$ TrigRepeat | SubAbility$ DBCleanup | TriggerDescription$ At the beginning of the next end step, for each permanent dealt damage this way, its owner puts it on the bottom of their library, then reveals cards from the top until they reveal a nonland permanent card. They put that card onto the battlefield, then shuffle.
+SVar:TrigRepeat:DB$ RepeatEach | DefinedCards$ DelayTriggerRemembered | Zone$ Battlefield | UseImprinted$ True | RepeatSubAbility$ DBBottom
+SVar:DBBottom:DB$ ChangeZone | Defined$ Imprinted | Origin$ Battlefield | Destination$ Library | LibraryPosition$ -1 | SubAbility$ DBDig
+SVar:DBDig:DB$ DigUntil | Defined$ ImprintedOwner | Amount$ 1 | Valid$ Permanent.nonLand | ValidDescription$ nonland permanent | FoundDestination$ Battlefield | RevealedDestination$ Library | RevealedLibraryPosition$ -1 | Shuffle$ True
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Entropic Inferno deals 5 damage divided as you choose among any number of targets. At the beginning of the next end step, for each permanent dealt damage this way, its owner puts it on the bottom of their library, then reveals cards from the top until they reveal a nonland permanent card. They put that card onto the battlefield, then shuffle.

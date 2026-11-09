@@ -1,0 +1,14 @@
+Name:Mire Sculptor
+ManaCost:B G
+Types:Creature Human Warlock
+PT:2/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigMill | TriggerDescription$ When this creature enters, mill three cards.
+SVar:TrigMill:DB$ Mill | NumCards$ 3
+
+T:Mode$ Sacrificed | ValidPlayer$ You | ValidCard$ Permanent | TriggerZones$ Battlefield | Execute$ TrigReturn | TriggerDescription$ Whenever you sacrifice a permanent, you may pay {2}. If you do, return target permanent card from your graveyard to your hand.
+SVar:TrigReturn:AB$ ChangeZone | Cost$ 2 | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Permanent.YouOwn | TgtPrompt$ Select target permanent card in your graveyard | Optional$ True
+
+Oracle:When this creature enters, mill three cards.\nWhenever you sacrifice a permanent, you may pay {2}. If you do, return target permanent card from your graveyard to your hand.
+
+DeckHas:Ability$Graveyard|Sacrifice

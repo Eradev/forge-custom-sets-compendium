@@ -10,7 +10,7 @@ SVar:TrigDesecrate:AB$ ImmediateTrigger | Cost$ Sac<1/Artifact;Land/artifact or 
 SVar:DBDesecrateSignal:DB$ Cleanup | Named$ Desecrate
 
 T:Mode$ AbilityTriggered | ValidMode$ Immediate | ValidSource$ Card.Self | ValidSpellAbility$ Ability.NamedAbilityDesecrate | Execute$ TrigPump | TriggerDescription$ When this creature desecrates a permanent, up to two target creatures can't block this turn.
-SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 2 | KW$ HIDDEN CARDNAME can't block. | StackDescription$ {c:Targeted} can't block this turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 2 | KW$ HIDDEN CARDNAME can't block. | IsCurse$ True | StackDescription$ {c:Targeted} can't block this turn.
 
 Oracle:Haste\nDesecrate (When this creature enters, you may sacrifice an artifact or land.)\nWhen this creature desecrates a permanent, up to two target creatures can't block this turn.
 

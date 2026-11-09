@@ -1,0 +1,10 @@
+Name:Painting Dolls
+ManaCost:1 W U
+Types:Instant
+
+A:SP$ PutCounter | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target creature | CounterType$ PORCELAIN | RememberCards$ True | SubAbility$ DBPutCounterArtifact | SpellDescription$ Put a porcelain counter on each of up to one target creature and up to one target artifact. They become 3/3 colorless artifact creatures and lose all abilities.
+SVar:DBPutCounterArtifact:DB$ PutCounter | ValidTgts$ Artifact | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target artifact | CounterType$ PORCELAIN | RememberCards$ True | SubAbility$ DBAnimateAll
+SVar:DBAnimateAll:DB$ AnimateAll | ValidCards$ Card.IsRemembered | Power$ 3 | Toughness$ 3 | Types$ Artifact,Creature | Colors$ Colorless | OverwriteColors$ True | RemoveAllAbilities$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Put a porcelain counter on each of up to one target creature and up to one target artifact. They become 3/3 colorless artifact creatures and lose all abilities.

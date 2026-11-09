@@ -1,0 +1,9 @@
+Name:Pon's Apprentice
+ManaCost:2 U
+Types:Creature Human Wizard
+PT:2/2
+
+T:Mode$ Untaps | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigAnimate | TriggerDescription$ Inspired — Whenever this creature becomes untapped, target creature you control has base power and toughness 5/5 until end of turn.
+SVar:TrigAnimate:DB$ Animate | ValidTgts$ Creature.YouCtrl | Power$ 5 | Toughness$ 5
+
+Oracle:Inspired — Whenever this creature becomes untapped, target creature you control has base power and toughness 5/5 until end of turn.

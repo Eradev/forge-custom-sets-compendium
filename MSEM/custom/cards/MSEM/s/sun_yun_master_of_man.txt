@@ -1,0 +1,12 @@
+Name:Sun Yun, Master of Man
+ManaCost:2 U U
+Types:Legendary Creature Human Wizard
+PT:1/3
+
+K:ETBReplacement:Copy:DBCopy:Optional
+SVar:DBCopy:DB$ Clone | Choices$ Creature | NewName$ Sun Yun, Master of Man | AddTypes$ Legendary | AddAbilities$ ABBounce | SpellDescription$ You may have NICKNAME enter as a copy of any creature on the battlefield, except her name is Sun Yun, Master of Man, she's legendary in addition to her other types, and she has "{2}{U}: Exile Sun Yun, then return her to the battlefield under her owner's control."
+SVar:ABBounce:AB$ ChangeZone | Cost$ 2 U | Defined$ Self | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn | SpellDescription$ Exile NICKNAME, then return her to the battlefield under her owner's control.
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:You may have Sun Yun enter as a copy of any creature on the battlefield, except her name is Sun Yun, Master of Man, she's legendary in addition to her other types, and she has "{2}{U}: Exile Sun Yun, then return her to the battlefield under her owner's control."

@@ -1,0 +1,16 @@
+Name:Xiejuan and Hao Lu
+ManaCost:4 G G
+Types:Legendary Creature Cat Human
+PT:6/6
+
+K:Trample
+
+K:Vigilance
+
+S:Mode$ RaiseCost | ValidTarget$ Card.Self | Activator$ Opponent | Type$ Spell | Amount$ X | Description$ Spells your opponents cast that target CARDNAME cost {X} more to cast, where X is the number of other creatures you control.
+SVar:X:Count$Valid Creature.Other+YouCtrl
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever another creature you control dies, draw a card.
+SVar:TrigDraw:DB$ Draw
+
+Oracle:Trample, vigilance\nSpells your opponents cast that target Xiejuan and Hao Lu cost {X} more to cast, where X is the number of other creatures you control.\nWhenever another creature you control dies, draw a card.

@@ -1,0 +1,17 @@
+Name:The Orange Orchard
+ManaCost:no cost
+Types:Legendary Land
+
+A:AB$ Mana | Cost$ T | Produced$ C | SpellDescription$ Add {C}.
+
+A:AB$ ChooseColor | Cost$ 2 T | SubAbility$ DBChoice | AILogic$ MostProminentInComputerDeck | SpellDescription$ Choose a color, then choose one —\n• Add one mana of that color for each token you control.\n• Add one mana of that color for each permanent you control with one or more counters on it.
+SVar:DBChoice:DB$ GenericChoice | Defined$ You | Choices$ DBManaTokens,DBManaCounters
+
+SVar:DBManaTokens:DB$ Mana | Produced$ Chosen | Amount$ XTokens | SubAbility$ DBCleanupColor | SpellDescription$ Add one mana of that color for each token you control.
+
+SVar:DBManaCounters:DB$ Mana | Produced$ Chosen | Amount$ XCounters | SubAbility$ DBCleanupColor | SpellDescription$ Add one mana of that color for each permanent you control with one or more counters on it.
+SVar:DBCleanupColor:DB$ Cleanup | ClearChosenColor$ True
+SVar:XTokens:Count$Valid Permanent.token+YouCtrl
+SVar:XCounters:Count$Valid Permanent.YouCtrl+HasCounters
+
+Oracle:{T}: Add {C}.\n{2}, {T}: Choose a color, then choose one —\n• Add one mana of that color for each token you control.\n• Add one mana of that color for each permanent you control with one or more counters on it.

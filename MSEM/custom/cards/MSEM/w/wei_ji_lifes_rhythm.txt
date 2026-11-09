@@ -1,0 +1,17 @@
+Name:Wei Ji, Life's Rhythm
+ManaCost:2 B G
+Types:Legendary Planeswalker Ji
+Loyalty:4
+
+A:AB$ Token | Cost$ AddCounter<0/LOYALTY> | Planeswalker$ True | TokenScript$ g_2_2_panda_bear_monk_loyalty | SpellDescription$ Create a 2/2 green Panda Bear Monk creature token with "When this creature dies, put a loyalty counter on a Ji planeswalker you control."
+
+A:AB$ Sacrifice | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | Defined$ Player | SacValid$ Permanent.nonLand | SubAbility$ DBReturn | SpellDescription$ Each player sacrifices a nonland permanent. You may return a nonland permanent card from your graveyard to your hand.
+SVar:DBReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Permanent.nonLand+YouOwn | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target nonland permanent card in your graveyard
+
+A:AB$ Effect | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Wei Ji, Life's Rhythm | Image$ emblem_wei_ji_lifes_rhythm | Triggers$ TrigDies | Duration$ Permanent | AILogic$ Always | SpellDescription$ You get an emblem with "Whenever a permanent you control dies, you may search your library for a card that shares a card type with that permanent and put it onto the battlefield, then shuffle."
+SVar:TrigDies:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Permanent.YouCtrl | TriggerZones$ Command | OptionalDecider$ You | Execute$ TrigSearch | TriggerDescription$ Whenever a permanent you control dies, you may search your library for a card that shares a card type with that permanent and put it onto the battlefield, then shuffle.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Card.sharesCardTypeWith TriggeredCardLKICopy | ChangeNum$ 1 | ShuffleNonMandatory$ True
+
+Oracle:[0]: Create a 2/2 green Panda Bear Monk creature token with "When this creature dies, put a loyalty counter on a Ji planeswalker you control."\n[-2]: Each player sacrifices a nonland permanent. You may return a nonland permanent card from your graveyard to your hand.\n[-6]: You get an emblem with "Whenever a permanent you control dies, you may search your library for a card that shares a card type with that permanent and put it onto the battlefield, then shuffle."
+
+DeckHas:Ability$Token|Sacrifice|Graveyard & Type$Panda Bear|Monk

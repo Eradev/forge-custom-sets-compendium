@@ -1,0 +1,15 @@
+Name:Spawn of Qiyan
+ManaCost:6 G G
+Types:Creature Hydra
+PT:4/4
+
+K:Trample
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigCounters | TriggerDescription$ When this creature enters, distribute four +1/+1 counters among any number of target creatures you control.
+SVar:TrigCounters:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select any number of creatures to distribute counters to | CounterType$ P1P1 | CounterNum$ 4 | TargetMin$ 0 | TargetMax$ 4 | DividedAsYouChoose$ 4
+
+A:AB$ ChangeZone | Cost$ 2 G | Origin$ Graveyard | Destination$ Library | Defined$ Self | LibraryPosition$ 1 | ActivationZone$ Graveyard | SpellDescription$ Put this card from your graveyard into your library second from the top.
+
+Oracle:Trample\nWhen this creature enters, distribute four +1/+1 counters among any number of target creatures you control.\n{2}{G}: Put this card from your graveyard into your library second from the top.
+
+DeckHas:Ability$Counters

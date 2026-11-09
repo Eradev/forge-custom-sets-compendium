@@ -1,0 +1,10 @@
+Name:Lu'She Temple Customs
+ManaCost:1 G G
+Types:Sorcery
+
+A:SP$ ChangeZone | Cost$ Sac<1/Permanent> | Origin$ Graveyard | Destination$ Hand | TargetMin$ 0 | TargetMax$ 2 | ValidTgts$ Card.YouOwn | TgtPrompt$ Select up to two target cards in your graveyard | SubAbility$ DBExile | SpellDescription$ As an additional cost to cast this spell, sacrifice a permanent. Return up to two target cards from your graveyard to your hand. Exile CARDNAME.
+SVar:DBExile:DB$ ChangeZone | Defined$ Self | Origin$ Stack | Destination$ Exile
+
+Oracle:As an additional cost to cast this spell, sacrifice a permanent.\nReturn up to two target cards from your graveyard to your hand. Exile Lu'She Temple Customs.
+
+DeckHints:Ability$Graveyard|Sacrifice

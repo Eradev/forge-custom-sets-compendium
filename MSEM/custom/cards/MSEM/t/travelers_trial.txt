@@ -1,0 +1,7 @@
+Name:Traveler's Trial
+ManaCost:2 B
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Creature.!HasCounters+!enchanted+!equipped | TgtPrompt$ Select target creature with no counters on it and no permanents attached to it | SpellDescription$ Destroy target creature with no counters on it and no permanents attached to it.
+
+Oracle:Destroy target creature with no counters on it and no permanents attached to it.

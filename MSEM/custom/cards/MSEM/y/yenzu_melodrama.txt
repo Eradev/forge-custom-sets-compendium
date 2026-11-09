@@ -1,0 +1,14 @@
+Name:Yenzu Melodrama
+ManaCost:2 B
+Types:Enchantment
+
+S:Mode$ ReduceCost | ValidCard$ Demon | Type$ Spell | Activator$ You | Amount$ 2 | Description$ Demon spells you cast cost {2} less to cast and an additional 2 life to cast.
+S:Mode$ RaiseCost | ValidCard$ Demon | Type$ Spell | Activator$ You | Cost$ PayLife<2>
+
+T:Mode$ SpellCast | ValidCard$ Demon | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever you cast a Demon spell, create a 0/1 black Cultist creature token with "{1}{B}{B}, Sacrifice three Cultists: Create a 5/5 black Demon creature token."
+SVar:TrigToken:DB$ Token | TokenScript$ b_0_1_cultist_sac
+
+Oracle:Demon spells you cast cost {2} less to cast and an additional 2 life to cast. \nWhenever you cast a Demon spell, create a 0/1 black Cultist creature token with "{1}{B}{B}, Sacrifice three Cultists: Create a 5/5 black Demon creature token."
+
+DeckHas:Ability$Token|Sacrifice & Type$Cultist|Demon
+DeckHints:Type$Demon

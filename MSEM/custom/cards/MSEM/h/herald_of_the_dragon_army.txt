@@ -1,0 +1,12 @@
+Name:Herald of the Dragon Army
+ManaCost:R
+Types:Creature Human Warrior
+PT:1/1
+
+K:Haste
+
+A:AB$ PumpAll | Cost$ 1 R T | ValidCards$ Creature.attacking+YouCtrl | NumAtt$ +1 | SpellDescription$ Attacking creatures you control get +1/+0 until end of turn.
+
+Oracle:Haste\n{1}{R}, {T}: Attacking creatures you control get +1/+0 until end of turn.
+
+SVar:HasAttackEffect:TRUE

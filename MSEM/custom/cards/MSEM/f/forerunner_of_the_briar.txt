@@ -1,0 +1,17 @@
+Name:Forerunner of the Briar
+ManaCost:3 G
+Types:Creature Human Scout
+PT:4/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSac | TriggerDescription$ When this creature enters, sacrifice two lands. When you do, ABILITY
+SVar:TrigSac:DB$ Sacrifice | SacValid$ Land.YouCtrl | Amount$ 2 | SubAbility$ DBImmediate
+SVar:DBImmediate:DB$ ImmediateTrigger | Execute$ TrigCharm | TriggerDescription$ When you do, ABILITY
+SVar:TrigCharm:DB$ Charm | MinCharmNum$ 1 | CharmNum$ 1 | Choices$ DBToken,DBSearch
+
+SVar:DBToken:DB$ Token | TokenScript$ g_3_3_beast | SpellDescription$ Create a 3/3 green Beast creature token.
+
+SVar:DBSearch:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Land.Basic | ChangeNum$ 2 | Tapped$ True | Shuffle$ True | SpellDescription$ Search your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle.
+
+Oracle:When this creature enters, sacrifice two lands. When you do, choose one —\n• Create a 3/3 green Beast creature token.\n• Search your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle.
+
+DeckHas:Ability$Token|Sacrifice

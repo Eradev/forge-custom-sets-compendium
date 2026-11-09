@@ -1,0 +1,21 @@
+Name:Dragon Emperor's Chariot
+ManaCost:4 R R
+Types:Legendary Artifact Vehicle
+PT:10/10
+
+K:Flying
+
+K:Trample
+
+K:Crew:8
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this Vehicle enters, create a 4/4 red Dragon creature token with flying.
+SVar:TrigToken:DB$ Token | TokenScript$ r_4_4_dragon_flying
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigDamage | TriggerDescription$ Whenever this Vehicle attacks, it deals 4 damage divided as you choose among any number of targets.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Any | TgtPrompt$ Select any number of targets to distribute damage to | NumDmg$ 4 | TargetMin$ 0 | TargetMax$ 4 | DividedAsYouChoose$ 4
+
+Oracle:Flying, trample\nCrew 8\nWhen this Vehicle enters enters, create a 4/4 red Dragon creature token with flying.\nWhenever this Vehicle enters attacks, it deals 4 damage divided as you choose among any number of targets.
+
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Token & Type$Dragon

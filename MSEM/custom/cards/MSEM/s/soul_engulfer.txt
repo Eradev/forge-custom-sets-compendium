@@ -1,0 +1,13 @@
+Name:Soul Engulfer
+ManaCost:1 B B
+Types:Creature Demon
+PT:0/4
+
+K:Menace
+
+T:Mode$ Untaps | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDrain | TriggerDescription$ Inspired — Whenever this creature becomes untapped, each opponent loses 4 life.
+SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 4
+
+Oracle:Menace\nInspired — Whenever this creature becomes untapped, each opponent loses 4 life.
+
+SVar:HasAttackEffect:TRUE

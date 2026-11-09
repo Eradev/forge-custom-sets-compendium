@@ -1,0 +1,13 @@
+Name:Xihuo, the Onyx Flame
+ManaCost:3 B R
+Types:Legendary Creature Dragon
+PT:2/4
+
+K:Flying
+
+T:Mode$ AbilityCast | ValidActivatingPlayer$ Player | ValidSA$ SpellAbility.!ManaAbility+ManaSpent GE1 | TriggerZones$ Battlefield | Execute$ TrigDmg | TriggerDescription$ Whenever a player spends one or more mana to activate an ability that isn't a mana ability, NICKNAME deals 2 damage to each opponent.
+SVar:TrigDmg:DB$ DealDamage | NumDmg$ 2 | Defined$ Opponent
+
+A:AB$ Pump | Cost$ B R PayLife<2> | KW$ Double Strike | ActivationLimit$ 1 | SpellDescription$ NICKNAME gains double strike until end of turn. Activate only once each turn.
+
+Oracle:Flying\nWhenever a player spends one or more mana to activate an ability that isn't a mana ability, Xihuo deals 2 damage to each opponent.\n{B}{R}, Pay 2 life: Xihuo gains double strike until end of turn. Activate only once each turn.

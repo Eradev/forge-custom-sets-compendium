@@ -1,0 +1,31 @@
+Name:Verdant Druid
+ManaCost:2 G
+Types:Creature Human Druid
+PT:3/2
+
+#-------------------
+# Golden Age trigger
+#-------------------
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Secondary$ True | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+T:Mode$ AttackersDeclared | AttackingPlayer$ You | TriggerZones$ Battlefield | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Secondary$ True | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+T:Mode$ AbilityCast | ValidActivatingPlayer$ You | ValidSA$ SpellAbility.!ManaAbility | TriggerZones$ Battlefield | CheckSVar$ GoldenCheckFinal | SVarCompare$ EQ3 | Secondary$ True | Execute$ EnterGoldenAge | TriggerDescription$ Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)
+
+SVar:EnterGoldenAge:DB$ Effect | Name$ Golden Age | StaticAbilities$ GoldenAgeDesc | Duration$ Permanent | Unique$ True
+SVar:GoldenAgeDesc:Mode$ Continuous | Description$ You are in a renaissance.
+
+SVar:GoldenAgeSpell:Count$ThisTurnCast_Card.Instant+YouCtrl,Card.Sorcery+YouCtrl/LimitMax.1
+SVar:GoldenAgeAbility:Count$ThisTurnActivated_Activated.!ManaAbility+YouCtrl/LimitMax.1
+SVar:GoldenAgeAttack:Count$AttackersDeclared/LimitMax.1
+SVar:GoldenCheck1:SVar$GoldenAgeSpell/Plus.GoldenAgeAbility
+SVar:GoldenCheckFinal:SVar$GoldenCheck1/Plus.GoldenAgeAttack
+#-------------------
+
+A:AB$ Dig | Cost$ 2 G | DigNum$ 3 | ChangeNum$ 1 | ChangeValid$ Creature | Optional$ True | DestinationZone$ Library | LibraryPosition$ 0 | RememberChanged$ True | DestinationZone2$ Library | LibraryPosition$ -1 | SubAbility$ DBBranch | SpellDescription$ Reveal the top three cards of your library. You may put a creature card from among them on top. If you're in a renaissance, put it into your hand instead. Put the rest on the bottom in any order.
+SVar:DBBranch:DB$ Branch | BranchConditionSVar$ IsRenaissance | BranchConditionSVarCompare$ EQ1 | TrueSubAbility$ DBToHand | FalseSubAbility$ DBCleanup | ConditionDefined$ Remembered | ConditionPresent$ Card
+SVar:DBToHand:DB$ ChangeZone | Defined$ Remembered | Origin$ Library | Destination$ Hand | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:IsRenaissance:Count$ValidCommand Effect.YouCtrl+namedGolden Age/LimitMax.1
+
+Oracle:Golden age (If you cast an instant or sorcery spell, activated a nonmana ability, and attacked this turn, enter a renaissance for this game.)\n{2}{G}: Reveal the top three cards of your library. You may put a creature card from among them on top. If you're in a renaissance, put it into your hand instead. Put the rest on the bottom in any order.

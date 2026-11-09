@@ -1,0 +1,18 @@
+Name:For the Court of the Queen
+ManaCost:2 R
+Types:Enchantment
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | OptionalDecider$ You | Execute$ TrigStart | ActivationLimit$ 1 | TriggerZones$ Battlefield | TriggerDescription$ Once each turn, when you cast an instant or sorcery spell, you may exile the top two cards of your library if you cast it for its showcase cost, otherwise, look at the top two cards of your library, then put one on the bottom of your library and exile the other. You may play cards exiled this way until you exile one or more other cards with CARDNAME.
+SVar:TrigStart:DB$ ChangeZone | Defined$ Imprinted | Origin$ Command | Destination$ Exile | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearImprinted$ True | SubAbility$ DBBranch
+SVar:DBBranch:DB$ Branch | BranchConditionSVar$ Showcase | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBExileBoth | FalseSubAbility$ DBLook
+SVar:DBExileBoth:DB$ Dig | Defined$ You | DigNum$ 2 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBEffect
+SVar:DBLook:DB$ Dig | Defined$ You | DigNum$ 2 | ChangeNum$ 1 | DestinationZone$ Exile | DestinationZone2$ Library | LibraryPosition2$ -1 | NoReveal$ True | RememberChanged$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ Remembered | StaticAbilities$ Play | Duration$ Permanent | ForgetOnMoved$ Exile | ImprintOnHost$ True
+SVar:Play:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ You may play this card until you exile one or more other cards with EFFECTSOURCE.
+SVar:Showcase:TriggeredSpellAbility$FromNamedAbilityShowcase.1.0
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | Execute$ DBCleanupHost | Static$ True
+SVar:DBCleanupHost:DB$ Cleanup | ClearImprinted$ True
+
+Oracle:Once each turn, when you cast an instant or sorcery spell, you may exile the top two cards of your library if you cast it for its showcase cost, otherwise, look at the top two cards of your library, then put one on the bottom of your library and exile the other. You may play cards exiled this way until you exile one or more other cards with For the Court of the Queen.

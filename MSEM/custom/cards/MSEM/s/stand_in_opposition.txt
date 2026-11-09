@@ -1,0 +1,8 @@
+Name:Stand in Opposition
+ManaCost:2 U
+Types:Instant
+
+A:SP$ AnimateAll | ValidCards$ Creature.YouCtrl,Artifact.YouCtrl | Abilities$ TapAbility | SpellDescription$ Until end of turn, creatures and artifacts you control gain "{T}: Tap target permanent."
+SVar:TapAbility:AB$ Tap | Cost$ T | ValidTgts$ Permanent | SpellDescription$ Tap target permanent.
+
+Oracle:Until end of turn, creatures and artifacts you control gain "{T}: Tap target permanent."

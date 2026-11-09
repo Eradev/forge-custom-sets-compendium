@@ -1,0 +1,22 @@
+Name:Fables of the Ill-Fated
+ManaCost:2 B G
+Types:Enchantment Gallery
+
+Text:(Choose only one work as a sorcery to add its ability.)
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDestroy | TriggerDescription$ When this Gallery enters, destroy target nonland permanent.
+SVar:TrigDestroy:DB$ Destroy | ValidTgts$ Permanent.nonLand | ValidTgtsDesc$ nonland permanent
+
+A:AB$ Pump | PrecostDesc$ The Witch's Temple | Cost$ B | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteTheWitchsTemple | SpellDescription$ Whenever a nonland permanent you control dies, each opponent loses 1 life.
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Permanent.nonLand+YouCtrl | TriggerZones$ Battlefield | IsPresent$ Card.Self+NotedForTheWitchsTemple | Execute$ TrigDrain | TriggerDescription$ The Witch's Temple — Whenever a nonland permanent you control dies, each opponent loses 1 life.
+SVar:TrigDrain:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ 1
+
+A:AB$ Pump | PrecostDesc$ Enter the Nest | Cost$ 3 G | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteEnterTheNest | SpellDescription$ Create a 0/0 green Wurm creature token with "This creature gets +1/+1 for each permanent card in your graveyard." Activate only as a sorcery.
+A:AB$ Token | Cost$ 3 G Sac<2/Land> | TokenScript$ g_0_0_wurm_grave | IsPresent$ Card.Self+NotedForEnterTheNest | SorcerySpeed$ True | SpellDescription$ Create a 0/0 green Wurm creature token with "This creature gets +1/+1 for each permanent card in your graveyard." Activate only as a sorcery.
+
+SVar:DBNoteTheWitchsTemple:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ TheWitchsTemple
+SVar:DBNoteEnterTheNest:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ EnterTheNest
+
+Oracle:(Choose only one work as a sorcery to add its ability.)\nWhen this Gallery enters, destroy target nonland permanent.\n{B}: The Witch's Temple\nWhenever a nonland permanent you control dies, each opponent loses 1 life.\n{3}{G}: Enter the Nest\n{3}{G}, Sacrifice two lands: Create a 0/0 green Wurm creature token with "This creature gets +1/+1 for each permanent card in your graveyard." Activate only as a sorcery.
+
+DeckHas:Ability$Token|Sacrifice & Type$Wurm

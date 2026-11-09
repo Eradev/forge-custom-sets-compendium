@@ -1,0 +1,16 @@
+Name:Emperor Dan Te Mogui
+ManaCost:B G U
+Types:Legendary Creature Human Noble
+PT:3/3
+
+T:Mode$ Untaps | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDig | TriggerDescription$ Inspired — Whenever NICKNAME becomes untapped, look at the top three cards of your library. Put one into your graveyard, one on the bottom of your library, and one on top.
+SVar:TrigDig:DB$ Dig | DigNum$ 3 | ChangeNum$ 1 | DestinationZone$ Graveyard | SubAbility$ DBTop
+SVar:DBTop:DB$ Dig | DigNum$ 2 | ChangeNum$ 1 | DestinationZone$ Library | LibraryPosition$ 0 | SubAbility$ DBBottom
+SVar:DBBottom:DB$ Dig | DigNum$ 1 | ChangeNum$ 1 | DestinationZone$ Library | LibraryPosition$ -1
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigOptionalBottom | TriggerDescription$ When NICKNAME dies, you may put it on the bottom of your library. If you do, return target permanent card from your graveyard to your hand.
+SVar:TrigOptionalBottom:DB$ ChangeZone | Defined$ Self | Origin$ Graveyard | Destination$ Library | LibraryPosition$ -1 | Optional$ True | OptionalDecider$ You | RememberChanged$ True | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Permanent.YouOwn | TgtPrompt$ Select target permanent card in your graveyard | ConditionDefined$ Remembered | ConditionPresent$ Card.inZoneLibrary | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Inspired — Whenever Emperor Dan Te Mogui becomes untapped, look at the top three cards of your library. Put one into your graveyard, one on the bottom of your library, and one on top.\nWhen Emperor Dan Te Mogui dies, you may put it on the bottom of your library. If you do, return target permanent card from your graveyard to your hand.

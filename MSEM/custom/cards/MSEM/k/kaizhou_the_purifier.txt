@@ -1,0 +1,20 @@
+Name:Kai'Zhou, the Purifier
+ManaCost:1 B B
+Types:Legendary Creature Human Demon
+PT:3/4
+
+K:Menace
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPhase | OptionalDecider$ You | TriggerDescription$ When NICKNAME enters, you may have all legendary nonland permanents phase out until your next turn.
+SVar:TrigPhase:DB$ Phases | AllValid$ Permanent.Legendary+nonLand | WontPhaseInNormal$ True | RememberAffected$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | Duration$ UntilYourNextTurn | RememberObjects$ Remembered | Triggers$ TrigPhaseIn | ForgetOnPhasedIn$ True | SubAbility$ DBCleanup
+SVar:TrigPhaseIn:Mode$ ChangesZone | Origin$ Command | Destination$ Any | ValidCard$ Card.Self | Execute$ DBPhaseIn | Static$ True | TriggerDescription$ Phase those permanents back in.
+SVar:DBPhaseIn:DB$ Phases | Defined$ Remembered | PhaseInOrOut$ True
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigSac | TriggerDescription$ Whenever NICKNAME deals combat damage to a player, they sacrifice a legendary permanent.
+SVar:TrigSac:DB$ Sacrifice | Defined$ TriggeredTarget | SacValid$ Permanent.Legendary | SacMessage$ legendary permanent
+
+Oracle:Menace\nWhen Kai'Zhou enters, you may have all legendary nonland permanents phase out until your next turn.\nWhenever Kai'Zhou deals combat damage to a player, they sacrifice a legendary permanent.
+
+SVar:MustBeBlocked:True

@@ -1,0 +1,23 @@
+Name:Kai'Jun, the Eradicator
+ManaCost:2 B B
+Types:Legendary Creature Demon
+PT:6/6
+
+K:Flying
+
+K:Trample
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigChoose | TriggerDescription$ At the beginning of combat on your turn, an opponent may sacrifice a creature. If they do, you may sacrifice a creature. If you do, repeat this process. If you don't, tap NICKNAME.
+SVar:TrigChoose:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | ChoiceTitle$ Choose an opponent | SubAbility$ DBRepeat
+SVar:DBRepeat:DB$ Repeat | RepeatSubAbility$ DBRound | RepeatDefined$ Remembered | RepeatPresent$ Card | RepeatCompare$ EQ1 | SubAbility$ DBCleanup
+SVar:DBRound:DB$ Cleanup | ClearRemembered$ True | ClearImprinted$ True | SubAbility$ DBOppSac
+SVar:DBOppSac:DB$ Sacrifice | Defined$ ChosenPlayer | SacValid$ Creature | Optional$ True | RememberSacrificed$ True | SubAbility$ DBImprint
+SVar:DBImprint:DB$ Pump | ImprintCards$ Remembered | SubAbility$ DBClearRem
+SVar:DBClearRem:DB$ Cleanup | ClearRemembered$ True | SubAbility$ DBYouMay
+SVar:DBYouMay:DB$ Sacrifice | SacValid$ Creature | Optional$ True | RememberSacrificed$ True | ConditionDefined$ Imprinted | ConditionPresent$ Card | ConditionCompare$ GE1 | SubAbility$ DBAfterYou
+SVar:DBAfterYou:DB$ Branch | BranchConditionSVar$ YouSaced | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBCleanup | FalseSubAbility$ DBTapAndClear
+SVar:YouSaced:Count$RememberedSize
+SVar:DBTapAndClear:DB$ Tap | ConditionDefined$ Imprinted | ConditionPresent$ Card | ConditionCompare$ GE1 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearImprinted$ True
+
+Oracle:Flying, trample\nAt the beginning of combat on your turn, an opponent may sacrifice a creature. If they do, you may sacrifice a creature. If you do, repeat this process. If you don't, tap Kai'Jun.

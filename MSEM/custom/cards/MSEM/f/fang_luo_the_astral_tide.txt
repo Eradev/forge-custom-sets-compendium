@@ -1,0 +1,15 @@
+Name:Fang Luo, the Astral Tide
+ManaCost:1 W U B
+Types:Legendary Creature Dragon Spirit
+PT:2/3
+
+K:Flash
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When NICKNAME enters, exile target spell or creature an opponent controls with mana value 4 or less, then its owner puts it onto the battlefield face down. (It's a 2/2 creature.)
+SVar:TrigExile:DB$ ChangeZone | ValidTgts$ Creature.OppCtrl+cmcLE4,Card.inZoneStack+OppCtrl+cmcLE4 | TgtZone$ Stack,Battlefield | Origin$ Battlefield,Stack | Destination$ Exile | IsCurse$ True | TgtPrompt$ Select target spell or creature an opponent controls with mana value 4 or less | RememberChanged$ True | SubAbility$ DBFaceDown
+SVar:DBFaceDown:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | FaceDown$ True | FaceDownPower$ 2 | FaceDownToughness$ 2 | FaceDownSetType$ Creature | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Flash\nFlying\nWhen Fang Luo enters, exile target spell or creature an opponent controls with mana value 4 or less, then its owner puts it onto the battlefield face down. (It's a 2/2 creature.)

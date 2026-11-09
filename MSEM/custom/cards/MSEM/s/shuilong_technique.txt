@@ -1,0 +1,14 @@
+Name:Shuilong Technique
+ManaCost:U
+Types:Sorcery
+
+A:SP$ Draw | SubAbility$ DBDrake | SpellDescription$ Draw a card. If this is the third spell you've cast this turn, create a 2/2 blue Drake creature token with flying. If this is the sixth spell you've cast this turn, exile it, then return up to three target instant and/or sorcery cards from your graveyard to your hand and untap up to six lands.
+SVar:DBDrake:DB$ Token | TokenScript$ u_2_2_drake_flying | ConditionCheckSVar$ X | ConditionSVarCompare$ GE3 | SubAbility$ DBExile
+SVar:DBExile:DB$ ChangeZone | Origin$ Stack | Destination$ Exile | ConditionCheckSVar$ X | ConditionSVarCompare$ GE6 | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | TargetMin$ 0 | TargetMax$ 3 | ValidTgts$ Instant.YouCtrl,Sorcery.YouCtrl | TgtPrompt$ Select up to three target instant and/or sorcery cards in your graveyard | ConditionCheckSVar$ X | ConditionSVarCompare$ GE6 | SubAbility$ DBUntap
+SVar:DBUntap:DB$ Untap | UntapUpTo$ True | UntapType$ Land | Amount$ 6 | ConditionCheckSVar$ X | ConditionSVarCompare$ GE6
+SVar:X:Count$ThisTurnCast_Card.YouCtrl
+
+Oracle:Draw a card. If this is the third spell you've cast this turn, create a 2/2 blue Drake creature token with flying. If this is the sixth spell you've cast this turn, exile it, then return up to three target instant and/or sorcery cards from your graveyard to your hand and untap up to six lands.
+
+DeckHas:Ability$Token & Type$Drake

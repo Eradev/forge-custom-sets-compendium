@@ -1,0 +1,23 @@
+Name:Path of the Outsider
+ManaCost:3 U B
+Types:Enchantment Gallery
+
+Text:(Choose only one work as a sorcery to add its ability.)
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigBounce | TriggerDescription$ When this Gallery enters, return target creature to its owner's hand, then each opponent sacrifices a creature.
+SVar:TrigBounce:DB$ ChangeZone | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Hand | SubAbility$ DBSacrifice
+SVar:DBSacrifice:DB$ Sacrifice | Defined$ Opponent | SacValid$ Creature
+
+A:AB$ Pump | PrecostDesc$ Evanescence | Cost$ 2 U | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteEvanescence | SpellDescription$ Target creature phases out. Activate only during your turn and only once each turn.
+
+A:AB$ Phases | Cost$ 0 | ValidTgts$ Creature | TgtPrompt$ Select target creature | PlayerTurn$ True | ActivationLimit$ 1 | IsPresent$ Card.Self+NotedForEvanescence | PrecostDesc$ Evanescence | SpellDescription$ Target creature phases out. Activate only during your turn and only once each turn.
+
+A:AB$ Pump | PrecostDesc$ Anguish | Cost$ 2 B | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteAnguish | SpellDescription$ Whenever a creature attacks you, it gets -1/-1 until end of turn.
+
+T:Mode$ Attacks | ValidCard$ Creature | Attacked$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+NotedForAnguish | Execute$ TrigAnguishPump | TriggerDescription$ Anguish — Whenever a creature attacks you, it gets -1/-1 until end of turn.
+SVar:TrigAnguishPump:DB$ Pump | Defined$ TriggeredAttacker | NumAtt$ -1 | NumDef$ -1 | IsCurse$ True
+
+SVar:DBNoteEvanescence:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ Evanescence
+SVar:DBNoteAnguish:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ Anguish
+
+Oracle:(Choose only one work as a sorcery to add its ability.)\nWhen this Gallery enters, return target creature to its owner's hand, then each opponent sacrifices a creature.\n{2}{U}: Evanescence\n{0}: Target creature phases out. Activate only during your turn and only once each turn.\n{2}{B}: Anguish\nWhenever a creature attacks you, it gets -1/-1 until end of turn.

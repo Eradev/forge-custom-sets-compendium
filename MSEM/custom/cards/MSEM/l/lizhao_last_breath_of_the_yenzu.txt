@@ -1,0 +1,20 @@
+Name:Lizhao, Last Breath of the Yenzu
+ManaCost:3 B B
+Types:Legendary Creature Elder Demon
+PT:5/5
+
+K:Flying
+
+K:Lifelink
+
+S:Mode$ Continuous | Affected$ Demon.Other+YouCtrl | AddKeyword$ Flying & Lifelink | Description$ Other Demons you control have flying and lifelink.
+
+R:Event$ CreateToken | ActiveZones$ Battlefield | ValidToken$ Creature.YouCtrl | Optional$ True | ReplaceWith$ DemonReplace | Description$ If you would create a creature token, you may instead pay 5 life and create a 5/5 black Demon creature token.
+SVar:DemonReplace:DB$ LoseLife | LifeAmount$ 5 | SubAbility$ DBReplaceDemon
+SVar:DBReplaceDemon:DB$ ReplaceToken | Type$ ReplaceToken | TokenScript$ b_5_5_demon
+
+Oracle:Flying, lifelink\nOther Demons you control have flying and lifelink.\nIf you would create a creature token, you may instead pay 5 life and create a 5/5 black Demon creature token.
+
+DeckHas:Ability$Token
+DeckHints:Ability$Token & Type$Demon
+SVar:PlayMain1:TRUE

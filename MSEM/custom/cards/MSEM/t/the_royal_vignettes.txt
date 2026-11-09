@@ -1,0 +1,29 @@
+Name:The Royal Vignettes
+ManaCost:1 U R
+Types:Enchantment Gallery
+
+Text:(Choose only one work as a sorcery to add its ability.)
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigExile | TriggerDescription$ When this Gallery enters, exile target instant or sorcery card from your graveyard. Until your next turn, you may cast that card.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Instant.YouOwn,Sorcery.YouOwn | TgtPrompt$ Select target instant or sorcery card from your graveyard | RememberChanged$ True | SubAbility$ DBMayPlay
+SVar:DBMayPlay:DB$ Effect | StaticAbilities$ STMayPlay | Duration$ UntilTheEndOfYourNextTurn | RememberObjects$ Remembered | ForgetOnMoved$ Exile | SubAbility$ DBCleanupETB
+SVar:STMayPlay:Mode$ Continuous | Affected$ Card.IsRemembered | AffectedZone$ Exile | MayPlay$ True | Description$ Until your next turn, you may cast that card.
+SVar:DBCleanupETB:DB$ Cleanup | ClearRemembered$ True
+
+A:AB$ Pump | PrecostDesc$ Ju, the Artisan | Cost$ 1 U | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteJu | SpellDescription$ Whenever you cast an instant spell, draw a card, then discard a card.
+
+T:Mode$ SpellCast | ValidCard$ Instant.YouCtrl | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+NotedForJuTheArtisan | Execute$ TrigDrawDiscard | TriggerDescription$ Ju, the Artisan — Whenever you cast an instant spell, draw a card, then discard a card.
+SVar:TrigDrawDiscard:DB$ Draw | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Mode$ TgtChoose
+
+A:AB$ Pump | PrecostDesc$ Lan, the Poet | Cost$ 1 R | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteLan | SpellDescription$ Whenever you cast a sorcery spell, create a 1/1 red Bard creature token with "This creature can't block."
+
+T:Mode$ SpellCast | ValidCard$ Sorcery.YouCtrl | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Card.Self+NotedForLanThePoet | Execute$ TrigToken | TriggerDescription$ Lan, the Poet — Whenever you cast a sorcery spell, create a 1/1 red Bard creature token with "This creature can't block."
+SVar:TrigToken:DB$ Token | TokenScript$ r_1_1_bard_cantblock
+
+SVar:DBNoteJu:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ JuTheArtisan
+SVar:DBNoteLan:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ LanThePoet
+
+Oracle:(Choose only one work as a sorcery to add its ability.)\nWhen this Gallery enters, exile target instant or sorcery card from your graveyard. Until your next turn, you may cast that card.\n{1}{U}: Ju, the Artisan\nWhenever you cast an instant spell, draw a card, then discard a card.\n{1}{R}: Lan, the Poet\nWhenever you cast a sorcery spell, create a 1/1 red Bard creature token with "This creature can't block."
+
+DeckHas:Ability$Token|Discard

@@ -1,0 +1,12 @@
+Name:Mischievous Maolu
+ManaCost:1 G
+Types:Creature Beast
+PT:2/1
+
+T:Mode$ Sacrificed | ValidPlayer$ You | ValidCard$ Permanent | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever you sacrifice a permanent, this creature gets +1/+1 until end of turn and you gain 1 life.
+SVar:TrigPump:DB$ Pump | NumAtt$ +1 | NumDef$ +1 | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 1
+
+Oracle:Whenever you sacrifice a permanent, this creature gets +1/+1 until end of turn and you gain 1 life.
+
+DeckHas:Ability$LifeGain|Sacrifice

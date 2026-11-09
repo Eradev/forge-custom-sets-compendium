@@ -1,0 +1,13 @@
+Name:Jeering Kit
+ManaCost:3 R
+Types:Creature Fox
+PT:3/2
+
+K:Menace
+
+T:Mode$ Untaps | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Inspired — Whenever creature becomes untapped, target Fox you control gets +1/+1 until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Fox.YouCtrl | TgtPrompt$ Select target Fox you control | NumAtt$ +1 | NumDef$ +1
+
+Oracle:Menace\nInspired — Whenever this creature becomes untapped, target Fox you control gets +1/+1 until end of turn.
+
+DeckHints:Type$Fox

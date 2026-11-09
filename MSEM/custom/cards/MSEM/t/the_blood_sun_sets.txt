@@ -1,0 +1,8 @@
+Name:The Blood Sun Sets
+ManaCost:B
+Types:Instant
+
+A:SP$ Animate | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | Abilities$ BloodSunDestroy | SpellDescription$ Until end of turn, target creature you control gains "{T}: Destroy target creature."
+SVar:BloodSunDestroy:AB$ Destroy | Cost$ T | ValidTgts$ Creature | SpellDescription$ Destroy target creature.
+
+Oracle:Until end of turn, target creature you control gains "{T}: Destroy target creature."

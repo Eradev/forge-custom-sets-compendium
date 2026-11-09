@@ -1,0 +1,14 @@
+Name:Foster the Future
+ManaCost:2 G
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When this creature  enters, create a 3/3 red Panda creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ r_3_3_panda
+
+S:Mode$ Continuous | Affected$ Creature.Panda+YouCtrl,Planeswalker.Mao+YouCtrl | AddAbility$ FTFVigilance & FTFTrample | Description$ Panda creatures and Mao planeswalkers you control have "+2: Target creature you control gains vigilance until end of turn" and "-4: Creatures you control get +1/+1 and gain trample until end of turn."
+SVar:FTFVigilance:AB$ Pump | Cost$ AddCounter<2/LOYALTY> | Planeswalker$ True | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | KW$ Vigilance | SpellDescription$ Target creature you control gains vigilance until end of turn.
+SVar:FTFTrample:AB$ PumpAll | Cost$ SubCounter<4/LOYALTY> | Planeswalker$ True | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1 | KW$ Trample | SpellDescription$ Creatures you control get +1/+1 and gain trample until end of turn.
+
+Oracle:When this creature enters, create a 3/3 red Panda creature token.\nPanda creatures and Mao planeswalkers you control have "+2: Target creature you control gains vigilance until end of turn" and "-4: Creatures you control get +1/+1 and gain trample until end of turn."
+
+DeckHas:Ability$Token & Type$Panda|Mao

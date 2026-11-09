@@ -1,0 +1,19 @@
+Name:Yujei, Zephyr Melodist
+ManaCost:2 W
+Types:Legendary Creature Human Bard
+PT:1/1
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ When NICKNAME enters, create a 1/1 white Bird creature token with flying.
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_bird_flying
+
+A:AB$ Branch | Cost$ 2 W | ValidTgts$ Creature.Other+YouCtrl | TgtPrompt$ Select another target creature you control | BranchConditionSVar$ TargetFlying | BranchConditionSVarCompare$ EQ1 | TrueSubAbility$ DBCounterSelf | FalseSubAbility$ DBCounterTarget | SpellDescription$ Put a +1/+1 counter on another target creature. It gains flying until end of turn. If it already has flying, put a +1/+1 counter on NICKNAME instead.
+SVar:DBCounterTarget:DB$ PutCounter | Defined$ Targeted | CounterType$ P1P1 | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | Defined$ Targeted | KW$ Flying
+SVar:DBCounterSelf:DB$ PutCounter | CounterType$ P1P1
+SVar:TargetFlying:Targeted$Valid Creature.withFlying
+
+Oracle:Flying\nWhen Yujei enters, create a 1/1 white Bird creature token with flying.\n{2}{W}: Put a +1/+1 counter on another target creature. It gains flying until end of turn. If it already has flying, put a +1/+1 counter on Yujei instead.
+
+DeckHas:Ability$Token|Counters & Type$Bird

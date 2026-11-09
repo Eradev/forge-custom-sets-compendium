@@ -1,0 +1,12 @@
+Name:Effigy of Ivory Fire
+ManaCost:3
+Types:Artifact
+
+A:AB$ Mana | Cost$ T | Produced$ Any | SubAbility$ DBCounter | SpellDescription$ Add one mana of any color. Put a creation counter on this artifact.
+SVar:DBCounter:DB$ PutCounter | CounterType$ CREATION
+
+A:AB$ Animate | Cost$ 2 | Power$ 4 | Toughness$ 4 | Types$ Artifact,Creature,Dragon | Keywords$ Flying | Duration$ UntilEndOfTurn | IsPresent$ Card.Self+counters_GE3_CREATION | SpellDescription$ This artifact becomes a 4/4 red Dragon artifact creature with flying until end of turn. Activate only if it has three or more creation counters on it.
+
+Oracle:{T}: Add one mana of any color. Put a creation counter on this artifact.\n{2}: This artifact becomes a 4/4 red Dragon artifact creature with flying until end of turn. Activate only if it has three or more creation counters on it.
+
+DeckHas:Ability$Counters & Type$Dragon

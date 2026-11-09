@@ -1,0 +1,17 @@
+Name:Cheng, Wild Tyrant
+ManaCost:4 B R G
+Types:Legendary Creature Dragon
+PT:6/6
+
+K:Flying
+
+K:Haste
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDig | TriggerDescription$ Whenever NICKNAME attacks, look at the top six cards of your library. You may reveal a creature card from among them and put it into your hand. If it's a Dragon, put it onto the battlefield tapped and attacking instead. Put the rest on the bottom of your library in a random order.
+SVar:TrigDig:DB$ Dig | DigNum$ 6 | ChangeNum$ 1 | Optional$ True | ChangeValid$ Creature | ForceRevealToController$ True | RememberChanged$ True | DestinationZone$ Hand | DestinationZone2$ Library | LibraryPosition$ -1 | RestRandomOrder$ True | SubAbility$ DBDragonCheck
+SVar:DBDragonCheck:DB$ ChangeZone | ConditionDefined$ Remembered | ConditionPresent$ Card.Dragon | Defined$ Remembered | Origin$ Hand | Destination$ Battlefield | Tapped$ True | Attacking$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Flying, haste\nWhenever Cheng attacks, look at the top six cards of your library. You may reveal a creature card from among them and put it into your hand. If it's a Dragon, put it onto the battlefield tapped and attacking instead. Put the rest on the bottom of your library in a random order.
+
+DeckHints:Type$Dragon

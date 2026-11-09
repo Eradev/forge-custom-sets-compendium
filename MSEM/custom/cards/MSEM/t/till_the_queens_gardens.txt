@@ -1,0 +1,11 @@
+Name:Till the Queen's Gardens
+ManaCost:X G
+Types:Sorcery
+
+A:SP$ Token | TokenScript$ g_0_1_plant | TokenAmount$ X | SubAbility$ DBPutCounter | SpellDescription$ Create X 0/1 green Plant creature tokens, then distribute X +1/+1 counters among any number of creatures you control.
+SVar:DBPutCounter:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select any number of creatures to distribute counters to | CounterType$ P1P1 | CounterNum$ X | TargetMin$ 0 | TargetMax$ X | DividedAsYouChoose$ X
+SVar:X:Count$xPaid
+
+Oracle:Create X 0/1 green Plant creature tokens, then distribute X +1/+1 counters among any number of creatures you control.
+
+DeckHas:Ability$Token|Counters & Type$Plant

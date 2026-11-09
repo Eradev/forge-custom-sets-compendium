@@ -1,0 +1,14 @@
+Name:Kai'Long, the Call of the Dark
+ManaCost:3 B B
+Types:Legendary Creature Demon
+PT:4/4
+
+K:Flying
+
+S:Mode$ Continuous | Affected$ Card.Black+nonLand+cmcLE3+YouOwn | AffectedZone$ Hand | MayPlay$ True | MayPlayAltManaCost$ PayLife<ConvertedManaCost> | MayPlayDontGrantZonePermissions$ True | Description$ You may cast black spells with mana value 3 or less by paying life equal to their mana values rather than paying their mana costs.
+
+A:AB$ GainLife | Cost$ B Sac<1/Creature.Other/another creature> | LifeAmount$ 3 | SpellDescription$ You gain 3 life.
+
+Oracle:Flying\nYou may cast black spells with mana value 3 or less by paying life equal to their mana values rather than paying their mana costs.\n{B}, Sacrifice another creature: You gain 3 life.
+
+DeckHas:Ability$LifeGain|Sacrifice

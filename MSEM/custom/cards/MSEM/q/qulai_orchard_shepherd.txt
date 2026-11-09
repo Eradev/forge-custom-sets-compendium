@@ -1,0 +1,13 @@
+Name:Qulai, Orchard Shepherd
+ManaCost:1 R W
+Types:Legendary Creature Fox Spirit
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDig | TriggerDescription$ When NICKNAME enters, look at the top six cards of your library. You may reveal a Fox card from among them and put it into your hand. Put the rest on the bottom of your library in any order.
+SVar:TrigDig:DB$ Dig | DigNum$ 6 | ChangeNum$ 1 | Optional$ True | ChangeValid$ Fox | DestinationZone$ Hand | DestinationZone2$ Library | LibraryPosition$ -1
+
+A:AB$ PumpAll | Cost$ Sac<1/CARDNAME/NICKNAME> | ValidCards$ Fox.YouCtrl | KW$ Hexproof & Indestructible | SpellDescription$ Foxes you control gain hexproof and indestructible until end of turn.
+
+Oracle:When Qulai enters, look at the top six cards of your library. You may reveal a Fox card from among them and put it into your hand. Put the rest on the bottom of your library in any order.\nSacrifice Qulai: Foxes you control gain hexproof and indestructible until end of turn.
+
+DeckHints:Type$Fox
