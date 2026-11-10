@@ -3,7 +3,7 @@ ManaCost:1 B B
 Types:Sorcery
 
 A:SP$ LoseLife | LifeAmount$ 2 | SubAbility$ DBLook | StackDescription$ SpellDescription | SpellDescription$ You lose 2 life. Look at the top two cards of your library. You may mill two cards. Draw two cards, then mill two cards if you didn't mill before.
-SVar:DBLook:DB$ Dig | DigNum$ 2 | ForceRevealToController$ True | SubAbility$ DBChoice
+SVar:DBLook:DB$ PeekAndReveal | PeekAmount$ 2 | NoReveal$ True | SubAbility$ DBChoice
 SVar:DBChoice:DB$ GenericChoice | Defined$ You | Choices$ DBMill,SkipMill | ChoicePrompt$ Mill two cards?
 SVar:DBMill:DB$ Mill | NumCards$ 2 | SubAbility$ DBDrawOnly | SpellDescription$ Mill two cards
 SVar:SkipMill:DB$ Pump | SubAbility$ DBDrawAndMill | SpellDescription$ Don't mill
