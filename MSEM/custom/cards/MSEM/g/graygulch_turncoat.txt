@@ -1,0 +1,20 @@
+Name:Graygulch Turncoat
+ManaCost:3 B
+Types:Creature Spirit Rogue
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | OptionalDecider$ You | Execute$ TrigBounty | TriggerDescription$ When this creature enters, you may post a bounty on target creature. If you do, each opponent loses life equal to the number of bounty counters on creatures.
+SVar:TrigBounty:DB$ PutCounter | CounterType$ BOUNTY | ValidTgts$ Creature | TgtPrompt$ Select target creature | IsCurse$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ Targeted | Duration$ Permanent | StaticAbilities$ BountyStatic | Triggers$ TrigForget | ForgetCounter$ BOUNTY | SubAbility$ DBLoseLife
+SVar:BountyStatic:Mode$ Continuous | Affected$ Card.IsRemembered | AddTrigger$ BountyDeath | Description$ For as long as that creature has a bounty counter on it, it has "When this creature dies, each opponent draws a card."
+SVar:BountyDeath:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ BountyPayoff | TriggerDescription$ When this creature dies, each opponent draws a card.
+SVar:BountyPayoff:DB$ Draw | Defined$ Player.Opponent | SubAbility$ ExileEff
+SVar:TrigForget:Mode$ ChangesZone | ValidCard$ Card.IsRemembered | Origin$ Battlefield | ExcludedDestinations$ Graveyard | Destination$ Any | TriggerZones$ Command | Static$ True | Execute$ ExileSelf
+SVar:ExileSelf:DB$ ChangeZone | Origin$ Command | Destination$ Exile | Defined$ Self
+SVar:ExileEff:DB$ ChangeZone | Origin$ Command | Destination$ Exile | Defined$ OriginalHost
+SVar:DBLoseLife:DB$ LoseLife | Defined$ Player.Opponent | LifeAmount$ X
+SVar:X:Count$Valid Creature$CardCounters.BOUNTY
+
+Oracle:When this creature enters, you may post a bounty on target creature. If you do, each opponent loses life equal to the number of bounty counters on creatures. (Put a bounty counter on that creature. It has "When this creature dies, each opponent draws a card" as long as it has a bounty counter on it.)
+
+DeckHas:Ability$Counters

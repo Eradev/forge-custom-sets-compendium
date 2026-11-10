@@ -67,7 +67,9 @@ Storytime (101)                       -  98% (99/101)
   Missing cards:
     * Arpechian Champion
     * Jara Champion
-High Noon (HI12)                      -  48% (136/279)
+High Noon (HI12)                      -  64% (179/279)
+  Missing cards:
+    * Aether Leak
 Zero (ZER)                            -  37% (92/252)
 Path of Shadows (PSA)                 -  99% (208/209)
   Missing cards:
@@ -129,6 +131,7 @@ Examples on how to implement custom keywords and mechanisms.
 * [Mirage](#mirage)
 * [Motivate](#motivate)
 * [Paranoia](#paranoia)
+* [Quickdraw](#quickdraw)
 * [Rerun](#rerun)
 * [Revive](#revive)
 * [Showcase](#showcase)
@@ -233,15 +236,20 @@ SVar:X:Count$LifeOppsLostThisTurn
 Bounty is defined as
 
 ```text
-[something], you may post a bounty on target creature. (Put a bounty counter on target creature. It has "When this creature dies, each opponent draws a card" as long as it has a bounty counter on it.)
+[something], you may post a bounty on target creature. (Put a bounty counter on that creature. It has "When this creature dies, each opponent draws a card" as long as it has a bounty counter on it.)
 ```
 
 Implementation:
 
 ```text
-SVar:TrigBounty:DB$ PutCounter | CounterType$ BOUNTY | IsCurse$ True | ValidTgts$ Creature | SpellDescription$ Put a bounty counter on target creature.
-T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.counters_GE1_BOUNTY | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever a creature with a bounty counter on it dies, each of its controller's opponents draws a card.
-SVar:TrigDraw:DB$ Draw | Defined$ Player.OpponentOf TriggeredCardController
+SVar:TrigBounty:DB$ PutCounter | CounterType$ BOUNTY | ValidTgts$ Creature | TgtPrompt$ Select target creature | IsCurse$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ Targeted | Duration$ Permanent | StaticAbilities$ BountyStatic | Triggers$ TrigForget | ForgetCounter$ BOUNTY
+SVar:BountyStatic:Mode$ Continuous | Affected$ Card.IsRemembered | AddTrigger$ BountyDeath | Description$ For as long as that creature has a bounty counter on it, it has "When this creature dies, each opponent draws a card."
+SVar:BountyDeath:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ BountyPayoff | TriggerDescription$ When this creature dies, each opponent draws a card.
+SVar:BountyPayoff:DB$ Draw | Defined$ Player.Opponent | SubAbility$ ExileEff
+SVar:TrigForget:Mode$ ChangesZone | ValidCard$ Card.IsRemembered | Origin$ Battlefield | ExcludedDestinations$ Graveyard | Destination$ Any | TriggerZones$ Command | Static$ True | Execute$ ExileSelf
+SVar:ExileSelf:DB$ ChangeZone | Origin$ Command | Destination$ Exile | Defined$ Self
+SVar:ExileEff:DB$ ChangeZone | Origin$ Command | Destination$ Exile | Defined$ OriginalHost
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
@@ -588,6 +596,24 @@ Implementation:
 ```text
 T:Mode$ ChangesZone | TriggerZones$ Hand | ValidCard$ Permanent.YouCtrl | Origin$ Battlefield | Destination$ Any | Execute$ PayParanoia | TriggerDescription$ Paranoia {G} (You may cast this spell for its paranoia cost when a permanent you control leaves the battlefield.)
 SVar:PayParanoia:DB$ Play | Named$ Paranoia | PlayCost$ G | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Quickdraw
+
+Quickdraw is designed as:
+
+```text
+Quickdraw {2}{R} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)
+```
+
+Implementation:
+
+```text
+T:Mode$ Blocks | ValidCard$ Creature.YouCtrl | TriggerZones$ Hand | Execute$ PayQuickdraw | TriggerDescription$ Quickdraw {2}{R} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)
+T:Mode$ AttackerBlocked | ValidCard$ Creature.YouCtrl | TriggerZones$ Hand | Secondary$ True | Execute$ PayQuickdraw | TriggerDescription$ Quickdraw {2}{R} (You may cast this spell for its quickdraw cost whenever a creature you control blocks or becomes blocked.)
+SVar:PayQuickdraw:DB$ Play | Named$ Quickdraw | PlayCost$ 2 R | ValidSA$ Spell.Self | Controller$ You | ValidZone$ Hand | Optional$ True
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)

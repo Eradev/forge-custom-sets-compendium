@@ -1,0 +1,15 @@
+Name:Window Shopping
+ManaCost:3 U
+Types:Sorcery
+
+A:SP$ Dig | DigNum$ 5 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBTwoPiles | SpellDescription$ Exile the top five cards of your library. An opponent separates them into two piles. You may put one pile into your hand or draw two cards. Then put the rest of the piles into your graveyard.
+SVar:DBTwoPiles:DB$ TwoPiles | Defined$ You | DefinedCards$ Remembered | Separator$ Opponent | ChosenPile$ DBChoose | UnchosenPile$ DBGrave | StackDescription$ An opponent separates them into two piles.
+SVar:DBChoose:DB$ GenericChoice | Choices$ DBHand,DBDrawTwo | Defined$ You
+SVar:DBHand:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Hand | SpellDescription$ Put this pile into your hand.
+SVar:DBDrawTwo:DB$ Draw | NumCards$ 2 | SubAbility$ DBGraveChosen | SpellDescription$ Draw two cards.
+SVar:DBGraveChosen:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Graveyard
+SVar:DBGrave:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Graveyard
+
+Oracle:Exile the top five cards of your library. An opponent separates them into two piles. You may put one pile into your hand or draw two cards. Then put the rest of the piles into your graveyard.
+
+DeckHas:Ability$Graveyard

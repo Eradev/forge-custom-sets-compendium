@@ -1,0 +1,9 @@
+Name:Cardsharp
+ManaCost:1 B B
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Card | ChangeNum$ 1 | Mandatory$ True | SubAbility$ DBLoseLife | SpellDescription$ Search your library for a card and put that card into your hand. Then shuffle. You lose life equal to the number of cards in your hand.
+SVar:DBLoseLife:DB$ LoseLife | LifeAmount$ X
+SVar:X:Count$ValidHand Card.YouOwn
+
+Oracle:Search your library for a card and put that card into your hand. Then shuffle. You lose life equal to the number of cards in your hand.
