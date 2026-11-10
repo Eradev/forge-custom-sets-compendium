@@ -3,7 +3,7 @@ ManaCost:W
 Types:Creature Human Rebel
 PT:2/1
 
-S:Mode$ Continuous | Affected$ Card.Self+equipped | AddKeyword$ First Strike | Description$ As long as this creature is equipped, it has first strike.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.equipped | AddKeyword$ First Strike | Description$ As long as this creature is equipped, it has first strike.
 
 Oracle:As long as this creature is equipped, it has first strike.
 

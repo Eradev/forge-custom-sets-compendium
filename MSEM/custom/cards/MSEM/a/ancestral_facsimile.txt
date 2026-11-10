@@ -8,11 +8,11 @@ SVar:FacsimileChoice:DB$ GenericChoice | Choices$ Reality,Illusion | Defined$ Yo
 SVar:Reality:DB$ Pump | SpellDescription$ Reality
 SVar:Illusion:DB$ Pump | SpellDescription$ Illusion
 
-S:Mode$ Continuous | Affected$ Card.Self+ChosenModeReality | AddTrigger$ RealityTrigger | Description$ Reality — Foresight — Whenever you draw your second card each turn, tap target creature.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeReality | AddTrigger$ RealityTrigger | Description$ Reality — Foresight — Whenever you draw your second card each turn, tap target creature.
 SVar:RealityTrigger:Mode$ Drawn | ValidCard$ Card.YouCtrl | Number$ 2 | TriggerZones$ Battlefield | Execute$ TrigTap | TriggerDescription$ Whenever you draw your second card each turn, tap target creature.
 SVar:TrigTap:DB$ Tap | ValidTgts$ Creature | TgtPrompt$ Select target creature
 
-S:Mode$ Continuous | Affected$ Card.Self+ChosenModeIllusion | AddTrigger$ IllusionTrigger | Description$ Illusion — Foresight — Whenever you draw your second card each turn, scry 2.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeIllusion | AddTrigger$ IllusionTrigger | Description$ Illusion — Foresight — Whenever you draw your second card each turn, scry 2.
 SVar:IllusionTrigger:Mode$ Drawn | ValidCard$ Card.YouCtrl | Number$ 2 | TriggerZones$ Battlefield | Execute$ TrigScry | TriggerDescription$ Whenever you draw your second card each turn, scry 2.
 SVar:TrigScry:DB$ Scry | ScryNum$ 2
 

@@ -12,8 +12,8 @@ SVar:OasisChoice:DB$ Pump | SpellDescription$ Oasis
 SVar:DesiccationChoice:DB$ Pump | SpellDescription$ Desiccation
 SVar:DBClearChosen:DB$ Cleanup | ClearChosenPlayer$ True
 
-S:Mode$ Continuous | Affected$ Card.Self+ChosenModeOasis | AddAbility$ OasisAbility | Description$ • Oasis — {T}: Add one mana of any color.
-S:Mode$ Continuous | Affected$ Card.Self+ChosenModeDesiccation | AddAbility$ DesiccationAbility | Description$ • Desiccation — {T}: Add {C}{C}. You lose 1 life.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeOasis | AddAbility$ OasisAbility | Description$ • Oasis — {T}: Add one mana of any color.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeDesiccation | AddAbility$ DesiccationAbility | Description$ • Desiccation — {T}: Add {C}{C}. You lose 1 life.
 
 SVar:OasisAbility:AB$ Mana | PrecostDesc$ Oasis — | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
 

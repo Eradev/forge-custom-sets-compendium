@@ -23,7 +23,7 @@ Colors:red,white
 
 K:Enchant:Creature
 
-S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddTrigger$ AttackTrig
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddTrigger$ AttackTrig
 SVar:AttackTrig:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPumpAll | TriggerDescription$ Whenever this creature attacks, attacking creatures you control get +1/+1 until end of turn.
 SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.attacking+YouCtrl | NumAtt$ +1 | NumDef$ +1
 

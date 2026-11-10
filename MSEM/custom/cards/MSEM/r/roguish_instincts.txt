@@ -4,7 +4,7 @@ Types:Enchantment Aura
 
 K:Enchant:Creature
 
-S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddHiddenKeyword$ CARDNAME can't be blocked. | Description$ Enchanted creature can't be blocked.
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddHiddenKeyword$ CARDNAME can't be blocked. | Description$ Enchanted creature can't be blocked.
 
 T:Mode$ DamageDone | ValidSource$ Card.EnchantedBy | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigAetherize | TriggerZones$ Battlefield | TriggerDescription$ Whenever enchanted creature deals combat damage to a player, you may aetherize it. (To aetherize, create a token that's a copy of it, then exile that token.)
 SVar:TrigAetherize:DB$ CopyPermanent | Defined$ TriggeredSourceLKICopy | Optional$ True | RememberTokens$ True | SubAbility$ DBExileToken

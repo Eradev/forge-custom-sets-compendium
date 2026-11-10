@@ -6,7 +6,7 @@ K:Enchant:Creature.YouCtrl:creature you control
 
 K:Vanishing:3
 
-S:Mode$ Continuous | Affected$ Creature.EnchantedBy | AddPower$ 3 | AddToughness$ 3 | Description$ Enchanted creature gets +3/+3.
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddPower$ 3 | AddToughness$ 3 | Description$ Enchanted creature gets +3/+3.
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ DBDelay | TriggerDescription$ When this enchantment leaves the battlefield, sacrifice enchanted creature.
 SVar:DBDelay:DB$ DelayedTrigger | Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Card.Self | RememberObjects$ Enchanted | Execute$ TrigSacrifice | TriggerDescription$ When this Aura leaves the battlefield, sacrifice enchanted creature.

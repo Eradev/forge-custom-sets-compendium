@@ -3,7 +3,7 @@ ManaCost:1 B
 Types:Creature Human Rogue
 PT:1/1
 
-S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +1/+1 for each enchantment you control.
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +1/+1 for each enchantment you control.
 SVar:X:Count$Valid Enchantment.YouCtrl
 
 A:AB$ Dig | Cost$ 2 G | DigNum$ 4 | ChangeNum$ 1 | Optional$ True | ForceRevealToController$ True | ChangeValid$ Enchantment,Card.withFabled | RestRandomOrder$ True | SpellDescription$ Look at the top four cards of your library. You may reveal an enchantment card or a card with fabled from among them and put it into your hand. Put the rest on the bottom of your library in any order.

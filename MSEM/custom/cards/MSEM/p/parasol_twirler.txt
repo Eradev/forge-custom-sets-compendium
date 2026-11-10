@@ -3,7 +3,7 @@ ManaCost:1 U
 Types:Creature Human Wizard
 PT:2/1
 
-S:Mode$ Continuous | Affected$ Card.Self | AddKeyword$ Flying | IsPresent$ Artifact.YouCtrl | Description$ This creature has flying as long as you control an artifact.
+S:Mode$ Continuous | AffectedDefined$ Self | AddKeyword$ Flying | IsPresent$ Artifact.YouCtrl | Description$ This creature has flying as long as you control an artifact.
 
 Oracle:This creature has flying as long as you control an artifact.
 

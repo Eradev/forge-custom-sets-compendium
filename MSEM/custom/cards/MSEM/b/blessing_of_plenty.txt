@@ -4,7 +4,7 @@ Types:Enchantment Aura
 
 K:Enchant:Land
 
-S:Mode$ Continuous | Affected$ Card.EnchantedBy | AddAbility$ AnyManaTap | AddTrigger$ TrigUpkeepUntap | Description$ Enchanted land has "{T}: Add one mana of any color." and "At the beginning of each upkeep, untap this land."
+S:Mode$ Continuous | AffectedDefined$ Enchanted | AddAbility$ AnyManaTap | AddTrigger$ TrigUpkeepUntap | Description$ Enchanted land has "{T}: Add one mana of any color." and "At the beginning of each upkeep, untap this land."
 SVar:AnyManaTap:AB$ Mana | Cost$ T | Produced$ Any | SpellDescription$ Add one mana of any color.
 SVar:TrigUpkeepUntap:Mode$ Phase | Phase$ Upkeep | TriggerZones$ Battlefield | Execute$ UntapEnchanted | TriggerDescription$ At the beginning of each upkeep, untap this land.
 SVar:UntapEnchanted:DB$ Untap

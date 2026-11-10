@@ -8,11 +8,11 @@ SVar:SandChoice:DB$ GenericChoice | Choices$ Decay,Remain | Defined$ You | SetCh
 SVar:Decay:DB$ Pump | SpellDescription$ Decay
 SVar:Remain:DB$ Pump | SpellDescription$ Remain
 
-S:Mode$ Continuous | Affected$ Card.Self+ChosenModeDecay | AddTrigger$ DecayDeath | Description$ Decay — When this creature dies, draw a card.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeDecay | AddTrigger$ DecayDeath | Description$ Decay — When this creature dies, draw a card.
 SVar:DecayDeath:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ When this creature dies, draw a card.
 SVar:TrigDraw:DB$ Draw
 
-S:Mode$ Continuous | Affected$ Card.Self+ChosenModeRemain | AddTrigger$ RemainDeath | Description$ Remain — When this creature dies, create a 2/2 black Zombie creature token.
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeRemain | AddTrigger$ RemainDeath | Description$ Remain — When this creature dies, create a 2/2 black Zombie creature token.
 SVar:RemainDeath:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ When this creature dies, create a 2/2 black Zombie creature token.
 SVar:TrigToken:DB$ Token | TokenScript$ b_2_2_zombie
 

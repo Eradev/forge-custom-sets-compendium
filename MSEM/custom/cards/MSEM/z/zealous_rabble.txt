@@ -3,7 +3,7 @@ ManaCost:2 G
 Types:Creature Human Citizen
 PT:1/1
 
-S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +1/+1 for each creature token you control.
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +1/+1 for each creature token you control.
 SVar:X:Count$Valid Creature.token+YouCtrl
 
 T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigFood | TriggerDescription$ At the beginning of your end step, create a Food token. If you're horrific, instead create a token that's a copy of this creature, except it doesn't have this ability. (You're horrific as long as you've sacrificed a permanent or discarded a card this turn.)

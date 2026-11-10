@@ -4,7 +4,7 @@ Colors:green
 Types:Creature Wurm
 PT:0/0
 
-S:Mode$ Continuous | Affected$ Card.Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +1/+1 for each permanent card in your graveyard.
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ X | AddToughness$ X | Description$ This creature gets +1/+1 for each permanent card in your graveyard.
 SVar:X:Count$ValidGraveyard Permanent.YouOwn
 
 Oracle:This creature gets +1/+1 for each permanent card in your graveyard.
