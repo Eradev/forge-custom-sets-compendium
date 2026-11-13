@@ -12,6 +12,6 @@ SVar:TrigSteal:DB$ GainControl | ValidTgts$ Creature | TgtPrompt$ Select target 
 
 K:Crew:3
 
-Oracle:Trample, haste\nWhen this Vehicle enters, gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.\nCrew 3 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)
+Oracle:Trample, haste\nWhen this Vehicle enters, gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.\nCrew 3 (Tap any number of creatures you control with total power 3 or more: This Vehicle becomes an artifact creature until end of turn.)
 
 SVar:PlayMain1:OPPONENTCREATURES

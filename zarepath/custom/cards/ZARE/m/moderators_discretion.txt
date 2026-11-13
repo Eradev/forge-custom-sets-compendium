@@ -2,7 +2,7 @@ Name:Moderator's Discretion
 ManaCost:1 U
 Types:Instant
 
-A:SP$ Charm | Cost$ 1 U | Choices$ DBCounter,DBReturn | CharmNum$ 1
+A:SP$ Charm | Choices$ DBCounter,DBReturn | CharmNum$ 1
 SVar:DBCounter:DB$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ Card | UnlessCost$ 1 | SpellDescription$ Counter target spell unless its controller pays {1}.
 SVar:DBReturn:DB$ ChangeZone | ValidTgts$ Card.inZoneStack | TgtZone$ Stack | Origin$ Stack | Destination$ Hand | SpellDescription$ Return target spell to its owner's hand.
 

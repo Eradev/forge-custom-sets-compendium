@@ -2,9 +2,20 @@ Name:Motley Crew
 ManaCost:2 R
 Types:Enchantment
 
-T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigPump | TriggerDescription$ At the beginning of combat on your turn, you may choose at least three creatures you control that share no creature types among them. They each get +3/+0 and gain menace until end of turn.
-SVar:TrigPump:DB$ Pump | TargetMin$ 3 | TargetMax$ MaxTargets | ValidTgts$ Creature.YouCtrl | TargetsWithoutSameCreatureType$ True | TgtPrompt$ Select at least three target creatures you control that share no creature types | NumAtt$ 3 | KW$ Menace
-SVar:MaxTargets:Count$Valid Creature.YouCtrl
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigChoose | TriggerDescription$ At the beginning of combat on your turn, you may choose at least three creatures you control that share no creature types among them. They each get +3/+0 and gain menace until end of turn.
+
+SVar:TrigChoose:DB$ Repeat | MaxRepeat$ 3 | RepeatSubAbility$ DBChooseRequired | SubAbility$ DBChooseMore
+
+SVar:DBChooseRequired:DB$ ChooseCard | Defined$ You | Choices$ Creature.YouCtrl+!IsRemembered+!sharesCreatureTypeWith Remembered | Amount$ 1 | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose a creature that shares no creature types with previously chosen creatures
+
+SVar:DBChooseMore:DB$ Repeat | RepeatSubAbility$ DBChooseOptional | RepeatPresent$ Creature.ChosenCard | SubAbility$ DBPump
+
+SVar:DBChooseOptional:DB$ ChooseCard | Defined$ You | Choices$ Creature.YouCtrl+!IsRemembered+!sharesCreatureTypeWith Remembered | Amount$ 1 | RememberChosen$ True | ChoiceTitle$ Choose another creature or decline to finish selecting
+
+SVar:DBPump:DB$ Pump | Defined$ Remembered | NumAtt$ +3 | KW$ Menace | ConditionCheckSVar$ X | ConditionSVarCompare$ GE3 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+
+SVar:X:Count$RememberedSize
 
 Oracle:At the beginning of combat on your turn, you may choose at least three creatures you control that share no creature types among them. They each get +3/+0 and gain menace until end of turn.
 

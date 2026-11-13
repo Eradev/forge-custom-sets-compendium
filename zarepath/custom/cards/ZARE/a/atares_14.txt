@@ -10,4 +10,4 @@ SVar:TrigDraw:DB$ Draw | NumCards$ 2
 
 K:Crew:2
 
-Oracle:Flying\nWhen this Vehicle enters, draw two cards.\nCrew 2 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)
+Oracle:Flying\nWhen this Vehicle enters, draw two cards.\nCrew 2 (Tap any number of creatures you control with total power 2 or more: This Vehicle becomes an artifact creature until end of turn.)
