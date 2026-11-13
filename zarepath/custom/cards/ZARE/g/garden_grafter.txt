@@ -4,17 +4,22 @@ Types:Creature Plant Mutant
 PT:1/4
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.Self | Execute$ DBDig | TriggerDescription$ When this creature enters, upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
-SVar:DBDig:DB$ Dig | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBAnimate | StackDescription$ {p:You} uploads the top card of their library. | SpellDescription$ Upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
-SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Abilities$ ABRemoveUpload | sVars$ DBDownload | Duration$ Permanent | SubAbility$ MarkUpload | StackDescription$ None
-SVar:MarkUpload:DB$ PutCounter | Defined$ Remembered | CounterType$ UPLOAD | SubAbility$ DBCleanup
-SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
-SVar:ABRemoveUpload:AB$ RemoveCounter | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | CounterType$ UPLOAD | SubAbility$ DBDownload | PrecostDesc$ Download – | SpellDescription$ Return this card to your hand any time you could cast a sorcery.
-SVar:DBDownload:DB$ ChangeZone | Defined$ Self | Hidden$ True | Origin$ Exile | Destination$ Hand | StackDescription$ SpellDescription
 
-T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ RemoveUpload | TriggerDescription$ Whenever a land enters under your control, you may put an uploaded card you own into your hand.
-SVar:RemoveUpload:DB$ ChooseCard | Defined$ You | Choices$ Card.YouOwn+counters_GE1_UPLOAD | Amount$ 1 | ChoiceZone$ Exile | SubAbility$ RemCounter
-SVar:RemCounter:DB$ RemoveCounter | Defined$ ChosenCard | CounterType$ UPLOAD | SubAbility$ Download
-SVar:Download:DB$ ChangeZone | Defined$ ChosenCard | Origin$ Exile | Destination$ Hand | Hidden$ True | ForgetChanged$ True | SubAbility$ DBCleanupChosen
+SVar:DBDig:DB$ Dig | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBAnimate | StackDescription$ {p:You} uploads the top card of their library.
+SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Abilities$ ABDownload | Duration$ Permanent | SubAbility$ DBTrackEach | StackDescription$ None
+
+SVar:ABDownload:AB$ ChangeZone | Named$ Download | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | Origin$ Exile | Destination$ Hand | PrecostDesc$ Download — | SpellDescription$ Return this card to your hand.
+SVar:DBTrackEach:DB$ RepeatEach | DefinedCards$ Remembered.!token | ClearRemembered$ True | RepeatSubAbility$ DBTrackOne
+SVar:DBTrackOne:DB$ Effect | Name$ UploadedCardTracker | EffectOwner$ RememberedOwner | RememberObjects$ Remembered | Triggers$ TrigUploadReturn,TrigUploadLeave | Duration$ Permanent
+SVar:TrigUploadReturn:Mode$ ChangesZone | Origin$ Exile | Destination$ Hand | ValidCard$ Card.IsRemembered | Execute$ DBUploadSignal | Static$ True
+SVar:DBUploadSignal:DB$ PutCounter | Defined$ Self | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBRemoveTracker
+SVar:TrigUploadLeave:Mode$ ChangesZone | Origin$ Exile | Destination$ Any | ExcludedDestinations$ Hand | ValidCard$ Card.IsRemembered | Execute$ DBRemoveTracker | Static$ True
+SVar:DBRemoveTracker:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ DBChooseUploaded | TriggerDescription$ Whenever a land enters under your control, you may put an uploaded card you own into your hand.
+
+SVar:DBChooseUploaded:DB$ ChooseCard | Defined$ You | Choices$ Card.YouOwn+hasAbility Activated.NamedAbilityDownload | Amount$ 1 | ChoiceZone$ Exile | SubAbility$ DBReturnUploaded
+SVar:DBReturnUploaded:DB$ ChangeZone | Defined$ ChosenCard | Origin$ Exile | Destination$ Hand | Hidden$ True | SubAbility$ DBCleanupChosen
 SVar:DBCleanupChosen:DB$ Cleanup | ClearChosenCard$ True
 
 Oracle:When this creature enters, upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)\nWhenever a land enters under your control, you may put an uploaded card you own into your hand.

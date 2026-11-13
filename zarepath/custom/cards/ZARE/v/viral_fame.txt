@@ -2,12 +2,18 @@ Name:Viral Fame
 ManaCost:W
 Types:Instant
 
-A:SP$ ChangeZone | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Exile | WithCountersType$ UPLOAD | TgtPrompt$ Select target creature | RememberChanged$ True | RememberLKI$ True | SubAbility$ DBAnimate | SpellDescription$ Upload target creature. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
-SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Abilities$ ABRemoveUpload | sVars$ DBDownload | Duration$ Permanent | SubAbility$ DBGainLife | StackDescription$ None
-SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
-SVar:ABRemoveUpload:AB$ RemoveCounter | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | CounterType$ UPLOAD | SubAbility$ DBDownload | PrecostDesc$ Download – | SpellDescription$ Return this card to your hand any time you could cast a sorcery.
-SVar:DBDownload:DB$ ChangeZone | Defined$ Self | Hidden$ True | Origin$ Exile | Destination$ Hand | StackDescription$ SpellDescription
-SVar:DBGainLife:DB$ GainLife | Defined$ RememberedController | LifeAmount$ X | SubAbility$ DBCleanup
+A:SP$ ChangeZone | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Exile | TgtPrompt$ Select target creature | RememberChanged$ True | RememberLKI$ True | SubAbility$ DBAnimate | SpellDescription$ Upload target creature. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
+SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Abilities$ ABDownload | Duration$ Permanent | StackDescription$ None | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | Defined$ RememberedController | LifeAmount$ X | SubAbility$ DBTrackEach
 SVar:X:RememberedLKI$CardToughness
+
+
+SVar:ABDownload:AB$ ChangeZone | Named$ Download | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | Origin$ Exile | Destination$ Hand | PrecostDesc$ Download — | SpellDescription$ Return this card to your hand.
+SVar:DBTrackEach:DB$ RepeatEach | DefinedCards$ Remembered.!token | ClearRemembered$ True | RepeatSubAbility$ DBTrackOne
+SVar:DBTrackOne:DB$ Effect | Name$ UploadedCardTracker | EffectOwner$ RememberedOwner | RememberObjects$ Remembered | Triggers$ TrigUploadReturn,TrigUploadLeave | Duration$ Permanent
+SVar:TrigUploadReturn:Mode$ ChangesZone | Origin$ Exile | Destination$ Hand | ValidCard$ Card.IsRemembered | Execute$ DBUploadSignal | Static$ True
+SVar:DBUploadSignal:DB$ PutCounter | Defined$ Self | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBRemoveTracker
+SVar:TrigUploadLeave:Mode$ ChangesZone | Origin$ Exile | Destination$ Any | ExcludedDestinations$ Hand | ValidCard$ Card.IsRemembered | Execute$ DBRemoveTracker | Static$ True
+SVar:DBRemoveTracker:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
 
 Oracle:Upload target creature. Its controller gains life equal to its toughness. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)

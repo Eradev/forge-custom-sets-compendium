@@ -2,7 +2,6 @@ Name:Misclick
 ManaCost:1 B
 Types:Instant
 
-A:SP$ ChangeZoneAll | ChangeType$ Card.counters_GE1_UPLOAD | Origin$ Exile | Destination$ Library | LibraryPosition$ -1 | RandomOrder$ True | SubAbility$ EachGraveyard | SpellDescription$ Put each uploaded card and each graveyard on the bottom of their owners' libraries in a random order.
-SVar:EachGraveyard:DB$ ChangeZoneAll | ChangeType$ Card | Origin$ Graveyard | Destination$ Library | LibraryPosition$ -1 | RandomOrder$ True | AILogic$ ExileGraveyards
+A:SP$ ChangeZoneAll | Cost$ 1 B | Origin$ Exile,Graveyard | Destination$ Library | ChangeType$ Card.inZoneGraveyard,Card.inZoneExile+hasAbility Activated.NamedAbilityDownload | LibraryPosition$ -1 | RandomOrder$ True | SpellDescription$ Put each uploaded card and each card in each graveyard on the bottom of their owners' libraries in a random order.
 
-Oracle:Put each uploaded card and each graveyard on the bottom of their owners' libraries in a random order.
+Oracle:Put each uploaded card and each card in each graveyard on the bottom of their owners' libraries in a random order.

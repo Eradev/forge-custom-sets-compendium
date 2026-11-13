@@ -6,4 +6,4 @@ K:Menace
 
 S:Mode$ MustAttack | ValidCreature$ Card.Self | Description$ This creature attacks each combat if able.
 
-Oracle:Menace \nThis creature attacks each combat if able.
+Oracle:Menace\nThis creature attacks each combat if able.
