@@ -2,7 +2,7 @@ Name:Showmatch
 ManaCost:1 G G
 Types:Sorcery
 
-A:SP$ Pump | Cost$ 1 G G | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Choose target creature you control | RememberTargets$ True | AILogic$ Fight | SubAbility$ DBToken | SpellDescription$ Arm target creature. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.) Then that creature fights target creature you don't control.
+A:SP$ Pump | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Choose target creature you control | RememberTargets$ True | AILogic$ Fight | SubAbility$ DBToken | SpellDescription$ Arm target creature. (Create a colorless Equipment artifact token named Weapon with equip {2} and "Equipped creature gets +1/+1" attached to that creature.) Then that creature fights target creature you don't control.
 SVar:DBToken:DB$ Token | TokenScript$ c_a_weapon_equipment | AttachedTo$ Targeted | SubAbility$ DBFight
 SVar:DBFight:DB$ Fight | Defined$ ParentTarget | ValidTgts$ Creature.YouDontCtrl | AILogic$ Always | TgtPrompt$ Choose target creature you don't control
 

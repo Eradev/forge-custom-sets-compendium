@@ -13,6 +13,7 @@ A:AB$ Discard | Cost$ SubCounter<2/LOYALTY> | ValidTgts$ Opponent | Mode$ Reveal
 
 A:AB$ LoseLife | Cost$ SubCounter<7/LOYALTY> | ValidTgts$ Opponent | LifeAmount$ Difference | TgtPrompt$ Select target opponent | Planeswalker$ True | Ultimate$ True | SpellDescription$ Target opponent loses life equal to the difference between their life total and their starting life total.
 SVar:X:TargetedPlayer$LifeTotal
-SVar:Difference:TargetedPlayer$StartingLife/Minus.X
+SVar:Y:TargetedPlayer$StartingLife/Minus.X
+SVar:Difference:SVar$Y/Abs
 
-Oracle:[+1]: Each player reveals the top card of their library, loses life equal to its mana value, then puts it into their hand.\n[−2]: Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.\n[−7]: Target opponent loses life equal to the difference between their life total and their starting life total.
+Oracle:[+1]: Each player reveals the top card of their library, loses life equal to its mana value, then puts it into their hand.\n[-2]: Target opponent reveals their hand. You choose a nonland card from it. That player discards that card.\n[-7]: Target opponent loses life equal to the difference between their life total and their starting life total.

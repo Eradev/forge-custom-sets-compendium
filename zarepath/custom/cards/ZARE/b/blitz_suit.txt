@@ -6,7 +6,7 @@ PT:3/3
 K:Haste
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPumpAll | TriggerDescription$ When this Vehicle enters, other creatures you control get +1/+0 and gain haste until end of turn.
-SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | KW$ Haste
+SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.Other+YouCtrl | NumAtt$ +1 | KW$ Haste
 
 K:Crew:1
 
