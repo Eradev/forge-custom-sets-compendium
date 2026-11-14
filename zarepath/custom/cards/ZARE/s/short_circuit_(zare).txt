@@ -3,11 +3,15 @@ ManaCost:U R
 Types:Instant
 
 A:SP$ DealDamage | ValidTgts$ Any | TgtPrompt$ Select any target | NumDmg$ 2 | SubAbility$ DBDig | SpellDescription$ CARDNAME deals 2 damage to any target.
-SVar:DBDig:DB$ Dig | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBAnimate | StackDescription$ {p:You} uploads the top card of their library. | SpellDescription$ Upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
-SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Abilities$ ABRemoveUpload | sVars$ DBDownload | Duration$ Permanent | SubAbility$ MarkUpload | StackDescription$ None
-SVar:MarkUpload:DB$ PutCounter | Defined$ Remembered | CounterType$ UPLOAD | SubAbility$ DBCleanup
-SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
-SVar:ABRemoveUpload:AB$ RemoveCounter | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | CounterType$ UPLOAD | SubAbility$ DBDownload | PrecostDesc$ Download – | SpellDescription$ Return this card to your hand any time you could cast a sorcery.
-SVar:DBDownload:DB$ ChangeZone | Defined$ Self | Hidden$ True | Origin$ Exile | Destination$ Hand | StackDescription$ SpellDescription
+SVar:DBDig:DB$ Dig | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBTrackEach | StackDescription$ {p:You} uploads the top card of their library. | SpellDescription$ Upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
+
+SVar:ABDownload:AB$ ChangeZone | Named$ Download | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | Origin$ Exile | Destination$ Hand | PrecostDesc$ Download — | SpellDescription$ Return this card to your hand.
+SVar:DBTrackEach:DB$ RepeatEach | DefinedCards$ Remembered.!token | ClearRemembered$ True | RepeatSubAbility$ DBTrackOne
+SVar:DBTrackOne:DB$ Effect | Name$ UploadedCardTracker | EffectOwner$ RememberedOwner | RememberObjects$ Remembered | StaticAbilities$ GrantDownload | Triggers$ TrigUploadReturn,TrigUploadLeave | Duration$ Permanent
+SVar:GrantDownload:Mode$ Continuous | AffectedZone$ Exile | Affected$ Card.IsRemembered | AddAbility$ ABDownload
+SVar:TrigUploadReturn:Mode$ ChangesZone | Origin$ Exile | Destination$ Hand | ValidCard$ Card.IsRemembered | Execute$ DBUploadSignal | Static$ True
+SVar:DBUploadSignal:DB$ PutCounter | Defined$ Self | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBRemoveTracker
+SVar:TrigUploadLeave:Mode$ ChangesZone | Origin$ Exile | Destination$ Any | ExcludedDestinations$ Hand | ValidCard$ Card.IsRemembered | Execute$ DBRemoveTracker | Static$ True
+SVar:DBRemoveTracker:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
 
 Oracle:Short Circuit deals 2 damage to any target.\nUpload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)

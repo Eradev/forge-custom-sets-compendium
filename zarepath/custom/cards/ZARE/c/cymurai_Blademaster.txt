@@ -10,4 +10,4 @@ SVar:TrigPump:DB$ Pump | KW$ Indestructible
 SVar:X:Count$YourLifeTotal
 SVar:Y:PlayerCountOpponents$LowestLifeTotal
 
-Oracle:Double strike\nSuperiority — At the beginning of combat on your turn, this creature indestructible until end of turn if you have more life than an opponent.
+Oracle:Double strike\nSuperiority — At the beginning of combat on your turn, this creature gains indestructible until end of turn if you have more life than an opponent.
