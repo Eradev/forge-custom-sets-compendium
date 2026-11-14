@@ -2,15 +2,15 @@ Name:Viral Fame
 ManaCost:W
 Types:Instant
 
-A:SP$ ChangeZone | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Exile | TgtPrompt$ Select target creature | RememberChanged$ True | RememberLKI$ True | SubAbility$ DBAnimate | SpellDescription$ Upload target creature. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
-SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Abilities$ ABDownload | Duration$ Permanent | StackDescription$ None | SubAbility$ DBGainLife
+A:SP$ ChangeZone | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Exile | TgtPrompt$ Select target creature | RememberChanged$ True | RememberLKI$ True | SubAbility$ DBGainLife | SpellDescription$ Upload target creature. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
 SVar:DBGainLife:DB$ GainLife | Defined$ RememberedController | LifeAmount$ X | SubAbility$ DBTrackEach
 SVar:X:RememberedLKI$CardToughness
 
 
 SVar:ABDownload:AB$ ChangeZone | Named$ Download | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | Origin$ Exile | Destination$ Hand | PrecostDesc$ Download — | SpellDescription$ Return this card to your hand.
 SVar:DBTrackEach:DB$ RepeatEach | DefinedCards$ Remembered.!token | ClearRemembered$ True | RepeatSubAbility$ DBTrackOne
-SVar:DBTrackOne:DB$ Effect | Name$ UploadedCardTracker | EffectOwner$ RememberedOwner | RememberObjects$ Remembered | Triggers$ TrigUploadReturn,TrigUploadLeave | Duration$ Permanent
+SVar:DBTrackOne:DB$ Effect | Name$ UploadedCardTracker | EffectOwner$ RememberedOwner | RememberObjects$ Remembered | StaticAbilities$ GrantDownload | Triggers$ TrigUploadReturn,TrigUploadLeave | Duration$ Permanent
+SVar:GrantDownload:Mode$ Continuous | AffectedZone$ Exile | Affected$ Card.IsRemembered | AddAbility$ ABDownload
 SVar:TrigUploadReturn:Mode$ ChangesZone | Origin$ Exile | Destination$ Hand | ValidCard$ Card.IsRemembered | Execute$ DBUploadSignal | Static$ True
 SVar:DBUploadSignal:DB$ PutCounter | Defined$ Self | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBRemoveTracker
 SVar:TrigUploadLeave:Mode$ ChangesZone | Origin$ Exile | Destination$ Any | ExcludedDestinations$ Hand | ValidCard$ Card.IsRemembered | Execute$ DBRemoveTracker | Static$ True

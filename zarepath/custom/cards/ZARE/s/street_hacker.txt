@@ -6,8 +6,9 @@ PT:2/2
 S:Mode$ RaiseCost | ValidCard$ Card.Self | Type$ Spell | Cost$ ExileFromHand<1/Card> | EffectZone$ All | Description$ As an additional cost to cast this spell, upload a card from your hand. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
 
 T:Mode$ SpellCast | ValidCard$ Card.Self | TriggerZones$ Stack | Static$ True | Execute$ DBCostUpload
-SVar:DBCostUpload:DB$ Animate | Defined$ TriggeredSpellAbility>ExiledCards | Abilities$ ABDownload | RememberAnimated$ True | Duration$ Permanent | SubAbility$ DBTrackCost | StackDescription$ None
-SVar:DBTrackCost:DB$ Effect | Name$ UploadedCardTracker | EffectOwner$ RememberedOwner | RememberObjects$ Remembered | Triggers$ TrigUploadReturn,TrigUploadLeave | Duration$ Permanent | SubAbility$ DBCostCleanu
+SVar:DBCostUpload:DB$ Animate | Defined$ TriggeredSpellAbility>ExiledCards | RememberAnimated$ True | Duration$ Permanent | SubAbility$ DBTrackCost | StackDescription$ None
+SVar:DBTrackCost:DB$ Effect | Name$ UploadedCardTracker | EffectOwner$ RememberedOwner | RememberObjects$ Remembered | StaticAbilities$ GrantDownload | Triggers$ TrigUploadReturn,TrigUploadLeave | Duration$ Permanent | SubAbility$ DBCostCleanup
+SVar:GrantDownload:Mode$ Continuous | AffectedZone$ Exile | Affected$ Card.IsRemembered | AddAbility$ ABDownload
 SVar:DBCostCleanup:DB$ Cleanup | ClearRemembered$ True
 
 SVar:ABDownload:AB$ ChangeZone | Named$ Download | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | Origin$ Exile | Destination$ Hand | PrecostDesc$ Download — | SpellDescription$ Return this card to your hand.

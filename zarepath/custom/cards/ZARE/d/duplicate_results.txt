@@ -3,15 +3,15 @@ ManaCost:2 U R
 Types:Sorcery
 
 A:SP$ Scry | SubAbility$ DBDig | StackDescription$ SpellDescription | SpellDescription$ Scry 1, then upload the top card of your library. If it's an instant or sorcery card, you may cast a copy of that spell without paying its mana cost. If it's a permanent card, create a token that's a copy of that permanent. That token gains haste. Exile it at the beginning of the next end step. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
-SVar:DBDig:DB$ Dig | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBAnimate | StackDescription$ None | SpellDescription$ Upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
-SVar:DBAnimate:DB$ Animate | Defined$ Remembered | Abilities$ ABDownload | Duration$ Permanent | StackDescription$ None | SubAbility$ DBPlay
+SVar:DBDig:DB$ Dig | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBPlay | StackDescription$ None | SpellDescription$ Upload the top card of your library. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
 SVar:DBPlay:DB$ Play | Valid$ Card.IsRemembered+Instant+YouOwn,Card.IsRemembered+Sorcery+YouOwn | ValidZone$ Exile | Controller$ You | CopyCard$ True | CopyOnce$ True | WithoutManaCost$ True | Optional$ True | Amount$ All | Stackdescription$ None | SubAbility$ DBCopy
 SVar:DBCopy:DB$ CopyPermanent | Defined$ Remembered | Valid$ Card.IsRemembered+Permanent | ValidZone$ Exile | Controller$ You | AddKeywords$ Haste | AtEOT$ Exile | StackDescription$ None | SubAbility$ DBTrackEach
 
 
 SVar:ABDownload:AB$ ChangeZone | Named$ Download | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | Origin$ Exile | Destination$ Hand | PrecostDesc$ Download — | SpellDescription$ Return this card to your hand.
 SVar:DBTrackEach:DB$ RepeatEach | DefinedCards$ Remembered.!token | ClearRemembered$ True | RepeatSubAbility$ DBTrackOne
-SVar:DBTrackOne:DB$ Effect | Name$ UploadedCardTracker | EffectOwner$ RememberedOwner | RememberObjects$ Remembered | Triggers$ TrigUploadReturn,TrigUploadLeave | Duration$ Permanent
+SVar:DBTrackOne:DB$ Effect | Name$ UploadedCardTracker | EffectOwner$ RememberedOwner | RememberObjects$ Remembered | StaticAbilities$ GrantDownload | Triggers$ TrigUploadReturn,TrigUploadLeave | Duration$ Permanent
+SVar:GrantDownload:Mode$ Continuous | AffectedZone$ Exile | Affected$ Card.IsRemembered | AddAbility$ ABDownload
 SVar:TrigUploadReturn:Mode$ ChangesZone | Origin$ Exile | Destination$ Hand | ValidCard$ Card.IsRemembered | Execute$ DBUploadSignal | Static$ True
 SVar:DBUploadSignal:DB$ PutCounter | Defined$ Self | CounterType$ UPLOAD | CounterNum$ 1 | SubAbility$ DBRemoveTracker
 SVar:TrigUploadLeave:Mode$ ChangesZone | Origin$ Exile | Destination$ Any | ExcludedDestinations$ Hand | ValidCard$ Card.IsRemembered | Execute$ DBRemoveTracker | Static$ True
