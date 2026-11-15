@@ -10,7 +10,7 @@ S:Mode$ RaiseCost | ValidCard$ Card.nonCreature | Type$ Spell | Activator$ Playe
 
 T:Mode$ Discarded | ValidCard$ Card.OppOwn | Static$ True | Execute$ OppHorrific
 T:Mode$ Sacrificed | ValidCard$ Permanent.OppCtrl | ValidPlayer$ Opponent | Static$ True | Execute$ OppHorrific
-SVar:OppHorrific:DB$ Pump | RememberObjects$ TriggeredCardController
+SVar:OppHorrific:DB$ Bookkeeping | RememberObjects$ TriggeredCardController
 T:Mode$ Phase | Phase$ Cleanup | Static$ True | Execute$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 

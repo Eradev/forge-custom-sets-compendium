@@ -8,7 +8,7 @@ K:Haste
 A:AB$ DealDamage | NumDmg$ 2 | Cost$ R T | ValidTgts$ Creature.ThisTurnEntered,Player.IsRemembered | TgtPrompt$ Select target creature that entered this turn, or player that cast a creature spell this turn | SpellDescription$ This creature deals 2 damage to target creature that entered this turn, or player that cast a creature spell this turn.
 # Used to track "player that cast a creature spell this turn." via Player.IsRemembered
 T:Mode$ SpellCast | ValidCard$ Creature | ValidActivatingPlayer$ Player | Static$ True | Execute$ DBRemember
-SVar:DBRemember:DB$ Pump | RememberObjects$ TriggeredCardController
+SVar:DBRemember:DB$ Bookkeeping | RememberObjects$ TriggeredCardController
 T:Mode$ Phase | Phase$ Cleanup | Static$ True | Execute$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 

@@ -5,8 +5,8 @@ PT:5/5
 
 K:ETBReplacement:Other:FacsimileChoice
 SVar:FacsimileChoice:DB$ GenericChoice | Choices$ Reality,Illusion | Defined$ You | SetChosenMode$ True | ShowChoice$ ExceptSelf | SpellDescription$ As this creature enters, choose reality or illusion.
-SVar:Reality:DB$ Pump | SpellDescription$ Reality
-SVar:Illusion:DB$ Pump | SpellDescription$ Illusion
+SVar:Reality:DB$ Nothing | SpellDescription$ Reality
+SVar:Illusion:DB$ Nothing | SpellDescription$ Illusion
 
 S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeReality | AddTrigger$ RealityTrigger | Description$ Reality — Foresight — Whenever you draw your second card each turn, tap target creature.
 SVar:RealityTrigger:Mode$ Drawn | ValidCard$ Card.YouCtrl | Number$ 2 | TriggerZones$ Battlefield | Execute$ TrigTap | TriggerDescription$ Whenever you draw your second card each turn, tap target creature.

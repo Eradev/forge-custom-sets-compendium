@@ -8,7 +8,7 @@ SVar:DBDamage:DB$ DealDamage | ValidTgts$ Player | TgtPrompt$ Select target play
 SVar:DBDamage2:DB$ DealDamage | Defined$ Remembered | NumDmg$ 2 | NoPrevention$ True
 
 T:Mode$ LifeGained | Static$ True | ValidPlayer$ Player | Execute$ RememberPlayer
-SVar:RememberPlayer:DB$ Pump | RememberObjects$ TriggeredPlayer
+SVar:RememberPlayer:DB$ Bookkeeping | RememberObjects$ TriggeredPlayer
 T:Mode$ Phase | Phase$ Cleanup | Execute$ DBCleanup | Static$ True
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 

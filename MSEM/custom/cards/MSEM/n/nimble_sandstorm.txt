@@ -5,8 +5,8 @@ PT:2/3
 
 K:ETBReplacement:Other:NimbleChoice
 SVar:NimbleChoice:DB$ GenericChoice | Choices$ Speed,Power | Defined$ You | SetChosenMode$ True | ShowChoice$ ExceptSelf | SpellDescription$ As this creature enters, choose speed or power.
-SVar:Speed:DB$ Pump | SpellDescription$ Speed
-SVar:Power:DB$ Pump | SpellDescription$ Power
+SVar:Speed:DB$ Nothing | SpellDescription$ Speed
+SVar:Power:DB$ Nothing | SpellDescription$ Power
 
 S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeSpeed | AddTrigger$ SpeedCombat | Description$ • Speed — At the beginning of combat on your turn, target creature gains haste until end of turn.
 SVar:SpeedCombat:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigHaste | TriggerDescription$ At the beginning of combat on your turn, target creature gains haste until end of turn.

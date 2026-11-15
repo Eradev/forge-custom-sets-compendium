@@ -4,8 +4,8 @@ Types:Enchantment
 
 K:ETBReplacement:Other:GrowthChoice
 SVar:GrowthChoice:DB$ GenericChoice | Choices$ Grow,Maintain | Defined$ You | SetChosenMode$ True | ShowChoice$ ExceptSelf | SpellDescription$ As this enchantment enters, choose grow or maintain.
-SVar:Grow:DB$ Pump | SpellDescription$ Grow
-SVar:Maintain:DB$ Pump | SpellDescription$ Maintain
+SVar:Grow:DB$ Nothing | SpellDescription$ Grow
+SVar:Maintain:DB$ Nothing | SpellDescription$ Maintain
 
 S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeGrow | AddTrigger$ GrowLandfall | Description$ Grow — Whenever a land you control enters, put a +1/+1 counter on target creature you control.
 SVar:GrowLandfall:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ Whenever a land you control enters, put a +1/+1 counter on target creature you control.
