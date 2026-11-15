@@ -7,7 +7,7 @@ SVar:ETBTapped:DB$ Tap | ETB$ True
 
 A:AB$ Mana | Cost$ T | Produced$ W | SpellDescription$ Add {W}.
 
-K:Station:12
+K:Station
 
 S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.counters_GE12_CHARGE | AddAbility$ DetainCreatures | Description$ STATION 12+ {W}, {T}: Detain each creature target opponent controls.
 SVar:DetainCreatures:AB$ PumpAll | Cost$ W T | KW$ HIDDEN CARDNAME can't attack or block. & HIDDEN CARDNAME's activated abilities can't be activated. | IsCurse$ True | Duration$ UntilYourNextTurn | ValidTgts$ Opponent | TgtPrompt$ Select target opponent | ValidCards$ Creature.ControlledBy Targeted | SpellDescription$ Detain each creature target opponent controls.
