@@ -1,0 +1,8 @@
+Name:Abandon the Ranks
+ManaCost:5 U
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature | TriggerZones$ Battlefield | Execute$ TrigBounce | TriggerDescription$ Whenever a creature enters, return each other creature controlled by the same player to its owner's hand.
+SVar:TrigBounce:DB$ ChangeZoneAll | Origin$ Battlefield | Destination$ Hand | ChangeType$ Creature.!TriggeredCard+ControlledBy TriggeredCardController
+
+Oracle:Whenever a creature enters, return each other creature controlled by the same player to its owner's hand.

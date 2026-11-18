@@ -1,0 +1,20 @@
+Name:Battle the Evil One
+ManaCost:3 B
+Types:Enchantment
+
+K:ETBReplacement:Other:BattleChoice
+SVar:BattleChoice:DB$ GenericChoice | Choices$ EvilOne,Rehison | Defined$ You | SetChosenMode$ True | ShowChoice$ ExceptSelf | SpellDescription$ As this enchantment enters, choose Evil One or Rehison.
+SVar:EvilOne:DB$ Nothing | SpellDescription$ Evil One
+SVar:Rehison:DB$ Nothing | SpellDescription$ Rehison
+
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeEvil One | AddStaticAbility$ EvilOneUnearth | Description$ • Evil One — Zombie creature cards in your graveyard have unearth {3}{B}.
+SVar:EvilOneUnearth:Mode$ Continuous | EffectZone$ Battlefield | AffectedZone$ Graveyard | Affected$ Creature.Zombie+YouOwn | AddKeyword$ Unearth:3 B
+
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeRehison | AddTrigger$ RehisonTrigger | Description$ • Rehison — Whenever an Elf you control enters, you may put a -1/-1 counter on target creature.
+SVar:RehisonTrigger:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Elf.YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigPutCounter | TriggerDescription$ Whenever an Elf you control enters, you may put a -1/-1 counter on target creature.
+SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature | TgtPrompt$ Select target creature | CounterType$ M1M1 | CounterNum$ 1 | IsCurse$ True
+
+Oracle:As this enchantment enters, choose Evil One or Rehison.\n• Evil One — Zombie creature cards in your graveyard have unearth {3}{B}. ({3}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)\n• Rehison — Whenever an Elf you control enters, you may put a -1/-1 counter on target creature.
+
+DeckHas:Ability$Counters
+DeckHints:Type$Zombie|Elf

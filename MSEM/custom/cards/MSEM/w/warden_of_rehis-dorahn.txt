@@ -1,0 +1,11 @@
+Name:Warden of Rehis-Dorahn
+ManaCost:3 B G
+Types:Creature Elf Druid
+PT:4/5
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigCounters | TriggerDescription$ When this creature enters, put a -1/-1 counter on each creature.
+SVar:TrigCounters:DB$ PutCounterAll | ValidCards$ Creature | CounterType$ M1M1 | CounterNum$ 1 | IsCurse$ True
+
+A:AB$ Destroy | Cost$ 2 B G T | ValidTgts$ Creature.HasCounters | TgtPrompt$ Select target creature with a counter on it | SpellDescription$ Destroy target creature with a counter on it.
+
+Oracle:When this creature enters, put a -1/-1 counter on each creature.\n{2}{B}{G}, {T}: Destroy target creature with a counter on it.

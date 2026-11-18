@@ -1,0 +1,8 @@
+Name:Wiltthorn Elemental
+ManaCost:1 G
+Types:Creature Elemental
+PT:2/1
+
+A:AB$ Pump | Cost$ 1 G SubCounter<1/M1M1/Creature/a creature you control> | Defined$ Self | NumAtt$ +2 | NumDef$ +2 | SpellDescription$ This creature gets +2/+2 until end of turn.
+
+Oracle:{1}{G}, Remove a -1/-1 counter from a creature you control: This creature gets +2/+2 until end of turn.

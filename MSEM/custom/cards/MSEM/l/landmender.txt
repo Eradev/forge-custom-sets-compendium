@@ -1,0 +1,10 @@
+Name:Landmender
+ManaCost:2 G
+Types:Creature Elf Druid
+PT:2/3
+
+K:etbCounter:M1M1:2
+
+A:AB$ ChangeZone | Cost$ 1 G SubCounter<1/M1M1> | Origin$ Library | Destination$ Hand | ChangeType$ Land.Basic | ChangeTypeDesc$ basic land | Reveal$ True | SpellDescription$ Search your library for a basic land card, reveal it, put it into your hand, then shuffle.
+
+Oracle:Landmender enters with two -1/-1 counters on it.\n{1}{G}, Remove a -1/-1 counter from this creature: Search your library for a basic land card, reveal it, put it into your hand, then shuffle.

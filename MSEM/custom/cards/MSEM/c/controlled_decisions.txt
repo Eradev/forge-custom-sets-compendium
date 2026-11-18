@@ -1,0 +1,14 @@
+Name:Controlled Decisions
+ManaCost:1 U R
+Types:Sorcery
+
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ 3 | Description$ Reverberate {3} (When you cast this spell, copy it if you paid its reverberate cost. You may choose new targets for the copy.)
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | CheckSVar$ CastSA>Count$OptionalGenericCostPaid.1.0 | NoResolvingCheck$ True | Execute$ TrigCopy | TriggerDescription$ When you cast this spell, if you paid its reverberate cost, copy it. You may choose new targets for the copy.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | MayChooseTarget$ True
+
+A:SP$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature that can't block this turn | KW$ HIDDEN CARDNAME can't block. | IsCurse$ True | SubAbility$ DBUnblockable | SpellDescription$ Target creature can't block this turn. Target creature can't be blocked this turn.
+SVar:DBUnblockable:DB$ Effect | ValidTgts$ Creature | TgtPrompt$ Select target creature that can't be blocked this turn | RememberObjects$ Targeted | ExileOnMoved$ Battlefield | StaticAbilities$ Unblockable
+SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ This creature can't be blocked this turn.
+
+Oracle:Reverberate {3} (When you cast this spell, copy it if you paid its reverberate cost. You may choose new targets for the copy.)\nTarget creature can't block this turn.\nTarget creature can't be blocked this turn.

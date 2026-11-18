@@ -1,0 +1,9 @@
+Name:Sigil of Growth
+ManaCost:3
+Types:Artifact
+
+A:AB$ Mana | Cost$ T | Produced$ Combo B G | SpellDescription$ Add {B} or {G}.
+
+A:AB$ Mana | Cost$ T Sac<1/CARDNAME/this artifact> | Produced$ R W | SpellDescription$ Add {B}{G}.
+
+Oracle:{T}: Add {B} or {G}.\n{T}, Sacrifice this artifact: Add {B}{G}.

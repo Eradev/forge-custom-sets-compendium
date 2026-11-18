@@ -1,0 +1,9 @@
+Name:Barbarian Rager
+ManaCost:R
+Types:Creature Human Barbarian Warrior
+PT:1/1
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | IsPresent$ Creature.attacking+Other | NoResolvingCheck$ True | PresentCompare$ GE2 | Execute$ TrigBattalionPump | TriggerDescription$ Battalion — Whenever this creature and at least two other creatures attack, this creature gets +2/+0 until end of turn.
+SVar:TrigBattalionPump:DB$ Pump | Defined$ Self | NumAtt$ +2
+
+Oracle:Battalion — Whenever this creature and at least two other creatures attack, this creature gets +2/+0 until end of turn.

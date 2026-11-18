@@ -1,0 +1,8 @@
+Name:Expel from Reality
+ManaCost:4 U
+Types:Sorcery
+
+A:SP$ ChangeZone | ValidTgts$ Permanent.nonLand | TgtPrompt$ Select target nonland permanent | Origin$ Battlefield | Destination$ Library | LibraryPosition$ 0 | SubAbility$ DBDraw | SpellDescription$ Put target nonland permanent on top of its owner's library. Draw a card.
+SVar:DBDraw:DB$ Draw
+
+Oracle:Put target nonland permanent on top of its owner's library.\nDraw a card.

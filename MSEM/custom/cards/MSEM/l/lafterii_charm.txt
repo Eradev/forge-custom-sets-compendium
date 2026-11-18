@@ -1,0 +1,14 @@
+Name:Lafterii Charm
+ManaCost:U R
+Types:Instant
+
+A:SP$ Charm | Choices$ DBReturn,DBPump,DBDraw
+
+SVar:DBReturn:DB$ ChangeZone | Origin$ Battlefield | Destination$ Hand | ValidTgts$ Creature | TgtPrompt$ Select target creature | SpellDescription$ Return target creature to its owner's hand.
+
+SVar:DBPump:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ +2 | KW$ First Strike | SpellDescription$ Target creature gets +2/+0 and gains first strike until end of turn.
+
+SVar:DBDraw:DB$ Draw | NumCards$ 2 | SubAbility$ DBDiscard | SpellDescription$ Draw two cards, then discard a card at random.
+SVar:DBDiscard:DB$ Discard | Defined$ You | Mode$ Random | NumCards$ 1
+
+Oracle:Choose one —\n• Return target creature to its owner's hand.\n• Target creature gets +2/+0 and gains first strike until end of turn.\n• Draw two cards, then discard a card at random.

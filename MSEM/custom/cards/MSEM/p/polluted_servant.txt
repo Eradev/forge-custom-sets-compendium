@@ -1,0 +1,16 @@
+Name:Polluted Servant
+ManaCost:3 B
+Types:Creature Horror
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDrain | TriggerDescription$ When this creature enters, target opponent loses 1 life and you gain 1 life.
+SVar:TrigDrain:DB$ LoseLife | ValidTgts$ Opponent | LifeAmount$ 1 | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 1
+
+A:AB$ ChangeZone | Cost$ 2 U | Defined$ Self | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBReturn | SpellDescription$ Exile this creature, then return it to the battlefield tapped under your control.
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | Tapped$ True | GainControl$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:When this creature enters, target opponent loses 1 life and you gain 1 life.\n{2}{U}: Exile this creature, then return it to the battlefield tapped under your control.
+
+DeckHas:Ability$LifeGain

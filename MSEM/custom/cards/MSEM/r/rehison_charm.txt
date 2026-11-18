@@ -1,0 +1,14 @@
+Name:Rehison Charm
+ManaCost:B G
+Types:Instant
+
+A:SP$ Charm | Choices$ DBPutCounter,DBUntap,DBWither
+
+SVar:DBPutCounter:DB$ PutCounter | ValidTgts$ Creature | TgtPrompt$ Select target creature to receive two -1/-1 counters | CounterType$ M1M1 | CounterNum$ 2 | IsCurse$ True | SpellDescription$ Put two -1/-1 counters on target creature.
+
+SVar:DBUntap:DB$ Untap | ValidTgts$ Creature | TgtPrompt$ Select target creature to untap | SubAbility$ DBDeathtouch | SpellDescription$ Untap target creature. It gains deathtouch until end of turn.
+SVar:DBDeathtouch:DB$ Pump | Defined$ ParentTarget | KW$ Deathtouch
+
+SVar:DBWither:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | KW$ Wither | SpellDescription$ Until end of turn, target creature gains Wither (It deals damage to creatures in the form of -1/-1 counters.)
+
+Oracle:Choose one —\n• Put two -1/-1 counters on target creature.\n• Untap target creature. It gains deathtouch until end of turn.\n• Until end of turn, target creature gains Wither (It deals damage to creatures in the form of -1/-1 counters.)

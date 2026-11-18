@@ -1,0 +1,9 @@
+Name:Wild Raiders
+ManaCost:4 R
+Types:Sorcery
+
+A:SP$ Token | TokenAmount$ 3 | TokenScript$ r_1_1_goblin | SpellDescription$ Create three 1/1 red Goblin creature tokens.
+
+Oracle:Create three 1/1 red Goblin creature tokens.
+
+DeckHas:Ability$Token

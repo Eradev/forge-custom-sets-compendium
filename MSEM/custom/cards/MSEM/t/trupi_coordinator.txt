@@ -1,0 +1,9 @@
+Name:Trupi Coordinator
+ManaCost:3 G
+Types:Creature Human Soldier
+PT:2/2
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | IsPresent$ Creature.sharesCreatureTypeWith+Other+YouCtrl | PresentCompare$ GE2 | OptionalDecider$ You | Execute$ TrigDraw | TriggerDescription$ Identity — At the beginning of your upkeep, if you control at least two other creatures that share a creature type with this creature, you may draw a card.
+SVar:TrigDraw:DB$ Draw | NumCards$ 1
+
+Oracle:Identity — At the beginning of your upkeep, if you control at least two other creatures that share a creature type with this creature, you may draw a card.

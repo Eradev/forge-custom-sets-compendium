@@ -1,0 +1,11 @@
+Name:Obliterating Blast
+ManaCost:1 R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ 3 | RememberDamaged$ True | ReplaceDyingDefined$ Remembered.Creature | SubAbility$ DBNoRegen | SpellDescription$ CARDNAME deals 3 damage to any target. A creature dealt damage this way this turn can't be regenerated this turn. If that creature would die this turn, exile it instead.
+
+SVar:DBNoRegen:DB$ Effect | RememberObjects$ Remembered.Creature | ForgetOnMoved$ Battlefield | StaticAbilities$ NoRegen | IsCurse$ True | AILogic$ CantRegenerate | StackDescription$ None | SubAbility$ DBCleanup
+SVar:NoRegen:Mode$ CantRegenerate | ValidCard$ Card.IsRemembered | Description$ A creature dealt damage this way can't be regenerated this turn.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Obliterating Blast deals 3 damage to any target. A creature dealt damage this way this turn can't be regenerated this turn. If that creature would die this turn, exile it instead.

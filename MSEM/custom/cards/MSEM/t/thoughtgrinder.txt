@@ -1,0 +1,11 @@
+Name:Thoughtgrinder
+ManaCost:2 U B
+Types:Creature Zombie Wizard
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDiscard | TriggerDescription$ When this creature enters, each player discards a card.
+SVar:TrigDiscard:DB$ Discard | Defined$ Player | NumCards$ 1 | Mode$ TgtChoose
+
+K:Unearth:1 U B
+
+Oracle:When this creature enters, each player discards a card.\nUnearth {1}{U}{B} ({1}{U}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)

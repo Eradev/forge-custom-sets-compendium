@@ -1,0 +1,8 @@
+Name:Youthful Recruiter
+ManaCost:W
+Types:Creature Human Soldier
+PT:1/2
+
+K:TypeCycling:Soldier:2 W
+
+Oracle:Soldiercycling {2}{W} ({2}{W}, Discard this card: Search your library for a Soldier card, reveal it, put it into your hand, then shuffle.)

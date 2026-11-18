@@ -1,0 +1,10 @@
+Name:Shared Vigor
+ManaCost:3 G G
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl | SetPower$ X | SetToughness$ Y | Description$ Each creature you control has base power and toughness X/Y, where X is the greatest base power among creatures you control and Y is the greatest base toughness among creatures you control.
+
+SVar:X:Count$Valid Creature.YouCtrl$GreatestCardBasePower
+SVar:Y:Count$Valid Creature.YouCtrl$GreatestCardBaseToughness
+
+Oracle:Each creature you control has base power and toughness X/Y, where X is the greatest base power among creatures you control and Y the greatest base toughness among creatures you control.

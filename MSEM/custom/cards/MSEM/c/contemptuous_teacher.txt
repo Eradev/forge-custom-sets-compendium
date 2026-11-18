@@ -1,0 +1,10 @@
+Name:Contemptuous Teacher
+ManaCost:1 U
+Types:Creature Human Wizard
+PT:1/1
+
+K:Prowess
+
+A:AB$ Pump | Cost$ 1 U T tapXType<1/Wizard> | ValidTgts$ Creature | NumAtt$ -3 | IsCurse$ True | SpellDescription$ Target creature gets -3/-0 until end of turn.
+
+Oracle:Prowess\n{1}{U}, Tap an untapped Wizard you control: Target creature gets -3/-0 until end of turn.

@@ -1,0 +1,10 @@
+Name:Hindered Research
+ManaCost:2 U
+Types:Enchantment
+
+T:Mode$ Cycled | ValidCard$ Card | TriggerZones$ Battlefield | Execute$ TrigMill | TriggerDescription$ Whenever a player cycles a card, that player mills two cards.
+SVar:TrigMill:DB$ Mill | Defined$ TriggeredCauseController | NumCards$ 2
+
+Oracle:Whenever a player cycles a card, that player mills two cards.
+
+DeckHas:Ability$Mill

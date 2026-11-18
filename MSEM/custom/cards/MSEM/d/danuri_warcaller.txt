@@ -1,0 +1,12 @@
+Name:Danuri Warcaller
+ManaCost:W
+Types:Creature Human Soldier
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | IsPresent$ Creature.YouCtrl+Other+sharesCreatureTypeWith | PresentCompare$ GE2 | Execute$ TrigToken | TriggerDescription$ Identity — When this creature enters, if you control at least two other creatures that share a creature type with it, create a 1/1 white Soldier creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_soldier
+
+DeckHas:Ability$Token
+DeckHints:Type$Human|Soldier
+
+Oracle:Identity — When this creature enters, if you control at least two other creatures that share a creature type with it, create a 1/1 white Soldier creature token.

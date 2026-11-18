@@ -1,0 +1,10 @@
+Name:Blighted Reckoning
+ManaCost:3 B
+Types:Enchantment
+
+T:Mode$ AttackersDeclared | AttackedTarget$ You | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigPutCounter | TriggerDescription$ Whenever one or more creatures attack you, you may put a -1/-1 counter on target creature.
+SVar:TrigPutCounter:DB$ PutCounter | ValidTgts$ Creature | TgtPrompt$ Select target creature | CounterType$ M1M1 | CounterNum$ 1 | IsCurse$ True
+
+Oracle:Whenever one or more creatures attack you, you may put a -1/-1 counter on target creature.
+
+DeckHas:Ability$Counters

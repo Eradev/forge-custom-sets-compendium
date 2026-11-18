@@ -1,0 +1,13 @@
+Name:Fellor Razer
+ManaCost:4 R
+Types:Creature Human Barbarian Warrior
+PT:5/2
+
+K:Trample
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigSacrifice | TriggerDescription$ Whenever this creature deals combat damage to a player, that player sacrifices a land.
+SVar:TrigSacrifice:DB$ Sacrifice | Defined$ TriggeredTarget | SacValid$ Land | ChangeNum$ 1 | SpellDescription$ Sacrifice a land.
+
+Oracle:Trample\nWhenever this creature deals combat damage to a player, that player sacrifices a land.
+
+DeckHas:Ability$Sacrifice

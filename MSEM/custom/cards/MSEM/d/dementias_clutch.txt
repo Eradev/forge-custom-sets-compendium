@@ -1,0 +1,14 @@
+Name:Dementia's Clutch
+ManaCost:3 B
+Types:Sorcery
+
+K:Cycling:2 B
+
+A:SP$ Discard | ValidTgts$ Player | NumCards$ 2 | Mode$ TgtChoose | SpellDescription$ Target player discards two cards.
+
+T:Mode$ Cycled | ValidCard$ Card.Self | Execute$ TrigDiscard | TriggerDescription$ When you cycle this card, target player discards a card.
+SVar:TrigDiscard:DB$ Discard | ValidTgts$ Player | NumCards$ 1 | Mode$ TgtChoose
+
+Oracle:Target player discards two cards.\nCycling {2}{B} ({2}{B}, Discard this card: Draw a card.)\nWhen you cycle this card, target player discards a card.
+
+DeckHas:Ability$Discard

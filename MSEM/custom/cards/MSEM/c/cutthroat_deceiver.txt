@@ -1,0 +1,12 @@
+Name:Cutthroat Deceiver
+ManaCost:1 B
+Types:Creature Elf Rogue
+PT:5/5
+
+K:Deathtouch
+
+K:etbCounter:M1M1:4
+
+A:AB$ MoveCounter | Cost$ 3 B T | ValidTgts$ Creature.Other | TgtPrompt$ Select another target creature | Source$ Self | CounterType$ M1M1 | CounterNum$ 1 | SpellDescription$ Move a -1/-1 counter from this creature onto another target creature.
+
+Oracle:Deathtouch\nThis creature enters with four -1/-1 counters on it.\n{3}{B}, {T}: Move a -1/-1 counter from this creature onto another target creature.

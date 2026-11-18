@@ -1,0 +1,12 @@
+Name:Unburdening Priest
+ManaCost:4 W
+Types:Creature Human Cleric
+PT:2/5
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigExile | TriggerDescription$ When this creature enters, you may exile any number of creatures you control not named Unburdening Priest, then return those cards to the battlefield under your control.
+SVar:TrigExile:DB$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ChangeType$ Creature.YouCtrl+!namedUnburdening Priest | Hidden$ True | ChangeNum$ MaxTgts | SelectPrompt$ Choose any number of creatures you control not named Unburdening Priest | RememberChanged$ True | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | GainControl$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:MaxTgts:Count$Valid Creature.YouCtrl+!namedUnburdening Priest
+
+Oracle:When this creature enters, you may exile any number of creatures you control not named Unburdening Priest, then return those cards to the battlefield under your control.

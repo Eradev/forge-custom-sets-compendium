@@ -1,0 +1,10 @@
+Name:Battlewise Strategist
+ManaCost:2 G W
+Types:Creature Human Cleric Soldier
+PT:2/3
+
+S:Mode$ CombatDamageToughness | ValidCard$ Creature.YouCtrl | Description$ Each creature you control assigns combat damage equal to its toughness rather than its power.
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+Other | AddToughness$ 1 | IsPresent$ Creature.sharesCreatureTypeWith+Other+YouCtrl | PresentCompare$ GE2 | Description$ Identity — Other creatures you control get +0/+1 as long as you control at least two other creatures that share a creature type with this creature.
+
+Oracle:Each creature you control assigns combat damage equal to its toughness rather than its power.\nIdentity — Other creatures you control get +0/+1 as long as you control at least two other creatures that share a creature type with this creature.

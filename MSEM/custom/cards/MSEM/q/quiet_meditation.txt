@@ -1,0 +1,12 @@
+Name:Quiet Meditation
+ManaCost:U
+Types:Sorcery
+
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ 2 | Description$ Reverberate {2} (When you cast this spell, copy it if you paid its reverberate cost.)
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | CheckSVar$ CastSA>Count$OptionalGenericCostPaid.1.0 | NoResolvingCheck$ True | Execute$ TrigCopy | TriggerDescription$ When you cast this spell, if you paid its reverberate cost, copy it.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility
+
+A:SP$ Draw | SpellDescription$ Draw a card.
+
+Oracle:Reverberate {2} (When you cast this spell, copy it if you paid its reverberate cost.)\nDraw a card.

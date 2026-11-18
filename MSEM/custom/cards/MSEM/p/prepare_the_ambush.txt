@@ -1,0 +1,7 @@
+Name:Prepare the Ambush
+ManaCost:2 B G
+Types:Sorcery
+
+A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | KW$ Deathtouch & HIDDEN CARDNAME must be blocked if able. | SpellDescription$ Creatures you control gain deathtouch until end of turn and must be blocked this turn if able.
+
+Oracle:Creatures you control gain deathtouch until end of turn and must be blocked this turn if able.

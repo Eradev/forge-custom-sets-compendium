@@ -1,0 +1,13 @@
+Name:Grave Reaper
+ManaCost:B
+Types:Creature Zombie
+PT:1/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self+!wasCastFromYourHandByYou | Execute$ TrigPump | TriggerDescription$ When this creature enters, if it wasn't cast from your hand, it gets +1/+1 until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | NumAtt$ +1 | NumDef$ +1
+
+K:Unearth:B
+
+Oracle:When this creature enters, if it wasn't cast from your hand, it gets +1/+1 until end of turn.\nUnearth {B} ({B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)
+
+DeckHas:Ability$Graveyard

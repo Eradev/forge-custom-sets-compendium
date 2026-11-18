@@ -1,0 +1,10 @@
+Name:Sire of the Wild
+ManaCost:6 G G
+Types:Creature Elemental
+PT:6/6
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDig | TriggerDescription$ When this creature enters, reveal the top four cards of your library. You may put a creature card from among them onto the battlefield. Shuffle the rest into your library.
+SVar:TrigDig:DB$ Dig | DigNum$ 4 | Reveal$ True | ChangeNum$ 1 | ChangeValid$ Creature | DestinationZone$ Battlefield | LibraryPosition2$ 0 | Optional$ True | RestRandomOrder$ True | SubAbility$ DBShuffle
+SVar:DBShuffle:DB$ Shuffle | Defined$ You
+
+Oracle:When this creature enters, reveal the top four cards of your library. You may put a creature card from among them onto the battlefield. Shuffle the rest into your library.

@@ -1,0 +1,10 @@
+Name:Decay
+ManaCost:4 B G
+Types:Creature Elemental Incarnation
+PT:6/5
+
+K:Wither
+
+A:AB$ Pump | Cost$ B G | ActivationZone$ Graveyard | ValidTgts$ Creature | TgtPrompt$ Select target creature | KW$ Wither | SpellDescription$ Until end of turn, target creature gains Wither (This creature deals damage to creatures in the form of -1/-1 counters.).
+
+Oracle:Wither (This creature deals damage to creatures in the form of -1/-1 counters.)\n{B}{G}: Until end of turn, target creature gains Wither. Activate only if Decay is in your graveyard.

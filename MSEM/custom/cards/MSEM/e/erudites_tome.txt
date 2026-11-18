@@ -1,0 +1,12 @@
+Name:Erudite's Tome
+ManaCost:1
+Types:Artifact Book Equipment
+
+K:Equip:2
+
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddToughness$ 2 | Description$ Equipped creature gets +0/+2.
+
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature.Wizard | AddAbility$ TomeScry | Description$ As long as equipped creature is a Wizard, it has "{T}: Scry 1."
+SVar:TomeScry:AB$ Scry | Cost$ T | ScryNum$ 1 | SpellDescription$ Scry 1.
+
+Oracle:Equipped creature gets +0/+2.\nAs long as equipped creature is a Wizard, it has "{T}: Scry 1."\nEquip {2}

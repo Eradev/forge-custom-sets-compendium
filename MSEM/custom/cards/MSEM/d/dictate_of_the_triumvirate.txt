@@ -1,0 +1,9 @@
+Name:Dictate of the Triumvirate
+ManaCost:4 W
+Types:Instant
+
+A:SP$ Token | TokenScript$ w_1_1_soldier | TokenAmount$ 3 | SpellDescription$ Create three 1/1 white Soldier creature tokens.
+
+K:TypeCycling:Soldier:2 W
+
+Oracle:Create three 1/1 white Soldier creature tokens.\nSoldiercycling {2}{W} ({2}{W}, Discard this card: Search your library for a Soldier card, reveal it, put it into your hand, then shuffle.)

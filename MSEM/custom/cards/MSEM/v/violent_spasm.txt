@@ -1,0 +1,13 @@
+Name:Violent Spasm
+ManaCost:1 R
+Types:Sorcery
+
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ 3 U | Description$ Reverberate {3}{U} (When you cast this spell, copy it if you paid its reverberate cost.)
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | CheckSVar$ CastSA>Count$OptionalGenericCostPaid.1.0 | NoResolvingCheck$ True | Execute$ TrigCopy | TriggerDescription$ When you cast this spell, if you paid its reverberate cost, copy it.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility
+
+A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | KW$ Flying | ConditionZone$ Stack | ConditionPresent$ Card.Self+copiedSpell | SubAbility$ DBDamage | SpellDescription$ If CARDNAME is reverberated, creatures you control gain flying until end of turn. CARDNAME deals 1 damage to each creature without flying.
+SVar:DBDamage:DB$ DamageAll | ValidCards$ Creature.withoutFlying | NumDmg$ 1 | ValidDescription$ each creature without flying.
+
+Oracle:Reverberate {3}{U} (When you cast this spell, copy it if you paid its reverberate cost.)\nIf Violent Spasm is reverberated, creatures you control gain flying until end of turn. Violent Spasm deals 1 damage to each creature without flying.

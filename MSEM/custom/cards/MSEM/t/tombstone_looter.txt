@@ -1,0 +1,13 @@
+Name:Tombstone Looter
+ManaCost:1 U
+Types:Creature Zombie Wizard
+PT:1/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigLoot | TriggerDescription$ When this creature enters, you may draw a card. If you do, discard a card.
+SVar:TrigLoot:AB$ Discard | Defined$ You | NumCards$ 1 | Mode$ TgtChoose | Cost$ Draw<1/You>
+
+K:Unearth:1 U
+
+Oracle:When this creature enters, you may draw a card. If you do, discard a card.\nUnearth {1}{U} ({1}{U}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)
+
+DeckHas:Ability$Discard|Graveyard

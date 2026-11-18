@@ -1,0 +1,13 @@
+Name:Heartless Warleader
+ManaCost:2 B
+Types:Creature Goblin Rogue
+PT:3/2
+
+K:Menace
+
+A:AB$ Pump | Cost$ Sac<1/Goblin> | Defined$ Self | NumAtt$ +2 | NumDef$ +2 | SpellDescription$ This creature gets +2/+2 until end of turn.
+
+Oracle:Menace\nSacrifice a Goblin: This creature gets +2/+2 until end of turn.
+
+DeckHints:Type$Goblin
+DeckHas:Ability$Sacrifice

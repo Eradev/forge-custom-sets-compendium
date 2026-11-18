@@ -1,0 +1,10 @@
+Name:Battle-Scarred Combatant
+ManaCost:3 B
+Types:Creature Elf Soldier
+PT:5/5
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPutCounter | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature attacks or blocks, put a -1/-1 counter on it.
+T:Mode$ Blocks | ValidCard$ Card.Self | Execute$ TrigPutCounter | Secondary$ True | TriggerZones$ Battlefield | TriggerDescription$ Whenever this creature attacks or blocks, put a -1/-1 counter on it.
+SVar:TrigPutCounter:DB$ PutCounter | CounterType$ M1M1
+
+Oracle:Whenever this creature attacks or blocks, put a -1/-1 counter on it.

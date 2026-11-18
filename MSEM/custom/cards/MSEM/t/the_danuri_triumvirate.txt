@@ -1,0 +1,10 @@
+Name:The Danuri Triumvirate
+ManaCost:3 G W
+Types:Legendary Creature Human Soldier Cleric
+PT:3/3
+
+S:Mode$ Continuous | Affected$ Permanent.YouCtrl+Other | AddKeyword$ Hexproof | Description$ Other permanents you control have hexproof.
+
+R:Event$ DamageDone | ActiveZones$ Battlefield | ValidTarget$ Permanent.YouCtrl+Other | Prevent$ True | Description$ Prevent all damage that would be dealt to other permanents you control.
+
+Oracle:Other permanents you control have hexproof.\nPrevent all damage that would be dealt to other permanents you control.

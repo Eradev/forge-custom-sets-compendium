@@ -1,0 +1,13 @@
+Name:Barbarian Intimidator
+ManaCost:1 R W
+Types:Creature Human Barbarian Warrior
+PT:2/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigNoBlock | TriggerDescription$ When this creature enters, target creature can't block this turn.
+SVar:TrigNoBlock:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature that can't block | KW$ HIDDEN CARDNAME can't block. | IsCurse$ True
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPrevent | TriggerDescription$ When this creature enters, prevent all combat damage that would be dealt to target creature this turn.
+SVar:TrigPrevent:DB$ Effect | ValidTgts$ Creature | TgtPrompt$ Select target creature to prevent combat damage to | ReplacementEffects$ RPrevent | RememberObjects$ Targeted | ExileOnMoved$ Battlefield
+SVar:RPrevent:Event$ DamageDone | Prevent$ True | IsCombat$ True | ValidTarget$ Card.IsRemembered | Description$ Prevent all combat damage that would be dealt to target creature this turn.
+
+Oracle:When this creature enters, target creature can't block this turn.\nWhen this creature enters, prevent all combat damage that would be dealt to target creature this turn.

@@ -1,0 +1,11 @@
+Name:Ethereal Savior
+ManaCost:4 W
+Types:Creature Spirit Cleric
+PT:2/2
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChangeZone | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may return target creature card with mana value 2 or less from your graveyard to to the battlefield.
+SVar:TrigChangeZone:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature.YouCtrl+cmcLE2 | TgtPrompt$ Select target creature card with mana value 2 or less
+
+Oracle:Flying\nWhen this creature enters, you may return target creature card with mana value 2 or less from your graveyard to the battlefield.

@@ -1,0 +1,14 @@
+Name:Swiftshot Sniper
+ManaCost:3 G
+Types:Creature Human Soldier Archer
+PT:2/5
+
+K:Reach
+
+A:AB$ DamageAll | Cost$ G T | ValidCards$ Creature.withFlying | ValidDescription$ each creature with flying | NumDmg$ X | SpellDescription$ This creature deals damage equal to its power to each creature with flying.
+
+A:AB$ Pump | Cost$ 2 G | Defined$ Self | NumAtt$ +2 | NumDef$ +2 | ActivationLimit$ 2 | SpellDescription$ This creature gets +2/+2 until end of turn. Activate no more than twice each turn.
+
+SVar:X:Count$CardPower
+
+Oracle:Reach\n{G}, {T}: This creature deals damage equal to its power to each creature with flying.\n{2}{G}: This creature gets +2/+2 until end of turn. Activate no more than twice each turn.

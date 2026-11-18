@@ -1,0 +1,11 @@
+Name:Faith
+ManaCost:4 G W
+Types:Creature Elemental Incarnation
+PT:3/6
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ At the beginning of your upkeep, create a 1/1 white Soldier creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_soldier
+
+A:AB$ Token | Cost$ 1 G W | ActivationZone$ Graveyard | ActivationPhases$ Upkeep | PlayerTurn$ True | TokenScript$ w_1_1_soldier | SpellDescription$ Create a 1/1 white Soldier creature token. Activate only during your upkeep and only if this card is in your graveyard.
+
+Oracle:At the beginning of your upkeep, create a 1/1 white Soldier creature token.\n{1}{G}{W}: Create a 1/1 white Soldier creature token. Activate only during your upkeep and only if this card is in your graveyard.

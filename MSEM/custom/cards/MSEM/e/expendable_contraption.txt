@@ -1,0 +1,8 @@
+Name:Expendable Contraption
+ManaCost:5
+Types:Artifact Creature Golem Soldier
+PT:3/3
+
+K:Cycling:3
+
+Oracle:Cycling {3} ({3}, Discard this card: Draw a card.)

@@ -1,0 +1,13 @@
+Name:Fleeting Distractor
+ManaCost:1 U
+Types:Creature Faerie Rogue
+PT:2/2
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigSacUnless | TriggerDescription$ When this creature enters, sacrifice it unless you return another creature you control to its owner's hand.
+SVar:TrigSacUnless:DB$ Sacrifice | UnlessCost$ Return<1/Creature.Other/other creature> | UnlessPayer$ You
+
+SVar:NeedsToPlay:Creature.YouCtrl
+
+Oracle:Flying\nWhen this creature enters, sacrifice it unless you return another creature you control to its owner's hand.

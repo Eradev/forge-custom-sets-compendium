@@ -1,0 +1,10 @@
+Name:Embodiment of Heavens
+ManaCost:4 U
+Types:Creature Elemental Wizard
+PT:2/3
+
+K:Flying
+
+S:Mode$ Continuous | Affected$ Elemental.YouCtrl+Other | AddToughness$ 1 | AddKeyword$ Flying | Description$ Other Elementals you control get +0/+1 and have flying.
+
+Oracle:Flying\nOther Elementals you control get +0/+1 and have flying.

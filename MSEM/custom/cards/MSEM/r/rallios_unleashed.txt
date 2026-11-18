@@ -1,0 +1,17 @@
+Name:Rallios Unleashed
+ManaCost:5 B B
+Types:Legendary Creature Horror Warrior
+PT:6/5
+
+K:Menace
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigETBToken | TriggerDescription$ When CARDNAME enters, create a 2/2 black Zombie creature token.
+SVar:TrigETBToken:DB$ Token | TokenScript$ b_2_2_zombie | TokenOwner$ You
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigCombatToken | TriggerDescription$ Whenever CARDNAME deals combat damage to a player, create a 2/2 black Zombie creature token for each creature card in your graveyard.
+SVar:TrigCombatToken:DB$ Token | TokenAmount$ X | TokenScript$ b_2_2_zombie
+SVar:X:Count$ValidGraveyard Creature.YouOwn
+
+DeckHas:Ability$Token|Graveyard
+
+Oracle:Menace\nWhen Rallios Unleashed enters, create a 2/2 black Zombie creature token.\nWhenever Rallios Unleashed deals combat damage to a player, create a 2/2 black Zombie creature token for each creature card in your graveyard.

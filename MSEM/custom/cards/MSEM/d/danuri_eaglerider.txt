@@ -1,0 +1,10 @@
+Name:Danuri Eaglerider
+ManaCost:2 W
+Types:Creature Human Soldier
+PT:3/2
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ 1 | AddToughness$ 2 | AddKeyword$ Flying | IsPresent$ Creature.YouCtrl+Other+sharesCreatureTypeWith | PresentCompare$ GE2 | Description$ Identity — As long as you control at least two other creatures that share a creature type with this creature, it gets +1/+2 and has flying.
+
+DeckHints:Type$Human|Soldier
+
+Oracle:Identity — As long as you control at least two other creatures that share a creature type with this creature, it gets +1/+2 and has flying.

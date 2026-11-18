@@ -1,0 +1,12 @@
+Name:Battleborn Brute
+ManaCost:4 R W
+Types:Creature Human Barbarian Warrior
+PT:4/4
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | IsPresent$ Creature.attacking+Other | NoResolvingCheck$ True | PresentCompare$ GE2 | Execute$ TrigBattalion | TriggerDescription$ Battalion — Whenever this creature and at least two other creatures attack, this creature gets +2/+2 until end of turn. Untap it.
+SVar:TrigBattalion:DB$ Pump | Defined$ Self | NumAtt$ +2 | NumDef$ +2 | SubAbility$ DBUntap
+SVar:DBUntap:DB$ Untap | Defined$ Self
+
+Oracle:Battalion — Whenever this creature and at least two other creatures attack, this creature gets +2/+2 until end of turn. Untap it.
+
+SVar:HasAttackEffect:TRUE

@@ -1,0 +1,12 @@
+Name:Barbarian Weaponsmith
+ManaCost:2 R R
+Types:Creature Human Barbarian Warrior
+PT:3/3
+
+S:Mode$ Continuous | Affected$ Warrior.Other+YouCtrl | AddKeyword$ First Strike | Description$ Other Warriors you control have first strike.
+
+S:Mode$ Continuous | Affected$ Barbarian.Other+YouCtrl | AddPower$ 1 | Description$ Other Barbarians you control get +1/+0.
+
+Oracle:Other Warriors you control have first strike.\nOther Barbarians you control get +1/+0.
+
+DeckHints:Type$Warrior|Barbarian

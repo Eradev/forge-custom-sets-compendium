@@ -1,0 +1,11 @@
+Name:Deception (MSEM)
+ManaCost:4 U B
+Types:Creature Elemental Incarnation
+PT:5/7
+
+S:Mode$ CantBlockBy | ValidAttacker$ Creature.Self | Description$ This creature can't be blocked.
+
+A:AB$ Effect | Cost$ 1 U B | ActivationZone$ Graveyard | ValidTgts$ Creature | TgtPrompt$ Select target creature | RememberObjects$ Targeted | StaticAbilities$ Unblockable | ExileOnMoved$ Battlefield | AILogic$ MakeUnblockable | SpellDescription$ Target creature can't be blocked this turn. Activate only if this card is in your graveyard.
+SVar:Unblockable:Mode$ CantBlockBy | ValidAttacker$ Card.IsRemembered | Description$ This creature can't be blocked this turn.
+
+Oracle:This creature can't be blocked.\n{1}{U}{B}: Target creature can't be blocked this turn. Activate only if this card is in your graveyard.

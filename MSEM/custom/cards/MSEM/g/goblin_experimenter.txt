@@ -1,0 +1,10 @@
+Name:Goblin Experimenter
+ManaCost:1 R
+Types:Creature Goblin Wizard
+PT:2/1
+
+K:Prowess
+
+A:AB$ ChangeZone | Cost$ 3 R Sac<1/CARDNAME/this creature> | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Sorcery.YouCtrl | TgtPrompt$ Choose target sorcery card in your graveyard | SpellDescription$ Return target sorcery card from your graveyard to your hand.
+
+Oracle:Prowess\n{3}{R}, Sacrifice this creature: Return target sorcery card from your graveyard to your hand.

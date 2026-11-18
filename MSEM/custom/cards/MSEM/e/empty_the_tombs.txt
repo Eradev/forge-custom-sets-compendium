@@ -1,0 +1,7 @@
+Name:Empty the Tombs
+ManaCost:2 B
+Types:Instant
+
+A:SP$ ChangeZoneAll | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Player | ChangeType$ Card | SpellDescription$ Exile target player's graveyard.
+
+Oracle:Exile target player's graveyard.

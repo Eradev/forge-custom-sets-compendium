@@ -1,0 +1,11 @@
+Name:Dedicated Druid
+ManaCost:1 G
+Types:Creature Elf Druid
+PT:1/1
+
+A:AB$ Mana | Cost$ T | Produced$ G | Amount$ X | SpellDescription$ Add {G}. If a -1/-1 counter was put on a creature you control this turn, add {G}{G} instead.
+
+SVar:X:SVar$CountersThisTurn/Plus.1
+SVar:CountersThisTurn:Count$CountersAddedThisTurn M1M1 Player Creature.YouCtrl/LimitMax.1
+
+Oracle:{T}: Add {G}. If a -1/-1 counter was put on a creature you control this turn, add {G}{G} instead.

@@ -1,0 +1,17 @@
+Name:Spellgorger Elemental
+ManaCost:3 U R
+Types:Creature Elemental Wizard
+PT:4/4
+
+K:Flying
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigTarget | TriggerDescription$ Whenever this creature attacks, discard a card at random. If an instant or sorcery card is discarded this way, this creature deals 3 damage to any target. Otherwise, draw a card.
+SVar:TrigTarget:DB$ TargetOnly | ValidTgts$ Any | TgtPrompt$ Select any target | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ You | NumCards$ 1 | Mode$ Random | RememberDiscarded$ True | SubAbility$ DBBranch
+SVar:DBBranch:DB$ Branch | BranchConditionSVar$ X | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBDamage | FalseSubAbility$ DBDraw | SubAbility$ DBCleanup
+SVar:DBDamage:DB$ DealDamage | Defined$ ParentTarget | NumDmg$ 3
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 1
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$Valid Instant,Sorcery
+
+Oracle:Flying\nWhenever this creature attacks, discard a card at random. If an instant or sorcery card is discarded this way, this creature deals 3 damage to any target. Otherwise, draw a card.
