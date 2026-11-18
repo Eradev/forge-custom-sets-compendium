@@ -284,7 +284,7 @@ Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
 3 b_2_2_zombie @D-Torres
 4 r_1_1_goblin @moonga
 5 g_1_1_elf_druid @unrealsmoker
-6 l_blasted_lands @JJcanvas
+6 blasted_lands @JJcanvas
 
 [other]
 7 emblem_elspeth_protector_of_the_meek @Verroy

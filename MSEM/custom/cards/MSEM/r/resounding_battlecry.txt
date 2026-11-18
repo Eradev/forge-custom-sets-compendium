@@ -6,4 +6,4 @@ A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +2 | NumDef$ +1 | SpellDe
 
 K:Cycling:1 W
 
-Oracle:Creatures you control get +2/+1 until end of turn.\nCycling {1}{W} ({1}{W}, Discard this card: Draw a card
+Oracle:Creatures you control get +2/+1 until end of turn.\nCycling {1}{W} ({1}{W}, Discard this card: Draw a card)
