@@ -9,6 +9,6 @@ SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | MayChooseT
 
 A:SP$ CopyPermanent | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | SpellDescription$ Create a token that's a copy of target creature you control.
 
-DeckHas:Ability$Token
-
 Oracle:Reverberate {3}{U} (When you cast this spell, copy it if you paid its reverberate cost. You may choose new targets for the copy.)\nCreate a token that's a copy of target creature you control.
+
+DeckHas:Ability$Token

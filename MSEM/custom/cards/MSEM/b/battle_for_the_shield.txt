@@ -13,6 +13,6 @@ SVar:DanuriStatic:Mode$ Continuous | Affected$ Creature.Soldier+YouCtrl | AddTou
 S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeFellor | AddStaticAbility$ FellorStatic | Description$ • Fellor — Warriors you control get +1/+0 and have first strike.
 SVar:FellorStatic:Mode$ Continuous | Affected$ Creature.Warrior+YouCtrl | AddPower$ 1 | AddKeyword$ First Strike | Description$ Warriors you control get +1/+0 and have first strike.
 
-DeckHints:Type$Soldier|Warrior
-
 Oracle:As this enchantment enters, choose Danuri or Fellor.\n• Danuri — Soldiers you control get +0/+1 and have vigilance.\n• Fellor — Warriors you control get +1/+0 and have first strike.
+
+DeckHints:Type$Soldier|Warrior

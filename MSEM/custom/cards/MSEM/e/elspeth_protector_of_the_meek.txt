@@ -12,6 +12,6 @@ A:AB$ Effect | Cost$ SubCounter<8/LOYALTY> | Planeswalker$ True | Ultimate$ True
 SVar:STPump:Mode$ Continuous | Affected$ Creature.YouCtrl | AffectedZone$ Battlefield | AddPower$ 2 | AddToughness$ 2 | Description$ Creatures you control get +2/+2.
 SVar:RPrevent:Event$ DamageDone | Prevent$ True | ActiveZones$ Command | ValidTarget$ Creature.attacking+YouCtrl | Description$ Prevent all damage that would be dealt to attacking creatures you control.
 
-DeckHas:Ability$Token
-
 Oracle:[+1]: Create a 1/1 white Warrior creature token.\n[-1]: Another target permanent you control gains indestructible until your next turn.\n[-8]: You get an emblem with "Creatures you control get +2/+2." and "Prevent all damage that would be dealt to attacking creatures you control."
+
+DeckHas:Ability$Token

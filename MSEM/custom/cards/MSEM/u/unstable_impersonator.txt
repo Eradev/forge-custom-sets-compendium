@@ -4,8 +4,8 @@ Types:Creature Shapeshifter
 PT:0/0
 
 K:ETBReplacement:Copy:DBRandomCopy:Optional
-SVar:DBRandomCopy:DB$ ChooseCard | Choices$ Creature | AtRandom$ True | Amount$ 1 | SubAbility$ DBClone | SpellDescription$ You may have CARDNAME enter as a copy of any creature on the battlefield chosen at random.
+SVar:DBRandomCopy:DB$ ChooseCard | Choices$ Creature | AtRandom$ True | Amount$ 1 | SubAbility$ DBClone | SpellDescription$ You may have this creature enter as a copy of any creature on the battlefield chosen at random.
 SVar:DBClone:DB$ Clone | Defined$ ChosenCard | SubAbility$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
 
-Oracle:You may have Unstable Impersonator enter as a copy of any creature on the battlefield chosen at random.
+Oracle:You may have this creature enter as a copy of any creature on the battlefield chosen at random.

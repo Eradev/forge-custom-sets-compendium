@@ -15,6 +15,6 @@ SVar:EmblemReverberate:Mode$ SpellCast | ValidCard$ Instant.YouOwn,Sorcery.YouOw
 SVar:EmblemCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | Controller$ TriggeredActivator | UnlessCost$ X | UnlessPayer$ TriggeredActivator | UnlessSwitched$ True | MayChooseTarget$ True
 SVar:X:TriggeredCard$CardManaCost
 
-DeckHints:Type$Instant|Sorcery
-
 Oracle:[+1]: Merkurio deals 2 damage to target player or planeswalker. That player or that planeswalker's controller may draw a card.\n[-2]: The next instant or sorcery spell you cast this turn costs {U}{R} less to cast. This effect reduces only the amount of colored mana you pay.\n[-7]: You get an emblem with "Each instant and sorcery card you own has reverberate {X}, where X is its mana value." (When you cast a spell, copy it if you paid its reverberate cost. You may choose new targets for the copy.)
+
+DeckHints:Type$Instant|Sorcery

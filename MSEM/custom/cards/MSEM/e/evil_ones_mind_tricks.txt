@@ -15,7 +15,7 @@ S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeEvil One |
 SVar:EvilOneTrigger:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Zombie.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigMill | TriggerDescription$ Whenever a Zombie you control enters, target player mills two cards.
 SVar:TrigMill:DB$ Mill | NumCards$ 2 | ValidTgts$ Player | TgtPrompt$ Select target player
 
+Oracle:As this enchantment enters, choose Lafterii or Evil One.\n• Lafterii — Wizards you control have "{3}{U}, {T}: Draw a card."\n• Evil One — Whenever a Zombie you control enters, target player mills two cards.
+
 DeckHas:Ability$Mill
 DeckHints:Type$Wizard|Zombie
-
-Oracle:As this enchantment enters, choose Lafterii or Evil One.\n• Lafterii — Wizards you control have "{3}{U}, {T}: Draw a card."\n• Evil One — Whenever a Zombie you control enters, target player mills two cards.

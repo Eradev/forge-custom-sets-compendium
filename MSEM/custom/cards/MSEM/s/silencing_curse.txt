@@ -8,6 +8,6 @@ SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
 SVar:X:Remembered$GreatestCardManaCost
 
-DeckHas:Ability$Mill|Graveyard
-
 Oracle:Mill three cards, then counter target spell unless its controller pays {X}, where X is the greatest mana value among cards milled this way.
+
+DeckHas:Ability$Mill|Graveyard

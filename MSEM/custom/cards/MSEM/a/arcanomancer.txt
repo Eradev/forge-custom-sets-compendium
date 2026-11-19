@@ -7,7 +7,7 @@ T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.S
 SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Instant.YouOwn | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target instant card in your graveyard | SubAbility$ DBReturnSorcery
 SVar:DBReturnSorcery:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Sorcery.YouOwn | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target sorcery card in your graveyard
 
+Oracle:When this creature enters, return up to one target instant card and up to one target sorcery card from your graveyard to your hand.
+
 DeckHas:Ability$Graveyard
 DeckHints:Type$Instant|Sorcery
-
-Oracle:When this creature enters, return up to one target instant card and up to one target sorcery card from your graveyard to your hand.

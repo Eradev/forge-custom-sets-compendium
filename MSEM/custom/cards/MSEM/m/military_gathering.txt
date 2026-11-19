@@ -10,7 +10,7 @@ A:AB$ Token | Cost$ 3 W | TokenScript$ w_1_1_soldier | CheckSVar$ YourLife | SVa
 SVar:YourLife:Count$YourLifeTotal
 SVar:HighestOppLife:PlayerCountOpponents$HighestLifeTotal
 
+Oracle:At the beginning of your upkeep, you gain 1 life for each creature you control.\n{3}{W}: Create a 1/1 white Soldier creature token. Activate only if you have the highest life total among all players.
+
 DeckHas:Ability$LifeGain|Token
 DeckHints:Type$Soldier
-
-Oracle:At the beginning of your upkeep, you gain 1 life for each creature you control.\n{3}{W}: Create a 1/1 white Soldier creature token. Activate only if you have the highest life total among all players.

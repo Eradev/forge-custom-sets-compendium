@@ -10,6 +10,6 @@ K:First Strike
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChange | TriggerDescription$ When this creature enters, return a creature you control to its owner's hand.
 SVar:TrigChange:DB$ ChangeZone | Origin$ Battlefield | Destination$ Hand | Hidden$ True | Mandatory$ True | ChangeType$ Creature.YouCtrl | ChangeNum$ 1 | AILogic$ NeverBounceItself
 
-SVar:NeedsToPlay:Creature.YouCtrl+!token
-
 Oracle:Flying, first strike\nWhen this creature enters, return a creature you control to its owner's hand.
+
+SVar:NeedsToPlay:Creature.YouCtrl+!token

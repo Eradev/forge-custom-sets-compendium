@@ -6,3 +6,5 @@ A:SP$ Counter | TargetType$ Spell | TgtPrompt$ Select target spell | ValidTgts$ 
 SVar:X:Count$Valid Wizard/Twice
 
 Oracle:Counter target spell unless its controller pays {2} for each Wizard on the battlefield.
+
+AI:RemoveDeck:Random
