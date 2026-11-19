@@ -1,0 +1,10 @@
+Name:Dredging Aberration
+ManaCost:4 B
+Types:Creature Zombie Horror
+PT:3/3
+
+A:AB$ ChangeZone | Cost$ 1 B Mill<3> | Origin$ Graveyard | Destination$ Hand | ActivationZone$ Graveyard | SpellDescription$ Return this card from your graveyard to your hand.
+
+Oracle:{1}{B}, Mill three cards: Return this card from your graveyard to your hand.
+
+DeckHas:Ability$Mill|Graveyard

@@ -1,0 +1,9 @@
+Name:Sigil of Brutality
+ManaCost:3
+Types:Artifact
+
+A:AB$ Mana | Cost$ T | Produced$ Combo R W | SpellDescription$ Add {R} or {W}.
+
+A:AB$ Mana | Cost$ T Sac<1/CARDNAME/this artifact> | Produced$ R W | SpellDescription$ Add {R}{W}.
+
+Oracle:{T}: Add {R} or {W}.\n{T}, Sacrifice this artifact: Add {R}{W}.

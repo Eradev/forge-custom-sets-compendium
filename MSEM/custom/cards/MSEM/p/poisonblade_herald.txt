@@ -1,0 +1,9 @@
+Name:Poisonblade Herald
+ManaCost:B G
+Types:Creature Elf Druid
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ When this creature enters, put a -1/-1 counter on a creature you control.
+SVar:TrigPutCounter:DB$ PutCounter | Choices$ Creature.YouCtrl | TgtPrompt$ Select target creature you control to receive a -1/-1 counter | CounterType$ M1M1 | CounterNum$ 1 | IsCurse$ True
+
+Oracle:When this creature enters, put a -1/-1 counter on a creature you control.

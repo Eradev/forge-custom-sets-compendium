@@ -1,0 +1,9 @@
+Name:Fading Memories
+ManaCost:1 W
+Types:Creature Spirit Cleric
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChange | TriggerDescription$ When this creature enters, exile target creature card from a graveyard.
+SVar:TrigChange:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | TgtPrompt$ Choose target creature card in a graveyard | ValidTgts$ Creature
+
+Oracle:When this creature enters, exile target creature card from a graveyard.

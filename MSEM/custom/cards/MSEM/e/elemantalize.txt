@@ -1,0 +1,12 @@
+Name:Elementalize
+ManaCost:1 U
+Types:Instant
+
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ 1 U | Description$ Reverberate {1}{U} (When you cast this spell, copy it if you paid its reverberate cost. You may choose new targets for the copy.)
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | CheckSVar$ CastSA>Count$OptionalGenericCostPaid.1.0 | NoResolvingCheck$ True | Execute$ TrigCopy | TriggerDescription$ When you cast this spell, if you paid its reverberate cost, copy it. You may choose new targets for the copy.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | MayChooseTarget$ True
+
+A:SP$ Animate | ValidTgts$ Creature | TgtPrompt$ Select target creature | Power$ 3 | Toughness$ 3 | RemoveAllAbilities$ True | Colors$ Blue | OverwriteColors$ True | Types$ Elemental | RemoveCreatureTypes$ True | SpellDescription$ Until end of turn, target creature loses all abilities and becomes a blue Elemental with base power and toughness 3/3.
+
+Oracle:Reverberate {1}{U} (When you cast this spell, copy it if you paid its reverberate cost. You may choose new targets for the copy.)\nUntil end of turn, target creature loses all abilities and becomes a blue Elemental with base power and toughness 3/3.

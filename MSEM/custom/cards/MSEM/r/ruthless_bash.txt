@@ -1,0 +1,15 @@
+Name:Ruthless Bash
+ManaCost:R W
+Types:Instant
+
+A:SP$ ChooseSource | Choices$ Card,Emblem | SubAbility$ DBTrample | StackDescription$ SpellDescription | SpellDescription$ Target creature gains trample until end of turn. The next time a source of your choice would deal damage to that creature, prevent that damage. If damage is prevented this way, that creature gets +X/+0 until end of turn, where X is the amount of damage prevented this way.
+
+SVar:DBTrample:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | KW$ Trample | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ ParentTarget | ReplacementEffects$ RPrevent | ExileOnMoved$ Battlefield | SubAbility$ DBCleanup
+SVar:RPrevent:Event$ DamageDone | ValidSource$ Card.ChosenCardStrict,Emblem.ChosenCard | ValidTarget$ Card.IsRemembered | ReplaceWith$ DBBoost | PreventionEffect$ True | Description$ The next time the chosen source would deal damage to the targeted creature this turn, prevent that damage. If damage is prevented this way, that creature gets +X/+0 until end of turn, where X is the amount of damage prevented this way.
+SVar:DBBoost:DB$ Pump | Defined$ ReplacedTarget | NumAtt$ +X | SubAbility$ DBExileEffect
+SVar:DBExileEffect:DB$ ChangeZone | Defined$ Self | Origin$ Command | Destination$ Exile
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
+SVar:X:ReplaceCount$DamageAmount
+
+Oracle:Target creature gains trample until end of turn. The next time a source of your choice would deal damage to that creature, prevent that damage. If damage is prevented this way, that creature gets +X/+0 until end of turn, where X is the amount of damage prevented this way.

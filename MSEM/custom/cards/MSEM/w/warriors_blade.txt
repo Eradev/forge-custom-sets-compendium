@@ -1,0 +1,11 @@
+Name:Warrior's Blade
+ManaCost:2
+Types:Artifact Equipment
+
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddPower$ 1 | AddToughness$ 1 | Description$ Equipped creature gets +1/+1.
+
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature.Warrior | AddKeyword$ First Strike | Description$ As long as equipped creature is a Warrior, it has first strike.
+
+K:Equip:1
+
+Oracle:Equipped creature gets +1/+1.\nAs long as equipped creature is a Warrior, it has first strike.\nEquip {1}

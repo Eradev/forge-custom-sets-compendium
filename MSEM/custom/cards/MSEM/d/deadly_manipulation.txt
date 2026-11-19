@@ -1,0 +1,12 @@
+Name:Deadly Manipulation
+ManaCost:1 U B
+Types:Enchantment
+
+A:AB$ ChangeZone | Cost$ U Discard<1/Card> | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Instant.YouOwn,Sorcery.YouOwn | TgtZone$ Graveyard | TgtPrompt$ Select target instant or sorcery card in your graveyard | RememberChanged$ True | SubAbility$ DBCastCopy | SpellDescription$ Exile target instant or sorcery card from your graveyard. If you do, copy it. You may cast the copy.
+SVar:DBCastCopy:DB$ Play | Valid$ Card.IsRemembered | ValidZone$ Exile | Controller$ You | CopyCard$ True | ValidSA$ Spell | Optional$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+A:AB$ ChangeZone | Cost$ B Discard<1/Card> | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Creature.YouOwn | TgtZone$ Graveyard | TgtPrompt$ Select target creature card in your graveyard | SorcerySpeed$ True | RememberChanged$ True | SubAbility$ DBCopyCreature | SpellDescription$ Exile target creature card from your graveyard and pay its mana cost. If you do, create a token that's a copy of it.
+SVar:DBCopyCreature:DB$ CopyPermanent | Defined$ Remembered | UnlessCost$ DefinedCost_Remembered | UnlessPayer$ You | UnlessSwitched$ True | SubAbility$ DBCleanup
+
+Oracle:{U}, Discard a card: Exile target instant or sorcery card from your graveyard. If you do, copy it. You may cast the copy.\n{B}, Discard a card: Exile target creature card from your graveyard and pay its mana cost. If you do, create a token that's a copy of it. Activate only as a sorcery.

@@ -1,0 +1,10 @@
+Name:Helm of the Anointer
+ManaCost:1
+Types:Artifact Equipment
+
+K:Equip:1
+
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddAbility$ HelmPump | Description$ Equipped creature has "{T}: Target attacking creature gets +1/+1 until end of turn."
+SVar:HelmPump:AB$ Pump | Cost$ T | ValidTgts$ Creature.attacking | TgtPrompt$ Select target attacking creature | NumAtt$ +1 | NumDef$ +1 | SpellDescription$ Target attacking creature gets +1/+1 until end of turn.
+
+Oracle:Equipped creature has "{T}: Target attacking creature gets +1/+1 until end of turn."\nEquip {1}

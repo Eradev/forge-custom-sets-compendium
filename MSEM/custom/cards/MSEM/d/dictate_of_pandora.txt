@@ -1,0 +1,9 @@
+Name:Dictate of Pandora
+ManaCost:4 G
+Types:Sorcery
+
+A:SP$ PumpAll | ValidCards$ Creature.Elf+YouCtrl | NumAtt$ +2 | NumDef$ +2 | KW$ Trample | SpellDescription$ Elf creatures you control get +2/+2 and gain trample until end of turn.
+
+K:TypeCycling:Elf:2 G
+
+Oracle:Elf creatures you control get +2/+2 and gain trample until end of turn.\nElfcycling {2}{G} ({2}{G}, Discard this card: Search your library for an Elf card, reveal it, put it into your hand, then shuffle.)

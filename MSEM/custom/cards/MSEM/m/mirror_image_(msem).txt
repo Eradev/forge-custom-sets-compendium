@@ -1,0 +1,14 @@
+Name:Mirror Image (MSEM)
+ManaCost:1 U U
+Types:Instant
+
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ 3 U | Description$ Reverberate {3}{U} (When you cast this spell, copy it if you paid its reverberate cost. You may choose new targets for the copy.)
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | CheckSVar$ CastSA>Count$OptionalGenericCostPaid.1.0 | NoResolvingCheck$ True | Execute$ TrigCopy | TriggerDescription$ When you cast this spell, if you paid its reverberate cost, copy it. You may choose new targets for the copy.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | MayChooseTarget$ True
+
+A:SP$ CopyPermanent | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | SpellDescription$ Create a token that's a copy of target creature you control.
+
+Oracle:Reverberate {3}{U} (When you cast this spell, copy it if you paid its reverberate cost. You may choose new targets for the copy.)\nCreate a token that's a copy of target creature you control.
+
+DeckHas:Ability$Token

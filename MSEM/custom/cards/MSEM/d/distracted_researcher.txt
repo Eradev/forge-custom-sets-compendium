@@ -1,0 +1,6 @@
+Name:Distracted Researcher
+ManaCost:2 R
+Types:Creature Human Wizard
+PT:3/2
+
+Oracle:

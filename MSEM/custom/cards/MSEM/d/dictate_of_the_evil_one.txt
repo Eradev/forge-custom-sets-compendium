@@ -1,0 +1,10 @@
+Name:Dictate of the Evil One
+ManaCost:4 B
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | GainControl$ True | TgtPrompt$ Choose target creature card in a graveyard | ValidTgts$ Creature | StaticEffect$ Animate | SpellDescription$ Put target creature card from a graveyard onto the battlefield under your control. That creature is a black Zombie in addition to its other colors and types.
+SVar:Animate:Mode$ Continuous | Affected$ Card.IsRemembered | AddType$ Zombie | AddColor$ Black
+
+K:TypeCycling:Zombie:2 B
+
+Oracle:Put target creature card from a graveyard onto the battlefield under your control. That creature is a black Zombie in addition to its other colors and types.\nZombiecycling {2}{B} ({2}{B}, Discard this card: Search your library for a Zombie card, reveal it, put it into your hand, then shuffle.)

@@ -1,0 +1,9 @@
+Name:Sealed Mausoleum
+ManaCost:3
+Types:Artifact
+
+S:Mode$ Continuous | Affected$ Card | AffectedZone$ Graveyard | RemoveAllAbilities$ True | Description$ Cards in graveyards lose all abilities.
+
+S:Mode$ CantTarget | AffectedZone$ Graveyard | Description$ Cards in graveyards can't be the target of spells or abilities.
+
+Oracle:Cards in graveyards lose all abilities.\nCards in graveyards can't be the target of spells or abilities.

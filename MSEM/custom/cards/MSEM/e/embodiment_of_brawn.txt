@@ -1,0 +1,10 @@
+Name:Embodiment of Brawn
+ManaCost:4 G
+Types:Creature Elemental Druid
+PT:3/3
+
+K:Trample
+
+S:Mode$ Continuous | Affected$ Elemental.YouCtrl+Other | AddPower$ 1 | AddKeyword$ Trample | Description$ Other Elementals you control get +1/+0 and have trample.
+
+Oracle:Trample\nOther Elementals you control get +1/+0 and have trample.

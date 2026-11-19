@@ -1,0 +1,10 @@
+Name:Plundered Graves
+ManaCost:X U B
+Types:Sorcery
+
+A:SP$ Mill | Defined$ You | NumCards$ X | SubAbility$ DBReturn | SpellDescription$ Mill X cards. Then you may return a creature card with mana value X or less from your graveyard to the battlefield.
+SVar:DBReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ChangeType$ Creature.YouOwn+cmcLEX | ChangeNum$ 1 | Hidden$ True | Optional$ True | SelectPrompt$ Select a creature card with mana value X or less to return to the battlefield.
+
+SVar:X:Count$xPaid
+
+Oracle:Mill X cards. Then you may return a creature card with mana value X or less from your graveyard to the battlefield.

@@ -1,0 +1,12 @@
+Name:Forced Loyalty
+ManaCost:6 U B
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Creature | TgtPrompt$ Select target creature to exile | RememberChanged$ True | SubAbility$ DBExileGrave | SpellDescription$ Exile target creature, then exile target creature card from a graveyard. An opponent chooses one of them. Put the chosen card onto the battlefield under your control.
+SVar:DBExileGrave:DB$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Creature | TgtZone$ Graveyard | TgtPrompt$ Select target creature card from a graveyard | RememberChanged$ True | SubAbility$ DBChooseOpponent
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Choices$ Player.Opponent | Defined$ You | SubAbility$ DBChooseCard
+SVar:DBChooseCard:DB$ ChooseCard | Defined$ ChosenPlayer | Choices$ Card.IsRemembered | ChoiceZone$ Exile | Mandatory$ True | Amount$ 1 | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Defined$ ChosenCard | Origin$ Exile | Destination$ Battlefield | GainControl$ You | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Exile target creature, then exile target creature card from a graveyard. An opponent chooses one of them. Put the chosen card onto the battlefield under your control.

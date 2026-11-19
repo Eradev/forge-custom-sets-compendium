@@ -1,0 +1,14 @@
+Name:Reader of Fates
+ManaCost:3 B
+Types:Creature Elf Shaman
+PT:2/3
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDrain | TriggerDescription$ Whenever another creature you control dies, target player loses 1 life and you gain 1 life.
+SVar:TrigDrain:DB$ LoseLife | ValidTgts$ Player | LifeAmount$ 1 | SubAbility$ DBGainLife
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 1
+
+A:AB$ Scry | Cost$ 1 B Sac<1/Creature> | SpellDescription$ Scry 1.
+
+Oracle:Whenever another creature you control dies, target player loses 1 life and you gain 1 life.\n{1}{B}, Sacrifice a creature: Scry 1.
+
+DeckHas:Ability$LifeGain|Sacrifice

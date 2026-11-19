@@ -1,0 +1,9 @@
+Name:Inscrutable Elixir
+ManaCost:5
+Types:Artifact
+
+A:AB$ PutCounter | Cost$ 4 T | ValidTgts$ Creature | TgtPrompt$ Select target creature | CounterType$ M1M1 | CounterNum$ 1 | IsCurse$ True | SpellDescription$ Put a -1/-1 counter on target creature.
+
+A:AB$ RemoveCounter | Cost$ 4 T | ValidTgts$ Creature | TgtPrompt$ Select target creature | CounterType$ M1M1 | CounterNum$ 1 | SpellDescription$ Remove a -1/-1 counter from target creature.
+
+Oracle:{4}, {T}: Put a -1/-1 counter on target creature.\n{4}, {T}: Remove a -1/-1 counter from target creature.

@@ -1,0 +1,13 @@
+Name:Silencing Curse
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Mill | Defined$ You | NumCards$ 3 | RememberMilled$ True | SubAbility$ DBCounter | SpellDescription$ Mill three cards, then counter target spell unless its controller pays {X}, where X is the greatest mana value among cards milled this way.
+SVar:DBCounter:DB$ Counter | TargetType$ Spell | ValidTgts$ Card | TgtPrompt$ Select target spell | UnlessCost$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:X:Remembered$GreatestCardManaCost
+
+Oracle:Mill three cards, then counter target spell unless its controller pays {X}, where X is the greatest mana value among cards milled this way.
+
+DeckHas:Ability$Mill|Graveyard

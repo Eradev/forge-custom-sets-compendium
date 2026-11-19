@@ -1,0 +1,7 @@
+Name:Monument of War
+ManaCost:4
+Types:Artifact
+
+A:AB$ ChangeZone | Cost$ 5 T Exile<1/Creature> | Origin$ Battlefield | Destination$ Exile | ValidTgts$ Creature | TgtPrompt$ Select target creature to exile | SpellDescription$ Exile target creature.
+
+Oracle:{5}, {T}, Exile a creature you control: Exile target creature.

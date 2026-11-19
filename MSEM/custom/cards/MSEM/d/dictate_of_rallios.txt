@@ -1,0 +1,12 @@
+Name:Dictate of Rallios
+ManaCost:2 R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Any | TgtPrompt$ Select any target | NumDmg$ X | SpellDescription$ CARDNAME deals damage to any target equal to the number of Warriors you control.
+SVar:X:Count$Valid Warrior.YouCtrl
+
+K:TypeCycling:Warrior:2 R
+
+Oracle:Dictate of Rallios deals damage to any target equal to the number of Warriors you control.\nWarriorcycling {2}{R} ({2}{R}, Discard this card: Search your library for a Warrior card, reveal it, put it into your hand, then shuffle.)
+
+DeckHints:Type$Warrior

@@ -1,0 +1,11 @@
+Name:Intrepid Shooter
+ManaCost:1 G W
+Types:Creature Human Soldier Archer
+PT:2/2
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ When this creature enters, it deals 2 damage to target attacking creature.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Creature.attacking | TgtPrompt$ Select target attacking creature | NumDmg$ 2
+
+Oracle:Flash\nWhen this creature enters, it deals 2 damage to target attacking creature.

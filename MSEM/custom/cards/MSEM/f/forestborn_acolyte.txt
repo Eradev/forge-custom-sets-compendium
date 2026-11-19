@@ -1,0 +1,8 @@
+Name:Forestborn Acolyte
+ManaCost:2 G
+Types:Creature Human Druid
+PT:2/3
+
+K:Hexproof
+
+Oracle:Hexproof

@@ -1,0 +1,8 @@
+Name:Arcanist's Familiar
+ManaCost:1 U
+Types:Creature Elemental Wizard
+PT:1/2
+
+K:Prowess
+
+Oracle:Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)

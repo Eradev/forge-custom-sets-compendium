@@ -1,0 +1,14 @@
+Name:Sentinel of Latter Days
+ManaCost:4
+Types:Artifact Creature Golem
+PT:3/3
+
+K:TypeCycling:Soldier:1 W
+K:TypeCycling:Wizard:1 U
+K:TypeCycling:Zombie:1 B
+K:TypeCycling:Warrior:1 R
+K:TypeCycling:Elf:1 G
+
+S:Mode$ Continuous | Affected$ Card.Self | AffectedZone$ Library | EffectZone$ Library | AddAllCreatureTypes$ True | Description$ This card is every creature type as long as it's in your library.
+
+Oracle:Soldiercycling {1}{W}, Wizardcycling {1}{U}, Zombiecycling {1}{B}, Warriorcycling {1}{R}, Elfcycling {1}{G}\nThis card is every creature type as long as it's in your library.

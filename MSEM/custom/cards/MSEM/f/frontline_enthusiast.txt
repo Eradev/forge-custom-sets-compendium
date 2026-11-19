@@ -1,0 +1,8 @@
+Name:Frontline Enthusiast
+ManaCost:4 W
+Types:Creature Human Barbarian Warrior
+PT:4/2
+
+K:First Strike
+
+Oracle:First strike

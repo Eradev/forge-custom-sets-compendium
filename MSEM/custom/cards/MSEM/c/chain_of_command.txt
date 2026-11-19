@@ -1,0 +1,18 @@
+Name:Chain of Command
+ManaCost:2 G W
+Types:Enchantment Aura
+
+K:Enchant:Creature.YouCtrl:creature you control
+SVar:AttachAILogic:Pump
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddPower$ 1 | AddToughness$ 1 | Description$ Enchanted creature gets +1/+1.
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.EnchantedBy | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigSearch | TriggerDescription$ When enchanted creature dies, you may search your library for a creature card with mana value equal to enchanted creature's mana cost minus 1, put it onto the battlefield, and attach this Aura to it, then shuffle.
+SVar:TrigSearch:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | ChangeType$ Creature.cmcEQX | ChangeNum$ 1 | Hidden$ True | RememberChanged$ True | ShuffleNonMandatory$ True | SubAbility$ DBReturnAura
+SVar:DBReturnAura:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | Defined$ Self | AttachedTo$ Remembered | ConditionDefined$ Remembered | ConditionPresent$ Creature | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:X:SVar$Y/Minus.1
+SVar:Y:TriggeredCard$CardManaCost
+
+Oracle:Enchant creature you control\nEnchanted creature gets +1/+1.\nWhen enchanted creature dies, you may search your library for a creature card with mana value equal to enchanted creature's mana cost minus 1, put it onto the battlefield, and attach this Aura to it, then shuffle.

@@ -1,0 +1,11 @@
+Name:Blightbringer
+ManaCost:3 B B
+Types:Creature Zombie Warrior
+PT:4/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPumpAll | TriggerDescription$ When this creature enters, creatures your opponents control get -1/-1 until end of turn.
+SVar:TrigPumpAll:DB$ PumpAll | NumAtt$ -1 | NumDef$ -1 | ValidCards$ Creature.OppCtrl | IsCurse$ True
+
+K:Unearth:3 B
+
+Oracle:When this creature enters, creatures your opponents control get -1/-1 until end of turn.\nUnearth {3}{B} ({3}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the end step or if it would leave the battlefield. Unearth only as a sorcery.)

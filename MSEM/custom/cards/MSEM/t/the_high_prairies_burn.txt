@@ -1,0 +1,13 @@
+Name:The High Prairies Burn
+ManaCost:4 R
+Types:Sorcery
+
+A:SP$ DestroyAll | ValidCards$ Land | RememberDestroyed$ True | SubAbility$ DBRepeat | SpellDescription$ Destroy all lands. For each land destroyed this way, its controller creates a colorless land token named Blasted Lands with "{T}: Add {C}."
+
+SVar:DBRepeat:DB$ RepeatEach | UseImprinted$ True | DefinedCards$ DirectRemembered | RepeatSubAbility$ DBToken | SubAbility$ DBCleanup | ChangeZoneTable$ True
+SVar:DBToken:DB$ Token | TokenOwner$ ImprintedController | TokenScript$ blasted_lands
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Destroy all lands. For each land destroyed this way, its controller creates a colorless land token named Blasted Lands with "{T}: Add {C}."
+
+DeckHas:Ability$Token

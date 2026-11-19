@@ -1,0 +1,8 @@
+Name:Poisonblade Trainee
+ManaCost:G
+Types:Creature Elf Soldier
+PT:2/2
+
+K:etbCounter:M1M1:1
+
+Oracle:This creature enters with a -1/-1 counter on it.

@@ -1,0 +1,9 @@
+Name:Sigil of Unity
+ManaCost:3
+Types:Artifact
+
+A:AB$ Mana | Cost$ T | Produced$ Combo G W | SpellDescription$ Add {G} or {W}.
+
+A:AB$ Mana | Cost$ T Sac<1/CARDNAME/this artifact> | Produced$ R W | SpellDescription$ Add {G}{W}.
+
+Oracle:{T}: Add {G} or {W}.\n{T}, Sacrifice this artifact: Add {G}{W}.

@@ -1,0 +1,10 @@
+Name:Peaceful Intentions
+ManaCost:W
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddStaticAbility$ CombatLifelink | Description$ Creatures blocking or blocked by enchanted creature have lifelink.
+SVar:CombatLifelink:Mode$ Continuous | Affected$ Creature.blockedBySource,Creature.blockingSource | AddKeyword$ Lifelink | Description$ Creatures blocking or blocked by this creature have lifelink.
+
+Oracle:Enchant creature\nCreatures blocking or blocked by enchanted creature have lifelink.

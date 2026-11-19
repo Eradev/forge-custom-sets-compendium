@@ -1,0 +1,11 @@
+Name:Arcane Harvesters
+ManaCost:1 U R
+Types:Creature Human Wizard
+PT:2/2
+
+A:AB$ Draw | Cost$ U ExileFromGrave<1/Instant;Sorcery> | NumCards$ 1 | SubAbility$ DBDiscard | SpellDescription$ Draw a card, then discard a card.
+SVar:DBDiscard:DB$ Discard | Defined$ You | NumCards$ 1 | Mode$ TgtChoose
+
+A:AB$ DealDamage | Cost$ R ExileFromGrave<1/Instant;Sorcery> | ValidTgts$ Any | TgtPrompt$ Select any target | NumDmg$ 1 | SpellDescription$ This creature deals 1 damage to any target.
+
+Oracle:{U}, Exile an instant or sorcery card from your graveyard: Draw a card, then discard a card.\n{R}, Exile an instant or sorcery card from your graveyard: This creature deals 1 damage to any target.

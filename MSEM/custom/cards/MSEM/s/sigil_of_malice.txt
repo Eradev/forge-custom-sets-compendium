@@ -1,0 +1,9 @@
+Name:Sigil of Malice
+ManaCost:3
+Types:Artifact
+
+A:AB$ Mana | Cost$ T | Produced$ Combo U B | SpellDescription$ Add {U} or {B}.
+
+A:AB$ Mana | Cost$ T Sac<1/CARDNAME/this artifact> | Produced$ R W | SpellDescription$ Add {U}{B}.
+
+Oracle:{T}: Add {U} or {B}.\n{T}, Sacrifice this artifact: Add {U}{B}.

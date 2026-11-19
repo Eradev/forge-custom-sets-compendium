@@ -1,0 +1,11 @@
+Name:Raging Warlord
+ManaCost:1 R
+Types:Creature Goblin Warrior
+PT:1/1
+
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigPumpAll | TriggerDescription$ Whenever this creature attacks, Goblins you control get +1/+0 until end of turn.
+SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.Goblin+YouCtrl | NumAtt$ +1
+
+Oracle:Whenever this creature attacks, Goblins you control get +1/+0 until end of turn.
+
+DeckHints:Type$Goblin

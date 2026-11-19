@@ -1,0 +1,9 @@
+Name:Weapon Smash
+ManaCost:1 R
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Artifact | SpellDescription$ Destroy target artifact.
+
+K:Cycling:1 R
+
+Oracle:Destroy target artifact.\nCycling {1}{R} ({1}{R}, Discard this card: Draw a card.)

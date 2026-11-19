@@ -1,0 +1,10 @@
+Name:Dawnglory Griffin
+ManaCost:R W
+Types:Creature Griffin
+PT:2/1
+
+K:Flying
+
+K:Haste
+
+Oracle:Flying, haste

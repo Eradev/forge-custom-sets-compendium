@@ -1,0 +1,13 @@
+Name:Wretched Spawn
+ManaCost:5 U B
+Types:Creature Zombie Horror
+PT:4/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigBounce | TriggerDescription$ When this creature enters, you may return target permanent to its owner's hand. If you do, that player discards a card.
+SVar:TrigBounce:DB$ ChangeZone | ValidTgts$ Permanent | TgtPrompt$ Select target permanent | Origin$ Battlefield | Destination$ Hand | Optional$ True | RememberChanged$ True | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ TargetedOwner | NumCards$ 1 | Mode$ TgtChoose | ConditionDefined$ Remembered | ConditionPresent$ Card.inZoneHand | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+K:Unearth:4 U B
+
+Oracle:When this creature enters, you may return target permanent to its owner's hand. If you do, that player discards a card.\nUnearth {4}{U}{B} ({4}{U}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)

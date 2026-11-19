@@ -1,0 +1,8 @@
+Name:Rehison Enforcer
+ManaCost:1 B
+Types:Creature Elf Soldier
+PT:1/2
+
+K:Deathtouch
+
+Oracle:Deathtouch

@@ -1,0 +1,12 @@
+Name:Intellectual Incentive
+ManaCost:U R
+Types:Sorcery
+
+A:SP$ Dig | Defined$ You | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Exile the top card of your library. Until end of turn, you may play that card. If that card is an instant or sorcery card, it costs {2} less to cast this turn.
+
+SVar:DBEffect:DB$ Effect | Duration$ EndOfTurn | RememberObjects$ Remembered | StaticAbilities$ STPlay,STReduce | ForgetOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | Affected$ Card.IsRemembered | AffectedZone$ Exile | MayPlay$ True | Description$ Until end of turn, you may play the exiled card.
+SVar:STReduce:Mode$ ReduceCost | ValidCard$ Instant.IsRemembered,Sorcery.IsRemembered | Type$ Spell | Activator$ You | Amount$ 2 | Description$ If the exiled card is an instant or sorcery card, it costs {2} less to cast this turn.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Exile the top card of your library. Until end of turn, you may play that card. If that card is an instant or sorcery card, it costs {2} less to cast this turn.

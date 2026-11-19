@@ -1,0 +1,8 @@
+Name:Elvish Warcaller
+ManaCost:1 G
+Types:Creature Elf Soldier
+PT:3/1
+
+K:TypeCycling:Elf:2 G
+
+Oracle:Elfcycling {2}{G} ({2}{G}, Discard this card: Search your library for an Elf card, reveal it, put it into your hand, then shuffle.)

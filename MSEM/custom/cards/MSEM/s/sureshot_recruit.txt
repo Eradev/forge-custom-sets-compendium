@@ -1,0 +1,8 @@
+Name:Sureshot Recruit
+ManaCost:2 G
+Types:Creature Human Soldier Archer
+PT:3/3
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddKeyword$ Reach | IsPresent$ Creature.sharesCreatureTypeWith+Other+YouCtrl | PresentCompare$ GE2 | Description$ Identity — This creature has reach as long as you control at least two other creatures that share a creature type with it.
+
+Oracle:Identity — This creature has reach as long as you control at least two other creatures that share a creature type with it.

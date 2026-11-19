@@ -1,0 +1,10 @@
+Name:Verdant Expanse
+ManaCost:1 G G
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ You | AdjustLandPlays$ 1 | Description$ You may play an additional land on each of your turns.
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Land.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPumpAll | TriggerDescription$ Whenever a land you control enters, creatures you control get +1/+1 until end of turn.
+SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1 | NumDef$ +1
+
+Oracle:You may play an additional land on each of your turns.\nWhenever a land you control enters, creatures you control get +1/+1 until end of turn.

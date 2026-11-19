@@ -1,0 +1,7 @@
+Name:Abrupt Volley
+ManaCost:4 R
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Artifact,Land | TgtPrompt$ Select target artifact or land | SpellDescription$ Destroy target artifact or land.
+
+Oracle:Destroy target artifact or land.

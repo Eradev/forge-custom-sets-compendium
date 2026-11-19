@@ -1,0 +1,12 @@
+Name:Embodiment of Ire
+ManaCost:3 R
+Types:Creature Elemental Warrior
+PT:3/2
+
+K:Haste
+
+S:Mode$ Continuous | Affected$ Elemental.Other+YouCtrl | AddPower$ 1 | AddKeyword$ Haste | Description$ Other Elementals you control get +1/+0 and have haste.
+
+Oracle:Haste\nOther Elementals you control get +1/+0 and have haste.
+
+DeckHints:Type$Elemental

@@ -1,0 +1,10 @@
+Name:Warm Blood Chaser
+ManaCost:2 B
+Types:Creature Zombie Horror
+PT:3/2
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddKeyword$ Flying & Haste | IsPresent$ Goblin.YouCtrl | Description$ This creature has flying and haste as long as you control a Goblin.
+
+Oracle:This creature has flying and haste as long as you control a Goblin.
+
+DeckHints:Type$Goblin

@@ -1,0 +1,8 @@
+Name:Piling Corpses
+ManaCost:U B
+Types:Instant
+
+A:SP$ Mill | ValidTgts$ Player | TgtPrompt$ Select target player to mill four cards | NumCards$ 4 | SubAbility$ DBDraw | SpellDescription$ Target player mills four cards. Draw a card.
+SVar:DBDraw:DB$ Draw
+
+Oracle:Target player mills four cards.\nDraw a card.

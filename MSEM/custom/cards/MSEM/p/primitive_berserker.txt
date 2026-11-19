@@ -1,0 +1,13 @@
+Name:Primitive Berserker
+ManaCost:2 R
+Types:Creature Goblin Berserker
+PT:*/3
+
+K:Trample
+
+S:Mode$ Continuous | CharacteristicDefining$ True | SetPower$ X | Description$ This creature's power is equal to the number of Goblins you control.
+SVar:X:Count$Valid Goblin.YouCtrl
+
+Oracle:Trample\nThis creature's power is equal to the number of Goblins you control.
+
+DeckHints:Type$Goblin

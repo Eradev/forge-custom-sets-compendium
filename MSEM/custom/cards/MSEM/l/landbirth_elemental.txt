@@ -1,0 +1,9 @@
+Name:Landbirth Elemental
+ManaCost:3 G
+Types:Creature Elk Elemental
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigChange | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may search your library for a basic land card, reveal it, put it into your hand, then shuffle.
+SVar:TrigChange:DB$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Land.Basic | ShuffleNonMandatory$ True
+
+Oracle:When this creature enters, you may search your library for a basic land card, reveal it, put it into your hand, then shuffle.

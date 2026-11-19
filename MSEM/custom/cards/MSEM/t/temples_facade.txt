@@ -1,0 +1,12 @@
+Name:Temple's Facade
+ManaCost:4 W
+Types:Creature Wall
+PT:0/6
+
+K:Defender
+
+S:Mode$ Continuous | Affected$ Creature.untapped+YouCtrl+Other | AddToughness$ 1 | Description$ Other untapped creatures you control get +0/+1.
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+Other | CanBlockAmount$ 1 | Description$ Each other creature you control can block an additional creature each combat.
+
+Oracle:Defender\nOther untapped creatures you control get +0/+1.\nEach other creature you control can block an additional creature each combat.
