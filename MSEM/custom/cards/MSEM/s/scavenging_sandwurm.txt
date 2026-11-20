@@ -5,8 +5,8 @@ PT:6/5
 
 K:ETBReplacement:Other:SandChoice
 SVar:SandChoice:DB$ GenericChoice | Choices$ Decay,Remain | Defined$ You | SetChosenMode$ True | ShowChoice$ ExceptSelf | SpellDescription$ As this creature enters, choose decay or remain.
-SVar:Decay:DB$ Pump | SpellDescription$ Decay
-SVar:Remain:DB$ Pump | SpellDescription$ Remain
+SVar:Decay:DB$ Nothing | SpellDescription$ Decay
+SVar:Remain:DB$ Nothing | SpellDescription$ Remain
 
 S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeDecay | AddTrigger$ DecayDeath | Description$ Decay — When this creature dies, draw a card.
 SVar:DecayDeath:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ When this creature dies, draw a card.

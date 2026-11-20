@@ -8,7 +8,7 @@ K:Reach
 K:Vigilance
 
 T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDamage | TriggerDescription$ When this creature enters, another target creature you control deals damage equal to its power to target creature or planeswalker you don't control.
-SVar:TrigDamage:DB$ Pump | ValidTgts$ Creature.Other+YouCtrl | AILogic$ PowerDmg | TgtPrompt$ Select another target creature you control | SubAbility$ DBDamage
+SVar:TrigDamage:DB$ TargetOnly | ValidTgts$ Creature.Other+YouCtrl | AILogic$ PowerDmg | TgtPrompt$ Select another target creature you control | SubAbility$ DBDamage
 SVar:DBDamage:DB$ DealDamage | ValidTgts$ Creature.YouDontCtrl,Planeswalker.YouDontCtrl | AILogic$ PowerDmg | TgtPrompt$ Select target creature or planeswalker you don't control | NumDmg$ X | DamageSource$ ParentTarget
 SVar:X:ParentTargeted$CardPower
 

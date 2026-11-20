@@ -5,8 +5,8 @@ PT:3/2
 
 K:ETBReplacement:Other:ApparitionChoice
 SVar:ApparitionChoice:DB$ GenericChoice | Choices$ Fade,Linger | Defined$ You | SetChosenMode$ True | AILogic$ Fade | ShowChoice$ ExceptSelf | SpellDescription$ As this creature enters, choose fade or linger.
-SVar:Fade:DB$ Pump | SpellDescription$ Fade
-SVar:Linger:DB$ Pump | SpellDescription$ Linger
+SVar:Fade:DB$ Nothing | SpellDescription$ Fade
+SVar:Linger:DB$ Nothing | SpellDescription$ Linger
 
 S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeFade | AddTrigger$ FadeDeathTrigger | Description$ Fade — When this creature dies, you gain 2 life and scry 2.
 SVar:FadeDeathTrigger:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigFadeDeath | TriggerDescription$ When this creature dies, you gain 2 life and scry 2.

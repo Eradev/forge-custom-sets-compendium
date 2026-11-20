@@ -5,7 +5,7 @@ PT:3/4
 
 K:Menace
 
-A:AB$ Pump | Cost$ 1 U B T | ValidTgts$ Creature | TgtPrompt$ Select target creature | RememberPumped$ True | PrecostDesc$ Absorption — | SpellDescription$ NICKNAME gains all abilities of target creature until end of turn.
+A:AB$ TargetOnly | Cost$ 1 U B T | ValidTgts$ Creature | TgtPrompt$ Select target creature | RememberPumped$ True | PrecostDesc$ Absorption — | SpellDescription$ NICKNAME gains all abilities of target creature until end of turn.
 S:Mode$ Continuous | AffectedDefined$ Self | EffectZone$ Battlefield | GainsAbilitiesOf$ Card.IsRemembered | GainsTriggerAbsOf$ Card.IsRemembered | GainsAbilitiesOfZones$ Battlefield
 T:Mode$ Phase | Phase$ End of Turn | Static$ True | Execute$ DBCleanup
 

@@ -6,7 +6,7 @@ PT:4/4
 K:Haste
 
 T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Card.Creature | CombatDamage$ True | Execute$ DBPump | Static$ True | TriggerZones$ Battlefield
-SVar:DBPump:DB$ Pump | RememberObjects$ TriggeredTarget
+SVar:DBPump:DB$ Bookkeeping | RememberObjects$ TriggeredTarget
 T:Mode$ Phase | Phase$ Cleanup | Execute$ DBCleanup | Static$ True
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
