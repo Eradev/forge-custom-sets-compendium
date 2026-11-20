@@ -84,6 +84,7 @@ Pyramids of Atuum (POA)               -  98% (126/128)
   Missing cards:
     * Righteous Priestess
     * Sphinx of Riddles
+Khaliz-Dorahn (KZD)                   - 100%
 K15 Core Set (K15)                    - 100%
 Imperial Legacies (IMP)               -  99% (141/142)
     * Bind in Jade
@@ -133,6 +134,7 @@ Examples on how to implement custom keywords and mechanisms.
 * [Paranoia](#paranoia)
 * [Quickdraw](#quickdraw)
 * [Rerun](#rerun)
+* [Reverberate](#reverberate)
 * [Revive](#revive)
 * [Showcase](#showcase)
 * [Storied](#storied)
@@ -633,6 +635,25 @@ R:Event$ Moved | ValidLKI$ Card.Self+wasCastFromHand | Origin$ Stack | Destinati
 SVar:RerunExile:DB$ ChangeZone | Defined$ ReplacedCard | Origin$ Stack | Destination$ Exile | RememberChanged$ True | SubAbility$ RerunDelayTrig
 SVar:RerunDelayTrig:DB$ DelayedTrigger | Mode$ ChangesZone | ValidCard$ Creature.YouCtrl | Origin$ Battlefield | Destination$ Graveyard | OptionalDecider$ You | RememberObjects$ Remembered | Execute$ CastRerun | TriggerDescription$ Whenever a creature you control dies, you may cast this card from exile without paying its mana cost.
 SVar:CastRerun:DB$ Play | Defined$ Remembered | WithoutManaCost$ True
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Reverberate
+
+Reverberate is defined as:
+
+```text
+(cost), When you cast this spell, copy it if you paid its reverberate cost. You may choose new targets for the copy.
+```
+
+Implementation:
+
+```text
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ 3 R | Description$ Reverberate {3}{R} (When you cast this spell, copy it if you paid its reverberate cost. You may choose new targets for the copy.)
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | CheckSVar$ CastSA>Count$OptionalGenericCostPaid.1.0 | NoResolvingCheck$ True | Execute$ TrigCopy | TriggerDescription$ When you cast this spell, if you paid its reverberate cost, copy it. You may choose new targets for the copy.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | MayChooseTarget$ True
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)

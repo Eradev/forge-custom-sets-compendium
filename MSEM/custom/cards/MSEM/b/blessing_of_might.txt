@@ -1,0 +1,11 @@
+Name:Blessing of Might
+ManaCost:4 G
+Types:Enchantment Aura
+
+K:Enchant:Creature
+SVar:AttachAILogic:Pump
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddPower$ 3 | AddToughness$ 3 | AddAbility$ Regenerate | Description$ Enchanted creature gets +3/+3 and has "{G}: Regenerate this creature."
+SVar:Regenerate:AB$ Regenerate | Cost$ G | SpellDescription$ Regenerate this creature.
+
+Oracle:Enchant creature\nEnchanted creature gets +3/+3 and has "{G}: Regenerate this creature."

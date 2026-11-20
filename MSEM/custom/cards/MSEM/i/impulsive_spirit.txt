@@ -1,0 +1,17 @@
+Name:Impulsive Spirit
+ManaCost:2 R
+Types:Enchantment Aura
+
+K:Enchant:Creature
+
+SVar:AttachAILogic:Pump
+SVar:AttachAITgts:Card.powerGE1
+
+T:Mode$ DamageDone | ValidSource$ Card.AttachedBy | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigExile | TriggerDescription$ Whenever enchanted creature deals combat damage to a player, exile the top card of your library. Until end of turn, you may play that card.
+
+SVar:TrigExile:DB$ Dig | Defined$ You | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBEffect
+SVar:DBEffect:DB$ Effect | RememberObjects$ RememberedCard | StaticAbilities$ STPlay | ExileOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | MayPlay$ True | Affected$ Card.IsRemembered | AffectedZone$ Exile | Description$ Until end of turn, you may play that card.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Enchant creature\nWhenever enchanted creature deals combat damage to a player, exile the top card of your library. Until end of turn, you may play that card.

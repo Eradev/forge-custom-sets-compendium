@@ -1,0 +1,10 @@
+Name:Barbarian Axe Flinger
+ManaCost:2 W
+Types:Creature Human Barbarian Warrior
+PT:2/2
+
+K:Vigilance
+
+A:AB$ Pump | Cost$ 1 W | KW$ Double Strike | SpellDescription$ This creature gains double strike until end of turn.
+
+Oracle:Vigilance\n{1}{W}: This creature gains double strike until end of turn.

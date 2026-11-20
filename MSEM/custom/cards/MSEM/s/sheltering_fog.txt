@@ -1,0 +1,9 @@
+Name:Sheltering Fog
+ManaCost:1 G
+Types:Instant
+
+A:SP$ Effect | ReplacementEffects$ RPrevent | AILogic$ Fog | SpellDescription$ Prevent all combat damage that would be dealt this turn by each creature without a counter on it.
+
+SVar:RPrevent:Event$ DamageDone | Prevent$ True | IsCombat$ True | ActiveZones$ Command | ValidSource$ Creature.!HasCounters | Description$ Prevent all combat damage that would be dealt this turn by each creature without a counter on it.
+
+Oracle:Prevent all combat damage that would be dealt this turn by each creature without a counter on it.

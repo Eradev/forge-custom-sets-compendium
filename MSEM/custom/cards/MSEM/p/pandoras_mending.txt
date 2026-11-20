@@ -1,0 +1,10 @@
+Name:Pandora's Mending
+ManaCost:2 B G
+Types:Instant
+
+A:SP$ RemoveCounter | ValidTgts$ Creature | TgtPrompt$ Select target creature | CounterType$ All | CounterNum$ All | RememberAmount$ True | SubAbility$ DBGainLife | SpellDescription$ Remove all counters from target creature. You gain 1 life for each counter removed this way.
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Count$RememberedNumber
+
+Oracle:Remove all counters from target creature. You gain 1 life for each counter removed this way.

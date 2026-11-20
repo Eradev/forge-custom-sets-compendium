@@ -1,0 +1,10 @@
+Name:Bravery
+ManaCost:4 R W
+Types:Creature Elemental Incarnation
+PT:3/5
+
+K:Double Strike
+
+A:AB$ Pump | Cost$ 1 R W | ActivationZone$ Graveyard | ValidTgts$ Creature | TgtPrompt$ Select target creature | KW$ Double Strike | SpellDescription$ Target creature gains double strike until end of turn. Activate only if this card is in your graveyard.
+
+Oracle:Double strike\n{1}{R}{W}: Target creature gains double strike until end of turn. Activate only if this card is in your graveyard.

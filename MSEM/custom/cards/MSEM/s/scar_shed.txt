@@ -1,0 +1,8 @@
+Name:Scar Shed
+ManaCost:G
+Types:Instant
+
+A:SP$ RemoveCounter | ValidTgts$ Creature | TgtPrompt$ Select target creature | CounterType$ M1M1 | CounterNum$ 1 | SubAbility$ DBPump | SpellDescription$ Remove a -1/-1 counter from target creature. That creature gets +2/+2 until end of turn.
+SVar:DBPump:DB$ Pump | Defined$ ParentTarget | NumAtt$ +2 | NumDef$ +2
+
+Oracle:Remove a -1/-1 counter from target creature. That creature gets +2/+2 until end of turn.

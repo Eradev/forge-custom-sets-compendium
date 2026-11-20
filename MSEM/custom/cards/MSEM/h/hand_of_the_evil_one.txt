@@ -1,0 +1,14 @@
+Name:Hand of the Evil One
+ManaCost:3 U B
+Types:Creature Zombie Horror
+PT:3/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigMill | TriggerDescription$ When this creature enters, mill three cards. Draw a card for each Zombie card milled this way.
+SVar:TrigMill:DB$ Mill | Defined$ You | NumCards$ 3 | RememberMilled$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | NumCards$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Remembered$Valid Card.Zombie
+
+S:Mode$ ReduceCost | ValidCard$ Card | ValidSpell$ Activated.Unearth | Type$ Ability | Activator$ You | Amount$ 1 | AffectedZone$ Graveyard | Description$ Unearth abilities you activate cost up to {1} less to activate.
+
+Oracle:When this creature enters, mill three cards. Draw a card for each Zombie card milled this way.\nUnearth abilities you activate cost up to {1} less to activate.

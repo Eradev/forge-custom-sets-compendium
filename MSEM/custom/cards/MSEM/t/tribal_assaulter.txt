@@ -1,0 +1,10 @@
+Name:Tribal Assaulter
+ManaCost:1 R
+Types:Creature Goblin Warrior
+PT:2/1
+
+K:TypeCycling:Goblin:1 R
+
+K:TypeCycling:Warrior:1 R
+
+Oracle:Goblincycling {1}{R}, Warriorcycling {1}{R} ({1}{R}, Discard this card: Search your library for a Goblin or Warrior card, reveal it, and put it into your hand. Then shuffle.)

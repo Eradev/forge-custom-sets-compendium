@@ -1,0 +1,19 @@
+Name:Surge of the Fellors
+ManaCost:1 R
+Types:Enchantment
+
+K:ETBReplacement:Other:SurgeChoice
+SVar:SurgeChoice:DB$ GenericChoice | Choices$ Fellor,Lafterii | Defined$ You | SetChosenMode$ True | ShowChoice$ ExceptSelf | SpellDescription$ As this enchantment enters, choose Fellor or Lafterii.
+SVar:Fellor:DB$ Nothing | SpellDescription$ Fellor
+SVar:Lafterii:DB$ Nothing | SpellDescription$ Lafterii
+
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeFellor | AddStaticAbility$ FellorStatic | Description$ • Fellor — Warriors you control have haste.
+SVar:FellorStatic:Mode$ Continuous | Affected$ Creature.Warrior+YouCtrl | AddKeyword$ Haste | Description$ Warriors you control have haste.
+
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeLafterii | AddStaticAbility$ LafteriiStatic | Description$ • Lafterii — Wizard creatures you control have "{2}{R}, {T}: This creature deals 1 damage to target player or planeswalker."
+SVar:LafteriiStatic:Mode$ Continuous | Affected$ Creature.Wizard+YouCtrl | AddAbility$ WizardDamage | Description$ Wizard creatures you control have "{2}{R}, {T}: This creature deals 1 damage to target player or planeswalker."
+SVar:WizardDamage:AB$ DealDamage | Cost$ 2 R T | ValidTgts$ Player,Planeswalker | TgtPrompt$ Select target player or planeswalker | NumDmg$ 1 | SpellDescription$ This creature deals 1 damage to target player or planeswalker.
+
+Oracle:As this enchantment enters, choose Fellor or Lafterii.\n• Fellor — Warriors you control have haste.\n• Lafterii — Wizard creatures you control have "{2}{R}, {T}: This creature deals 1 damage to target player or planeswalker."
+
+DeckHints:Type$Warrior|Wizard

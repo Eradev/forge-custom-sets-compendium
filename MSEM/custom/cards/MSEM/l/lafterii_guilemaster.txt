@@ -1,0 +1,11 @@
+Name:Lafterii Guilemaster
+ManaCost:4 U
+Types:Creature Human Wizard
+PT:1/5
+
+S:Mode$ CantAttackUnless | ValidCard$ Creature | Target$ You,Planeswalker.YouCtrl | Cost$ X | Description$ Creatures can't attack you or planeswalkers you control unless their controller pays {X} for each of those creatures, where X is the number of Wizards you control.
+SVar:X:Count$Valid Wizard.YouCtrl
+
+Oracle:Creatures can't attack you or planeswalkers you control unless their controller pays {X} for each of those creatures, where X is the number of Wizards you control.
+
+DeckHints:Type$Wizard

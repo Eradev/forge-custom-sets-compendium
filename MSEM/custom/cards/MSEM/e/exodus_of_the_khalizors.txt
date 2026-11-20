@@ -1,0 +1,17 @@
+Name:Exodus of the Khalizors
+ManaCost:2 G
+Types:Enchantment
+
+K:ETBReplacement:Other:ExodusChoice
+SVar:ExodusChoice:DB$ GenericChoice | Choices$ Rehison,Danuri | Defined$ You | SetChosenMode$ True | ShowChoice$ ExceptSelf | SpellDescription$ As this enchantment enters, choose Rehison or Danuri.
+SVar:Rehison:DB$ Nothing | SpellDescription$ Rehison
+SVar:Danuri:DB$ Nothing | SpellDescription$ Danuri
+
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeRehison | AddTrigger$ RehisonTrigger | Description$ • Rehison — Whenever an Elf you control enters, you may move a counter from target creature onto another target creature.
+SVar:RehisonTrigger:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Elf.YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigMoveCounter | TriggerDescription$ Whenever an Elf you control enters, you may move a counter from target creature onto another target creature.
+SVar:TrigMoveCounter:DB$ MoveCounter | ValidTgts$ Creature | TargetMin$ 2 | TargetMax$ 2 | TgtPrompt$ Select target creatures to move a counter between | CounterType$ Any | CounterNum$ 1
+
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeDanuri | AddStaticAbility$ DanuriStatic | Description$ • Danuri — Soldiers you control have trample.
+SVar:DanuriStatic:Mode$ Continuous | Affected$ Creature.Soldier+YouCtrl | AddKeyword$ Trample | Description$ Soldiers you control have trample.
+
+Oracle:As this enchantment enters, choose Rehison or Danuri.\n• Rehison — Whenever an Elf you control enters, you may move a counter from target creature onto another target creature.\n• Danuri — Soldiers you control have trample.

@@ -1,0 +1,11 @@
+Name:Elusive Illusionist
+ManaCost:2 U
+Types:Creature Human Wizard
+PT:2/2
+
+K:Flash
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigPumpCurse | TriggerDescription$ When this creature enters, target attacking creature gets -2/-0 until end of turn.
+SVar:TrigPumpCurse:DB$ Pump | ValidTgts$ Creature.attacking | TgtPrompt$ Select target attacking creature | IsCurse$ True | NumAtt$ -2
+
+Oracle:Flash\nWhen this creature enters, target attacking creature gets -2/-0 until end of turn.

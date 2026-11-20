@@ -1,0 +1,10 @@
+Name:Dictate of Logayr
+ManaCost:3 U
+Types:Sorcery
+
+A:SP$ Draw | NumCards$ X | SpellDescription$ Draw a card for each Wizard you control.
+SVar:X:Count$Valid Wizard.YouCtrl
+
+K:TypeCycling:Wizard:2 U
+
+Oracle:Draw a card for each Wizard you control.\nWizardcycling {2}{U} ({2}{U}, Discard this card: Search your library for a Wizard card, reveal it, put it into your hand, then shuffle.)

@@ -1,0 +1,12 @@
+Name:Fellor Heartstriker
+ManaCost:4 R
+Types:Creature Human Barbarian Warrior
+PT:3/3
+
+K:Haste
+
+A:AB$ Pump | Cost$ 1 W | KW$ Lifelink | Defined$ Self | SpellDescription$ This creature gains lifelink until end of turn.
+
+Oracle:Haste\n{1}{W}: This creature gains lifelink until end of turn.
+
+DeckHas:Ability$LifeGain

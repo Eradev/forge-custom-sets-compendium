@@ -1,0 +1,6 @@
+Name:Duskwood Traverser
+ManaCost:4 G
+Types:Creature Elemental
+PT:4/6
+
+Oracle:

@@ -1,0 +1,11 @@
+Name:General's Presence
+ManaCost:2 W
+Types:Enchantment Aura
+
+K:Enchant:Creature
+SVar:AttachAILogic:Pump
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Vigilance | Description$ Enchanted creature and other creatures you control that share a creature type with it get +1/+1 and have vigilance.
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+sharesCreatureTypeWith Enchanted+!EnchantedBy | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Vigilance
+
+Oracle:Enchant creature\nEnchanted creature and other creatures you control that share a creature type with it get +1/+1 and have vigilance.

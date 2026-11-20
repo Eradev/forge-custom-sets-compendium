@@ -1,0 +1,18 @@
+Name:Battle for the Shield
+ManaCost:1 W
+Types:Enchantment
+
+K:ETBReplacement:Other:ShieldChoice
+SVar:ShieldChoice:DB$ GenericChoice | Choices$ Danuri,Fellor | Defined$ You | SetChosenMode$ True | ShowChoice$ ExceptSelf | SpellDescription$ As this enchantment enters, choose Danuri or Fellor.
+SVar:Danuri:DB$ Nothing | SpellDescription$ Danuri
+SVar:Fellor:DB$ Nothing | SpellDescription$ Fellor
+
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeDanuri | AddStaticAbility$ DanuriStatic | Description$ • Danuri — Soldiers you control get +0/+1 and have vigilance.
+SVar:DanuriStatic:Mode$ Continuous | Affected$ Creature.Soldier+YouCtrl | AddToughness$ 1 | AddKeyword$ Vigilance | Description$ Soldiers you control get +0/+1 and have vigilance.
+
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeFellor | AddStaticAbility$ FellorStatic | Description$ • Fellor — Warriors you control get +1/+0 and have first strike.
+SVar:FellorStatic:Mode$ Continuous | Affected$ Creature.Warrior+YouCtrl | AddPower$ 1 | AddKeyword$ First Strike | Description$ Warriors you control get +1/+0 and have first strike.
+
+Oracle:As this enchantment enters, choose Danuri or Fellor.\n• Danuri — Soldiers you control get +0/+1 and have vigilance.\n• Fellor — Warriors you control get +1/+0 and have first strike.
+
+DeckHints:Type$Soldier|Warrior

@@ -1,0 +1,12 @@
+Name:Unbound Researchers
+ManaCost:3 U R
+Types:Creature Human Wizard
+PT:3/3
+
+T:Mode$ SpellCopy | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever you copy an instant or sorcery spell, you may pay {1}{U}. If you do, draw a card.
+SVar:TrigDraw:AB$ Draw | Cost$ 1 U | Defined$ You | NumCards$ 1
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever you cast an instant or sorcery spell, you may pay {1}{R}. If you do, this creature deals 2 damage to target player or planeswalker.
+SVar:TrigDamage:AB$ DealDamage | Cost$ 1 R | ValidTgts$ Player,Planeswalker | TgtPrompt$ Select target player or planeswalker | NumDmg$ 2
+
+Oracle:Whenever you copy an instant or sorcery spell, you may pay {1}{U}. If you do, draw a card.\nWhenever you cast an instant or sorcery spell, you may pay {1}{R}. If you do, this creature deals 2 damage to target player or planeswalker.

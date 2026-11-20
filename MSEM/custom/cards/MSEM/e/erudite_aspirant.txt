@@ -1,0 +1,10 @@
+Name:Erudite Aspirant
+ManaCost:U
+Types:Creature Human Wizard
+PT:1/1
+
+K:Prowess
+
+K:TypeCycling:Wizard:1 U
+
+Oracle:Prowess\nWizardcycling {1}{U} ({1}{U}, Discard this card: Search your library for a Wizard card, reveal it, put it into your hand, then shuffle.)

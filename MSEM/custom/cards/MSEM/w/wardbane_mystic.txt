@@ -1,0 +1,11 @@
+Name:Wardbane Mystic
+ManaCost:2 G G
+Types:Creature Elf Druid
+PT:2/4
+
+T:Mode$ SpellCast | ValidCard$ Elf | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever you cast an Elf spell, create a 1/1 green Elf Druid creature token.
+SVar:TrigToken:DB$ Token | TokenScript$ g_1_1_elf_druid | TokenOwner$ You
+
+A:AB$ Destroy | Cost$ tapXType<4/Druid> | ValidTgts$ Artifact,Enchantment | TgtPrompt$ Select target artifact or enchantment | SpellDescription$ Destroy target artifact or enchantment.
+
+Oracle:Whenever you cast an Elf spell, create a 1/1 green Elf Druid creature token.\nTap four untapped Druids you control: Destroy target artifact or enchantment.

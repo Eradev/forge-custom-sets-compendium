@@ -1,0 +1,9 @@
+Name:Last Crusade
+ManaCost:X 1 R W
+Types:Instant
+
+A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +X | KW$ First Strike | SpellDescription$ Creatures you control get +X/+0 and gain first strike until end of turn.
+
+SVar:X:Count$xPaid
+
+Oracle:Creatures you control get +X/+0 and gain first strike until end of turn.

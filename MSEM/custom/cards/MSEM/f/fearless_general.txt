@@ -1,0 +1,10 @@
+Name:Fearless General
+ManaCost:G W
+Types:Creature Human Soldier
+PT:2/2
+
+K:First Strike
+
+A:AB$ PumpAll | Cost$ Sac<1/CARDNAME/this creature> | ValidCards$ Creature.Soldier+YouCtrl | KW$ Indestructible | SpellDescription$ Soldiers you control gain indestructible until end of turn.
+
+Oracle:First strike\nSacrifice this creature: Soldiers you control gain indestructible until end of turn.

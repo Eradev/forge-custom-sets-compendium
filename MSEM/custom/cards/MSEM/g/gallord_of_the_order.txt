@@ -1,0 +1,12 @@
+Name:Gallord of the Order
+ManaCost:3 G W
+Types:Legendary Creature Human Soldier Archer
+PT:3/4
+
+K:Vigilance
+
+K:Reach
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl+Other | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ First Strike | IsPresent$ Creature.sharesCreatureTypeWith+Other+YouCtrl | PresentCompare$ GE2 | Description$ Identity — As long as you control at least two other creatures that share a creature type with NICKNAME, other creatures you control get +1/+1 and have first strike.
+
+Oracle:Vigilance, reach\nIdentity — As long as you control at least two other creatures that share a creature type with Gallord, other creatures you control get +1/+1 and have first strike.

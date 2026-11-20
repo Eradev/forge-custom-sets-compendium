@@ -1,0 +1,10 @@
+Name:Grim Recruitment
+ManaCost:3 B
+Types:Sorcery
+
+A:SP$ Sacrifice | ValidTgts$ Player | SacValid$ Creature | SubAbility$ DBToken | SpellDescription$ Target player sacrifices a creature. Create a tapped 2/2 black Zombie creature token.
+SVar:DBToken:DB$ Token | TokenScript$ b_2_2_zombie | TokenTapped$ True
+
+Oracle:Target player sacrifices a creature. Create a tapped 2/2 black Zombie creature token.
+
+DeckHas:Ability$Token

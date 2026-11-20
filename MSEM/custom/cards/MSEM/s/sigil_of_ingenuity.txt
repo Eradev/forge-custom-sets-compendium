@@ -1,0 +1,9 @@
+Name:Sigil of Ingenuity
+ManaCost:3
+Types:Artifact
+
+A:AB$ Mana | Cost$ T | Produced$ Combo U R | SpellDescription$ Add {U} or {R}.
+
+A:AB$ Mana | Cost$ T Sac<1/CARDNAME/this artifact> | Produced$ R W | SpellDescription$ Add {U}{R}.
+
+Oracle:{T}: Add {U} or {R}.\n{T}, Sacrifice this artifact: Add {U}{R}.

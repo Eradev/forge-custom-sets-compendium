@@ -1,0 +1,11 @@
+Name:Danuri Charm
+ManaCost:G W
+Types:Instant
+
+A:SP$ Charm | Choices$ DBFog,DBToken,DBPump
+
+SVar:DBFog:DB$ Fog | SpellDescription$ Prevent all combat damage that would be dealt this turn.
+SVar:DBToken:DB$ Token | TokenScript$ w_1_1_soldier | TokenAmount$ 2 | TokenOwner$ You | SpellDescription$ Create two 1/1 white Soldier creature tokens.
+SVar:DBPump:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumDef$ +3 | KW$ Reach | SpellDescription$ Creatures you control get +0/+3 and gain reach until end of turn.
+
+Oracle:Choose one —\n• Prevent all combat damage that would be dealt this turn.\n• Create two 1/1 white Soldier creature tokens.\n• Creatures you control get +0/+3 and gain reach until end of turn.

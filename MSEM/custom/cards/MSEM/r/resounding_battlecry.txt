@@ -1,0 +1,9 @@
+Name:Resounding Battlecry
+ManaCost:1 W W
+Types:Sorcery
+
+A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +2 | NumDef$ +1 | SpellDescription$ Creatures you control get +2/+1 until end of turn.
+
+K:Cycling:1 W
+
+Oracle:Creatures you control get +2/+1 until end of turn.\nCycling {1}{W} ({1}{W}, Discard this card: Draw a card)

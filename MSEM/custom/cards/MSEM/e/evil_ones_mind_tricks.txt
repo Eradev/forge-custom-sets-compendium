@@ -1,0 +1,21 @@
+Name:Evil One's Mind Tricks
+ManaCost:3 U
+Types:Enchantment
+
+K:ETBReplacement:Other:MindTricksChoice
+SVar:MindTricksChoice:DB$ GenericChoice | Choices$ Lafterii,EvilOne | Defined$ You | SetChosenMode$ True | ShowChoice$ ExceptSelf | SpellDescription$ As this enchantment enters, choose Lafterii or Evil One.
+SVar:Lafterii:DB$ Nothing | SpellDescription$ Lafterii
+SVar:EvilOne:DB$ Nothing | SpellDescription$ Evil One
+
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeLafterii | AddStaticAbility$ LafteriiStatic | Description$ • Lafterii — Wizards you control have "{3}{U}, {T}: Draw a card."
+SVar:LafteriiStatic:Mode$ Continuous | Affected$ Wizard.YouCtrl | AddAbility$ WizardDraw
+SVar:WizardDraw:AB$ Draw | Cost$ 3 U T | SpellDescription$ Draw a card.
+
+S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeEvil One | AddTrigger$ EvilOneTrigger | Description$ • Evil One — Whenever a Zombie you control enters, target player mills two cards.
+SVar:EvilOneTrigger:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Zombie.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigMill | TriggerDescription$ Whenever a Zombie you control enters, target player mills two cards.
+SVar:TrigMill:DB$ Mill | NumCards$ 2 | ValidTgts$ Player | TgtPrompt$ Select target player
+
+Oracle:As this enchantment enters, choose Lafterii or Evil One.\n• Lafterii — Wizards you control have "{3}{U}, {T}: Draw a card."\n• Evil One — Whenever a Zombie you control enters, target player mills two cards.
+
+DeckHas:Ability$Mill
+DeckHints:Type$Wizard|Zombie

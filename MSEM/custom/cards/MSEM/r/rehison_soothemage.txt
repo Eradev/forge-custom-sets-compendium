@@ -1,0 +1,11 @@
+Name:Rehison Soothemage
+ManaCost:1 B
+Types:Creature Elf Cleric
+PT:2/2
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddKeyword$ Lifelink | IsPresent$ Elf.Other+YouCtrl | Description$ This creature has lifelink as long as you control another Elf.
+
+Oracle:This creature has lifelink as long as you control another Elf.
+
+DeckHints:Type$Elf
+DeckHas:Ability$LifeGain

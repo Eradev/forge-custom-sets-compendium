@@ -1,0 +1,9 @@
+Name:Ritual of Blight
+ManaCost:1 B
+Types:Instant
+
+A:SP$ Draw | Cost$ 1 B AddCounter<2/M1M1/Creature.YouCtrl/a creature you control> | NumCards$ 2
+
+Oracle:As an additional cost to cast this spell, put two -1/-1 counters on a creature you control.\nDraw two cards.
+
+DeckHas:Ability$Counters

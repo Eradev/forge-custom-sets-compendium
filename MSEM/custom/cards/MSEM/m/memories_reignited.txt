@@ -1,0 +1,17 @@
+Name:Memories Reignited
+ManaCost:3 U R
+Types:Instant
+
+S:Mode$ OptionalCost | EffectZone$ All | ValidCard$ Card.Self | ValidSA$ Spell | Cost$ 2 U R | Description$ Reverberate {2}{U}{R} (When you cast this spell, copy it if you paid its reverberate cost. You may choose new targets for the copy.)
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | CheckSVar$ CastSA>Count$OptionalGenericCostPaid.1.0 | NoResolvingCheck$ True | Execute$ TrigCopy | TriggerDescription$ When you cast this spell, if you paid its reverberate cost, copy it. You may choose new targets for the copy.
+SVar:TrigCopy:DB$ CopySpellAbility | Defined$ TriggeredSpellAbility | MayChooseTarget$ True
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Exile | ValidTgts$ Instant.YouOwn,Sorcery.YouOwn | TgtPrompt$ Select target instant or sorcery card in your graveyard | RememberChanged$ True | SubAbility$ DBPlay | SpellDescription$ Exile target instant or sorcery card from your graveyard. You may cast a copy of that card without paying its mana cost.
+SVar:DBPlay:DB$ Play | Valid$ Card.IsRemembered | ValidZone$ Exile | Controller$ You | CopyCard$ True | WithoutManaCost$ True | ValidSA$ Spell | Optional$ True | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Reverberate {2}{U}{R} (When you cast this spell, copy it if you paid its reverberate cost. You may choose new targets for the copy.)\nExile target instant or sorcery card from your graveyard. You may cast a copy of that card without paying its mana cost.
+
+DeckHas:Ability$Graveyard
+DeckHints:Type$Instant|Sorcery

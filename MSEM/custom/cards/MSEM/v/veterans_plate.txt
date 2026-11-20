@@ -1,0 +1,11 @@
+Name:Veteran's Plate
+ManaCost:4
+Types:Artifact Equipment
+
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddPower$ 2 | AddToughness$ 2 | Description$ Equipped creature gets +2/+2.
+
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature.Soldier | AddKeyword$ Vigilance | Description$ As long as equipped creature is a Soldier, it has vigilance.
+
+K:Equip:2
+
+Oracle:Equipped creature gets +2/+2.\nAs long as equipped creature is a Soldier, it has vigilance.\nEquip {2}

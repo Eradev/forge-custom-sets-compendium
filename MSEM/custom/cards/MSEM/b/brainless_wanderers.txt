@@ -1,0 +1,6 @@
+Name:Brainless Wanderers
+ManaCost:2 B
+Types:Creature Zombie Goblin
+PT:2/3
+
+Oracle:

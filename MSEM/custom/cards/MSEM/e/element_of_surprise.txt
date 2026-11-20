@@ -1,0 +1,13 @@
+Name:Element of Surprise
+ManaCost:G W
+Types:Instant
+
+A:SP$ Effect | StaticAbilities$ STFlash | Triggers$ SpellCastTrig | SpellDescription$ The next creature spell you cast this turn can be cast as though it had flash. When that creature enters this turn, it gains lifelink until end of turn.
+
+SVar:STFlash:Mode$ CastWithFlash | ValidCard$ Card.Creature | ValidSA$ Spell | Caster$ You
+
+SVar:SpellCastTrig:Mode$ SpellCast | ValidCard$ Creature | ValidActivatingPlayer$ You | OneOff$ True | Static$ True | TriggerZones$ Command | Execute$ DBDelayed
+SVar:DBDelayed:DB$ DelayedTrigger | Mode$ ChangesZone | Origin$ Stack | Destination$ Battlefield | ValidCard$ Card.IsTriggerRemembered | RememberObjects$ TriggeredCard | ThisTurn$ True | Execute$ DBLifelink
+SVar:DBLifelink:DB$ Pump | Defined$ TriggeredCard | KW$ Lifelink
+
+Oracle:The next creature spell you cast this turn can be cast as though it had flash. When that creature enters this turn, it gains lifelink until end of turn.

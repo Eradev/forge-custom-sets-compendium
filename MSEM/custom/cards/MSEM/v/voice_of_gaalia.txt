@@ -1,0 +1,12 @@
+Name:Voice of Gaalia
+ManaCost:3 W
+Types:Creature Human Cleric
+PT:3/3
+
+S:Mode$ Continuous | Affected$ Creature.Human+YouCtrl | AddKeyword$ Lifelink | IsPresent$ Creature.YouCtrl+sharesCreatureTypeWith | PresentCompare$ GE2 | Description$ Identity — Human creatures you control have lifelink as long as you control at least two creatures that share a creature type with this creature.
+
+Oracle:Identity — Human creatures you control have lifelink as long as you control at least two creatures that share a creature type with this creature.
+
+SVar:BuffedBy:Creature
+DeckHas:Ability$LifeGain
+DeckHints:Type$Human|Cleric

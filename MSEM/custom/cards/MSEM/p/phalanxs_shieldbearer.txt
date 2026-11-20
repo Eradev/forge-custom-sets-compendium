@@ -1,0 +1,8 @@
+Name:Phalanx's Shieldbearer
+ManaCost:2 G W
+Types:Creature Human Soldier
+PT:3/4
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddKeyword$ Hexproof | IsPresent$ Creature.sharesCreatureTypeWith+Other+YouCtrl | PresentCompare$ GE2 | Description$ Identity — This creature has hexproof as long as you control at least two other creatures that share a creature type with it.
+
+Oracle:Identity — This creature has hexproof as long as you control at least two other creatures that share a creature type with it.

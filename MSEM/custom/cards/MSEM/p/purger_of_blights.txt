@@ -1,0 +1,10 @@
+Name:Purger of Blights
+ManaCost:1 B G
+Types:Creature Elf Druid
+PT:3/3
+
+K:etbCounter:M1M1:1
+
+A:AB$ Draw | Cost$ 2 B G T SubCounter<1/M1M1/Creature.YouCtrl/a creature you control> | NumCards$ 1 | SpellDescription$ Draw a card.
+
+Oracle:This creature enters with a -1/-1 counter on it.\n{2}{B}{G}, {T}, Remove a -1/-1 counter from a creature you control: Draw a card.

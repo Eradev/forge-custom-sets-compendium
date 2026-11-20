@@ -1,0 +1,18 @@
+Name:Rejuvenating Elemental
+ManaCost:X 4 G
+Types:Creature Elemental Druid
+PT:5/1
+
+K:Trample
+
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigRemoveCounters | TriggerDescription$ When this creature enters, remove up to X -1/-1 counters from among creatures you control. This creature gets +1/+1 until end of turn for each counter removed this way.
+SVar:TrigRemoveCounters:DB$ RemoveCounter | Choices$ Creature.YouCtrl+counters_GE1_M1M1 | ChoiceOptional$ True | CounterType$ M1M1 | CounterNum$ X | CounterNumShared$ True | UpTo$ True | RememberAmount$ True | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | Defined$ Self | NumAtt$ +Y | NumDef$ +Y | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:X:Count$xPaid
+SVar:Y:Count$RememberedNumber
+
+Oracle:Trample, haste\nWhen this creature enters, remove up to X -1/-1 counters from among creatures you control. This creature gets +1/+1 until end of turn for each counter removed this way.

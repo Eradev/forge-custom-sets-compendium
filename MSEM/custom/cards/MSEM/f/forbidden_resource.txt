@@ -1,0 +1,10 @@
+Name:Forbidden Resource
+ManaCost:5 B G
+Types:Sorcery
+
+A:SP$ DestroyAll | ValidCards$ Permanent.nonLand+cmcLE6 | SpellDescription$ Destroy each nonland permanent with mana value 6 or less. If a creature would die this way, exile it instead.
+
+R:Event$ Moved | ActiveZones$ Stack | Origin$ Battlefield | Destination$ Graveyard | ValidLKI$ Creature.nonLand+cmcLE6 | ValidCause$ Sorcery.Self | ReplaceWith$ DBExile | Description$ If a creature would die this way, exile it instead.
+SVar:DBExile:DB$ ChangeZone | Defined$ ReplacedCard | Origin$ Battlefield | Destination$ Exile
+
+Oracle:Destroy each nonland permanent with mana value 6 or less. If a creature would die this way, exile it instead.

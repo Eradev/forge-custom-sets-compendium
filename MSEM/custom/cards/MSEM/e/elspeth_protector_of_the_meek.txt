@@ -1,0 +1,17 @@
+Name:Elspeth, Protector of the Meek
+ManaCost:1 W W
+Types:Legendary Planeswalker Elspeth
+Loyalty:3
+
+A:AB$ Token | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | TokenScript$ w_1_1_warrior | SpellDescription$ Create a 1/1 white Warrior creature token.
+
+A:AB$ Pump | Cost$ SubCounter<1/LOYALTY> | Planeswalker$ True | ValidTgts$ Permanent.Other+YouCtrl | TgtPrompt$ Select another target permanent you control | KW$ Indestructible | Duration$ UntilYourNextTurn | SpellDescription$ Another target permanent you control gains indestructible until your next turn.
+
+A:AB$ Effect | Cost$ SubCounter<8/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Elspeth, Protector of the Meek | StaticAbilities$ STPump | ReplacementEffects$ RPrevent | Duration$ Permanent | AILogic$ Always | SpellDescription$ You get an emblem with "Creatures you control get +2/+2." and "Prevent all damage that would be dealt to attacking creatures you control."
+
+SVar:STPump:Mode$ Continuous | Affected$ Creature.YouCtrl | AffectedZone$ Battlefield | AddPower$ 2 | AddToughness$ 2 | Description$ Creatures you control get +2/+2.
+SVar:RPrevent:Event$ DamageDone | Prevent$ True | ActiveZones$ Command | ValidTarget$ Creature.attacking+YouCtrl | Description$ Prevent all damage that would be dealt to attacking creatures you control.
+
+Oracle:[+1]: Create a 1/1 white Warrior creature token.\n[-1]: Another target permanent you control gains indestructible until your next turn.\n[-8]: You get an emblem with "Creatures you control get +2/+2." and "Prevent all damage that would be dealt to attacking creatures you control."
+
+DeckHas:Ability$Token

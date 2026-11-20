@@ -1,0 +1,9 @@
+Name:The Shield
+ManaCost:2 W
+Types:Legendary Enchantment
+
+K:Flash
+
+A:AB$ ChangeZone | Cost$ 1 W | ValidTgts$ Creature.dealtDamageToYouThisTurn | TgtPrompt$ Select target creature that dealt damage to you this turn | Origin$ Battlefield | Destination$ Exile | Duration$ UntilHostLeavesPlay | SpellDescription$ Exile target creature that dealt damage to you this turn until CARDNAME leaves the battlefield.
+
+Oracle:Flash\n{1}{W}: Exile target creature that dealt damage to you this turn until The Shield leaves the battlefield.

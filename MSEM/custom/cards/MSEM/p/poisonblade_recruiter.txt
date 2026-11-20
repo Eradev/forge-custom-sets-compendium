@@ -1,0 +1,8 @@
+Name:Poisonblade Recruiter
+ManaCost:B G
+Types:Creature Elf Druid
+PT:2/2
+
+A:AB$ Token | Cost$ B G T SubCounter<1/M1M1/Creature.YouCtrl/a creature you control> | TokenScript$ g_1_1_elf_druid | SpellDescription$ Create a 1/1 green Elf Druid creature token.
+
+Oracle:{B}{G}, {T}, Remove a -1/-1 counter from a creature you control: Create a 1/1 green Elf Druid creature token.

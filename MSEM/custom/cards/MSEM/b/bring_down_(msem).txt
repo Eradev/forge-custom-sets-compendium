@@ -1,0 +1,8 @@
+Name:Bring Down (MSEM)
+ManaCost:3 G
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Creature.withFlying | TgtPrompt$ Select target creature with flying | SubAbility$ DBDraw | SpellDescription$ Destroy target creature with flying. Draw a card.
+SVar:DBDraw:DB$ Draw
+
+Oracle:Destroy target creature with flying.\nDraw a card.

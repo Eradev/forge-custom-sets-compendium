@@ -1,0 +1,13 @@
+Name:Crippling Illness
+ManaCost:1 B
+Types:Enchantment Aura
+
+K:Enchant:Creature
+SVar:AttachAILogic:Curse
+
+T:Mode$ Attacks | ValidCard$ Card.AttachedBy | Execute$ TrigPutCounter | TriggerZones$ Battlefield | TriggerDescription$ Whenever enchanted creature attacks, put a -1/-1 counter on it.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ TriggeredAttackerLKICopy | CounterType$ M1M1
+
+Oracle:Enchant creature\nWhenever enchanted creature attacks, put a -1/-1 counter on it.
+
+DeckHas:Ability$Counters

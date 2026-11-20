@@ -1,0 +1,11 @@
+Name:Fellor Raider
+ManaCost:2 R
+Types:Creature Human Barbarian Warrior
+PT:2/2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | IsPresent$ Creature.attacking+Other | PresentCompare$ GE2 | NoResolvingCheck$ True | Execute$ TrigBattalionDamage | TriggerDescription$ Battalion — Whenever this creature and at least two other creatures attack, this creature deals 2 damage to defending player.
+SVar:TrigBattalionDamage:DB$ DealDamage | Defined$ TriggeredDefendingPlayer | NumDmg$ 2
+
+Oracle:Battalion — Whenever this creature and at least two other creatures attack, this creature deals 2 damage to defending player.
+
+SVar:HasAttackEffect:TRUE

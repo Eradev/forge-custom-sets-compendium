@@ -1,0 +1,10 @@
+Name:Search for Inspiration
+ManaCost:2 U
+Types:Instant
+
+A:SP$ Dig | DigNum$ 5 | Reveal$ True | ChangeNum$ 1 | ChangeValid$ Instant,Sorcery | DestinationZone$ Hand | DestinationZone2$ Graveyard | Optional$ True | SpellDescription$ Reveal the top five cards of your library. You may put an instant or sorcery card from among them into your hand. Put the rest into your graveyard.
+
+Oracle:Reveal the top five cards of your library. You may put an instant or sorcery card from among them into your hand. Put the rest into your graveyard.
+
+DeckHas:Ability$Graveyard
+DeckHints:Type$Instant|Sorcery
