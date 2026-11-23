@@ -2,7 +2,7 @@ Name:The Tideshift
 ManaCost:5 U U
 Types:Sorcery
 
-A:SP$ Pump | ImprintCards$ Valid Creature | StackDescription$ None | SubAbility$ DBRepeatPlayer
+A:SP$ Bookkeeping | ImprintCards$ Valid Creature | StackDescription$ None | SubAbility$ DBRepeatPlayer
 
 SVar:DBRepeatPlayer:DB$ RepeatEach | RepeatPlayers$ ImprintedOwner | RepeatSubAbility$ DBRepeatCard | SubAbility$ DBCleanup | SpellDescription$ For each creature, its owner puts it on the top or bottom of their library.
 

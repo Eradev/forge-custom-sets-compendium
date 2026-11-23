@@ -12,7 +12,7 @@ SVar:TrigChoose:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | Cho
 SVar:DBRepeat:DB$ Repeat | RepeatSubAbility$ DBRound | RepeatDefined$ Remembered | RepeatPresent$ Card | RepeatCompare$ EQ1 | SubAbility$ DBCleanup
 SVar:DBRound:DB$ Cleanup | ClearRemembered$ True | ClearImprinted$ True | SubAbility$ DBOppSac
 SVar:DBOppSac:DB$ Sacrifice | Defined$ ChosenPlayer | SacValid$ Creature | Optional$ True | RememberSacrificed$ True | SubAbility$ DBImprint
-SVar:DBImprint:DB$ Pump | ImprintCards$ Remembered | SubAbility$ DBClearRem
+SVar:DBImprint:DB$ Bookkeeping | ImprintCards$ Remembered | SubAbility$ DBClearRem
 SVar:DBClearRem:DB$ Cleanup | ClearRemembered$ True | SubAbility$ DBYouMay
 SVar:DBYouMay:DB$ Sacrifice | SacValid$ Creature | Optional$ True | RememberSacrificed$ True | ConditionDefined$ Imprinted | ConditionPresent$ Card | ConditionCompare$ GE1 | SubAbility$ DBAfterYou
 SVar:DBAfterYou:DB$ Branch | BranchConditionSVar$ YouSaced | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBCleanup | FalseSubAbility$ DBTapAndClear

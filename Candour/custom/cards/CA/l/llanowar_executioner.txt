@@ -5,7 +5,7 @@ PT:3/1
 
 K:Deathtouch
 
-A:AB$ Pump | Cost$ X G G | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | SubAbility$ DBFight | AILogic$ Fight | StackDescription$ None | SpellDescription$ Target creature you control fights another target creature with mana value X.
+A:AB$ TargetOnly | Cost$ X G G | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | SubAbility$ DBFight | AILogic$ Fight | StackDescription$ None | SpellDescription$ Target creature you control fights another target creature with mana value X.
 SVar:DBFight:DB$ Fight | Defined$ ParentTarget | ValidTgts$ Creature.cmcEQX | TargetUnique$ True | TgtPrompt$ Select another target creature with mana value X
 SVar:X:Count$xPaid
 

@@ -12,7 +12,7 @@ K:Equip:PayLife<3>
 
 T:Mode$ ChangesZone | Origin$ Battlefield | ValidCard$ Card.Self | Destination$ Any | Execute$ DBCleanup | Static$ True
 T:Mode$ ChangesZone | Origin$ Exile | Destination$ Any | Static$ True | ValidCard$ Card.IsImprinted+ExiledWithSourceLKI | Execute$ DBForget
-SVar:DBForget:DB$ Pump | ForgetImprinted$ TriggeredCard
+SVar:DBForget:DB$ Bookkeeping | ForgetImprinted$ TriggeredCard
 SVar:DBCleanup:DB$ Cleanup | ClearImprinted$ True
 
 Oracle:Imprint — When this Equipment enters, you may exile a card from your hand.\nEquipped creature gets +2/+2 for each of the exiled card's colors.\nEquip—Pay 3 life.

@@ -8,7 +8,7 @@ SVar:DBPrevent:DB$ Effect | ReplacementEffects$ RPrevent | SpellDescription$ Pre
 SVar:RPrevent:Event$ DamageDone | Prevent$ True | ActiveZones$ Command | ValidTarget$ You | Description$ Prevent all damage that would be dealt to you this turn.
 
 T:Mode$ DamageDone | ValidSource$ Creature | ValidTarget$ Permanent.YouCtrl | Static$ True | Execute$ TrigRemember
-SVar:TrigRemember:DB$ Pump | RememberObjects$ TriggeredSource
+SVar:TrigRemember:DB$ Bookkeeping | RememberObjects$ TriggeredSource
 
 T:Mode$ Phase | Phase$ Cleanup | Static$ True | Execute$ DBCleanup
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True

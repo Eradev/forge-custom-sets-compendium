@@ -4,8 +4,8 @@ Types:Enchantment
 
 K:ETBReplacement:Other:TreasureChoice
 SVar:TreasureChoice:DB$ GenericChoice | Choices$ Offense,Defense | Defined$ You | SetChosenMode$ True | ShowChoice$ ExceptSelf | SpellDescription$ As this enchantment enters, choose offense or defense.
-SVar:Offense:DB$ Pump | SpellDescription$ Offense
-SVar:Defense:DB$ Pump | SpellDescription$ Defense
+SVar:Offense:DB$ Nothing | SpellDescription$ Offense
+SVar:Defense:DB$ Nothing | SpellDescription$ Defense
 
 S:Mode$ Continuous | AffectedDefined$ Self | Affected$ Card.ChosenModeOffense | AddTrigger$ OffenseTrig | Description$ Offense — Whenever an artifact you control enters for the first time each turn, this enchantment deals 2 damage to each opponent.
 SVar:OffenseTrig:Mode$ ChangesZone | ValidCard$ Artifact.YouCtrl | Origin$ Any | Destination$ Battlefield | TriggerZones$ Battlefield | FirstTime$ True | Execute$ TrigDamage | Secondary$ True | TriggerDescription$ Whenever an artifact you control enters for the first time each turn, this enchantment deals 2 damage to each opponent.

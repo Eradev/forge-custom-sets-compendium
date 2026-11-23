@@ -10,13 +10,13 @@ SVar:DamageEvent:Event$ DamageDone | ValidSource$ Card.YouCtrl,Emblem.YouCtrl | 
 SVar:DmgTwice:DB$ ReplaceEffect | VarName$ DamageAmount | VarValue$ X
 SVar:X:ReplaceCount$DamageAmount/Twice
 
-A:AB$ Pump | PrecostDesc$ Laying Plans | Cost$ 2 R R | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteLayingPlans | SpellDescription$ Whenever you attack for the first time each turn, untap each creature you control. After this phase, there is an additional combat phase.
+A:AB$ Bookkeeping | PrecostDesc$ Laying Plans | Cost$ 2 R R | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteLayingPlans | SpellDescription$ Whenever you attack for the first time each turn, untap each creature you control. After this phase, there is an additional combat phase.
 
 T:Mode$ AttackersDeclared | AttackingPlayer$ You | FirstTime$ True | TriggerZones$ Battlefield | IsPresent$ Card.Self+NotedForLayingPlans | Execute$ TrigUntap | TriggerDescription$ Laying Plans — Whenever you attack for the first time each turn, untap each creature you control. After this phase, there is an additional combat phase.
 SVar:TrigUntap:DB$ UntapAll | ValidCards$ Creature.YouCtrl | SubAbility$ DBAddCombat
 SVar:DBAddCombat:DB$ AddPhase | ExtraPhase$ Combat | AfterPhase$ EndCombat
 
-A:AB$ Pump | PrecostDesc$ Waging War | Cost$ 2 R R | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteWagingWar | SpellDescription$ Whenever a creature you control attacks, create a token that's a copy of it that's tapped and attacking, except the token isn't legendary. Exile those tokens at end of combat.
+A:AB$ Bookkeeping | PrecostDesc$ Waging War | Cost$ 2 R R | SorcerySpeed$ True | IsPresent$ Card.Self+!NotedForGalleryUnlocked | Defined$ You | NoteCards$ Self | NoteCardsFor$ GalleryUnlocked | SubAbility$ DBNoteWagingWar | SpellDescription$ Whenever a creature you control attacks, create a token that's a copy of it that's tapped and attacking, except the token isn't legendary. Exile those tokens at end of combat.
 
 T:Mode$ Attacks | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | IsPresent$ Card.Self+NotedForWagingWar | Execute$ TrigCopy | TriggerDescription$ Waging War — Whenever a creature you control attacks, create a token that's a copy of it that's tapped and attacking, except the token isn't legendary. Exile those tokens at end of combat.
 SVar:TrigCopy:DB$ CopyPermanent | Defined$ TriggeredAttackerLKICopy | TokenTapped$ True | TokenAttacking$ True | NonLegendary$ True | RememberTokens$ True | SubAbility$ DelTrig
@@ -24,8 +24,8 @@ SVar:DelTrig:DB$ DelayedTrigger | Mode$ Phase | Phase$ EndCombat | Execute$ Trig
 SVar:TrigExile:DB$ ChangeZone | Defined$ DelayTriggerRememberedLKI | Origin$ Battlefield | Destination$ Exile
 SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
 
-SVar:DBNoteLayingPlans:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ LayingPlans
-SVar:DBNoteWagingWar:DB$ Pump | Defined$ You | NoteCards$ Self | NoteCardsFor$ WagingWar
+SVar:DBNoteLayingPlans:DB$ Bookkeeping | Defined$ You | NoteCards$ Self | NoteCardsFor$ LayingPlans
+SVar:DBNoteWagingWar:DB$ Bookkeeping | Defined$ You | NoteCards$ Self | NoteCardsFor$ WagingWar
 
 Oracle:(Choose only one work as a sorcery to add its ability.)\nWhen this Gallery enters, if a source you control would deal damage this turn, it deals double that damage instead.\n{2}{R}{R}: Laying Plans\nWhenever you attack for the first time each turn, untap each creature you control. After this phase, there is an additional combat phase.\n{2}{R}{R}: Waging War\nWhenever a creature you control attacks, create a token that's a copy of it that's tapped and attacking, except the token isn't legendary. Exile those tokens at end of combat.
 
