@@ -4,6 +4,7 @@ Colors:white
 Types:Enchantment Aura
 
 K:Enchant:Creature
+SVar:AttachAILogic:Pump
 
 S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddKeyword$ Protection:Creature | Description$ Enchanted creature has protection from creatures.
 

@@ -2,9 +2,9 @@ Name:Viral Fame
 ManaCost:W
 Types:Instant
 
-A:SP$ ChangeZone | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Exile | TgtPrompt$ Select target creature | RememberChanged$ True | RememberLKI$ True | SubAbility$ DBGainLife | SpellDescription$ Upload target creature. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
-SVar:DBGainLife:DB$ GainLife | Defined$ RememberedController | LifeAmount$ X | SubAbility$ DBTrackEach
-SVar:X:RememberedLKI$CardToughness
+A:SP$ ChangeZone | ValidTgts$ Creature | Origin$ Battlefield | Destination$ Exile | TgtPrompt$ Select target creature | RememberChanged$ True | SubAbility$ DBGainLife | SpellDescription$ Upload target creature. (To upload a card, exile it. Its owner may pay {2} to return it to their hand any time they could cast a sorcery.)
+SVar:DBGainLife:DB$ GainLife | Defined$ TargetedController | LifeAmount$ X | SubAbility$ DBTrackEach
+SVar:X:Targeted$CardToughness
 
 
 SVar:ABDownload:AB$ ChangeZone | Named$ Download | Cost$ 2 | SorcerySpeed$ True | ActivationZone$ Exile | Defined$ Self | Origin$ Exile | Destination$ Hand | PrecostDesc$ Download — | SpellDescription$ Return this card to your hand.

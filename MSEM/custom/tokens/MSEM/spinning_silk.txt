@@ -4,6 +4,7 @@ Colors:white
 Types:Enchantment Aura
 
 K:Enchant:Creature
+SVar:AttachAILogic:Pump
 
 T:Mode$ Attacks | ValidCard$ Card.EnchantedBy | Execute$ TrigTap | TriggerDescription$ Whenever enchanted creature attacks, tap target creature defending player controls.
 SVar:TrigTap:DB$ Tap | ValidTgts$ Creature.ControlledBy TriggeredDefendingPlayer | TgtPrompt$ Select target creature defending player controls
