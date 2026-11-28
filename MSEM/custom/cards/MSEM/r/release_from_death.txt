@@ -1,0 +1,7 @@
+Name:Release from Death
+ManaCost:W B G
+Types:Instant
+
+A:SP$ GainLife | ValidTgts$ Player | LifeAmount$ 10 | SpellDescription$ Target player gains 10 life.
+
+Oracle:Target player gains 10 life.

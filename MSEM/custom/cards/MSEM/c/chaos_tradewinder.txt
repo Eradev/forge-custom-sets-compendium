@@ -1,0 +1,14 @@
+Name:Chaos Tradewinder
+ManaCost:2 U
+Types:Creature Human Wizard
+PT:3/2
+
+T:Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigReveal | TriggerDescription$ Whenever you cast a spell, reveal the top card of your library. If a card that shares a card type with that spell was revealed this way, this creature gains flying until end of turn.
+
+SVar:TrigReveal:DB$ PeekAndReveal | NoPeek$ True | RememberRevealed$ True | SubAbility$ DBPump
+
+SVar:DBPump:DB$ Pump | Defined$ Self | KW$ Flying | ConditionDefined$ Remembered | ConditionPresent$ Card.sharesCardTypeWith TriggeredCard | SubAbility$ DBCleanup
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Whenever you cast a spell, reveal the top card of your library. If a card that shares a card type with that spell was revealed this way, this creature gains flying until end of turn.

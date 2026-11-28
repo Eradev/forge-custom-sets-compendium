@@ -1,0 +1,21 @@
+Name:Summer's Approach
+ManaCost:4 G G
+Types:Sorcery
+
+A:SP$ Scry | ScryNum$ 3 | SubAbility$ DBReveal | SpellDescription$ Scry 3, then reveal the top card of your library. If it's a land card, put it onto the battlefield. When you reveal a nonland card this way, distribute X +1/+1 counters among any number of target creatures you control, where X is that card's mana value.
+
+SVar:DBReveal:DB$ PeekAndReveal | NoPeek$ True | RememberRevealed$ True | SubAbility$ DBLand
+
+SVar:DBLand:DB$ ChangeZone | Origin$ Library | Destination$ Battlefield | Defined$ Remembered | ConditionDefined$ Remembered | ConditionPresent$ Card.Land | ConditionCompare$ GE1 | SubAbility$ DBImmediateTrigger
+
+SVar:DBImmediateTrigger:DB$ ImmediateTrigger | ConditionDefined$ Remembered | ConditionPresent$ Card.nonLand | ConditionCompare$ GE1 | RememberObjects$ Remembered | Execute$ TrigPutCounters | SubAbility$ DBCleanup | TriggerDescription$ When you reveal a nonland card this way, distribute X +1/+1 counters among any number of target creatures you control, where X is that card's mana value.
+
+SVar:TrigPutCounters:DB$ PutCounter | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select creatures you control to distribute counters among | CounterType$ P1P1 | CounterNum$ X | TargetMin$ 0 | TargetMax$ X | DividedAsYouChoose$ X
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:X:TriggerRemembered$CardManaCost
+
+Oracle:Scry 3, then reveal the top card of your library. If it's a land card, put it onto the battlefield. When you reveal a nonland card this way, distribute X +1/+1 counters among any number of target creatures you control, where X is that card's mana value.
+
+DeckHas:Ability$Counters

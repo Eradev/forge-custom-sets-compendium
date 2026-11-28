@@ -1,0 +1,17 @@
+Name:Test of Burning Wax
+ManaCost:1 R
+Types:Enchantment
+
+T:Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Static$ True | Execute$ TrigTrial
+SVar:TrigTrial:DB$ Branch | BranchConditionSVar$ HasTrial | FalseSubAbility$ DBChooseOpponent
+SVar:HasTrial:TriggeredSpellAbility>Count$SVar$TrialMarker
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | SubAbility$ DBTrialPayment
+SVar:DBTrialPayment:DB$ Nothing | UnlessCost$ PayLife<1> | UnlessPayer$ ChosenPlayer | UnlessResolveSubs$ WhenNotPaid | SubAbility$ DBTrialFailed
+SVar:DBTrialFailed:DB$ ImmediateTrigger | Static$ True | Execute$ DBNamedTrialFailed | TriggerDescription$ An opponent failed a trial.
+SVar:DBNamedTrialFailed:DB$ Nothing | Named$ TrialFailed
+
+T:Mode$ AbilityResolves | ValidSpellAbility$ Triggered.NamedAbilityTrialFailed | ValidSource$ Card.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigLoot | TriggerDescription$ Whenever an opponent fails a trial, you may discard a card. If you do, draw a card.
+SVar:TrigLoot:AB$ Draw | Cost$ Discard<1/Card> | NumCards$ 1
+
+DeckHas:Ability$Discard
+Oracle:Spells you cast without trial have trial 1. (As you cast this spell, an opponent of your choice may pay 1 life. If they don't, they fail the trial.)\nWhenever an opponent fails a trial, you may discard a card. If you do, draw a card.

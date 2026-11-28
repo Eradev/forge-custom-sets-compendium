@@ -1,0 +1,11 @@
+Name:Descent of the Cherubim
+ManaCost:W
+Types:Enchantment
+
+T:Mode$ AbilityResolves | ValidSpellAbility$ Triggered.NamedAbilityTrialFailed | ValidSource$ Card.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever an opponent fails a trial, create a 1/1 white Angel creature token with flying.
+
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_angel_flying
+
+Oracle:Whenever an opponent fails a trial, create a 1/1 white Angel creature token with flying.
+
+DeckHas:Ability$Token

@@ -1,0 +1,13 @@
+Name:Ifram's Emissary
+ManaCost:R
+Types:Creature Human Cleric
+PT:1/1
+
+K:Haste
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Permanent.Green+YouCtrl,Permanent.Blue+YouCtrl | Description$ This creature gets +1/+1 as long as you control a green or blue permanent.
+
+Oracle:Haste\nThis creature gets +1/+1 as long as you control a green or blue permanent.
+
+SVar:BuffedBy:Permanent.Green,Permanent.Blue
+DeckHints:Color$Green|Blue

@@ -1,0 +1,9 @@
+Name:Rampant Giantling
+ManaCost:G G
+Types:Creature Giant
+PT:3/3
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigMill | TriggerDescription$ At the beginning of your upkeep, mill two cards.
+SVar:TrigMill:DB$ Mill | NumCards$ 2
+
+Oracle:At the beginning of your upkeep, mill two cards.

@@ -1,0 +1,13 @@
+Name:Fuming Lawmaker
+ManaCost:2 U R
+Types:Creature Human Warrior
+PT:3/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Aura.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigUntap | TriggerDescription$ Whenever an Aura you control enters, untap this creature.
+SVar:TrigUntap:DB$ Untap | Defined$ Self
+
+A:AB$ RepeatEach | Cost$ 1 T | RepeatPlayers$ Player.Opponent | RepeatSubAbility$ DBDamage | DamageMap$ True | SubAbility$ DBScry | SpellDescription$ For each opponent, this creature deals 1 damage to that player or a planeswalker they control. Scry 1.
+SVar:DBDamage:DB$ DealDamage | PlayerChoices$ Remembered | CardChoices$ Planeswalker.RememberedPlayerCtrl | ChoicePrompt$ Choose that opponent or a planeswalker they control | NumDmg$ 1
+SVar:DBScry:DB$ Scry | ScryNum$ 1
+
+Oracle:Whenever an Aura you control enters, untap this creature.\n{1}, {T}: For each opponent, this creature deals 1 damage to that player or a planeswalker they control. Scry 1.

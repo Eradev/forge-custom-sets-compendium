@@ -1,0 +1,9 @@
+Name:Helm of the Devoted
+ManaCost:4
+Types:Artifact Equipment
+
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | SetPower$ 4 | SetToughness$ 4 | AddKeyword$ Haste & Hexproof | Description$ Equipped creature has base power and toughness 4/4 and has haste and hexproof.
+
+K:Equip:2
+
+Oracle:Equipped creature has base power and toughness 4/4 and has haste and hexproof.\nEquip {2}

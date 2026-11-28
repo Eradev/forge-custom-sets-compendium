@@ -84,6 +84,11 @@ Pyramids of Atuum (POA)               -  98% (126/128)
   Missing cards:
     * Righteous Priestess
     * Sphinx of Riddles
+Mious (MIS)                           -  99% (246/249)
+  Missing cards:
+    * The Infinite
+	* Gusma, God of Creation
+	* Marzen's Grimoire
 Khaliz-Dorahn (KZD)                   - 100%
 K15 Core Set (K15)                    - 100%
 Imperial Legacies (IMP)               -  99% (141/142)
@@ -108,6 +113,7 @@ From the Vault: Wayfarer's Shrine (SHRINE)
 
 Examples on how to implement custom keywords and mechanisms.
 
+* [Adjudicate](#adjudicate)
 * [Aetherize](#aetherize)
 * [Alpha](#alpha)
 * [Ascend](#ascend)
@@ -117,6 +123,7 @@ Examples on how to implement custom keywords and mechanisms.
 * [Concord](#concord)
 * [Cryptic](#cryptic)
 * [Deception](#deception)
+* [Erratic](#erratic)
 * [Fabled](#fabled)
 * [Fealty](#fealty)
 * [Fleeting](#fleeting)
@@ -132,6 +139,7 @@ Examples on how to implement custom keywords and mechanisms.
 * [Mirage](#mirage)
 * [Motivate](#motivate)
 * [Paranoia](#paranoia)
+* [Purge](#purge)
 * [Quickdraw](#quickdraw)
 * [Rerun](#rerun)
 * [Reverberate](#reverberate)
@@ -140,8 +148,27 @@ Examples on how to implement custom keywords and mechanisms.
 * [Storied](#storied)
 * [Submerge](#submerge)
 * [Torment](#torment)
+* [Trial](#trial)
 * [Vision](#vision)
 * [Wanderlust](#wanderlust)
+
+### Adjudicate
+
+Adjudicate is defined as:
+
+```text
+To adjudicate, create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.
+```
+
+Implementation:
+
+```text
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigAdjudicate | TriggerDescription$ When this creature enters, adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+
+SVar:TrigAdjudicate:DB$ Token | TokenScript$ adjudicate | TokenOwner$ You | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature to adjudicate
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
 
 ### Aetherize
 
@@ -304,6 +331,25 @@ Implementation:
 
 ```text
 A:AB$ ChangeZone | Cost$ 2 U Return<1/Creature.attacking+unblocked/unblocked attacker> | PrecostDesc$ Deception | CostDesc$ 2 U | ActivationZone$ Hand | Origin$ Hand | Destination$ Battlefield | Defined$ Self | Tapped$ True | Attacking$ True | SpellDescription$ ({2}{U}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Erratic
+
+Erratic is defined as:
+
+```text
+Erratic (When this creature dies, reveal the top four cards of your library. Put a creature card revealed this way with mana value less than this creature's mana value onto the battlefield and the rest on the bottom of your library in any order.)
+```
+
+Implementation:
+
+```text
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigErratic | TriggerDescription$ Erratic (When this creature dies, reveal the top four cards of your library. Put a creature card revealed this way with mana value less than this creature's mana value onto the battlefield and the rest on the bottom of your library in any order.)
+
+SVar:TrigErratic:DB$ Dig | DigNum$ 4 | Reveal$ True | ChangeNum$ 1 | ChangeValid$ Creature.cmcLTX | ChangeValidDesc$ creature card with lesser mana value | DestinationZone$ Battlefield
+SVar:X:TriggeredCard$CardManaCost
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)
@@ -602,6 +648,32 @@ SVar:PayParanoia:DB$ Play | Named$ Paranoia | PlayCost$ G | ValidSA$ Spell.Self 
 
 [Jump to top](#keywords-and-mechanisms-implementation)
 
+### Purge
+
+Purge is defined as:
+
+```text
+To purge, exile two cards that share a type from graveyards. If you do, draw a card.
+```
+
+Implementation:
+
+```text
+SVar:DBPurge:DB$ ChooseCard | ChoiceZone$ Graveyard | Choices$ Card.sharesCardTypeWithOther ValidGraveyard Card | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose a card that shares a card type with another card in a graveyard | SubAbility$ DBChooseSecond
+
+SVar:DBChooseSecond:DB$ ChooseCard | ChoiceZone$ Graveyard | Choices$ Card.!IsRemembered+sharesCardTypeWith Remembered | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose another card that shares a card type with the first | SubAbility$ DBExile
+
+SVar:DBExile:DB$ ChangeZoneAll | Origin$ Graveyard | Destination$ Exile | ChangeType$ Card.IsRemembered | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ GE2 | RememberChanged$ True | SubAbility$ DBDraw
+
+SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ PurgeCount | ConditionSVarCompare$ GE2 | SubAbility$ DBCleanup
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+
+SVar:PurgeCount:Count$ValidExile Card.IsRemembered
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
 ### Quickdraw
 
 Quickdraw is designed as:
@@ -749,6 +821,37 @@ SVar:DBTorment:DB$ GenericChoice | AILogic$ PayUnlessCost | Choices$ DBPaySac,DB
 SVar:DBPaySac:DB$ LoseLife | LifeAmount$ 3 | UnlessCost$ Sac<1/Permanent.nonland/nonland permanent> | UnlessPayer$ You | SpellDescription$ Lose 3 life unless you sacrifice a nonland permanent.
 SVar:DBPayDiscard:DB$ LoseLife | LifeAmount$ 3 | UnlessCost$ Discard<1/Card.Other/card> | UnlessPayer$ You | SpellDescription$ Lose 3 life unless you discard a card.
 SVar:DBLoseLifeFallback:DB$ LoseLife | LifeAmount$ 3
+```
+
+[Jump to top](#keywords-and-mechanisms-implementation)
+
+### Trial
+
+Trial N is defined as:
+
+```text
+Trial 3 (As you cast this spell, an opponent of your choice may pay 3 life. If they don't, they fail the trial.)
+```
+
+Implementation:
+
+```text
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigTrial | Static$ True
+
+SVar:TrigTrial:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 0 | SubAbility$ DBChooseOpponent
+
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | SubAbility$ DBTrialPayment
+
+SVar:DBTrialPayment:DB$ Nothing | UnlessCost$ PayLife<3> | UnlessPayer$ ChosenPlayer | UnlessResolveSubs$ WhenNotPaid | SubAbility$ DBTrialFailed
+
+SVar:DBTrialFailed:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 1 | SubAbility$ DBFailedSignal
+
+SVar:DBFailedSignal:DB$ ImmediateTrigger | Static$ True | Execute$ DBNamedTrialFailed | TriggerDescription$ An opponent failed a trial.
+
+SVar:DBNamedTrialFailed:DB$ Nothing | Named$ TrialFailed
+
+SVar:TrialFailed:Number$0
+SVar:TrialMarker:Number$1
 ```
 
 [Jump to top](#keywords-and-mechanisms-implementation)

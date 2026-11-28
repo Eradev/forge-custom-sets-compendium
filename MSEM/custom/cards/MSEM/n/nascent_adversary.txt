@@ -1,0 +1,21 @@
+Name:Nascent Adversary
+ManaCost:R W
+Types:Creature Devil Soldier
+PT:3/2
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigTrial | Static$ True
+SVar:TrigTrial:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 0 | SubAbility$ DBChooseOpponent
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | SubAbility$ DBTrialPayment
+SVar:DBTrialPayment:DB$ Nothing | UnlessCost$ PayLife<2> | UnlessPayer$ ChosenPlayer | UnlessResolveSubs$ WhenNotPaid | AILifeThreshold$ 12 | SubAbility$ DBTrialFailed
+SVar:DBTrialFailed:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 1 | SubAbility$ DBFailedSignal
+SVar:DBFailedSignal:DB$ ImmediateTrigger | Static$ True | Execute$ DBNamedTrialFailed | TriggerDescription$ An opponent failed a trial.
+SVar:DBNamedTrialFailed:DB$ Nothing | Named$ TrialFailed
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ TrialFailed | SVarCompare$ EQ1 | Execute$ TrigPump | TriggerDescription$ When this creature enters, if the trial was failed, it gains haste and first strike until end of turn.
+SVar:TrigPump:DB$ Pump | Defined$ Self | KW$ Haste & First Strike | ConditionCheckSVar$ TrialFailed | ConditionSVarCompare$ EQ1
+
+SVar:TrialFailed:Number$0
+
+Oracle:Trial 2 (As you cast this spell, an opponent of your choice may pay 2 life. If they don't, they fail the trial.)\nWhen this creature enters, if the trial was failed, it gains haste and first strike until end of turn.
+
+SVar:TrialMarker:Number$1

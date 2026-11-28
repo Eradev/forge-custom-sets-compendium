@@ -1,0 +1,7 @@
+Name:Verdant Trauma
+ManaCost:3 G G
+Types:Instant
+
+A:SP$ DigMultiple | DigNum$ 13 | Reveal$ True | ChangeValid$ Artifact,Battle,Creature,Enchantment,Land,Planeswalker | Optional$ True | DestinationZone2$ Graveyard | SpellDescription$ Reveal the top thirteen cards of your library. For each permanent type, you may put a card of that type revealed this way into your hand. Put the rest into your graveyard.
+
+Oracle:Reveal the top thirteen cards of your library. For each permanent type, you may put a card of that type revealed this way into your hand. Put the rest into your graveyard.

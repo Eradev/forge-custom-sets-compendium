@@ -1,0 +1,14 @@
+Name:Protector of the Innocent
+ManaCost:5
+Types:Artifact Creature Golem
+PT:5/5
+
+K:Vigilance
+
+K:Haste
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Player | TriggerZones$ Battlefield | CheckDefinedPlayer$ TriggeredPlayer.withLowestLife | Execute$ TrigControl | TriggerDescription$ At the beginning of each player's upkeep, if that player has the lowest life total or is tied for the lowest life total, they gain control of this creature.
+
+SVar:TrigControl:DB$ GainControl | Defined$ Self | NewController$ TriggeredPlayer
+
+Oracle:Vigilance, haste\nAt the beginning of each player's upkeep, if that player has the lowest life total or is tied for the lowest life total, they gain control of this creature.

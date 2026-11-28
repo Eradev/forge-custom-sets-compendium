@@ -1,0 +1,13 @@
+Name:Tammil and Sulei, the Guides
+ManaCost:1 B G
+Types:Legendary Creature Spirit
+PT:3/2
+
+K:Trample
+
+A:AB$ ChangeZone | Cost$ 3 B G Discard<2/Card> | ActivationZone$ Graveyard | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Creature.YouOwn+Other | TgtPrompt$ Select another target creature card in your graveyard | ThisDefinedAndTgts$ Self | Tapped$ True | SpellDescription$ Return this card and another target creature card from your graveyard to the battlefield tapped.
+
+Oracle:Trample\n{3}{B}{G}, Discard two cards: Return this card and another target creature card from your graveyard to the battlefield tapped.
+
+DeckHas:Ability$Discard|Graveyard
+SVar:DiscardMe:2

@@ -1,0 +1,8 @@
+Name:Thoughts Reborn
+ManaCost:3 U U
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ChangeType$ Instant.YouOwn,Sorcery.YouOwn | ChangeNum$ 2 | Hidden$ True | AtRandom$ True | SubAbility$ DBExile | StackDescription$ SpellDescription | SpellDescription$ Return two instant and/or sorcery cards at random from your graveyard to your hand. Exile CARDNAME.
+SVar:DBExile:DB$ ChangeZone | Origin$ Stack | Destination$ Exile
+
+Oracle:Return two instant and/or sorcery cards at random from your graveyard to your hand. Exile Thoughts Reborn.

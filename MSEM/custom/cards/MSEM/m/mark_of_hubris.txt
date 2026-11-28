@@ -1,0 +1,15 @@
+Name:Mark of Hubris
+ManaCost:2 B B B
+Types:Enchantment
+
+R:Event$ BeginPhase | ActiveZones$ Battlefield | ValidPlayer$ You | Phase$ Draw | Skip$ True | Description$ Skip your draw step.
+
+T:Mode$ Phase | Phase$ End of Turn | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDiscard | TriggerDescription$ At the beginning of your end step, discard a card. If you do, create a 4/4 white Angel creature token with flying. If you can't, sacrifice this enchantment.
+SVar:TrigDiscard:DB$ Discard | Defined$ You | Mode$ TgtChoose | NumCards$ 1 | RememberDiscarded$ True | SubAbility$ DBToken
+SVar:DBToken:DB$ Token | TokenScript$ w_4_4_angel_flying | TokenOwner$ You | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ GE1 | SubAbility$ DBSacrifice
+SVar:DBSacrifice:DB$ Sacrifice | SacValid$ Self | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ EQ0 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+DeckHas:Ability$Token|Discard
+
+Oracle:Skip your draw step.\nAt the beginning of your end step, discard a card. If you do, create a 4/4 white Angel creature token with flying. If you can't, sacrifice this enchantment.

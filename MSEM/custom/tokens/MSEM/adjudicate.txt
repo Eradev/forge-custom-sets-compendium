@@ -1,4 +1,4 @@
-Name:Adjudicate
+Name:Aura Token
 ManaCost:no cost
 Colors:white
 Types:Enchantment Aura

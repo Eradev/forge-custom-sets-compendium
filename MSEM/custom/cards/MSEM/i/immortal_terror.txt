@@ -1,0 +1,13 @@
+Name:Immortal Terror
+ManaCost:2 B
+Types:Enchantment
+
+T:Mode$ Attacks | ValidCard$ Creature.YouCtrl+faceDown | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ Whenever a face-down creature you control attacks, defending player loses 1 life.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ TriggeredDefendingPlayer | LifeAmount$ 1
+
+A:AB$ Manifest | Cost$ 2 Discard<1/Card> | Defined$ BottomOfLibrary | ActivationLimit$ 1 | SpellDescription$ Manifest the bottom card of your library. Activate only once each turn. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)
+
+Oracle:Whenever a face-down creature you control attacks, defending player loses 1 life.\n{2}, Discard a card: Manifest the bottom card of your library. Activate only once each turn. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)
+
+DeckHas:Ability$Discard
+DeckHints:Keyword$Morph|Megamorph

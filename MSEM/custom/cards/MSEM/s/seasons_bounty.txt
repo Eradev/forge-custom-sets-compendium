@@ -1,0 +1,7 @@
+Name:Seasons' Bounty
+ManaCost:2 G G
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Land.Basic | ChangeTypeDesc$ basic land | ChangeNum$ 4 | DifferentNames$ True | SpellDescription$ Search your library for up to four basic land cards with different names, reveal them, put them into your hand, then shuffle.
+
+Oracle:Search your library for up to four basic land cards with different names, reveal them, put them into your hand, then shuffle.

@@ -1,0 +1,9 @@
+Name:Journey to Atonement
+ManaCost:1 G
+Types:Sorcery
+
+A:SP$ Dig | DigNum$ 4 | ChangeNum$ 1 | ChangeValid$ Land | Optional$ True | DestinationZone$ Battlefield | Tapped$ True | DestinationZone2$ Graveyard | SpellDescription$ Look at the top four cards of your library. You may put a land card from among them onto the battlefield tapped. Put the rest into your graveyard.
+
+Oracle:Look at the top four cards of your library. You may put a land card from among them onto the battlefield tapped. Put the rest into your graveyard.
+
+DeckHas:Ability$Graveyard

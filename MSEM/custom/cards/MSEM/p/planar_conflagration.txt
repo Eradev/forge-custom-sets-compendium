@@ -1,0 +1,8 @@
+Name:Planar Conflagration
+ManaCost:4 R R R
+Types:Sorcery
+
+A:SP$ SetLife | LifeAmount$ 4 | SubAbility$ DBOppLife | SpellDescription$ Your life total becomes 4. Each opponent's life total becomes 2.
+SVar:DBOppLife:DB$ SetLife | Defined$ Player.Opponent | LifeAmount$ 2
+
+Oracle:Your life total becomes 4. Each opponent's life total becomes 2.

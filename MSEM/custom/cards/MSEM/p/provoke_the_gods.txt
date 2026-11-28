@@ -1,0 +1,11 @@
+Name:Provoke the Gods
+ManaCost:1 R W B
+Types:Sorcery
+
+A:SP$ ChangeZone | Cost$ 1 R W B PayLife<X> | Origin$ Library | Destination$ Hand | ChangeType$ Card | ChangeNum$ Y | Mandatory$ True | StackDescription$ SpellDescription | SpellDescription$ Search your library for a card. If you have 10 or less life, search your library for two cards instead. Put those cards into your hand, then shuffle.
+
+SVar:X:Count$xPaid
+SVar:Y:Count$Compare LifeTotal LE10.2.1
+SVar:LifeTotal:Count$YourLifeTotal
+
+Oracle:As an additional cost to cast this spell, pay any amount of life.\nSearch your library for a card. If you have 10 or less life, search your library for two cards instead. Put those cards into your hand, then shuffle.

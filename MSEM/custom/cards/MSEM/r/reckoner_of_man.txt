@@ -1,0 +1,23 @@
+Name:Reckoner of Man
+ManaCost:5 R R
+Types:Creature Dragon
+PT:6/6
+
+K:Flying
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigTrial | Static$ True
+SVar:TrigTrial:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 0 | SubAbility$ DBChooseOpponent
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | SubAbility$ DBTrialPayment
+SVar:DBTrialPayment:DB$ Nothing | UnlessCost$ PayLife<6> | UnlessPayer$ ChosenPlayer | UnlessResolveSubs$ WhenNotPaid | AILifeThreshold$ 12 | SubAbility$ DBTrialFailed
+SVar:DBTrialFailed:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 1 | SubAbility$ DBFailedSignal
+SVar:DBFailedSignal:DB$ ImmediateTrigger | Static$ True | Execute$ DBNamedTrialFailed | TriggerDescription$ An opponent failed a trial.
+SVar:DBNamedTrialFailed:DB$ Nothing | Named$ TrialFailed
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ TrialFailed | SVarCompare$ EQ1 | Execute$ TrigDamage | TriggerDescription$ When this creature enters, if the trial was failed, it deals 3 damage to each creature you don't control.
+SVar:TrigDamage:DB$ DamageAll | ValidCards$ Creature.YouDontCtrl | NumDmg$ 3 | ConditionCheckSVar$ TrialFailed | ConditionSVarCompare$ EQ1
+
+SVar:TrialFailed:Number$0
+
+Oracle:Trial 6 (As you cast this spell, an opponent of your choice may pay 6 life. If they don't, they fail the trial.)\nFlying\nWhen this creature enters, if the trial was failed, it deals 3 damage to each creature you don't control.
+
+SVar:TrialMarker:Number$1

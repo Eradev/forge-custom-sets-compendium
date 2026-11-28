@@ -1,0 +1,24 @@
+Name:Essence of Thought
+ManaCost:5 B
+Types:Sorcery
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigTrial | Static$ True
+SVar:TrigTrial:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 0 | SubAbility$ DBChooseOpponent
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | SubAbility$ DBTrialPayment
+SVar:DBTrialPayment:DB$ Nothing | UnlessCost$ PayLife<4> | UnlessPayer$ ChosenPlayer | UnlessResolveSubs$ WhenNotPaid | AILifeThreshold$ 12 | SubAbility$ DBTrialFailed
+SVar:DBTrialFailed:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 1 | SubAbility$ DBFailedSignal
+SVar:DBFailedSignal:DB$ ImmediateTrigger | Static$ True | Execute$ DBNamedTrialFailed | TriggerDescription$ An opponent failed a trial. | SubAbility$ DBRegisterDiscard
+SVar:DBNamedTrialFailed:DB$ Nothing | Named$ TrialFailed
+
+SVar:DBRegisterDiscard:DB$ DelayedTrigger | Mode$ AbilityResolves | ValidSource$ Card.Self | ValidSpellAbility$ Spell | Static$ True | ThisTurn$ True | RememberObjects$ Player.Chosen | Execute$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ TriggeredSpellAbility>Targeted | Mode$ TgtChoose | NumCards$ 2 | ConditionPlayerDefined$ TriggeredSpellAbility>Targeted | ConditionPlayerContains$ DelayTriggerRemembered | StackDescription$ None
+
+A:SP$ Draw | Defined$ You | ValidTgts$ Player | TgtPrompt$ Select target player | NumCards$ 2 | SubAbility$ DBLoseLife | SpellDescription$ You draw two cards and you lose 2 life. Target player discards two cards if they failed the trial.
+SVar:DBLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ 2
+
+SVar:TrialFailed:Number$0
+
+Oracle:Trial 4 (As you cast this spell, an opponent of your choice may pay 4 life. If they don't, they fail the trial.)\nYou draw two cards and you lose 2 life. Target player discards two cards if they failed the trial.
+
+SVar:TrialMarker:Number$1
+DeckHas:Ability$Discard

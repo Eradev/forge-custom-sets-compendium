@@ -1,0 +1,14 @@
+Name:Unwavering Questant
+ManaCost:2 B
+Types:Creature Devil Warrior
+PT:3/1
+
+S:Mode$ CantBlock | ValidCard$ Card.Self | Description$ This creature can't block.
+
+T:Mode$ AbilityResolves | ValidSpellAbility$ Triggered.NamedAbilityTrialFailed | ValidSource$ Card.YouCtrl | TriggerZones$ Graveyard | Execute$ TrigReturn | TriggerDescription$ When an opponent fails a trial, return this card from your graveyard to the battlefield.
+
+SVar:TrigReturn:DB$ ChangeZone | Defined$ Self | Origin$ Graveyard | Destination$ Battlefield
+
+Oracle:This creature can't block.\nWhen an opponent fails a trial, return this card from your graveyard to the battlefield.
+
+SVar:TrialMarker:Number$1

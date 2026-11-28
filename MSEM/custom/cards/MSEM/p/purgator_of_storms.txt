@@ -1,0 +1,19 @@
+Name:Purgator of Storms
+ManaCost:4 R
+Types:Creature Elemental
+PT:6/2
+
+K:Trample
+
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigErratic | TriggerDescription$ Erratic (When this creature dies, reveal the top four cards of your library. Put a creature card revealed this way with mana value less than this creature's mana value onto the battlefield and the rest on the bottom of your library in any order.)
+SVar:TrigErratic:DB$ Dig | DigNum$ 4 | Reveal$ True | ChangeNum$ 1 | ChangeValid$ Creature.cmcLTX | ChangeValidDesc$ creature card with lesser mana value | DestinationZone$ Battlefield
+SVar:X:TriggeredCard$CardManaCost
+
+T:Mode$ Phase | Phase$ End of Turn | TriggerZones$ Battlefield | Execute$ TrigSac | TriggerDescription$ At the beginning of the end step, sacrifice this creature.
+SVar:TrigSac:DB$ Sacrifice | SacValid$ Self
+
+Oracle:Trample, haste\nErratic (When this creature dies, reveal the top four cards of your library. Put a creature card revealed this way with mana value less than this creature's mana value onto the battlefield and the rest on the bottom of your library in any order.)\nAt the beginning of the end step, sacrifice this creature.
+
+DeckHints:Type$Creature

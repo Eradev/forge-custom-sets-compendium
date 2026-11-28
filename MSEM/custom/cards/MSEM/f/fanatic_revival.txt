@@ -1,0 +1,9 @@
+Name:Fanatic Revival
+ManaCost:2 B
+Types:Sorcery
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Hand | DefinedPlayer$ Player | ChangeType$ Creature | ChangeNum$ 1 | Hidden$ True | SelectPrompt$ Select up to one creature card from your graveyard to return to your hand | SubAbility$ DBSacrifice | StackDescription$ SpellDescription | SpellDescription$ Each player returns up to one creature card from their graveyard to their hand. Each opponent sacrifices a creature.
+
+SVar:DBSacrifice:DB$ Sacrifice | Defined$ Player.Opponent | SacValid$ Creature | StackDescription$ None
+
+Oracle:Each player returns up to one creature card from their graveyard to their hand. Each opponent sacrifices a creature.

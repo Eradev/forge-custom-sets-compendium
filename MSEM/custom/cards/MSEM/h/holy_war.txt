@@ -1,0 +1,14 @@
+Name:Holy War
+ManaCost:2 R W
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ When this enchantment enters, create three 1/1 white Cleric creature tokens.
+
+SVar:TrigToken:DB$ Token | TokenAmount$ 3 | TokenScript$ w_1_1_cleric
+
+S:Mode$ Continuous | Affected$ Creature.token+YouCtrl | AddKeyword$ First Strike & Lifelink | Description$ Creature tokens you control have first strike and lifelink.
+
+DeckHas:Ability$Token
+DeckHints:Ability$Token
+
+Oracle:When the enchantment enters, create three 1/1 white Cleric creature tokens.\nCreature tokens you control have first strike and lifelink.

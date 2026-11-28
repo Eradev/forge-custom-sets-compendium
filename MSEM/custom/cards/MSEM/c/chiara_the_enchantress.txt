@@ -1,0 +1,19 @@
+Name:Chiara the Enchantress
+ManaCost:1 W U
+Types:Legendary Planeswalker Chiara
+Loyalty:4
+
+A:AB$ ChangeZone | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Origin$ Battlefield,Graveyard | Destination$ Hand | ValidTgts$ Aura | TargetMin$ 0 | TargetMax$ 1 | TgtPrompt$ Select up to one target Aura on the battlefield or Aura card in a graveyard | SpellDescription$ Return up to one target Aura card from a graveyard or on the battlefield to its owner's hand.
+
+A:AB$ Sacrifice | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | Defined$ You | SacValid$ Enchantment | RememberSacrificed$ True | SubAbility$ DBReturn | SpellDescription$ Sacrifice an enchantment. If you do, return target enchantment card from your graveyard to the battlefield.
+SVar:DBReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | ValidTgts$ Enchantment.YouOwn | TgtPrompt$ Select target enchantment card in your graveyard | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ GE1 | SubAbility$ DBCleanup
+
+A:AB$ Draw | Cost$ SubCounter<6/LOYALTY> | Planeswalker$ True | Ultimate$ True | Defined$ You | NumCards$ 3 | SubAbility$ DBFreeCast | SpellDescription$ Draw three cards. Until end of turn, you may cast enchantment spells without paying their mana costs.
+SVar:DBFreeCast:DB$ Effect | StaticAbilities$ STFreeEnchantments | Duration$ EndOfTurn
+SVar:STFreeEnchantments:Mode$ Continuous | Affected$ Enchantment | AffectedZone$ Hand,Graveyard,Exile,Library,Command | MayPlay$ True | MayPlayWithoutManaCost$ True | MayPlayDontGrantZonePermissions$ True | Description$ Until end of turn, you may cast enchantment spells without paying their mana costs.
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:[+1]: Return up to one target Aura card from a graveyard or on the battlefield to its owner's hand.\n[-2]: Sacrifice an enchantment. If you do, return target enchantment card from your graveyard to the battlefield.\n[-6]: Draw three cards. Until end of turn, you may cast enchantment spells without paying their mana costs.
+
+DeckHas:Ability$Graveyard|Sacrifice

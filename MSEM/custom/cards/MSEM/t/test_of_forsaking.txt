@@ -1,0 +1,26 @@
+Name:Test of Forsaking
+ManaCost:R
+Types:Instant
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigTrial | Static$ True
+SVar:TrigTrial:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 0 | SubAbility$ DBChooseOpponent
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | SubAbility$ DBTrialPayment
+SVar:DBTrialPayment:DB$ DelayedTrigger | Mode$ AbilityResolves | ValidSource$ Card.Self | ValidSpellAbility$ Spell | Static$ True | ThisTurn$ True | Execute$ DBDiscardOne | UnlessCost$ PayLife<3> | UnlessPayer$ ChosenPlayer | UnlessSwitched$ True | UnlessResolveSubs$ WhenNotPaid | AILifeThreshold$ 12 | SubAbility$ DBTrialFailed
+SVar:DBTrialFailed:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 1 | SubAbility$ DBFailedSignal
+SVar:DBFailedSignal:DB$ ImmediateTrigger | Static$ True | Execute$ DBNamedTrialFailed | TriggerDescription$ An opponent failed a trial. | SubAbility$ DBRegisterAlternate
+SVar:DBNamedTrialFailed:DB$ Nothing | Named$ TrialFailed
+
+SVar:DBRegisterAlternate:DB$ DelayedTrigger | Mode$ AbilityResolves | ValidSource$ Card.Self | ValidSpellAbility$ Spell | Static$ True | ThisTurn$ True | Execute$ DBTryDiscardTwo
+SVar:DBTryDiscardTwo:DB$ Draw | Defined$ You | NumCards$ 2 | UnlessCost$ Discard<2/Card> | UnlessPayer$ You | UnlessSwitched$ True | UnlessResolveSubs$ WhenNotPaid | SubAbility$ DBDiscardOne | StackDescription$ None
+
+SVar:DBDiscardOne:DB$ Discard | Defined$ You | NumCards$ 1 | Mode$ TgtChoose | SubAbility$ DBDrawOne | StackDescription$ None
+SVar:DBDrawOne:DB$ Draw | Defined$ You | NumCards$ 1 | StackDescription$ None
+
+A:SP$ Nothing | SpellDescription$ Discard a card, then draw a card. If the trial was failed, you may instead discard two cards. If you do, draw two cards.
+
+SVar:TrialFailed:Number$0
+
+Oracle:Trial 3 (As you cast this spell, an opponent of your choice may pay 3 life. If they don't, they fail the trial.)\nDiscard a card, then draw a card. If the trial was failed, you may instead discard two cards. If you do, draw two cards.
+
+SVar:TrialMarker:Number$1
+DeckHas:Ability$Discard

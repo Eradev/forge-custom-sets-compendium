@@ -1,0 +1,11 @@
+Name:Shroudwing Seraph
+ManaCost:8
+Types:Creature Angel
+PT:4/4
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ X | EffectZone$ All | Description$ This spell costs {2} less to cast for each face-down creature you control.
+SVar:X:Count$Valid Creature.faceDown+YouCtrl/Times.2
+
+K:Flying
+
+Oracle:This spell costs {2} less to cast for each face-down creature you control.\nFlying

@@ -1,0 +1,13 @@
+Name:Ni'Ama's Emissary
+ManaCost:B
+Types:Creature Human Cleric
+PT:1/1
+
+K:Menace
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Permanent.Red+YouCtrl,Permanent.White+YouCtrl | Description$ This creature gets +1/+1 as long as you control a red or white permanent.
+
+Oracle:Menace\nThis creature gets +1/+1 as long as you control a red or white permanent.
+
+SVar:BuffedBy:Permanent.Red,Permanent.White
+DeckHints:Color$Red|White

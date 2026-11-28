@@ -1,0 +1,23 @@
+Name:Damnation of Gluttons
+ManaCost:W B
+Types:Sorcery
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigTrial | Static$ True
+SVar:TrigTrial:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 0 | SubAbility$ DBChooseOpponent
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | SubAbility$ DBTrialPayment
+SVar:DBTrialPayment:DB$ Nothing | UnlessCost$ PayLife<4> | UnlessPayer$ ChosenPlayer | UnlessResolveSubs$ WhenNotPaid | AILifeThreshold$ 12 | SubAbility$ DBTrialFailed
+SVar:DBTrialFailed:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 1 | SubAbility$ DBFailedSignal
+SVar:DBFailedSignal:DB$ ImmediateTrigger | Static$ True | Execute$ DBNamedTrialFailed | TriggerDescription$ An opponent failed a trial. | SubAbility$ DBRegisterSacrifice
+SVar:DBNamedTrialFailed:DB$ Nothing | Named$ TrialFailed
+
+SVar:DBRegisterSacrifice:DB$ DelayedTrigger | Mode$ AbilityResolves | ValidSource$ Card.Self | ValidSpellAbility$ Spell | Static$ True | ThisTurn$ True | RememberObjects$ Player.Chosen | Execute$ DBSacrifice
+SVar:DBSacrifice:DB$ Sacrifice | Defined$ TriggeredSpellAbility>Targeted | SacValid$ Permanent.nonCreature | SacMessage$ noncreature permanent | Amount$ 2 | ConditionPlayerDefined$ TriggeredSpellAbility>Targeted | ConditionPlayerContains$ DelayTriggerRemembered | StackDescription$ None
+
+A:SP$ TargetOnly | ValidTgts$ Player | TgtPrompt$ Select target player | SpellDescription$ Target player sacrifices two noncreature permanents if they failed the trial.
+
+SVar:TrialFailed:Number$0
+
+Oracle:Trial 4 (As you cast this spell, an opponent of your choice may pay 4 life. If they don't, they fail the trial.)\nTarget player sacrifices two noncreature permanents if they failed the trial.
+
+SVar:TrialMarker:Number$1
+DeckHas:Ability$Sacrifice

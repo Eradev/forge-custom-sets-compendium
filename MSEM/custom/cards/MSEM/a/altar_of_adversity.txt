@@ -1,0 +1,16 @@
+Name:Altar of Adversity
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ B | SpellDescription$ Add {B}.
+
+A:AB$ Mana | Cost$ T | Produced$ Combo R W | SubAbility$ DBStayTapped | SpellDescription$ Add {R} or {W}. This land doesn't untap during your next untap step unless you control an Angel creature.
+
+SVar:DBStayTapped:DB$ Effect | ReplacementEffects$ DontUntap | RememberObjects$ Self | ExileOnMoved$ Battlefield | Duration$ UntilTheEndOfYourNextUntap
+
+SVar:DontUntap:Event$ Untap | ValidCard$ Card.IsRemembered | ValidStepTurnToController$ Player.Activator | Layer$ CantHappen | IsPresent$ Angel.YouCtrl | PresentCompare$ EQ0 | Description$ EFFECTSOURCE doesn't untap during your next untap step unless you control an Angel creature.
+
+Oracle:This land enters tapped.\n{T}: Add {B}.\n{T}: Add {R} or {W}. This land doesn't untap during your next untap step unless you control an Angel creature.

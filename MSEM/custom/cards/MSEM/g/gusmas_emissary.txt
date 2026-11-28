@@ -1,0 +1,13 @@
+Name:Gusma's Emissary
+ManaCost:U
+Types:Creature Human Cleric
+PT:1/1
+
+K:Prowess
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Permanent.Black+YouCtrl,Permanent.Green+YouCtrl | Description$ This creature gets +1/+1 as long as you control a black or green permanent.
+
+Oracle:Prowess\nThis creature gets +1/+1 as long as you control a black or green permanent.
+
+SVar:BuffedBy:Permanent.Black,Permanent.Green
+DeckHints:Color$Black|Green

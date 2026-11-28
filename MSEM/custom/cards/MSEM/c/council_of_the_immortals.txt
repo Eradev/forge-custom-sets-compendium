@@ -1,0 +1,21 @@
+Name:Council of the Immortals
+ManaCost:2 W W
+Types:Legendary Creature Spirit
+PT:2/2
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.YouCtrl+!enchanted | TriggerZones$ Battlefield | Execute$ TrigAdjudicate | TriggerDescription$ Whenever a creature you control that isn't enchanted dies, adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+
+SVar:TrigAdjudicate:DB$ Token | TokenScript$ adjudicate | TokenOwner$ You | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature to adjudicate
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Creature.enchanted+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigDelayReturn | TriggerDescription$ Whenever an enchanted creature you control dies, return it to the battlefield at the beginning of the next end step.
+
+SVar:TrigDelayReturn:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | RememberObjects$ TriggeredNewCardLKICopy | Execute$ DBReturn | TriggerDescription$ Return that card to the battlefield at the beginning of the next end step.
+
+SVar:DBReturn:DB$ ChangeZone | Defined$ DelayTriggerRememberedLKI | Origin$ Graveyard | Destination$ Battlefield
+
+Oracle:Flying\nWhenever a creature you control that isn't enchanted dies, adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)\nWhenever an enchanted creature you control dies, return it to the battlefield at the beginning of the next end step.
+
+DeckHas:Ability$Token
+DeckHints:Type$Aura

@@ -1,0 +1,13 @@
+Name:Sha'Iv's Emissary
+ManaCost:W
+Types:Creature Elf Cleric
+PT:1/1
+
+K:Vigilance
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Permanent.Blue+YouCtrl,Permanent.Red+YouCtrl | Description$ This creature gets +1/+1 as long as you control a blue or red permanent.
+
+Oracle:Vigilance\nThis creature gets +1/+1 as long as you control a blue or red permanent.
+
+SVar:BuffedBy:Permanent.Blue,Permanent.Red
+DeckHints:Color$Blue|Red

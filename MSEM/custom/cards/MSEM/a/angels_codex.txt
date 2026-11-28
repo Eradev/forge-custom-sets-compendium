@@ -1,0 +1,9 @@
+Name:Angel's Codex
+ManaCost:2
+Types:Artifact Book Equipment
+K:Equip:1
+
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddPower$ 1 | AddToughness$ 1 | Description$ Equipped creature gets +1/+1.
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature.MultiColor | AddPower$ 1 | AddToughness$ 1 | Description$ As long as equipped creature is multicolored, it gets an additional +1/+1.
+
+Oracle:Equipped creature gets +1/+1.\nAs long as equipped creature is multicolored, it gets an additional +1/+1.\nEquip {1}

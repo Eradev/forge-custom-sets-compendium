@@ -1,0 +1,11 @@
+Name:Angeltouched Komodo
+ManaCost:2 R R
+Types:Creature Lizard
+PT:4/2
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigScry | TriggerDescription$ Whenever this creature attacks, scry 1.
+SVar:TrigScry:DB$ Scry
+
+K:Morph:1 R
+
+Oracle:Whenever this creature attacks, scry 1.\nMorph {1}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)

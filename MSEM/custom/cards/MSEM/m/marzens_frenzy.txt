@@ -1,0 +1,20 @@
+Name:Marzen's Frenzy
+ManaCost:2 R R
+Types:Instant
+
+A:SP$ Discard | Defined$ You | Mode$ Hand | RememberDiscarded$ True | SubAbility$ DBDraw | StackDescription$ SpellDescription | SpellDescription$ Discard your hand, then draw two cards for each land card discarded this way. For each opponent, CARDNAME deals damage to that player or a planeswalker they control equal to twice the number of instant or sorcery cards discarded this way.
+
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ X | SubAbility$ DBForEach
+
+SVar:DBForEach:DB$ RepeatEach | RepeatPlayers$ Player.Opponent | RepeatSubAbility$ DBDealDamage | DamageMap$ True | SubAbility$ DBCleanup
+
+SVar:DBDealDamage:DB$ DealDamage | PlayerChoices$ Remembered | CardChoices$ Planeswalker.RememberedPlayerCtrl | ChoicePrompt$ Choose this opponent or a planeswalker they control to deal damage to | NumDmg$ Y | ConditionCheckSVar$ Y | ConditionSVarCompare$ GT0
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:X:Remembered$Valid Land/Times.2
+SVar:Y:Remembered$Valid Instant,Sorcery/Times.2
+
+Oracle:Discard your hand, then draw two cards for each land card discarded this way. For each opponent, Marzen's Frenzy deals damage to that player or a planeswalker they control equal to twice the number of instant or sorcery cards discarded this way.
+
+DeckHas:Ability$Discard

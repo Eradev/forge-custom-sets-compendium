@@ -1,0 +1,9 @@
+Name:Fury Swipes
+ManaCost:2 R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Any | TgtPrompt$ Select any target to distribute damage to | NumDmg$ 2 | TargetMin$ 1 | TargetMax$ 2 | DividedAsYouChoose$ 2 | SubAbility$ DBScry | SpellDescription$ Fury Swipes deals 2 damage divided as you choose among one or two targets. Scry 2.
+
+SVar:DBScry:DB$ Scry | ScryNum$ 2
+
+Oracle:Fury Swipes deals 2 damage divided as you choose among one or two targets.\nScry 2.

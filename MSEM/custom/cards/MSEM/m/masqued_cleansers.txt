@@ -1,0 +1,24 @@
+Name:Masqued Cleansers
+ManaCost:2 B
+Types:Creature Cat Cleric
+PT:2/1
+
+T:Mode$ ChangesZoneAll | ValidCards$ Card.!token+!copiedSpell | Origin$ Any | Destination$ Exile | TriggerZones$ Battlefield | Execute$ TrigLoseLife | TriggerDescription$ Whenever one or more cards are put into exile from anywhere, target opponent loses 1 life.
+
+SVar:TrigLoseLife:DB$ LoseLife | ValidTgts$ Opponent | LifeAmount$ 1
+
+T:Mode$ DamageDoneOnce | ValidSource$ Creature.YouCtrl | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigPurge | TriggerDescription$ Whenever one or more creatures you control deal combat damage to a player, you may pay 2 life. If you do, purge. (Exile two cards that share a type from graveyards. If you do, draw a card.)
+
+SVar:TrigPurge:AB$ ChooseCard | Cost$ PayLife<2> | ChoiceZone$ Graveyard | Choices$ Card.sharesCardTypeWithOther ValidGraveyard Card | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose a card that shares a card type with another card in a graveyard | SubAbility$ DBChooseSecond
+
+SVar:DBChooseSecond:DB$ ChooseCard | ChoiceZone$ Graveyard | Choices$ Card.!IsRemembered+sharesCardTypeWith Remembered | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose another card that shares a card type with the first | SubAbility$ DBExile
+
+SVar:DBExile:DB$ ChangeZoneAll | Origin$ Graveyard | Destination$ Exile | ChangeType$ Card.IsRemembered | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ GE2 | RememberChanged$ True | SubAbility$ DBDraw
+
+SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ X | ConditionSVarCompare$ GE2 | SubAbility$ DBCleanup
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+
+SVar:X:Count$ValidExile Card.IsRemembered
+
+Oracle:Whenever one or more cards are put into exile from anywhere, target opponent loses 1 life.\nWhenever one or more creatures you control deal combat damage to a player, you may pay 2 life. If you do, purge. (Exile two cards that share a type from graveyards. If you do, draw a card.)

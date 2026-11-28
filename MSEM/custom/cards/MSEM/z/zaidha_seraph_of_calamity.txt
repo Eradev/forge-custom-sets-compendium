@@ -1,0 +1,20 @@
+Name:Zaidha, Seraph of Calamity
+ManaCost:2 R R
+Types:Legendary Creature Angel
+PT:2/2
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigErratic | TriggerDescription$ Erratic (When this creature dies, reveal the top four cards of your library. Put a creature card revealed this way with mana value less than this creature's mana value onto the battlefield and the rest on the bottom of your library in any order.)
+SVar:TrigErratic:DB$ Dig | DigNum$ 4 | Reveal$ True | ChangeNum$ 1 | ChangeValid$ Creature.cmcLTX | ChangeValidDesc$ creature card with lesser mana value | DestinationZone$ Battlefield
+SVar:X:TriggeredCard$CardManaCost
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigTarget | TriggerDescription$ Whenever NICKNAME deals combat damage to a player, choose up to two target nonland permanents that player controls and target nonland permanent you control. Destroy one of those permanents at random.
+SVar:TrigTarget:DB$ TargetOnly | ValidTgts$ Permanent.nonLand+YouCtrl | TgtPrompt$ Select target nonland permanent you control | Mandatory$ True | IsCurse$ True | SubAbility$ DBTarget
+SVar:DBTarget:DB$ TargetOnly | ValidTgts$ Permanent.nonLand+ControlledBy TriggeredTarget | TgtPrompt$ Select up to two target nonland permanents damaged player controls | TargetMin$ 0 | TargetMax$ 2 | IsCurse$ True | SubAbility$ DBChooseRandom
+SVar:DBChooseRandom:DB$ ChooseCard | AtRandom$ True | Reveal$ True | RevealTitle$ Randomly chosen permanent to be destroyed | DefinedCards$ TargetedCard | SubAbility$ DBDestroy
+SVar:DBDestroy:DB$ Destroy | Defined$ ChosenCard | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
+
+Oracle:Flying\nErratic (When this creature dies, reveal the top four cards of your library. Put a creature card revealed this way with mana value less than this creature's mana value onto the battlefield and the rest on the bottom of your library in any order.)\nWhenever Zaidha deals combat damage to a player, choose up to two target nonland permanents that player controls and target nonland permanent you control. Destroy one of those permanents at random.
+
+DeckHints:Type$Creature

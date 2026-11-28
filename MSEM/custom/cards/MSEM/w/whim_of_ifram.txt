@@ -1,0 +1,7 @@
+Name:Whim of Ifram
+ManaCost:2 R
+Types:Instant
+
+A:SP$ DealDamage | ValidTgts$ Creature | TargetsAtRandom$ True | NumDmg$ 4 | SpellDescription$ CARDNAME deals 4 damage to target creature chosen at random.
+
+Oracle:Whim of Ifram deals 4 damage to target creature chosen at random.

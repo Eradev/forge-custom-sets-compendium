@@ -1,0 +1,10 @@
+Name:Combatant Conflagration
+ManaCost:2 R
+Types:Sorcery
+
+A:SP$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +2 | SpellDescription$ Creatures you control get +2/+0 until end of turn.
+
+T:Mode$ AbilityResolves | ValidSpellAbility$ Triggered.NamedAbilityTrialFailed | ValidSource$ Card.YouCtrl | TriggerZones$ Graveyard | PresentZone$ Graveyard | IsPresent$ Card.StrictlySelf | Execute$ TrigPump | TriggerDescription$ Whenever an opponent fails a trial, if this card is in your graveyard, target creature you control gets +2/+0 until end of turn.
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | NumAtt$ +2
+
+Oracle:Creatures you control get +2/+0 until end of turn.\nWhenever an opponent fails a trial, if this card is in your graveyard, target creature you control gets +2/+0 until end of turn.

@@ -1,0 +1,15 @@
+Name:Worldsculpt
+ManaCost:4 G G
+Types:Sorcery
+
+A:SP$ ChangeZone | Defined$ BottomOfLibrary | Origin$ Library | Destination$ Exile | ExileFaceDown$ True | RememberChanged$ True | SubAbility$ DBExileHand | StackDescription$ SpellDescription | SpellDescription$ Exile the bottom card of your library, a card from your hand, and a card you own from outside the game. Put them in a face-down pile, shuffle that pile, then manifest those cards.
+
+SVar:DBExileHand:DB$ ChangeZone | Origin$ Hand | Destination$ Exile | ChangeType$ Card | ChangeNum$ 1 | Hidden$ True | Mandatory$ True | ExileFaceDown$ True | RememberChanged$ True | SubAbility$ DBExileSideboard | StackDescription$ None
+
+SVar:DBExileSideboard:DB$ ChangeZone | Origin$ Sideboard | Destination$ Exile | ChangeType$ Card.YouOwn | ChangeNum$ 1 | Hidden$ True | Mandatory$ True | ExileFaceDown$ True | NoReveal$ True | RememberChanged$ True | SubAbility$ DBManifest | StackDescription$ None
+
+SVar:DBManifest:DB$ Manifest | Defined$ Remembered | DefinedPlayer$ You | Shuffle$ True | SubAbility$ DBCleanup | StackDescription$ None
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:Exile the bottom card of your library, a card from your hand, and a card you own from outside the game. Put them in a face-down pile, shuffle that pile, then manifest those cards. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)

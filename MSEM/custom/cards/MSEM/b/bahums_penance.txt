@@ -1,0 +1,24 @@
+Name:Bahum's Penance
+ManaCost:W B G
+Types:Sorcery
+
+A:SP$ Repeat | Cost$ W B G Discard<0/Hand> | CostDesc$ As an additional cost to cast this spell, discard your hand. | MaxRepeat$ 4 | RepeatSubAbility$ DBPurge | SubAbility$ DBGainLife | StackDescription$ SpellDescription | SpellDescription$ Purge four times, then you gain 1 life for each card in exile. (Exile two cards that share a type from graveyards. If you do, draw a card.)
+
+SVar:DBPurge:DB$ ChooseCard | ChoiceZone$ Graveyard | Choices$ Card.sharesCardTypeWithOther ValidGraveyard Card | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose a card that shares a card type with another card in a graveyard | SubAbility$ DBChooseSecond
+
+SVar:DBChooseSecond:DB$ ChooseCard | ChoiceZone$ Graveyard | Choices$ Card.!IsRemembered+sharesCardTypeWith Remembered | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose another card that shares a card type with the first | SubAbility$ DBExile
+
+SVar:DBExile:DB$ ChangeZoneAll | Origin$ Graveyard | Destination$ Exile | ChangeType$ Card.IsRemembered | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ GE2 | RememberChanged$ True | SubAbility$ DBDraw
+
+SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ Y | ConditionSVarCompare$ GE2 | SubAbility$ DBCleanup
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ X
+
+SVar:X:Count$ValidExile Card
+SVar:Y:Count$ValidExile Card.IsRemembered
+
+Oracle:As an additional cost to cast this spell, discard your hand.\nPurge four times, then you gain 1 life for each card in exile. (Exile two cards that share a type from graveyards. If you do, draw a card.)
+
+DeckHas:Ability$LifeGain

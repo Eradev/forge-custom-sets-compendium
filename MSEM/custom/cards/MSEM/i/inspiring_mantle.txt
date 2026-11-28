@@ -1,0 +1,11 @@
+Name:Inspiring Mantle
+ManaCost:2 W W
+Types:Enchantment Aura
+
+K:Enchant:Creature
+SVar:AttachAILogic:Pump
+
+T:Mode$ Attacks | ValidCard$ Card.AttachedBy | TriggerZones$ Battlefield | Execute$ TrigPumpAll | TriggerDescription$ Whenever enchanted creature attacks, other creatures you control get +1/+2 until end of turn.
+SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.!TriggeredAttacker+YouCtrl | NumAtt$ +1 | NumDef$ +2
+
+Oracle:Enchant creature\nWhenever enchanted creature attacks, other creatures you control get +1/+2 until end of turn.

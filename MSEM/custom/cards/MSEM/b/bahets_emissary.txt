@@ -1,0 +1,13 @@
+Name:Bahet's Emissary
+ManaCost:G
+Types:Creature Human Cleric
+PT:1/1
+
+K:Deathtouch
+
+S:Mode$ Continuous | Affected$ Card.Self | AddPower$ 1 | AddToughness$ 1 | IsPresent$ Permanent.White+YouCtrl,Permanent.Black+YouCtrl | Description$ This creature gets +1/+1 as long as you control a white or black permanent.
+
+Oracle:Deathtouch\nThis creature gets +1/+1 as long as you control a white or black permanent.
+
+SVar:BuffedBy:Permanent.White,Permanent.Black
+DeckHints:Color$White|Black

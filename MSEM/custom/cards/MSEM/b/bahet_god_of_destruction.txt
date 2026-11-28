@@ -1,0 +1,20 @@
+Name:Bahet, God of Destruction
+ManaCost:2 W B G
+Types:Legendary Enchantment
+PT:5/5
+
+A:AB$ Animate | Cost$ W B G Discard<1/Card.namedBahet, God of Destruction> | Defined$ Self | Types$ Creature,God | Keywords$ Indestructible | Duration$ Permanent | SpellDescription$ NICKNAME gains indestructible and becomes a God creature in addition to its other types.
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigBalanceLands | TriggerDescription$ Whenever NICKNAME enters or attacks, each player chooses a number of lands they control equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players discard cards and sacrifice non-God creatures the same way.
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigBalanceLands | Secondary$ True | TriggerDescription$ Whenever NICKNAME enters or attacks, each player chooses a number of lands they control equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players discard cards and sacrifice non-God creatures the same way.
+
+SVar:TrigBalanceLands:DB$ Balance | Valid$ Land | SubAbility$ DBBalanceHands
+
+SVar:DBBalanceHands:DB$ Balance | Zone$ Hand | SubAbility$ DBBalanceCreatures
+
+SVar:DBBalanceCreatures:DB$ Balance | Valid$ Creature.nonGod
+
+Oracle:{W}{B}{G}, Discard a card named Bahet, God of Destruction: Bahet gains indestructible and becomes a God creature in addition to its other types.\nWhenever Bahet enters or attacks, each player chooses a number of lands they control equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players discard cards and sacrifice non-God creatures the same way.
+
+DeckHas:Ability$Discard|Sacrifice

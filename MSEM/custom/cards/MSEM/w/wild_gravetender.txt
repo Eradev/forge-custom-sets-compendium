@@ -1,0 +1,19 @@
+Name:Wild Gravetender
+ManaCost:5 G G
+Types:Creature Elf Shaman
+PT:4/4
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigErratic | TriggerDescription$ Erratic (When this creature dies, reveal the top four cards of your library. Put a creature card revealed this way with mana value less than this creature's mana value onto the battlefield and the rest on the bottom of your library in any order.)
+SVar:TrigErratic:DB$ Dig | DigNum$ 4 | Reveal$ True | ChangeNum$ 1 | ChangeValid$ Creature.cmcLTX | ChangeValidDesc$ creature card with lesser mana value | DestinationZone$ Battlefield
+SVar:X:TriggeredCard$CardManaCost
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigGainLife | TriggerDescription$ When this creature enters, you gain 2 life for each creature card in your graveyard.
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ Y
+SVar:Y:Count$ValidGraveyard Creature.YouOwn/Times.2
+
+A:AB$ ChangeZone | Cost$ 1 G Sac<1/Creature> | Origin$ Graveyard | Destination$ Hand | ActivationZone$ Graveyard | SpellDescription$ Return this card from your graveyard to your hand.
+
+Oracle:Erratic (When this creature dies, reveal the top four cards of your library. Put a creature card revealed this way with mana value less than this creature's mana value onto the battlefield and the rest on the bottom of your library in any order.)\nWhen this creature enters, you gain 2 life for each creature card in your graveyard.\n{1}{G}, Sacrifice a creature: Return this card from your graveyard to your hand.
+
+DeckHas:Ability$LifeGain|Sacrifice|Graveyard
+DeckHints:Type$Creature

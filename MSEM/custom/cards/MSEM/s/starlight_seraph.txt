@@ -1,0 +1,17 @@
+Name:Starlight Seraph
+ManaCost:1 U R W
+Types:Creature Angel
+PT:2/2
+
+K:Flying
+
+S:Mode$ Continuous | Affected$ Creature.YouCtrl | AddKeyword$ Vigilance | Description$ Creatures you control have vigilance.
+
+T:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigTap | OptionalDecider$ You | TriggerDescription$ At the beginning of combat on your turn, you may tap target creature.
+SVar:TrigTap:DB$ Tap | ValidTgts$ Creature | TgtPrompt$ Select target creature
+
+K:Morph:4 W
+
+Oracle:Flying\nCreatures you control have vigilance.\nAt the beginning of combat on your turn, you may tap target creature.\nMorph {4}{W}
+
+SVar:PlayMain1:TRUE

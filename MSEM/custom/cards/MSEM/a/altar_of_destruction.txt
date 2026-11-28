@@ -1,0 +1,16 @@
+Name:Altar of Destruction
+ManaCost:no cost
+Types:Land
+
+R:Event$ Moved | ValidCard$ Card.Self | Destination$ Battlefield | ReplacementResult$ Updated | ReplaceWith$ ETBTapped | Description$ This land enters tapped.
+SVar:ETBTapped:DB$ Tap | Defined$ Self | ETB$ True
+
+A:AB$ Mana | Cost$ T | Produced$ G | SpellDescription$ Add {G}.
+
+A:AB$ Mana | Cost$ T | Produced$ Combo W B | SubAbility$ DBStayTapped | SpellDescription$ Add {W} or {B}. This land doesn't untap during your next untap step unless you control an Angel creature.
+
+SVar:DBStayTapped:DB$ Effect | ReplacementEffects$ DontUntap | RememberObjects$ Self | ExileOnMoved$ Battlefield | Duration$ UntilTheEndOfYourNextUntap
+
+SVar:DontUntap:Event$ Untap | ValidCard$ Card.IsRemembered | ValidStepTurnToController$ Player.Activator | Layer$ CantHappen | IsPresent$ Angel.YouCtrl | PresentCompare$ EQ0 | Description$ EFFECTSOURCE doesn't untap during your next untap step unless you control an Angel creature.
+
+Oracle:This land enters tapped.\n{T}: Add {G}.\n{T}: Add {W} or {B}. This land doesn't untap during your next untap step unless you control an Angel creature.

@@ -1,0 +1,18 @@
+Name:Adverse Reunion
+ManaCost:2 W
+Types:Instant
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigTrial | Static$ True
+SVar:TrigTrial:DB$ StoreSVar | SVar$ X | Type$ Number | Expression$ 1 | SubAbility$ DBChooseOpponent
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | SubAbility$ DBTrialPayment
+SVar:DBTrialPayment:DB$ Nothing | UnlessCost$ PayLife<4> | UnlessPayer$ ChosenPlayer | UnlessResolveSubs$ WhenNotPaid | SubAbility$ DBTrialFailed
+SVar:DBTrialFailed:DB$ StoreSVar | SVar$ X | Type$ Number | Expression$ 3 | SubAbility$ DBFailedSignal
+SVar:DBFailedSignal:DB$ ImmediateTrigger | Execute$ DBNamedTrialFailed | Static$ True | TriggerDescription$ An opponent failed a trial.
+SVar:DBNamedTrialFailed:DB$ Nothing | Named$ TrialFailed
+
+A:SP$ Token | TokenScript$ w_1_1_cleric | TokenAmount$ X | SpellDescription$ Create a 1/1 white Cleric creature token. If the trial was failed, create three of those tokens instead.
+
+Oracle:Trial 4 (As you cast this spell, an opponent of your choice may pay 4 life. If they don't, they fail the trial.)\nCreate a 1/1 white Cleric creature token. If the trial was failed, create three of those tokens instead.
+
+DeckHas:Ability$Token
+SVar:TrialMarker:Number$1

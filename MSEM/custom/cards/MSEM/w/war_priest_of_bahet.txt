@@ -1,0 +1,20 @@
+Name:War Priest of Bahet
+ManaCost:1 G G
+Types:Creature Elf Cleric
+PT:2/2
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | Execute$ TrigPurge | TriggerDescription$ Whenever this creature deals combat damage to a player, purge. (Exile two cards that share a type from graveyards. If you do, draw a card.)
+
+SVar:TrigPurge:DB$ ChooseCard | ChoiceZone$ Graveyard | Choices$ Card.sharesCardTypeWithOther ValidGraveyard Card | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose a card that shares a card type with another card in a graveyard | SubAbility$ DBChooseSecond
+
+SVar:DBChooseSecond:DB$ ChooseCard | ChoiceZone$ Graveyard | Choices$ Card.!IsRemembered+sharesCardTypeWith Remembered | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose another card that shares a card type with the first | SubAbility$ DBExile
+
+SVar:DBExile:DB$ ChangeZoneAll | Origin$ Graveyard | Destination$ Exile | ChangeType$ Card.IsRemembered | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ GE2 | RememberChanged$ True | SubAbility$ DBDraw
+
+SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ X | ConditionSVarCompare$ GE2 | SubAbility$ DBCleanup
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+
+SVar:X:Count$ValidExile Card.IsRemembered
+
+Oracle:Whenever this creature deals combat damage to a player, purge. (Exile two cards that share a type from graveyards. If you do, draw a card.)

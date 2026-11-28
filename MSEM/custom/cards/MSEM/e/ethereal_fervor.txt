@@ -1,0 +1,23 @@
+Name:Ethereal Fervor
+ManaCost:R W
+Types:Enchantment Aura
+
+K:Enchant:Creature
+SVar:AttachAILogic:Pump
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigAdjudicate | TriggerDescription$ When this Aura enters, adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+
+SVar:TrigAdjudicate:DB$ Token | TokenScript$ adjudicate | TokenOwner$ You | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature to adjudicate
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddPower$ X | AddKeyword$ First Strike | AddSVar$ EnMe | Description$ Enchanted creature gets +1/+0 for each Aura attached to it, has first strike, and attacks each combat if able.
+
+S:Mode$ MustAttack | ValidCreature$ Creature.EnchantedBy | Secondary$ True
+
+SVar:X:Count$Valid Aura.AttachedTo Creature.EnchantedBy
+
+SVar:EnMe:SVar:EnchantMe:Multiple
+
+Oracle:Enchant creature\nWhen this Aura enters, adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)\nEnchanted creature gets +1/+0 for each Aura attached to it, has first strike, and attacks each combat if able.
+
+DeckHas:Ability$Token
+DeckHints:Type$Aura

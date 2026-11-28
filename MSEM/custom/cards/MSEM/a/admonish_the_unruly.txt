@@ -1,0 +1,14 @@
+Name:Admonish the Unruly
+ManaCost:R
+Types:Instant
+
+A:SP$ Token | TokenScript$ adjudicate | TokenOwner$ You | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature to adjudicate | SubAbility$ DBDamage | SpellDescription$ Adjudicate, then CARDNAME deals damage to target creature equal to the number of Auras you control. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Creature | TgtPrompt$ Select target creature to deal damage to | NumDmg$ X
+
+SVar:X:Count$Valid Aura.YouCtrl
+
+Oracle:Adjudicate, then Admonish the Unruly deals damage to target creature equal to the number of Auras you control. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+
+DeckHas:Ability$Token
+DeckHints:Type$Aura

@@ -1,0 +1,10 @@
+Name:Chemical Grenade
+ManaCost:2
+Types:Artifact
+
+A:AB$ Pump | Cost$ X T Sac<1/CARDNAME/this artifact> | ValidTgts$ Creature | TargetMin$ 0 | TargetMax$ X | TgtPrompt$ Select up to X target creatures | NumAtt$ -1 | NumDef$ -1 | IsCurse$ True | SpellDescription$ Up to X target creatures each get -1/-1 until end of turn.
+SVar:X:Count$xPaid
+
+Oracle:{X}, {T}, Sacrifice this artifact: Up to X target creatures each get -1/-1 until end of turn.
+
+DeckHas:Ability$Sacrifice

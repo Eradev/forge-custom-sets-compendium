@@ -1,0 +1,24 @@
+Name:Test of Fear
+ManaCost:2 B
+Types:Instant
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigTrial | Static$ True
+SVar:TrigTrial:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 0 | SubAbility$ DBChooseOpponent
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | SubAbility$ DBTrialPayment
+SVar:DBTrialPayment:DB$ Nothing | UnlessCost$ PayLife<3> | UnlessPayer$ ChosenPlayer | UnlessResolveSubs$ WhenNotPaid | AILifeThreshold$ 12 | SubAbility$ DBTrialFailed
+SVar:DBTrialFailed:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 1 | SubAbility$ DBFailedSignal
+SVar:DBFailedSignal:DB$ ImmediateTrigger | Static$ True | Execute$ DBNamedTrialFailed | TriggerDescription$ An opponent failed a trial. | SubAbility$ DBRegisterMenace
+SVar:DBNamedTrialFailed:DB$ Nothing | Named$ TrialFailed
+
+SVar:DBRegisterMenace:DB$ DelayedTrigger | Mode$ AbilityResolves | ValidSource$ Card.Self | ValidSpellAbility$ Spell | Static$ True | ThisTurn$ True | Execute$ DBPumpOthers
+SVar:DBPumpOthers:DB$ PumpAll | ValidCards$ Creature.YouCtrl+!IsRemembered | KW$ Menace | SubAbility$ DBCleanup | StackDescription$ None
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+A:SP$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | RememberTargets$ True | ForgetOtherTargets$ True | NumAtt$ +1 | KW$ Menace | SpellDescription$ Target creature gets +1/+0 and gains menace until end of turn. If the trial was failed, other creatures you control gain menace until end of turn.
+
+SVar:TrialFailed:Number$0
+
+Oracle:Trial 3 (As you cast this spell, an opponent of your choice may pay 3 life. If they don't, they fail the trial.)\nTarget creature gets +1/+0 and gains menace until end of turn. If the trial was failed, other creatures you control gain menace until end of turn.
+
+SVar:TrialMarker:Number$1
+DeckHas:Keyword$Menace

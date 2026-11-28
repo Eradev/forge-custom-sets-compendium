@@ -1,0 +1,7 @@
+Name:Seal of Insights
+ManaCost:1 U
+Types:Enchantment
+
+A:AB$ Dig | Cost$ U Sac<1/CARDNAME/this enchantment> | DigNum$ 4 | ChangeNum$ 1 | NoReveal$ True | SpellDescription$ Look at the top four cards of your library. Put one into your hand and the rest on the bottom of your library in any order.
+
+Oracle:{U}, Sacrifice this enchantment: Look at the top four cards of your library. Put one into your hand and the rest on the bottom of your library in any order.

@@ -1,0 +1,12 @@
+Name:Repel the Unruly
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Token | TokenScript$ adjudicate | TokenOwner$ You | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature to adjudicate | SubAbility$ DBBounce | SpellDescription$ Adjudicate, then each player returns a creature they control that isn't enchanted to its owner's hand. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+
+SVar:DBBounce:DB$ ChangeZone | DefinedPlayer$ Player | Hidden$ True | Mandatory$ True | Origin$ Battlefield | Destination$ Hand | ChangeType$ Creature.!enchanted | ChangeNum$ 1
+
+Oracle:Adjudicate, then each player returns a creature they control that isn't enchanted to its owner's hand. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+
+DeckHas:Ability$Token
+DeckHints:Type$Aura

@@ -1,0 +1,12 @@
+Name:Mindhunter Grizzly
+ManaCost:1 G
+Types:Creature Bear
+PT:4/4
+
+S:Mode$ CantAttack,CantBlock | ValidCard$ Card.Self | CheckSVar$ X | SVarCompare$ EQ0 | Description$ This creature can't attack or block unless you've scried this turn.
+
+A:AB$ Scry | Cost$ 5 U | ScryNum$ 1 | SpellDescription$ Scry 1.
+
+SVar:X:Count$YouScryThisTurn
+
+Oracle:This creature can't attack or block unless you've scried this turn.\n{5}{U}: Scry 1.

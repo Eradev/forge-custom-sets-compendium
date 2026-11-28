@@ -1,0 +1,12 @@
+Name:Unorthodox Tutelage
+ManaCost:1 B G
+Types:Enchantment
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigMill | TriggerDescription$ At the beginning of your upkeep, each player mills two cards, then reveals the top card of their library and puts it on the bottom of their library.
+
+SVar:TrigMill:DB$ Mill | Defined$ Player | NumCards$ 2 | SubAbility$ DBReveal
+SVar:DBReveal:DB$ Dig | Defined$ Player | DigNum$ 1 | Reveal$ True | ChangeNum$ All | DestinationZone$ Library | LibraryPosition$ -1
+
+Oracle:At the beginning of your upkeep, each player mills two cards, then reveals the top card of their library and puts it on the bottom of their library.
+
+DeckHas:Ability$Mill

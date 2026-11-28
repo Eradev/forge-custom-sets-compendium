@@ -1,0 +1,15 @@
+Name:Weavetide Militia
+ManaCost:4 R
+Types:Creature Spirit Soldier
+PT:3/3
+
+S:Mode$ ReduceCost | ValidCard$ Card.Self | Type$ Spell | Amount$ X | EffectZone$ All | Description$ This spell costs {1} less to cast for each creature you control that attacked this turn.
+
+K:First Strike
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | IsPresent$ Creature.attacking+Other+YouCtrl | PresentCompare$ GE1 | NoResolvingCheck$ True | Execute$ TrigPumpAll | TriggerDescription$ Whenever this creature and at least one other creature attack, creatures you control get +1/+0 until end of turn.
+SVar:TrigPumpAll:DB$ PumpAll | ValidCards$ Creature.YouCtrl | NumAtt$ +1
+
+SVar:X:Count$CreaturesAttackedThisTurn Creature.YouCtrl
+
+Oracle:This spell costs {1} less to cast for each creature you control that attacked this turn.\nFirst strike\nWhenever this creature and at least one other creature attack, creatures you control get +1/+0 until end of turn.

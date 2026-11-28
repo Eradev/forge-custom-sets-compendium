@@ -1,0 +1,15 @@
+Name:Sha'Iv Cagemage
+ManaCost:1 W
+Types:Creature Human Wizard
+PT:2/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigAdjudicate | TriggerDescription$ When this creature enters, adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+SVar:TrigAdjudicate:DB$ Token | TokenScript$ adjudicate | TokenOwner$ You | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature to adjudicate
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Aura.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigTap | OptionalDecider$ You | TriggerDescription$ Whenever an Aura you control enters, you may tap target creature.
+SVar:TrigTap:DB$ Tap | ValidTgts$ Creature | TgtPrompt$ Select target creature to tap
+
+Oracle:When this creature enters, adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)\nWhenever an Aura you control enters, you may tap target creature.
+
+DeckHas:Ability$Token
+DeckHints:Type$Aura

@@ -1,0 +1,19 @@
+Name:Dark Night Cleansing
+ManaCost:B
+Types:Sorcery
+
+A:SP$ LoseLife | ValidTgts$ Opponent | LifeAmount$ 3 | ConditionPresent$ Card.TargetedPlayerOwn | ConditionZone$ Exile | ConditionCompare$ GE1 | SubAbility$ DBChooseFirst | SpellDescription$ Target opponent loses 3 life if they own a card in exile. Purge. (Exile two cards that share a type from graveyards. If you do, draw a card.)
+
+SVar:DBChooseFirst:DB$ ChooseCard | ChoiceZone$ Graveyard | Choices$ Card.sharesCardTypeWithOther ValidGraveyard Card | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose a card that shares a card type with another card in a graveyard | SubAbility$ DBChooseSecond
+
+SVar:DBChooseSecond:DB$ ChooseCard | ChoiceZone$ Graveyard | Choices$ Card.!IsRemembered+sharesCardTypeWith Remembered | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose another card that shares a card type with the first | SubAbility$ DBExile
+
+SVar:DBExile:DB$ ChangeZoneAll | Origin$ Graveyard | Destination$ Exile | ChangeType$ Card.IsRemembered | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ GE2 | RememberChanged$ True | SubAbility$ DBDraw
+
+SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ X | ConditionSVarCompare$ GE2 | SubAbility$ DBCleanup
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+
+SVar:X:Count$ValidExile Card.IsRemembered
+
+Oracle:Target opponent loses 3 life if they own a card in exile. Purge. (Exile two cards that share a type from graveyards. If you do, draw a card.)

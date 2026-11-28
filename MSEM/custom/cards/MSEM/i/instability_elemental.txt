@@ -1,0 +1,14 @@
+Name:Instability Elemental
+ManaCost:3 G U
+Types:Creature Elemental
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPump | TriggerDescription$ Whenever this creature enters or you draw a card except during your draw step, target creature gets +1/+1 until end of turn.
+
+T:Mode$ Drawn | ValidPlayer$ You | Phase$ Untap,Upkeep,Main1->Cleanup | TriggerZones$ Battlefield | Execute$ TrigPump | Secondary$ True | TriggerDescription$ Whenever this creature enters or you draw a card except during your draw step, target creature gets +1/+1 until end of turn.
+
+T:Mode$ Drawn | ValidPlayer$ You | Phase$ Draw | NotPlayerTurn$ True | TriggerZones$ Battlefield | Execute$ TrigPump | Secondary$ True | TriggerDescription$ Whenever this creature enters or you draw a card except during your draw step, target creature gets +1/+1 until end of turn.
+
+SVar:TrigPump:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ +1 | NumDef$ +1
+
+Oracle:Whenever this creature enters or you draw a card except during your draw step, target creature gets +1/+1 until end of turn.

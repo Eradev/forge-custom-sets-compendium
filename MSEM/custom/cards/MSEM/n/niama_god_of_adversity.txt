@@ -1,0 +1,23 @@
+Name:Ni'Ama, God of Adversity
+ManaCost:R W B
+Types:Legendary Enchantment
+PT:5/5
+
+A:AB$ Animate | Cost$ R W B Discard<1/Card.namedNi'Ama, God of Adversity> | Defined$ Self | Types$ Creature,God | Keywords$ Indestructible | Duration$ Permanent | SpellDescription$ NICKNAME gains indestructible and becomes a God creature in addition to its other types.
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigRepeat | TriggerDescription$ Whenever NICKNAME enters or attacks, it deals 2 damage to each opponent unless they discard a card. You gain that much life. Repeat this process once.
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigRepeat | Secondary$ True | TriggerDescription$ Whenever NICKNAME enters or attacks, it deals 2 damage to each opponent unless they discard a card. You gain that much life. Repeat this process once.
+
+SVar:TrigRepeat:DB$ Repeat | MaxRepeat$ 2 | RepeatSubAbility$ DBRepeatEach | StackDescription$ SpellDescription
+SVar:DBRepeatEach:DB$ RepeatEach | RepeatPlayers$ Opponent | RepeatSubAbility$ DBDamage | DamageMap$ True | RememberAmount$ True | SubAbility$ DBGainLife
+SVar:DBDamage:DB$ DealDamage | Defined$ Remembered | NumDmg$ 2 | UnlessCost$ Discard<1/Card> | UnlessPayer$ Remembered
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+SVar:X:Count$RememberedNumber
+
+Oracle:{R}{W}{B}, Discard a card named Ni'Ama, God of Adversity: Ni'Ama gains indestructible and becomes a God creature in addition to its other types.\nWhenever Ni'Ama enters or attacks, it deals 2 damage to each opponent unless they discard a card. You gain that much life. Repeat this process once.
+
+SVar:AIPreference:DiscardCost$Card
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$LifeGain
+DeckHints:Name$Ni'Ama, God of Adversity

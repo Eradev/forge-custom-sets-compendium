@@ -1,0 +1,18 @@
+Name:Eternal Recurrence
+ManaCost:2 U
+Types:Enchantment Aura
+
+K:Enchant:Creature
+SVar:AttachAILogic:Pump
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | AddTrigger$ ErraticDies | AddSVar$ ErraticDig & ErraticThreshold | Description$ Enchanted creature has erratic. (When that creature dies, reveal the top four cards of your library. Put a creature card revealed this way with lesser mana value onto the battlefield and the rest on the bottom of your library in any order.)
+SVar:ErraticDies:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ ErraticDig | TriggerDescription$ Erratic (When this creature dies, reveal the top four cards of your library. Put a creature card revealed this way with lesser mana value onto the battlefield and the rest on the bottom of your library in any order.)
+SVar:ErraticDig:DB$ Dig | DigNum$ 4 | Reveal$ True | ChangeNum$ 1 | ChangeValid$ Creature.cmcLTErraticThreshold | ChangeValidDesc$ creature card with lesser mana value | DestinationZone$ Battlefield
+SVar:ErraticThreshold:TriggeredCard$CardManaCost
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.EnchantedBy | Execute$ TrigReturn | TriggerDescription$ When enchanted creature dies, return this Aura to its owner's hand.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | Defined$ Self
+
+Oracle:Enchant creature\nEnchanted creature has erratic. (When that creature dies, reveal the top four cards of your library. Put a creature card revealed this way with mana value less than that creature's mana value onto the battlefield and the rest on the bottom of your library in any order.)\nWhen enchanted creature dies, return this Aura to its owner's hand.
+
+DeckHints:Type$Creature

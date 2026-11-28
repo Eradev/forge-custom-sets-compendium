@@ -1,0 +1,18 @@
+Name:Mind's Communion
+ManaCost:5 U R
+Types:Sorcery
+
+A:SP$ Discard | Defined$ Opponent | Mode$ Hand | RememberDiscarded$ True | SubAbility$ DBRepeatDraw | SpellDescription$ Each opponent discards all the cards in their hand, then draws that many cards. You discard your hand, then draw cards equal to the number of cards your opponents drew this turn.
+
+SVar:DBRepeatDraw:DB$ RepeatEach | RepeatPlayers$ Opponent | RepeatSubAbility$ DBOppDraw | SubAbility$ DBCleanup
+SVar:DBOppDraw:DB$ Draw | Defined$ Player.IsRemembered | NumCards$ X
+SVar:X:Remembered$Valid Card.RememberedPlayer
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | SubAbility$ DBDiscardSelf
+SVar:DBDiscardSelf:DB$ Discard | Defined$ You | Mode$ Hand | SubAbility$ DBDrawSelf
+SVar:DBDrawSelf:DB$ Draw | Defined$ You | NumCards$ Y
+SVar:Y:PlayerCountOpponents$CardsDrawn
+
+Oracle:Each opponent discards all the cards in their hand, then draws that many cards. You discard your hand, then draw cards equal to the number of cards your opponents drew this turn.
+
+DeckHas:Ability$Discard

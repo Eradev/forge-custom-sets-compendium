@@ -1,0 +1,7 @@
+Name:Dreams in Flight
+ManaCost:1 U
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ Creature.faceDown+YouCtrl | AddPower$ 1 | AddToughness$ 1 | AddKeyword$ Flying | Description$ Face-down creatures you control get +1/+1 and have flying.
+
+Oracle:Face-down creatures you control get +1/+1 and have flying.

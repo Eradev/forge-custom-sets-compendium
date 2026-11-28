@@ -1,0 +1,21 @@
+Name:Di'Ala, Ominous Seraph
+ManaCost:4 B B
+Types:Legendary Creature Angel
+PT:4/4
+
+K:Flying
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigChoice | TriggerDescription$ At the beginning of your upkeep, exile the top or bottom card of target player's library. That player loses life equal to that card's mana value.
+
+SVar:TrigChoice:DB$ GenericChoice | ValidTgts$ Player | TgtPrompt$ Select target player | Defined$ You | Choices$ DBTop,DBBottom
+
+SVar:DBTop:DB$ Dig | Defined$ Targeted | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBLoseLife | SpellDescription$ Exile the top card of target player's library.
+
+SVar:DBBottom:DB$ Dig | Defined$ Targeted | DigNum$ 1 | ChangeNum$ All | FromBottom$ True | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBLoseLife | SpellDescription$ Exile the bottom card of target player's library.
+
+SVar:DBLoseLife:DB$ LoseLife | Defined$ Targeted | LifeAmount$ X | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:X:Remembered$CardManaCost
+
+Oracle:Flying\nAt the beginning of your upkeep, exile the top or bottom card of target player's library. That player loses life equal to that card's mana value.

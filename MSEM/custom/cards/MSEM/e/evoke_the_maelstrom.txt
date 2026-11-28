@@ -1,0 +1,7 @@
+Name:Evoke the Maelstrom
+ManaCost:G U R
+Types:Sorcery
+
+A:SP$ Draw | NumCards$ 3 | SpellDescription$ Draw three cards.
+
+Oracle:Draw three cards.

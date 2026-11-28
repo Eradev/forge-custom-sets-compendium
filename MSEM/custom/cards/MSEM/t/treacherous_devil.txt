@@ -1,0 +1,19 @@
+Name:Treacherous Devil
+ManaCost:R
+Types:Creature Devil
+PT:3/2
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigTrial | Static$ True
+SVar:TrigTrial:DB$ StoreSVar | SVar$ TrialPassed | Type$ Number | Expression$ 1 | SubAbility$ DBChooseOpponent
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | SubAbility$ DBTrialPayment
+SVar:DBTrialPayment:DB$ Nothing | UnlessCost$ PayLife<4> | UnlessPayer$ ChosenPlayer | UnlessResolveSubs$ WhenNotPaid | SubAbility$ DBTrialFailed
+SVar:DBTrialFailed:DB$ StoreSVar | SVar$ TrialPassed | Type$ Number | Expression$ 0 | SubAbility$ DBFailedSignal
+SVar:DBFailedSignal:DB$ ImmediateTrigger | Static$ True | Execute$ DBNamedTrialFailed | TriggerDescription$ An opponent failed a trial.
+SVar:DBNamedTrialFailed:DB$ Nothing | Named$ TrialFailed
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ TrialPassed | SVarCompare$ EQ1 | Execute$ TrigGiveControl | TriggerDescription$ When this creature enters, if an opponent passed the trial, that player gains control of it.
+SVar:TrigGiveControl:DB$ GainControl | Defined$ Self | NewController$ Player.Chosen | ConditionCheckSVar$ TrialPassed | ConditionSVarCompare$ EQ1
+
+Oracle:Trial 4 (As you cast this spell, an opponent of your choice may pay 4 life. If they don't, they fail the trial.)\nWhen this creature enters, if an opponent passed the trial, that player gains control of it.
+
+SVar:TrialMarker:Number$1

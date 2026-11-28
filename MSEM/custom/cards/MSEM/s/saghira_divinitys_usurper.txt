@@ -1,0 +1,14 @@
+Name:Saghira, Divinity's Usurper
+ManaCost:2 G G
+Types:Legendary Creature Human Warrior Shaman
+PT:4/4
+
+K:Trample
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDestroy | TriggerDescription$ Whenever NICKNAME attacks, you may pay {1}{G}. If you do, destroy target artifact, enchantment, or creature with flying.
+
+SVar:TrigDestroy:AB$ Destroy | Cost$ 1 G | ValidTgts$ Artifact,Enchantment,Creature.withFlying | TgtPrompt$ Select target artifact, enchantment, or creature with flying
+
+Oracle:Trample\nWhenever Saghira attacks, you may pay {1}{G}. If you do, destroy target artifact, enchantment, or creature with flying.
+
+SVar:HasAttackEffect:TRUE

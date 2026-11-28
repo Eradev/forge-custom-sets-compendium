@@ -1,0 +1,9 @@
+Name:Worldly Lore
+ManaCost:2 G
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.!token+YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigScry | TriggerDescription$ Whenever a nontoken creature you control enters, you may scry 1.
+
+SVar:TrigScry:DB$ Scry | ScryNum$ 1
+
+Oracle:Whenever a nontoken creature you control enters, you may scry 1. (To scry 1, look at the top card of your library. You may put that card on the bottom of your library.)

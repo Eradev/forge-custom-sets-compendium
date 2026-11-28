@@ -1,0 +1,11 @@
+Name:Mindstorm's Eye
+ManaCost:1 U R
+Types:Sorcery
+
+A:SP$ Discard | Defined$ You | Mode$ Hand | SubAbility$ DBDraw | SpellDescription$ Discard your hand, then draw three cards. CARDNAME deals 3 damage to any target.
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 3 | SubAbility$ DBDamage
+SVar:DBDamage:DB$ DealDamage | ValidTgts$ Any | NumDmg$ 3
+
+Oracle:Discard your hand, then draw three cards.\nMindstorm's Eye deals 3 damage to any target.
+
+DeckHas:Ability$Discard

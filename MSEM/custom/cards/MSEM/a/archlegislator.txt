@@ -1,0 +1,16 @@
+Name:Archlegislator
+ManaCost:1 R
+Types:Creature Human Soldier Cleric
+PT:2/1
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigAdjudicate | TriggerDescription$ Whenever this creature attacks, adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+
+SVar:TrigAdjudicate:DB$ Token | TokenScript$ adjudicate | TokenOwner$ You | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature to adjudicate
+
+A:AB$ GainControl | Cost$ 3 R R T Sac<1/Aura> | ValidTgts$ Creature | TgtPrompt$ Select target creature to gain control of | LoseControl$ EOT | Untap$ True | AddKWs$ Haste | SpellDescription$ Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.
+
+Oracle:Whenever this creature attacks, adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)\n{3}{R}{R}, {T}, Sacrifice an Aura: Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.
+
+SVar:HasAttackEffect:TRUE
+DeckHas:Ability$Token|Sacrifice
+DeckHints:Type$Aura

@@ -1,0 +1,12 @@
+Name:Hand of Genesis
+ManaCost:B G U
+Types:Creature Angel
+PT:2/2
+
+K:Flying
+
+T:Mode$ DamageDone | ValidSource$ Card.Self | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigManifest | TriggerDescription$ Whenever this creature deals combat damage to a player, manifest the bottom card of your library.
+
+SVar:TrigManifest:DB$ Manifest | Defined$ BottomOfLibrary | DefinedPlayer$ You
+
+Oracle:Flying\nWhenever this creature deals combat damage to a player, manifest the bottom card of your library. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)

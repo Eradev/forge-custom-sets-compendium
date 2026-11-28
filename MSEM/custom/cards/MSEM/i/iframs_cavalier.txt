@@ -1,0 +1,8 @@
+Name:Ifram's Cavalier
+ManaCost:R
+Types:Creature Human Warrior
+PT:1/1
+
+K:etbCounter:P1P1:2:ValidCard$ Card.Self+!wasCastFromYourHandByYou:This creature enters with two additional +1/+1 counters on it if you didn't cast it from your hand.
+
+Oracle:This creature enters with two additional +1/+1 counters on it if you didn't cast it from your hand.

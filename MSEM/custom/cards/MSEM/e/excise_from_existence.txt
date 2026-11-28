@@ -1,0 +1,13 @@
+Name:Excise from Existence
+ManaCost:3 B B
+Types:Instant
+
+A:SP$ TargetOnly | ValidTgts$ Creature | TgtPrompt$ Select target creature | SubAbility$ DBExileBattlefield | StackDescription$ SpellDescription | SpellDescription$ Exile target creature and all other creatures with the same name as that creature. Search all graveyards, hands, and libraries for any number of cards with the same name as that creature and exile them. Then players shuffle their libraries searched this way.
+
+SVar:DBExileBattlefield:DB$ ChangeZoneAll | Origin$ Battlefield | Destination$ Exile | ChangeType$ TargetedCard.Self,Creature.NotDefinedTargeted+sharesNameWith Targeted | SubAbility$ DBSearch | StackDescription$ None
+
+SVar:DBSearch:DB$ ChangeZone | Origin$ Graveyard,Hand,Library | Destination$ Exile | DefinedPlayer$ Player | Chooser$ You | ChangeType$ TargetedCard.sameName | ChangeNum$ X | Hidden$ True | Shuffle$ True | StackDescription$ None
+
+SVar:X:Count$ValidGraveyard,Hand,Library Card
+
+Oracle:Exile target creature and all other creatures with the same name as that creature. Search all graveyards, hands, and libraries for any number of cards with the same name as that creature and exile them. Then players shuffle their libraries searched this way.

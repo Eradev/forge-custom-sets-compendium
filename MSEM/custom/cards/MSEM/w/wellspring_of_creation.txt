@@ -1,0 +1,14 @@
+Name:Wellspring of Creation
+ManaCost:1 G U
+Types:Creature Spirit
+PT:4/4
+
+R:Event$ Counter | ValidCard$ Card.Self | ValidSA$ Spell | Layer$ CantHappen | Description$ This spell can't be countered.
+
+R:Event$ Moved | ActiveZones$ Battlefield | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | ValidCause$ SpellAbility.OppCtrl | CheckSVar$ SacrificedSelf | SVarCompare$ GE1 | Optional$ True | OptionalDecider$ You | ReplaceWith$ DBReturn | Description$ If a spell or ability an opponent controls causes you to sacrifice this creature, you may put it on the top or bottom of its owner's library instead of putting it into that player's graveyard.
+
+SVar:SacrificedSelf:PlayerCountPropertyYou$SacrificedThisTurn Card.StrictlySelf
+
+SVar:DBReturn:DB$ ChangeZone | Defined$ ReplacedCard | Origin$ Battlefield | Destination$ Library | LibraryPosition$ 0 | DestinationAlternative$ Library | LibraryPositionAlternative$ -1 | AlternativeDecider$ You
+
+Oracle:This spell can't be countered.\nIf a spell or ability an opponent controls causes you to sacrifice this creature, you may put it on the top or bottom of its owner's library instead of putting it into that player's graveyard.

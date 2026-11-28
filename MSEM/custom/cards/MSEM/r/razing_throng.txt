@@ -1,0 +1,22 @@
+Name:Razing Throng
+ManaCost:2 W W
+Types:Creature Human Cleric
+PT:*/*
+
+S:Mode$ Continuous | CharacteristicDefining$ True | SetPower$ X | SetToughness$ X | Description$ This creature's power and toughness are each equal to the number of creatures you control.
+
+SVar:X:Count$Valid Creature.YouCtrl
+
+T:Mode$ ChangesZoneAll | ValidCards$ Card.!token+!copiedSpell | Origin$ Any | Destination$ Exile | TriggerZones$ Battlefield | Execute$ TrigToken | TriggerDescription$ Whenever one or more cards are put into exile from anywhere, create a 1/1 white Cleric creature token.
+
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_cleric
+
+A:AB$ ChangeZone | Cost$ 2 W W | Origin$ Graveyard | Destination$ Exile | Hidden$ True | Mandatory$ True | ChangeType$ Card.nonLand | ChangeTypeDesc$ nonland card | SubAbility$ DBGainLife | SpellDescription$ Exile a nonland card from a graveyard. You gain 3 life.
+
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 3
+
+Oracle:This creature's power and toughness are each equal to the number of creatures you control.\nWhenever one or more cards are put into exile from anywhere, create a 1/1 white Cleric creature token.\n{2}{W}{W}: Exile a nonland card from a graveyard. You gain 3 life.
+
+SVar:BuffedBy:Creature
+SVar:NoZeroToughnessAI:True
+DeckHas:Ability$Token|LifeGain

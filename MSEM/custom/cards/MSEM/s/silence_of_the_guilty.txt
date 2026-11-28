@@ -1,0 +1,7 @@
+Name:Silence of the Guilty
+ManaCost:W B
+Types:Instant
+
+A:SP$ Counter | TargetType$ Spell | ValidTgts$ Card | TgtPrompt$ Select target spell | UnlessCost$ 1 PayLife<3> | SpellDescription$ Counter target spell unless its controller pays {1} and 3 life.
+
+Oracle:Counter target spell unless its controller pays {1} and 3 life.
