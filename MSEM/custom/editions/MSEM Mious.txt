@@ -1,0 +1,278 @@
+[metadata]
+Code=MSEM_MIS
+Name=Mious
+Date=2017-06-08
+Type=Custom
+Booster=10 Common, 3 Uncommon, 1 RareMythic, 1 BasicLand
+
+[cards]
+1 M The Infinite @OrangeSavannah
+2 C Lesser Virtue @Daniel Kamarudin
+3 U Shroudwing Seraph @Daniel Kamarudin
+4 C Zephyr Purifier @Jason Nguyen
+5 C Adverse Reunion @Dallas Williams
+6 M Angelic Destiny @Bayard Wu
+7 U Armorer of the Soul @Alan Lathwell
+8 C Binding Judgment @Thorsten Erdt
+9 U Coercive Cardinal @Nick Grey
+10 R Council of the Immortals @Sam Lamont
+11 C Curator of Cures @Viktoriya Voronko
+12 U Dauntless Qith @Julia Bugay
+13 R Descent of the Cherubim @Jana Schirmer
+14 C Divine Detention @Viktoriya Voronko
+15 U Duchess of Life @Nick Grey
+16 C Dutiful Counselor @Alan Lathwell
+17 R Embodiment of Order @Alexander Nanitchkov
+18 C Eternal Path @Yigit Koroglu
+19 R Final Verdict @OrangeSavannah
+20 C Glimmering Prosecutor @Dallas Williams
+21 U Hopebringer Cherub @Peter Mohrbacher
+22 R In the Face of Divinity @Antonio De Luca
+23 U Inspiring Mantle @C. Bedford
+24 C Ishim of Punishment @Surya Prasetya
+25 C Martyr of the Work @Viktoriya Voronko
+26 U Oppressive Tithes @Yigit Koroglu
+27 C Pierce the Unruly @Viktoriya Voronko
+28 R Pinnacle Seraph @Axel Sauerwald
+29 U Qith Maneuver @Julia Bugay
+30 R Razing Throng @Mackenzie Brewer
+31 C Resounding Relief @Viktoriya Voronko
+32 U Rework the Canvas @Yigit Koroglu
+33 C Sha'Iv Cagemage @Olya Bossak
+34 C Sha'Iv's Emissary @Viktoriya Voronko
+35 U Souls of the Jury @Tatiana Vetrova
+36 R Through New Eyes @Carlos Fabián Villa
+37 C Wandering Devout @Viktoriya Voronko
+38 C Wardwing Seraph @Dallas Williams
+39 C Wayfaring Swindler @Olya Bossak
+40 C Assertive Inaction @Jason Nguyen
+41 U Beckon the Scribes @Christian Dimitrov
+42 U Chaos Tradewinder @Jason Nguyen
+43 M Consecrated Sight @Ari Targownik
+44 C Dissolve @Stephen Stark
+45 C Divine Lockdown @Viktoriya Voronko
+46 R Dreams in Flight @OrangeSavannah
+47 R Eternal Recurrence @Carlos Fabián Villa
+48 C Formed Anew @Stephen Stark
+49 R Gusma's Artisan @Carlos Fabián Villa
+50 C Gusma's Emissary @Jason Nguyen
+51 U Gustscreen Cherub @Jimmy Ling
+52 R Hayda, Worldseeder Archmage @Alan Lathwell
+53 U Inherited Rite @Julia Bugay
+54 C Ishim of Genesis @Bramasta Aji
+55 R Ishim of the Mists @Chase Stone
+56 C Oracle of Edicts @Kanzaki Yufei
+57 C Peel from Reality @Jason Felix
+58 U Ponderance of Transience @Nick Grey
+59 C Potential Beetle @Maria Poliakova
+60 U Proclamation of the Tides @Julia Bugay
+61 U Recombobulate (MSEM) @Yigit Koroglu
+62 C Repel the Unruly @Jason Nguyen
+63 C Scene of Nativity @Zhang Qipeng
+64 C Scrivener of Sha'Iv @Viktoriya Voronko
+65 C Seal of Insights @Jorge Jacinto
+66 U Seraphic Divination @Tatiana Vetrova
+67 R Shaper of the Formless @Carlos Fabián Villa
+68 C Spawn from the Void @Jason Nguyen
+69 U Taker of Tithes @Tatiana Vetrova
+70 C Telling Time @Scott M. Fischer
+71 C Temple Stalker @Stepehen Stark
+72 U Thought Police @Jason Nguyen
+73 R Thoughts Reborn @OrangeSavannah
+74 R Tiller of Potential @OrangeSavannah
+75 R Bahet's Sacrament @OrangeSavannah
+76 C Bane of Identity @Ramsés Meléndez
+77 U Born from the Flock @Viktoriya Voronko
+78 C Crisis of Body @Jason Nguyen
+79 C Dark Night Cleansing @Yigit Koroglu
+80 C Devilish Undoer @Yigit Koroglu
+81 R Di'Ala, Ominous Seraph @Sam Lamont
+82 C Doomstep Giant @Ramsés Meléndez
+83 U Duke of Death @Tatiana Vetrova
+84 C Essence of Thought @Yigit Koroglu
+85 R Eternal Night @Sam Lomont
+86 U Evershedder @Frank Att
+87 R Excise from Existence @Riana Møller
+88 R False Savior @Ihor Pasternak
+89 U Fanatic Revival @Alaiaorax Corvum
+90 C Fatal Edict @Ramsés Meléndez
+91 U Gusma's Darkcycler @Tatiana Vetrova
+92 U Immortal Terror @Benjamin Ee
+93 C Ishim of Devilry @Sean Kyle Manaloto
+94 C Manifest Dead @Ramsés Meléndez
+95 M Mark of Hubris @OrangeSavannah
+96 U Masqued Cleansers @Olya Bossak
+97 U Minstrel of the Bloodied @Sam Hogg
+98 R Mortality Keeper @OrangeSavannah
+99 R Naberas' Wisdom @Piotr Ruszkowski
+100 C Ni'Ama's Emissary @Mika Harju
+101 R Polluted Bonds @Acaciathorn
+102 U Return of the Fallen @Olya Bossak
+103 C Soul Cajoler @Zhang Qipeng
+104 M Spawns of Dementia @Dobromisl
+105 C Steeple Deadeye @Jorge Jacinto
+106 C Test of Fear @Yigit Koroglu
+107 C Thorough Cleansing @Ramsés Meléndez
+108 U Unwavering Questant @David Valdez
+109 C Wake from the Mire @Yigit Koroglu
+110 C Wilting Waif @Viktoriya Voronko
+111 C Admonish the Unruly @Jason Nguyen
+112 C Angeltouched Komodo @Ling Yun
+113 R Archlegislator @Carlos Fabián Villa
+114 C Blazeblade Sergeant @Jason Nguyen
+115 C Chaosphere Ravager @Olya Bossak
+116 U Combatant Conflagration @Alaiaorax Corvum
+117 C Consult the Ashes @Olya Bossak
+118 R Cosmostorm Rider @Dominik Mayer
+119 R Embrace the Id @Carlos Fabián Villa
+120 C Fearless Charger @Jason Nguyen
+121 C Fury Swipes @Jason Nguyen
+122 C Heedless Adversary @Nisat on Tumblr
+123 U Ifram's Cavalier @Alan Lathwell
+124 C Ifram's Emissary @Mika Harju
+125 U Inspired Trialmaker @Tatiana Vetrova
+126 C Ishim of Tempest @Natalie Bernard
+127 R Marzen's Frenzy @Dominik Mayer
+128 C Marzen's Sorrow @Conor Burke
+129 M Planar Conflagration @Atenebris
+130 U Purgator of Storms @Bayard Wu
+131 C Purpose Elemental @Jason Nguyen
+132 R Reckoner of Man @Carlos Fabián Villa
+133 C Righteous Bolt @Thorsten Erdt
+134 U Searing Blasphemy @Melinda Vass
+135 C Sha'Iv's Scout @Alan Lathwell
+136 R Splitflame Phoenix @Pascal Vasile
+137 R Test of Burning Wax @Josu Solano
+138 C Test of Forsaking @Thorsten Erdt
+139 U Treacherous Devil @Tatiana Vetrova
+140 U Tremor Elemental @Linda Treffler
+141 C Unpredictable Bloodshed @Chris Bjors
+142 U Weavetide Militia @Davide Di Donna
+143 U Whim of Ifram @Benjamin Ee
+144 R Zaidha, Seraph of Calamity @Benjamin Ee
+145 U Zealous Enforcers @Lizzy John
+146 U Angelbane Spider @Ameen Naksewee
+147 R Angelcaller @OrangeSavannah
+148 U Angeltouched Dryad @Nick Silva
+149 M Augury Hydra @Svetlin Velinov
+150 C Bahet's Emissary @Mika Harju
+151 R Beastwaker of Gusma @Dominik Mayer
+152 C Branching Antlers @Ben Wootten
+153 C Counsel of Bahet @Alan Lathwell
+154 R Deathless Hunter @Olga Orlova
+155 U Dismantle the Established @Lizzy John
+156 C Dryad of Rippling Leaves @Maria Poliakova
+157 C Enforce the Cycle @Jorge Jacinto
+158 C Ifram's Greenfur @Thorsten Erdt
+159 C Ishim of Oblivion @Carlos Díaz
+160 C Journey to Atonement @Alan Lathwell
+161 R Lifetwist @Dobromisl
+162 U Mindhunter Grizzly @Grafit Studio
+163 U Ophan Titan @Sylwia Smerdel
+164 U Ouroboros Twist @Dobromisl
+165 C Progenitor of Rebirth @Kyoung Hwan Kim
+166 U Rampant Giantling @Jan Ditlev
+167 C Reincarnation Savant @Maria Poliakova
+168 C Return to Ash @Jason Nguyen
+169 R Saghira, Divinity's Usurper @Olga Orlova
+170 C Seasons' Bounty @Lizzy John
+171 U Spearhead Ophan @Bayard Wu
+172 C Strength from Chaos @Maria Poliakova
+173 U Summer's Approach @Melinda Vass
+174 C Thornweald Archer @Bramasta Aji
+175 R Tusked Consumer @Vasilyna Holod
+176 R Verdant Trauma @OrangeSavannah
+177 C War Priest of Bahet @Bramasta Aji
+178 C Weaver of Ifram @Mark Tarrisse
+179 R Wild Gravetender @Sebastian Horoszko
+180 U Worldly Lore @Nick Silva
+181 M Worldsculpt @Dobromisl
+182 U Adversary Ancestor @Chase Stone
+183 M Bahet, God of Destruction @Peter Mohrbacher
+184 C Bahet's Wink @Artem Demura
+185 M Bahum, Penitent @d-torres
+186 R Bahum's Penance @dr-grizscald
+187 M Chiara the Enchantress @Scott Altman
+188 C Chimera Graft @Olya Bossak
+189 R Damnation of Gluttons @Sean Kyle Manaloto
+190 U Death in Reverse @Jamie Romoser
+191 U End of the Road @Sean Kyle Manaloto
+192 C Ethereal Fervor @Artem Demura
+193 U Evoke the Maelstrom @Jason Nguyen
+194 C Fuming Lawmaker @Artem Demura
+195 M Gusma, God of Creation @Peter Mohrbacher
+196 R Hand of Genesis @OrangeSavannah
+197 M Hestia, Doubtful Archon @Jake Probelski
+198 R Holy War @Alexander Nanitchkov
+199 M Ifram, God of Chaos @Peter Mohrbacher
+200 C Instability Elemental @Tianhua Xu
+201 U Lightning Chorus @Edric Yoeliawan
+202 M Marzen, Answer Seeker @ekoputeh
+203 R Mind's Communion @Carlos Fabián Villa
+204 U Mindstorm's Eye @Sam Cullum Santala
+205 U Move with the Tides @Maria Poliakova
+206 M Naberas the Pilgrim @Lin Hsiang
+207 C Nascent Adversary @Kyoung Hwan Kim
+208 M Ni'Ama, God of Adversity @Peter Mohrbacher
+209 R Provoke the Gods @Nisat on Tumblr
+210 U Release from Death @Kyoung Hwan Kim
+211 U Search for Precedent @Jason Nguyen
+212 M Sha'Iv, God of Order @Peter Mohrbacher
+213 C Silence of the Guilty @Artem Demura
+214 R Starlight Seraph @SnowontheRadio
+215 C Strength in Imagining @Ryota Murayama
+216 R Tammil and Sulei, the Guides @OrangeSavannah
+217 C Tides of Chaos @Olya Bossak
+218 R Trifold Chaos @Vasilyna Holod
+219 U Unorthodox Tutelage @Jason Nguyen
+220 R Wellspring of Creation @Carlos Fabián Villa
+221 C Wings of Reckoning @Sean Kyle Manaloto
+222 C Altar of Devotion @Chun Jeff Koh
+223 C Angel's Codex @lucpinky
+224 U Angeltouched Golem @Travis Brady
+225 R Avatar of Being @Markus Neidel
+226 U Chemical Grenade @Pete Reibel
+227 R Divining Lens @Artyom Dorokhin
+228 R Helm of the Devoted @Joel DuQue
+229 U Marzen's Grimoire @Anna (Ganna) Pazyniuk
+230 C Meditant's Halo @Clint Cearley
+231 R Protector of the Innocent @Joel DuQue
+232 U Seraph's Remnant @Koru Xypress
+233 U Shrine to the Shrouded @Alaiaorax Corvum
+234 C Altar of Adversity @Noah Bradley
+235 C Altar of Chaos @Noah Bradley
+236 C Altar of Creation @Peter Mohrbacher
+237 C Altar of Destruction @Noah Bradley
+238 C Altar of Order @Peter Mohrbacher
+239 R Angeltouched Cavern @Vadim Shchepilov
+240 R Angeltouched Crag @Vadim Shchepilov
+241 R Angeltouched Garden @Vadim Shchepilov
+242 R Angeltouched Marsh @Vadim Shchepilov
+243 R Angeltouched Saltflat @Vadim Shchepilov
+244 U Descended Delta @Aldo Katayanagi
+245 U Descended Marsh @Jana Schirmer
+246 U Descended Meadow @John Grello
+247 U Descended Mortuary @Nick Grey
+248 U Descended Towers @Nick Grey
+249 C Unknown Shores @Renaud Perochon
+
+[tokens]
+1 manifest @Bao Pham
+2 morph @David Romero
+3 w_4_4_angel_flying @OrangeSavannah on DeviantArt
+4 w_1_1_angel_flying @RevolverWinds on DeviantArt
+5 adjudicate @Eric Geusz
+6 adjudicate @Eric Geusz
+7 w_1_1_cleric @Yigit Koroglu
+8 u_1_1_elemental @Tianhua Xu
+9 b_1_1_devil @Julie Attanasio
+
+[other]
+10 emblem_marzen_answer_seeker @ekoputeh
+
+[WalkerTypes]
+Bahum
+Chiara
+Hestia
+Marzen
+Naberas
