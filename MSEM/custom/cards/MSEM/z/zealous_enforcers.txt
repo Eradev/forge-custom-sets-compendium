@@ -1,0 +1,18 @@
+Name:Zealous Enforcers
+ManaCost:3 R
+Types:Creature Goblin Soldier
+PT:3/2
+
+T:Mode$ BlockersDeclared | CheckSVar$ X | SVarCompare$ GE2 | TriggerZones$ Battlefield | Execute$ TrigAdjudicate | TriggerDescription$ Whenever two or more creatures an opponent controls block, adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+
+SVar:TrigAdjudicate:DB$ Token | TokenScript$ adjudicate | TokenOwner$ You | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature to adjudicate
+
+SVar:X:Count$Valid Creature.blocking+OppCtrl
+
+S:Mode$ Continuous | Affected$ Creature.enchanted+YouCtrl | AddKeyword$ Menace | Description$ Enchanted creatures you control have menace.
+
+Oracle:Whenever two or more creatures an opponent controls block, adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)\nEnchanted creatures you control have menace.
+
+SVar:PlayMain1:TRUE
+DeckHas:Ability$Token
+DeckHints:Type$Aura

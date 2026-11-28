@@ -1,0 +1,18 @@
+Name:Sha'Iv's Scout
+ManaCost:2 R
+Types:Creature Goblin Warrior
+PT:3/1
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigAdjudicate | TriggerDescription$ When this creature enters, adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+
+SVar:TrigAdjudicate:DB$ Token | TokenScript$ adjudicate | TokenOwner$ You | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature to adjudicate
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Aura.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigCantBlock | TriggerDescription$ Whenever an Aura you control enters, target creature can't block this turn.
+
+SVar:TrigCantBlock:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature that can't block this turn | KW$ HIDDEN CARDNAME can't block. | IsCurse$ True
+
+Oracle:When this creature enters, adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)\nWhenever an Aura you control enters, target creature can't block this turn.
+
+SVar:PlayMain1:TRUE
+DeckHas:Ability$Token
+DeckHints:Type$Aura

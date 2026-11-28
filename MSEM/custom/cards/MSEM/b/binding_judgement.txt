@@ -1,0 +1,10 @@
+Name:Binding Judgment
+ManaCost:W
+Types:Enchantment Aura
+
+K:Enchant:Creature
+SVar:AttachAILogic:Curse
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddKeyword$ CARDNAME can't attack or block alone. | Description$ Enchanted creature can't attack or block alone.
+
+Oracle:Enchant creature\nEnchanted creature can't attack or block alone.

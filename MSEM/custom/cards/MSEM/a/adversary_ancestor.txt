@@ -1,0 +1,18 @@
+Name:Adversary Ancestor
+ManaCost:2 W B
+Types:Creature Spirit Soldier
+PT:2/2
+
+K:Lifelink
+
+T:Mode$ LifeLost | ValidPlayer$ Opponent | TriggerZones$ Battlefield | Execute$ TrigCharm | TriggerDescription$ Whenever an opponent loses life, you may pay ABILITY
+
+SVar:TrigCharm:AB$ Charm | Cost$ 2 | Choices$ DBDiscard,DBPutCounter
+
+SVar:DBDiscard:DB$ Discard | Defined$ TriggeredPlayer | NumCards$ 1 | Mode$ TgtChoose | SpellDescription$ That player discards a card.
+
+SVar:DBPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | SpellDescription$ Put a +1/+1 counter on this creature.
+
+Oracle:Lifelink\nWhenever an opponent loses life, you may pay {2}. If you do, choose one —\n• That player discards a card.\n• Put a +1/+1 counter on this creature.
+
+DeckHas:Ability$Counters|Discard

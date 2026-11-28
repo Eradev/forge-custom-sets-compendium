@@ -1,0 +1,13 @@
+Name:Strength from Chaos
+ManaCost:2 G
+Types:Instant
+
+A:SP$ Scry | ScryNum$ 3 | SubAbility$ DBReveal | SpellDescription$ Scry 3, then reveal the top card of your library. Target creature gains trample and gets +X/+X until end of turn, where X is that card's mana value.
+
+SVar:DBReveal:DB$ PeekAndReveal | NoPeek$ True | RememberRevealed$ True | SubAbility$ DBPump
+SVar:DBPump:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumAtt$ +X | NumDef$ +X | KW$ Trample | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:X:Remembered$CardManaCost
+
+Oracle:Scry 3, then reveal the top card of your library. Target creature gains trample and gets +X/+X until end of turn, where X is that card's mana value.

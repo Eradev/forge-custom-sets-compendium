@@ -1,0 +1,7 @@
+Name:Marzen's Sorrow
+ManaCost:2 R
+Types:Sorcery
+
+A:SP$ Draw | Cost$ 2 R Discard<1/Random> | NumCards$ 3
+
+Oracle:As an additional cost to cast this spell, discard a card at random.\nDraw three cards.

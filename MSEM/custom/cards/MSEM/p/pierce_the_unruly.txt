@@ -1,0 +1,14 @@
+Name:Pierce the Unruly
+ManaCost:W
+Types:Instant
+
+A:SP$ Token | TokenScript$ adjudicate | TokenOwner$ You | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature to adjudicate | SubAbility$ DBPump | SpellDescription$ Adjudicate, then target creature gets +1/+1 until end of turn for each Aura you control. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+
+SVar:DBPump:DB$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature to get +X/+X | NumAtt$ +X | NumDef$ +X
+
+SVar:X:Count$Valid Aura.YouCtrl
+
+Oracle:Adjudicate, then target creature gets +1/+1 until end of turn for each Aura you control. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+
+DeckHas:Ability$Token
+DeckHints:Type$Aura

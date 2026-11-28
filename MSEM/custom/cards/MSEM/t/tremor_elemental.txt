@@ -1,0 +1,14 @@
+Name:Tremor Elemental
+ManaCost:3 R R
+Types:Creature Elemental
+PT:2/5
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDamage | TriggerDescription$ Whenever this creature enters or you draw a card except during your draw step, this creature deals 1 damage to each creature.
+
+T:Mode$ Drawn | ValidCard$ Card.YouCtrl | Phase$ Untap,Upkeep,Main1->Cleanup | TriggerZones$ Battlefield | Execute$ TrigDamage | Secondary$ True | TriggerDescription$ Whenever this creature enters or you draw a card except during your draw step, this creature deals 1 damage to each creature.
+
+T:Mode$ Drawn | ValidCard$ Card.YouCtrl | Phase$ Draw | NotPlayerTurn$ True | TriggerZones$ Battlefield | Execute$ TrigDamage | Secondary$ True | TriggerDescription$ Whenever this creature enters or you draw a card except during your draw step, this creature deals 1 damage to each creature.
+
+SVar:TrigDamage:DB$ DamageAll | NumDmg$ 1 | ValidCards$ Creature | ValidDescription$ each creature.
+
+Oracle:Whenever this creature enters or you draw a card except during your draw step, this creature deals 1 damage to each creature.

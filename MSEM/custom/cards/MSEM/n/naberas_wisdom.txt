@@ -1,0 +1,10 @@
+Name:Naberas' Wisdom
+ManaCost:3 B
+Types:Sorcery
+
+A:SP$ Draw | Defined$ You | NumCards$ X | SubAbility$ DBLoseLife | SpellDescription$ You draw X cards and you lose X life, where X is the number of cards in your graveyard.
+SVar:DBLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ X
+
+SVar:X:Count$ValidGraveyard Card.YouOwn
+
+Oracle:You draw X cards and you lose X life, where X is the number of cards in your graveyard.

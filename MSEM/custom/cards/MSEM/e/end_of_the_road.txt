@@ -1,0 +1,10 @@
+Name:End of the Road
+ManaCost:R W B
+Types:Sorcery
+
+A:SP$ Destroy | ValidTgts$ Creature | TgtPrompt$ Select target creature | SubAbility$ DBDamage | SpellDescription$ Destroy target creature. CARDNAME deals damage equal to that creature's power to that creature's controller or a planeswalker that player controls.
+SVar:DBDamage:DB$ DealDamage | PlayerChoices$ TargetedController | CardChoices$ Planeswalker.ControlledBy TargetedController | ChoicePrompt$ Choose that creature's controller or a planeswalker that player controls | NumDmg$ X
+
+SVar:X:Targeted$CardPower
+
+Oracle:Destroy target creature. End of the Road deals damage equal to that creature's power to that creature's controller or a planeswalker that player controls.

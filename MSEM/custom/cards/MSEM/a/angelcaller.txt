@@ -1,0 +1,8 @@
+Name:Angelcaller
+ManaCost:1 G
+Types:Creature Human Cleric
+PT:2/2
+
+A:AB$ Mana | Cost$ T Reveal<1/Angel> | Produced$ Special EachColorAmong_Revealed | SpellDescription$ For each of that card's colors, add one mana of that color.
+
+Oracle:{T}, Reveal an Angel card from your hand: For each of that card's colors, add one mana of that color.

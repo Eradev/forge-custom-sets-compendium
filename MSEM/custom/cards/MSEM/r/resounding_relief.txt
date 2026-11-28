@@ -1,0 +1,17 @@
+Name:Resounding Relief
+ManaCost:1 W
+Types:Instant
+
+A:SP$ ChooseCard | ChoiceZone$ Graveyard | Choices$ Card.sharesCardTypeWithOther ValidGraveyard Card | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose a card that shares a card type with another card in a graveyard | SubAbility$ DBChooseSecond | SpellDescription$ Purge. (Exile two cards that share a card type from graveyards. If you do, draw a card.)
+SVar:DBChooseSecond:DB$ ChooseCard | ChoiceZone$ Graveyard | Choices$ Card.!IsRemembered+sharesCardTypeWith Remembered | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose another card that shares a card type with the first | SubAbility$ DBExile
+SVar:DBExile:DB$ ChangeZoneAll | Origin$ Graveyard | Destination$ Exile | ChangeType$ Card.IsRemembered | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ GE2 | RememberChanged$ True | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ X | ConditionSVarCompare$ GE2 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True | SubAbility$ DBGainLife
+
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ 3
+
+SVar:X:Count$ValidExile Card.IsRemembered
+
+Oracle:Purge. You gain 3 life. (To purge, exile two cards that share a type from graveyards. If you do, draw a card.)
+
+DeckHas:Ability$LifeGain

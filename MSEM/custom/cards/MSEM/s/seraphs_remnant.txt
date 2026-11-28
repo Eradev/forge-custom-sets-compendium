@@ -1,0 +1,10 @@
+Name:Seraph's Remnant
+ManaCost:1
+Types:Artifact Equipment
+
+S:Mode$ Continuous | AffectedDefined$ Equipped | Affected$ Creature | AddPower$ 2 | Description$ Equipped creature gets +2/+0 and can't block.
+S:Mode$ CantBlock | ValidCard$ Creature.EquippedBy | Secondary$ True | Description$ Equipped creature gets +2/+0 and can't block.
+
+K:Equip:1
+
+Oracle:Equipped creature gets +2/+0 and can't block.\nEquip {1}

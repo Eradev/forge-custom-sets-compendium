@@ -1,0 +1,13 @@
+Name:Scrivener of Sha'Iv
+ManaCost:2 U
+Types:Creature Elf Wizard
+PT:1/3
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ When this creature enters, draw a card and adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+SVar:TrigDraw:DB$ Draw | SubAbility$ DBAdjudicate
+SVar:DBAdjudicate:DB$ Token | TokenScript$ adjudicate | TokenOwner$ You | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature to adjudicate
+
+Oracle:When this creature enters, draw a card and adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+
+DeckHas:Ability$Token
+DeckHints:Type$Aura

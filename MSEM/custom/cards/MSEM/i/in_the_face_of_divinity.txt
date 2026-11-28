@@ -1,0 +1,24 @@
+Name:In the Face of Divinity
+ManaCost:1 W W
+Types:Sorcery
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigTrial | Static$ True
+SVar:TrigTrial:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 0 | SubAbility$ DBChooseOpponent
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | SubAbility$ DBTrialPayment
+SVar:DBTrialPayment:DB$ Nothing | UnlessCost$ PayLife<4> | UnlessPayer$ ChosenPlayer | UnlessResolveSubs$ WhenNotPaid | SubAbility$ DBTrialFailed
+SVar:DBTrialFailed:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 1 | SubAbility$ DBFailedSignal
+SVar:DBFailedSignal:DB$ ImmediateTrigger | Static$ True | Execute$ DBNamedTrialFailed | TriggerDescription$ An opponent failed a trial. | SubAbility$ DBRegisterEffect
+SVar:DBNamedTrialFailed:DB$ Nothing | Named$ TrialFailed
+
+A:SP$ ChangeZone | Origin$ Library | Destination$ Hand | ChangeType$ Angel | ChangeTypeDesc$ Angel | ChangeNum$ 1 | ShuffleNonMandatory$ True | SpellDescription$ Search your library for an Angel card, reveal it, put it into your hand, then shuffle. If the trial was failed, non-Angel, non-God creatures can't attack or block until your next turn.
+
+SVar:DBRegisterEffect:DB$ DelayedTrigger | Mode$ AbilityResolves | ValidSource$ Card.Self | ValidSpellAbility$ Spell | Static$ True | ThisTurn$ True | Execute$ DBEffect
+SVar:DBEffect:DB$ Effect | Name$ In the Face of Divinity's Effect | StaticAbilities$ STNoCombat | Duration$ UntilYourNextTurn
+SVar:STNoCombat:Mode$ CantAttack,CantBlock | ValidCard$ Creature.nonAngel+nonGod | Description$ Non-Angel, non-God creatures can't attack or block.
+
+SVar:TrialFailed:Number$0
+
+Oracle:Trial 4 (As you cast this spell, an opponent of your choice may pay 4 life. If they don't, they fail the trial.)\nSearch your library for an Angel card, reveal it, put it into your hand, then shuffle. If the trial was failed, non-Angel, non-God creatures can't attack or block until your next turn.
+
+SVar:TrialMarker:Number$1
+DeckHints:Type$Angel

@@ -1,0 +1,7 @@
+Name:Eternal Night
+ManaCost:3 B B
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ Creature | AddPower$ -2 | AddToughness$ -1 | Description$ All creatures get -2/-1.
+
+Oracle:All creatures get -2/-1.

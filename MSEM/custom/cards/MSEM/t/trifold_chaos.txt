@@ -1,0 +1,15 @@
+Name:Trifold Chaos
+ManaCost:6 G U R
+Types:Creature Elemental
+PT:9/9
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigErratic | TriggerDescription$ Erratic, erratic, erratic (When this creature dies, reveal the top four cards of your library. Put a creature card revealed this way with mana value less than this creature's mana value onto the battlefield and the rest on the bottom of your library in any order. Repeat this process twice.)
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigErratic | Secondary$ True
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigErratic | Secondary$ True
+
+SVar:TrigErratic:DB$ Dig | DigNum$ 4 | Reveal$ True | ChangeNum$ 1 | ChangeValid$ Creature.cmcLTX | ChangeValidDesc$ creature card with lesser mana value | DestinationZone$ Battlefield
+SVar:X:TriggeredCard$CardManaCost
+
+Oracle:Erratic, erratic, erratic (When this creature dies, reveal the top four cards of your library. Put a creature card revealed this way with mana value less than this creature's mana value onto the battlefield and the rest on the bottom of your library in any order. Repeat this process twice.)
+
+DeckHints:Type$Creature

@@ -1,0 +1,15 @@
+Name:False Savior
+ManaCost:3 B B
+Types:Creature Human Rogue
+PT:2/2
+
+T:Mode$ LifeGained | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDrain | TriggerDescription$ Whenever you gain life, target opponent loses that much life.
+SVar:TrigDrain:DB$ LoseLife | ValidTgts$ Opponent | LifeAmount$ X
+SVar:X:TriggerCount$LifeAmount
+
+A:AB$ FlipCoin | Cost$ T PayLife<3> | WinSubAbility$ DBGainLife | SpellDescription$ Flip a coin. If you win the flip, you gain 6 life.
+SVar:DBGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 6
+
+Oracle:Whenever you gain life, target opponent loses that much life.\n{T}, Pay 3 life: Flip a coin. If you win the flip, you gain 6 life.
+
+DeckHas:Ability$LifeGain

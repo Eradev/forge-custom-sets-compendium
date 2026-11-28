@@ -1,0 +1,18 @@
+Name:Shaper of the Formless
+ManaCost:3 U
+Types:Creature Shapeshifter
+PT:0/0
+
+K:ETBReplacement:Copy:DBCopy:Optional
+
+SVar:DBCopy:DB$ Clone | Choices$ Creature.Other | AddAbilities$ ShaperAbility | AddSVars$ ShaperFaceUp,ShaperDelay,ShaperFaceDown | SpellDescription$ You may have this creature enter as a copy of any creature on the battlefield, except it has "{2}{U}: Target face-down creature becomes a copy of this creature until end of turn. Turn that creature face up. At the beginning of the next cleanup step, turn it face down."
+
+SVar:ShaperAbility:AB$ Clone | Cost$ 2 U | ValidTgts$ Creature.faceDown | TgtPrompt$ Select target face-down creature | Defined$ Self | CloneTarget$ Targeted | Duration$ UntilEndOfTurn | SubAbility$ ShaperFaceUp | StackDescription$ SpellDescription | SpellDescription$ Target face-down creature becomes a copy of this creature until end of turn. Turn that creature face up. At the beginning of the next cleanup step, turn it face down.
+
+SVar:ShaperFaceUp:DB$ SetState | Defined$ ParentTarget | Mode$ TurnFaceUp | SubAbility$ ShaperDelay
+
+SVar:ShaperDelay:DB$ DelayedTrigger | Mode$ Phase | Phase$ Cleanup | RememberObjects$ Targeted | Execute$ ShaperFaceDown | TriggerDescription$ At the beginning of the next cleanup step, turn that creature face down.
+
+SVar:ShaperFaceDown:DB$ SetState | Defined$ DelayTriggerRememberedLKI | Mode$ TurnFaceDown
+
+Oracle:You may have this creature enter as a copy of any creature on the battlefield, except it has "{2}{U}: Target face-down creature becomes a copy of this creature until end of turn. Turn that creature face up. At the beginning of the next cleanup step, turn it face down."

@@ -1,0 +1,23 @@
+Name:Bahum, Penitent
+ManaCost:1 B G
+Types:Legendary Planeswalker Bahum
+Loyalty:3
+
+A:AB$ Discard | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Defined$ You | Mode$ TgtChoose | NumCards$ 1 | RememberDiscarded$ True | SubAbility$ DBGainLife | SpellDescription$ Discard a card. If you do, up to one target player gains 5 life.
+SVar:DBGainLife:DB$ GainLife | ValidTgts$ Player | TargetMin$ 0 | TargetMax$ 1 | LifeAmount$ 5 | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ GE1 | SubAbility$ DBCleanup
+
+A:AB$ Discard | Cost$ SubCounter<3/LOYALTY> | Planeswalker$ True | Defined$ You | Mode$ TgtChoose | NumCards$ 1 | RememberDiscarded$ True | SubAbility$ DBDraw | SpellDescription$ Discard a card. You draw X cards and you lose X life, where X is that card's mana value.
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ X | SubAbility$ DBLoseLife
+SVar:DBLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ X | SubAbility$ DBCleanup
+
+A:AB$ ChangeZoneAll | Cost$ SubCounter<7/LOYALTY> | Planeswalker$ True | Ultimate$ True | Origin$ Hand | Destination$ Exile | ChangeType$ Card.YouOwn | RememberChanged$ True | SubAbility$ DBGraveToHand | SpellDescription$ Exile your hand, then put all cards from your graveyard into your hand and all cards exiled this way into your graveyard.
+SVar:DBGraveToHand:DB$ ChangeZoneAll | Origin$ Graveyard | Destination$ Hand | ChangeType$ Card.YouOwn | SubAbility$ DBExileToGrave
+SVar:DBExileToGrave:DB$ ChangeZoneAll | Origin$ Exile | Destination$ Graveyard | ChangeType$ Card.IsRemembered+YouOwn | SubAbility$ DBCleanup
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:X:Remembered$CardManaCost
+
+Oracle:[+1]: Discard a card. If you do, up to one target player gains 5 life.\n[-3]: Discard a card. You draw X cards and you lose X life, where X is that card's mana value.\n[-7]: Exile your hand, then put all cards from your graveyard into your hand and all cards exiled this way into your graveyard.
+
+DeckHas:Ability$Discard|Graveyard

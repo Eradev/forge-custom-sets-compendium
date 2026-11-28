@@ -1,0 +1,18 @@
+Name:Ishim of Tempest
+ManaCost:2 R
+Types:Creature Angel
+PT:2/1
+
+K:Flying
+
+K:Morph:3 G U
+
+T:Mode$ TurnFaceUp | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ When this creature is turned face up, put a +1/+1 counter on it, draw three cards, then discard two cards.
+
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBDraw
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 3 | SubAbility$ DBDiscard
+SVar:DBDiscard:DB$ Discard | Defined$ You | NumCards$ 2 | Mode$ TgtChoose
+
+Oracle:Flying\nMorph {3}{G}{U} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, put a +1/+1 counter on it, draw three cards, then discard two cards.
+
+DeckHas:Ability$Counters|Discard

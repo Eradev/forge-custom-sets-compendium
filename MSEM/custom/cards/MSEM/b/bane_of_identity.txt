@@ -1,0 +1,7 @@
+Name:Bane of Identity
+ManaCost:3 B
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Creature.faceUp | SpellDescription$ Destroy target face-up creature.
+
+Oracle:Destroy target face-up creature.

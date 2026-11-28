@@ -1,0 +1,16 @@
+Name:Through New Eyes
+ManaCost:3 W
+Types:Sorcery
+
+A:SP$ ChangeZone | ValidTgts$ Creature.YouCtrl,Planeswalker.YouCtrl | TargetMin$ 0 | TargetMax$ X | TgtPrompt$ Select any number of target creatures and/or planeswalkers you control | Origin$ Battlefield | Destination$ Exile | RememberChanged$ True | SubAbility$ DBGainLife | SpellDescription$ Exile any number of target creatures and/or planeswalkers you control. You gain 1 life for each card exiled this way, then return them to the battlefield under your control.
+
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ Y | SubAbility$ DBReturn
+
+SVar:DBReturn:DB$ ChangeZone | Defined$ Remembered | Origin$ Exile | Destination$ Battlefield | GainControl$ True | SubAbility$ DBCleanup
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:X:Count$Valid Creature.YouCtrl,Planeswalker.YouCtrl
+SVar:Y:Count$ValidExile Card.IsRemembered+!token
+
+Oracle:Exile any number of target creatures and/or planeswalkers you control. You gain 1 life for each card exiled this way, then return them to the battlefield under your control.

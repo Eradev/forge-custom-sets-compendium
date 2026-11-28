@@ -1,0 +1,24 @@
+Name:Bahet's Sacrament
+ManaCost:X B B
+Types:Sorcery
+
+A:SP$ Scry | ScryNum$ X | SubAbility$ DBRepeatPurge | SpellDescription$ Scry X, then purge X times. You lose X life. (To purge, exile two cards that share a type from graveyards. If you do, draw a card.)
+
+SVar:DBRepeatPurge:DB$ Repeat | MaxRepeat$ X | RepeatSubAbility$ DBChooseFirst | SubAbility$ DBLoseLife | StackDescription$ None
+
+SVar:DBChooseFirst:DB$ ChooseCard | ChoiceZone$ Graveyard | Choices$ Card.sharesCardTypeWithOther ValidGraveyard Card | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose a card that shares a card type with another card in a graveyard | SubAbility$ DBChooseSecond
+
+SVar:DBChooseSecond:DB$ ChooseCard | ChoiceZone$ Graveyard | Choices$ Card.!IsRemembered+sharesCardTypeWith Remembered | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose another card that shares a card type with the first | SubAbility$ DBExile
+
+SVar:DBExile:DB$ ChangeZoneAll | Origin$ Graveyard | Destination$ Exile | ChangeType$ Card.IsRemembered | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ GE2 | RememberChanged$ True | SubAbility$ DBDraw
+
+SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ Y | ConditionSVarCompare$ GE2 | SubAbility$ DBCleanup
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+
+SVar:DBLoseLife:DB$ LoseLife | Defined$ You | LifeAmount$ X
+
+SVar:X:Count$xPaid
+SVar:Y:Count$ValidExile Card.IsRemembered
+
+Oracle:Scry X, then purge X times. You lose X life. (To purge, exile two cards that share a type from graveyards. If you do, draw a card.)

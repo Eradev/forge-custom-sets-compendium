@@ -1,0 +1,8 @@
+Name:Beastwaker of Gusma
+ManaCost:G
+Types:Creature Dryad Druid
+PT:1/1
+
+A:AB$ Animate | Cost$ 2 G | ValidTgts$ Creature.faceDown+YouCtrl | TgtPrompt$ Select target face-down creature you control | Power$ 5 | Toughness$ 5 | Types$ Beast | RemoveCreatureTypes$ True | SpellDescription$ Target face-down creature you control becomes a Beast with base power and toughness 5/5 until end of turn.
+
+Oracle:{2}{G}: Target face-down creature you control becomes a Beast with base power and toughness 5/5 until end of turn.

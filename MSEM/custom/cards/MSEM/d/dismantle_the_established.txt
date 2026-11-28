@@ -1,0 +1,11 @@
+Name:Dismantle the Established
+ManaCost:2 G
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ Permanent.nonCreature+nonLand+Other | AddTrigger$ UpkeepCostTrigger | Description$ Other noncreature, nonland permanents have "At the beginning of your upkeep, pay {1} or sacrifice this permanent."
+
+SVar:UpkeepCostTrigger:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigUpkeep | TriggerDescription$ At the beginning of your upkeep, sacrifice this permanent unless you pay {1}.
+
+SVar:TrigUpkeep:DB$ Sacrifice | UnlessCost$ 1 | UnlessPayer$ You
+
+Oracle:Other noncreature, nonland permanents have "At the beginning of your upkeep, pay {1} or sacrifice this permanent."

@@ -1,0 +1,14 @@
+Name:Tiller of Potential
+ManaCost:5 U U
+Types:Creature Angel
+PT:4/6
+
+K:Flying
+
+K:Prowess
+
+T:Mode$ SpellCast | ValidCard$ Card.nonCreature | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigDig | TriggerDescription$ Whenever you cast a noncreature spell, reveal the bottom two cards of your library. Target opponent chooses one of them. Put that card on the bottom of your library and the rest into your hand.
+
+SVar:TrigDig:DB$ Dig | Defined$ You | ValidTgts$ Opponent | TgtPrompt$ Select target opponent to choose a card | DigNum$ 2 | FromBottom$ True | Reveal$ True | ChangeNum$ 1 | Choser$ Targeted | DestinationZone$ Library | LibraryPosition$ -1 | DestinationZone2$ Hand | StackDescription$ None
+
+Oracle:Flying, prowess\nWhenever you cast a noncreature spell, reveal the bottom two cards of your library. Target opponent chooses one of them. Put that card on the bottom of your library and the rest into your hand.

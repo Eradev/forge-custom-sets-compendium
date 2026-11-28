@@ -1,0 +1,24 @@
+Name:Marzen, Answer Seeker
+ManaCost:1 U R
+Types:Legendary Planeswalker Marzen
+Loyalty:3
+
+A:AB$ Discard | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Defined$ You | NumCards$ 1 | Mode$ TgtChoose | RememberDiscarded$ True | SubAbility$ DBDraw | SpellDescription$ Discard a card. If you do, draw a card.
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ DiscardedAmount | SubAbility$ DBCleanup
+SVar:DiscardedAmount:Remembered$Amount
+
+A:AB$ DealDamage | Cost$ SubCounter<X/LOYALTY> | Planeswalker$ True | Defined$ You | NumDmg$ X | SubAbility$ DBExile | SpellDescription$ NICKNAME deals X damage to you. Exile the top X cards of your library. Until your next turn, you may play those cards.
+SVar:DBExile:DB$ Dig | Defined$ You | DigNum$ X | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBPlayEffect
+SVar:DBPlayEffect:DB$ Effect | StaticAbilities$ STPlay | RememberObjects$ Remembered | Duration$ UntilYourNextTurn | ForgetOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | Affected$ Card.IsRemembered | AffectedZone$ Exile | MayPlay$ True | Description$ Until your next turn, you may play those cards.
+SVar:X:Count$xPaid
+
+A:AB$ Effect | Cost$ SubCounter<7/LOYALTY> | Planeswalker$ True | Ultimate$ True | Name$ Emblem — Marzen, Answer Seeker | Image$ emblem_marzen_answer_seeker | ReplacementEffects$ RepDraw | Duration$ Permanent | AILogic$ Always | SpellDescription$ You get an emblem with "If you would draw a card, you may draw three cards instead."
+SVar:RepDraw:Event$ Draw | ActiveZones$ Command | ValidPlayer$ You | Optional$ True | ReplaceWith$ DBDrawThree | Description$ If you would draw a card, you may draw three cards instead.
+SVar:DBDrawThree:DB$ Draw | Defined$ You | NumCards$ 3
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:[+1]: Discard a card. If you do, draw a card.\n[-X]: Marzen deals X damage to you. Exile the top X cards of your library. Until your next turn, you may play those cards.\n[-7]: You get an emblem with "If you would draw a card, you may draw three cards instead."
+
+DeckHas:Ability$Discard

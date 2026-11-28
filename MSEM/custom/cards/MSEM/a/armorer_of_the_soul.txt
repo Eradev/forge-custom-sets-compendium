@@ -1,0 +1,15 @@
+Name:Armorer of the Soul
+ManaCost:2 W
+Types:Creature Elf Cleric
+PT:2/3
+
+T:Mode$ AttackersDeclared | AttackingPlayer$ Player.Opponent | ValidAttackers$ Creature | ValidAttackersAmount$ GE2 | TriggerZones$ Battlefield | Execute$ TrigAdjudicate | TriggerDescription$ Whenever two or more creatures an opponent controls attack, adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+
+SVar:TrigAdjudicate:DB$ Token | TokenScript$ adjudicate | TokenOwner$ You | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature to adjudicate
+
+S:Mode$ Continuous | Affected$ Creature.enchanted+YouCtrl | AddToughness$ 2 | Description$ Enchanted creatures you control get +0/+2.
+
+Oracle:Whenever two or more creatures an opponent controls attack, adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)\nEnchanted creatures you control get +0/+2.
+
+DeckHas:Ability$Token|Sacrifice
+DeckHints:Type$Aura

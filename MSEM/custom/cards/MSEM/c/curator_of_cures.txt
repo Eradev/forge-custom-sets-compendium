@@ -1,0 +1,17 @@
+Name:Curator of Cures
+ManaCost:W
+Types:Creature Human Cleric
+PT:1/2
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigAdjudicate | TriggerDescription$ When this creature enters, adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+
+SVar:TrigAdjudicate:DB$ Token | TokenScript$ adjudicate | TokenOwner$ You | AttachedTo$ Targeted | ValidTgts$ Creature | TgtPrompt$ Select target creature to adjudicate
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Aura.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigGainLife | TriggerDescription$ Whenever an Aura you control enters, you gain 1 life.
+
+SVar:TrigGainLife:DB$ GainLife | Defined$ You | LifeAmount$ 1
+
+Oracle:When this creature enters, adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)\nWhenever an Aura you control enters, you gain 1 life.
+
+DeckHas:Ability$Token|LifeGain
+DeckHints:Type$Aura

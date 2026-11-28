@@ -1,0 +1,8 @@
+Name:Consecrated Sight
+ManaCost:4 U U
+Types:Enchantment
+
+T:Mode$ Drawn | ValidCard$ Card.OppOwn | TriggerZones$ Battlefield | Execute$ TrigDraw | TriggerDescription$ Whenever an opponent draws a card, you may draw a card.
+SVar:TrigDraw:DB$ Draw | OptionalDecider$ You
+
+Oracle:Whenever an opponent draws a card, you may draw a card.

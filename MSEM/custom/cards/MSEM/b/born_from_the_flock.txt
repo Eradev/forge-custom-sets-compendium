@@ -1,0 +1,13 @@
+Name:Born from the Flock
+ManaCost:2 B
+Types:Sorcery
+
+A:SP$ Charm | Choices$ DBManifest,DBReturn
+
+SVar:DBManifest:DB$ TargetOnly | ValidTgts$ Creature.YouOwn | TgtZone$ Graveyard | TgtPrompt$ Select target creature card in your graveyard to manifest | SubAbility$ DBDoManifest | SpellDescription$ Manifest target creature card from your graveyard. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)
+
+SVar:DBDoManifest:DB$ Manifest | Defined$ ParentTarget | DefinedPlayer$ You | StackDescription$ None
+
+SVar:DBReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Creature.YouOwn | TgtZone$ Graveyard | TargetMin$ 0 | TargetMax$ 2 | TgtPrompt$ Select up to two target creature cards in your graveyard | SpellDescription$ Return up to two target creature cards from your graveyard to your hand.
+
+Oracle:Choose one —\n• Manifest target creature card from your graveyard. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)\n• Return up to two target creature cards from your graveyard to your hand.

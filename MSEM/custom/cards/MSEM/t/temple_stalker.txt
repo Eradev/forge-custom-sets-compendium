@@ -1,0 +1,8 @@
+Name:Temple Stalker
+ManaCost:2 U
+Types:Creature Human Rogue
+PT:2/2
+
+K:Protection:Cleric
+
+Oracle:Protection from Clerics (This creature can't be blocked, targeted or dealt damage by Clerics.)

@@ -1,0 +1,15 @@
+Name:Souls of the Jury
+ManaCost:2 W
+Types:Creature Spirit
+PT:1/1
+
+K:Flying
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigToken | TriggerDescription$ Whenever this creature enters or an opponent fails a trial, create a 1/1 white Cleric creature token.
+T:Mode$ AbilityResolves | ValidSpellAbility$ Triggered.NamedAbilityTrialFailed | ValidSource$ Card.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigToken | Secondary$ True | TriggerDescription$ Whenever this creature enters or an opponent fails a trial, create a 1/1 white Cleric creature token.
+
+SVar:TrigToken:DB$ Token | TokenScript$ w_1_1_cleric
+
+Oracle:Flying\nWhenever this creature enters or an opponent fails a trial, create a 1/1 white Cleric creature token.
+
+DeckHas:Ability$Token

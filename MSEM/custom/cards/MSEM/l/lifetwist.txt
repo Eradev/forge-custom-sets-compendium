@@ -1,0 +1,9 @@
+Name:Lifetwist
+ManaCost:1 G
+Types:Instant
+
+A:SP$ ChangeZone | Cost$ 1 G Discard<1/Card> | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Card.YouOwn | TgtPrompt$ Select target card in your graveyard | SpellDescription$ Return target card from your graveyard to your hand.
+
+Oracle:As an additional cost to cast this spell, discard a card.\nReturn target card from your graveyard to your hand.
+
+DeckHas:Ability$Graveyard

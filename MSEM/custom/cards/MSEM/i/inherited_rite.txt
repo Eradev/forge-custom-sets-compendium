@@ -1,0 +1,15 @@
+Name:Inherited Rite
+ManaCost:5 U
+Types:Sorcery
+
+A:SP$ Effect | RememberObjects$ Self | ExileOnMoved$ Stack | ReplacementEffects$ RepTapped | SubAbility$ DBRepeat | StackDescription$ SpellDescription | SpellDescription$ Manifest the bottom X cards of your library tapped, where X is the number of instant and sorcery cards in your graveyard.
+
+SVar:DBRepeat:DB$ Repeat | MaxRepeat$ X | RepeatSubAbility$ DBManifest
+SVar:DBManifest:DB$ Manifest | Defined$ BottomOfLibrary
+
+SVar:RepTapped:Event$ Moved | Origin$ Library | Destination$ Battlefield | ValidCard$ Creature.faceDown+YouCtrl | ReplaceWith$ ETBTapped | ReplacementResult$ Updated | Description$ Creatures manifested this way enter tapped.
+SVar:ETBTapped:DB$ Tap | ETB$ True | Defined$ ReplacedCard
+
+SVar:X:Count$ValidGraveyard Instant.YouOwn,Sorcery.YouOwn
+
+Oracle:Manifest the bottom X cards of your library tapped, where X is the number of instant and sorcery cards in your graveyard. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)

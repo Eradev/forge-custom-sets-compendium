@@ -1,0 +1,9 @@
+Name:Righteous Bolt
+ManaCost:1 R
+Types:Instant
+
+S:Mode$ AlternativeCost | ValidSA$ Spell.Self | EffectZone$ All | Cost$ Sac<1/Enchantment.Aura> | IsPresent$ Mountain.YouCtrl | Description$ If you control a Mountain, you may sacrifice an Aura rather than pay this spell's mana cost.
+
+A:SP$ DealDamage | ValidTgts$ Any | NumDmg$ 2 | SpellDescription$ CARDNAME deals 2 damage to any target.
+
+Oracle:If you control a Mountain, you may sacrifice an Aura rather than pay this spell's mana cost.\nRighteous Bolt deals 2 damage to any target.

@@ -1,0 +1,13 @@
+Name:Mortality Keeper
+ManaCost:1 B
+Types:Creature Devil Advisor
+PT:2/1
+
+S:Mode$ CantGainLife | ValidPlayer$ Player | Description$ Players can't gain life.
+
+T:Mode$ Phase | Phase$ Upkeep | ValidPlayer$ Player | TriggerZones$ Battlefield | CheckSVar$ X | SVarCompare$ LE10 | Execute$ TrigLoseLife | TriggerDescription$ At the beginning of each player's upkeep, if that player has 10 or less life, they lose 1 life.
+SVar:TrigLoseLife:DB$ LoseLife | Defined$ TriggeredPlayer | LifeAmount$ 1
+
+SVar:X:TriggeredPlayer$LifeTotal
+
+Oracle:Players can't gain life.\nAt the beginning of each player's upkeep, if that player has 10 or less life, they lose 1 life.

@@ -1,0 +1,10 @@
+Name:Ponderance of Transience
+ManaCost:1 U
+Types:Enchantment
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Any | ValidCard$ Creature.YouCtrl | TriggerZones$ Battlefield | OptionalDecider$ You | Execute$ TrigScry | TriggerDescription$ Whenever a creature you control leaves the battlefield, you may pay {1}. If you do, scry 1.
+SVar:TrigScry:AB$ Scry | Cost$ 1 | ScryNum$ 1
+
+A:AB$ Draw | Cost$ 3 U Return<1/Creature> | NumCards$ 1 | SpellDescription$ Draw a card.
+
+Oracle:Whenever a creature you control leaves the battlefield, you may pay {1}. If you do, scry 1.\n{3}{U}, Return a creature you control to its owner's hand: Draw a card.

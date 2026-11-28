@@ -1,0 +1,14 @@
+Name:Beckon the Scribes
+ManaCost:2 U
+Types:Instant
+
+A:SP$ Draw | SubAbility$ DBToken | SpellDescription$ Draw a card, then create a 1/1 blue Elemental creature token. If you drew three or more cards this turn, create three of those tokens instead.
+
+SVar:DBToken:DB$ Token | TokenScript$ u_1_1_elemental | TokenAmount$ X
+
+SVar:X:Count$Compare Y GE3.3.1
+SVar:Y:Count$YouDrewThisTurn
+
+Oracle:Draw a card, then create a 1/1 blue Elemental creature token. If you drew three or more cards this turn, create three of those tokens instead.
+
+DeckHas:Ability$Token

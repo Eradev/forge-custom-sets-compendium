@@ -1,0 +1,17 @@
+Name:Tides of Chaos
+ManaCost:2 U R
+Types:Instant
+
+A:SP$ TargetOnly | ValidTgts$ Creature.YouCtrl | TgtPrompt$ Select target creature you control | SubAbility$ DBTarget | StackDescription$ None | SpellDescription$ Choose target creature you control and target creature you don't control. Flip a coin. If the coin comes up heads, put one of those creatures on top of its owner's library. Otherwise, put both of them on top of their owners' libraries.
+
+SVar:DBTarget:DB$ TargetOnly | ValidTgts$ Creature.YouDontCtrl | TgtPrompt$ Select target creature you don't control | SubAbility$ DBFlip | StackDescription$ None
+
+SVar:DBFlip:DB$ FlipCoin | Flipper$ You | NoCall$ True | HeadsSubAbility$ DBChoose | TailsSubAbility$ DBMoveBoth
+
+SVar:DBChoose:DB$ ChooseCard | Defined$ You | DefinedCards$ TargetedCard | Amount$ 1 | Mandatory$ True | ChoiceTitle$ Choose a creature to put on top of its owner's library | SubAbility$ DBMoveChosen
+SVar:DBMoveChosen:DB$ ChangeZone | Defined$ ChosenCard | Origin$ Battlefield | Destination$ Library | LibraryPosition$ 0 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
+
+SVar:DBMoveBoth:DB$ ChangeZone | Defined$ TargetedCard | Origin$ Battlefield | Destination$ Library | LibraryPosition$ 0
+
+Oracle:Choose target creature you control and target creature you don't control. Flip a coin. If the coin comes up heads, put one of those creatures on top of its owner's library. Otherwise, put both of them on top of their owners' libraries.

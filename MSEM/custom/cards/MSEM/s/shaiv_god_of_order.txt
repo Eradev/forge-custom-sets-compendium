@@ -1,0 +1,19 @@
+Name:Sha'Iv, God of Order
+ManaCost:U R W
+Types:Legendary Enchantment
+PT:5/5
+
+A:AB$ Animate | Cost$ U R W Discard<1/Card.namedSha'Iv, God of Order> | Defined$ Self | Types$ Creature,God | Keywords$ Indestructible | Duration$ Permanent | SpellDescription$ NICKNAME gains indestructible and becomes a God creature in addition to its other types.
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigUntap | TriggerDescription$ Whenever NICKNAME enters or attacks, choose target creature an opponent controls. Untap it, then tap each other creature that player controls. They don't untap during their controller's next untap step.
+T:Mode$ Attacks | ValidCard$ Card.Self | Execute$ TrigUntap | Secondary$ True | TriggerDescription$ Whenever NICKNAME enters or attacks, choose target creature an opponent controls. Untap it, then tap each other creature that player controls. They don't untap during their controller's next untap step.
+
+SVar:TrigUntap:DB$ Untap | ValidTgts$ Creature.OppCtrl | TgtPrompt$ Select target creature an opponent controls | SubAbility$ DBTapAll
+SVar:DBTapAll:DB$ TapAll | Defined$ TargetedController | ValidCards$ Creature.NotDefinedTargeted | RememberTapped$ True | SubAbility$ DBFreeze
+SVar:DBFreeze:DB$ PumpAll | ValidCards$ Card.IsRemembered | KW$ HIDDEN This card doesn't untap during your next untap step. | Duration$ Permanent | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+SVar:HasAttackEffect:TRUE
+DeckHints:Name$Sha'Iv, God of Order
+
+Oracle:{U}{R}{W}, Discard a card named Sha'Iv, God of Order: Sha'Iv gains indestructible and becomes a God creature in addition to its other types.\nWhenever Sha'Iv enters or attacks, choose target creature an opponent controls. Untap it, then tap each other creature that player controls. They don't untap during their controller's next untap step.

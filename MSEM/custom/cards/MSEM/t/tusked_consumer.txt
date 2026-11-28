@@ -1,0 +1,28 @@
+Name:Tusked Consumer
+ManaCost:4 G G
+Types:Creature Beast
+PT:6/6
+
+K:Trample
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self,Creature.powerGE4+Other+YouCtrl | TriggerZones$ Battlefield | Execute$ TrigPurge | TriggerDescription$ Whenever this creature or another creature you control with power 4 or greater enters, purge. (Exile two cards that share a type from graveyards. If you do, draw a card.)
+
+SVar:TrigPurge:DB$ ChooseCard | ChoiceZone$ Graveyard | Choices$ Card.sharesCardTypeWithOther ValidGraveyard Card | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose a card that shares a card type with another card in a graveyard | SubAbility$ DBChooseSecond
+
+SVar:DBChooseSecond:DB$ ChooseCard | ChoiceZone$ Graveyard | Choices$ Card.!IsRemembered+sharesCardTypeWith Remembered | Mandatory$ True | RememberChosen$ True | ChoiceTitle$ Choose another card that shares a card type with the first | SubAbility$ DBExile
+
+SVar:DBExile:DB$ ChangeZoneAll | Origin$ Graveyard | Destination$ Exile | ChangeType$ Card.IsRemembered | ConditionDefined$ Remembered | ConditionPresent$ Card | ConditionCompare$ GE2 | RememberChanged$ True | SubAbility$ DBDraw
+
+SVar:DBDraw:DB$ Draw | ConditionCheckSVar$ X | ConditionSVarCompare$ GE2 | SubAbility$ DBCleanup
+
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True | ClearChosenCard$ True
+
+SVar:X:Count$ValidExile Card.IsRemembered
+
+T:Mode$ ChangesZoneAll | ValidCards$ Card.!token+!copiedSpell | Origin$ Any | Destination$ Exile | TriggerZones$ Battlefield | Execute$ TrigGainLife | TriggerDescription$ Whenever one or more cards are put into exile from anywhere, you gain 1 life.
+
+SVar:TrigGainLife:DB$ GainLife | LifeAmount$ 1
+
+Oracle:Trample\nWhenever this creature or another creature you control with power 4 or greater enters, purge. (Exile two cards that share a type from graveyards. If you do, draw a card.)\nWhenever one or more cards are put into exile from anywhere, you gain 1 life.
+
+DeckHas:Ability$LifeGain

@@ -1,0 +1,15 @@
+Name:Divining Lens
+ManaCost:2
+Types:Artifact
+
+S:Mode$ Continuous | Affected$ Card.TopLibrary+YouCtrl,Permanent.faceDown+YouDontCtrl | AffectedZone$ Library,Battlefield | MayLookAt$ You | Description$ You may look at the top card of your library and face-down permanents you don't control.
+
+A:AB$ Dig | Cost$ T | Defined$ You | DigNum$ 1 | ChangeNum$ All | DestinationZone$ Exile | RememberChanged$ True | SubAbility$ DBEffect | SpellDescription$ Exile the top card of your library. If it's an Angel card or a card with morph, you may play that card this turn.
+
+SVar:DBEffect:DB$ Effect | RememberObjects$ ValidExile Angel.IsRemembered,Card.IsRemembered+withMorph,Card.IsRemembered+withMegamorph | StaticAbilities$ STPlay | ForgetOnMoved$ Exile | SubAbility$ DBCleanup
+SVar:STPlay:Mode$ Continuous | Affected$ Card.IsRemembered | AffectedZone$ Exile | MayPlay$ True | Description$ You may play the exiled card this turn.
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+DeckHints:Type$Angel & Keyword$Morph|Megamorph
+
+Oracle:You may look at the top card of your library and face-down permanents you don't control.\n{T}: Exile the top card of your library. If it's an Angel card or a card with morph, you may play that card this turn.

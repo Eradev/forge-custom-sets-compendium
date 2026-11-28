@@ -1,0 +1,26 @@
+Name:Return of the Fallen
+ManaCost:3 B
+Types:Sorcery
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigTrial | Static$ True
+SVar:TrigTrial:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 0 | SubAbility$ DBChooseOpponent
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | SubAbility$ DBTrialPayment
+SVar:DBTrialPayment:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 1 | UnlessCost$ PayLife<4> | UnlessPayer$ ChosenPlayer | AILifeThreshold$ 12 | SubAbility$ DBTrialOutcome
+SVar:DBTrialOutcome:DB$ Branch | BranchConditionSVar$ TrialFailed | BranchConditionSVarCompare$ EQ1 | TrueSubAbility$ DBFailedSignal | FalseSubAbility$ DBRegisterSacrifice
+SVar:DBFailedSignal:DB$ ImmediateTrigger | Static$ True | Execute$ DBNamedTrialFailed | TriggerDescription$ An opponent failed a trial.
+SVar:DBNamedTrialFailed:DB$ Nothing | Named$ TrialFailed
+
+SVar:DBRegisterSacrifice:DB$ DelayedTrigger | Mode$ AbilityResolves | ValidSource$ Card.Self | ValidSpellAbility$ Spell | Static$ True | ThisTurn$ True | Execute$ DBRegisterEOT
+SVar:DBRegisterEOT:DB$ DelayedTrigger | Mode$ Phase | Phase$ End of Turn | RememberObjects$ Remembered | Execute$ DBSacrifice | SubAbility$ DBCleanup | TriggerDescription$ Sacrifice the creature returned with Return of the Fallen.
+SVar:DBSacrifice:DB$ SacrificeAll | Defined$ DelayTriggerRememberedLKI | Controller$ You
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+A:SP$ ChangeZone | Origin$ Graveyard | Destination$ Battlefield | GainControl$ True | ValidTgts$ Creature | TgtPrompt$ Select target creature card in a graveyard | RememberChanged$ True | SubAbility$ DBHaste | SpellDescription$ Put target creature card from a graveyard onto the battlefield under your control. That creature gains haste. Sacrifice it at the beginning of the next end step unless the trial was failed.
+SVar:DBHaste:DB$ Animate | Defined$ Remembered | Keywords$ Haste | Duration$ Permanent
+
+SVar:TrialFailed:Number$0
+
+Oracle:Trial 4 (As you cast this spell, an opponent of your choice may pay 4 life. If they don't, they fail the trial.)\nPut target creature card from a graveyard onto the battlefield under your control. That creature gains haste. Sacrifice it at the beginning of the next end step unless the trial was failed.
+
+SVar:TrialMarker:Number$1
+DeckHas:Ability$Graveyard|Sacrifice

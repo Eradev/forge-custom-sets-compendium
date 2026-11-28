@@ -1,0 +1,10 @@
+Name:Ophan Titan
+ManaCost:3 G
+Types:Creature Angel
+PT:3/3
+
+S:Mode$ Continuous | AffectedDefined$ Self | AddPower$ 3 | AddToughness$ 3 | IsPresent$ Card.nonLand+YouOwn | PresentZone$ Graveyard | PresentCompare$ EQ0 | Description$ This creature gets +3/+3 as long as there are no nonland cards in your graveyard.
+
+K:Morph:1 G
+
+Oracle:This creature gets +3/+3 as long as there are no nonland cards in your graveyard.\nMorph {1}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)

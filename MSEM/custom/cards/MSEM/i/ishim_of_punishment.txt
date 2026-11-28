@@ -1,0 +1,17 @@
+Name:Ishim of Punishment
+ManaCost:2 W
+Types:Creature Angel
+PT:2/2
+
+K:Flying
+
+K:Morph:3 U R
+
+T:Mode$ TurnFaceUp | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigPutCounter | TriggerDescription$ When this creature is turned face up, put a +1/+1 counter on it, then untap another target tapped creature. This creature deals 3 damage to that creature.
+SVar:TrigPutCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | ValidTgts$ Creature.Other+tapped | TgtPrompt$ Select another target tapped creature | SubAbility$ DBUntap
+SVar:DBUntap:DB$ Untap | Defined$ Targeted | SubAbility$ DBDamage
+SVar:DBDamage:DB$ DealDamage | Defined$ Targeted | NumDmg$ 3
+
+Oracle:Flying\nMorph {3}{U}{R} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, put a +1/+1 counter on it, then untap another target tapped creature. This creature deals 3 damage to that creature.
+
+DeckHas:Ability$Counters

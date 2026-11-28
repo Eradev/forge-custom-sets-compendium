@@ -1,0 +1,12 @@
+Name:Zephyr Purifier
+ManaCost:4
+Types:Creature Angel
+PT:1/5
+
+K:Flash
+
+K:Defender
+
+K:Flying
+
+Oracle:Flash\nDefender, flying

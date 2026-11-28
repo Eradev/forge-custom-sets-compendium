@@ -1,0 +1,21 @@
+Name:Heedless Adversary
+ManaCost:3 R
+Types:Creature Devil Soldier
+PT:3/2
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigTrial | Static$ True
+SVar:TrigTrial:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 0 | SubAbility$ DBChooseOpponent
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | SubAbility$ DBTrialPayment
+SVar:DBTrialPayment:DB$ Nothing | UnlessCost$ PayLife<3> | UnlessPayer$ ChosenPlayer | UnlessResolveSubs$ WhenNotPaid | SubAbility$ DBTrialFailed
+SVar:DBTrialFailed:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 1 | SubAbility$ DBFailedSignal
+SVar:DBFailedSignal:DB$ ImmediateTrigger | Static$ True | Execute$ DBNamedTrialFailed | TriggerDescription$ An opponent failed a trial.
+SVar:DBNamedTrialFailed:DB$ Nothing | Named$ TrialFailed
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | Execute$ TrigDamage | OptionalDecider$ You | TriggerDescription$ When this creature enters, you may have it deal 3 damage to target creature if that creature's controller failed the trial.
+SVar:TrigDamage:DB$ DealDamage | ValidTgts$ Creature | TgtPrompt$ Select target creature | NumDmg$ 3 | ConditionCheckSVar$ TrialFailed | ConditionSVarCompare$ EQ1 | ConditionPlayerDefined$ TargetedController | ConditionPlayerContains$ Player.Chosen
+
+SVar:TrialFailed:Number$0
+
+Oracle:Trial 3 (As you cast this spell, an opponent of your choice may pay 3 life. If they don't, they fail the trial.)\nWhen this creature enters, you may have it deal 3 damage to target creature if that creature's controller failed the trial.
+
+SVar:TrialMarker:Number$1

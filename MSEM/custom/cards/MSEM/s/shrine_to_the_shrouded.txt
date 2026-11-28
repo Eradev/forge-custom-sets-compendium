@@ -1,0 +1,10 @@
+Name:Shrine to the Shrouded
+ManaCost:3
+Types:Artifact
+
+S:Mode$ Continuous | Affected$ Creature.Colorless+YouCtrl | AddPower$ 1 | AddToughness$ 1 | Description$ Colorless creatures you control get +1/+1.
+
+Oracle:Colorless creatures you control get +1/+1.
+
+SVar:PlayMain1:TRUE
+DeckHints:Color$Colorless

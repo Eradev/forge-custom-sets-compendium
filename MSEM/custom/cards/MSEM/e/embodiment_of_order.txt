@@ -1,0 +1,15 @@
+Name:Embodiment of Order
+ManaCost:1 W
+Types:Enchantment
+
+R:Event$ Moved | ValidCard$ Creature.OppCtrl,Land.nonBasic+OppCtrl | Destination$ Battlefield | ReplaceWith$ ETBTapped | ReplacementResult$ Updated | ActiveZones$ Battlefield | Description$ Creatures and nonbasic lands your opponents control enter tapped.
+SVar:ETBTapped:DB$ Tap | ETB$ True | Defined$ ReplacedCard
+
+K:Morph:3 W W
+
+T:Mode$ TurnFaceUp | ValidCard$ Card.Self | ValidCause$ SpellAbility.YouCtrl | TriggerZones$ Battlefield | Execute$ TrigAnimate | TriggerDescription$ When you turn this enchantment face up, it becomes a 4/4 white Angel creature with flying.
+SVar:TrigAnimate:DB$ Animate | Defined$ Self | Power$ 4 | Toughness$ 4 | Types$ Creature,Angel | RemoveCardTypes$ True | RemoveCreatureTypes$ True | Colors$ White | OverwriteColors$ True | Keywords$ Flying | Duration$ Permanent
+
+Oracle:Creatures and nonbasic lands your opponents control enter tapped.\nMorph {3}{W}{W} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen you turn this enchantment face up, it becomes a 4/4 white Angel creature with flying.
+
+DeckHas:Type$Angel

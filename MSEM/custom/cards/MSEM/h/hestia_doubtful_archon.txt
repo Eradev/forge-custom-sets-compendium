@@ -1,0 +1,31 @@
+Name:Hestia, Doubtful Archon
+ManaCost:3 R G
+Types:Legendary Planeswalker Hestia
+Loyalty:4
+
+A:AB$ Mana | Cost$ AddCounter<1/LOYALTY> | Planeswalker$ True | Produced$ G U R | RestrictValid$ Spell.Creature | SpellDescription$ Add {G}{U}{R}. Spend this mana only to cast creature spells.
+
+A:AB$ PeekAndReveal | Cost$ SubCounter<2/LOYALTY> | Planeswalker$ True | NoPeek$ True | ImprintRevealed$ True | SubAbility$ DBBranch | SpellDescription$ Reveal the top card of your library. If it's a creature card with mana value less than that of the last spell you cast this turn, you may put it onto the battlefield. Otherwise, draw a card.
+
+SVar:DBBranch:DB$ Branch | BranchConditionSVar$ IsCheaper | BranchConditionSVarCompare$ GE1 | TrueSubAbility$ DBPutCreature | FalseSubAbility$ DBDraw
+
+SVar:DBPutCreature:DB$ ChangeZone | Defined$ Imprinted | Origin$ Library | Destination$ Battlefield | Optional$ True | SubAbility$ DBCleanup
+
+SVar:DBDraw:DB$ Draw | Defined$ You | NumCards$ 1 | SubAbility$ DBCleanup
+
+SVar:DBCleanup:DB$ Cleanup | ClearImprinted$ True
+
+SVar:X:RememberedLKI$CardManaCost
+SVar:IsCheaper:Imprinted$Valid Creature.cmcLTX
+
+A:AB$ Animate | Cost$ SubCounter<7/LOYALTY> | Planeswalker$ True | Ultimate$ True | ValidTgts$ Creature | TgtPrompt$ Select target creature | Name$ Illusion of Kaur | Types$ Legendary,Creature | RemoveCardTypes$ True | RemoveCreatureTypes$ True | Power$ 20 | Toughness$ 20 | Colors$ Green | OverwriteColors$ True | Keywords$ Hexproof & Trample | SpellDescription$ Target creature becomes a legendary 20/20 green creature named Illusion of Kaur with hexproof and trample until end of turn.
+
+# These triggers are used to track the mana value of the last spell you cast and to clear it each start of turn.
+T:Mode$ SpellCast | ValidCard$ Card | ValidActivatingPlayer$ You | Static$ True | Execute$ DBResetLastSpell
+SVar:DBResetLastSpell:DB$ Cleanup | ClearRemembered$ True | SubAbility$ DBRememberLastSpell
+SVar:DBRememberLastSpell:DB$ Bookkeeping | RememberObjects$ TriggeredCardLKICopy
+
+T:Mode$ TurnBegin | Static$ True | Execute$ DBClearLastSpell
+SVar:DBClearLastSpell:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:[+1]: Add {G}{U}{R}. Spend this mana only to cast creature spells.\n[-2]: Reveal the top card of your library. If it's a creature card with mana value less than that of the last spell you cast this turn, you may put it onto the battlefield. Otherwise, draw a card.\n[-7]: Target creature becomes a legendary 20/20 green creature named Illusion of Kaur with hexproof and trample until end of turn.

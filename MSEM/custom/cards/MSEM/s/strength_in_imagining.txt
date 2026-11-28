@@ -1,0 +1,16 @@
+Name:Strength in Imagining
+ManaCost:1 G U
+Types:Enchantment Aura
+
+K:Enchant:Creature
+SVar:AttachAILogic:Pump
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | PresentDefined$ Enchanted | IsPresent$ Creature.faceDown | Execute$ TrigCounter | TriggerDescription$ When this Aura enters, if it enchants a face-down creature, put a +1/+1 counter on that creature.
+SVar:TrigCounter:DB$ PutCounter | Defined$ Enchanted | CounterType$ P1P1 | CounterNum$ 1
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddKeyword$ Flying & Trample | Description$ Enchanted creature has flying and trample.
+
+Oracle:Enchant creature\nWhen this Aura enters, if it enchants a face-down creature, put a +1/+1 counter on that creature.\nEnchanted creature has flying and trample.
+
+DeckHas:Ability$Counters
+DeckHints:Keyword$Morph

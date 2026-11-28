@@ -1,0 +1,14 @@
+Name:Ishim of Genesis
+ManaCost:1 U
+Types:Creature Angel
+PT:1/2
+
+K:Flying
+
+K:Morph:3 B G
+
+T:Mode$ TurnFaceUp | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigCounter | TriggerDescription$ When this creature is turned face up, put a +1/+1 counter on it, then return target instant or sorcery card from your graveyard to your hand.
+SVar:TrigCounter:DB$ PutCounter | Defined$ Self | CounterType$ P1P1 | CounterNum$ 1 | SubAbility$ DBReturn
+SVar:DBReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Instant.YouOwn,Sorcery.YouOwn | TgtPrompt$ Select target instant or sorcery card in your graveyard
+
+Oracle:Flying\nMorph {3}{B}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)\nWhen this creature is turned face up, put a +1/+1 counter on it, then return target instant or sorcery card from your graveyard to your hand.

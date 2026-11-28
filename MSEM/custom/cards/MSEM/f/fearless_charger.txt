@@ -1,0 +1,14 @@
+Name:Fearless Charger
+ManaCost:3 R
+Types:Creature Dwarf Warrior
+PT:3/2
+
+K:Haste
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigErratic | TriggerDescription$ Erratic (When this creature dies, reveal the top four cards of your library. Put a creature card revealed this way with mana value less than this creature's mana value onto the battlefield and the rest on the bottom of your library in any order.)
+SVar:TrigErratic:DB$ Dig | DigNum$ 4 | Reveal$ True | ChangeNum$ 1 | ChangeValid$ Creature.cmcLTX | ChangeValidDesc$ creature card with lesser mana value | DestinationZone$ Battlefield
+SVar:X:TriggeredCard$CardManaCost
+
+Oracle:Haste\nErratic (When this creature dies, reveal the top four cards of your library. Put a creature card that costs less than this revealed this way onto the battlefield and the rest on the bottom of your library in any order.)
+
+DeckHints:Type$Creature

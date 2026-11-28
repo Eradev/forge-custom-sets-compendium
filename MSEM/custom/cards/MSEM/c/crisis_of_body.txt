@@ -1,0 +1,18 @@
+Name:Crisis of Body
+ManaCost:B
+Types:Instant
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigTrial | Static$ True
+SVar:TrigTrial:DB$ StoreSVar | SVar$ X | Type$ Number | Expression$ 0 | SubAbility$ DBChooseOpponent
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | SubAbility$ DBTrialPayment
+SVar:DBTrialPayment:DB$ Nothing | UnlessCost$ PayLife<3> | UnlessPayer$ ChosenPlayer | UnlessResolveSubs$ WhenNotPaid | SubAbility$ DBTrialFailed
+SVar:DBTrialFailed:DB$ StoreSVar | SVar$ X | Type$ Number | Expression$ 1 | SubAbility$ DBFailedSignal
+SVar:DBFailedSignal:DB$ ImmediateTrigger | Static$ True | Execute$ DBNamedTrialFailed | TriggerDescription$ An opponent failed a trial.
+SVar:DBNamedTrialFailed:DB$ Nothing | Named$ TrialFailed
+
+A:SP$ Pump | ValidTgts$ Creature | NumAtt$ -1 | NumDef$ -1 | IsCurse$ True | SubAbility$ DBExtraPump | SpellDescription$ Target creature gets -1/-1 until end of turn. If that creature's controller failed the trial, it gets -4/-4 until end of turn instead.
+SVar:DBExtraPump:DB$ Pump | Defined$ Targeted | NumAtt$ -3 | NumDef$ -3 | ConditionCheckSVar$ X | ConditionSVarCompare$ EQ1 | ConditionPlayerDefined$ TargetedController | ConditionPlayerContains$ Player.Chosen
+
+Oracle:Trial 3 (As you cast this spell, an opponent of your choice may pay 3 life. If they don't, they fail the trial.)\nTarget creature gets -1/-1 until end of turn. If that creature's controller failed the trial, it gets -4/-4 until end of turn instead.
+
+SVar:TrialMarker:Number$1

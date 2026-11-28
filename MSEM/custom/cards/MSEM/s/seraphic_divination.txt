@@ -1,0 +1,11 @@
+Name:Seraphic Divination
+ManaCost:3 U
+Types:Sorcery
+
+A:SP$ Draw | NumCards$ X | SpellDescription$ Draw two cards. If you control a Jace planeswalker, draw three cards instead.
+SVar:Y:Count$Valid Angel.YouCtrl
+SVar:X:Count$Compare Y GE1.3.2
+
+Oracle:Draw two cards. If you control an Angel, draw three cards instead.
+
+DeckHints:Type$Angel

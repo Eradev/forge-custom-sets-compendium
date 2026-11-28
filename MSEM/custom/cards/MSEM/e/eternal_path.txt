@@ -1,0 +1,13 @@
+Name:Eternal Path
+ManaCost:W
+Types:Enchantment Aura
+
+K:Enchant:Creature
+SVar:AttachAILogic:Pump
+
+S:Mode$ Continuous | AffectedDefined$ Enchanted | Affected$ Creature | AddKeyword$ Vigilance | Description$ Enchanted creature has vigilance.
+
+T:Mode$ DamageDone | ValidSource$ Card.AttachedBy | ValidTarget$ Player | CombatDamage$ True | TriggerZones$ Battlefield | Execute$ TrigBounce | TriggerDescription$ When enchanted creature deals combat damage to a player, return this Aura to its owner's hand.
+SVar:TrigBounce:DB$ ChangeZone | Defined$ Self | Origin$ Battlefield | Destination$ Hand
+
+Oracle:Enchant creature\nEnchanted creature has vigilance.\nWhen enchanted creature deals combat damage to a player, return this Aura to its owner's hand.

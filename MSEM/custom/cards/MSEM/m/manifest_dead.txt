@@ -1,0 +1,12 @@
+Name:Manifest Dead
+ManaCost:1 B
+Types:Sorcery
+
+A:SP$ ChooseCard | Defined$ You | Choices$ Creature.YouOwn | ChoiceZone$ Graveyard | AtRandom$ True | Amount$ 1 | Mandatory$ True | SubAbility$ DBManifest | StackDescription$ SpellDescription | SpellDescription$ Manifest a creature card at random from your graveyard. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)
+
+SVar:DBManifest:DB$ Manifest | Defined$ ChosenCard | DefinedPlayer$ You | SubAbility$ DBCleanup | StackDescription$ None
+SVar:DBCleanup:DB$ Cleanup | ClearChosenCard$ True
+
+Oracle:Manifest a creature card at random from your graveyard. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)
+
+DeckHas:Ability$Graveyard

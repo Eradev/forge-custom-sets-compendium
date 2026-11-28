@@ -1,0 +1,10 @@
+Name:Lightning Chorus
+ManaCost:R W
+Types:Instant
+
+A:SP$ DealDamage | Cost$ R W tapXType<X/Creature> | ValidTgts$ Any | NumDmg$ X | SubAbility$ DBGainLife | SpellDescription$ CARDNAME deals X damage to any target and you gain X life.
+SVar:DBGainLife:DB$ GainLife | LifeAmount$ X
+
+SVar:X:Count$xPaid
+
+Oracle:As an additional cost to cast this spell, tap X untapped creatures you control.\nLightning Chorus deals X damage to any target and you gain X life.

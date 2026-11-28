@@ -1,0 +1,14 @@
+Name:Dryad of Rippling Leaves
+ManaCost:3 G
+Types:Creature Dryad
+PT:2/4
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigScry | TriggerDescription$ Whenever this creature enters or you draw a card except during your draw step, scry 1.
+
+T:Mode$ Drawn | ValidCard$ Card.YouCtrl | Phase$ Untap,Upkeep,Main1->Cleanup | TriggerZones$ Battlefield | Execute$ TrigScry | Secondary$ True | TriggerDescription$ Whenever this creature enters or you draw a card except during your draw step, scry 1.
+
+T:Mode$ Drawn | ValidCard$ Card.YouCtrl | Phase$ Draw | NotPlayerTurn$ True | TriggerZones$ Battlefield | Execute$ TrigScry | Secondary$ True | TriggerDescription$ Whenever this creature enters or you draw a card except during your draw step, scry 1.
+
+SVar:TrigScry:DB$ Scry | ScryNum$ 1
+
+Oracle:Whenever this creature enters or you draw a card except during your draw step, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)

@@ -1,0 +1,10 @@
+Name:Return to Ash
+ManaCost:4 G
+Types:Sorcery
+
+A:SP$ Charm | Choices$ DBDestroyLand,DBDestroyCreature
+
+SVar:DBDestroyLand:DB$ Destroy | ValidTgts$ Land | TgtPrompt$ Select target land | SpellDescription$ Destroy target land.
+SVar:DBDestroyCreature:DB$ Destroy | ValidTgts$ Creature.withFlying | TgtPrompt$ Select target creature with flying | SpellDescription$ Destroy target creature with flying.
+
+Oracle:Choose one —\n• Destroy target land.\n• Destroy target creature with flying.

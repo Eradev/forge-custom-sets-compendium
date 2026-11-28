@@ -1,0 +1,11 @@
+Name:Evershedder
+ManaCost:4 B
+Types:Creature Snake
+PT:3/3
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | TriggerZones$ Battlefield | OptionalDecider$ TriggeredCardController | Execute$ TrigReturn | TriggerDescription$ When this creature dies, you may put it on the bottom of its owner's library.
+SVar:TrigReturn:DB$ ChangeZone | Defined$ TriggeredNewCardLKICopy | Origin$ Graveyard | Destination$ Library | LibraryPosition$ -1
+
+K:Morph:2 B
+
+Oracle:When this creature dies, you may put it on the bottom of its owner's library.\nMorph {2}{B} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)

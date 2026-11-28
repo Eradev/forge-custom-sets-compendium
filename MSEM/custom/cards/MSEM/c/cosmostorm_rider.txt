@@ -1,0 +1,15 @@
+Name:Cosmostorm Rider
+ManaCost:3 R
+Types:Creature Human Shaman
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | Execute$ TrigErratic | TriggerDescription$ Erratic (When this creature dies, reveal the top four cards of your library. Put a creature card revealed this way with mana value less than this creature's mana value onto the battlefield and the rest on the bottom of your library in any order.)
+SVar:TrigErratic:DB$ Dig | DigNum$ 4 | Reveal$ True | ChangeNum$ 1 | ChangeValid$ Creature.cmcLTX | ChangeValidDesc$ creature card with lesser mana value | DestinationZone$ Battlefield
+SVar:X:TriggeredCard$CardManaCost
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Creature.YouCtrl+!wasCastFromYourHandByYou | TriggerZones$ Battlefield | Execute$ TrigAnimate | TriggerDescription$ Whenever a creature you control enters, if you didn't cast it from your hand, target land you control becomes a 7/1 red Elemental creature with trample and haste. It's still a land.
+SVar:TrigAnimate:DB$ Animate | ValidTgts$ Land.YouCtrl | TgtPrompt$ Select target land you control | Power$ 7 | Toughness$ 1 | Types$ Creature,Elemental | Colors$ Red | OverwriteColors$ True | Keywords$ Trample & Haste | Duration$ Permanent
+
+Oracle:Erratic (When this creature dies, reveal the top four cards of your library. Put a creature card revealed this way with mana value less than this creature's mana value onto the battlefield and the rest on the bottom of your library in any order.)\nWhenever a creature you control enters, if you didn't cast it from your hand, target land you control becomes a 7/1 red Elemental creature with trample and haste. It's still a land.
+
+DeckHints:Type$Creature

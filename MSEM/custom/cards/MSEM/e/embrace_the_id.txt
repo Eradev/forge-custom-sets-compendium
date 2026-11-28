@@ -1,0 +1,15 @@
+Name:Embrace the Id
+ManaCost:2 R
+Types:Enchantment
+
+S:Mode$ Continuous | Affected$ Creature | AddKeyword$ Haste | AddTrigger$ TrigRandomAttack | AddSVar$ DBChooseOpponent & DBForceAttack & STAttackChosen | Description$ Each creature has haste and "At the beginning of combat on your turn, choose an opponent at random. This creature attacks that player this combat if able."
+
+SVar:TrigRandomAttack:Mode$ Phase | Phase$ BeginCombat | ValidPlayer$ You | TriggerZones$ Battlefield | Execute$ DBChooseOpponent | TriggerDescription$ At the beginning of combat on your turn, choose an opponent at random. This creature attacks that player this combat if able.
+
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | Random$ True | SubAbility$ DBForceAttack
+
+SVar:DBForceAttack:DB$ Effect | RememberObjects$ Self | ExileOnMoved$ Battlefield | StaticAbilities$ STAttackChosen | Duration$ UntilEndOfCombat
+
+SVar:STAttackChosen:Mode$ MustAttack | ValidCreature$ Card.IsRemembered | MustAttack$ ChosenPlayer | Description$ EFFECTSOURCE attacks that player this combat if able.
+
+Oracle:Each creature has haste and "At the beginning of combat on your turn, choose an opponent at random. This creature attacks that player this combat if able."

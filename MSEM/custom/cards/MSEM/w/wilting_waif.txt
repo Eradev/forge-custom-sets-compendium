@@ -1,0 +1,11 @@
+Name:Wilting Waif
+ManaCost:2 B B
+Types:Creature Elf Cleric
+PT:2/2
+
+T:Mode$ ChangesZone | Origin$ Battlefield | Destination$ Graveyard | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigDiscard | TriggerDescription$ When this creature dies, each opponent discards a card at random and you scry 1.
+
+SVar:TrigDiscard:DB$ Discard | Defined$ Player.Opponent | NumCards$ 1 | Mode$ Random | SubAbility$ DBScry
+SVar:DBScry:DB$ Scry
+
+Oracle:When this creature dies, each opponent discards a card at random and you scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)

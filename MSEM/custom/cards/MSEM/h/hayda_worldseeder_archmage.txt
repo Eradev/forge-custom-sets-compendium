@@ -1,0 +1,13 @@
+Name:Hayda, Worldseeder Archmage
+ManaCost:2 U U
+Types:Legendary Creature Human Wizard
+PT:2/2
+
+T:Mode$ SpellCast | ValidCard$ Instant,Sorcery | ValidActivatingPlayer$ You | TriggerZones$ Battlefield | Execute$ TrigLook | TriggerDescription$ Whenever you cast an instant or sorcery spell, look at the bottom card of your library. You may manifest it. If you don't, put it into your hand.
+SVar:TrigLook:DB$ Dig | DigNum$ 1 | FromBottom$ True | ChangeNum$ 0 | ForceRevealToController$ True | DestinationZone2$ Library | LibraryPosition2$ -1 | SubAbility$ DBChoose | StackDescription$ SpellDescription | SpellDescription$ Look at the bottom card of your library.
+SVar:DBChoose:DB$ GenericChoice | Defined$ You | Choices$ DBManifest,DBHand | ChoicePrompt$ Choose what to do with the bottom card of your library | ConditionCheckSVar$ X | ConditionSVarCompare$ GE1
+SVar:DBManifest:DB$ Manifest | Defined$ BottomOfLibrary | SpellDescription$ Manifest the bottom card of your library.
+SVar:DBHand:DB$ ChangeZone | Defined$ BottomOfLibrary | Origin$ Library | Destination$ Hand | SpellDescription$ Put the bottom card of your library into your hand.
+SVar:X:Count$ValidLibrary Card.YouOwn
+
+Oracle:Whenever you cast an instant or sorcery spell, look at the bottom card of your library. You may manifest it. If you don't, put it into your hand. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)

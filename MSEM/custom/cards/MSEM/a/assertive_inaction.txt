@@ -1,0 +1,12 @@
+Name:Assertive Inaction
+ManaCost:1 U
+Types:Instant
+
+A:SP$ Pump | ValidTgts$ Creature | TgtPrompt$ Select target creature to get -5/-0 | NumAtt$ -5 | SubAbility$ DBAdjudicate | SpellDescription$ Target creature gets -5/-0 until end of turn. Adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+
+SVar:DBAdjudicate:DB$ Token | TokenScript$ adjudicate | TokenOwner$ You | AttachedTo$ ThisTargetedCard | ValidTgts$ Creature | TgtPrompt$ Select target creature to adjudicate
+
+Oracle:Target creature gets -5/-0 until end of turn. Adjudicate. (Create a white Aura enchantment token with enchant creature and "Sacrifice this token: Untap enchanted creature" attached to target creature.)
+
+DeckHas:Ability$Token
+DeckHints:Type$Aura

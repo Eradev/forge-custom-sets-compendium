@@ -1,0 +1,22 @@
+Name:Devilish Undoer
+ManaCost:2 B
+Types:Creature Devil Cleric
+PT:2/1
+
+T:Mode$ SpellCast | ValidCard$ Card.Self | Execute$ TrigTrial | Static$ True
+SVar:TrigTrial:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 0 | SubAbility$ DBChooseOpponent
+SVar:DBChooseOpponent:DB$ ChoosePlayer | Defined$ You | Choices$ Player.Opponent | SubAbility$ DBTrialPayment
+SVar:DBTrialPayment:DB$ Nothing | UnlessCost$ PayLife<3> | UnlessPayer$ ChosenPlayer | UnlessResolveSubs$ WhenNotPaid | SubAbility$ DBTrialFailed
+SVar:DBTrialFailed:DB$ StoreSVar | SVar$ TrialFailed | Type$ Number | Expression$ 1 | SubAbility$ DBFailedSignal
+SVar:DBFailedSignal:DB$ ImmediateTrigger | Static$ True | Execute$ DBNamedTrialFailed | TriggerDescription$ An opponent failed a trial.
+SVar:DBNamedTrialFailed:DB$ Nothing | Named$ TrialFailed
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | CheckSVar$ TrialFailed | SVarCompare$ EQ1 | Execute$ TrigReturn | TriggerDescription$ When this creature enters, if the trial was failed, return target creature card from your graveyard to your hand.
+SVar:TrigReturn:DB$ ChangeZone | Origin$ Graveyard | Destination$ Hand | ValidTgts$ Creature.YouOwn | TgtPrompt$ Select target creature card in your graveyard | ConditionCheckSVar$ TrialFailed | ConditionSVarCompare$ EQ1
+
+SVar:TrialFailed:Number$0
+
+Oracle:Trial 3 (As you cast this spell, an opponent of your choice may pay 3 life. If they don't, they fail the trial.)\nWhen this creature enters, if the trial was failed, return target creature card from your graveyard to your hand.
+
+SVar:TrialMarker:Number$1
+DeckHas:Ability$Graveyard

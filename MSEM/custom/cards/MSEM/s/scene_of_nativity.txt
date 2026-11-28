@@ -1,0 +1,8 @@
+Name:Scene of Nativity
+ManaCost:3 U U
+Types:Sorcery
+
+A:SP$ Draw | NumCards$ 3 | SubAbility$ DBManifest | SpellDescription$ Draw three cards.
+SVar:DBManifest:DB$ Manifest | Choices$ Card.YouCtrl | ChoiceZone$ Hand | SpellDescription$ Manifest a card from your hand. (Put that card onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)
+
+Oracle:Draw three cards, then manifest a card from your hand. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)

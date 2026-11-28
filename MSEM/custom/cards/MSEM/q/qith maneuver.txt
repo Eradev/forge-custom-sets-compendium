@@ -1,0 +1,8 @@
+Name:Qith Maneuver
+ManaCost:2 W
+Types:Instant
+
+A:SP$ Destroy | ValidTgts$ Creature.tapped | TgtPrompt$ Select target tapped creature | SubAbility$ DBUntap | SpellDescription$ Destroy target tapped creature, then untap all creatures you control.
+SVar:DBUntap:DB$ UntapAll | ValidCards$ Creature.YouCtrl
+
+Oracle:Destroy target tapped creature, then untap all creatures you control.

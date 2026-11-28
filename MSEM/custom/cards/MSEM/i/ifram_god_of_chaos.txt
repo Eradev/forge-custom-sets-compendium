@@ -1,0 +1,17 @@
+Name:Ifram, God of Chaos
+ManaCost:G U R
+Types:Legendary Enchantment
+PT:5/5
+
+A:AB$ Animate | Cost$ G U R Discard<1/Card.namedIfram, God of Chaos> | Defined$ Self | Types$ Creature,God | Keywords$ Indestructible | Duration$ Permanent | SpellDescription$ NICKNAME gains indestructible and becomes a God creature in addition to its other types.
+
+T:Mode$ ChangesZone | Origin$ Any | Destination$ Battlefield | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigTarget | TriggerDescription$ Whenever NICKNAME enters or attacks, choose target non-God permanent. Its owner shuffles it into their library, then its controller reveals the top card of their library. If it's a permanent card, they put it onto the battlefield.
+
+T:Mode$ Attacks | ValidCard$ Card.Self | TriggerZones$ Battlefield | Execute$ TrigTarget | Secondary$ True | TriggerDescription$ Whenever NICKNAME enters or attacks, choose target non-God permanent. Its owner shuffles it into their library, then its controller reveals the top card of their library. If it's a permanent card, they put it onto the battlefield.
+
+SVar:TrigTarget:DB$ TargetOnly | ValidTgts$ Permanent.nonGod | TgtPrompt$ Select target non-God permanent | RememberObjects$ TargetedController | SubAbility$ DBShuffle
+SVar:DBShuffle:DB$ ChangeZone | Defined$ Targeted | Origin$ Battlefield | Destination$ Library | Shuffle$ True | SubAbility$ DBReveal
+SVar:DBReveal:DB$ Dig | Defined$ Remembered | DigNum$ 1 | Reveal$ True | ChangeNum$ All | ChangeValid$ Permanent | DestinationZone$ Battlefield | DestinationZone2$ Library | LibraryPosition2$ 0 | SubAbility$ DBCleanup
+SVar:DBCleanup:DB$ Cleanup | ClearRemembered$ True
+
+Oracle:{G}{U}{R}, Discard a card named Ifram, God of Chaos: Ifram gains indestructible and becomes a God creature in addition to its other types.\nWhenever Ifram enters or attacks, choose target non-God permanent. Its owner shuffles it into their library, then its controller reveals the top card of their library. If it's a permanent card, they put it onto the battlefield.

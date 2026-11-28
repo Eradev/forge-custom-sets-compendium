@@ -1,0 +1,12 @@
+Name:Avatar of Being
+ManaCost:6
+Types:Artifact Creature Golem
+PT:4/4
+
+K:ETBReplacement:Other:AddExtraCounter:Mandatory:Battlefield:Creature.Colorless+Other+YouCtrl
+SVar:AddExtraCounter:DB$ PutCounter | ETB$ True | Defined$ ReplacedCard | CounterType$ P1P1 | CounterNum$ 1 | SpellDescription$ Each other colorless creature you control enters with an additional +1/+1 counter on it.
+
+Oracle:Each other colorless creature you control enters with an additional +1/+1 counter on it.
+
+DeckHas:Ability$Counters
+DeckHints:Color$Colorless

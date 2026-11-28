@@ -1,0 +1,13 @@
+Name:Altar of Devotion
+ManaCost:3
+Types:Artifact
+
+A:AB$ Mana | Cost$ T | Produced$ Any | TriggersWhenSpent$ TrigGainLife | SpellDescription$ Add one mana of any color. If you spend this mana to cast a face-down creature spell, you gain 2 life.
+
+SVar:TrigGainLife:Mode$ SpellCast | ValidCard$ Creature | ValidSA$ Spell.isCastFaceDown | Execute$ DBGainLife | TriggerDescription$ When mana produced by this artifact is spent to cast a face-down creature spell, you gain 2 life.
+SVar:DBGainLife:DB$ GainLife | Defined$ TriggeredActivator | LifeAmount$ 2
+
+Oracle:{T}: Add one mana of any color. If you spend this mana to cast a face-down creature spell, you gain 2 life.
+
+DeckHas:Ability$LifeGain
+DeckHints:Keyword$Morph
